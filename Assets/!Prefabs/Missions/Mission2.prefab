@@ -7803,15 +7803,18 @@ MonoBehaviour:
   Start_: {fileID: 11400000, guid: dd796c5c7ab146647b5e60ea70f4412f, type: 2}
   End_: {fileID: 11400000, guid: 374c1fb13ecb631488e87194f8b50f7c, type: 2}
   NextCutScene: {fileID: 3665301935092330067}
+  EndingCutScene: {fileID: 0}
+  FinishPoint: {fileID: 6505624529204436826}
+  Gangster: {fileID: 0}
   speed: 0.5
   Mission1_Door: {fileID: 0}
-  EndingCutScene: {fileID: 0}
   Bank: {fileID: 0}
   Door: {fileID: 0}
   TablePoint: {fileID: 0}
-  FinishPoint: {fileID: 6505624529204436826}
   Weapons: {fileID: 3665301935643871770}
   Car_Trigger: {fileID: 8669131817970552743}
+  KillsCounter: 0
+  SpawnPoint: {fileID: 0}
 --- !u!1 &3665301934442874692
 GameObject:
   m_ObjectHideFlags: 0
@@ -17801,7 +17804,7 @@ GameObject:
   - component: {fileID: 8089808279143424524}
   m_Layer: 0
   m_Name: MainCar
-  m_TagString: Player
+  m_TagString: TrafficCar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

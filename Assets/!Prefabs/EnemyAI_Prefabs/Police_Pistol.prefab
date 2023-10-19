@@ -209,7 +209,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.5466302, y: 0.011755286, z: -0.000019289391}
+  m_ConnectedAnchor: {x: -0.54662997, y: 0.011758207, z: -0.000024367884}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -834,7 +834,7 @@ Transform:
   m_GameObject: {fileID: 1831472062348373383}
   m_LocalRotation: {x: 0, y: -0.9657382, z: 0, w: 0.25951856}
   m_LocalPosition: {x: -3.99, y: 0.47991967, z: 207.31}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_LocalScale: {x: 1.2999998, y: 1.3, z: 1.2999998}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1831472063737364137}
@@ -957,6 +957,7 @@ MonoBehaviour:
   isImmortal: 0
   fillHealthOnStart: 1
   maxHealth: 100
+  EnemyLast: 0
   healthRecovery: 0
   healthRecoveryDelay: 0
   currentHealthRecoveryDelay: 0
@@ -1072,9 +1073,9 @@ MonoBehaviour:
   _selfStartingPoint: 1
   _customStartingPoint: {fileID: 0}
   detectionPointReference: {fileID: 1831472061988986253}
-  sightMethod: 3
-  findTargetUpdateQuality: 3
-  canseeTargetUpdateQuality: 2
+  sightMethod: -1
+  findTargetUpdateQuality: 4
+  canseeTargetUpdateQuality: 4
   findOtherTarget: 1
   maxTargetsDetection: 10
   _changeTargetDelay: 10
@@ -1979,7 +1980,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.45440966, y: -0.000007863153, z: -0.0000008493659}
+  m_ConnectedAnchor: {x: -0.45440874, y: -0.000005354171, z: 0.00000438094}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -3088,7 +3089,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.3810456, y: -0.0120408805, z: 0.176914}
+  m_ConnectedAnchor: {x: -0.38104573, y: -0.012040881, z: 0.176914}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -3833,7 +3834,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.10451426, y: -0.00017188494, z: 0.000015884598}
+  m_ConnectedAnchor: {x: -0.10451426, y: -0.00016894196, z: 0.000010806342}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
