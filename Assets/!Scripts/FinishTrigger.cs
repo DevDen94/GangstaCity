@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FinishTrigger : MonoBehaviour
+{
+    public Mission_Script Script;
+    private GameManger gm;
+    private void Start()
+    {
+        gm = GameManger.instance;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            gm.OFF_TPS();
+            if(Script.Mission1_Door != null)
+            {
+                Script.Mission1_Door.enabled = true;
+            }
+            
+            Script.EndingCutScene.SetActive(true);
+            gm.InstructionsPanel.SetActive(true);
+            gm.StaringInstructions.text = gm.All_Instructions.Ending_Instructions[gm.selected_Mission].ToString();
+            LastScene();
+
+        }
+    }
+
+    void LastScene()
+    {
+        if (gm.selected_Mission == 2)
+        {
+            Script.Gangster.GetComponent<Animator>().SetTrigger("Victory");
+        }
+
+    }
+}
