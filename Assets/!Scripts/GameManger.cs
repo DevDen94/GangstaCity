@@ -26,12 +26,15 @@ public class GameManger : MonoBehaviour
     public GameObject FadeScreen_Long;
 
 
+
     public int selected_Mission;
     private void Start()
     {
         SpawnPlayer();
         instance = this;
     }
+
+
     public void Initialize_Mission(int mission)
     {
         Hud_Navigation.SetActive(false);

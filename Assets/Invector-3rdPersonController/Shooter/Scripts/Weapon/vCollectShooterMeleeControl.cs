@@ -23,6 +23,7 @@ namespace Invector.vMelee
                 var weapon = collectableStandAlone.weapon.GetComponent<vShooterWeapon>();
                 if (weapon)
                 {
+                    weapon.transform.GetChild(0).gameObject.SetActive(false);
                     Transform p = null;
                     if (weapon.isLeftWeapon)
                     {
