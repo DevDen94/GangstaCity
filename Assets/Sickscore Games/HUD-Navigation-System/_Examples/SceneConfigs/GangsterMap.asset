@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be86cf9aedbab74fb51f5877ba146c2, type: 3}
   m_Name: GangsterMap
   m_EditorClassIdentifier: 
-  overrideRadarSettings: 1
-  overrideCompassBarSettings: 1
-  overrideIndicatorSettings: 1
+  overrideRadarSettings: 0
+  overrideCompassBarSettings: 0
+  overrideIndicatorSettings: 0
   overrideMinimapSettings: 1
   useRadar: 1
   radarMode: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   useMinimap: 1
   minimapProfile: {fileID: 11400000, guid: 5f61d9b77456b814fa8b528868485af6, type: 2}
   minimapMode: 1
-  minimapScale: 0.1
+  minimapScale: 0.335
   minimapRadius: 75
   useMinimapScaling: 1
   minimapScaleDistance: 10

@@ -13,9 +13,15 @@ public class CutScene_1 : MonoBehaviour
     }
     public void Start_Level()
     {
-        gameObject.SetActive(false);
+        
         CutSceneObjects.gameObject.SetActive(false);
         GameManger.instance.MissionStart_();
+       
+        if (script.HealingController !=null)
+        {
+            script.Gangster.GetComponent<Animator>().runtimeAnimatorController = script.HealingController;
+        }
+        gameObject.SetActive(false);
     }
 
     public void TransfromTioGIRL()

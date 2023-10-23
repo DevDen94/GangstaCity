@@ -12,6 +12,7 @@ public class MissionTrigger : MonoBehaviour
             gameObject.SetActive(false);
             GameManger.instance.Initialize_Mission(missionNumber);
             GameManger.instance.OFF_TPS();
+           
         }
     }
 }

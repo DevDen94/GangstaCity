@@ -74,7 +74,7 @@ public class DoorOpen : MonoBehaviour
         Camera.SetActive(true);
         Door.SetBool("Open", true);
         Player.SetInteger("Sit", 2);
-        Invoke("AfterDelay", 2.5f);
+        Invoke("AfterDelay", 1.5f);
     }
 
     void AfterDelay()
@@ -108,7 +108,7 @@ public class DoorOpen : MonoBehaviour
         Door.SetBool("Open", true);
         Player.SetInteger("Sit", 1);
         Invoke("seco", 2.3f);
-        Invoke("Eject_TPSActive", 6f);
+        Invoke("Eject_TPSActive", 4f);
     }
     void seco()
     {

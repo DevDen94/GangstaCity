@@ -24,7 +24,10 @@ public class FinishTrigger : MonoBehaviour
             gm.InstructionsPanel.SetActive(true);
             gm.StaringInstructions.text = gm.All_Instructions.Ending_Instructions[gm.selected_Mission].ToString();
             LastScene();
-
+            if (!Script.EndingCutscene_Bool)
+            {
+                GameManger.instance.MissionComplete.SetActive(true);
+            }
         }
     }
 

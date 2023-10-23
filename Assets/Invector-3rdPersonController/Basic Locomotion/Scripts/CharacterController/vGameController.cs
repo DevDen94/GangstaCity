@@ -33,7 +33,7 @@ namespace Invector
             if (instance == null)
             {
                 instance = this;
-                DontDestroyOnLoad(this.gameObject);
+               // DontDestroyOnLoad(this.gameObject);
                 this.gameObject.name = gameObject.name + " Instance";
             }
             else
@@ -50,10 +50,12 @@ namespace Invector
 
         public void OnCharacterDead(GameObject _gameObject)
         {
-            Debug.LogError("Player Dead");
+            GameManger.instance.MissionFailed.SetActive(true);
             oldPlayer = _gameObject;
+            Destroy(_gameObject);
+            Time.timeScale = 0f;
 
-        /*    if (playerPrefab != null)
+           /* if (playerPrefab != null)
                 StartCoroutine(Spawn());
             else
             {
@@ -63,7 +65,7 @@ namespace Invector
             }*/
         }
 
-      /*  public void Spawn(Transform _spawnPoint)
+        public void Spawn(Transform _spawnPoint)
         {
             if (playerPrefab != null)
             {
@@ -91,8 +93,8 @@ namespace Invector
 
             }
         }
-*/
-       /* public IEnumerator Spawn()
+
+      /*  public IEnumerator Spawn()
         {
             yield return new WaitForSeconds(respawnTimer);
 

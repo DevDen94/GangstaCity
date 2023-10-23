@@ -15,6 +15,7 @@ public class Mission_Script : MonoBehaviour
     public GameObject EndingCutScene;
     public GameObject FinishPoint;
     public GameObject Gangster;
+    public bool EndingCutscene_Bool;
 
     [Header("------Mission 01------")]
     public float speed = 0.5f;
@@ -23,8 +24,8 @@ public class Mission_Script : MonoBehaviour
     public GameObject Door;
     public GameObject TablePoint;
     [Header("------Mission 02------")]
-    public GameObject Weapons;
-    public GameObject Car_Trigger;
+
+    public RuntimeAnimatorController HealingController;
     [Header("------Mission 04------")]
     public int KillsCounter;
     public GameObject SpawnPoint;
@@ -66,7 +67,7 @@ public class Mission_Script : MonoBehaviour
 
     public void FinalTask(int mission_no) // After Chat or fina
     {
-        if (mission_no == 0)
+        if (mission_no == 1)
         {
             NextCutScene.SetActive(false);
             Firts_Character.gameObject.SetActive(false);
@@ -74,12 +75,10 @@ public class Mission_Script : MonoBehaviour
             GameManger.instance.ThirdPersonPLayer.transform.position = TablePoint.transform.position;
             GameManger.instance.ThirdPersonPLayer.transform.rotation = TablePoint.transform.rotation;
         }
-        if (mission_no == 1)
+        if (mission_no == 2)
         {
             Firts_Character.gameObject.SetActive(false);
             FinishPoint.SetActive(true);
-            Weapons.SetActive(true);
-            Car_Trigger.SetActive(true);
         }
     }
 }
