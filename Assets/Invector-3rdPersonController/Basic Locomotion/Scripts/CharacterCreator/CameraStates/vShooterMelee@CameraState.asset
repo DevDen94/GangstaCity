@@ -17,7 +17,7 @@ MonoBehaviour:
   - Name: Default
     forward: -1
     right: 0.25
-    defaultDistance: 2.68
+    defaultDistance: 3
     maxDistance: 12
     minDistance: 0.6
     height: 2.04
@@ -32,9 +32,9 @@ MonoBehaviour:
     rotationOffSet: {x: 8, y: 0, z: 0}
     cullingHeight: 1.9
     cullingMinDist: 0.01
-    fov: 60
+    fov: 87
     useZoom: 0
-    fixedAngle: {x: 360, y: 78}
+    fixedAngle: {x: 0, y: 0}
     lookPoints:
     - pointName: point_01
       positionPoint: {x: 0, y: 1, z: -10}

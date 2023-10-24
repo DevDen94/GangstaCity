@@ -114,7 +114,7 @@ public class GameManger : MonoBehaviour
         {
             TPS_Controls[i].SetActive(true);
         }
-        Set_ParentofTraffic(TPS_Controls[1]);
+       // Set_ParentofTraffic(TPS_Controls[1]);
         Hud_Navigation.SetActive(true);
         HealthCanvas.SetActive(true);
         ControlFreakPanel.SetActive(true);
@@ -122,7 +122,7 @@ public class GameManger : MonoBehaviour
     public void OFF_TPS()  // Disable ThirdPerson Controller
     {
         PlayerRef.transform.position = TPS_Controls[1].transform.position;
-        Set_ParentofTraffic(PlayerRef);
+       // Set_ParentofTraffic(PlayerRef);
         Hud_Navigation.SetActive(false);
         HealthCanvas.SetActive(false);
         ControlFreakPanel.SetActive(false);
@@ -131,12 +131,12 @@ public class GameManger : MonoBehaviour
             TPS_Controls[i].SetActive(false);
         }
     }
-    public void Set_ParentofTraffic(GameObject g)
+  /*  public void Set_ParentofTraffic(GameObject g)
     {
         Traffic_Reference.transform.SetParent(g.transform);
         Traffic_Reference.transform.localPosition = Vector3.zero;
        // hudNav.PlayerController = g.transform;
-    }
+    }*/
 
     public GameObject Traffic_Reference;
     public GameObject PlayerRef;

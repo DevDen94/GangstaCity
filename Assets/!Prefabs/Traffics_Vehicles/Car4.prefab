@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 5038682461212882331}
   - component: {fileID: 5038682461212882329}
   - component: {fileID: 5038682461209061497}
+  - component: {fileID: 434759763391475575}
   m_Layer: 8
   m_Name: Car4
   m_TagString: TrafficCar
@@ -406,8 +407,20 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.1810973, y: 1.6642514, z: 6.053889}
+  m_Center: {x: 0.03665308, y: 1.0887766, z: 1.4348395}
+--- !u!114 &434759763391475575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5038682461206855705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ed38c6543089042a809b2b506d7760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5038682461206855707
 GameObject:
   m_ObjectHideFlags: 0

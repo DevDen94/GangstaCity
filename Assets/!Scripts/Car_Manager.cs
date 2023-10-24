@@ -22,9 +22,11 @@ public class Car_Manager : MonoBehaviour
     public Button brakeBtn;
     public void Set_ParentofTraffic(GameObject g)
     {
-        Traffic_Reference.transform.SetParent(g.transform);
-        Traffic_Reference.transform.localPosition = Vector3.zero;
-        hudNav.PlayerController = g.transform;
+       // Traffic_Reference.transform.SetParent(g.transform);
+        Player_Hud_Navigation.transform.SetParent(g.transform);
+        Player_Hud_Navigation.transform.localPosition = Vector3.zero;
+        //Traffic_Reference.transform.localPosition = Vector3.zero;
+       // hudNav.PlayerController = g.transform;
     }
 
     void Start()

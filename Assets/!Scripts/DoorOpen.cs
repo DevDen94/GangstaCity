@@ -12,14 +12,14 @@ public class DoorOpen : MonoBehaviour
     public GameObject Camera;
     public GameObject LookAt;
     public GameObject Pointer;
-    public HNSPlayerController pl;
-    public GameObject HudNavigationElment;
+   // public HNSPlayerController pl;
+    //public GameObject HudNavigationElment;
     public float speed;
     public bool isEject;
     private void Start()
     {
         isEject = false;
-       pl =gameObject.transform.parent.GetComponent<HNSPlayerController>();
+      // pl =gameObject.transform.parent.GetComponent<HNSPlayerController>();
 
         Player.gameObject.transform.LookAt(LookAt.transform);
         instance = this;
@@ -62,9 +62,9 @@ public class DoorOpen : MonoBehaviour
     }
     public void Drive_Car()
     {
-        HudNavigationElment.SetActive(false);
+       // HudNavigationElment.SetActive(false);
         Car_Manager.instance.Set_ParentofTraffic(gameObject.transform.parent.gameObject);
-        pl.enabled = true;
+       // pl.enabled = true;
         for (int i = 0; i < Car_Manager.instance.TPS_Controls.Length; ++i)
         {
             Car_Manager.instance.TPS_Controls[i].SetActive(false);
@@ -96,7 +96,7 @@ public class DoorOpen : MonoBehaviour
     }
     public void Eject_Car()
     {
-        HudNavigationElment.SetActive(true);
+       // HudNavigationElment.SetActive(true);
         gameObject.transform.parent.GetComponent<RCC_CarControllerV3>().enabled = false;
       //  gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
         for (int i = 0; i < Car_Manager.instance.RCC_Controls.Length; ++i)
@@ -125,7 +125,7 @@ public class DoorOpen : MonoBehaviour
         {
             Car_Manager.instance.TPS_Controls[i].SetActive(true);
         }
-        pl.enabled = false;
+       // pl.enabled = false;
         Car_Manager.instance.Set_ParentofTraffic(Car_Manager.instance.Player_Character);
        
         Camera.SetActive(false);
