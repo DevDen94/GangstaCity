@@ -2636,18 +2636,16 @@ struct GameManger_t8917D6FDC08A856ABB7BAF8337DF42BFEF21AF75  : public MonoBehavi
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___MissionComplete_20;
 	// UnityEngine.GameObject GameManger::MissionFailed
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___MissionFailed_21;
-	// GameManger GameManger::MissionPanelParent
-	GameManger_t8917D6FDC08A856ABB7BAF8337DF42BFEF21AF75* ___MissionPanelParent_22;
 	// UnityEngine.GameObject[] GameManger::Missions
-	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___Missions_23;
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___Missions_22;
 	// Invector.vGameController GameManger::controller
-	vGameController_t3C443BE83501101E5D9C1A9AA876AB14750FC00B* ___controller_24;
+	vGameController_t3C443BE83501101E5D9C1A9AA876AB14750FC00B* ___controller_23;
 	// System.Int32 GameManger::selected_Mission
-	int32_t ___selected_Mission_25;
+	int32_t ___selected_Mission_24;
 	// UnityEngine.GameObject GameManger::Traffic_Reference
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Traffic_Reference_26;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Traffic_Reference_25;
 	// UnityEngine.GameObject GameManger::PlayerRef
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___PlayerRef_27;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___PlayerRef_26;
 };
 
 // ITSDirectionReference
@@ -7829,7 +7827,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DialogueSystem_Start_m68309F60D4F2F25E1F
 		Mission_ScriptU5BU5D_tFE838A0DCA51A9A2DB2AE8D0CA4BC7451DF30546* L_1 = L_0->___missions_11;
 		GameManger_t8917D6FDC08A856ABB7BAF8337DF42BFEF21AF75* L_2 = __this->___GM_15;
 		NullCheck(L_2);
-		int32_t L_3 = L_2->___selected_Mission_25;
+		int32_t L_3 = L_2->___selected_Mission_24;
 		NullCheck(L_1);
 		int32_t L_4 = L_3;
 		Mission_Script_t99CDA65FBE33B5F1AA12DF39F64B838A3F9B1411* L_5 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
@@ -7843,7 +7841,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DialogueSystem_Start_m68309F60D4F2F25E1F
 		Mission_ScriptU5BU5D_tFE838A0DCA51A9A2DB2AE8D0CA4BC7451DF30546* L_8 = L_7->___missions_11;
 		GameManger_t8917D6FDC08A856ABB7BAF8337DF42BFEF21AF75* L_9 = __this->___GM_15;
 		NullCheck(L_9);
-		int32_t L_10 = L_9->___selected_Mission_25;
+		int32_t L_10 = L_9->___selected_Mission_24;
 		NullCheck(L_8);
 		int32_t L_11 = L_10;
 		Mission_Script_t99CDA65FBE33B5F1AA12DF39F64B838A3F9B1411* L_12 = (L_8)->GetAt(static_cast<il2cpp_array_size_t>(L_11));
@@ -7857,7 +7855,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DialogueSystem_Start_m68309F60D4F2F25E1F
 		Mission_ScriptU5BU5D_tFE838A0DCA51A9A2DB2AE8D0CA4BC7451DF30546* L_15 = L_14->___missions_11;
 		GameManger_t8917D6FDC08A856ABB7BAF8337DF42BFEF21AF75* L_16 = __this->___GM_15;
 		NullCheck(L_16);
-		int32_t L_17 = L_16->___selected_Mission_25;
+		int32_t L_17 = L_16->___selected_Mission_24;
 		NullCheck(L_15);
 		int32_t L_18 = L_17;
 		Mission_Script_t99CDA65FBE33B5F1AA12DF39F64B838A3F9B1411* L_19 = (L_15)->GetAt(static_cast<il2cpp_array_size_t>(L_18));
@@ -7871,7 +7869,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DialogueSystem_Start_m68309F60D4F2F25E1F
 		Mission_ScriptU5BU5D_tFE838A0DCA51A9A2DB2AE8D0CA4BC7451DF30546* L_22 = L_21->___missions_11;
 		GameManger_t8917D6FDC08A856ABB7BAF8337DF42BFEF21AF75* L_23 = __this->___GM_15;
 		NullCheck(L_23);
-		int32_t L_24 = L_23->___selected_Mission_25;
+		int32_t L_24 = L_23->___selected_Mission_24;
 		NullCheck(L_22);
 		int32_t L_25 = L_24;
 		Mission_Script_t99CDA65FBE33B5F1AA12DF39F64B838A3F9B1411* L_26 = (L_22)->GetAt(static_cast<il2cpp_array_size_t>(L_25));
@@ -8023,7 +8021,7 @@ IL_0086:
 		Mission_Script_t99CDA65FBE33B5F1AA12DF39F64B838A3F9B1411* L_22 = ((Mission_Script_t99CDA65FBE33B5F1AA12DF39F64B838A3F9B1411_StaticFields*)il2cpp_codegen_static_fields_for(Mission_Script_t99CDA65FBE33B5F1AA12DF39F64B838A3F9B1411_il2cpp_TypeInfo_var))->___instance_4;
 		GameManger_t8917D6FDC08A856ABB7BAF8337DF42BFEF21AF75* L_23 = __this->___GM_15;
 		NullCheck(L_23);
-		int32_t L_24 = L_23->___selected_Mission_25;
+		int32_t L_24 = L_23->___selected_Mission_24;
 		NullCheck(L_22);
 		Mission_Script_FinalTask_mE06B3A463B98B7F822BF9394920CA43BED444B42(L_22, L_24, NULL);
 		// DialogueBoxCanvas.SetActive(false);
@@ -9106,7 +9104,7 @@ IL_0049:
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_18 = L_17->___Ending_Instructions_5;
 		GameManger_t8917D6FDC08A856ABB7BAF8337DF42BFEF21AF75* L_19 = __this->___gm_5;
 		NullCheck(L_19);
-		int32_t L_20 = L_19->___selected_Mission_25;
+		int32_t L_20 = L_19->___selected_Mission_24;
 		NullCheck(L_18);
 		int32_t L_21 = L_20;
 		String_t* L_22 = (L_18)->GetAt(static_cast<il2cpp_array_size_t>(L_21));
@@ -9155,7 +9153,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FinishTrigger_LastScene_m7E045572A6A7EC7
 		// if (gm.selected_Mission == 2)
 		GameManger_t8917D6FDC08A856ABB7BAF8337DF42BFEF21AF75* L_0 = __this->___gm_5;
 		NullCheck(L_0);
-		int32_t L_1 = L_0->___selected_Mission_25;
+		int32_t L_1 = L_0->___selected_Mission_24;
 		if ((!(((uint32_t)L_1) == ((uint32_t)2))))
 		{
 			goto IL_0028;
@@ -9212,7 +9210,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManger_Start_m8E4928F7130E1DF0602BB6
 		// Time.timeScale = 1f;
 		Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331((1.0f), NULL);
 		// controller.Spawn(SpawnPoints[0].transform);
-		vGameController_t3C443BE83501101E5D9C1A9AA876AB14750FC00B* L_0 = __this->___controller_24;
+		vGameController_t3C443BE83501101E5D9C1A9AA876AB14750FC00B* L_0 = __this->___controller_23;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1 = __this->___SpawnPoints_4;
 		NullCheck(L_1);
 		int32_t L_2 = 0;
@@ -9247,9 +9245,9 @@ IL_0050:
 		// selected_Mission = PlayerPrefs.GetInt("MissionNo");
 		int32_t L_6;
 		L_6 = PlayerPrefs_GetInt_m4D859DBEABAD3FB406C94485A0B2638A0C7F2987(_stringLiteral90F0C6FECC819FFFE96760EF800860DB2386D786, NULL);
-		__this->___selected_Mission_25 = L_6;
+		__this->___selected_Mission_24 = L_6;
 		// foreach(GameObject m in Missions)
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_7 = __this->___Missions_23;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_7 = __this->___Missions_22;
 		V_0 = L_7;
 		V_1 = 0;
 		goto IL_0078;
@@ -9283,8 +9281,8 @@ IL_0078:
 	}
 	{
 		// Missions[selected_Mission].SetActive(true);
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_15 = __this->___Missions_23;
-		int32_t L_16 = __this->___selected_Mission_25;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_15 = __this->___Missions_22;
+		int32_t L_16 = __this->___selected_Mission_24;
 		NullCheck(L_15);
 		int32_t L_17 = L_16;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18 = (L_15)->GetAt(static_cast<il2cpp_array_size_t>(L_17));
@@ -9312,7 +9310,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManger_Initialize_Mission_m5362DAEA1
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)0, NULL);
 		// selected_Mission = mission;
 		int32_t L_1 = ___0_mission;
-		__this->___selected_Mission_25 = L_1;
+		__this->___selected_Mission_24 = L_1;
 		// Instantiate(missions[mission]);
 		Mission_ScriptU5BU5D_tFE838A0DCA51A9A2DB2AE8D0CA4BC7451DF30546* L_2 = __this->___missions_11;
 		int32_t L_3 = ___0_mission;
@@ -9398,7 +9396,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManger_Set_Instructions_m4CA765BD6C4
 		Instructions_tDFF01DDF93F419CE19D58A0E1E4D16726ECE2D9F* L_2 = __this->___All_Instructions_18;
 		NullCheck(L_2);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_3 = L_2->___Starting_Instruction_4;
-		int32_t L_4 = __this->___selected_Mission_25;
+		int32_t L_4 = __this->___selected_Mission_24;
 		NullCheck(L_3);
 		int32_t L_5 = L_4;
 		String_t* L_6 = (L_3)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
@@ -9567,7 +9565,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManger_OFF_TPS_mB96B662FDEA109B07692
 	int32_t V_0 = 0;
 	{
 		// PlayerRef.transform.position = TPS_Controls[1].transform.position;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___PlayerRef_27;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___PlayerRef_26;
 		NullCheck(L_0);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
 		L_1 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_0, NULL);

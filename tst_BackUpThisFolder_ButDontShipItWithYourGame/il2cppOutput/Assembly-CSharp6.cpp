@@ -3499,18 +3499,16 @@ struct GameManger_t8917D6FDC08A856ABB7BAF8337DF42BFEF21AF75  : public MonoBehavi
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___MissionComplete_20;
 	// UnityEngine.GameObject GameManger::MissionFailed
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___MissionFailed_21;
-	// GameManger GameManger::MissionPanelParent
-	GameManger_t8917D6FDC08A856ABB7BAF8337DF42BFEF21AF75* ___MissionPanelParent_22;
 	// UnityEngine.GameObject[] GameManger::Missions
-	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___Missions_23;
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___Missions_22;
 	// Invector.vGameController GameManger::controller
-	vGameController_t3C443BE83501101E5D9C1A9AA876AB14750FC00B* ___controller_24;
+	vGameController_t3C443BE83501101E5D9C1A9AA876AB14750FC00B* ___controller_23;
 	// System.Int32 GameManger::selected_Mission
-	int32_t ___selected_Mission_25;
+	int32_t ___selected_Mission_24;
 	// UnityEngine.GameObject GameManger::Traffic_Reference
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Traffic_Reference_26;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Traffic_Reference_25;
 	// UnityEngine.GameObject GameManger::PlayerRef
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___PlayerRef_27;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___PlayerRef_26;
 };
 
 // SickscoreGames.HUDNavigationSystem.HNSPrefab

@@ -31,7 +31,7 @@ public class GameManger : MonoBehaviour
     public GameObject MissionComplete;
     public GameObject MissionFailed;
 
-    public GameManger MissionPanelParent;
+    //public GameManger MissionPanelParent;
 
     public GameObject[] Missions;
     public vGameController controller;
