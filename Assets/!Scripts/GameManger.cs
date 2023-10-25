@@ -37,6 +37,11 @@ public class GameManger : MonoBehaviour
     public vGameController controller;
     [HideInInspector]
     public int selected_Mission;
+
+    public void Debugg()
+    {
+        Debug.LogError("------------------------------");
+    }
     private void Start()
     {
         Time.timeScale = 1f;
@@ -68,6 +73,19 @@ public class GameManger : MonoBehaviour
         Invoke("Set_Instructions", 2f);
     }
 
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+        PasuedPanel.SetActive(false);
+
+    }
+    public void Pasued_()
+    {
+      
+        PasuedPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+    public GameObject PasuedPanel;
     public void SpawnPlayer()
     {
         Set_TPS();

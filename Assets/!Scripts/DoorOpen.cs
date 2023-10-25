@@ -30,7 +30,7 @@ public class DoorOpen : MonoBehaviour
         if (isEject)
         {
       
-            if (speed < 5)
+            if (speed < 3)
             {
                 Eject_Car();
                 isEject = false;
@@ -62,6 +62,7 @@ public class DoorOpen : MonoBehaviour
     }
     public void Drive_Car()
     {
+        Player.gameObject.transform.SetPositionAndRotation(Point.transform.position, Point.transform.rotation);
        // HudNavigationElment.SetActive(false);
         Car_Manager.instance.Set_ParentofTraffic(gameObject.transform.parent.gameObject);
        // pl.enabled = true;
@@ -96,7 +97,8 @@ public class DoorOpen : MonoBehaviour
     }
     public void Eject_Car()
     {
-       // HudNavigationElment.SetActive(true);
+     
+        // HudNavigationElment.SetActive(true);
         gameObject.transform.parent.GetComponent<RCC_CarControllerV3>().enabled = false;
       //  gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
         for (int i = 0; i < Car_Manager.instance.RCC_Controls.Length; ++i)

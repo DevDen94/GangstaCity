@@ -21572,6 +21572,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 474887819418313586, guid: 75851f41dc64ad241af4b4a902605a8b,
+        type: 3}
+      propertyPath: Prefabs.RadarPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 474887819418313586, guid: 75851f41dc64ad241af4b4a902605a8b,
+        type: 3}
+      propertyPath: Prefabs.IndicatorPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 474887819418313586, guid: 75851f41dc64ad241af4b4a902605a8b,
+        type: 3}
+      propertyPath: Prefabs.CompassBarPrefab
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75851f41dc64ad241af4b4a902605a8b, type: 3}
 --- !u!1001 &357417099243207119
