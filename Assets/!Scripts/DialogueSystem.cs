@@ -9,6 +9,9 @@ public class DialogueSystem : MonoBehaviour
     public Text LeftDialogue_Box;
     public Text RightDialogue_Box;
 
+    public GameObject LeftPanel;
+    public GameObject RightPanel;
+
     private GameObject DialogueBoxCamera;
     public GameObject DialogueBoxCanvas;
     private Animator Start_Character;
@@ -43,8 +46,8 @@ public class DialogueSystem : MonoBehaviour
         {
             int rand = Random.Range(0, 4);
             EndCharacter.SetInteger("Value", rand);
-            RightDialogue_Box.gameObject.SetActive(true);
-            LeftDialogue_Box.gameObject.SetActive(false);
+            RightPanel.SetActive(true);
+            LeftPanel.SetActive(false);
             RightDialogue_Box.text = End_.Dialogues[end_count].ToString();
             start_count++;
         }
@@ -63,8 +66,8 @@ public class DialogueSystem : MonoBehaviour
             end_count++;
             int rand = Random.Range(0, 4);
             Start_Character.SetInteger("Value", rand);
-            RightDialogue_Box.gameObject.SetActive(false);
-            LeftDialogue_Box.gameObject.SetActive(true);
+            RightPanel.SetActive(false);
+            LeftPanel.SetActive(true);
             LeftDialogue_Box.text = Start_.Dialogues[start_count].ToString();
            
            

@@ -54,7 +54,7 @@ public class GameManger : MonoBehaviour
             PlayerPrefs.SetInt("Start", 0);
             PlayerPrefs.SetInt("MissionNo",1);
         }
-        //PlayerPrefs.SetInt("MissionNo", 2);
+        PlayerPrefs.SetInt("MissionNo", 2);
         selected_Mission = PlayerPrefs.GetInt("MissionNo");
         foreach(GameObject m in Missions)
         {

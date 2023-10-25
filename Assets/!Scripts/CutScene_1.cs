@@ -13,11 +13,11 @@ public class CutScene_1 : MonoBehaviour
     }
     public void Start_Level()
     {
-        
+      
         CutSceneObjects.gameObject.SetActive(false);
         GameManger.instance.MissionStart_();
-       
-        if (script.HealingController !=null)
+
+        if (script.HealingController != null)
         {
             script.Gangster.GetComponent<Animator>().runtimeAnimatorController = script.HealingController;
         }
