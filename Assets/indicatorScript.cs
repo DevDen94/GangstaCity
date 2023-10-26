@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class indicatorScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform destination;  // The GameObject you want to point to
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (destination != null)
+        {
+            // Calculate the direction from the indicator to the destination
+            Vector3 direction = destination.position - transform.position;
+
+            // Calculate the rotation needed to point the indicator in that direction
+            Quaternion rotation = Quaternion.LookRotation(direction);
+
+            // Apply the rotation to the indicator
+            transform.rotation = rotation;
+        }
     }
 }

@@ -64,7 +64,11 @@ public class GameManger : MonoBehaviour
         Missions[selected_Mission].SetActive(true);
     }
 
-
+    public void Spawner()
+    {
+        int rand = Random.Range(0, SpawnPoints.Length);
+        TPS_Controls[1].transform.position = SpawnPoints[rand].transform.position;
+    }
     public void Initialize_Mission(int mission)
     {
         Hud_Navigation.SetActive(false);
