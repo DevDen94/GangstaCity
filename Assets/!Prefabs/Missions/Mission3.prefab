@@ -7549,6 +7549,7 @@ Transform:
   - {fileID: 52071433957571983}
   - {fileID: 462829341477268333}
   - {fileID: 4865851847037592921}
+  - {fileID: 2275799529315102345}
   m_Father: {fileID: 9067346995996081255}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 270.949, z: 0}
@@ -13793,7 +13794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9067346995240821942
 Transform:
   m_ObjectHideFlags: 0
@@ -14179,6 +14180,7 @@ MonoBehaviour:
   FinishPoint: {fileID: 9067346995240821943}
   Gangster: {fileID: 5162106836505216929}
   EndingCutscene_Bool: 1
+  FinishPoint_Navigator: {fileID: 0}
   speed: 0.5
   Mission1_Door: {fileID: 0}
   Bank: {fileID: 0}
@@ -14187,6 +14189,7 @@ MonoBehaviour:
   HealingController: {fileID: 0}
   KillsCounter: 0
   SpawnPoint: {fileID: 0}
+  Gangster_DeathCount: 7
 --- !u!1 &9067346996015880627
 GameObject:
   m_ObjectHideFlags: 0
@@ -14878,7 +14881,13 @@ PrefabInstance:
         type: 3}
       propertyPath: Prefabs.MinimapPrefab
       value: 
-      objectReference: {fileID: 114337368606235170, guid: 0f0a2b61d5bf8c646ba5d0b8332d2b2f,
+      objectReference: {fileID: 114337368606235170, guid: 7afcce8855a862146b891821a3a24eb9,
+        type: 3}
+    - target: {fileID: 7259919498624997451, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: Prefabs.IndicatorPrefab
+      value: 
+      objectReference: {fileID: 114217203137382804, guid: 60060e402099e9a4aabdc46a25b69250,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4, type: 3}
@@ -14888,6 +14897,102 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7378887615975540921}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8887055398011041473
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5541868997574794523}
+    m_Modifications:
+    - target: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997449, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: m_Name
+      value: HUD Element Pivot (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997451, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
+      propertyPath: Prefabs.MinimapPrefab
+      value: 
+      objectReference: {fileID: 114337368606235170, guid: 0f0a2b61d5bf8c646ba5d0b8332d2b2f,
+        type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4, type: 3}
+--- !u!4 &2275799529315102345 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+    type: 3}
+  m_PrefabInstance: {fileID: 8887055398011041473}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9067346994827082895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14895,6 +15000,61 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9067346995475137366}
     m_Modifications:
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9067346995996081254}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GangsterDead
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Mission_Script, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1831472062348373383, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
       propertyPath: m_Name
@@ -14980,6 +15140,61 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9067346995475137366}
     m_Modifications:
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9067346995996081254}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GangsterDead
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Mission_Script, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1831472062348373383, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
       propertyPath: m_Name
@@ -15078,7 +15293,42 @@ PrefabInstance:
     - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
         type: 3}
       propertyPath: selectedToolbar
-      value: 0
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9067346995996081254}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GangsterDead
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Mission_Script, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8927420468104417912, guid: ba01eb3dcf1865f4ca262928298483be,
         type: 3}
@@ -15164,6 +15414,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Police_Rifle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9067346995996081254}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GangsterDead
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Mission_Script, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8927420468104417912, guid: ba01eb3dcf1865f4ca262928298483be,
         type: 3}
@@ -15430,6 +15715,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Police_Rifle
       objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9067346995996081254}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GangsterDead
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Mission_Script, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8927420468104417912, guid: ba01eb3dcf1865f4ca262928298483be,
         type: 3}
       propertyPath: m_RootOrder
@@ -15695,6 +16015,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Police_Rifle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9067346995996081254}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GangsterDead
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Mission_Script, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8927420468104417912, guid: ba01eb3dcf1865f4ca262928298483be,
         type: 3}
       propertyPath: m_RootOrder
@@ -15779,6 +16134,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Police_Rifle (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9067346995996081254}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GangsterDead
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Mission_Script, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
+        type: 3}
+      propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8927420468104417912, guid: ba01eb3dcf1865f4ca262928298483be,
         type: 3}

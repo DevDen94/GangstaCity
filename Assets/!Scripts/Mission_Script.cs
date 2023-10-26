@@ -16,6 +16,7 @@ public class Mission_Script : MonoBehaviour
     public GameObject FinishPoint;
     public GameObject Gangster;
     public bool EndingCutscene_Bool;
+    public GameObject FinishPoint_Navigator;
 
     [Header("------Mission 01------")]
     public float speed = 0.5f;
@@ -30,6 +31,17 @@ public class Mission_Script : MonoBehaviour
     public int KillsCounter;
     public GameObject SpawnPoint;
 
+    public int Gangster_DeathCount = 10;
+
+    public void GangsterDead()
+    {
+        Gangster_DeathCount = Gangster_DeathCount - 1;
+        Debug.LogError(Gangster_DeathCount);
+        if (Gangster_DeathCount == 0)
+        {
+            FinishPoint.SetActive(true);
+        }
+    }
     private void Start()
     {
         instance = this;
@@ -67,6 +79,7 @@ public class Mission_Script : MonoBehaviour
 
     public void FinalTask(int mission_no) // After Chat or fina
     {
+        FinishPoint_Navigator.SetActive(true);
         if (mission_no == 1)
         {
             NextCutScene.SetActive(false);
@@ -78,7 +91,7 @@ public class Mission_Script : MonoBehaviour
         if (mission_no == 2)
         {
             Firts_Character.gameObject.SetActive(false);
-            FinishPoint.SetActive(true);
+           // FinishPoint.SetActive(true);
         }
     }
 }

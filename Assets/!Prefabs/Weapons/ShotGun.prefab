@@ -30640,11 +30640,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 3
+  selectedToolbar: 1
   weaponCategory: Shotgun
   shootFrequency: 0.8
   isInfinityAmmo: 0
-  ammo: 8
+  ammo: 100
   ignoreTags: []
   hitLayer:
     serializedVersion: 2

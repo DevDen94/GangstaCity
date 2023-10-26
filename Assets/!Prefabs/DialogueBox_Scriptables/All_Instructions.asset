@@ -15,12 +15,15 @@ MonoBehaviour:
   Starting_Instruction:
   - Welcome to the city Tio. Its sad for you that all you gang members are kidnapped
     except Lockie. He send you the signal. Go and meet him.
+  - Welcome to the city Tio. Its sad for you that all you gang members are kidnapped
+    except Lockie. He send you the signal. Go and meet him.
   - Lockie Got the signal of Wong. He is in danger. Go and meet lockie.
   - This is the time to save Wong. Kill All policemens and free him.
   - Hurry Up! You have not much time to save Rayn. They are taking Rayn to other
     city.
   - Need you to stole the bag full of diamonds.
   Ending_Instructions:
+  - Congrats Tio. Lockie will be free in a while. Good Job
   - Congrats Tio. Lockie will be free in a while. Good Job
   - 
   - Ahh. You are free my friend.

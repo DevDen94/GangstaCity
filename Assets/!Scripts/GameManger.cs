@@ -45,7 +45,8 @@ public class GameManger : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1f;
-        controller.Spawn(SpawnPoints[0].transform);
+        int rand = Random.Range(0, SpawnPoints.Length);
+        controller.Spawn(SpawnPoints[rand].transform);
         //TPS_Controls[1].GetComponent<vThirdPersonController>().maxHealth = 300;
         SpawnPlayer();
         instance = this;
@@ -54,7 +55,7 @@ public class GameManger : MonoBehaviour
             PlayerPrefs.SetInt("Start", 0);
             PlayerPrefs.SetInt("MissionNo",1);
         }
-        PlayerPrefs.SetInt("MissionNo", 2);
+        //PlayerPrefs.SetInt("MissionNo", 2);
         selected_Mission = PlayerPrefs.GetInt("MissionNo");
         foreach(GameObject m in Missions)
         {
@@ -114,16 +115,16 @@ public class GameManger : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("NewGame");
+        SceneManager.LoadScene("GamePlay");
     }
     public void Home()
     {
-        SceneManager.LoadScene("NewGame");
+        SceneManager.LoadScene("MainMenu");
     }
     public void Continue()
     {
-        PlayerPrefs.SetInt("MissionNo", PlayerPrefs.GetInt("MissionNo") + 1);
-        SceneManager.LoadScene("NewGame");
+        
+        SceneManager.LoadScene("GamePlay");
     }
 
     public void Set_TPS() // Enable ThirdPerson Controller

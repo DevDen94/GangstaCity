@@ -1426,11 +1426,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 2
+  selectedToolbar: 1
   weaponCategory: Pistol
   shootFrequency: 0.25
   isInfinityAmmo: 0
-  ammo: 8
+  ammo: 100
   ignoreTags: []
   hitLayer:
     serializedVersion: 2
@@ -1443,8 +1443,8 @@ MonoBehaviour:
   damageByDistance: 1
   DropOffStart: 8
   DropOffEnd: 50
-  minDamage: 15
-  maxDamage: 36
+  minDamage: 70
+  maxDamage: 100
   source: {fileID: 8246958}
   fireClip: {fileID: 8300000, guid: 4912d5c56ce571e4fbad7af6de655772, type: 3}
   emptyClip: {fileID: 8300000, guid: 9c5ac02550d31504ebb57020dde8e988, type: 3}
@@ -1480,7 +1480,7 @@ MonoBehaviour:
   clipSize: 8
   dontUseReload: 0
   autoReload: 0
-  ammoID: 14
+  ammoID: 20
   moveSetID: 1
   upperBodyID: 1
   shotID: 1

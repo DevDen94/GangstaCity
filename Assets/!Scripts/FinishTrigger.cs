@@ -14,6 +14,11 @@ public class FinishTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            PlayerPrefs.SetInt("MissionNo", PlayerPrefs.GetInt("MissionNo") + 1);
+            if (!Script.EndingCutscene_Bool)
+            {
+                GameManger.instance.MissionComplete.SetActive(true);
+            }
             gm.OFF_TPS();
             if(Script.Mission1_Door != null)
             {
@@ -24,10 +29,7 @@ public class FinishTrigger : MonoBehaviour
             gm.InstructionsPanel.SetActive(true);
             gm.StaringInstructions.text = gm.All_Instructions.Ending_Instructions[gm.selected_Mission].ToString();
             LastScene();
-            if (!Script.EndingCutscene_Bool)
-            {
-                GameManger.instance.MissionComplete.SetActive(true);
-            }
+           
         }
     }
 
