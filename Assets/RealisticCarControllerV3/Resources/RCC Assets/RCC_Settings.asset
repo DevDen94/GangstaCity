@@ -21,7 +21,7 @@ MonoBehaviour:
   maxFPS: 60
   useShortcuts: 0
   useFixedWheelColliders: 1
-  lockAndUnlockCursor: 0
+  lockAndUnlockCursor: 1
   behaviorTypes:
   - behaviorName: Simulator
     steeringHelper: 1

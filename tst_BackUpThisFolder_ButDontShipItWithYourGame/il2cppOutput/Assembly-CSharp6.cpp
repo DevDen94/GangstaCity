@@ -3505,10 +3505,12 @@ struct GameManger_t8917D6FDC08A856ABB7BAF8337DF42BFEF21AF75  : public MonoBehavi
 	vGameController_t3C443BE83501101E5D9C1A9AA876AB14750FC00B* ___controller_23;
 	// System.Int32 GameManger::selected_Mission
 	int32_t ___selected_Mission_24;
+	// UnityEngine.GameObject GameManger::PasuedPanel
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___PasuedPanel_25;
 	// UnityEngine.GameObject GameManger::Traffic_Reference
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Traffic_Reference_25;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Traffic_Reference_26;
 	// UnityEngine.GameObject GameManger::PlayerRef
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___PlayerRef_26;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___PlayerRef_27;
 };
 
 // SickscoreGames.HUDNavigationSystem.HNSPrefab
@@ -3677,22 +3679,26 @@ struct Mission_Script_t99CDA65FBE33B5F1AA12DF39F64B838A3F9B1411  : public MonoBe
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Gangster_15;
 	// System.Boolean Mission_Script::EndingCutscene_Bool
 	bool ___EndingCutscene_Bool_16;
+	// UnityEngine.GameObject Mission_Script::FinishPoint_Navigator
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___FinishPoint_Navigator_17;
 	// System.Single Mission_Script::speed
-	float ___speed_17;
+	float ___speed_18;
 	// UnityEngine.Animator Mission_Script::Mission1_Door
-	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___Mission1_Door_18;
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___Mission1_Door_19;
 	// UnityEngine.GameObject Mission_Script::Bank
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Bank_19;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Bank_20;
 	// UnityEngine.GameObject Mission_Script::Door
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Door_20;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Door_21;
 	// UnityEngine.GameObject Mission_Script::TablePoint
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___TablePoint_21;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___TablePoint_22;
 	// UnityEngine.RuntimeAnimatorController Mission_Script::HealingController
-	RuntimeAnimatorController_t6F7C753402B42EC23C163099CF935C5E0D7A7254* ___HealingController_22;
+	RuntimeAnimatorController_t6F7C753402B42EC23C163099CF935C5E0D7A7254* ___HealingController_23;
 	// System.Int32 Mission_Script::KillsCounter
-	int32_t ___KillsCounter_23;
+	int32_t ___KillsCounter_24;
 	// UnityEngine.GameObject Mission_Script::SpawnPoint
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___SpawnPoint_24;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___SpawnPoint_25;
+	// System.Int32 Mission_Script::Gangster_DeathCount
+	int32_t ___Gangster_DeathCount_26;
 };
 
 // ITS.AI.TSEventTrigger
