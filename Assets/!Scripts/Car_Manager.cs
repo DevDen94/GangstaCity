@@ -22,6 +22,8 @@ public class Car_Manager : MonoBehaviour
     public Button brakeBtn;
     public GameObject DestinationCar;
 
+    public NavmeshPathDraw navmesh;
+
     public Camera TPS_Camera;
     public Camera RCC_Camera;
     public void Set_ParentofTraffic(GameObject g)
@@ -40,18 +42,23 @@ public class Car_Manager : MonoBehaviour
 
     public void Sit_in()
     {
+        navmesh.gameObject.SetActive(false);
         Carbutton_IN.SetActive(false);
         Car.Drive_Car();
+       // navmesh.Player = Car.gameObject.transform.parent.gameObject.transform;
         hudNav.PlayerCamera = RCC_Camera;
         Car.Pointer.SetActive(false);
+        navmesh.gameObject.SetActive(true);
     }
     public void Exit_Out()
     {
         Carbutton_Out.SetActive(false);
-
+        navmesh.gameObject.SetActive(false);
         Car.isEject = true;
+      //  navmesh.Player = Car.gameObject.transform.parent.gameObject.transform;
         hudNav.PlayerCamera = TPS_Camera;
-        Invoke("On_Pointer", 3f);
+        navmesh.gameObject.SetActive(true);
+        Invoke("On_Pointer", 7f);
  
     }
     void On_Pointer()

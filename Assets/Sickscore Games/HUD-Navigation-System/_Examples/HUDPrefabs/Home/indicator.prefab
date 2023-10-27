@@ -61,7 +61,7 @@ MonoBehaviour:
   OffscreenPointer: {fileID: 0}
   OffscreenIcon: {fileID: 0}
   OnscreenDistanceText: {fileID: 114713287470605052}
-  OffscreenDistanceText: {fileID: 0}
+  OffscreenDistanceText: {fileID: 114713287470605052}
 --- !u!1 &1442311708972280
 GameObject:
   m_ObjectHideFlags: 0

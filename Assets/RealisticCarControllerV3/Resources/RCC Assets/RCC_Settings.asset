@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7756f06ac1b082e4bb1697f768a5a41f, type: 3}
   m_Name: RCC_Settings
   m_EditorClassIdentifier: 
-  behaviorSelectedIndex: 0
-  overrideBehavior: 0
-  overrideFPS: 0
-  overrideFixedTimeStep: 0
+  behaviorSelectedIndex: 2
+  overrideBehavior: 1
+  overrideFPS: 1
+  overrideFixedTimeStep: 1
   fixedTimeStep: 0.02
   maxAngularVelocity: 8
   maxFPS: 60
   useShortcuts: 0
   useFixedWheelColliders: 1
-  lockAndUnlockCursor: 1
+  lockAndUnlockCursor: 0
   behaviorTypes:
   - behaviorName: Simulator
     steeringHelper: 1
@@ -401,8 +401,8 @@ MonoBehaviour:
   useAutomaticGear: 1
   useAutomaticClutch: 1
   runEngineAtAwake: 1
-  autoReverse: 1
-  autoReset: 1
+  autoReverse: 0
+  autoReset: 0
   contactParticles: {fileID: 193332, guid: 863b5201aede3aa438ac7d962625d663, type: 3}
   scratchParticles: {fileID: 193332, guid: 2ff0e422d9bf66249b14d124d7a2b3b0, type: 3}
   wheelDeflateParticles: {fileID: 5240681609208784007, guid: de4704e3426ad794c9166d4f75ab33c4,
@@ -412,8 +412,8 @@ MonoBehaviour:
   useTelemetry: 0
   mobileController: 0
   mobileControllerEnabled: 1
-  UIButtonSensitivity: 10
-  UIButtonGravity: 10
+  UIButtonSensitivity: 3
+  UIButtonGravity: 5
   gyroSensitivity: 2.5
   useHeadLightsAsVertexLights: 0
   useBrakeLightsAsVertexLights: 1
@@ -421,9 +421,9 @@ MonoBehaviour:
   useIndicatorLightsAsVertexLights: 1
   useOtherLightsAsVertexLights: 1
   setLayers: 1
-  RCCLayer: RCC
-  WheelColliderLayer: RCC_WheelCollider
-  DetachablePartLayer: RCC_DetachablePart
+  RCCLayer: Default
+  WheelColliderLayer: Default
+  DetachablePartLayer: Default
   exhaustGas: {fileID: 104134, guid: 46992adcb9d56714eb84164c8a965492, type: 3}
   skidmarksManager: {fileID: 114786316056322602, guid: a107dc7aa77e84f4d8cf9888def4fe64,
     type: 3}
@@ -472,9 +472,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4ebe01570cad61a40be61693713688b4, type: 3}
   - {fileID: 8300000, guid: f772a702dcfbfe9478afe01aa9429fbc, type: 3}
   maxGearShiftingSoundVolume: 0.5
-  maxCrashSoundVolume: 0.5
+  maxCrashSoundVolume: 0.288
   maxWindSoundVolume: 1
-  maxBrakeSoundVolume: 0.5
+  maxBrakeSoundVolume: 0.427
   foldGeneralSettings: 1
   foldBehaviorSettings: 1
   foldControllerSettings: 1

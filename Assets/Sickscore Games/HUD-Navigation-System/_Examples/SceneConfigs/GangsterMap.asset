@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   overrideRadarSettings: 0
   overrideCompassBarSettings: 0
-  overrideIndicatorSettings: 0
+  overrideIndicatorSettings: 1
   overrideMinimapSettings: 1
   useRadar: 1
   radarMode: 0
