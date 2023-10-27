@@ -50,10 +50,10 @@ public class NavmeshPathDraw : MonoBehaviour
         }
 
         //validate origin position
-        if (Physics.Raycast(transform.position, -Vector3.up, out downHit, Mathf.Infinity, groundLayers)) {
-            validatedOriginPos = new Vector3(transform.position.x, downHit.transform.position.y, transform.position.z);
+        if (Physics.Raycast(Player.transform.position, -Vector3.up, out downHit, Mathf.Infinity, groundLayers)) {
+            validatedOriginPos = new Vector3(Player.transform.position.x, downHit.transform.position.y, Player.transform.position.z);
         }else{
-            validatedOriginPos = transform.position;
+            validatedOriginPos = Player.transform.position;
         }
 
         NavMesh.CalculatePath(validatedOriginPos, validatedDesPos, NavMesh.AllAreas, path);

@@ -4,12 +4,13 @@ using UnityEditor;
 [CustomEditor(typeof(NavmeshPathDraw))]
 public class NavmeshPathDrawCustomInspector : Editor
 {
-    SerializedProperty destination,
+    SerializedProperty destination,Player,
     recalculatePath,
     recalculationTime,
     groundLayers;
 
     void OnEnable(){
+        Player= serializedObject.FindProperty("Player");
         destination = serializedObject.FindProperty("destination");
         recalculatePath = serializedObject.FindProperty("recalculatePath");
         recalculationTime = serializedObject.FindProperty("recalculationTime");
@@ -22,7 +23,7 @@ public class NavmeshPathDrawCustomInspector : Editor
         EditorGUILayout.Space(5);
 
         NavmeshPathDraw script = (NavmeshPathDraw) target;
-
+        EditorGUILayout.PropertyField(Player, new GUIContent("Player", "Transform position of the Player"));
         EditorGUILayout.PropertyField(destination, new GUIContent("Destination", "Transform position of the end destination"));
         EditorGUILayout.PropertyField(recalculatePath, new GUIContent("Recalculate Path", "If set to true, the pathfinding will be recalculated every set amount of time"));
         

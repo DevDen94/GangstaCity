@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SickscoreGames.HUDNavigationSystem;
 using UnityEngine.UI;
+using UnityEngine.AI;
 public class Car_Manager : MonoBehaviour
 {
     public GameObject[] TPS_Controls;
@@ -45,8 +46,9 @@ public class Car_Manager : MonoBehaviour
         navmesh.gameObject.SetActive(false);
         Carbutton_IN.SetActive(false);
         Car.Drive_Car();
-       // navmesh.Player = Car.gameObject.transform.parent.gameObject.transform;
+        navmesh.Player = Car.gameObject.transform.parent.gameObject.transform;
         hudNav.PlayerCamera = RCC_Camera;
+        Car.gameObject.GetComponent<NavMeshAgent>().enabled = true;
         Car.Pointer.SetActive(false);
         navmesh.gameObject.SetActive(true);
     }
@@ -55,7 +57,8 @@ public class Car_Manager : MonoBehaviour
         Carbutton_Out.SetActive(false);
         navmesh.gameObject.SetActive(false);
         Car.isEject = true;
-      //  navmesh.Player = Car.gameObject.transform.parent.gameObject.transform;
+        Car.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+        navmesh.Player = Car.gameObject.transform.parent.gameObject.transform;
         hudNav.PlayerCamera = TPS_Camera;
         navmesh.gameObject.SetActive(true);
         Invoke("On_Pointer", 7f);
