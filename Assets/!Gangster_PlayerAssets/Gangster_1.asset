@@ -14,20 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Tio
   Hats: 0
-  Shirts: 0
   Jackets: 0
   Pants: 0
   Shoes: 0
   Glasses: 0
   Hat_Material: {fileID: 0}
-  Shirt_Material: {fileID: 0}
   Jacket_Material: {fileID: 0}
   Pant_Material: {fileID: 0}
   Glasses_Material: {fileID: 0}
   Shoe_Material: {fileID: 0}
   Hat_Textures: []
-  Shirt_Textures: []
   Jacket_Textures: []
   Pant_Textures: []
-  Glasses_Textures: []
+  Glasses_Textures:
+  - 272626
+  - AB1616
+  - BA7713
+  - 69C517
+  - 00A4FF
+  - 93C803
   Shoe_Textures: []
