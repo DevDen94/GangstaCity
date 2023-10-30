@@ -17,6 +17,7 @@ public class Mission_Script : MonoBehaviour
     public GameObject Gangster;
     public bool EndingCutscene_Bool;
     public GameObject FinishPoint_Navigator;
+    public GameObject ActiveNavigator;
 
     [Header("------Mission 01------")]
     public float speed = 0.5f;
@@ -45,6 +46,8 @@ public class Mission_Script : MonoBehaviour
     private void Start()
     {
         instance = this;
+        Car_Manager.instance.DestinationPoint = ActiveNavigator;
+        Car_Manager.instance.Set_NavigationDestination();
     }
     public void Start_CutScene()
     {

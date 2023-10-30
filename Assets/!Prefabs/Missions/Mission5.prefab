@@ -41270,6 +41270,7 @@ MonoBehaviour:
   Gangster: {fileID: 0}
   EndingCutscene_Bool: 0
   FinishPoint_Navigator: {fileID: 0}
+  ActiveNavigator: {fileID: 3595272850940371879}
   speed: 0.5
   Mission1_Door: {fileID: 0}
   Bank: {fileID: 0}

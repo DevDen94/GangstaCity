@@ -14181,6 +14181,7 @@ MonoBehaviour:
   Gangster: {fileID: 5162106836505216929}
   EndingCutscene_Bool: 1
   FinishPoint_Navigator: {fileID: 0}
+  ActiveNavigator: {fileID: 5162106836505216929}
   speed: 0.5
   Mission1_Door: {fileID: 0}
   Bank: {fileID: 0}

@@ -50,7 +50,7 @@ namespace Invector
 
         public void OnCharacterDead(GameObject _gameObject)
         {
-            GameManger.instance.MissionFailed.SetActive(true);
+            GameManger.instance.Loose_Mission();
             oldPlayer = _gameObject;
             Destroy(_gameObject);
             Time.timeScale = 0f;

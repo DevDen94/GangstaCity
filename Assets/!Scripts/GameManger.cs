@@ -37,17 +37,28 @@ public class GameManger : MonoBehaviour
     public vGameController controller;
     [HideInInspector]
     public int selected_Mission;
+    public Car_Manager cm;
 
-    public void Debugg()
+
+    public AudioSource src;
+    public AudioClip WinSound;
+    public AudioClip LooseSound;
+    public void Win_Mission()
     {
-        Debug.LogError("------------------------------");
+        MissionComplete.SetActive(true);
+        src.PlayOneShot(WinSound);
+    }
+    public void Loose_Mission()
+    {
+        MissionFailed.SetActive(true);
+        src.PlayOneShot(LooseSound);
     }
     private void Start()
     {
+        cm = GetComponent<Car_Manager>();
         Time.timeScale = 1f;
         int rand = Random.Range(0, SpawnPoints.Length);
         controller.Spawn(SpawnPoints[rand].transform);
-        //TPS_Controls[1].GetComponent<vThirdPersonController>().maxHealth = 300;
         SpawnPlayer();
         instance = this;
         if (!PlayerPrefs.HasKey("Start"))
@@ -62,6 +73,8 @@ public class GameManger : MonoBehaviour
             m.SetActive(false);
         }
         Missions[selected_Mission].SetActive(true);
+        cm.DestinationPoint = Missions[selected_Mission];
+        cm.Set_NavigationDestination();
     }
 
     public void Spawner()
@@ -137,7 +150,7 @@ public class GameManger : MonoBehaviour
         {
             TPS_Controls[i].SetActive(true);
         }
-       // Set_ParentofTraffic(TPS_Controls[1]);
+
         Hud_Navigation.SetActive(true);
         HealthCanvas.SetActive(true);
         ControlFreakPanel.SetActive(true);
@@ -145,7 +158,6 @@ public class GameManger : MonoBehaviour
     public void OFF_TPS()  // Disable ThirdPerson Controller
     {
         PlayerRef.transform.position = TPS_Controls[1].transform.position;
-       // Set_ParentofTraffic(PlayerRef);
         Hud_Navigation.SetActive(false);
         HealthCanvas.SetActive(false);
         ControlFreakPanel.SetActive(false);
@@ -154,12 +166,7 @@ public class GameManger : MonoBehaviour
             TPS_Controls[i].SetActive(false);
         }
     }
-  /*  public void Set_ParentofTraffic(GameObject g)
-    {
-        Traffic_Reference.transform.SetParent(g.transform);
-        Traffic_Reference.transform.localPosition = Vector3.zero;
-       // hudNav.PlayerController = g.transform;
-    }*/
+ 
 
     public GameObject Traffic_Reference;
     public GameObject PlayerRef;

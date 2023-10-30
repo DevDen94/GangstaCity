@@ -38540,6 +38540,7 @@ MonoBehaviour:
   Gangster: {fileID: 8128896166010908173}
   EndingCutscene_Bool: 0
   FinishPoint_Navigator: {fileID: 0}
+  ActiveNavigator: {fileID: 2974752701123844113}
   speed: 0.5
   Mission1_Door: {fileID: 0}
   Bank: {fileID: 0}
@@ -43489,6 +43490,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8269110808403434193, guid: 6b0a629ba7281fe4c9d16b349d525243,
         type: 3}
+      propertyPath: _capsuleCollider
+      value: 
+      objectReference: {fileID: 7852645984048593790}
+    - target: {fileID: 8269110808403434193, guid: 6b0a629ba7281fe4c9d16b349d525243,
+        type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -43597,6 +43603,12 @@ PrefabInstance:
 --- !u!4 &7852645984048593789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8269110808403434223, guid: 6b0a629ba7281fe4c9d16b349d525243,
+    type: 3}
+  m_PrefabInstance: {fileID: 2178611497249792402}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &7852645984048593790 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 8269110808403434220, guid: 6b0a629ba7281fe4c9d16b349d525243,
     type: 3}
   m_PrefabInstance: {fileID: 2178611497249792402}
   m_PrefabAsset: {fileID: 0}
@@ -43759,6 +43771,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 789683237302385019, guid: 12cf8d753b892dd45bc4462591e7687b,
         type: 3}
+      propertyPath: _capsuleCollider
+      value: 
+      objectReference: {fileID: 5290715488179589698}
+    - target: {fileID: 789683237302385019, guid: 12cf8d753b892dd45bc4462591e7687b,
+        type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -43802,6 +43819,12 @@ PrefabInstance:
 --- !u!4 &5290715488179589697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 789683237302384965, guid: 12cf8d753b892dd45bc4462591e7687b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4871171917608332036}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &5290715488179589698 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 789683237302384966, guid: 12cf8d753b892dd45bc4462591e7687b,
     type: 3}
   m_PrefabInstance: {fileID: 4871171917608332036}
   m_PrefabAsset: {fileID: 0}
