@@ -50,8 +50,10 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 72000765f52203b46a7e59ac07512454, type: 3}
   - {fileID: 2800000, guid: 61f742b357a06314cb2ed2926f6b9b6c, type: 3}
   - {fileID: 2800000, guid: 5607a74bb4c99d6489605d7545905eaf, type: 3}
-  - {fileID: 2800000, guid: 6b253d2d60722be49939ca3b469bea92, type: 3}
-  - {fileID: 2800000, guid: 8c3fdb5e19f821c4a8be252f71a174ff, type: 3}
+  - {fileID: 2800000, guid: 8a8465fcb9434e247bb84b3b3d76cc62, type: 3}
+  - {fileID: 2800000, guid: cea53abdcaf41a24583dd88d04970388, type: 3}
+  - {fileID: 2800000, guid: eac63e361dbc15a438731bbe49c61eec, type: 3}
+  - {fileID: 2800000, guid: cc422555195946241a05f89dbc513b46, type: 3}
   Glasses_Textures:
   - 272626
   - AB1616

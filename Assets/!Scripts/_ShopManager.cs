@@ -24,8 +24,15 @@ public class _ShopManager : MonoBehaviour
     private Gangster_Shop gm;
     private void Start()
     {
-        Camera.SetInteger("value", 10);
+        Camera.SetInteger("value", 10); gm = Gangster[0];
+        Price = PlayerPrefs.GetInt("Cash");
+        Cash_.text = Price.ToString();
+        Default_Set();
+        
        
+    }
+    public void Default_Set()
+    {
         if (!PlayerPrefs.HasKey("Starter"))
         {
             PlayerPrefs.SetInt("Cash", 50000);
@@ -35,10 +42,19 @@ public class _ShopManager : MonoBehaviour
             PlayerPrefs.SetInt("Shoe0", 1);
             PlayerPrefs.SetInt("Jacket0", 1);
             PlayerPrefs.SetInt("Glasses0", 1);
+            gm.DummyHat.SetTexture("_BaseMap", gm.Hat_Textures[0]);
+            Color newColor = ColorUtility.TryParseHtmlString("#" + gm.Glasses_Textures[0].ToString(), out Color parsedColor) ? parsedColor : Color.white;
+            gm.Dummy_Glasses.SetColor("_BaseColor", newColor);
+            gm.DummyPant.SetTexture("_BaseMap", gm.Pant_Textures[0]);
+            gm.DummyShoe.SetTexture("_BaseMap", gm.Shoe_Textures[0]);
+            gm.DummyJacket.SetTexture("_BaseMap", gm.Jacket_Textures[0]);
+            gm.Hat_Material.SetTexture("_BaseMap", gm.Hat_Textures[0]);
+            gm.Glasses_Material.SetColor("_BaseColor", newColor);
+            gm.Pant_Material.SetTexture("_BaseMap", gm.Pant_Textures[0]);
+            gm.Shoe_Material.SetTexture("_BaseMap", gm.Shoe_Textures[0]);
+            gm.Jacket_Material.SetTexture("_BaseMap", gm.Jacket_Textures[0]);
+
         }
-        gm = Gangster[0]; 
-        Price = PlayerPrefs.GetInt("Cash");
-        Cash_.text = Price.ToString();
     }
     public void ShowUpdate(int a)
     {
