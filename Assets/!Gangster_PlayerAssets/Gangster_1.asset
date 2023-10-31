@@ -18,14 +18,40 @@ MonoBehaviour:
   Pants: 0
   Shoes: 0
   Glasses: 0
-  Hat_Material: {fileID: 0}
-  Jacket_Material: {fileID: 0}
-  Pant_Material: {fileID: 0}
-  Glasses_Material: {fileID: 0}
-  Shoe_Material: {fileID: 0}
-  Hat_Textures: []
-  Jacket_Textures: []
-  Pant_Textures: []
+  Hat_Material: {fileID: 2100000, guid: e209910980aca7c40a89c0aa13992f50, type: 2}
+  Jacket_Material: {fileID: 2100000, guid: 2e2ea439390f84d4eb8d2dd823d6a105, type: 2}
+  Pant_Material: {fileID: 2100000, guid: 5717237462b971141b6ac547f260e64a, type: 2}
+  Glasses_Material: {fileID: 2100000, guid: b82b1fb7a94c2c347aa056df7a687fdc, type: 2}
+  Shoe_Material: {fileID: 2100000, guid: 7b62e849bc991104b8118818f21b0a3d, type: 2}
+  Hat_Textures:
+  - {fileID: 2800000, guid: 70f6839f9df296848bcdd12568f468f6, type: 3}
+  - {fileID: 2800000, guid: 2ec872c1ddeb66a49b2b6e90911dba87, type: 3}
+  - {fileID: 2800000, guid: aacbbf2e1ce340849a36000d884988bf, type: 3}
+  - {fileID: 2800000, guid: f219a9ec62c6943458c7ea9f9774da18, type: 3}
+  - {fileID: 2800000, guid: 72000765f52203b46a7e59ac07512454, type: 3}
+  - {fileID: 2800000, guid: 520b2b2805718c04386e17e5d811dfcd, type: 3}
+  - {fileID: 2800000, guid: 61f742b357a06314cb2ed2926f6b9b6c, type: 3}
+  - {fileID: 2800000, guid: 402303c29a6f1344082110fa63c10399, type: 3}
+  Jacket_Textures:
+  - {fileID: 2800000, guid: b5346de4543c0d04f9ebcd80a7af97aa, type: 3}
+  - {fileID: 2800000, guid: 2b9cd3966a40a2948ab05707d6d99eab, type: 3}
+  - {fileID: 2800000, guid: 3be52a3e83ecb0b4c9f4cb59526daff3, type: 3}
+  - {fileID: 2800000, guid: 2d19138c2923f6b4780c77cf74fd4211, type: 3}
+  - {fileID: 2800000, guid: ede165f6f5a4ee94c8b2bf7185e7417a, type: 3}
+  - {fileID: 2800000, guid: f784bd30b41006a409c8501a918d7b33, type: 3}
+  - {fileID: 2800000, guid: 8430b2e897b302a40be8351fa7690a2f, type: 3}
+  - {fileID: 2800000, guid: 4f49661a1e4079b4cb95b01df828741c, type: 3}
+  - {fileID: 2800000, guid: 97eda666c2249ac46947600e31359514, type: 3}
+  - {fileID: 2800000, guid: 693ed193ee232dc4bb36f7d4c2ecfc38, type: 3}
+  Pant_Textures:
+  - {fileID: 2800000, guid: abd30bec16617044295f3061b2385866, type: 3}
+  - {fileID: 2800000, guid: 70f6839f9df296848bcdd12568f468f6, type: 3}
+  - {fileID: 2800000, guid: 72000765f52203b46a7e59ac07512454, type: 3}
+  - {fileID: 2800000, guid: 72000765f52203b46a7e59ac07512454, type: 3}
+  - {fileID: 2800000, guid: 61f742b357a06314cb2ed2926f6b9b6c, type: 3}
+  - {fileID: 2800000, guid: 5607a74bb4c99d6489605d7545905eaf, type: 3}
+  - {fileID: 2800000, guid: 6b253d2d60722be49939ca3b469bea92, type: 3}
+  - {fileID: 2800000, guid: 8c3fdb5e19f821c4a8be252f71a174ff, type: 3}
   Glasses_Textures:
   - 272626
   - AB1616
@@ -33,4 +59,16 @@ MonoBehaviour:
   - 69C517
   - 00A4FF
   - 93C803
-  Shoe_Textures: []
+  Shoe_Textures:
+  - {fileID: 2800000, guid: 256fc09a46d8126439d93d4fc5150d15, type: 3}
+  - {fileID: 2800000, guid: 70f6839f9df296848bcdd12568f468f6, type: 3}
+  - {fileID: 2800000, guid: 2ec872c1ddeb66a49b2b6e90911dba87, type: 3}
+  - {fileID: 2800000, guid: aacbbf2e1ce340849a36000d884988bf, type: 3}
+  - {fileID: 2800000, guid: 520b2b2805718c04386e17e5d811dfcd, type: 3}
+  - {fileID: 2800000, guid: 61f742b357a06314cb2ed2926f6b9b6c, type: 3}
+  - {fileID: 2800000, guid: 402303c29a6f1344082110fa63c10399, type: 3}
+  DummyHat: {fileID: 2100000, guid: c2026f88317cc6a4881230685aaf5abf, type: 2}
+  DummyJacket: {fileID: 2100000, guid: c8b77afcfef1f0e4aa6668afeaf9a005, type: 2}
+  DummyPant: {fileID: 2100000, guid: 36ca3285030faf84590be948f9592d2b, type: 2}
+  Dummy_Glasses: {fileID: 2100000, guid: c6e47a69ea2e1a745ab1f17a76a29f9b, type: 2}
+  DummyShoe: {fileID: 2100000, guid: 2128322accb282f4aba8bc97480ffeb4, type: 2}

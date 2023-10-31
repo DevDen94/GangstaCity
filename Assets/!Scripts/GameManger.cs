@@ -55,6 +55,7 @@ public class GameManger : MonoBehaviour
     }
     private void Start()
     {
+        OFF_TPS();
         cm = GetComponent<Car_Manager>();
         Time.timeScale = 1f;
         int rand = Random.Range(0, SpawnPoints.Length);

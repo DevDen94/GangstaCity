@@ -20,10 +20,18 @@ public class Gangster_Shop : ScriptableObject
     public Material Glasses_Material;
     public Material Shoe_Material;
 
-    public Sprite[] Hat_Textures;
+    public Texture[] Hat_Textures;
     //public Sprite[] Shirt_Textures;
-    public Sprite[] Jacket_Textures;
-    public Sprite[] Pant_Textures;
+    public Texture[] Jacket_Textures;
+    public Texture[] Pant_Textures;
     public string[] Glasses_Textures;
-    public Sprite[] Shoe_Textures;
+    public Texture[] Shoe_Textures;
+
+
+    public Material DummyHat;
+    public Material DummyJacket;
+    public Material DummyPant;
+    public Material Dummy_Glasses;
+    public Material DummyShoe;
+
 }
