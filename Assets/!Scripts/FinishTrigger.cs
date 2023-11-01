@@ -6,6 +6,8 @@ public class FinishTrigger : MonoBehaviour
 {
     public Mission_Script Script;
     private GameManger gm;
+    public bool Level_5;
+  //  public GameObject OpenChestBtn;
     private void Start()
     {
         gm = GameManger.instance;
@@ -14,6 +16,12 @@ public class FinishTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            if(Level_5)
+            {
+                PlayerPrefs.SetInt("MissionNo", PlayerPrefs.GetInt("MissionNo") + 1);
+                gameObject.SetActive(false);
+                
+            }
             PlayerPrefs.SetInt("MissionNo", PlayerPrefs.GetInt("MissionNo") + 1);
             if (!Script.EndingCutscene_Bool)
             {

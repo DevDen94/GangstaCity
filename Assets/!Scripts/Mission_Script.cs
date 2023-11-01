@@ -97,4 +97,17 @@ public class Mission_Script : MonoBehaviour
            // FinishPoint.SetActive(true);
         }
     }
+
+
+
+    //Only for Mission5///
+     public void Enabl3_FinishScreen()
+    {
+        Invoke("FourSecondDelay", 4f);
+    }
+
+    void FourSecondDelay()
+    {
+        GameManger.instance.Win_Mission();
+    }
 }
