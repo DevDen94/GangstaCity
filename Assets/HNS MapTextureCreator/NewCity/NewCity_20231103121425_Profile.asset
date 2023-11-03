@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3375dd6ef0f71e4f8c1910ea7114d16, type: 3}
   m_Name: NewCity_20231103121425_Profile
   m_EditorClassIdentifier: 
-  MapTexture: {fileID: 21300000, guid: 30061f03fa9c44746bf3f9e6e06567f6, type: 3}
+  MapTexture: {fileID: 21300000, guid: e037220e26ca77541a8ad630a16fae88, type: 3}
   MapTextureSize: {x: 1007, y: 1024}
   MapBackground: {r: 0, g: 0.34237194, b: 1, a: 0.654902}
   MapBounds:

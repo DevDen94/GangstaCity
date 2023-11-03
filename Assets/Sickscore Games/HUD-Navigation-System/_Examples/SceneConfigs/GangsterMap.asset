@@ -44,7 +44,7 @@ MonoBehaviour:
   indicatorFadeRadius: 10
   indicatorMinFade: 0
   useMinimap: 1
-  minimapProfile: {fileID: 11400000, guid: f2b3f1aac94827a4bb2c0ab90eacaed3, type: 2}
+  minimapProfile: {fileID: 11400000, guid: 7afd8a97b102d0c448915360f874760a, type: 2}
   minimapMode: 1
   minimapScale: 0.335
   minimapRadius: 75

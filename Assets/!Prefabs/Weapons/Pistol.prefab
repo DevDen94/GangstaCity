@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 497032}
   - component: {fileID: 13524656}
   - component: {fileID: 11418582}
-  - component: {fileID: 6446835836459031363}
   m_Layer: 13
   m_Name: collectableStandAlone
   m_TagString: Action
@@ -258,6 +257,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDrop:
     m_PersistentCalls:
       m_Calls:
@@ -357,18 +368,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6446835836459031363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf648f385989b90419f1ff83c1bfbdcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &115392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,8 +1640,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.05, y: 0.2, z: 0.31}
-  m_Center: {x: 0, y: 0.03, z: 0.1}
+  m_Size: {x: 0.118129894, y: 0.2, z: 0.35151517}
+  m_Center: {x: -0.0055721668, y: 0.03, z: 0.07924196}
 --- !u!54 &5427354
 Rigidbody:
   m_ObjectHideFlags: 0
