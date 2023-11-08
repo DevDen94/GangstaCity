@@ -140,7 +140,14 @@ public class _ShopManager : MonoBehaviour
     public void Set_Textures()
     {
         gameObject.SetActive(false);
+        GameManger.instance.Is_Shop = true;
+        GameManger.instance.Set_TPS();
+        GameManger.instance.Is_Shop = false;
+        GameManger.instance.ShopGameObject.SetActive(false);
+        GameManger.instance.ShopTrigger.SetActive(true);
+        
     }
+  
     void ChangeMaterialAll()  // If that specific texture or material color is unlocked then change it in all game
     {
         switch (No)

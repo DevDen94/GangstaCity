@@ -39,10 +39,14 @@ public class GameManger : MonoBehaviour
     public int selected_Mission;
     public Car_Manager cm;
 
+    public GameObject ShopCanvas;
+    public GameObject ShopGameObject;
+    public GameObject ShopTrigger;
 
     public AudioSource src;
     public AudioClip WinSound;
     public AudioClip LooseSound;
+  
     public void Win_Mission()
     {
         MissionComplete.SetActive(true);
@@ -144,14 +148,21 @@ public class GameManger : MonoBehaviour
         
         SceneManager.LoadScene("GamePlay");
     }
-
+    [HideInInspector]
+    public bool Is_Shop;
+    public GameObject ShopPostion;
     public void Set_TPS() // Enable ThirdPerson Controller
     {
+        if (Is_Shop)
+        {
+            ThirdPersonPLayer.transform.SetPositionAndRotation(ShopPostion.transform.position, ShopPostion.transform.rotation);
+        }
         for (int i = 0; i < TPS_Controls.Length; ++i)
         {
             TPS_Controls[i].SetActive(true);
         }
 
+     
         Hud_Navigation.SetActive(true);
         HealthCanvas.SetActive(true);
         ControlFreakPanel.SetActive(true);
