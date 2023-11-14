@@ -3,7 +3,12 @@ guid: e82444afac3072f458e4de9f7715dab0
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Road_Atlas
+    second: {fileID: 2100000, guid: 5b64ded78aac95c4ba12087c8d1d9e98, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

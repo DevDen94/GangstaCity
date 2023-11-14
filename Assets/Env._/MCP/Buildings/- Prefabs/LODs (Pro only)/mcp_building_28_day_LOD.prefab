@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &400000
 Transform:
@@ -44,13 +44,12 @@ GameObject:
   - component: {fileID: 3300020}
   - component: {fileID: 2300020}
   - component: {fileID: 1143544699054120560}
-  - component: {fileID: 7486652048819268942}
   m_Layer: 0
   m_Name: mcp_building_28_walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &400024
 Transform:
@@ -136,20 +135,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 85.129555, y: 29.47103, z: 32.3028}
   m_Center: {x: -0.000002861023, y: -0.000030517578, z: 16.1514}
---- !u!64 &7486652048819268942
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100024}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: cddd80dc32db6544fa7b092d692db532, type: 3}
 --- !u!1 &100026
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,13 +146,12 @@ GameObject:
   - component: {fileID: 400026}
   - component: {fileID: 3300022}
   - component: {fileID: 2300022}
-  - component: {fileID: 436536515848098093}
   m_Layer: 0
   m_Name: mcp_building_28_stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &400026
 Transform:
@@ -234,20 +218,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &436536515848098093
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100026}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300008, guid: cddd80dc32db6544fa7b092d692db532, type: 3}
 --- !u!1 &100028
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,13 +229,12 @@ GameObject:
   - component: {fileID: 400028}
   - component: {fileID: 3300024}
   - component: {fileID: 2300024}
-  - component: {fileID: 982780225249831332}
   m_Layer: 0
   m_Name: mcp_building_28_props_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &400028
 Transform:
@@ -332,20 +301,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &982780225249831332
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100028}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: cddd80dc32db6544fa7b092d692db532, type: 3}
 --- !u!1 &100030
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,14 +312,13 @@ GameObject:
   - component: {fileID: 400030}
   - component: {fileID: 3300026}
   - component: {fileID: 2300026}
-  - component: {fileID: 1792044416255563801}
   m_Layer: 0
   m_Name: mcp_building_28_props_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
 --- !u!4 &400030
 Transform:
   m_ObjectHideFlags: 0
@@ -430,20 +384,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1792044416255563801
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100030}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300014, guid: cddd80dc32db6544fa7b092d692db532, type: 3}
 --- !u!1 &100032
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,14 +395,13 @@ GameObject:
   - component: {fileID: 400032}
   - component: {fileID: 3300028}
   - component: {fileID: 2300028}
-  - component: {fileID: 5351513858617626246}
   m_Layer: 0
   m_Name: mcp_building_28_props_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
 --- !u!4 &400032
 Transform:
   m_ObjectHideFlags: 0
@@ -529,20 +468,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5351513858617626246
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100032}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300006, guid: cddd80dc32db6544fa7b092d692db532, type: 3}
 --- !u!1 &100034
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,13 +479,12 @@ GameObject:
   - component: {fileID: 400034}
   - component: {fileID: 3300030}
   - component: {fileID: 2300030}
-  - component: {fileID: 4944023423802121713}
   m_Layer: 0
   m_Name: mcp_building_28_metal_roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &400034
 Transform:
@@ -628,20 +552,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4944023423802121713
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100034}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300012, guid: cddd80dc32db6544fa7b092d692db532, type: 3}
 --- !u!1 &100036
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,13 +563,12 @@ GameObject:
   - component: {fileID: 400036}
   - component: {fileID: 3300032}
   - component: {fileID: 2300032}
-  - component: {fileID: 2263816881934298784}
   m_Layer: 0
   m_Name: mcp_building_28_doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &400036
 Transform:
@@ -727,20 +636,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2263816881934298784
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100036}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300010, guid: cddd80dc32db6544fa7b092d692db532, type: 3}
 --- !u!1 &100038
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,13 +647,12 @@ GameObject:
   - component: {fileID: 400038}
   - component: {fileID: 3300034}
   - component: {fileID: 2300034}
-  - component: {fileID: 6621548385813686639}
   m_Layer: 0
   m_Name: mcp_building_28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &400038
 Transform:
@@ -826,20 +720,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6621548385813686639
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100038}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: cddd80dc32db6544fa7b092d692db532, type: 3}
 --- !u!1 &100040
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,7 +734,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &400040
 Transform:
