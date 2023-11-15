@@ -36,7 +36,7 @@ public class _ShopManager : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("Starter"))
         {
-            PlayerPrefs.SetInt("Cash", 50000);
+           
             PlayerPrefs.SetInt("Starter", 0);
             PlayerPrefs.SetInt("Hat0", 1);
             PlayerPrefs.SetInt("Pant0", 1);

@@ -7,6 +7,7 @@ public class FinishTrigger : MonoBehaviour
     public Mission_Script Script;
     private GameManger gm;
     public bool Level_5;
+    public bool Ending_Cut;
   //  public GameObject OpenChestBtn;
     private void Start()
     {
@@ -32,10 +33,16 @@ public class FinishTrigger : MonoBehaviour
             {
                 Script.Mission1_Door.enabled = true;
             }
-            
-            Script.EndingCutScene.SetActive(true);
-            gm.InstructionsPanel.SetActive(true);
-            gm.StaringInstructions.text = gm.All_Instructions.Ending_Instructions[gm.selected_Mission].ToString();
+            if (!Ending_Cut)
+            {
+                Script.EndingCutScene.SetActive(true);
+                gm.InstructionsPanel.SetActive(true);
+                gm.StaringInstructions.text = gm.All_Instructions.Ending_Instructions[gm.selected_Mission].ToString();
+            }
+            else
+            {
+                GameManger.instance.Win_Mission();
+            }
             LastScene();
            
         }

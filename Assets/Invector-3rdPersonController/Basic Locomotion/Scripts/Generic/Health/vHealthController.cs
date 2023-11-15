@@ -46,11 +46,8 @@ namespace Invector
 
                 if (!_isDead && _currentHealth <= 0)
                 {
-                    if (EnemyLast)
-                    {
-                        Debug.LogError("AIDEATH");
-                        Mission_Script.instance.FinishPoint.SetActive(true);
-                    }
+                    Mission_Script.instance.GangsterDead();
+                  
                     
                     _isDead = true;
                     onDead.Invoke(gameObject);
