@@ -5,10 +5,14 @@ using UnityEngine;
 public class PlayerNavigation : MonoBehaviour
 {
     public Transform player; // Array of player Transforms
-
+    public bool GameEndl;
 
     private void Update()
     {
+        if (GameEndl)
+            return;
+
+
          transform.position = player.position;
          transform.rotation = player.rotation;
         

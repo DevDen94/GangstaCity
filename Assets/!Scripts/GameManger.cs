@@ -46,17 +46,21 @@ public class GameManger : MonoBehaviour
     public AudioSource src;
     public AudioClip WinSound;
     public AudioClip LooseSound;
-  
+   public PlayerNavigation nav;
     public void Win_Mission()
     {
+        nav.GameEndl = true;
         MissionComplete.SetActive(true);
         src.PlayOneShot(WinSound);
     }
     public void Loose_Mission()
     {
+        nav.GameEndl = true;
         MissionFailed.SetActive(true);
         src.PlayOneShot(LooseSound);
     }
+
+
     private void Start()
     {
         OFF_TPS();

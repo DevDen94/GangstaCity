@@ -47,13 +47,17 @@ namespace Invector
                 vHUDController.instance.ShowText("Init Scene");
             FindPlayer();
         }
-
-        public void OnCharacterDead(GameObject _gameObject)
+        void On()
         {
             GameManger.instance.Loose_Mission();
+        }
+        public void OnCharacterDead(GameObject _gameObject)
+        {
+            Invoke("On", 2f);
+            
             oldPlayer = _gameObject;
-            Destroy(_gameObject);
-            Time.timeScale = 0f;
+            //Destroy(_gameObject);
+            //Time.timeScale = 0f;
 
            /* if (playerPrefab != null)
                 StartCoroutine(Spawn());
