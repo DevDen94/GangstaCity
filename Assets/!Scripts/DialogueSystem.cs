@@ -56,7 +56,7 @@ public class DialogueSystem : MonoBehaviour
           
             if (end_count >= End_.counter)
             {
-                Debug.LogError("Final");
+               // Debug.LogError("Final");
                 Mission_Script.instance.FinalTask(GM.selected_Mission);
                 DialogueBoxCanvas.SetActive(false);
                 DialogueBoxCamera.SetActive(false);

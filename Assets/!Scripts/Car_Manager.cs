@@ -59,7 +59,7 @@ public class Car_Manager : MonoBehaviour
         Carbutton_Out.SetActive(false);
         Car.isEject = true;
         hudNav.PlayerCamera = TPS_Camera;
-        Invoke("On_Pointer", 7f);
+        Invoke("On_Pointer", 3f);
  
     }
     void On_Pointer()

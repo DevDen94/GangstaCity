@@ -24,10 +24,11 @@ public class _ShopManager : MonoBehaviour
     private Gangster_Shop gm;
     private void Start()
     {
+        Default_Set();
         Camera.SetInteger("value", 10); gm = Gangster[0];
         Price = PlayerPrefs.GetInt("Cash");
         Cash_.text = Price.ToString();
-        Default_Set();
+      
         
        
     }
