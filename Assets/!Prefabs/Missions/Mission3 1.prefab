@@ -14763,12 +14763,12 @@ PrefabInstance:
     - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
@@ -14779,7 +14779,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 13967789277404065}
+      objectReference: {fileID: 0}
     - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -14788,7 +14788,7 @@ PrefabInstance:
     - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GangsterDead
+      value: set_enabled
       objectReference: {fileID: 0}
     - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
@@ -14798,7 +14798,7 @@ PrefabInstance:
     - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Mission_Script, Assembly-CSharp
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
@@ -15058,7 +15058,7 @@ PrefabInstance:
     - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
         type: 3}
@@ -15318,12 +15318,12 @@ PrefabInstance:
     - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
@@ -15334,7 +15334,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 13967789277404065}
+      objectReference: {fileID: 0}
     - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -15343,7 +15343,7 @@ PrefabInstance:
     - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GangsterDead
+      value: set_enabled
       objectReference: {fileID: 0}
     - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
@@ -15353,7 +15353,7 @@ PrefabInstance:
     - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Mission_Script, Assembly-CSharp
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1831472062348373376, guid: 93c76690111f88d498c6dabe4bafe1d5,
         type: 3}
@@ -15783,7 +15783,7 @@ PrefabInstance:
     - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
         type: 3}
@@ -16048,7 +16048,7 @@ PrefabInstance:
     - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
         type: 3}
@@ -16308,7 +16308,7 @@ PrefabInstance:
     - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
         type: 3}
@@ -16748,7 +16748,7 @@ PrefabInstance:
     - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
         type: 3}
       propertyPath: _onDead.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8927420468104417862, guid: ba01eb3dcf1865f4ca262928298483be,
         type: 3}

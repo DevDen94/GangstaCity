@@ -64,8 +64,8 @@ namespace SickscoreGames.HUDNavigationSystem
 				_HUDNavigationSystem = HUDNavigationSystem.Instance;
 
             // dont destroy on load
-			if (_HUDNavigationSystem != null && _HUDNavigationSystem.KeepAliveOnLoad)
-				DontDestroyOnLoad (this.gameObject);
+			//if (_HUDNavigationSystem != null && _HUDNavigationSystem.KeepAliveOnLoad)
+				//DontDestroyOnLoad (this.gameObject);
 		}
 		#endregion
 

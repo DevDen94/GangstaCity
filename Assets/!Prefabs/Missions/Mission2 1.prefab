@@ -10289,7 +10289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b01462361360446a578a1ec89e6780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dialogue_Cam: {fileID: 9100000, guid: 1325fb5e471edce44813a98b3041de57, type: 2}
+  Dialogue_Cam: {fileID: 9100000, guid: 004360d50611267469ec287cb0e443c6, type: 2}
   Firts_Character: {fileID: 1331435447198485158}
   Second_Character: {fileID: 8669702568764257914}
   talking: {fileID: 9100000, guid: 4eba66a9b7b651340b2d55a0d2328678, type: 2}
@@ -16318,6 +16318,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 5278478501020233983, guid: 7aef506e5cc2fa846a84d07d9f795076,
         type: 3}
+      propertyPath: selectedToolbar
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278478501020233983, guid: 7aef506e5cc2fa846a84d07d9f795076,
+        type: 3}
       propertyPath: _capsuleCollider
       value: 
       objectReference: {fileID: 4253708329616525557}
@@ -16543,6 +16548,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 08850ab9327be7747a5a4d5705ed0c89,
         type: 2}
+    - target: {fileID: 5278478501020233983, guid: 7aef506e5cc2fa846a84d07d9f795076,
+        type: 3}
+      propertyPath: selectedToolbar
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5278478501084238410, guid: 7aef506e5cc2fa846a84d07d9f795076,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -17487,6 +17497,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 08850ab9327be7747a5a4d5705ed0c89,
         type: 2}
+    - target: {fileID: 5278478501020233983, guid: 7aef506e5cc2fa846a84d07d9f795076,
+        type: 3}
+      propertyPath: selectedToolbar
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5278478501084238410, guid: 7aef506e5cc2fa846a84d07d9f795076,
         type: 3}
       propertyPath: m_ConnectedAnchor.x

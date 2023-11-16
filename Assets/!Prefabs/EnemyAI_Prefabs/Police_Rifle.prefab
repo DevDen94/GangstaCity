@@ -39678,7 +39678,7 @@ MonoBehaviour:
   openCloseEvents: 0
   openCloseWindow: 1
   selectedToolbar: 0
-  _fsmBehaviour: {fileID: 11400000, guid: 08850ab9327be7747a5a4d5705ed0c89, type: 2}
+  _fsmBehaviour: {fileID: 11400000, guid: dd7e161d56cfdbc44b70452034f1423e, type: 2}
   _stop: 0
   _debugMode: 0
 --- !u!114 &8927420468104417862
@@ -39695,7 +39695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 11
+  selectedToolbar: 8
   _isDead: 0
   _currentHealth: 0
   isImmortal: 0
@@ -39895,10 +39895,10 @@ MonoBehaviour:
   checkAimRadius: 0.1
   smoothHandRotation: 30
   maxHandAngle: 60
-  raycastAimTarget: 0
+  raycastAimTarget: 1
   damageLayer:
     serializedVersion: 2
-    m_Bits: 32769
+    m_Bits: 33025
   ignoreTags: []
   useLeftIK: 1
   useRightIK: 1
@@ -39921,8 +39921,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 0
-  selectedToolbar: 0
+  openCloseWindow: 1
+  selectedToolbar: 2
   canLook: 1
   keepLookingOutAngle: 1
   strafeHeadWeight: 0.8

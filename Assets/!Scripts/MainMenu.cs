@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public Text shop_cash;
     private void Start()
     {
+        Time.timeScale = 1f;
         if (!PlayerPrefs.HasKey("S"))
         {
             PlayerPrefs.SetInt("Cash", 50000);

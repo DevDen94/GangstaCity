@@ -16,6 +16,7 @@ public class DoorOpen : MonoBehaviour
     //public GameObject HudNavigationElment;
     public float speed;
     public bool isEject;
+    
     private void Start()
     {
         isEject = false;
@@ -66,7 +67,7 @@ public class DoorOpen : MonoBehaviour
         gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = false;
         gameObject.transform.parent.GetComponent<RCC_CarControllerV3>().StartEngine();
         Player.gameObject.transform.SetPositionAndRotation(Point.transform.position, Point.transform.rotation);
-       // HudNavigationElment.SetActive(false);
+        gameObject.transform.parent.GetComponent<Check_Building>().SRC_Audios.SetActive(true);
         Car_Manager.instance.Set_ParentofTraffic(gameObject.transform.parent.gameObject);
        // pl.enabled = true;
         for (int i = 0; i < Car_Manager.instance.TPS_Controls.Length; ++i)
@@ -102,7 +103,7 @@ public class DoorOpen : MonoBehaviour
     {
 
         // HudNavigationElment.SetActive(true);
-     
+        gameObject.transform.parent.GetComponent<Check_Building>().SRC_Audios.SetActive(false);
         gameObject.transform.parent.GetComponent<RCC_CarControllerV3>().enabled = false;
         gameObject.transform.parent.GetComponent<RCC_CarControllerV3>().KillEngine();
         gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;

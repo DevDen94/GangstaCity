@@ -4,6 +4,8 @@ using UnityEngine;
 using SickscoreGames.HUDNavigationSystem;
 using UnityEngine.UI;
 using UnityEngine.AI;
+using UnityEditor;
+
 public class Car_Manager : MonoBehaviour
 {
     public GameObject[] TPS_Controls;
@@ -47,6 +49,7 @@ public class Car_Manager : MonoBehaviour
     public void Sit_in()
     {
         Carbutton_IN.SetActive(false);
+        hudNav.PlayerCamera = RCC_Camera;
         Car.Drive_Car();
         hudNav.PlayerCamera = RCC_Camera;
         Car.Pointer.SetActive(false);
@@ -67,5 +70,28 @@ public class Car_Manager : MonoBehaviour
     public void Mission_Start()
     {
 
+    }
+    public Text fpsText;
+    public Text batchText;
+    //public Text batchesText;
+
+    private float deltaTime = 0.0f;
+
+    void Update()
+    {
+        // Calculate FPS
+        deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
+        float fps = 1.0f / deltaTime;
+        //int batchCount = UnityStats.batches;
+
+            fpsText.text = "FPS: " + Mathf.Round(fps);
+            //batchText.text = UnityEngine.Rendering.GraphicsSettings.batches
+
+        // Display Batch Count
+        /*  if (batchesText != null)
+          {
+              int batchCount = UnityEngine.Rendering.GraphicsSettings.;
+              batchesText.text = "Batches: " + batchCount;
+          }*/
     }
 }
