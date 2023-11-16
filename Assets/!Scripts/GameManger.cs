@@ -44,6 +44,7 @@ public class GameManger : MonoBehaviour
     public GameObject ShopTrigger;
 
     public AudioSource src;
+    public AudioClip btnCLIP;
     public AudioClip WinSound;
     public AudioClip LooseSound;
    public PlayerNavigation nav;
@@ -103,16 +104,16 @@ public class GameManger : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1f;
-        PasuedPanel.SetActive(false);
+        src.PlayOneShot(btnCLIP);
 
     }
     public void Pasued_()
     {
-      
-        PasuedPanel.SetActive(true);
+
+        src.PlayOneShot(btnCLIP);
         Time.timeScale = 0f;
     }
-    public GameObject PasuedPanel;
+
     public void SpawnPlayer()
     {
         Set_TPS();
@@ -141,15 +142,17 @@ public class GameManger : MonoBehaviour
 
     public void Restart()
     {
+        src.PlayOneShot(btnCLIP);
         SceneManager.LoadScene("GamePlay");
     }
     public void Home()
     {
+        src.PlayOneShot(btnCLIP);
         SceneManager.LoadScene("MainMenu");
     }
     public void Continue()
     {
-        
+        src.PlayOneShot(btnCLIP);
         SceneManager.LoadScene("GamePlay");
     }
     [HideInInspector]

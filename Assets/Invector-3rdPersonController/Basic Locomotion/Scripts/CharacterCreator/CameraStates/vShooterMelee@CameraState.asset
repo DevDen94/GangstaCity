@@ -66,17 +66,17 @@ MonoBehaviour:
     cameraMode: 0
   - Name: Aiming
     forward: -1
-    right: 0.34
+    right: 0.37
     defaultDistance: 1.6
     maxDistance: 1.6
     minDistance: 0.25
-    height: 1.9
+    height: 2.3
     smooth: 10
-    smoothDamp: 1
-    xMouseSensitivity: 0.8
-    yMouseSensitivity: 0.8
+    smoothDamp: 0
+    xMouseSensitivity: 0.25
+    yMouseSensitivity: 0.25
     yMinLimit: -50
-    yMaxLimit: 70
+    yMaxLimit: 101.40939
     xMinLimit: -360
     xMaxLimit: 360
     rotationOffSet: {x: 0, y: 0, z: 0}
@@ -98,8 +98,8 @@ MonoBehaviour:
     smoothDamp: 1
     xMouseSensitivity: 0.4
     yMouseSensitivity: 0.4
-    yMinLimit: -40
-    yMaxLimit: 80
+    yMinLimit: -119.731544
+    yMaxLimit: 79.99999
     xMinLimit: -360
     xMaxLimit: 360
     rotationOffSet: {x: 8, y: 0, z: 0}
