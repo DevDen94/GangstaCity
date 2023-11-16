@@ -1,104 +1,225 @@
 fileFormatVersion: 2
 guid: 018a22874c9793b449671a40457592b1
-timeCreated: 1512573928
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: scope_lens_1
-    100002: scope_lens_2
-    100004: //RootNode
-    100006: vWeapon_b_body
-    100008: vWeapon_b_body.005
-    100010: vWeapon_b_body.006
-    100012: vWeapon_b_clip.001
-    100014: vWeapon_b_grenade-launcher
-    100016: vWeapon_b_scope
-    100018: vWeapon_b_support
-    400000: scope_lens_1
-    400002: scope_lens_2
-    400004: //RootNode
-    400006: vWeapon_b_body
-    400008: vWeapon_b_body.005
-    400010: vWeapon_b_body.006
-    400012: vWeapon_b_clip.001
-    400014: vWeapon_b_grenade-launcher
-    400016: vWeapon_b_scope
-    400018: vWeapon_b_support
-    2300000: scope_lens_1
-    2300002: scope_lens_2
-    2300004: vWeapon_b_body
-    2300006: vWeapon_b_body.005
-    2300008: vWeapon_b_body.006
-    2300010: vWeapon_b_clip.001
-    2300012: vWeapon_b_grenade-launcher
-    2300014: vWeapon_b_scope
-    2300016: vWeapon_b_support
-    3300000: scope_lens_1
-    3300002: scope_lens_2
-    3300004: vWeapon_b_body
-    3300006: vWeapon_b_body.005
-    3300008: vWeapon_b_body.006
-    3300010: vWeapon_b_clip.001
-    3300012: vWeapon_b_grenade-launcher
-    3300014: vWeapon_b_scope
-    3300016: vWeapon_b_support
-    4300000: vWeapon_b_body.006
-    4300002: vWeapon_b_body.005
-    4300004: vWeapon_b_clip.001
-    4300006: vWeapon_b_body
-    4300008: vWeapon_b_scope
-    4300010: scope_lens_2
-    4300012: scope_lens_1
-    4300014: vWeapon_b_grenade-launcher
-    4300016: vWeapon_b_support
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: scope_lens_1
+  - first:
+      1: 100002
+    second: scope_lens_2
+  - first:
+      1: 100004
+    second: //RootNode
+  - first:
+      1: 100006
+    second: vWeapon_b_body
+  - first:
+      1: 100008
+    second: vWeapon_b_body.005
+  - first:
+      1: 100010
+    second: vWeapon_b_body.006
+  - first:
+      1: 100012
+    second: vWeapon_b_clip.001
+  - first:
+      1: 100014
+    second: vWeapon_b_grenade-launcher
+  - first:
+      1: 100016
+    second: vWeapon_b_scope
+  - first:
+      1: 100018
+    second: vWeapon_b_support
+  - first:
+      4: 400000
+    second: scope_lens_1
+  - first:
+      4: 400002
+    second: scope_lens_2
+  - first:
+      4: 400004
+    second: //RootNode
+  - first:
+      4: 400006
+    second: vWeapon_b_body
+  - first:
+      4: 400008
+    second: vWeapon_b_body.005
+  - first:
+      4: 400010
+    second: vWeapon_b_body.006
+  - first:
+      4: 400012
+    second: vWeapon_b_clip.001
+  - first:
+      4: 400014
+    second: vWeapon_b_grenade-launcher
+  - first:
+      4: 400016
+    second: vWeapon_b_scope
+  - first:
+      4: 400018
+    second: vWeapon_b_support
+  - first:
+      23: 2300000
+    second: scope_lens_1
+  - first:
+      23: 2300002
+    second: scope_lens_2
+  - first:
+      23: 2300004
+    second: vWeapon_b_body
+  - first:
+      23: 2300006
+    second: vWeapon_b_body.005
+  - first:
+      23: 2300008
+    second: vWeapon_b_body.006
+  - first:
+      23: 2300010
+    second: vWeapon_b_clip.001
+  - first:
+      23: 2300012
+    second: vWeapon_b_grenade-launcher
+  - first:
+      23: 2300014
+    second: vWeapon_b_scope
+  - first:
+      23: 2300016
+    second: vWeapon_b_support
+  - first:
+      33: 3300000
+    second: scope_lens_1
+  - first:
+      33: 3300002
+    second: scope_lens_2
+  - first:
+      33: 3300004
+    second: vWeapon_b_body
+  - first:
+      33: 3300006
+    second: vWeapon_b_body.005
+  - first:
+      33: 3300008
+    second: vWeapon_b_body.006
+  - first:
+      33: 3300010
+    second: vWeapon_b_clip.001
+  - first:
+      33: 3300012
+    second: vWeapon_b_grenade-launcher
+  - first:
+      33: 3300014
+    second: vWeapon_b_scope
+  - first:
+      33: 3300016
+    second: vWeapon_b_support
+  - first:
+      43: 4300000
+    second: vWeapon_b_body.006
+  - first:
+      43: 4300002
+    second: vWeapon_b_body.005
+  - first:
+      43: 4300004
+    second: vWeapon_b_clip.001
+  - first:
+      43: 4300006
+    second: vWeapon_b_body
+  - first:
+      43: 4300008
+    second: vWeapon_b_scope
+  - first:
+      43: 4300010
+    second: scope_lens_2
+  - first:
+      43: 4300012
+    second: scope_lens_1
+  - first:
+      43: 4300014
+    second: vWeapon_b_grenade-launcher
+  - first:
+      43: 4300016
+    second: vWeapon_b_support
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -108,14 +229,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
