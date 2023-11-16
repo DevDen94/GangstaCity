@@ -23,8 +23,8 @@ MonoBehaviour:
     height: 2.04
     smooth: 6
     smoothDamp: 6
-    xMouseSensitivity: 3
-    yMouseSensitivity: 3
+    xMouseSensitivity: 2
+    yMouseSensitivity: 2
     yMinLimit: -70
     yMaxLimit: 70
     xMinLimit: -360
@@ -50,8 +50,8 @@ MonoBehaviour:
     height: 0.8
     smooth: 10
     smoothDamp: 0
-    xMouseSensitivity: 3
-    yMouseSensitivity: 3
+    xMouseSensitivity: 1
+    yMouseSensitivity: 1
     yMinLimit: -40
     yMaxLimit: 70
     xMinLimit: -360
@@ -73,8 +73,8 @@ MonoBehaviour:
     height: 1.9
     smooth: 10
     smoothDamp: 1
-    xMouseSensitivity: 2
-    yMouseSensitivity: 1
+    xMouseSensitivity: 0.8
+    yMouseSensitivity: 0.8
     yMinLimit: -50
     yMaxLimit: 70
     xMinLimit: -360
@@ -89,15 +89,15 @@ MonoBehaviour:
     cameraMode: 0
   - Name: Strafing
     forward: -1
-    right: 0.4
-    defaultDistance: 3
+    right: 0.23
+    defaultDistance: 3.26
     maxDistance: 3
     minDistance: 0.5
-    height: 1.2
+    height: 2.28
     smooth: 10
     smoothDamp: 1
-    xMouseSensitivity: 2.5
-    yMouseSensitivity: 2.5
+    xMouseSensitivity: 0.4
+    yMouseSensitivity: 0.4
     yMinLimit: -40
     yMaxLimit: 80
     xMinLimit: -360

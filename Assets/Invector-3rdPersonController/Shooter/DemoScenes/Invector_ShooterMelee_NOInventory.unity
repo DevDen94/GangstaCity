@@ -6856,6 +6856,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: vShooterController_NoInventory
       objectReference: {fileID: 0}
+    - target: {fileID: 5865558089675994310, guid: b845823fd6aef6745b603f69d2238578,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b845823fd6aef6745b603f69d2238578, type: 3}
 --- !u!1001 &7916654058407478953

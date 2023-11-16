@@ -475,9 +475,9 @@ GameObject:
   - component: {fileID: 18133994219139039}
   - component: {fileID: 18133994219139037}
   - component: {fileID: 18133994219139038}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: hitBox
-  m_TagString: Untagged
+  m_TagString: Ignore Ragdoll
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1614,9 +1614,9 @@ GameObject:
   - component: {fileID: 18133994754514709}
   - component: {fileID: 18133994754514699}
   - component: {fileID: 18133994754514708}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: hitBox
-  m_TagString: Untagged
+  m_TagString: Ignore Ragdoll
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3328,9 +3328,9 @@ GameObject:
   - component: {fileID: 18133995381815585}
   - component: {fileID: 18133995381815591}
   - component: {fileID: 18133995381815584}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: hitBox
-  m_TagString: Untagged
+  m_TagString: Ignore Ragdoll
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3638,9 +3638,9 @@ GameObject:
   - component: {fileID: 18133995403882736}
   - component: {fileID: 18133995403882742}
   - component: {fileID: 18133995403882743}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: hitBox
-  m_TagString: Untagged
+  m_TagString: Ignore Ragdoll
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4970,6 +4970,7 @@ MonoBehaviour:
   isImmortal: 0
   fillHealthOnStart: 1
   maxHealth: 100
+  EnemyLast: 0
   healthRecovery: 0
   healthRecoveryDelay: 0
   currentHealthRecoveryDelay: 0

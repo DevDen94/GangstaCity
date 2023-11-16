@@ -10,13 +10,11 @@ public class Car_Manager : MonoBehaviour
     public GameObject[] RCC_Controls;
     
     public static Car_Manager instance;
-    public GameObject ThirdPerson;
 
     public GameObject Carbutton_IN;
     public GameObject Carbutton_Out;
     public DoorOpen Car;
 
-    public GameObject Player_Character;
     public GameObject Traffic_Reference;
     public GameObject Player_Hud_Navigation;
     public HUDNavigationSystem hudNav;

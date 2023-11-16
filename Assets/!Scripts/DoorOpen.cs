@@ -124,16 +124,16 @@ public class DoorOpen : MonoBehaviour
     }
     void Eject_TPSActive()
     {
-        Car_Manager.instance.ThirdPerson.transform.position = Point.transform.position;
-        Car_Manager.instance.ThirdPerson.transform.rotation = Point.transform.rotation;
-        Car_Manager.instance.ThirdPerson.SetActive(true);
+        Car_Manager.instance.TPS_Controls[2].transform.position = Point.transform.position;
+        Car_Manager.instance.TPS_Controls[2].transform.rotation = Point.transform.rotation;
+        Car_Manager.instance.TPS_Controls[2].SetActive(true);
         Player.gameObject.SetActive(false);
         for (int i = 0; i < Car_Manager.instance.TPS_Controls.Length; ++i)
         {
             Car_Manager.instance.TPS_Controls[i].SetActive(true);
         }
        // pl.enabled = false;
-        Car_Manager.instance.Set_ParentofTraffic(Car_Manager.instance.Player_Character);
+        Car_Manager.instance.Set_ParentofTraffic(Car_Manager.instance.TPS_Controls[2]);
        
         Camera.SetActive(false);
         Player.gameObject.transform.LookAt(LookAt.transform);

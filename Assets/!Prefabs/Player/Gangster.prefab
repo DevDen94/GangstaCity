@@ -31264,6 +31264,7 @@ MonoBehaviour:
   isImmortal: 0
   fillHealthOnStart: 1
   maxHealth: 100
+  EnemyLast: 0
   healthRecovery: 0
   healthRecoveryDelay: 0
   currentHealthRecoveryDelay: 0
