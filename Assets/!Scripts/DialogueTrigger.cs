@@ -17,6 +17,8 @@ public class DialogueTrigger : MonoBehaviour
             mission.Firts_Character.gameObject.SetActive(true);
             Car_Manager.instance.DestinationPoint = Next_P;
             Car_Manager.instance.Set_NavigationDestination();
+            mission.Load_Tasklist();
+            GameManger.instance.Task_Panel.SetActive(false);
         }
     }
 }

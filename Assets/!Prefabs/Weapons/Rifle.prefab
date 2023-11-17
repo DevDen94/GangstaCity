@@ -20913,7 +20913,7 @@ MonoBehaviour:
   weaponCategory: Rifle
   shootFrequency: 0.125
   isInfinityAmmo: 0
-  ammo: 100
+  ammo: 50
   ignoreTags: []
   hitLayer:
     serializedVersion: 2
@@ -20963,7 +20963,7 @@ MonoBehaviour:
   automaticWeapon: 1
   reloadTime: 1
   reloadOneByOne: 0
-  clipSize: 25
+  clipSize: 50
   dontUseReload: 0
   autoReload: 0
   ammoID: 13

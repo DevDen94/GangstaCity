@@ -1729,6 +1729,7 @@ GameObject:
   - component: {fileID: 6695610360984717134}
   - component: {fileID: 1617913688236765972}
   - component: {fileID: 6234269302702565779}
+  - component: {fileID: 6311324140630525270}
   m_Layer: 0
   m_Name: defaultMaterial.001
   m_TagString: Untagged
@@ -1802,6 +1803,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6311324140630525270
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541403738894153401}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5340085334044306003, guid: bc7bf9fc0ba092a40be87a040ab13b2f, type: 3}
 --- !u!1 &1863572573895578249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2391,6 +2406,7 @@ GameObject:
   - component: {fileID: 5601259264145189271}
   - component: {fileID: 476213767948934997}
   - component: {fileID: 2444852278245298803}
+  - component: {fileID: 2489297485357165191}
   m_Layer: 0
   m_Name: defaultMaterial.022
   m_TagString: Untagged
@@ -2463,6 +2479,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2489297485357165191
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442654961661692604}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8165062059343120424, guid: bc7bf9fc0ba092a40be87a040ab13b2f, type: 3}
 --- !u!1 &2715775337773381083
 GameObject:
   m_ObjectHideFlags: 0
@@ -5800,6 +5830,7 @@ GameObject:
   - component: {fileID: 686984913983121002}
   - component: {fileID: 8685514002200572642}
   - component: {fileID: 4292925516869114828}
+  - component: {fileID: 875466634683201994}
   m_Layer: 0
   m_Name: ceiling_light_low_light_mat_0
   m_TagString: Untagged
@@ -5872,6 +5903,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &875466634683201994
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4105450092252087625}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4080922810428579893, guid: bc7bf9fc0ba092a40be87a040ab13b2f, type: 3}
 --- !u!1 &4240616278215387801
 GameObject:
   m_ObjectHideFlags: 0
@@ -7884,6 +7929,7 @@ GameObject:
   - component: {fileID: 26400581860050398}
   - component: {fileID: 2067836548524609624}
   - component: {fileID: 6367727521916769885}
+  - component: {fileID: 325936746730837371}
   m_Layer: 0
   m_Name: defaultMaterial.010
   m_TagString: Untagged
@@ -7956,6 +8002,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &325936746730837371
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6172618094041713604}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5914363623645110945, guid: bc7bf9fc0ba092a40be87a040ab13b2f, type: 3}
 --- !u!1 &6186898744901765197
 GameObject:
   m_ObjectHideFlags: 0
@@ -14687,7 +14747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 297.13123
+      value: 297.13
       objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14695,7 +14755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -105.06704
+      value: -102.63
       objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14743,7 +14803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11446412, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
       propertyPath: OnEquip.m_PersistentCalls.m_Calls.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11446412, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
       propertyPath: OnPlayerEnter.m_PersistentCalls.m_Calls.Array.size
@@ -14751,6 +14811,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11446412, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
       propertyPath: OnEquip.m_PersistentCalls.m_Calls.Array.data[5].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446412, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
+      propertyPath: OnEquip.m_PersistentCalls.m_Calls.Array.data[6].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11446412, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
@@ -14764,7 +14828,7 @@ PrefabInstance:
     - target: {fileID: 11446412, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
       propertyPath: OnEquip.m_PersistentCalls.m_Calls.Array.data[6].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5173842796449944695}
     - target: {fileID: 11446412, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
       propertyPath: OnPlayerExit.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
@@ -14772,6 +14836,10 @@ PrefabInstance:
     - target: {fileID: 11446412, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
       propertyPath: OnEquip.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
       value: Load_Tasklist
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446412, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
+      propertyPath: OnEquip.m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
+      value: OFF_Gun
       objectReference: {fileID: 0}
     - target: {fileID: 11446412, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
       propertyPath: OnPlayerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -14814,6 +14882,14 @@ PrefabInstance:
       value: Mission_Script, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 11446412, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
+      propertyPath: OnEquip.m_PersistentCalls.m_Calls.Array.data[6].m_TargetAssemblyTypeName
+      value: Mission_Script, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446412, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
+      propertyPath: OnEquip.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446412, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
       propertyPath: OnPlayerExit.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: Mission_Script, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -14832,6 +14908,10 @@ PrefabInstance:
     - target: {fileID: 11446412, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
       propertyPath: OnPlayerEnter.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446412, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
+      propertyPath: OnEquip.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 11446412, guid: 94d173ca46ef27841ac94b17a05decdb, type: 3}
       propertyPath: OnPlayerEnter.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName

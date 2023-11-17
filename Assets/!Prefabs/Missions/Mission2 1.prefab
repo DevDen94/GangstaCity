@@ -10309,6 +10309,7 @@ MonoBehaviour:
   - Go meet lockie. He is waiting for you
   - Pick any gun, and go towards the gang.
   - Kill all the gangster and free Wong.
+  - Kill all the gangster and free Wong.
   - Wong is waiting for you
   TaskNo: 0
   speed: 0.5
@@ -13095,7 +13096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11426012, guid: efd54d29a5941b84b81188d52ddc4474, type: 3}
       propertyPath: OnEquip.m_PersistentCalls.m_Calls.Array.data[6].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11426012, guid: efd54d29a5941b84b81188d52ddc4474, type: 3}
       propertyPath: OnDrop.m_PersistentCalls.m_Calls.Array.data[6].m_Target
@@ -13108,7 +13109,7 @@ PrefabInstance:
     - target: {fileID: 11426012, guid: efd54d29a5941b84b81188d52ddc4474, type: 3}
       propertyPath: OnEquip.m_PersistentCalls.m_Calls.Array.data[6].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8235070558229229356}
     - target: {fileID: 11426012, guid: efd54d29a5941b84b81188d52ddc4474, type: 3}
       propertyPath: OnDrop.m_PersistentCalls.m_Calls.Array.data[6].m_CallState
       value: 2
@@ -13135,7 +13136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11426012, guid: efd54d29a5941b84b81188d52ddc4474, type: 3}
       propertyPath: OnEquip.m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
-      value: SetActive
+      value: OFF_Gun
       objectReference: {fileID: 0}
     - target: {fileID: 11426012, guid: efd54d29a5941b84b81188d52ddc4474, type: 3}
       propertyPath: OnPlayerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -13175,7 +13176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11426012, guid: efd54d29a5941b84b81188d52ddc4474, type: 3}
       propertyPath: OnEquip.m_PersistentCalls.m_Calls.Array.data[6].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: Mission_Script, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 11426012, guid: efd54d29a5941b84b81188d52ddc4474, type: 3}
       propertyPath: OnEquip.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_BoolArgument

@@ -12,6 +12,8 @@ public class LiftTrigger : MonoBehaviour
             other.gameObject.transform.SetPositionAndRotation(ms.SpawnPoint.transform.position, ms.SpawnPoint.transform.rotation);
             GameManger.instance.FadeScreen_Long.SetActive(true);
             gameObject.SetActive(false);
+            ms.Load_Tasklist();
+            
         }
     }
 }
