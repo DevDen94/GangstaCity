@@ -962,7 +962,7 @@ GameObject:
   - component: {fileID: 13967789277404065}
   m_Layer: 0
   m_Name: Mission3 1
-  m_TagString: Untagged
+  m_TagString: Mission
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1016,6 +1016,8 @@ MonoBehaviour:
   EndingCutscene_Bool: 1
   FinishPoint_Navigator: {fileID: 0}
   ActiveNavigator: {fileID: 13967788343351114}
+  Instructions_Player: []
+  TaskNo: 0
   speed: 0.5
   Mission1_Door: {fileID: 0}
   Bank: {fileID: 0}

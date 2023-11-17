@@ -39678,7 +39678,7 @@ MonoBehaviour:
   openCloseEvents: 0
   openCloseWindow: 1
   selectedToolbar: 0
-  _fsmBehaviour: {fileID: 11400000, guid: dd7e161d56cfdbc44b70452034f1423e, type: 2}
+  _fsmBehaviour: {fileID: 11400000, guid: 08850ab9327be7747a5a4d5705ed0c89, type: 2}
   _stop: 0
   _debugMode: 0
 --- !u!114 &8927420468104417862
@@ -39763,7 +39763,7 @@ MonoBehaviour:
   frictionPhysics: {fileID: 0}
   maxFrictionPhysics: {fileID: 0}
   slippyPhysics: {fileID: 0}
-  _capsuleCollider: {fileID: 8927420468104417915}
+  _capsuleCollider: {fileID: 0}
   targetDirection: {x: 0, y: 0, z: 0}
   input: {x: 0, y: 0, z: 0}
   lockMovement: 0
@@ -39793,16 +39793,16 @@ MonoBehaviour:
   _selfStartingPoint: 1
   _customStartingPoint: {fileID: 0}
   detectionPointReference: {fileID: 8927420469062507623}
-  sightMethod: 3
+  sightMethod: -1
   findTargetUpdateQuality: 3
-  canseeTargetUpdateQuality: 2
+  canseeTargetUpdateQuality: 4
   findOtherTarget: 1
   maxTargetsDetection: 48
   _changeTargetDelay: 10
   findTargetByDistance: 1
   _fieldOfView: 360
   _minDistanceToDetect: 1
-  _maxDistanceToDetect: 25
+  _maxDistanceToDetect: 50
   _hasPositionOfTheTarget: 0
   _targetInLineOfSight: 0
   _lostTargetDistance: 8

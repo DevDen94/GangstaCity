@@ -48,6 +48,11 @@ public class GameManger : MonoBehaviour
     public AudioClip WinSound;
     public AudioClip LooseSound;
    public PlayerNavigation nav;
+    public Text TaskText;
+    public GameObject Task_Panel;
+    public GameObject GunPick;
+
+    
     public void Win_Mission()
     {
         nav.GameEndl = true;

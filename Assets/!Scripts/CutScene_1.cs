@@ -6,14 +6,17 @@ public class CutScene_1 : MonoBehaviour
 {
     public Mission_Script script;
     public GameObject CutSceneObjects;
-
+    private void Start()
+    {
+        GameManger.instance.Task_Panel.SetActive(false);
+    }
     public void EndCutScene()
     {
         GameManger.instance.Set_TPS();
     }
     public void Start_Level()
     {
-      
+        GameManger.instance.Task_Panel.SetActive(true);
         CutSceneObjects.gameObject.SetActive(false);
         GameManger.instance.MissionStart_();
 
