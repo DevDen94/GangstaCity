@@ -30704,7 +30704,7 @@ MonoBehaviour:
   weaponCategory: Shotgun
   shootFrequency: 0.8
   isInfinityAmmo: 0
-  ammo: 10
+  ammo: 100
   ignoreTags: []
   hitLayer:
     serializedVersion: 2
@@ -30717,7 +30717,7 @@ MonoBehaviour:
   damageByDistance: 1
   DropOffStart: 8
   DropOffEnd: 50
-  minDamage: 70
+  minDamage: 100
   maxDamage: 100
   source: {fileID: 8212232}
   fireClip: {fileID: 8300000, guid: fe90135ad668a394287ca68605d4763b, type: 3}
@@ -30766,7 +30766,7 @@ MonoBehaviour:
   automaticWeapon: 0
   reloadTime: 1
   reloadOneByOne: 0
-  clipSize: 10
+  clipSize: 100
   dontUseReload: 0
   autoReload: 0
   ammoID: 17

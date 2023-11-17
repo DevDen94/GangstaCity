@@ -20913,7 +20913,7 @@ MonoBehaviour:
   weaponCategory: Rifle
   shootFrequency: 0.125
   isInfinityAmmo: 0
-  ammo: 50
+  ammo: 100
   ignoreTags: []
   hitLayer:
     serializedVersion: 2

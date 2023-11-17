@@ -12283,7 +12283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 1
   openCloseWindow: 1
-  selectedToolbar: 0
+  selectedToolbar: 3
   actionInput:
     useInput: 1
     isAxisInUse: 0
@@ -12359,6 +12359,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 7960713584539792749}
+        m_TargetAssemblyTypeName: Mission_Script, Assembly-CSharp
+        m_MethodName: ShowGun
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnPlayerStay:
     m_PersistentCalls:
       m_Calls: []
@@ -12369,6 +12381,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: 
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7960713584539792749}
+        m_TargetAssemblyTypeName: Mission_Script, Assembly-CSharp
+        m_MethodName: OFF_Gun
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12436,6 +12460,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: 
         m_MethodName: Inv_Weapon_FreezeAll
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7960713584539792749}
+        m_TargetAssemblyTypeName: Mission_Script, Assembly-CSharp
+        m_MethodName: Load_Tasklist
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7960713584539792749}
+        m_TargetAssemblyTypeName: Mission_Script, Assembly-CSharp
+        m_MethodName: OFF_Gun
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17815,8 +17863,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7566578792299849015}
-  m_LocalRotation: {x: -0.21215662, y: -0.9581562, z: -0.045412775, w: 0.18671864}
-  m_LocalPosition: {x: -163.424, y: 6.349, z: -140.43}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -311.48035, y: 5.56, z: -36.528168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17825,7 +17873,7 @@ Transform:
   - {fileID: 8325947907180465033}
   m_Father: {fileID: 7960713584539792750}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -9.57, y: -159.921, z: 23.272}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7566578792310073045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17856,11 +17904,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 0
+  selectedToolbar: 1
   weaponCategory: Rifle
   shootFrequency: 0.125
   isInfinityAmmo: 0
-  ammo: 25
+  ammo: 100
   ignoreTags: []
   hitLayer:
     serializedVersion: 2
@@ -17910,7 +17958,7 @@ MonoBehaviour:
   automaticWeapon: 1
   reloadTime: 1
   reloadOneByOne: 0
-  clipSize: 25
+  clipSize: 100
   dontUseReload: 0
   autoReload: 0
   ammoID: 13
@@ -43574,7 +43622,13 @@ MonoBehaviour:
   EndingCutscene_Bool: 0
   FinishPoint_Navigator: {fileID: 0}
   ActiveNavigator: {fileID: 0}
-  Instructions_Player: []
+  Instructions_Player:
+  - s
+  - Go and pick the gun near you
+  - Go to the bar and kill all the gangsters
+  - Find the chest near you
+  - Good job. Now you find the Chest
+  - Good job. Now you find the Chest
   TaskNo: 0
   speed: 0.5
   Mission1_Door: {fileID: 0}

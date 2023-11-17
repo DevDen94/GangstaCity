@@ -15571,6 +15571,7 @@ GameObject:
   - component: {fileID: 8278037671638224146}
   - component: {fileID: 8278037671638224147}
   - component: {fileID: 8278037671638224144}
+  - component: {fileID: 5208540259180053896}
   m_Layer: 9
   m_Name: LadyGangster_Pistol
   m_TagString: Enemy
@@ -15685,9 +15686,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 0
+  openCloseWindow: 1
   selectedToolbar: 0
-  _fsmBehaviour: {fileID: 11400000, guid: b9e850f4556b4dc488273a9c88b78433, type: 2}
+  _fsmBehaviour: {fileID: 11400000, guid: 08850ab9327be7747a5a4d5705ed0c89, type: 2}
   _stop: 0
   _debugMode: 0
 --- !u!114 &8278037671638224159
@@ -15704,7 +15705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 11
+  selectedToolbar: 8
   _isDead: 0
   _currentHealth: 0
   isImmortal: 0
@@ -15772,7 +15773,7 @@ MonoBehaviour:
   frictionPhysics: {fileID: 0}
   maxFrictionPhysics: {fileID: 0}
   slippyPhysics: {fileID: 0}
-  _capsuleCollider: {fileID: 0}
+  _capsuleCollider: {fileID: 8278037671638224152}
   targetDirection: {x: 0, y: 0, z: 0}
   input: {x: 0, y: 0, z: 0}
   lockMovement: 0
@@ -15802,7 +15803,7 @@ MonoBehaviour:
   _selfStartingPoint: 1
   _customStartingPoint: {fileID: 0}
   detectionPointReference: {fileID: 8278037671325242154}
-  sightMethod: 3
+  sightMethod: -1
   findTargetUpdateQuality: 3
   canseeTargetUpdateQuality: 2
   findOtherTarget: 1
@@ -16030,6 +16031,24 @@ MonoBehaviour:
   selectedToolbar: 0
   defaultDamageEffect: {fileID: 120346, guid: b8f2fe1ee1a01724cb72f5b0e6bd2eef, type: 3}
   customDamageEffects: []
+--- !u!114 &5208540259180053896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8278037671638224145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d02d7fc772c5168479e3f345a487d428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openCloseEvents: 0
+  openCloseWindow: 1
+  selectedToolbar: 0
+  _fsmBehaviour: {fileID: 11400000, guid: 08850ab9327be7747a5a4d5705ed0c89, type: 2}
+  _stop: 0
+  _debugMode: 0
 --- !u!1 &8278037671641056574
 GameObject:
   m_ObjectHideFlags: 0

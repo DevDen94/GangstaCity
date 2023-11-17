@@ -13028,7 +13028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 495638, guid: efd54d29a5941b84b81188d52ddc4474, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 435.9
+      value: 391
       objectReference: {fileID: 0}
     - target: {fileID: 495638, guid: efd54d29a5941b84b81188d52ddc4474, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13036,7 +13036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 495638, guid: efd54d29a5941b84b81188d52ddc4474, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -582.9
+      value: -601.8
       objectReference: {fileID: 0}
     - target: {fileID: 495638, guid: efd54d29a5941b84b81188d52ddc4474, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13217,6 +13217,11 @@ PrefabInstance:
     - target: {fileID: 11426012, guid: efd54d29a5941b84b81188d52ddc4474, type: 3}
       propertyPath: OnPlayerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 474887819971731588, guid: efd54d29a5941b84b81188d52ddc4474,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4959313567348575713, guid: efd54d29a5941b84b81188d52ddc4474,
         type: 3}
