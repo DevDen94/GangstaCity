@@ -19,6 +19,10 @@ public class Mission_Script : MonoBehaviour
     public GameObject FinishPoint_Navigator;
     public GameObject ActiveNavigator;
 
+    public string[] Instructions_Player;
+    public int TaskNo;
+
+
     [Header("------Mission 01------")]
     public float speed = 0.5f;
     public Animator Mission1_Door;
@@ -34,6 +38,11 @@ public class Mission_Script : MonoBehaviour
 
     public int Gangster_DeathCount = 10;
 
+    public void Load_Tasklist()
+    {
+        TaskNo=TaskNo + 1;
+        GameManger.instance.TaskText.text = Instructions_Player[TaskNo].ToString();
+    }
     public void GangsterDead()
     {
         Gangster_DeathCount = Gangster_DeathCount - 1;
@@ -41,10 +50,14 @@ public class Mission_Script : MonoBehaviour
         if (Gangster_DeathCount == 0)
         {
             FinishPoint.SetActive(true);
+            Load_Tasklist();
         }
     }
     private void Start()
     {
+        GameManger.instance.Task_Panel.SetActive(false);
+        TaskNo = 0;
+        Load_Tasklist();
         instance = this;
         Car_Manager.instance.DestinationPoint = ActiveNavigator;
         Car_Manager.instance.Set_NavigationDestination();
@@ -96,6 +109,7 @@ public class Mission_Script : MonoBehaviour
             Firts_Character.gameObject.SetActive(false);
            // FinishPoint.SetActive(true);
         }
+       
     }
 
 
@@ -109,5 +123,13 @@ public class Mission_Script : MonoBehaviour
     void FourSecondDelay()
     {
         GameManger.instance.Win_Mission();
+    }
+    public void ShowGun()
+    {
+        GameManger.instance.GunPick.SetActive(true);
+    }
+    public void OFF_Gun()
+    {
+        GameManger.instance.GunPick.SetActive(false);
     }
 }

@@ -16,6 +16,7 @@ public class trigger_Check : MonoBehaviour
             mission.Start_CutScene();
             Car_Manager.instance.DestinationPoint = Next_P;
             Car_Manager.instance.Set_NavigationDestination();
+            mission.Load_Tasklist();
 
         }
     }

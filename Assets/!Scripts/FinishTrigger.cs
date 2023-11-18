@@ -36,8 +36,8 @@ public class FinishTrigger : MonoBehaviour
             if (!Ending_Cut)
             {
                 Script.EndingCutScene.SetActive(true);
-                gm.InstructionsPanel.SetActive(true);
-                gm.StaringInstructions.text = gm.All_Instructions.Ending_Instructions[gm.selected_Mission].ToString();
+               // gm.InstructionsPanel.SetActive(true);
+                //gm.StaringInstructions.text = gm.All_Instructions.Ending_Instructions[gm.selected_Mission].ToString();
             }
             else
             {

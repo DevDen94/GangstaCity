@@ -32,6 +32,7 @@ TagManager:
   - AIAction
   - TrafficLight
   - TrafficCar
+  - Mission
   layers:
   - Default
   - TransparentFX

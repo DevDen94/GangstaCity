@@ -1019,7 +1019,7 @@ MonoBehaviour:
   frictionPhysics: {fileID: 0}
   maxFrictionPhysics: {fileID: 0}
   slippyPhysics: {fileID: 0}
-  _capsuleCollider: {fileID: 1831472062348373391}
+  _capsuleCollider: {fileID: 0}
   targetDirection: {x: 0, y: 0, z: 0}
   input: {x: 0, y: 0, z: 0}
   lockMovement: 0
@@ -1058,7 +1058,7 @@ MonoBehaviour:
   findTargetByDistance: 1
   _fieldOfView: 360
   _minDistanceToDetect: 1
-  _maxDistanceToDetect: 55
+  _maxDistanceToDetect: 50
   _hasPositionOfTheTarget: 0
   _targetInLineOfSight: 0
   _lostTargetDistance: 8

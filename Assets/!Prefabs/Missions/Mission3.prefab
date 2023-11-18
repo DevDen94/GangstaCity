@@ -13357,7 +13357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &9067346994663291042
 Transform:
   m_ObjectHideFlags: 0
@@ -13839,6 +13839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Script: {fileID: 9067346995996081254}
   Level_5: 0
+  Ending_Cut: 0
 --- !u!1 &9067346995411243150
 GameObject:
   m_ObjectHideFlags: 0
@@ -14130,7 +14131,7 @@ GameObject:
   - component: {fileID: 9067346995996081254}
   m_Layer: 0
   m_Name: Mission3
-  m_TagString: Untagged
+  m_TagString: Mission
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14183,6 +14184,8 @@ MonoBehaviour:
   EndingCutscene_Bool: 1
   FinishPoint_Navigator: {fileID: 0}
   ActiveNavigator: {fileID: 5162106836505216929}
+  Instructions_Player: []
+  TaskNo: 0
   speed: 0.5
   Mission1_Door: {fileID: 0}
   Bank: {fileID: 0}

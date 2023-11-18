@@ -48,6 +48,11 @@ public class GameManger : MonoBehaviour
     public AudioClip WinSound;
     public AudioClip LooseSound;
    public PlayerNavigation nav;
+    public Text TaskText;
+    public GameObject Task_Panel;
+    public GameObject GunPick;
+
+    
     public void Win_Mission()
     {
         nav.GameEndl = true;
@@ -67,9 +72,9 @@ public class GameManger : MonoBehaviour
         OFF_TPS();
         cm = GetComponent<Car_Manager>();
         Time.timeScale = 1f;
-        int rand = Random.Range(0, SpawnPoints.Length);
-        controller.Spawn(SpawnPoints[rand].transform);
-        SpawnPlayer();
+
+
+    
         instance = this;
         if (!PlayerPrefs.HasKey("Start"))
         {
@@ -78,7 +83,9 @@ public class GameManger : MonoBehaviour
         }
         //PlayerPrefs.SetInt("MissionNo", 2);
         selected_Mission = PlayerPrefs.GetInt("MissionNo");
-        foreach(GameObject m in Missions)
+        controller.Spawn(SpawnPoints[PlayerPrefs.GetInt("MissionNo")].transform);
+        SpawnPlayer();
+        foreach (GameObject m in Missions)
         {
             m.SetActive(false);
         }
@@ -117,9 +124,9 @@ public class GameManger : MonoBehaviour
     public void SpawnPlayer()
     {
         Set_TPS();
-        int rand = Random.Range(0, SpawnPoints.Length);
-        ThirdPersonPLayer.transform.position = SpawnPoints[rand].transform.position;
-        ThirdPersonPLayer.transform.rotation = SpawnPoints[rand].transform.rotation;
+      //  int rand = Random.Range(0, SpawnPoints.Length);
+        ThirdPersonPLayer.transform.position = SpawnPoints[PlayerPrefs.GetInt("MissionNo")].transform.position;
+        ThirdPersonPLayer.transform.rotation = SpawnPoints[PlayerPrefs.GetInt("MissionNo")].transform.rotation;
     }
     void Set_Instructions()
     {

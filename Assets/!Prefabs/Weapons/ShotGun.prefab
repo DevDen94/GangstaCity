@@ -30717,7 +30717,7 @@ MonoBehaviour:
   damageByDistance: 1
   DropOffStart: 8
   DropOffEnd: 50
-  minDamage: 70
+  minDamage: 100
   maxDamage: 100
   source: {fileID: 8212232}
   fireClip: {fileID: 8300000, guid: fe90135ad668a394287ca68605d4763b, type: 3}
@@ -30766,7 +30766,7 @@ MonoBehaviour:
   automaticWeapon: 0
   reloadTime: 1
   reloadOneByOne: 0
-  clipSize: 8
+  clipSize: 100
   dontUseReload: 0
   autoReload: 0
   ammoID: 17
@@ -36237,16 +36237,11 @@ PrefabInstance:
     - target: {fileID: 3784138046944907541, guid: 447d25de6c25a6f47a36d3a261373a6b,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.37699795
+      value: 0.5918416
       objectReference: {fileID: 0}
     - target: {fileID: 3784138046944907541, guid: 447d25de6c25a6f47a36d3a261373a6b,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3784138046944907541, guid: 447d25de6c25a6f47a36d3a261373a6b,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3910394053315538199, guid: 447d25de6c25a6f47a36d3a261373a6b,

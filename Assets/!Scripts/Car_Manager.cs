@@ -71,7 +71,7 @@ public class Car_Manager : MonoBehaviour
     {
 
     }
-    public Text fpsText;
+   /* public Text fpsText;
     public Text batchText;
     //public Text batchesText;
 
@@ -88,10 +88,10 @@ public class Car_Manager : MonoBehaviour
             //batchText.text = UnityEngine.Rendering.GraphicsSettings.batches
 
         // Display Batch Count
-        /*  if (batchesText != null)
+        *//*  if (batchesText != null)
           {
               int batchCount = UnityEngine.Rendering.GraphicsSettings.;
               batchesText.text = "Batches: " + batchCount;
-          }*/
-    }
+          }*//*
+    }*/
 }
