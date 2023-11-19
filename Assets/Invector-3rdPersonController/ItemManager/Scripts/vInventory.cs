@@ -10,7 +10,7 @@ namespace Invector.vItemManager
     public class vInventory : vMonoBehaviour
     {
         #region Item Variables
-
+        public static vInventory instance;
         public delegate List<vItem> GetItemsDelegate();
         public delegate bool LockInventoryInputEvent();
 
@@ -71,11 +71,26 @@ namespace Invector.vItemManager
         }
 
         private vEquipArea currentEquipArea;
-        private StandaloneInputModule inputModule;        
+        private StandaloneInputModule inputModule;
         #endregion
+        public void ChangeInput(int no)
+        {
+            if (changeEquipmentControllers.Count > 0 && canEquip)
+            {
+                foreach (ChangeEquipmentControl changeEquip in changeEquipmentControllers)
+                {
+                    UseItemInput(changeEquip);
+                    if (changeEquip.equipArea != null)
+                    {
+                        changeEquip.equipArea.SetEquipSlot(no);
+                    }
+                }
 
+            }
+        }
         void Start()
         {
+            instance = this;
             canEquip = true;
             inputModule = FindObjectOfType<StandaloneInputModule>();
             if(inputModule == null)

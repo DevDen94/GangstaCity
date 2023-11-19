@@ -5,7 +5,7 @@ using SickscoreGames.HUDNavigationSystem;
 using UnityEngine.UI;
 using UnityEngine.AI;
 using UnityEditor;
-
+using Invector.vItemManager;
 public class Car_Manager : MonoBehaviour
 {
     public GameObject[] TPS_Controls;
@@ -29,6 +29,15 @@ public class Car_Manager : MonoBehaviour
     public Camera TPS_Camera;
     public Camera RCC_Camera;
     public GameObject DestinationPoint;
+    public GameObject AimBtn;
+    public void PistolAim()
+    {
+        AimBtn.SetActive(true);
+    }
+    public void PistolOff()
+    {
+        AimBtn.SetActive(false);
+    }
     public void Set_ParentofTraffic(GameObject g)
     {
        // Traffic_Reference.transform.SetParent(g.transform);
@@ -37,9 +46,14 @@ public class Car_Manager : MonoBehaviour
         //Traffic_Reference.transform.localPosition = Vector3.zero;
        // hudNav.PlayerController = g.transform;
     }
-
+    void sec()
+    {
+        vInventory.instance.ChangeInput(3);
+    }
     void Start()
     {
+        Invoke("sec", 0.1f);
+    
         instance = this;
     }
 
@@ -71,27 +85,31 @@ public class Car_Manager : MonoBehaviour
     {
 
     }
-   /* public Text fpsText;
-    public Text batchText;
-    //public Text batchesText;
-
-    private float deltaTime = 0.0f;
-
-    void Update()
+    public void PressGun(int no)
     {
-        // Calculate FPS
-        deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
-        float fps = 1.0f / deltaTime;
-        //int batchCount = UnityStats.batches;
+        vInventory.instance.ChangeInput(no);
+    }
+    /* public Text fpsText;
+     public Text batchText;
+     //public Text batchesText;
 
-            fpsText.text = "FPS: " + Mathf.Round(fps);
-            //batchText.text = UnityEngine.Rendering.GraphicsSettings.batches
+     private float deltaTime = 0.0f;
 
-        // Display Batch Count
-        *//*  if (batchesText != null)
-          {
-              int batchCount = UnityEngine.Rendering.GraphicsSettings.;
-              batchesText.text = "Batches: " + batchCount;
-          }*//*
-    }*/
+     void Update()
+     {
+         // Calculate FPS
+         deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
+         float fps = 1.0f / deltaTime;
+         //int batchCount = UnityStats.batches;
+
+             fpsText.text = "FPS: " + Mathf.Round(fps);
+             //batchText.text = UnityEngine.Rendering.GraphicsSettings.batches
+
+         // Display Batch Count
+         *//*  if (batchesText != null)
+           {
+               int batchCount = UnityEngine.Rendering.GraphicsSettings.;
+               batchesText.text = "Batches: " + batchCount;
+           }*//*
+     }*/
 }

@@ -83,7 +83,7 @@ public class GameManger : MonoBehaviour
         }
         //PlayerPrefs.SetInt("MissionNo", 2);
         selected_Mission = PlayerPrefs.GetInt("MissionNo");
-        controller.Spawn(SpawnPoints[PlayerPrefs.GetInt("MissionNo")].transform);
+       // controller.Spawn(SpawnPoints[PlayerPrefs.GetInt("MissionNo")].transform);
         SpawnPlayer();
         foreach (GameObject m in Missions)
         {

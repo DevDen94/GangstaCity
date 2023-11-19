@@ -17622,8 +17622,7 @@ BlendTree:
   m_Name: SprintBlend
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 00a2d4c9a6fcff147b372a139e5c5591,
-      type: 3}
+    m_Motion: {fileID: 7400014, guid: 37c6cfe59f56e8a4799011397a870a8b, type: 3}
     m_Threshold: -0.25
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1.2
@@ -17631,8 +17630,7 @@ BlendTree:
     m_DirectBlendParameter: InputHorizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 00a2d4c9a6fcff147b372a139e5c5591,
-      type: 3}
+    m_Motion: {fileID: 7400014, guid: 37c6cfe59f56e8a4799011397a870a8b, type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -17640,8 +17638,7 @@ BlendTree:
     m_DirectBlendParameter: InputHorizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 00a2d4c9a6fcff147b372a139e5c5591,
-      type: 3}
+    m_Motion: {fileID: 7400014, guid: 37c6cfe59f56e8a4799011397a870a8b, type: 3}
     m_Threshold: 0.25
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1.2
@@ -31132,12 +31129,12 @@ AnimatorStateMachine:
   m_StateMachineTransitions:
   - first: {fileID: 0}
     second: []
-  - first: {fileID: 1107235422393983250}
-    second:
-    - {fileID: 1109252902499468166}
   - first: {fileID: 1107449625320836316}
     second:
     - {fileID: 1109071592180134328}
+  - first: {fileID: 1107235422393983250}
+    second:
+    - {fileID: 1109252902499468166}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -528, y: 60, z: 0}
   m_EntryPosition: {x: -528, y: 24, z: 0}
