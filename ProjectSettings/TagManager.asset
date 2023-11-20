@@ -33,6 +33,9 @@ TagManager:
   - TrafficLight
   - TrafficCar
   - Mission
+  - Waypoint
+  - Pedestrian
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -59,7 +62,7 @@ TagManager:
   - Mission
   - Building
   - Line
-  - 
+  - NPC
   - 
   - 
   - 

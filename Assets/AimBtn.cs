@@ -26,4 +26,8 @@ public class AimBtn : MonoBehaviour
             ManagerScript.SetActive(true);
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.LogError("Abbbcccccccccccccccccccc");
+    }
 }

@@ -30257,11 +30257,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 5
+  selectedToolbar: 1
   weaponCategory: Shotgun
   shootFrequency: 0.8
   isInfinityAmmo: 0
-  ammo: 100
+  ammo: 10
   ignoreTags: []
   hitLayer:
     serializedVersion: 2

@@ -720,7 +720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 5
+  selectedToolbar: 1
   weaponCategory: Pistol
   shootFrequency: 0.25
   isInfinityAmmo: 0
@@ -771,7 +771,7 @@ MonoBehaviour:
   automaticWeapon: 0
   reloadTime: 1
   reloadOneByOne: 0
-  clipSize: 8
+  clipSize: 100
   dontUseReload: 0
   autoReload: 0
   ammoID: 20
@@ -974,6 +974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a645f66a09bf5448dbe418a0c6427a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ManagerScript: {fileID: 0}
 --- !u!1 &7089474312247001477
 GameObject:
   m_ObjectHideFlags: 0

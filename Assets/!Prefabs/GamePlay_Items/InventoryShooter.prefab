@@ -887,7 +887,7 @@ SkinnedMeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1245,7 +1245,7 @@ MonoBehaviour:
   openCloseWindow: 0
   selectedToolbar: 0
   attackObject: {fileID: 0}
-  trigger: {fileID: 0}
+  trigger: {fileID: 5196861914512249394}
   damagePercentage: 100
   triggerType: 3
 --- !u!65 &5196861914512249394
@@ -1379,7 +1379,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6573874020062341356, guid: 173342dfc65d71448b12c77613a6fef1, type: 3}
+  - {fileID: 2100000, guid: 7b62e849bc991104b8118818f21b0a3d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1392,7 +1392,7 @@ SkinnedMeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1955,7 +1955,7 @@ MonoBehaviour:
   openCloseWindow: 0
   selectedToolbar: 0
   attackObject: {fileID: 0}
-  trigger: {fileID: 0}
+  trigger: {fileID: 5196861914764118325}
   damagePercentage: 100
   triggerType: 3
 --- !u!65 &5196861914764118325
@@ -2714,7 +2714,7 @@ SkinnedMeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2928,7 +2928,7 @@ SkinnedMeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3610,7 +3610,7 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -4246479402191905792, guid: 173342dfc65d71448b12c77613a6fef1, type: 3}
-  - {fileID: -7198559261415225722, guid: 173342dfc65d71448b12c77613a6fef1, type: 3}
+  - {fileID: 2100000, guid: b82b1fb7a94c2c347aa056df7a687fdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3623,7 +3623,7 @@ SkinnedMeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3773,7 +3773,7 @@ SkinnedMeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -4101,7 +4101,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1193337802233141013, guid: 173342dfc65d71448b12c77613a6fef1, type: 3}
+  - {fileID: 2100000, guid: 2e2ea439390f84d4eb8d2dd823d6a105, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4114,7 +4114,7 @@ SkinnedMeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -4312,7 +4312,7 @@ MonoBehaviour:
   openCloseWindow: 0
   selectedToolbar: 0
   attackObject: {fileID: 0}
-  trigger: {fileID: 0}
+  trigger: {fileID: 5196861915753862182}
   damagePercentage: 100
   triggerType: 3
 --- !u!65 &5196861915753862182
@@ -4733,7 +4733,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6573874020062341356, guid: 173342dfc65d71448b12c77613a6fef1, type: 3}
+  - {fileID: 2100000, guid: 5717237462b971141b6ac547f260e64a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4746,7 +4746,7 @@ SkinnedMeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -5538,7 +5538,7 @@ MonoBehaviour:
   openCloseWindow: 0
   selectedToolbar: 0
   attackObject: {fileID: 0}
-  trigger: {fileID: 0}
+  trigger: {fileID: 5196861916168069792}
   damagePercentage: 100
   triggerType: 3
 --- !u!65 &5196861916168069792
@@ -5830,7 +5830,7 @@ SkinnedMeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -6118,7 +6118,7 @@ Transform:
   m_GameObject: {fileID: 5196861916495046010}
   m_LocalRotation: {x: 0, y: 0.70710653, z: -0, w: -0.70710707}
   m_LocalPosition: {x: 8.21, y: 0, z: -20.177}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.42, y: 1.42, z: 1.42}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5196861914506853660}
@@ -6169,8 +6169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 1
-  openCloseWindow: 0
-  selectedToolbar: 7
+  openCloseWindow: 1
+  selectedToolbar: 8
   _isDead: 0
   _currentHealth: 0
   isImmortal: 0
@@ -6286,9 +6286,9 @@ MonoBehaviour:
     rotationSpeed: 16
     walkByDefault: 0
     rotateWithCamera: 0
-    walkSpeed: 2
-    runningSpeed: 4
-    sprintSpeed: 6
+    walkSpeed: 4
+    runningSpeed: 6
+    sprintSpeed: 10
     crouchSpeed: 2
   strafeSpeed:
     movementSmooth: 6
@@ -6296,9 +6296,9 @@ MonoBehaviour:
     rotationSpeed: 16
     walkByDefault: 0
     rotateWithCamera: 0
-    walkSpeed: 2
-    runningSpeed: 4
-    sprintSpeed: 6
+    walkSpeed: 4
+    runningSpeed: 6
+    sprintSpeed: 10
     crouchSpeed: 2
   rotateByWorld: 0
   turnOnSpotAnim: 1
@@ -6669,7 +6669,7 @@ MonoBehaviour:
   minDistanceToAim: 1
   checkAimRadius: 0.1
   alwaysAiming: 0
-  onlyWalkWhenAiming: 1
+  onlyWalkWhenAiming: 0
   useDefaultMovesetWhenNotAiming: 0
   smoothArmIKRotation: 30
   smoothArmAlignWeight: 4
@@ -7236,9 +7236,9 @@ MonoBehaviour:
   openCloseWindow: 1
   selectedToolbar: 0
   holders:
-  - {fileID: 6089046917722233965}
-  - {fileID: 6089046919110372396}
   - {fileID: 6089046918219452914}
+  - {fileID: 6089046919110372396}
+  - {fileID: 6089046917722233965}
   debugMode: 0
 --- !u!114 &5196861916495046009
 MonoBehaviour:

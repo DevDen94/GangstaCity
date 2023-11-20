@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.AI;
 using UnityEditor;
 using Invector.vItemManager;
+using Invector.vShooter;
 public class Car_Manager : MonoBehaviour
 {
     public GameObject[] TPS_Controls;
@@ -30,6 +31,7 @@ public class Car_Manager : MonoBehaviour
     public Camera RCC_Camera;
     public GameObject DestinationPoint;
     public GameObject AimBtn;
+    public vShooterManager sm;
     public void PistolAim()
     {
         AimBtn.SetActive(true);
@@ -85,10 +87,59 @@ public class Car_Manager : MonoBehaviour
     {
 
     }
+    public GameObject InventoryPanel;
+    public GameObject[] GunShootBtns;
+    public GameObject[] Punchbtns;
+    public void OpenInventory()
+    {
+        GameManger.instance.BtnClick();
+        InventoryPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
     public void PressGun(int no)
     {
+        GameManger.instance.BtnClick();
+        InventoryPanel.SetActive(false);
+        Time.timeScale = 1f;
+        foreach (GameObject a in Selectors)
+        {
+            a.SetActive(false);
+        }
+        Selectors[no].SetActive(true);
         vInventory.instance.ChangeInput(no);
+
+            sm.alwaysAiming = true;
+        if (no == 3)
+        {
+            sm.alwaysAiming = false;
+        }
+
+        if (no == 3)
+        {
+            foreach(GameObject a in Punchbtns)
+            {
+                a.SetActive(true);
+            }
+            foreach(GameObject a in GunShootBtns)
+            {
+                a.SetActive(false);
+            }
+        }
+        else
+        {
+            foreach (GameObject a in Punchbtns)
+            {
+                a.SetActive(false);
+            }
+            foreach (GameObject a in GunShootBtns)
+            {
+                a.SetActive(true);
+            }
+        }
+       
+        
     }
+    public GameObject[] Selectors;
     /* public Text fpsText;
      public Text batchText;
      //public Text batchesText;

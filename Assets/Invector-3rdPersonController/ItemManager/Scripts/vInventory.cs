@@ -107,7 +107,7 @@ namespace Invector.vItemManager
             }
             if (dontDestroyOnLoad)
             {
-                DontDestroyOnLoad(gameObject);
+             //   DontDestroyOnLoad(gameObject);
             }
             if(vGameController.instance)
                 vGameController.instance.OnReloadGame.AddListener(OnReloadGame);

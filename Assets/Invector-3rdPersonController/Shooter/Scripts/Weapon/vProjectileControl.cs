@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-
+using PedestrianSystem;
 namespace Invector.vShooter
 {
     using Invector.vEventSystems;
@@ -60,8 +60,15 @@ namespace Invector.vShooter
                 transform.rotation = Quaternion.LookRotation(_rigidBody.velocity.normalized, transform.up);
             if (Physics.Linecast(previousPosition, transform.position + transform.forward * 0.5f, out hitInfo, hitLayer))
             {
+                
                 if (!hitInfo.collider)
                     return;
+
+                if (hitInfo.collider.gameObject.tag == "NPC")
+                {
+                    Debug.LogError("Damage");
+                    hitInfo.collider.gameObject.GetComponent<Pedestrian>().OnPedDamage();
+                }
 
                 var dist = Vector3.Distance(startPosition, transform.position) + castDist;
                 if (!(ignoreTags.Contains(hitInfo.collider.gameObject.tag) || (shooterTransform != null && hitInfo.collider.transform.IsChildOf(shooterTransform))))

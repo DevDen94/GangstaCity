@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Invector.vCharacterController;
 using Invector;
+using Invector.vShooter;
 public class GameManger : MonoBehaviour
 {
 
@@ -42,17 +43,22 @@ public class GameManger : MonoBehaviour
     public GameObject ShopCanvas;
     public GameObject ShopGameObject;
     public GameObject ShopTrigger;
-
+    
     public AudioSource src;
     public AudioClip btnCLIP;
     public AudioClip WinSound;
     public AudioClip LooseSound;
+
+  
    public PlayerNavigation nav;
     public Text TaskText;
     public GameObject Task_Panel;
     public GameObject GunPick;
-
-    
+    public GameObject PoliceSirenFade;
+    public void BtnClick()
+    {
+        src.PlayOneShot(btnCLIP);
+    }
     public void Win_Mission()
     {
         nav.GameEndl = true;
@@ -149,6 +155,7 @@ public class GameManger : MonoBehaviour
 
     public void Restart()
     {
+        Time.timeScale = 1f;
         src.PlayOneShot(btnCLIP);
         SceneManager.LoadScene("GamePlay");
     }
@@ -159,6 +166,7 @@ public class GameManger : MonoBehaviour
     }
     public void Continue()
     {
+        Time.timeScale = 1f;
         src.PlayOneShot(btnCLIP);
         SceneManager.LoadScene("GamePlay");
     }

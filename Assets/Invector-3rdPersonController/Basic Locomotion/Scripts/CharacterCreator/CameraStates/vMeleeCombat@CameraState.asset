@@ -17,14 +17,14 @@ MonoBehaviour:
   - Name: Default
     forward: -1
     right: 0
-    defaultDistance: 2.5
+    defaultDistance: 3.7
     maxDistance: 8
     minDistance: 0.6
-    height: 2.51
+    height: 3.34
     smooth: 10
     smoothDamp: 4
-    xMouseSensitivity: 3
-    yMouseSensitivity: 3
+    xMouseSensitivity: 0.5
+    yMouseSensitivity: 0.5
     yMinLimit: -40
     yMaxLimit: 80
     xMinLimit: -360
@@ -73,8 +73,8 @@ MonoBehaviour:
     height: 1.3
     smooth: 10
     smoothDamp: 4
-    xMouseSensitivity: 1
-    yMouseSensitivity: 1
+    xMouseSensitivity: 0.3
+    yMouseSensitivity: 0.3
     yMinLimit: -40
     yMaxLimit: 80
     xMinLimit: -360
