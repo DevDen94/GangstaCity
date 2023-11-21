@@ -5,7 +5,7 @@ using UnityEngine;
 namespace PedestrianSystem{
 
 	public class Pedestrian : MonoBehaviour {
-		Animator anim; 
+		Animator anim;
 		public AudioClip DeathSound;
 		public AudioClip policeSiren;
 		public AudioSource Src;
@@ -14,7 +14,7 @@ namespace PedestrianSystem{
 		{
 			WALK, // will walk
 			RUN, // will run
-				Death
+			Death
 		}
 		[Tooltip("Movement type of the pedestrian")]
 		public MovementType movementType;
@@ -24,22 +24,23 @@ namespace PedestrianSystem{
 
 		[Tooltip("Pedestrian will walk with this speed")]
 		[Header("Values")]
-		public float walkSpeed = 0.1f;
+		public float walkSpeed = 0.001f;
 		[Tooltip("Pedestrian will run with this speed")]
-		public float runSpeed = 0.2f;
+		public float runSpeed = 0.01f;
 		[Tooltip("Pedestrian will rotate with this speed")]
 		public float rotationSpeed = 1;
 		public int deathvalue = 500;
 		bool isDestroyed = false;
 		public bool isDead = false;
+		public bool isidle = false;
 		private bool is_Last;
 		public void OnPedDamage()
 		{
-			
+
 			deathvalue = -50;
-            if (deathvalue <= 0 && !is_Last)
-            {
-				Src.PlayOneShot(DeathSound);
+			if (deathvalue <= 0 && !is_Last)
+			{
+
 				Debug.LogError("dEADnPC");
 				is_Last = true;
 				isDead = true;
@@ -47,13 +48,14 @@ namespace PedestrianSystem{
 				movementType = MovementType.Death;
 				Invoke("Delay", 3f);
 				Invoke("Destroy_", 7f);
-				
-            }
+				Src.PlayOneShot(DeathSound);
+
+			}
 		}
 		void Delay()
-        {
-            if (PoliceSystemActive.instance.PoliceSirenDelay_Complete)
-            {
+		{
+			if (PoliceSystemActive.instance.PoliceSirenDelay_Complete)
+			{
 				PoliceSystemActive.instance.PoliceActive = true;
 				GameManger.instance.PoliceSirenFade.SetActive(true);
 				Src.PlayOneShot(policeSiren);
@@ -61,86 +63,117 @@ namespace PedestrianSystem{
 
 		}
 		//set animator value of pedestrian according to the state choosen
-		void Start(){
+		void Start() {
 			is_Last = false;
-		 anim = this.GetComponent<Animator> ();
+			isidle = false;
+			anim = this.GetComponent<Animator>();
 
 			switch (movementType) {
+				case MovementType.WALK:
 
-		    
+					anim.SetInteger("MoveState", 1);
 
-			case MovementType.WALK:
+					return;
 
-				anim.SetInteger ("MoveState", 1);
+				case MovementType.RUN:
 
-				return;
+					anim.SetInteger("MoveState", 2);
 
-			case MovementType.RUN:
-
-				anim.SetInteger ("MoveState", 2);
-
-				return;
+					return;
 			}
 
 		}
 
-		void Update(){
+		void Update() {
 			if (isDead) return;
 
-			PedestrianMovement ();
+			if (isidle) return;
+			PedestrianMovement();
 
 			// if target is assinged. Rotate toward it accordingly
 			if (target) {
-			
-				Quaternion targetRotation = Quaternion.LookRotation (target.position - this.transform.position, this.transform.up);
+
+				Quaternion targetRotation = Quaternion.LookRotation(target.position - this.transform.position, this.transform.up);
 				targetRotation.x = 0; targetRotation.z = 0;
-				this.transform.rotation = Quaternion.Lerp (this.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+				this.transform.rotation = Quaternion.Lerp(this.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 			}
 		}
 		void Destroy_()
-        {
+		{
 			Destroy(gameObject);
-        }
+		}
 		//movement acfording to movement type
-		void PedestrianMovement(){
+		void PedestrianMovement() {
 
 			switch (movementType) {
-				
+
 
 				case MovementType.WALK:
 
-				this.transform.position += this.transform.forward * Time.deltaTime * walkSpeed;
+					this.transform.position += this.transform.forward * Time.deltaTime * walkSpeed;
 
-				return;
+					return;
 
-			case MovementType.RUN:
+				case MovementType.RUN:
 
-				this.transform.position += this.transform.forward * Time.deltaTime * runSpeed;
+					this.transform.position += this.transform.forward * Time.deltaTime * runSpeed;
 
-				return;
+					return;
 			}
 		}
 
 		//properly destroy current pedestrian
-		public void DestroyPedestrian(PedestrianSystemManager pedestrianSystem){
-		
+		public void DestroyPedestrian(PedestrianSystemManager pedestrianSystem) {
+
 			if (!isDestroyed) {
-			
+
 				isDestroyed = true;
 
 				pedestrianSystem.curPedestiansSpawned--;
-				Destroy (this.gameObject);
+				Destroy(this.gameObject);
 			}
 		}
-
+		public BoxCollider box;
 		//move to next waypoint once hit the target waypoint
-		public void OnTriggerEnter(Collider col){
-
-			if(col.CompareTag("Waypoint")){
-
-				if(col.gameObject == target.gameObject)
-					target = col.GetComponent<Waypoint> ().GetNextWaypoint ();
+		public void OnTriggerEnter(Collider col) {
+			if (col.gameObject.tag == "Player")
+			{
+				isidle = true;
+				anim.SetInteger("MoveState", 0);
 			}
+            if (col.gameObject.tag == "Car")
+            {
+				Debug.LogError("CarHit");
+				Vector3 forceDirection = (transform.position - col.transform.position).normalized;
+				GetComponent<Rigidbody>().AddForce(forceDirection * 20f, ForceMode.Impulse);
+				anim.SetInteger("MoveState", 10);
+				box.enabled = false;
+				enabled = false;
+				isDead = true;
+				Src.PlayOneShot(DeathSound);
+				Invoke("Destroy_", 10f);
+			}
+			if (col.gameObject.tag == "Waypoint") {
+				target = col.GetComponent<Waypoint>().nextWaypoint.transform;
+			}
+			if (col.gameObject.tag == "Ignore Ragdoll")
+			{
+				OnPedDamage();
+			}
+		}
+		
+        private void OnTriggerExit(Collider other)
+        {
+			if (other.gameObject.tag == "Player")
+			{
+				Invoke("Delayonesec", 0.5f);
+				
+			}
+		}
+		void Delayonesec()
+        {
+			isidle = false;
+			anim.SetInteger("MoveState", 1);
 		}
 
 	}

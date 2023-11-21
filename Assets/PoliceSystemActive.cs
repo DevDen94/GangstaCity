@@ -22,14 +22,15 @@ public class PoliceSystemActive : MonoBehaviour
             PoliceSirenDelay_Complete = false;
             PoliceActive = false;
             SetPoliceActive();
-            Invoke("Delay", 30f);
+            Invoke("Delay", 45f);
         }
         
     }
     public void SetPoliceActive() { 
         Vector3 spawnPosition = playerTransform.position - playerTransform.forward * distanceBehindPlayer;
+        Vector3 spawnPosition1 = playerTransform.position - playerTransform.forward* 8f;
         Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
-        Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);  
+        Instantiate(objectToSpawn, spawnPosition1, Quaternion.identity);  
      }
     void Delay()
     {
