@@ -1058,13 +1058,13 @@ MonoBehaviour:
   Src: {fileID: 5590513764874063909}
   movementType: 0
   target: {fileID: 0}
-  walkSpeed: 1
+  walkSpeed: 0.5
   runSpeed: 3
   rotationSpeed: 10
   deathvalue: 100
   isDead: 0
   isidle: 0
-  box: {fileID: 0}
+  box: {fileID: 5590513764874063930}
 --- !u!65 &5590513764874063931
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -2244,7 +2244,7 @@ MonoBehaviour:
   Src: {fileID: 3478179292751873411}
   movementType: 0
   target: {fileID: 0}
-  walkSpeed: 1
+  walkSpeed: 0.5
   runSpeed: 3
   rotationSpeed: 10
   deathvalue: 100
