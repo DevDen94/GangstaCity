@@ -18,14 +18,14 @@ public class Check_Building : MonoBehaviour
     public AudioSource src;
     public AudioClip SoundEject;
     public GameObject Trigger;
-    public AudioSource Track1;
-    public AudioSource Track2;
-    public AudioSource Track3;
+    public GameObject Weapon_Main;
+    public shootPlayer PlayerShooter;
+  
     private void Start()
     {
         Is_DriverExit = false;
         Car_Manager.instance.Car = this;
-        SRC_Audios = gameObject.transform.GetChild(9).gameObject;
+        SRC_Audios = gameObject.transform.GetChild(11).gameObject;
         Drive_Car();
       
     }

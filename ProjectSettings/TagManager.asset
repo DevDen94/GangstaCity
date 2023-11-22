@@ -37,6 +37,7 @@ TagManager:
   - Pedestrian
   - NPC
   - Car
+  - Police
   layers:
   - Default
   - TransparentFX

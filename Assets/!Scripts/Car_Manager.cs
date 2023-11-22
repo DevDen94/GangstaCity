@@ -7,6 +7,8 @@ using UnityEngine.AI;
 using UnityEditor;
 using Invector.vItemManager;
 using Invector.vShooter;
+using Invector.vCamera;
+using Invector;
 public class Car_Manager : MonoBehaviour
 {
     public GameObject[] TPS_Controls;
@@ -35,7 +37,39 @@ public class Car_Manager : MonoBehaviour
     public GameObject DestinationPoint;
     public GameObject AimBtn;
     public vShooterManager sm;
-    
+    public Transform target_RccCar;
+    public Transform target_PoliceCar;
+    public bool attackon = false;
+    public GameObject InventoryPanel;
+    public GameObject[] GunShootBtns;
+    public GameObject[] Punchbtns;
+    public GameObject[] Selectors;
+    public AudioSource RadioMusic;
+    public AudioClip[] tracks;
+    public vThirdPersonCameraListData list;
+    private int currentTrackIndex = 0;
+    public void CarAttackOnOff()
+    {
+        if (!attackon)
+        {
+            attackon = true;
+            Car.PlayerShooter.FireModeOn();
+        }
+        if (attackon)
+        {
+            attackon = false;
+        }
+    }
+    public void OpenWeaponMode()
+    {
+        Car.Weapon_Main.SetActive(true);
+        Car.Weapon_Main.GetComponent<Animator>().SetBool("upper", true);
+    }
+    public void CloseWeaponMode()
+    {
+        Car.Weapon_Main.SetActive(false);
+        Car.Weapon_Main.GetComponent<Animator>().SetBool("upper", false);
+    }
     public void PistolAim()
     {
         AimBtn.SetActive(true);
@@ -57,8 +91,10 @@ public class Car_Manager : MonoBehaviour
     void Start()
     {
         Invoke("sec", 0.1f);
-    
+        //attackon = false;
         instance = this;
+        list.tpCameraStates[0].defaultDistance = 2.2f;
+        list.tpCameraStates[0].height = 1f;
     }
 
     public void Set_NavigationDestination() {
@@ -77,7 +113,7 @@ public class Car_Manager : MonoBehaviour
             Car.Drive_Car();
             return;
         }
-        Transform target= Instantiate(AI_Car.ReferenceRcc.transform, AI_Car.transform.position, AI_Car.transform.rotation);
+        target_RccCar= Instantiate(AI_Car.ReferenceRcc.transform, AI_Car.transform.position, AI_Car.transform.rotation);
         AI_Car.gameObject.transform.parent.gameObject.SetActive(false);
         RemoveAllMonoBehaviours(AI_Car.gameObject.transform.parent.gameObject);
     }
@@ -102,15 +138,14 @@ public class Car_Manager : MonoBehaviour
 
     }
 
-    public GameObject InventoryPanel;
-    public GameObject[] GunShootBtns;
-    public GameObject[] Punchbtns;
+ 
     public void OpenInventory()
     {
         GameManger.instance.BtnClick();
         InventoryPanel.SetActive(true);
         Time.timeScale = 0f;
     }
+    
     public void PressGun(int no)
     {
         GameManger.instance.BtnClick();
@@ -119,6 +154,7 @@ public class Car_Manager : MonoBehaviour
         foreach (GameObject a in Selectors)
         {
             a.SetActive(false);
+            
         }
         Selectors[no].SetActive(true);
         vInventory.instance.ChangeInput(no);
@@ -127,11 +163,15 @@ public class Car_Manager : MonoBehaviour
         if (no == 3)
         {
             sm.alwaysAiming = false;
+            
         }
+        
 
         if (no == 3)
         {
-            foreach(GameObject a in Punchbtns)
+            list.tpCameraStates[0].defaultDistance = 2.2f;
+            list.tpCameraStates[0].height = 1f;
+            foreach (GameObject a in Punchbtns)
             {
                 a.SetActive(true);
             }
@@ -142,6 +182,8 @@ public class Car_Manager : MonoBehaviour
         }
         else
         {
+            list.tpCameraStates[0].defaultDistance = 2f;
+            list.tpCameraStates[0].height = 1.7f;
             foreach (GameObject a in Punchbtns)
             {
                 a.SetActive(false);
@@ -154,11 +196,8 @@ public class Car_Manager : MonoBehaviour
        
         
     }
-    public GameObject[] Selectors;
-    public AudioSource RadioMusic;
-    public AudioClip[] tracks;
 
-    private int currentTrackIndex = 0;
+   
 
   
        
