@@ -6,6 +6,7 @@ namespace Invector
     [System.Serializable]
     public class vThirdPersonCameraState
     {
+
         public string Name;
         public float forward;
         public float right;
