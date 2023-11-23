@@ -933,11 +933,11 @@ GameObject:
   - component: {fileID: 8171780175550881720}
   - component: {fileID: 9179935488397353550}
   - component: {fileID: 4085454925734546666}
+  - component: {fileID: 3469794272039068099}
   - component: {fileID: 2919789670070322480}
   - component: {fileID: 2044641845241346518}
   - component: {fileID: 6876789887446028591}
   - component: {fileID: 6373499616707651123}
-  - component: {fileID: 3469794272039068099}
   m_Layer: 0
   m_Name: Car_1RCC
   m_TagString: Player
@@ -1264,6 +1264,19 @@ MonoBehaviour:
   useNOS: 0
   useTurbo: 0
   attachedTrailer: {fileID: 0}
+--- !u!65 &3469794272039068099
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3624255514240979584}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.250824, y: 1.2790473, z: 5.8925476}
+  m_Center: {x: -0.026931763, y: -0.040255755, z: 0.043518066}
 --- !u!114 &2919789670070322480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1421,19 +1434,6 @@ MonoBehaviour:
   flame: {fileID: 0}
   shoot_Human: {fileID: 0}
   Myself_Police: 0
---- !u!65 &3469794272039068099
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3624255514240979584}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.250824, y: 1.2790473, z: 5.8925476}
-  m_Center: {x: -0.026931763, y: -0.040255755, z: 0.043518066}
 --- !u!1 &3750955766435733987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,6 +1609,7 @@ MonoBehaviour:
   AutofireMode: 0
   Parent: {fileID: 8171780175550881720}
   distance: 0
+  PoliceMen: {fileID: 0}
 --- !u!1 &5454503860096396573
 GameObject:
   m_ObjectHideFlags: 0

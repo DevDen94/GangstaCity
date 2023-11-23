@@ -70,14 +70,16 @@ public class GameManger : MonoBehaviour
         nav.GameEndl = true;
         MissionFailed.SetActive(true);
         src.PlayOneShot(LooseSound);
+        Time.timeScale = 0f;
     }
 
 
     private void Start()
     {
+        Time.timeScale = 1f;
         OFF_TPS();
         cm = GetComponent<Car_Manager>();
-        Time.timeScale = 1f;
+        
 
 
     

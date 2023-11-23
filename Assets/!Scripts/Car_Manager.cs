@@ -53,6 +53,9 @@ public class Car_Manager : MonoBehaviour
     public bool IsShooterActive;
     [HideInInspector]
     public bool IsAuto_Enabled;
+    [HideInInspector]
+    public bool Snatch_Car;
+    public GameObject CarHit;
     public void CarAttackOn()
     {
        if (!IsShooterActive)
@@ -130,6 +133,7 @@ public class Car_Manager : MonoBehaviour
             Car.Drive_Car();
             return;
         }
+        Snatch_Car = true;
         target_RccCar= Instantiate(AI_Car.ReferenceRcc.transform, AI_Car.transform.position, AI_Car.transform.rotation);
         AI_Car.gameObject.transform.parent.gameObject.SetActive(false);
         RemoveAllMonoBehaviours(AI_Car.gameObject.transform.parent.gameObject);
@@ -227,28 +231,21 @@ public class Car_Manager : MonoBehaviour
         RadioMusic.clip = tracks[currentTrackIndex];
         RadioMusic.Play();
     }
-    /* public Text fpsText;
-     public Text batchText;
-     //public Text batchesText;
+    public Text fpsText;
+    public Text batchText;
+    //public Text batchesText;
 
-     private float deltaTime = 0.0f;
-
-     void Update()
-     {
-         // Calculate FPS
-         deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
-         float fps = 1.0f / deltaTime;
-         //int batchCount = UnityStats.batches;
-
-             fpsText.text = "FPS: " + Mathf.Round(fps);
-             //batchText.text = UnityEngine.Rendering.GraphicsSettings.batches
-
-         // Display Batch Count
-         *//*  if (batchesText != null)
-           {
-               int batchCount = UnityEngine.Rendering.GraphicsSettings.;
-               batchesText.text = "Batches: " + batchCount;
-           }*//*
-     }*/
-
+    private float deltaTime = 0.0f;
+    public PoliceSystemActive PoliceSystem;
+    public GameObject PolicePanel;
+    void Update()
+    {
+        if (Snatch_Car)
+        {
+            Snatch_Car = false;
+            PoliceSystem.ispoliceCar_Active=true;
+            PolicePanel.SetActive(true);
+        }
+    }
+    
 }

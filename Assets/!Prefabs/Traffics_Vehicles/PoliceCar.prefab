@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1456039359614434957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6936993986590471088}
+  m_Layer: 0
+  m_Name: COM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6936993986590471088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456039359614434957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7975279477948513740}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3554871004267065473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,7 +1249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7b6bc9af1a30f488b35f004af81166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayColor: {r: 0, g: 0, b: 1, a: 1}
   rayDistance: 100
   target: {fileID: 0}
   GunPoint: {fileID: 7975279479031977607}
@@ -1230,6 +1260,11 @@ MonoBehaviour:
   isPoliceShooter: 1
   isPlayerShooter: 0
   muzzleFlash: {fileID: 6701297321556354907}
+  AutofireMode: 0
+  Parent: {fileID: 0}
+  distance: 0
+  policeShoot_LOOKAt: {fileID: 7975279479031977607}
+  PoliceMen: {fileID: 0}
 --- !u!82 &3554871004259795756
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21454,6 +21489,7 @@ Transform:
   - {fileID: 7975279477527557655}
   - {fileID: 3554871004266966215}
   - {fileID: 5353267384366817747}
+  - {fileID: 6936993986590471088}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21546,7 +21582,7 @@ MonoBehaviour:
   antiRollFrontHorizontal: 2500
   antiRollRearHorizontal: 2500
   antiRollVertical: 0
-  COM: {fileID: 0}
+  COM: {fileID: 6936993986590471088}
   COMAssister: 0
   brakeTorque: 3000
   downForce: 100

@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 114822841296368632}
   - component: {fileID: 54331770656992046}
   - component: {fileID: 114089457385138198}
-  m_Layer: 0
+  - component: {fileID: 1997597143}
+  m_Layer: 26
   m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +47,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 40
+  m_Radius: 80
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114822841296368632
 MonoBehaviour:
@@ -79,7 +80,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &114089457385138198
 MonoBehaviour:
@@ -94,5 +95,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 1, g: 0.19999999, b: 0.19999999, a: 0.122}
-  radius: 40
+  radius: 60
   alwaysVisible: 1
+--- !u!114 &1997597143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471667347062390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df579ff2ebaa7d4fa82c35a0dbd0ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRadius: 100
+  Player: {fileID: 1471667347062390}
+  Check_PoliceCar: 0
+  Near_Object: {fileID: 0}

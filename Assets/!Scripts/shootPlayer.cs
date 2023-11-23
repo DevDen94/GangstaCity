@@ -33,7 +33,6 @@ public class shootPlayer : MonoBehaviour
         if (isPlayerShooter)
         {
             AutofireMode = false;
-
             FireModeOn();
         }
         else
@@ -61,17 +60,21 @@ public class shootPlayer : MonoBehaviour
                     Car_Manager.instance.AutoFire_On.SetActive(true);
                     Car_Manager.instance.AutoFire_Off.SetActive(false);
                 }
-
-              
+            }
+            else
+            {
+                transform.LookAt(target);
+               
             }
         }
     }
+    public Transform policeShoot_LOOKAt;
     void FindTarget()
     {
        
         if (isPoliceShooter)
         {
-            Debug.LogError(Car_Manager.instance.name);
+            //Debug.LogError(Car_Manager.instance.name);
             if (Car_Manager.instance.target_RccCar==null)
                 return;
 
@@ -86,6 +89,7 @@ public class shootPlayer : MonoBehaviour
         }
 
     }
+    public Animator PoliceMen;
     IEnumerator FirePlayerRoutine()
     {
         while (!PlayerDeath) // Check if player is alive
@@ -93,7 +97,7 @@ public class shootPlayer : MonoBehaviour
             yield return new WaitForSeconds(fireInterval);
             if (target)
             {
-                transform.LookAt(target);
+               
                 distance = Vector3.Distance(transform.position, target.position);
                 if (distance <= 100 && AutofireMode)
                 {
@@ -102,7 +106,7 @@ public class shootPlayer : MonoBehaviour
 
                     if (Physics.Raycast(ray, out RaycastHit hit, rayDistance)) // Cast the ray
                     {
-                        if (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.tag == "Police")
+                        if ( hit.collider.gameObject.tag == "Police")
                         {
                             Debug.LogError("Shoot");
                             hit.collider.gameObject.GetComponent<Damage_Script>().Damage();
@@ -124,13 +128,12 @@ public class shootPlayer : MonoBehaviour
     }
     IEnumerator FirePoliceRoutine()
     {
-        while (!PlayerDeath) // Check if player is alive
+        while (true) // Check if player is alive
         {
            
             yield return new WaitForSeconds(fireInterval);
             if (target)
             {
-                transform.LookAt(target);
                 distance = Vector3.Distance(transform.position, target.position);
                 if (distance <= 200)
                 {
@@ -138,17 +141,20 @@ public class shootPlayer : MonoBehaviour
 
                     if (Physics.Raycast(ray, out RaycastHit hit, rayDistance)) // Cast the ray
                     {
-                        if (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.tag == "Police")
+                        if (hit.collider.gameObject.tag == "Player")
                         {
                             Debug.LogError("Shoot");
                             hit.collider.gameObject.GetComponent<Damage_Script>().Damage();
                         }
-
+                        
                         src.PlayOneShot(shoot);
                     }
+                    PoliceMen.SetBool("shoot", true);
                     muzzleFlash.SetActive(true);
-                    yield return new WaitForSeconds(0.5f);
+                    yield return new WaitForSeconds(2f);
                     muzzleFlash.SetActive(false);
+                    PoliceMen.SetBool("shoot", false);
+
                 }
                 else
                 {

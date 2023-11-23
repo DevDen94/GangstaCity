@@ -69,6 +69,10 @@ namespace Invector.vShooter
                     Debug.LogError("Damage");
                     hitInfo.collider.gameObject.GetComponent<Pedestrian>().OnPedDamage();
                 }
+                if (hitInfo.collider.gameObject.tag == "NPC_CAR")
+                {
+                    hitInfo.collider.gameObject.GetComponent<Destroy_Mesh>().On_Damage();
+                }
 
                 var dist = Vector3.Distance(startPosition, transform.position) + castDist;
                 if (!(ignoreTags.Contains(hitInfo.collider.gameObject.tag) || (shooterTransform != null && hitInfo.collider.transform.IsChildOf(shooterTransform))))
