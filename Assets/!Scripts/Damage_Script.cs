@@ -37,9 +37,10 @@ public class Damage_Script : MonoBehaviour
             
             if (slowmoCounter == 2)
             {
+                StartCoroutine(SlowMotionRoutine());
                 slowmoCounter = 0;
                 Damage();
-                StartCoroutine(SlowMotionRoutine());
+                
             }
         }
        
@@ -67,6 +68,8 @@ public class Damage_Script : MonoBehaviour
                 GetComponent<RCC_AICarController>().enabled = false;
                 flame.SetActive(true);
                 Destroy(shoot_Human);
+                Car_Manager.instance.PoliceCop_On = true;
+                Car_Manager.instance.Carbutton_Out.SetActive(true);
                 Invoke("DamageCar_Spawn", 3f);
 
             }
@@ -89,7 +92,7 @@ public class Damage_Script : MonoBehaviour
     {
         if (isPlayer)
         {
-            damageValue = damageValue - 8;
+            damageValue = damageValue - 5;
             Car_Manager.instance.CarHit.SetActive(true);
             
         }

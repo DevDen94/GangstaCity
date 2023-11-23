@@ -245,7 +245,9 @@ public class Car_Manager : MonoBehaviour
             Snatch_Car = false;
             PoliceSystem.ispoliceCar_Active=true;
             PolicePanel.SetActive(true);
+            PoliceCop_On = true;
         }
     }
+    public bool PoliceCop_On;
     
 }

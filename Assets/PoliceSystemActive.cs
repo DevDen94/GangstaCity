@@ -41,12 +41,15 @@ public class PoliceSystemActive : MonoBehaviour
     public PoliceCar_Check plc;
     public Transform playerCar;
     public GameObject policeCarPrefab;
+    public GameObject ParentPoliceMens;
     public void SetPoliceActive() {
         
         Vector3 spawnPosition = playerTransform.position - playerTransform.forward * distanceBehindPlayer;
         Vector3 spawnPosition1 = playerTransform.position - playerTransform.forward* 8f;
-        Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
-        Instantiate(objectToSpawn, spawnPosition1, Quaternion.identity);  
+        GameObject g1=  Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
+        GameObject g2 = Instantiate(objectToSpawn, spawnPosition1, Quaternion.identity);
+        g1.transform.SetParent(ParentPoliceMens.transform);
+        g2.transform.SetParent(ParentPoliceMens.transform);
      }
     void Delay()
     {
@@ -56,7 +59,14 @@ public class PoliceSystemActive : MonoBehaviour
 
     void SpawnPoliceCar()
     {
-       Instantiate(policeCarPrefab.transform, plc.Near_Object.transform.position, plc.Near_Object.transform.rotation);
+        if (ParentPoliceMens.transform.childCount > 0)
+        {
+            foreach (Transform child in ParentPoliceMens.transform)
+            {
+                Destroy(child);
+            }
+        }
+        Instantiate(policeCarPrefab.transform, plc.Near_Object.transform.position, plc.Near_Object.transform.rotation);
         plc.Check_PoliceCar = false;
     }
 

@@ -20,9 +20,10 @@ public class Check_Building : MonoBehaviour
     public GameObject Trigger;
     public GameObject Weapon_Main;
     public shootPlayer PlayerShooter;
-  
+     bool Car_Out;
     private void Start()
     {
+        Car_Out = false;
         Is_DriverExit = false;
         Car_Manager.instance.Car = this;
         SRC_Audios = gameObject.transform.GetChild(11).gameObject;
@@ -33,18 +34,21 @@ public class Check_Building : MonoBehaviour
     {
         if (other.gameObject.layer==LayerMask.NameToLayer("Building"))
         {
-
-            Car_Manager.instance.Carbutton_Out.SetActive(false);
+           
+                Car_Manager.instance.Carbutton_Out.SetActive(false);
+            
         }
         
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Building"))
-         {
-
+    if (other.gameObject.layer == LayerMask.NameToLayer("Building"))
+    {
+        if (!Car_Manager.instance.PoliceCop_On)
+        {
             Car_Manager.instance.Carbutton_Out.SetActive(true);
         }
+    }
     }
     private void Update()
     {
@@ -81,6 +85,17 @@ public class Check_Building : MonoBehaviour
                 Invoke("Destroy_Driver", 10f);
             }
         }
+
+
+        if (Car_Out)
+        {
+            float distance = Vector3.Distance(this.transform.position, Car_Manager.instance.TPS_Controls[2].transform.position);
+            if (distance > 50f)
+            {
+                Car_Out = false;
+                Destroy(gameObject);
+            }
+        }
     }
     void Destroy_Driver()
     {
@@ -95,7 +110,7 @@ public class Check_Building : MonoBehaviour
             Is_DriverExit = true;
         }
         SRC_Audios.SetActive(true);
-
+        Car_Out = false;
         GetComponent<RCC_CarControllerV3>().StartEngine();
         GetComponent<Rigidbody>().isKinematic = false;
         Player.gameObject.transform.SetPositionAndRotation(Point.transform.position, Point.transform.rotation);
@@ -150,14 +165,7 @@ public class Check_Building : MonoBehaviour
         Car_Manager.instance.Set_ParentofTraffic(Car_Manager.instance.TPS_Controls[2]);
         Player.gameObject.transform.LookAt(LookAt.transform);
         Trigger.SetActive(true);
-        
-       
-      //  gameObject.transform.position = Temp.position;
-      //  gameObject.transform.rotation = Temp.rotation;
-      // // Car_Manager.instance.Temp = Temp.gameObject;
-       // Car_Manager.instance.DestroyTemp_Car();
-        //Temp.gameObject.SetActive(true);
-     //   Destroy(gameObject);
+        Car_Out = true;
     }
     Transform Temp;
     public GameObject DUMMY_CAR;

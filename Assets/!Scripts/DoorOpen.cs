@@ -91,7 +91,10 @@ public class DoorOpen : MonoBehaviour
 
     void Set_CarActive()
     {
-        Car_Manager.instance.Carbutton_Out.SetActive(true);
+        if (!Car_Manager.instance.PoliceCop_On)
+        {
+            Car_Manager.instance.Carbutton_Out.SetActive(true);
+        }
 
     }
     public void Eject_Car()

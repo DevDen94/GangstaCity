@@ -175,6 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1604730050702027809}
+  - component: {fileID: 2053562490056852506}
   m_Layer: 0
   m_Name: car 3
   m_TagString: Untagged
@@ -199,6 +200,19 @@ Transform:
   m_Father: {fileID: 4953495087485485628}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &2053562490056852506
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093881176292685467}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3408974, y: 1.0381539, z: 4.080287}
+  m_Center: {x: -0.010705742, y: 0.56673896, z: -0.004640035}
 --- !u!1 &2108534893810665508
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,7 +2100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 148a3e8ea22ffe4488f569015e2b23c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ReferenceRcc: {fileID: 3624255514240979584, guid: 52822181b084f6a4d91f3039ecca0a72,
+  ReferenceRcc: {fileID: 3624255514240979584, guid: 1a51a0577089da440bba4a7738202d48,
     type: 3}
   Isdriver: 0
   Rcc_Car: 0
