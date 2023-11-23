@@ -16,64 +16,146 @@ public class shootPlayer : MonoBehaviour
     public bool isPoliceShooter;
     public bool isPlayerShooter;
     public GameObject muzzleFlash;
+    public bool AutofireMode;
+    public Transform Parent;
+    bool StartGet;
     void Start()
     {
-
-        FindTarget();
+        StartGet = false;
+        Invoke("Start_Delay", 1f);
+        
+      
+    }
+    void Start_Delay()
+    {
         PlayerDeath = false;
-        FireModeOn();
+        FindTarget();
+        if (isPlayerShooter)
+        {
+            AutofireMode = false;
+
+            FireModeOn();
+        }
+        else
+        {
+            StartCoroutine(FirePoliceRoutine());
+        }
+        StartGet = true;
     }
     public void FireModeOn()
     {
-        StartCoroutine(FireRoutine());
+        StartCoroutine(FirePlayerRoutine());
     }
+
+       public float distance;
     private void Update()
     {
-        if (target == null)
+        if (StartGet)
         {
-            FindTarget();
+            if (target == null)
+            {
+                FindTarget();
+                if (isPlayerShooter)
+                {
+                    AutofireMode = false;
+                    Car_Manager.instance.AutoFire_On.SetActive(true);
+                    Car_Manager.instance.AutoFire_Off.SetActive(false);
+                }
+
+              
+            }
         }
-        transform.LookAt(target);
     }
     void FindTarget()
     {
+       
         if (isPoliceShooter)
         {
+            Debug.LogError(Car_Manager.instance.name);
+            if (Car_Manager.instance.target_RccCar==null)
+                return;
+
             target = Car_Manager.instance.target_RccCar;
         }
         else
         {
+            if (Car_Manager.instance.target_PoliceCar==null )
+                return;
+
             target = Car_Manager.instance.target_PoliceCar;
         }
+
     }
-    IEnumerator FireRoutine()
+    IEnumerator FirePlayerRoutine()
     {
         while (!PlayerDeath) // Check if player is alive
         {
-           /* if (isPlayerShooter)
-            {
-                if (!Car_Manager.instance.attackon)
-                {
-                    yield break;
-                }
-            }*/
             yield return new WaitForSeconds(fireInterval);
-            Ray ray = new Ray(GunPoint.position, transform.forward); // Create a ray from the gunpoint forward
-          
-            if (Physics.Raycast(ray, out RaycastHit hit, rayDistance)) // Cast the ray
+            if (target)
             {
-                if (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.tag == "Police")
+                transform.LookAt(target);
+                distance = Vector3.Distance(transform.position, target.position);
+                if (distance <= 100 && AutofireMode)
                 {
-                    Debug.LogError("Shoot");
-                    hit.collider.gameObject.GetComponent<Damage_Script>().Damage();
+
+                    Ray ray = new Ray(GunPoint.position, transform.forward); // Create a ray from the gunpoint forward
+
+                    if (Physics.Raycast(ray, out RaycastHit hit, rayDistance)) // Cast the ray
+                    {
+                        if (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.tag == "Police")
+                        {
+                            Debug.LogError("Shoot");
+                            hit.collider.gameObject.GetComponent<Damage_Script>().Damage();
+                        }
+
+                        src.PlayOneShot(shoot);
+                    }
+                    muzzleFlash.SetActive(true);
+                    yield return new WaitForSeconds(0.5f);
+                    muzzleFlash.SetActive(false);
                 }
-             
-                src.PlayOneShot(shoot);
+                else
+                {
+                    Debug.LogError("Waiting for target or something");
+                }
             }
-            muzzleFlash.SetActive(true);
-            yield return new WaitForSeconds(0.5f);
-            muzzleFlash.SetActive(false);
             
+        }
+    }
+    IEnumerator FirePoliceRoutine()
+    {
+        while (!PlayerDeath) // Check if player is alive
+        {
+           
+            yield return new WaitForSeconds(fireInterval);
+            if (target)
+            {
+                transform.LookAt(target);
+                distance = Vector3.Distance(transform.position, target.position);
+                if (distance <= 200)
+                {
+                    Ray ray = new Ray(GunPoint.position, transform.forward); // Create a ray from the gunpoint forward
+
+                    if (Physics.Raycast(ray, out RaycastHit hit, rayDistance)) // Cast the ray
+                    {
+                        if (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.tag == "Police")
+                        {
+                            Debug.LogError("Shoot");
+                            hit.collider.gameObject.GetComponent<Damage_Script>().Damage();
+                        }
+
+                        src.PlayOneShot(shoot);
+                    }
+                    muzzleFlash.SetActive(true);
+                    yield return new WaitForSeconds(0.5f);
+                    muzzleFlash.SetActive(false);
+                }
+                else
+                {
+                    Debug.LogError("Waiting for target or something");
+                }
+            }
+
         }
     }
 }

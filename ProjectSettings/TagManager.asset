@@ -38,6 +38,7 @@ TagManager:
   - NPC
   - Car
   - Police
+  - PLC
   layers:
   - Default
   - TransparentFX
@@ -66,7 +67,7 @@ TagManager:
   - Line
   - NPC
   - Track
-  - 
+  - OnlyPolice
   - 
   - 
   - 

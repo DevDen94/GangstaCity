@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class PoliceSystemActive : MonoBehaviour
 {
     public GameObject objectToSpawn; // The object you want to spawn
@@ -10,6 +10,8 @@ public class PoliceSystemActive : MonoBehaviour
     public bool PoliceActive;
     public bool PoliceSirenDelay_Complete;
     public static PoliceSystemActive instance;
+    public bool ispoliceCar_Active;
+    
     private void Start()
     {
         PoliceSirenDelay_Complete = true;
@@ -24,9 +26,23 @@ public class PoliceSystemActive : MonoBehaviour
             SetPoliceActive();
             Invoke("Delay", 45f);
         }
+        if (ispoliceCar_Active)
+        {
+            SpawnerReference.GetComponent<SphereCollider>().enabled = false;
+            plc.Check_PoliceCar = true;
+            ispoliceCar_Active = false;
+            SpawnerReference.GetComponent<SphereCollider>().enabled = true;
+            playerCar = Car_Manager.instance.target_RccCar;
+            Invoke("SpawnPoliceCar", 1f);
+
+        }
         
     }
-    public void SetPoliceActive() { 
+    public PoliceCar_Check plc;
+    public Transform playerCar;
+    public GameObject policeCarPrefab;
+    public void SetPoliceActive() {
+        
         Vector3 spawnPosition = playerTransform.position - playerTransform.forward * distanceBehindPlayer;
         Vector3 spawnPosition1 = playerTransform.position - playerTransform.forward* 8f;
         Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
@@ -36,5 +52,15 @@ public class PoliceSystemActive : MonoBehaviour
     {
         PoliceSirenDelay_Complete = true;
     }
+  
+
+    void SpawnPoliceCar()
+    {
+       Instantiate(policeCarPrefab.transform, plc.Near_Object.transform.position, plc.Near_Object.transform.rotation);
+        plc.Check_PoliceCar = false;
     }
+
+    public GameObject SpawnerReference;
+   
+}
 

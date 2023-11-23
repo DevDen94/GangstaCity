@@ -1467,7 +1467,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7b6bc9af1a30f488b35f004af81166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayColor: {r: 0, g: 0, b: 1, a: 1}
   rayDistance: 100
   target: {fileID: 0}
   GunPoint: {fileID: 8689834702300726796}
@@ -1479,6 +1478,9 @@ MonoBehaviour:
   isPoliceShooter: 1
   isPlayerShooter: 0
   muzzleFlash: {fileID: 5389215115590645712}
+  AutofireMode: 0
+  Parent: {fileID: 8689834701594135116}
+  distance: 0
 --- !u!82 &2837527973965026215
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22290,7 +22292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8689834701594135116
 Transform:
   m_ObjectHideFlags: 0
@@ -22298,7 +22300,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8689834701594135110}
-  m_LocalRotation: {x: -0, y: -0.95305634, z: -0, w: 0.30279306}
+  m_LocalRotation: {x: 0, y: -0.9530559, z: 0, w: 0.3027942}
   m_LocalPosition: {x: -99.09, y: 0.78724605, z: -33.86}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 0
@@ -22323,7 +22325,7 @@ Rigidbody:
   m_Drag: 0.01
   m_AngularDrag: 0.5
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0

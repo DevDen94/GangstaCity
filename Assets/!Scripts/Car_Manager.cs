@@ -39,7 +39,6 @@ public class Car_Manager : MonoBehaviour
     public vShooterManager sm;
     public Transform target_RccCar;
     public Transform target_PoliceCar;
-    public bool attackon = false;
     public GameObject InventoryPanel;
     public GameObject[] GunShootBtns;
     public GameObject[] Punchbtns;
@@ -48,26 +47,44 @@ public class Car_Manager : MonoBehaviour
     public AudioClip[] tracks;
     public vThirdPersonCameraListData list;
     private int currentTrackIndex = 0;
-    public void CarAttackOnOff()
+    public GameObject AutoFire_On;
+    public GameObject AutoFire_Off;
+    [HideInInspector]
+    public bool IsShooterActive;
+    [HideInInspector]
+    public bool IsAuto_Enabled;
+    public void CarAttackOn()
     {
-        if (!attackon)
+       if (!IsShooterActive)
         {
-            attackon = true;
-            Car.PlayerShooter.FireModeOn();
+           OpenWeaponMode();
         }
-        if (attackon)
-        {
-            attackon = false;
-        }
+        Car.PlayerShooter.AutofireMode = true;
+        Car.PlayerShooter.FireModeOn();
+        AutoFire_On.SetActive(false);
+        AutoFire_Off.SetActive(true);
+        IsAuto_Enabled = true;
+    
+    }
+    public void AutoAttackOff()
+    {
+        AutoFire_On.SetActive(false);
+        AutoFire_Off.SetActive(true);
+        Car.PlayerShooter.AutofireMode = false;
+        AutoFire_On.SetActive(true);
+        AutoFire_Off.SetActive(false);
+        IsAuto_Enabled = false;
+
     }
     public void OpenWeaponMode()
     {
+        IsShooterActive = true;
         Car.Weapon_Main.SetActive(true);
         Car.Weapon_Main.GetComponent<Animator>().SetBool("upper", true);
     }
     public void CloseWeaponMode()
     {
-        Car.Weapon_Main.SetActive(false);
+        IsShooterActive = false;
         Car.Weapon_Main.GetComponent<Animator>().SetBool("upper", false);
     }
     public void PistolAim()

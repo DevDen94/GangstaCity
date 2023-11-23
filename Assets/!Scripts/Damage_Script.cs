@@ -11,6 +11,19 @@ public class Damage_Script : MonoBehaviour
     public GameObject flame;
     public shootPlayer shoot_Human;
     public bool Myself_Police;
+    private void Start()
+    {
+        Invoke("Start_Delay", 2f);
+       
+    }
+    void Start_Delay()
+    {
+        if (Myself_Police)
+        {
+            Car_Manager.instance.target_PoliceCar = this.transform;
+        }
+    }
+  
     void OnCollisionEnter(Collision collision)
     {
         if (Myself_Police)
@@ -28,10 +41,11 @@ public class Damage_Script : MonoBehaviour
         {
             if (isPlayer)
             {
-
+                Car_Manager.instance.target_RccCar = null;
             }
             else
             {
+                Car_Manager.instance.target_PoliceCar = null;
                 GetComponent<Rigidbody>().isKinematic = true;
                 GetComponent<RCC_CarControllerV3>().enabled = false;
                 GetComponent<RCC_AICarController>().enabled = false;
@@ -51,7 +65,7 @@ public class Damage_Script : MonoBehaviour
     }
     IEnumerator SlowMotionRoutine()
     {
-        Time.timeScale = 0.2f; // Adjust the slow-motion factor as needed
+        Time.timeScale = 0.3f; // Adjust the slow-motion factor as needed
         yield return new WaitForSecondsRealtime(slowMotionDuration);
         Time.timeScale = 1f; // Reset time scale to normal speed
     }
@@ -59,11 +73,11 @@ public class Damage_Script : MonoBehaviour
     {
         if (isPlayer)
         {
-            damageValue = damageValue - 2;
+            damageValue = damageValue - 30;
         }
         else
         {
-            damageValue = damageValue - 20;
+            damageValue = damageValue - 40;
         }
        
        
