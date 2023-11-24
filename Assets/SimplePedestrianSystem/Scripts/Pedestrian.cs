@@ -9,7 +9,7 @@ namespace PedestrianSystem{
 		public AudioClip DeathSound;
 		public AudioClip policeSiren;
 		public AudioSource Src;
-
+		public GameObject CashPrefab;
 		public enum MovementType
 		{
 			WALK, // will walk
@@ -100,24 +100,18 @@ namespace PedestrianSystem{
 		}
 		void Destroy_()
 		{
+			Instantiate(CashPrefab.transform, gameObject.transform.position, gameObject.transform.rotation);
 			Destroy(gameObject);
 		}
 		//movement acfording to movement type
 		void PedestrianMovement() {
 
 			switch (movementType) {
-
-
 				case MovementType.WALK:
-
 					this.transform.position += this.transform.forward * Time.deltaTime * walkSpeed;
-
 					return;
-
 				case MovementType.RUN:
-
 					this.transform.position += this.transform.forward * Time.deltaTime * runSpeed;
-
 					return;
 			}
 		}
@@ -126,9 +120,7 @@ namespace PedestrianSystem{
 		public void DestroyPedestrian(PedestrianSystemManager pedestrianSystem) {
 
 			if (!isDestroyed) {
-
 				isDestroyed = true;
-
 				pedestrianSystem.curPedestiansSpawned--;
 				Destroy(this.gameObject);
 			}

@@ -100,6 +100,7 @@ public class Car_Manager : MonoBehaviour
     }
     public void Set_ParentofTraffic(GameObject g)
     {
+        GameManger.instance.Hud_Navigation.SetActive(true);
         Player_Hud_Navigation.transform.SetParent(g.transform);
         Player_Hud_Navigation.transform.localPosition = Vector3.zero;
 

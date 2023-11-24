@@ -940,7 +940,7 @@ GameObject:
   - component: {fileID: 6373499616707651123}
   m_Layer: 0
   m_Name: Car_1RCC
-  m_TagString: Player
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1609,6 +1609,7 @@ MonoBehaviour:
   AutofireMode: 0
   Parent: {fileID: 8171780175550881720}
   distance: 0
+  policeShoot_LOOKAt: {fileID: 0}
   PoliceMen: {fileID: 0}
 --- !u!1 &5454503860096396573
 GameObject:

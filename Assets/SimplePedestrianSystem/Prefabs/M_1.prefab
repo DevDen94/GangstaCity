@@ -1728,6 +1728,8 @@ MonoBehaviour:
   DeathSound: {fileID: 8300000, guid: b0f275b1c633093438e3b149da9f9eb2, type: 3}
   policeSiren: {fileID: 8300000, guid: 523aab78902c43b4a89a10d5795cc3a2, type: 3}
   Src: {fileID: 2410468130498474992}
+  CashPrefab: {fileID: 5966920981620044922, guid: 13aefb62ad216074db8dabcf33b4eee0,
+    type: 3}
   movementType: 0
   target: {fileID: 0}
   walkSpeed: 0.5

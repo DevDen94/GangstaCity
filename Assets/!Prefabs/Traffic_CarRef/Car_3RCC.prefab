@@ -1105,7 +1105,7 @@ GameObject:
   - component: {fileID: 6382810038270529843}
   m_Layer: 0
   m_Name: Car_3RCC
-  m_TagString: Player
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3077,7 +3077,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8089096132281341827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0756836, y: -0.9814598, z: -0.6998596}
+  m_LocalPosition: {x: -1.09, y: -0.66, z: -0.7}
   m_LocalScale: {x: 1.2948179, y: 1.2948182, z: 1.294818}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5107,7 +5107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8089096133285420271}
   m_LocalRotation: {x: 0.012396068, y: -0.67472553, z: -0.011388662, w: -0.7378768}
-  m_LocalPosition: {x: -2.0538025, y: -1.0789025, z: -0.13334656}
+  m_LocalPosition: {x: -2.0681098, y: -0.7574427, z: -0.13349018}
   m_LocalScale: {x: 0.8879028, y: 0.88790286, z: 0.8879028}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8674,7 +8674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8573686047783831192}
   m_LocalRotation: {x: -0, y: 0.07456735, z: -0, w: 0.997216}
-  m_LocalPosition: {x: -0.7515869, y: -0.8821093, z: 0.19656372}
+  m_LocalPosition: {x: -0.7515869, y: -0.56, z: 0.19656372}
   m_LocalScale: {x: 1.0809251, y: 1.0809252, z: 1.0809251}
   m_ConstrainProportionsScale: 0
   m_Children:

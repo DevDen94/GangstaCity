@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 6373499616707651123}
   m_Layer: 0
   m_Name: Car_2RCC
-  m_TagString: Player
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

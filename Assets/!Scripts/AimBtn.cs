@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AimBtn : MonoBehaviour
 {
+    public static AimBtn reg;
+    public bool IsGameManagerEnable;
     public GameObject ManagerScript;
    public void AimOn()
     {
@@ -17,6 +19,7 @@ public class AimBtn : MonoBehaviour
 
     private void Start()
     {
+        reg = this;
         Invoke("Delay", 0.1f);
     }
     void Delay()
@@ -24,6 +27,7 @@ public class AimBtn : MonoBehaviour
         if (ManagerScript != null)
         {
             ManagerScript.SetActive(true);
+            IsGameManagerEnable = true;
         }
     }
     private void OnCollisionEnter(Collision collision)

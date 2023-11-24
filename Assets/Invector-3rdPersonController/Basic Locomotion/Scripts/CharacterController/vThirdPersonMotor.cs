@@ -789,6 +789,7 @@ namespace Invector.vCharacterController
             {
                 CheckFallDamage();
                 isGrounded = true;
+                //Debug.LogError("111");
                 if (!useSnapGround && !applyingStepOffset && !isJumping && groundDistance > 0.05f)
                     _rigidbody.AddForce(transform.up * (extraGravity * 2 * Time.deltaTime), ForceMode.VelocityChange);
             }
@@ -796,6 +797,7 @@ namespace Invector.vCharacterController
             {
                 if (groundDistance >= groundMaxDistance)
                 {
+                    
                     if (!isRolling)
                         isGrounded = false;
 
@@ -809,6 +811,7 @@ namespace Invector.vCharacterController
                 }
                 else if (!applyingStepOffset && !isJumping)
                 {
+                    GameManger.instance.Jump_Long();
                     _rigidbody.AddForce(transform.up * (extraGravity * 2 * Time.deltaTime), ForceMode.VelocityChange);
                 }
             }
@@ -816,7 +819,11 @@ namespace Invector.vCharacterController
 
         protected virtual void CheckFallDamage()
         {
-            if (isGrounded || verticalVelocity > fallMinVerticalVelocity && blockFallActions || fallMinHeight == 0) return;
+            if (isGrounded || verticalVelocity > fallMinVerticalVelocity && blockFallActions || fallMinHeight == 0)
+            {
+                
+                return;
+            } 
             float fallHeight = (heightReached - transform.position.y);
 
             fallHeight -= fallMinHeight;

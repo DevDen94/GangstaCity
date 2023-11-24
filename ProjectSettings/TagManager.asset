@@ -20,8 +20,6 @@ TagManager:
   - Glass
   - Water
   - LadderTrigger
-  - ExitWater
-  - Barrel
   - FreeClimb
   - ClimbDirection
   - Zipline
@@ -40,6 +38,8 @@ TagManager:
   - Police
   - PLC
   - NPC_CAR
+  - FxTemporaire
+  - Cash
   layers:
   - Default
   - TransparentFX

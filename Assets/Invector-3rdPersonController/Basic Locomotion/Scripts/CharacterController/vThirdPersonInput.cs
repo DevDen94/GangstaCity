@@ -155,6 +155,8 @@ namespace Invector.vCharacterController
             if (value)
             {
                 cc.input = Vector2.zero;
+                GameManger.instance.IsSprintOff = true;
+                GameManger.instance.Sprint_Call();
                 cc.isSprinting = false;
                 cc.animator.SetFloat("InputHorizontal", 0, 0.25f, Time.deltaTime);
                 cc.animator.SetFloat("InputVertical", 0, 0.25f, Time.deltaTime);

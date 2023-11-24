@@ -165,6 +165,8 @@ namespace Invector.vCharacterController
                     else if (!isSprinting)
                     {
                         isSprinting = true;
+                        GameManger.instance.IsSprintOff = false;
+                        GameManger.instance.Sprint_Call();
                     }
                 }
                 else if (!useContinuousSprint && isSprinting)
@@ -174,6 +176,8 @@ namespace Invector.vCharacterController
                         finishStaminaOnSprint = true;
                         OnFinishSprintingByStamina.Invoke();
                     }
+                    GameManger.instance.IsSprintOff = true;
+                    GameManger.instance.Sprint_Call();
                     isSprinting = false;
                     OnFinishSprinting.Invoke();
                 }
@@ -187,6 +191,8 @@ namespace Invector.vCharacterController
                 }
 
                 isSprinting = false;
+                GameManger.instance.IsSprintOff = true;
+                GameManger.instance.Sprint_Call();
                 OnFinishSprinting.Invoke();
             }
         }

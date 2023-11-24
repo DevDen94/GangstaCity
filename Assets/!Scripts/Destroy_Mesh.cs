@@ -8,6 +8,7 @@ public class Destroy_Mesh : MonoBehaviour
     public int damage = 100;
     public GameObject Prefab;
     public GameObject Header;
+    public GameObject CashPrefab;
     void Start()
     {
         if (!Npc_Car)
@@ -28,6 +29,7 @@ public class Destroy_Mesh : MonoBehaviour
     }
     void Destroy_After()
     {
+        Instantiate(CashPrefab.transform, gameObject.transform.position, gameObject.transform.rotation);
         Destroy(gameObject);
     }
  

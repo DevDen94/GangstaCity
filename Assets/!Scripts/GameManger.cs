@@ -55,6 +55,35 @@ public class GameManger : MonoBehaviour
     public GameObject Task_Panel;
     public GameObject GunPick;
     public GameObject PoliceSirenFade;
+    public GameObject JumpLongEffect;
+    public GameObject Ref_Jump;
+    public GameObject SprintReference;
+    public GameObject SprintingEffect;
+    [HideInInspector]
+    public bool IsSprintOff;
+    [HideInInspector]
+    public bool isOneTime;
+    Transform Des;
+    
+    public void Sprint_Call()
+    {
+        if (IsSprintOff )
+        {
+            SprintingEffect.SetActive(false);
+            SprintReference.SetActive(false);
+            isOneTime = false;
+        }
+        else {
+            SprintingEffect.SetActive(true);
+            SprintReference.SetActive(true);
+            isOneTime = true;
+           
+        }
+    }
+    public void Jump_Long()
+    {
+        Instantiate(JumpLongEffect.transform, Ref_Jump.transform.position, Ref_Jump.transform.rotation);
+    }
     public void BtnClick()
     {
         src.PlayOneShot(btnCLIP);

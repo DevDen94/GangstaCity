@@ -100,6 +100,22 @@ namespace Invector.vCharacterController
             animator.SetFloat(vAnimatorParameters.GroundDistance, groundDistance);
             animator.SetFloat(vAnimatorParameters.GroundAngle, GroundAngleFromDirection());
 
+            if (AimBtn.reg.IsGameManagerEnable)
+            {
+                if (isSprinting && GameManger.instance.isOneTime)
+                {
+                    GameManger.instance.IsSprintOff = false;
+                    GameManger.instance.Sprint_Call();
+                    GameManger.instance.isOneTime = false;
+                }
+                if (!isSprinting && !GameManger.instance.isOneTime)
+                {
+                    GameManger.instance.IsSprintOff = true;
+                    GameManger.instance.Sprint_Call();
+                    GameManger.instance.isOneTime = true;
+                }
+            }
+
             if (!isGrounded)
                 animator.SetFloat(vAnimatorParameters.VerticalVelocity, verticalVelocity);
 

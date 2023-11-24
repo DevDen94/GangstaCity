@@ -39,7 +39,8 @@ namespace PedestrianSystem{
 			if(col.CompareTag("Waypoint")){
 
 				if (instantiatePediOnEnter) {
-					
+
+					Debug.LogError(col.gameObject.name);
 					col.GetComponent<Waypoint> ().Instatiate_Pedestrian ();
 				}
 
