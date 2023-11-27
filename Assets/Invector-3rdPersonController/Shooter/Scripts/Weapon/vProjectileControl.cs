@@ -66,7 +66,7 @@ namespace Invector.vShooter
 
                 if (hitInfo.collider.gameObject.tag == "NPC")
                 {
-                    Debug.LogError("Damage");
+                    //Debug.LogError("Damage");
                     hitInfo.collider.gameObject.GetComponent<Pedestrian>().OnPedDamage();
                 }
                 if (hitInfo.collider.gameObject.tag == "NPC_CAR")

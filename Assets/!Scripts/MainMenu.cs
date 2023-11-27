@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
         Time.timeScale = 1f;
         if (!PlayerPrefs.HasKey("S"))
         {
-            PlayerPrefs.SetInt("Cash", 50000);
+            PlayerPrefs.SetInt("Cash", 500);
             PlayerPrefs.SetInt("S", 12);
         }
         shop_cash.text = PlayerPrefs.GetInt("Cash").ToString();
