@@ -11,9 +11,13 @@ public class PoliceSystemActive : MonoBehaviour
     public bool PoliceSirenDelay_Complete;
     public static PoliceSystemActive instance;
     public bool ispoliceCar_Active;
+    public GameObject CarOutBtn;
+    [HideInInspector]
+    public bool isPolice_CarTimer;
     
     private void Start()
     {
+        isPolice_CarTimer = true;
         PoliceSirenDelay_Complete = true;
         instance = this;
     }
@@ -24,16 +28,19 @@ public class PoliceSystemActive : MonoBehaviour
             PoliceSirenDelay_Complete = false;
             PoliceActive = false;
             SetPoliceActive();
-            Invoke("Delay", 45f);
+            Invoke("Delay_PoliceMens", 45f);
         }
         if (ispoliceCar_Active)
         {
+            isPolice_CarTimer = false;
             SpawnerReference.GetComponent<SphereCollider>().enabled = false;
             plc.Check_PoliceCar = true;
             ispoliceCar_Active = false;
             SpawnerReference.GetComponent<SphereCollider>().enabled = true;
             playerCar = Car_Manager.instance.target_RccCar;
             Invoke("SpawnPoliceCar", 1f);
+            Invoke("Delay_PoliceCars", 65f);
+
 
         }
         
@@ -50,12 +57,17 @@ public class PoliceSystemActive : MonoBehaviour
         GameObject g2 = Instantiate(objectToSpawn, spawnPosition1, Quaternion.identity);
         g1.transform.SetParent(ParentPoliceMens.transform);
         g2.transform.SetParent(ParentPoliceMens.transform);
+        Debug.LogError("POLICEEE");
      }
-    void Delay()
+    void Delay_PoliceMens()
     {
         PoliceSirenDelay_Complete = true;
     }
   
+    void Delay_PoliceCars()
+    {
+        isPolice_CarTimer = true;
+    }
 
     void SpawnPoliceCar()
     {
@@ -63,11 +75,12 @@ public class PoliceSystemActive : MonoBehaviour
         {
             foreach (Transform child in ParentPoliceMens.transform)
             {
-                Destroy(child);
+                Destroy(child.gameObject);
             }
         }
         Instantiate(policeCarPrefab.transform, plc.Near_Object.transform.position, plc.Near_Object.transform.rotation);
         plc.Check_PoliceCar = false;
+        CarOutBtn.SetActive(false);
     }
 
     public GameObject SpawnerReference;

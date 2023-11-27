@@ -141,7 +141,7 @@ public class shootPlayer : MonoBehaviour
 
                     if (Physics.Raycast(ray, out RaycastHit hit, rayDistance)) // Cast the ray
                     {
-                        if (hit.collider.gameObject.tag == "Player")
+                        if (hit.collider.gameObject.tag == "Car")
                         {
                             Debug.LogError("Shoot");
                             hit.collider.gameObject.GetComponent<Damage_Script>().Damage();

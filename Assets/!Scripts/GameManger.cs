@@ -64,6 +64,7 @@ public class GameManger : MonoBehaviour
     [HideInInspector]
     public bool isOneTime;
     Transform Des;
+    public Text CashText;
     
     public void Sprint_Call()
     {
@@ -108,16 +109,18 @@ public class GameManger : MonoBehaviour
         Time.timeScale = 1f;
         OFF_TPS();
         cm = GetComponent<Car_Manager>();
-        
 
 
-    
+      
+
         instance = this;
         if (!PlayerPrefs.HasKey("Start"))
         {
             PlayerPrefs.SetInt("Start", 0);
             PlayerPrefs.SetInt("MissionNo",1);
+           
         }
+        CashText.text = PlayerPrefs.GetInt("Cash").ToString();
         //PlayerPrefs.SetInt("MissionNo", 2);
         selected_Mission = PlayerPrefs.GetInt("MissionNo");
        // controller.Spawn(SpawnPoints[PlayerPrefs.GetInt("MissionNo")].transform);

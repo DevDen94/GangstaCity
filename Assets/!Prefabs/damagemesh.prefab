@@ -160,6 +160,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88857d2089f66ed44b34924d435e5d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Npc_Car: 0
+  damage: 100
+  Prefab: {fileID: 0}
+  Header: {fileID: 0}
+  CashPrefab: {fileID: 955687580111673766, guid: 13aefb62ad216074db8dabcf33b4eee0,
+    type: 3}
 --- !u!1 &6927857593775504184
 GameObject:
   m_ObjectHideFlags: 0

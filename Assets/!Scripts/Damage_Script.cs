@@ -9,20 +9,24 @@ public class Damage_Script : MonoBehaviour
     public bool isPlayer;
     public Transform Car_Damge;
     public GameObject flame;
-    [HideInInspector]
+ 
     public shootPlayer shoot_Human;
     public bool Myself_Police;
+    bool myselfpolice_2;
+  
     private void Start()
     {
         Invoke("Start_Delay", 2f);
         slowmoCounter = 0;
         playerdeath = false;
+        myselfpolice_2 = false;
     }
     void Start_Delay()
     {
         if (Myself_Police)
         {
             Car_Manager.instance.target_PoliceCar = this.transform;
+            myselfpolice_2 = true;
         }
     }
    int slowmoCounter = 0;
@@ -45,7 +49,28 @@ public class Damage_Script : MonoBehaviour
         }
        
     }
+    public float Dis;
     bool playerdeath;
+    private void FixedUpdate()
+    { if (myselfpolice_2)
+        { 
+                if (shoot_Human.target == null)
+                {
+                    return;
+                }
+                else
+                {
+                    Dis = Vector3.Distance(gameObject.transform.position, shoot_Human.target.transform.position);
+                    Debug.LogError(Dis);
+                    if (Dis >= 75)
+                    {
+                        Destroy(gameObject);
+                        Car_Manager.instance.PoliceCop_On = false;
+                        Car_Manager.instance.Carbutton_Out.SetActive(true);
+                    }
+                }
+            }
+    }
     private void Update()
     {
         if (damageValue <= 0 )
@@ -68,8 +93,9 @@ public class Damage_Script : MonoBehaviour
                 GetComponent<RCC_AICarController>().enabled = false;
                 flame.SetActive(true);
                 Destroy(shoot_Human);
-                Car_Manager.instance.PoliceCop_On = true;
+                Car_Manager.instance.PoliceCop_On = false;
                 Car_Manager.instance.Carbutton_Out.SetActive(true);
+                Debug.LogError("ON");
                 Invoke("DamageCar_Spawn", 3f);
 
             }
@@ -98,7 +124,7 @@ public class Damage_Script : MonoBehaviour
         }
         else
         {
-            damageValue = damageValue - 40;
+            damageValue = damageValue -20;
         }
        
        

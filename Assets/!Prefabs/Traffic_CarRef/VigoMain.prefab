@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 148a3e8ea22ffe4488f569015e2b23c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ReferenceRcc: {fileID: 7576233424266092674}
+  ReferenceRcc: {fileID: 0}
   Isdriver: 1
   Rcc_Car: 1
 --- !u!1 &1152310930
@@ -341,6 +341,11 @@ MonoBehaviour:
   isPoliceShooter: 0
   isPlayerShooter: 1
   muzzleFlash: {fileID: 388625780580961345}
+  AutofireMode: 0
+  Parent: {fileID: 0}
+  distance: 0
+  policeShoot_LOOKAt: {fileID: 0}
+  PoliceMen: {fileID: 0}
 --- !u!1 &2554992516960415449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,6 +2562,7 @@ MonoBehaviour:
   Trigger: {fileID: 427961259}
   Weapon_Main: {fileID: 2172417165590923500}
   PlayerShooter: {fileID: 4834078498482891901}
+  is_HummerSpecial: 0
   DUMMY_CAR: {fileID: 7300828664495834930, guid: ac0d62f07a815f249b780e1923893284,
     type: 3}
 --- !u!65 &7576233424266092676

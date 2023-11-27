@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 5434748613884139572}
   - component: {fileID: 8309330970540545139}
   - component: {fileID: 2244962460425945950}
-  m_Layer: 23
+  m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2888,7 +2888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9073299717497467890}
   - component: {fileID: 8347567416818582769}
-  m_Layer: 23
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2944,7 +2944,7 @@ GameObject:
   - component: {fileID: 6811476743985659587}
   - component: {fileID: 7412437885312780493}
   - component: {fileID: 470390675589476518}
-  m_Layer: 23
+  m_Layer: 0
   m_Name: Point Light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3059,7 +3059,7 @@ GameObject:
   - component: {fileID: 7789187469971089583}
   - component: {fileID: 4178712617944932338}
   - component: {fileID: 5853532789826764311}
-  m_Layer: 23
+  m_Layer: 0
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22713,7 +22713,7 @@ GameObject:
   - component: {fileID: 8689834701594135105}
   - component: {fileID: 8689834701594135104}
   - component: {fileID: 8689834701594135111}
-  m_Layer: 23
+  m_Layer: 27
   m_Name: Police
   m_TagString: Police
   m_Icon: {fileID: 0}
@@ -22979,7 +22979,7 @@ MonoBehaviour:
     damageResolution: 100
     damageFilter:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 268435255
     damageRadius: 0.5
     damageMultiplier: 1
     maximumDamage: 0.5
@@ -23001,7 +23001,7 @@ MonoBehaviour:
     detachableParts: []
     lights: []
     wheels: []
-  useDamage: 1
+  useDamage: 0
   useCollisionParticles: 1
   useCollisionAudio: 1
   maximumContactSparkle: 5
@@ -23062,7 +23062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypointsContainer: {fileID: 0}
   currentWaypointIndex: 0
-  targetTag: Player
+  targetTag: Car
   navigationMode: 1
   raycastLength: 3
   raycastAngle: 30
@@ -23108,8 +23108,9 @@ MonoBehaviour:
   Car_Damge: {fileID: 5004908998769637995, guid: 9d272923bee47d748b9a898cfb83c86e,
     type: 3}
   flame: {fileID: 6665112641482847954}
-  shoot_Human: {fileID: 0}
+  shoot_Human: {fileID: 7842073696901181489}
   Myself_Police: 1
+  Dis: 0
 --- !u!1 &8689834702140402152
 GameObject:
   m_ObjectHideFlags: 0
@@ -23183,7 +23184,7 @@ GameObject:
   - component: {fileID: 2918936415518855207}
   - component: {fileID: 758971326606528999}
   - component: {fileID: 4901307225462125947}
-  m_Layer: 23
+  m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23368,6 +23369,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fire_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433820428184381499, guid: 0aa1ec9d72480d24ea57722066df6b22,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6433820428184381499, guid: 0aa1ec9d72480d24ea57722066df6b22,
         type: 3}

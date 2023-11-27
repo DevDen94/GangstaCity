@@ -40,7 +40,7 @@ namespace PedestrianSystem{
 
 				if (instantiatePediOnEnter) {
 
-					Debug.LogError(col.gameObject.name);
+					//Debug.LogError(col.gameObject.name);
 					col.GetComponent<Waypoint> ().Instatiate_Pedestrian ();
 				}
 

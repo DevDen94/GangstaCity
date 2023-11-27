@@ -21,13 +21,19 @@ public class Check_Building : MonoBehaviour
     public GameObject Weapon_Main;
     public shootPlayer PlayerShooter;
      bool Car_Out;
+    public bool is_HummerSpecial;
     private void Start()
     {
         Car_Out = false;
         Is_DriverExit = false;
         Car_Manager.instance.Car = this;
         SRC_Audios = gameObject.transform.GetChild(11).gameObject;
-        Drive_Car();
+        if (!is_HummerSpecial)
+        {
+            Drive_Car();
+            
+        }
+  
       
     }
     private void OnTriggerEnter(Collider other)
@@ -36,6 +42,7 @@ public class Check_Building : MonoBehaviour
         {
            
                 Car_Manager.instance.Carbutton_Out.SetActive(false);
+            Debug.LogError("OFF");
             
         }
         
@@ -47,6 +54,7 @@ public class Check_Building : MonoBehaviour
         if (!Car_Manager.instance.PoliceCop_On)
         {
             Car_Manager.instance.Carbutton_Out.SetActive(true);
+                Debug.LogError("ON");
         }
     }
     }
@@ -130,10 +138,15 @@ public class Check_Building : MonoBehaviour
     }
     void ExitCarOutBTn()
     {
-        Car_Manager.instance.Carbutton_Out.SetActive(true);
+        if (!Car_Manager.instance.PoliceCop_On)
+        {
+            Car_Manager.instance.Carbutton_Out.SetActive(true);
+            Debug.LogError("ON");
+        }
     }
     public void Eject_Car()
     {
+        
         SRC_Audios.SetActive(false);
         Car_Manager.instance.RadioMusic.gameObject.SetActive(false);
         GetComponent<RCC_CarControllerV3>().enabled = false;

@@ -49,6 +49,8 @@ public class Car_Manager : MonoBehaviour
     private int currentTrackIndex = 0;
     public GameObject AutoFire_On;
     public GameObject AutoFire_Off;
+    public GameObject WeaponOffBTN;
+    public GameObject WeaponOnBtn;
     [HideInInspector]
     public bool IsShooterActive;
     [HideInInspector]
@@ -56,6 +58,11 @@ public class Car_Manager : MonoBehaviour
     [HideInInspector]
     public bool Snatch_Car;
     public GameObject CarHit;
+    public bool is_Hummer;
+    public GameObject Buy_Panel;
+    public GameObject NotEnoughCoins;
+
+    public string Car_Name;
     public void CarAttackOn()
     {
        if (!IsShooterActive)
@@ -123,21 +130,58 @@ public class Car_Manager : MonoBehaviour
     }
     public void Sit_in()
     {
-      
-        Carbutton_IN.SetActive(false);
-        hudNav.PlayerCamera = RCC_Camera;
-        GameManger.instance.OFF_TPS();
-        Rcc_Header_Camera.SetActive(true);
-
-        if (AI_Car.Rcc_Car==true)
-        {
-            Car.Drive_Car();
-            return;
+        if (is_Hummer && PlayerPrefs.GetInt(Car_Name)==0){
+            Debug.LogError(PlayerPrefs.GetInt(Car_Name));
+            Debug.LogError(Car_Name);
+            Buy_Panel.SetActive(true);
         }
-        Snatch_Car = true;
-        target_RccCar= Instantiate(AI_Car.ReferenceRcc.transform, AI_Car.transform.position, AI_Car.transform.rotation);
-        AI_Car.gameObject.transform.parent.gameObject.SetActive(false);
-        RemoveAllMonoBehaviours(AI_Car.gameObject.transform.parent.gameObject);
+        else
+        {
+            Rcc_Header_Camera.SetActive(true);
+            Carbutton_IN.SetActive(false);
+
+            hudNav.PlayerCamera = RCC_Camera;
+            GameManger.instance.OFF_TPS();
+            if (AI_Car.Rcc_Car == true)
+            {
+                Car.Drive_Car();
+                Rcc_Header_Camera.GetComponent<RCC_Camera>().cameraTarget.playerVehicle = Car.gameObject.GetComponent<RCC_CarControllerV3>();
+                return;
+            }
+            Snatch_Car = true;
+            target_RccCar = Instantiate(AI_Car.ReferenceRcc.transform, AI_Car.transform.position, AI_Car.transform.rotation);
+            AI_Car.gameObject.transform.parent.gameObject.SetActive(false);
+            RemoveAllMonoBehaviours(AI_Car.gameObject.transform.parent.gameObject);
+        }
+      
+    }
+    public void BuyCar()
+    {
+        if (PlayerPrefs.GetInt("Cash") >= 1000)
+        {
+            PlayerPrefs.SetInt(Car_Name, 1);
+            PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") - 1000);
+            Rcc_Header_Camera.SetActive(true);
+            Carbutton_IN.SetActive(false);
+            Buy_Panel.SetActive(false);
+            hudNav.PlayerCamera = RCC_Camera;
+            GameManger.instance.OFF_TPS();
+            if (AI_Car.Rcc_Car == true)
+            {
+                Car.Drive_Car();
+                Rcc_Header_Camera.GetComponent<RCC_Camera>().cameraTarget.playerVehicle = Car.gameObject.GetComponent<RCC_CarControllerV3>();
+                return;
+            }
+        }
+        else
+        {
+            NotEnoughCoins.SetActive(true);
+        }
+
+    }
+    public void WatchAd()
+    {
+
     }
 
     void RemoveAllMonoBehaviours(GameObject obj)
@@ -154,6 +198,10 @@ public class Car_Manager : MonoBehaviour
     }
     public void Exit_Out()
     {
+        WeaponOffBTN.SetActive(false);
+        AutoFire_Off.SetActive(false);
+        AutoFire_On.SetActive(false);
+        WeaponOnBtn.SetActive(true);
         Carbutton_Out.SetActive(false);
         Car.isEject = true;
         hudNav.PlayerCamera = TPS_Camera;
@@ -187,7 +235,6 @@ public class Car_Manager : MonoBehaviour
             sm.alwaysAiming = false;
             
         }
-        
 
         if (no == 3)
         {
@@ -220,7 +267,7 @@ public class Car_Manager : MonoBehaviour
     }
 
    
-
+   
   
        
     
@@ -232,8 +279,8 @@ public class Car_Manager : MonoBehaviour
         RadioMusic.clip = tracks[currentTrackIndex];
         RadioMusic.Play();
     }
-    public Text fpsText;
-    public Text batchText;
+   // public Text fpsText;
+   //// public Text batchText;
     //public Text batchesText;
 
     private float deltaTime = 0.0f;
@@ -244,9 +291,13 @@ public class Car_Manager : MonoBehaviour
         if (Snatch_Car)
         {
             Snatch_Car = false;
-            PoliceSystem.ispoliceCar_Active=true;
-            PolicePanel.SetActive(true);
-            PoliceCop_On = true;
+            if (PoliceSystem.isPolice_CarTimer)
+            {
+                PoliceSystem.ispoliceCar_Active = true;
+                PolicePanel.SetActive(true);
+                PoliceCop_On = true;
+            }
+          
         }
     }
     public bool PoliceCop_On;

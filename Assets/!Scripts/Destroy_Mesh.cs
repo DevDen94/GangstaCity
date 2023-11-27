@@ -29,7 +29,7 @@ public class Destroy_Mesh : MonoBehaviour
     }
     void Destroy_After()
     {
-        Instantiate(CashPrefab.transform, gameObject.transform.position, gameObject.transform.rotation);
+        Instantiate(CashPrefab.transform, gameObject.transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
  

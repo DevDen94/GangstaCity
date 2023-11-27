@@ -555,6 +555,8 @@ MonoBehaviour:
   ReferenceRcc: {fileID: 0}
   Isdriver: 1
   Rcc_Car: 1
+  Is_hummer: 0
+  nameofCar: 
 --- !u!1 &2371619910093854585
 GameObject:
   m_ObjectHideFlags: 0
@@ -1304,6 +1306,7 @@ MonoBehaviour:
   Trigger: {fileID: 1837888594702066726}
   Weapon_Main: {fileID: 550710287111898977}
   PlayerShooter: {fileID: 6527797476762215408}
+  is_HummerSpecial: 0
   DUMMY_CAR: {fileID: 7300828664495834930, guid: ac0d62f07a815f249b780e1923893284,
     type: 3}
 --- !u!65 &2044641845241346518
@@ -1434,6 +1437,7 @@ MonoBehaviour:
   flame: {fileID: 0}
   shoot_Human: {fileID: 0}
   Myself_Police: 0
+  Dis: 0
 --- !u!1 &3750955766435733987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,14 +2193,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7411445547583844945}
-  m_LocalRotation: {x: 0.012396068, y: -0.67472553, z: -0.011388662, w: -0.7378768}
-  m_LocalPosition: {x: -2.4772491, y: -0.9593182, z: -0.6195526}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -2.48, y: -0.74, z: -0.62}
   m_LocalScale: {x: 0.8879028, y: 0.88790286, z: 0.8879028}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8171780175550881720}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &7524490216824230485
 GameObject:
   m_ObjectHideFlags: 0

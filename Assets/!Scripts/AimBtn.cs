@@ -7,6 +7,7 @@ public class AimBtn : MonoBehaviour
     public static AimBtn reg;
     public bool IsGameManagerEnable;
     public GameObject ManagerScript;
+    public GameObject cars_ToBuy;
    public void AimOn()
     {
         Car_Manager.instance.PistolAim();
@@ -27,6 +28,7 @@ public class AimBtn : MonoBehaviour
         if (ManagerScript != null)
         {
             ManagerScript.SetActive(true);
+            cars_ToBuy.SetActive(true);
             IsGameManagerEnable = true;
         }
     }

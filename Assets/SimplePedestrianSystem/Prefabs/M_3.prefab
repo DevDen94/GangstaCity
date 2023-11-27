@@ -507,7 +507,7 @@ Transform:
   m_GameObject: {fileID: 6589433959554913591}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 30.15, y: 0.55018663, z: 173.76596}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6589433960900167843}
@@ -528,7 +528,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 988c050cd75e4fc4b9b587aaed62340e, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -566,11 +566,11 @@ MonoBehaviour:
   DeathSound: {fileID: 8300000, guid: b0f275b1c633093438e3b149da9f9eb2, type: 3}
   policeSiren: {fileID: 8300000, guid: 523aab78902c43b4a89a10d5795cc3a2, type: 3}
   Src: {fileID: 6589433959554913584}
-  CashPrefab: {fileID: 5966920981620044922, guid: 13aefb62ad216074db8dabcf33b4eee0,
+  CashPrefab: {fileID: 955687580111673766, guid: 13aefb62ad216074db8dabcf33b4eee0,
     type: 3}
   movementType: 0
   target: {fileID: 0}
-  walkSpeed: 0.5
+  walkSpeed: 1
   runSpeed: 3
   rotationSpeed: 10
   deathvalue: 100
