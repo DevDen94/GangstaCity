@@ -8450,7 +8450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 2
+  selectedToolbar: 3
   weaponCategory: MyCategory
   shootFrequency: 1.5
   isInfinityAmmo: 0
@@ -8467,8 +8467,8 @@ MonoBehaviour:
   damageByDistance: 1
   DropOffStart: 8
   DropOffEnd: 50
-  minDamage: 30
-  maxDamage: 45
+  minDamage: 10
+  maxDamage: 25
   source: {fileID: 5278478501312066070}
   fireClip: {fileID: 8300000, guid: 67972f63215fcdf439dd82687b88af79, type: 3}
   emptyClip: {fileID: 8300000, guid: 86e4a8709e440314e8fe56622c9e6162, type: 3}
@@ -31060,6 +31060,7 @@ MonoBehaviour:
   _detectTags:
     tags:
     - Player
+    - Car
   _obstacles:
     serializedVersion: 2
     m_Bits: 1

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 public class PoliceSystemActive : MonoBehaviour
 {
     public GameObject objectToSpawn; // The object you want to spawn
@@ -14,6 +15,8 @@ public class PoliceSystemActive : MonoBehaviour
     public GameObject CarOutBtn;
     [HideInInspector]
     public bool isPolice_CarTimer;
+    public GameObject PoliceCarPanel;
+   
     
     private void Start()
     {
@@ -78,6 +81,8 @@ public class PoliceSystemActive : MonoBehaviour
                 Destroy(child.gameObject);
             }
         }
+        PoliceCarPanel.SetActive(true);
+        PoliceCarPanel.transform.GetChild(0).GetComponent<Text>().text = "Police Car is Active. Go Fight or Move Away from it";
         Instantiate(policeCarPrefab.transform, plc.Near_Object.transform.position, plc.Near_Object.transform.rotation);
         plc.Check_PoliceCar = false;
         CarOutBtn.SetActive(false);

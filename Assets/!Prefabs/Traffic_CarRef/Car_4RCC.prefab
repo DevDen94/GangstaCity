@@ -242,7 +242,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b82b1fb7a94c2c347aa056df7a687fdc, type: 2}
+  - {fileID: 2100000, guid: 842076a2d040f0444b4230134b67f5d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -730,7 +730,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b82b1fb7a94c2c347aa056df7a687fdc, type: 2}
+  - {fileID: 2100000, guid: 842076a2d040f0444b4230134b67f5d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1793,10 +1793,13 @@ MonoBehaviour:
   damageValue: 100
   slowMotionDuration: 3
   isPlayer: 1
+  isDamageEnabled: 0
   Car_Damge: {fileID: 0}
   flame: {fileID: 0}
   shoot_Human: {fileID: 0}
   Myself_Police: 0
+  policeDeath: {fileID: 0}
+  src: {fileID: 0}
   Dis: 0
 --- !u!1 &4184730344980256340
 GameObject:

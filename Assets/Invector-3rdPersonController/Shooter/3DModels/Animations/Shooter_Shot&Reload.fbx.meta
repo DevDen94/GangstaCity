@@ -1,482 +1,1409 @@
 fileFormatVersion: 2
 guid: 632f8ebe81a772e4998224dabbbf836b
-timeCreated: 1543586191
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: AimReference
-    100002: AimReference 1
-    100004: AimReference 2
-    100006: AimReference 3
-    100008: AimReference 4
-    100010: Armature
-    100012: AssaultRifle
-    100014: AudioSource
-    100016: AudioSource 1
-    100018: AudioSource 2
-    100020: AudioSource 3
-    100022: AudioSource 4
-    100024: Bone.001
-    100026: Bone.002
-    100028: Bone.003
-    100030: Bone.004
-    100032: Bone.005
-    100034: Bone.006
-    100036: Bone.006_end
-    100038: Bone.007
-    100040: Bone.008
-    100042: Bone.010
-    100044: Bone.011
-    100046: Bone.012
-    100048: Bone.013
-    100050: Bone.013_end
-    100052: Bone.014
-    100054: Bone.015
-    100056: bowHandler
-    100058: BowHolder
-    100060: Camera
-    100062: Camera 1
-    100064: cameraMask
-    100066: cameraSprite
-    100068: Capsule_pist
-    100070: Capsule_rif
-    100072: Capsule_rif 1
-    100074: Capsule_rif 2
-    100076: collisionAudio
-    100078: defaultHandler
-    100080: defaultHandler 1
-    100082: defaultHandler 2
-    100084: Fire_1
-    100086: Fire_1 1
-    100088: Fire_1 2
-    100090: Fire_1 3
-    100092: Fire_1 4
-    100094: Fire_2
-    100096: Fire_2 1
-    100098: Fire_2 2
-    100100: Fire_2 3
-    100102: Fire_3
-    100104: Fire_3 1
-    100106: Fire_3 2
-    100108: Fire_4
-    100110: Fire_4 1
-    100112: Fire_4 2
-    100114: Fire_5
-    100116: Fire_5 1
-    100118: Fire_5 2
-    100120: HandgunHolder
-    100122: hitBox
-    100124: hitbox
-    100126: hitBox 1
-    100128: hitbox 1
-    100130: hitBox 2
-    100132: hitbox 2
-    100134: hitBox 3
-    100136: hitbox 3
-    100138: Laser
-    100140: laserSight
-    100142: leftFoot_trigger
-    100144: leftHandIK
-    100146: leftHandIK 1
-    100148: leftHandIK 2
-    100150: leftHandIK 3
-    100152: leftHandIK 4
-    100154: LeftHandlers
-    100156: meleeHandler
-    100158: meleeHandler 1
-    100160: Mesh_LOD
-    100162: muzzle
-    100164: muzzle 1
-    100166: muzzle 2
-    100168: muzzle 3
-    100170: muzzle 4
-    100172: New Sprite
-    100174: Particles
-    100176: Particles 1
-    100178: Particles 2
-    100180: Particles 3
-    100182: Particles 4
-    100184: Point light
-    100186: Point light 1
-    100188: Point light 2
-    100190: Point light 3
-    100192: Point light 4
-    100194: pump
-    100196: ragdollAudioSource
-    100198: renderer
-    100200: renderer 1
-    100202: renderer 2
-    100204: renderer 3
-    100206: renderer 4
-    100208: rifle_renderer
-    100210: RifleHolder
-    100212: rightFoot_trigger
-    100214: RightHandlers
-    100216: Root
-    100218: RPG_missel
-    100220: ScopeTarget
-    100222: ScopeTarget 1
-    100224: ScopeTarget 2
-    100226: ScopeTarget 3
-    100228: ScopeTarget 4
-    100230: shieldHandler
-    100232: shieldHandler 1
-    100234: //RootNode
-    100236: ShotgunHolder
-    100238: Smoke_1
-    100240: Smoke_1 1
-    100242: Smoke_1 2
-    100244: Smoke_1 3
-    100246: Smoke_1 4
-    100248: Spring
-    100250: Spring_end
-    100252: Throw_End
-    100254: Throw_Start
-    100256: Trail
-    100258: Trail 1
-    100260: vAssaultRifle
-    100262: vAssaultRifle_3.001 (1)
-    100264: VBOT_:Head
-    100266: VBOT_:HeadTop_End
-    100268: VBOT_:HeadTop_End_end
-    100270: VBOT_:Hips
-    100272: VBOT_:LeftArm
-    100274: VBOT_:LeftFoot
-    100276: VBOT_:LeftForeArm
-    100278: VBOT_:LeftHand
-    100280: VBOT_:LeftHandIndex1
-    100282: VBOT_:LeftHandIndex2
-    100284: VBOT_:LeftHandIndex3
-    100286: VBOT_:LeftHandIndex4
-    100288: VBOT_:LeftHandIndex4_end
-    100290: VBOT_:LeftHandMiddle1
-    100292: VBOT_:LeftHandMiddle2
-    100294: VBOT_:LeftHandMiddle3
-    100296: VBOT_:LeftHandMiddle4
-    100298: VBOT_:LeftHandMiddle4_end
-    100300: VBOT_:LeftHandPinky1
-    100302: VBOT_:LeftHandPinky2
-    100304: VBOT_:LeftHandPinky3
-    100306: VBOT_:LeftHandPinky4
-    100308: VBOT_:LeftHandPinky4_end
-    100310: VBOT_:LeftHandRing1
-    100312: VBOT_:LeftHandRing2
-    100314: VBOT_:LeftHandRing3
-    100316: VBOT_:LeftHandRing4
-    100318: VBOT_:LeftHandRing4_end
-    100320: VBOT_:LeftHandThumb1
-    100322: VBOT_:LeftHandThumb2
-    100324: VBOT_:LeftHandThumb3
-    100326: VBOT_:LeftHandThumb4
-    100328: VBOT_:LeftHandThumb4_end
-    100330: VBOT_:LeftLeg
-    100332: VBOT_:LeftShoulder
-    100334: VBOT_:LeftToe_End
-    100336: VBOT_:LeftToe_End_end
-    100338: VBOT_:LeftToeBase
-    100340: VBOT_:LeftUpLeg
-    100342: VBOT_:Neck
-    100344: VBOT_:RightArm
-    100346: VBOT_:RightFoot
-    100348: VBOT_:RightForeArm
-    100350: VBOT_:RightHand
-    100352: VBOT_:RightHandIndex1
-    100354: VBOT_:RightHandIndex2
-    100356: VBOT_:RightHandIndex3
-    100358: VBOT_:RightHandIndex4
-    100360: VBOT_:RightHandIndex4_end
-    100362: VBOT_:RightHandMiddle1
-    100364: VBOT_:RightHandMiddle2
-    100366: VBOT_:RightHandMiddle3
-    100368: VBOT_:RightHandMiddle4
-    100370: VBOT_:RightHandMiddle4_end
-    100372: VBOT_:RightHandPinky1
-    100374: VBOT_:RightHandPinky2
-    100376: VBOT_:RightHandPinky3
-    100378: VBOT_:RightHandPinky4
-    100380: VBOT_:RightHandPinky4_end
-    100382: VBOT_:RightHandRing1
-    100384: VBOT_:RightHandRing2
-    100386: VBOT_:RightHandRing3
-    100388: VBOT_:RightHandRing4
-    100390: VBOT_:RightHandRing4_end
-    100392: VBOT_:RightHandThumb1
-    100394: VBOT_:RightHandThumb2
-    100396: VBOT_:RightHandThumb3
-    100398: VBOT_:RightHandThumb4
-    100400: VBOT_:RightHandThumb4_end
-    100402: VBOT_:RightLeg
-    100404: VBOT_:RightShoulder
-    100406: VBOT_:RightToe_End
-    100408: VBOT_:RightToe_End_end
-    100410: VBOT_:RightToeBase
-    100412: VBOT_:RightUpLeg
-    100414: VBOT_:Spine
-    100416: VBOT_:Spine1
-    100418: VBOT_:Spine2
-    100420: VBOT_:VBOT_LOD0
-    100422: VBOT_:VBOT_LOD1
-    100424: VBOT_:VBOT_LOD2
-    100426: VBOT_:VBOT_LOD3
-    100428: vBow
-    100430: vBow 1
-    100432: vBow_Rig
-    100434: vHandgun
-    100436: vHandgun 1
-    100438: vRPG
-    100440: vShotgun
-    100442: vShotgun 1
-    100444: vShotgun-detach
-    100446: vSniper
-    100448: WeaponHolders
-    400000: AimReference
-    400002: AimReference 1
-    400004: AimReference 2
-    400006: AimReference 3
-    400008: AimReference 4
-    400010: Armature
-    400012: AssaultRifle
-    400014: AudioSource
-    400016: AudioSource 1
-    400018: AudioSource 2
-    400020: AudioSource 3
-    400022: AudioSource 4
-    400024: Bone.001
-    400026: Bone.002
-    400028: Bone.003
-    400030: Bone.004
-    400032: Bone.005
-    400034: Bone.006
-    400036: Bone.006_end
-    400038: Bone.007
-    400040: Bone.008
-    400042: Bone.010
-    400044: Bone.011
-    400046: Bone.012
-    400048: Bone.013
-    400050: Bone.013_end
-    400052: Bone.014
-    400054: Bone.015
-    400056: bowHandler
-    400058: BowHolder
-    400060: Camera
-    400062: Camera 1
-    400064: cameraMask
-    400066: cameraSprite
-    400068: Capsule_pist
-    400070: Capsule_rif
-    400072: Capsule_rif 1
-    400074: Capsule_rif 2
-    400076: collisionAudio
-    400078: defaultHandler
-    400080: defaultHandler 1
-    400082: defaultHandler 2
-    400084: Fire_1
-    400086: Fire_1 1
-    400088: Fire_1 2
-    400090: Fire_1 3
-    400092: Fire_1 4
-    400094: Fire_2
-    400096: Fire_2 1
-    400098: Fire_2 2
-    400100: Fire_2 3
-    400102: Fire_3
-    400104: Fire_3 1
-    400106: Fire_3 2
-    400108: Fire_4
-    400110: Fire_4 1
-    400112: Fire_4 2
-    400114: Fire_5
-    400116: Fire_5 1
-    400118: Fire_5 2
-    400120: HandgunHolder
-    400122: hitBox
-    400124: hitbox
-    400126: hitBox 1
-    400128: hitbox 1
-    400130: hitBox 2
-    400132: hitbox 2
-    400134: hitBox 3
-    400136: hitbox 3
-    400138: Laser
-    400140: laserSight
-    400142: leftFoot_trigger
-    400144: leftHandIK
-    400146: leftHandIK 1
-    400148: leftHandIK 2
-    400150: leftHandIK 3
-    400152: leftHandIK 4
-    400154: LeftHandlers
-    400156: meleeHandler
-    400158: meleeHandler 1
-    400160: Mesh_LOD
-    400162: muzzle
-    400164: muzzle 1
-    400166: muzzle 2
-    400168: muzzle 3
-    400170: muzzle 4
-    400172: New Sprite
-    400174: Particles
-    400176: Particles 1
-    400178: Particles 2
-    400180: Particles 3
-    400182: Particles 4
-    400184: Point light
-    400186: Point light 1
-    400188: Point light 2
-    400190: Point light 3
-    400192: Point light 4
-    400194: pump
-    400196: ragdollAudioSource
-    400198: renderer
-    400200: renderer 1
-    400202: renderer 2
-    400204: renderer 3
-    400206: renderer 4
-    400208: rifle_renderer
-    400210: RifleHolder
-    400212: rightFoot_trigger
-    400214: RightHandlers
-    400216: Root
-    400218: RPG_missel
-    400220: ScopeTarget
-    400222: ScopeTarget 1
-    400224: ScopeTarget 2
-    400226: ScopeTarget 3
-    400228: ScopeTarget 4
-    400230: shieldHandler
-    400232: shieldHandler 1
-    400234: //RootNode
-    400236: ShotgunHolder
-    400238: Smoke_1
-    400240: Smoke_1 1
-    400242: Smoke_1 2
-    400244: Smoke_1 3
-    400246: Smoke_1 4
-    400248: Spring
-    400250: Spring_end
-    400252: Throw_End
-    400254: Throw_Start
-    400256: Trail
-    400258: Trail 1
-    400260: vAssaultRifle
-    400262: vAssaultRifle_3.001 (1)
-    400264: VBOT_:Head
-    400266: VBOT_:HeadTop_End
-    400268: VBOT_:HeadTop_End_end
-    400270: VBOT_:Hips
-    400272: VBOT_:LeftArm
-    400274: VBOT_:LeftFoot
-    400276: VBOT_:LeftForeArm
-    400278: VBOT_:LeftHand
-    400280: VBOT_:LeftHandIndex1
-    400282: VBOT_:LeftHandIndex2
-    400284: VBOT_:LeftHandIndex3
-    400286: VBOT_:LeftHandIndex4
-    400288: VBOT_:LeftHandIndex4_end
-    400290: VBOT_:LeftHandMiddle1
-    400292: VBOT_:LeftHandMiddle2
-    400294: VBOT_:LeftHandMiddle3
-    400296: VBOT_:LeftHandMiddle4
-    400298: VBOT_:LeftHandMiddle4_end
-    400300: VBOT_:LeftHandPinky1
-    400302: VBOT_:LeftHandPinky2
-    400304: VBOT_:LeftHandPinky3
-    400306: VBOT_:LeftHandPinky4
-    400308: VBOT_:LeftHandPinky4_end
-    400310: VBOT_:LeftHandRing1
-    400312: VBOT_:LeftHandRing2
-    400314: VBOT_:LeftHandRing3
-    400316: VBOT_:LeftHandRing4
-    400318: VBOT_:LeftHandRing4_end
-    400320: VBOT_:LeftHandThumb1
-    400322: VBOT_:LeftHandThumb2
-    400324: VBOT_:LeftHandThumb3
-    400326: VBOT_:LeftHandThumb4
-    400328: VBOT_:LeftHandThumb4_end
-    400330: VBOT_:LeftLeg
-    400332: VBOT_:LeftShoulder
-    400334: VBOT_:LeftToe_End
-    400336: VBOT_:LeftToe_End_end
-    400338: VBOT_:LeftToeBase
-    400340: VBOT_:LeftUpLeg
-    400342: VBOT_:Neck
-    400344: VBOT_:RightArm
-    400346: VBOT_:RightFoot
-    400348: VBOT_:RightForeArm
-    400350: VBOT_:RightHand
-    400352: VBOT_:RightHandIndex1
-    400354: VBOT_:RightHandIndex2
-    400356: VBOT_:RightHandIndex3
-    400358: VBOT_:RightHandIndex4
-    400360: VBOT_:RightHandIndex4_end
-    400362: VBOT_:RightHandMiddle1
-    400364: VBOT_:RightHandMiddle2
-    400366: VBOT_:RightHandMiddle3
-    400368: VBOT_:RightHandMiddle4
-    400370: VBOT_:RightHandMiddle4_end
-    400372: VBOT_:RightHandPinky1
-    400374: VBOT_:RightHandPinky2
-    400376: VBOT_:RightHandPinky3
-    400378: VBOT_:RightHandPinky4
-    400380: VBOT_:RightHandPinky4_end
-    400382: VBOT_:RightHandRing1
-    400384: VBOT_:RightHandRing2
-    400386: VBOT_:RightHandRing3
-    400388: VBOT_:RightHandRing4
-    400390: VBOT_:RightHandRing4_end
-    400392: VBOT_:RightHandThumb1
-    400394: VBOT_:RightHandThumb2
-    400396: VBOT_:RightHandThumb3
-    400398: VBOT_:RightHandThumb4
-    400400: VBOT_:RightHandThumb4_end
-    400402: VBOT_:RightLeg
-    400404: VBOT_:RightShoulder
-    400406: VBOT_:RightToe_End
-    400408: VBOT_:RightToe_End_end
-    400410: VBOT_:RightToeBase
-    400412: VBOT_:RightUpLeg
-    400414: VBOT_:Spine
-    400416: VBOT_:Spine1
-    400418: VBOT_:Spine2
-    400420: VBOT_:VBOT_LOD0
-    400422: VBOT_:VBOT_LOD1
-    400424: VBOT_:VBOT_LOD2
-    400426: VBOT_:VBOT_LOD3
-    400428: vBow
-    400430: vBow 1
-    400432: vBow_Rig
-    400434: vHandgun
-    400436: vHandgun 1
-    400438: vRPG
-    400440: vShotgun
-    400442: vShotgun 1
-    400444: vShotgun-detach
-    400446: vSniper
-    400448: WeaponHolders
-    7400000: Reload_Pistol
-    7400002: Reload_RPG
-    7400004: Reload_Shotgun
-    7400006: Reload_Rifle
-    7400008: Shot_RPG
-    7400010: Shot_Shotgun
-    7400012: Shot_Rifle
-    7400014: Pistol_Reload
-    7400016: Shot_Sniper
-    7400018: Shot_Pistol
-    7400020: Grenade_aim
-    7400022: Grenade_throw
-    9500000: //RootNode
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: AimReference
+  - first:
+      1: 100002
+    second: AimReference 1
+  - first:
+      1: 100004
+    second: AimReference 2
+  - first:
+      1: 100006
+    second: AimReference 3
+  - first:
+      1: 100008
+    second: AimReference 4
+  - first:
+      1: 100010
+    second: Armature
+  - first:
+      1: 100012
+    second: AssaultRifle
+  - first:
+      1: 100014
+    second: AudioSource
+  - first:
+      1: 100016
+    second: AudioSource 1
+  - first:
+      1: 100018
+    second: AudioSource 2
+  - first:
+      1: 100020
+    second: AudioSource 3
+  - first:
+      1: 100022
+    second: AudioSource 4
+  - first:
+      1: 100024
+    second: Bone.001
+  - first:
+      1: 100026
+    second: Bone.002
+  - first:
+      1: 100028
+    second: Bone.003
+  - first:
+      1: 100030
+    second: Bone.004
+  - first:
+      1: 100032
+    second: Bone.005
+  - first:
+      1: 100034
+    second: Bone.006
+  - first:
+      1: 100036
+    second: Bone.006_end
+  - first:
+      1: 100038
+    second: Bone.007
+  - first:
+      1: 100040
+    second: Bone.008
+  - first:
+      1: 100042
+    second: Bone.010
+  - first:
+      1: 100044
+    second: Bone.011
+  - first:
+      1: 100046
+    second: Bone.012
+  - first:
+      1: 100048
+    second: Bone.013
+  - first:
+      1: 100050
+    second: Bone.013_end
+  - first:
+      1: 100052
+    second: Bone.014
+  - first:
+      1: 100054
+    second: Bone.015
+  - first:
+      1: 100056
+    second: bowHandler
+  - first:
+      1: 100058
+    second: BowHolder
+  - first:
+      1: 100060
+    second: Camera
+  - first:
+      1: 100062
+    second: Camera 1
+  - first:
+      1: 100064
+    second: cameraMask
+  - first:
+      1: 100066
+    second: cameraSprite
+  - first:
+      1: 100068
+    second: Capsule_pist
+  - first:
+      1: 100070
+    second: Capsule_rif
+  - first:
+      1: 100072
+    second: Capsule_rif 1
+  - first:
+      1: 100074
+    second: Capsule_rif 2
+  - first:
+      1: 100076
+    second: collisionAudio
+  - first:
+      1: 100078
+    second: defaultHandler
+  - first:
+      1: 100080
+    second: defaultHandler 1
+  - first:
+      1: 100082
+    second: defaultHandler 2
+  - first:
+      1: 100084
+    second: Fire_1
+  - first:
+      1: 100086
+    second: Fire_1 1
+  - first:
+      1: 100088
+    second: Fire_1 2
+  - first:
+      1: 100090
+    second: Fire_1 3
+  - first:
+      1: 100092
+    second: Fire_1 4
+  - first:
+      1: 100094
+    second: Fire_2
+  - first:
+      1: 100096
+    second: Fire_2 1
+  - first:
+      1: 100098
+    second: Fire_2 2
+  - first:
+      1: 100100
+    second: Fire_2 3
+  - first:
+      1: 100102
+    second: Fire_3
+  - first:
+      1: 100104
+    second: Fire_3 1
+  - first:
+      1: 100106
+    second: Fire_3 2
+  - first:
+      1: 100108
+    second: Fire_4
+  - first:
+      1: 100110
+    second: Fire_4 1
+  - first:
+      1: 100112
+    second: Fire_4 2
+  - first:
+      1: 100114
+    second: Fire_5
+  - first:
+      1: 100116
+    second: Fire_5 1
+  - first:
+      1: 100118
+    second: Fire_5 2
+  - first:
+      1: 100120
+    second: HandgunHolder
+  - first:
+      1: 100122
+    second: hitBox
+  - first:
+      1: 100124
+    second: hitbox
+  - first:
+      1: 100126
+    second: hitBox 1
+  - first:
+      1: 100128
+    second: hitbox 1
+  - first:
+      1: 100130
+    second: hitBox 2
+  - first:
+      1: 100132
+    second: hitbox 2
+  - first:
+      1: 100134
+    second: hitBox 3
+  - first:
+      1: 100136
+    second: hitbox 3
+  - first:
+      1: 100138
+    second: Laser
+  - first:
+      1: 100140
+    second: laserSight
+  - first:
+      1: 100142
+    second: leftFoot_trigger
+  - first:
+      1: 100144
+    second: leftHandIK
+  - first:
+      1: 100146
+    second: leftHandIK 1
+  - first:
+      1: 100148
+    second: leftHandIK 2
+  - first:
+      1: 100150
+    second: leftHandIK 3
+  - first:
+      1: 100152
+    second: leftHandIK 4
+  - first:
+      1: 100154
+    second: LeftHandlers
+  - first:
+      1: 100156
+    second: meleeHandler
+  - first:
+      1: 100158
+    second: meleeHandler 1
+  - first:
+      1: 100160
+    second: Mesh_LOD
+  - first:
+      1: 100162
+    second: muzzle
+  - first:
+      1: 100164
+    second: muzzle 1
+  - first:
+      1: 100166
+    second: muzzle 2
+  - first:
+      1: 100168
+    second: muzzle 3
+  - first:
+      1: 100170
+    second: muzzle 4
+  - first:
+      1: 100172
+    second: New Sprite
+  - first:
+      1: 100174
+    second: Particles
+  - first:
+      1: 100176
+    second: Particles 1
+  - first:
+      1: 100178
+    second: Particles 2
+  - first:
+      1: 100180
+    second: Particles 3
+  - first:
+      1: 100182
+    second: Particles 4
+  - first:
+      1: 100184
+    second: Point light
+  - first:
+      1: 100186
+    second: Point light 1
+  - first:
+      1: 100188
+    second: Point light 2
+  - first:
+      1: 100190
+    second: Point light 3
+  - first:
+      1: 100192
+    second: Point light 4
+  - first:
+      1: 100194
+    second: pump
+  - first:
+      1: 100196
+    second: ragdollAudioSource
+  - first:
+      1: 100198
+    second: renderer
+  - first:
+      1: 100200
+    second: renderer 1
+  - first:
+      1: 100202
+    second: renderer 2
+  - first:
+      1: 100204
+    second: renderer 3
+  - first:
+      1: 100206
+    second: renderer 4
+  - first:
+      1: 100208
+    second: rifle_renderer
+  - first:
+      1: 100210
+    second: RifleHolder
+  - first:
+      1: 100212
+    second: rightFoot_trigger
+  - first:
+      1: 100214
+    second: RightHandlers
+  - first:
+      1: 100216
+    second: Root
+  - first:
+      1: 100218
+    second: RPG_missel
+  - first:
+      1: 100220
+    second: ScopeTarget
+  - first:
+      1: 100222
+    second: ScopeTarget 1
+  - first:
+      1: 100224
+    second: ScopeTarget 2
+  - first:
+      1: 100226
+    second: ScopeTarget 3
+  - first:
+      1: 100228
+    second: ScopeTarget 4
+  - first:
+      1: 100230
+    second: shieldHandler
+  - first:
+      1: 100232
+    second: shieldHandler 1
+  - first:
+      1: 100234
+    second: //RootNode
+  - first:
+      1: 100236
+    second: ShotgunHolder
+  - first:
+      1: 100238
+    second: Smoke_1
+  - first:
+      1: 100240
+    second: Smoke_1 1
+  - first:
+      1: 100242
+    second: Smoke_1 2
+  - first:
+      1: 100244
+    second: Smoke_1 3
+  - first:
+      1: 100246
+    second: Smoke_1 4
+  - first:
+      1: 100248
+    second: Spring
+  - first:
+      1: 100250
+    second: Spring_end
+  - first:
+      1: 100252
+    second: Throw_End
+  - first:
+      1: 100254
+    second: Throw_Start
+  - first:
+      1: 100256
+    second: Trail
+  - first:
+      1: 100258
+    second: Trail 1
+  - first:
+      1: 100260
+    second: vAssaultRifle
+  - first:
+      1: 100262
+    second: vAssaultRifle_3.001 (1)
+  - first:
+      1: 100264
+    second: VBOT_:Head
+  - first:
+      1: 100266
+    second: VBOT_:HeadTop_End
+  - first:
+      1: 100268
+    second: VBOT_:HeadTop_End_end
+  - first:
+      1: 100270
+    second: VBOT_:Hips
+  - first:
+      1: 100272
+    second: VBOT_:LeftArm
+  - first:
+      1: 100274
+    second: VBOT_:LeftFoot
+  - first:
+      1: 100276
+    second: VBOT_:LeftForeArm
+  - first:
+      1: 100278
+    second: VBOT_:LeftHand
+  - first:
+      1: 100280
+    second: VBOT_:LeftHandIndex1
+  - first:
+      1: 100282
+    second: VBOT_:LeftHandIndex2
+  - first:
+      1: 100284
+    second: VBOT_:LeftHandIndex3
+  - first:
+      1: 100286
+    second: VBOT_:LeftHandIndex4
+  - first:
+      1: 100288
+    second: VBOT_:LeftHandIndex4_end
+  - first:
+      1: 100290
+    second: VBOT_:LeftHandMiddle1
+  - first:
+      1: 100292
+    second: VBOT_:LeftHandMiddle2
+  - first:
+      1: 100294
+    second: VBOT_:LeftHandMiddle3
+  - first:
+      1: 100296
+    second: VBOT_:LeftHandMiddle4
+  - first:
+      1: 100298
+    second: VBOT_:LeftHandMiddle4_end
+  - first:
+      1: 100300
+    second: VBOT_:LeftHandPinky1
+  - first:
+      1: 100302
+    second: VBOT_:LeftHandPinky2
+  - first:
+      1: 100304
+    second: VBOT_:LeftHandPinky3
+  - first:
+      1: 100306
+    second: VBOT_:LeftHandPinky4
+  - first:
+      1: 100308
+    second: VBOT_:LeftHandPinky4_end
+  - first:
+      1: 100310
+    second: VBOT_:LeftHandRing1
+  - first:
+      1: 100312
+    second: VBOT_:LeftHandRing2
+  - first:
+      1: 100314
+    second: VBOT_:LeftHandRing3
+  - first:
+      1: 100316
+    second: VBOT_:LeftHandRing4
+  - first:
+      1: 100318
+    second: VBOT_:LeftHandRing4_end
+  - first:
+      1: 100320
+    second: VBOT_:LeftHandThumb1
+  - first:
+      1: 100322
+    second: VBOT_:LeftHandThumb2
+  - first:
+      1: 100324
+    second: VBOT_:LeftHandThumb3
+  - first:
+      1: 100326
+    second: VBOT_:LeftHandThumb4
+  - first:
+      1: 100328
+    second: VBOT_:LeftHandThumb4_end
+  - first:
+      1: 100330
+    second: VBOT_:LeftLeg
+  - first:
+      1: 100332
+    second: VBOT_:LeftShoulder
+  - first:
+      1: 100334
+    second: VBOT_:LeftToe_End
+  - first:
+      1: 100336
+    second: VBOT_:LeftToe_End_end
+  - first:
+      1: 100338
+    second: VBOT_:LeftToeBase
+  - first:
+      1: 100340
+    second: VBOT_:LeftUpLeg
+  - first:
+      1: 100342
+    second: VBOT_:Neck
+  - first:
+      1: 100344
+    second: VBOT_:RightArm
+  - first:
+      1: 100346
+    second: VBOT_:RightFoot
+  - first:
+      1: 100348
+    second: VBOT_:RightForeArm
+  - first:
+      1: 100350
+    second: VBOT_:RightHand
+  - first:
+      1: 100352
+    second: VBOT_:RightHandIndex1
+  - first:
+      1: 100354
+    second: VBOT_:RightHandIndex2
+  - first:
+      1: 100356
+    second: VBOT_:RightHandIndex3
+  - first:
+      1: 100358
+    second: VBOT_:RightHandIndex4
+  - first:
+      1: 100360
+    second: VBOT_:RightHandIndex4_end
+  - first:
+      1: 100362
+    second: VBOT_:RightHandMiddle1
+  - first:
+      1: 100364
+    second: VBOT_:RightHandMiddle2
+  - first:
+      1: 100366
+    second: VBOT_:RightHandMiddle3
+  - first:
+      1: 100368
+    second: VBOT_:RightHandMiddle4
+  - first:
+      1: 100370
+    second: VBOT_:RightHandMiddle4_end
+  - first:
+      1: 100372
+    second: VBOT_:RightHandPinky1
+  - first:
+      1: 100374
+    second: VBOT_:RightHandPinky2
+  - first:
+      1: 100376
+    second: VBOT_:RightHandPinky3
+  - first:
+      1: 100378
+    second: VBOT_:RightHandPinky4
+  - first:
+      1: 100380
+    second: VBOT_:RightHandPinky4_end
+  - first:
+      1: 100382
+    second: VBOT_:RightHandRing1
+  - first:
+      1: 100384
+    second: VBOT_:RightHandRing2
+  - first:
+      1: 100386
+    second: VBOT_:RightHandRing3
+  - first:
+      1: 100388
+    second: VBOT_:RightHandRing4
+  - first:
+      1: 100390
+    second: VBOT_:RightHandRing4_end
+  - first:
+      1: 100392
+    second: VBOT_:RightHandThumb1
+  - first:
+      1: 100394
+    second: VBOT_:RightHandThumb2
+  - first:
+      1: 100396
+    second: VBOT_:RightHandThumb3
+  - first:
+      1: 100398
+    second: VBOT_:RightHandThumb4
+  - first:
+      1: 100400
+    second: VBOT_:RightHandThumb4_end
+  - first:
+      1: 100402
+    second: VBOT_:RightLeg
+  - first:
+      1: 100404
+    second: VBOT_:RightShoulder
+  - first:
+      1: 100406
+    second: VBOT_:RightToe_End
+  - first:
+      1: 100408
+    second: VBOT_:RightToe_End_end
+  - first:
+      1: 100410
+    second: VBOT_:RightToeBase
+  - first:
+      1: 100412
+    second: VBOT_:RightUpLeg
+  - first:
+      1: 100414
+    second: VBOT_:Spine
+  - first:
+      1: 100416
+    second: VBOT_:Spine1
+  - first:
+      1: 100418
+    second: VBOT_:Spine2
+  - first:
+      1: 100420
+    second: VBOT_:VBOT_LOD0
+  - first:
+      1: 100422
+    second: VBOT_:VBOT_LOD1
+  - first:
+      1: 100424
+    second: VBOT_:VBOT_LOD2
+  - first:
+      1: 100426
+    second: VBOT_:VBOT_LOD3
+  - first:
+      1: 100428
+    second: vBow
+  - first:
+      1: 100430
+    second: vBow 1
+  - first:
+      1: 100432
+    second: vBow_Rig
+  - first:
+      1: 100434
+    second: vHandgun
+  - first:
+      1: 100436
+    second: vHandgun 1
+  - first:
+      1: 100438
+    second: vRPG
+  - first:
+      1: 100440
+    second: vShotgun
+  - first:
+      1: 100442
+    second: vShotgun 1
+  - first:
+      1: 100444
+    second: vShotgun-detach
+  - first:
+      1: 100446
+    second: vSniper
+  - first:
+      1: 100448
+    second: WeaponHolders
+  - first:
+      4: 400000
+    second: AimReference
+  - first:
+      4: 400002
+    second: AimReference 1
+  - first:
+      4: 400004
+    second: AimReference 2
+  - first:
+      4: 400006
+    second: AimReference 3
+  - first:
+      4: 400008
+    second: AimReference 4
+  - first:
+      4: 400010
+    second: Armature
+  - first:
+      4: 400012
+    second: AssaultRifle
+  - first:
+      4: 400014
+    second: AudioSource
+  - first:
+      4: 400016
+    second: AudioSource 1
+  - first:
+      4: 400018
+    second: AudioSource 2
+  - first:
+      4: 400020
+    second: AudioSource 3
+  - first:
+      4: 400022
+    second: AudioSource 4
+  - first:
+      4: 400024
+    second: Bone.001
+  - first:
+      4: 400026
+    second: Bone.002
+  - first:
+      4: 400028
+    second: Bone.003
+  - first:
+      4: 400030
+    second: Bone.004
+  - first:
+      4: 400032
+    second: Bone.005
+  - first:
+      4: 400034
+    second: Bone.006
+  - first:
+      4: 400036
+    second: Bone.006_end
+  - first:
+      4: 400038
+    second: Bone.007
+  - first:
+      4: 400040
+    second: Bone.008
+  - first:
+      4: 400042
+    second: Bone.010
+  - first:
+      4: 400044
+    second: Bone.011
+  - first:
+      4: 400046
+    second: Bone.012
+  - first:
+      4: 400048
+    second: Bone.013
+  - first:
+      4: 400050
+    second: Bone.013_end
+  - first:
+      4: 400052
+    second: Bone.014
+  - first:
+      4: 400054
+    second: Bone.015
+  - first:
+      4: 400056
+    second: bowHandler
+  - first:
+      4: 400058
+    second: BowHolder
+  - first:
+      4: 400060
+    second: Camera
+  - first:
+      4: 400062
+    second: Camera 1
+  - first:
+      4: 400064
+    second: cameraMask
+  - first:
+      4: 400066
+    second: cameraSprite
+  - first:
+      4: 400068
+    second: Capsule_pist
+  - first:
+      4: 400070
+    second: Capsule_rif
+  - first:
+      4: 400072
+    second: Capsule_rif 1
+  - first:
+      4: 400074
+    second: Capsule_rif 2
+  - first:
+      4: 400076
+    second: collisionAudio
+  - first:
+      4: 400078
+    second: defaultHandler
+  - first:
+      4: 400080
+    second: defaultHandler 1
+  - first:
+      4: 400082
+    second: defaultHandler 2
+  - first:
+      4: 400084
+    second: Fire_1
+  - first:
+      4: 400086
+    second: Fire_1 1
+  - first:
+      4: 400088
+    second: Fire_1 2
+  - first:
+      4: 400090
+    second: Fire_1 3
+  - first:
+      4: 400092
+    second: Fire_1 4
+  - first:
+      4: 400094
+    second: Fire_2
+  - first:
+      4: 400096
+    second: Fire_2 1
+  - first:
+      4: 400098
+    second: Fire_2 2
+  - first:
+      4: 400100
+    second: Fire_2 3
+  - first:
+      4: 400102
+    second: Fire_3
+  - first:
+      4: 400104
+    second: Fire_3 1
+  - first:
+      4: 400106
+    second: Fire_3 2
+  - first:
+      4: 400108
+    second: Fire_4
+  - first:
+      4: 400110
+    second: Fire_4 1
+  - first:
+      4: 400112
+    second: Fire_4 2
+  - first:
+      4: 400114
+    second: Fire_5
+  - first:
+      4: 400116
+    second: Fire_5 1
+  - first:
+      4: 400118
+    second: Fire_5 2
+  - first:
+      4: 400120
+    second: HandgunHolder
+  - first:
+      4: 400122
+    second: hitBox
+  - first:
+      4: 400124
+    second: hitbox
+  - first:
+      4: 400126
+    second: hitBox 1
+  - first:
+      4: 400128
+    second: hitbox 1
+  - first:
+      4: 400130
+    second: hitBox 2
+  - first:
+      4: 400132
+    second: hitbox 2
+  - first:
+      4: 400134
+    second: hitBox 3
+  - first:
+      4: 400136
+    second: hitbox 3
+  - first:
+      4: 400138
+    second: Laser
+  - first:
+      4: 400140
+    second: laserSight
+  - first:
+      4: 400142
+    second: leftFoot_trigger
+  - first:
+      4: 400144
+    second: leftHandIK
+  - first:
+      4: 400146
+    second: leftHandIK 1
+  - first:
+      4: 400148
+    second: leftHandIK 2
+  - first:
+      4: 400150
+    second: leftHandIK 3
+  - first:
+      4: 400152
+    second: leftHandIK 4
+  - first:
+      4: 400154
+    second: LeftHandlers
+  - first:
+      4: 400156
+    second: meleeHandler
+  - first:
+      4: 400158
+    second: meleeHandler 1
+  - first:
+      4: 400160
+    second: Mesh_LOD
+  - first:
+      4: 400162
+    second: muzzle
+  - first:
+      4: 400164
+    second: muzzle 1
+  - first:
+      4: 400166
+    second: muzzle 2
+  - first:
+      4: 400168
+    second: muzzle 3
+  - first:
+      4: 400170
+    second: muzzle 4
+  - first:
+      4: 400172
+    second: New Sprite
+  - first:
+      4: 400174
+    second: Particles
+  - first:
+      4: 400176
+    second: Particles 1
+  - first:
+      4: 400178
+    second: Particles 2
+  - first:
+      4: 400180
+    second: Particles 3
+  - first:
+      4: 400182
+    second: Particles 4
+  - first:
+      4: 400184
+    second: Point light
+  - first:
+      4: 400186
+    second: Point light 1
+  - first:
+      4: 400188
+    second: Point light 2
+  - first:
+      4: 400190
+    second: Point light 3
+  - first:
+      4: 400192
+    second: Point light 4
+  - first:
+      4: 400194
+    second: pump
+  - first:
+      4: 400196
+    second: ragdollAudioSource
+  - first:
+      4: 400198
+    second: renderer
+  - first:
+      4: 400200
+    second: renderer 1
+  - first:
+      4: 400202
+    second: renderer 2
+  - first:
+      4: 400204
+    second: renderer 3
+  - first:
+      4: 400206
+    second: renderer 4
+  - first:
+      4: 400208
+    second: rifle_renderer
+  - first:
+      4: 400210
+    second: RifleHolder
+  - first:
+      4: 400212
+    second: rightFoot_trigger
+  - first:
+      4: 400214
+    second: RightHandlers
+  - first:
+      4: 400216
+    second: Root
+  - first:
+      4: 400218
+    second: RPG_missel
+  - first:
+      4: 400220
+    second: ScopeTarget
+  - first:
+      4: 400222
+    second: ScopeTarget 1
+  - first:
+      4: 400224
+    second: ScopeTarget 2
+  - first:
+      4: 400226
+    second: ScopeTarget 3
+  - first:
+      4: 400228
+    second: ScopeTarget 4
+  - first:
+      4: 400230
+    second: shieldHandler
+  - first:
+      4: 400232
+    second: shieldHandler 1
+  - first:
+      4: 400234
+    second: //RootNode
+  - first:
+      4: 400236
+    second: ShotgunHolder
+  - first:
+      4: 400238
+    second: Smoke_1
+  - first:
+      4: 400240
+    second: Smoke_1 1
+  - first:
+      4: 400242
+    second: Smoke_1 2
+  - first:
+      4: 400244
+    second: Smoke_1 3
+  - first:
+      4: 400246
+    second: Smoke_1 4
+  - first:
+      4: 400248
+    second: Spring
+  - first:
+      4: 400250
+    second: Spring_end
+  - first:
+      4: 400252
+    second: Throw_End
+  - first:
+      4: 400254
+    second: Throw_Start
+  - first:
+      4: 400256
+    second: Trail
+  - first:
+      4: 400258
+    second: Trail 1
+  - first:
+      4: 400260
+    second: vAssaultRifle
+  - first:
+      4: 400262
+    second: vAssaultRifle_3.001 (1)
+  - first:
+      4: 400264
+    second: VBOT_:Head
+  - first:
+      4: 400266
+    second: VBOT_:HeadTop_End
+  - first:
+      4: 400268
+    second: VBOT_:HeadTop_End_end
+  - first:
+      4: 400270
+    second: VBOT_:Hips
+  - first:
+      4: 400272
+    second: VBOT_:LeftArm
+  - first:
+      4: 400274
+    second: VBOT_:LeftFoot
+  - first:
+      4: 400276
+    second: VBOT_:LeftForeArm
+  - first:
+      4: 400278
+    second: VBOT_:LeftHand
+  - first:
+      4: 400280
+    second: VBOT_:LeftHandIndex1
+  - first:
+      4: 400282
+    second: VBOT_:LeftHandIndex2
+  - first:
+      4: 400284
+    second: VBOT_:LeftHandIndex3
+  - first:
+      4: 400286
+    second: VBOT_:LeftHandIndex4
+  - first:
+      4: 400288
+    second: VBOT_:LeftHandIndex4_end
+  - first:
+      4: 400290
+    second: VBOT_:LeftHandMiddle1
+  - first:
+      4: 400292
+    second: VBOT_:LeftHandMiddle2
+  - first:
+      4: 400294
+    second: VBOT_:LeftHandMiddle3
+  - first:
+      4: 400296
+    second: VBOT_:LeftHandMiddle4
+  - first:
+      4: 400298
+    second: VBOT_:LeftHandMiddle4_end
+  - first:
+      4: 400300
+    second: VBOT_:LeftHandPinky1
+  - first:
+      4: 400302
+    second: VBOT_:LeftHandPinky2
+  - first:
+      4: 400304
+    second: VBOT_:LeftHandPinky3
+  - first:
+      4: 400306
+    second: VBOT_:LeftHandPinky4
+  - first:
+      4: 400308
+    second: VBOT_:LeftHandPinky4_end
+  - first:
+      4: 400310
+    second: VBOT_:LeftHandRing1
+  - first:
+      4: 400312
+    second: VBOT_:LeftHandRing2
+  - first:
+      4: 400314
+    second: VBOT_:LeftHandRing3
+  - first:
+      4: 400316
+    second: VBOT_:LeftHandRing4
+  - first:
+      4: 400318
+    second: VBOT_:LeftHandRing4_end
+  - first:
+      4: 400320
+    second: VBOT_:LeftHandThumb1
+  - first:
+      4: 400322
+    second: VBOT_:LeftHandThumb2
+  - first:
+      4: 400324
+    second: VBOT_:LeftHandThumb3
+  - first:
+      4: 400326
+    second: VBOT_:LeftHandThumb4
+  - first:
+      4: 400328
+    second: VBOT_:LeftHandThumb4_end
+  - first:
+      4: 400330
+    second: VBOT_:LeftLeg
+  - first:
+      4: 400332
+    second: VBOT_:LeftShoulder
+  - first:
+      4: 400334
+    second: VBOT_:LeftToe_End
+  - first:
+      4: 400336
+    second: VBOT_:LeftToe_End_end
+  - first:
+      4: 400338
+    second: VBOT_:LeftToeBase
+  - first:
+      4: 400340
+    second: VBOT_:LeftUpLeg
+  - first:
+      4: 400342
+    second: VBOT_:Neck
+  - first:
+      4: 400344
+    second: VBOT_:RightArm
+  - first:
+      4: 400346
+    second: VBOT_:RightFoot
+  - first:
+      4: 400348
+    second: VBOT_:RightForeArm
+  - first:
+      4: 400350
+    second: VBOT_:RightHand
+  - first:
+      4: 400352
+    second: VBOT_:RightHandIndex1
+  - first:
+      4: 400354
+    second: VBOT_:RightHandIndex2
+  - first:
+      4: 400356
+    second: VBOT_:RightHandIndex3
+  - first:
+      4: 400358
+    second: VBOT_:RightHandIndex4
+  - first:
+      4: 400360
+    second: VBOT_:RightHandIndex4_end
+  - first:
+      4: 400362
+    second: VBOT_:RightHandMiddle1
+  - first:
+      4: 400364
+    second: VBOT_:RightHandMiddle2
+  - first:
+      4: 400366
+    second: VBOT_:RightHandMiddle3
+  - first:
+      4: 400368
+    second: VBOT_:RightHandMiddle4
+  - first:
+      4: 400370
+    second: VBOT_:RightHandMiddle4_end
+  - first:
+      4: 400372
+    second: VBOT_:RightHandPinky1
+  - first:
+      4: 400374
+    second: VBOT_:RightHandPinky2
+  - first:
+      4: 400376
+    second: VBOT_:RightHandPinky3
+  - first:
+      4: 400378
+    second: VBOT_:RightHandPinky4
+  - first:
+      4: 400380
+    second: VBOT_:RightHandPinky4_end
+  - first:
+      4: 400382
+    second: VBOT_:RightHandRing1
+  - first:
+      4: 400384
+    second: VBOT_:RightHandRing2
+  - first:
+      4: 400386
+    second: VBOT_:RightHandRing3
+  - first:
+      4: 400388
+    second: VBOT_:RightHandRing4
+  - first:
+      4: 400390
+    second: VBOT_:RightHandRing4_end
+  - first:
+      4: 400392
+    second: VBOT_:RightHandThumb1
+  - first:
+      4: 400394
+    second: VBOT_:RightHandThumb2
+  - first:
+      4: 400396
+    second: VBOT_:RightHandThumb3
+  - first:
+      4: 400398
+    second: VBOT_:RightHandThumb4
+  - first:
+      4: 400400
+    second: VBOT_:RightHandThumb4_end
+  - first:
+      4: 400402
+    second: VBOT_:RightLeg
+  - first:
+      4: 400404
+    second: VBOT_:RightShoulder
+  - first:
+      4: 400406
+    second: VBOT_:RightToe_End
+  - first:
+      4: 400408
+    second: VBOT_:RightToe_End_end
+  - first:
+      4: 400410
+    second: VBOT_:RightToeBase
+  - first:
+      4: 400412
+    second: VBOT_:RightUpLeg
+  - first:
+      4: 400414
+    second: VBOT_:Spine
+  - first:
+      4: 400416
+    second: VBOT_:Spine1
+  - first:
+      4: 400418
+    second: VBOT_:Spine2
+  - first:
+      4: 400420
+    second: VBOT_:VBOT_LOD0
+  - first:
+      4: 400422
+    second: VBOT_:VBOT_LOD1
+  - first:
+      4: 400424
+    second: VBOT_:VBOT_LOD2
+  - first:
+      4: 400426
+    second: VBOT_:VBOT_LOD3
+  - first:
+      4: 400428
+    second: vBow
+  - first:
+      4: 400430
+    second: vBow 1
+  - first:
+      4: 400432
+    second: vBow_Rig
+  - first:
+      4: 400434
+    second: vHandgun
+  - first:
+      4: 400436
+    second: vHandgun 1
+  - first:
+      4: 400438
+    second: vRPG
+  - first:
+      4: 400440
+    second: vShotgun
+  - first:
+      4: 400442
+    second: vShotgun 1
+  - first:
+      4: 400444
+    second: vShotgun-detach
+  - first:
+      4: 400446
+    second: vSniper
+  - first:
+      4: 400448
+    second: WeaponHolders
+  - first:
+      74: 7400000
+    second: Reload_Pistol
+  - first:
+      74: 7400002
+    second: Reload_RPG
+  - first:
+      74: 7400004
+    second: Reload_Shotgun
+  - first:
+      74: 7400006
+    second: Reload_Rifle
+  - first:
+      74: 7400008
+    second: Shot_RPG
+  - first:
+      74: 7400010
+    second: Shot_Shotgun
+  - first:
+      74: 7400012
+    second: Shot_Rifle
+  - first:
+      74: 7400014
+    second: Pistol_Reload
+  - first:
+      74: 7400016
+    second: Shot_Sniper
+  - first:
+      74: 7400018
+    second: Shot_Pistol
+  - first:
+      74: 7400020
+    second: Grenade_aim
+  - first:
+      74: 7400022
+    second: Grenade_throw
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -484,16 +1411,20 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: Reload_Pistol
       takeName: Reload_Pistol
+      internalID: 0
       firstFrame: 0
       lastFrame: 77
       wrapMode: 0
@@ -522,6 +1453,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Reload_RPG
       takeName: Reload_RPG
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -550,6 +1482,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Reload_Shotgun
       takeName: Reload_Shotgun
+      internalID: 0
       firstFrame: 9.4
       lastFrame: 31.099998
       wrapMode: 0
@@ -578,6 +1511,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Reload_Rifle
       takeName: Reload_Rifle
+      internalID: 0
       firstFrame: 0
       lastFrame: 84.00001
       wrapMode: 0
@@ -606,6 +1540,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Shot_RPG
       takeName: Shot_RPG
+      internalID: 0
       firstFrame: 0
       lastFrame: 18
       wrapMode: 0
@@ -634,6 +1569,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Shot_Shotgun
       takeName: Shot_Shotgun
+      internalID: 0
       firstFrame: 0
       lastFrame: 18
       wrapMode: 0
@@ -662,6 +1598,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Shot_Rifle
       takeName: Shot_Rifle
+      internalID: 0
       firstFrame: 0
       lastFrame: 4
       wrapMode: 0
@@ -690,6 +1627,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Shot_Sniper
       takeName: Shot_Sniper
+      internalID: 0
       firstFrame: 0
       lastFrame: 18
       wrapMode: 0
@@ -718,6 +1656,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Shot_Pistol
       takeName: Shot_Pistol
+      internalID: 0
       firstFrame: 0
       lastFrame: 7.0000005
       wrapMode: 0
@@ -746,6 +1685,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Grenade_aim
       takeName: Grenade_aim
+      internalID: 0
       firstFrame: 0
       lastFrame: 60
       wrapMode: 0
@@ -774,6 +1714,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Grenade_throw
       takeName: Grenade_throw
+      internalID: 0
       firstFrame: 0
       lastFrame: 28
       wrapMode: 0
@@ -803,28 +1744,49 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 1
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: VBOT_:Hips
       humanName: Hips
@@ -1667,15 +2629,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 340f99b8334a14c4a8a01dce6e1e5348,
     type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

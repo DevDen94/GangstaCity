@@ -24919,8 +24919,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5196861914481526606}
-  m_LocalRotation: {x: 0.6459912, y: -0.034848686, z: 0.058348514, w: 0.76031333}
-  m_LocalPosition: {x: 0.00000019275122, y: 8.060013, z: 0.00000056809296}
+  m_LocalRotation: {x: 0.645975, y: -0.034848258, z: 0.058345623, w: 0.76032746}
+  m_LocalPosition: {x: 0.00000019275089, y: 8.059999, z: 0.000000568092}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26063,8 +26063,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5196861914960534724}
-  m_LocalRotation: {x: 0.023187034, y: 0.054761894, z: 0.99608386, w: -0.0654263}
-  m_LocalPosition: {x: 1.7846706, y: -1.1657041, z: 0.052351415}
+  m_LocalRotation: {x: 0.023187103, y: 0.054756, z: 0.99608433, w: -0.06542369}
+  m_LocalPosition: {x: 1.7846084, y: -1.1657013, z: 0.052348197}
   m_LocalScale: {x: 0.999967, y: 0.99999994, z: 0.99999976}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26967,8 +26967,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5196861915251760922}
-  m_LocalRotation: {x: -0.28058138, y: -0.021163434, z: 0.047364056, w: 0.9584273}
-  m_LocalPosition: {x: 0.00014488287, y: 9.376182, z: 0.000019771327}
+  m_LocalRotation: {x: -0.28056917, y: -0.021165013, z: 0.047362857, w: 0.95843095}
+  m_LocalPosition: {x: -0.000021878284, y: 9.376166, z: 0.000099504876}
   m_LocalScale: {x: 1, y: 0.9999999, z: 0.9999998}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27649,7 +27649,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5196861915493736527}
   m_LocalRotation: {x: 0.016071195, y: 0.025356889, z: 0.01212875, w: 0.9994757}
-  m_LocalPosition: {x: 0.119483635, y: 20.459661, z: 0.18063755}
+  m_LocalPosition: {x: 0.119379915, y: 20.459661, z: 0.18055458}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -28281,8 +28281,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5196861915829133386}
-  m_LocalRotation: {x: -0.25548038, y: 0.015286023, z: -0.041208636, w: 0.9658147}
-  m_LocalPosition: {x: 0.000072929186, y: 9.385841, z: -0.000015314676}
+  m_LocalRotation: {x: -0.25545406, y: 0.015283741, z: -0.04120288, w: 0.965822}
+  m_LocalPosition: {x: 0.000029495803, y: 9.385855, z: 0.00023766108}
   m_LocalScale: {x: 0.9999999, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -28907,8 +28907,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5196861915986506088}
-  m_LocalRotation: {x: 0.6106961, y: 0.016456876, z: -0.062415205, w: 0.78922987}
-  m_LocalPosition: {x: -0.0000002837299, y: 8.046701, z: 0.00000024319584}
+  m_LocalRotation: {x: 0.6106959, y: 0.016459908, z: -0.062408097, w: 0.7892306}
+  m_LocalPosition: {x: -0.00000028373, y: 8.046704, z: 0.00000024319596}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29039,8 +29039,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5196861916079875435}
-  m_LocalRotation: {x: -0.039195273, y: 0.1340039, z: 0.9849498, w: 0.101884864}
-  m_LocalPosition: {x: -1.784732, y: -1.1657006, z: -0.022434937}
+  m_LocalRotation: {x: -0.03919627, y: 0.13399166, z: 0.9849508, w: 0.1018912}
+  m_LocalPosition: {x: -1.7846076, y: -1.1657034, z: -0.022428576}
   m_LocalScale: {x: 0.9999901, y: 0.99999994, z: 0.9999998}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29936,7 +29936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 1
   openCloseWindow: 1
-  selectedToolbar: 8
+  selectedToolbar: 4
   _isDead: 0
   _currentHealth: 0
   isImmortal: 0
@@ -30045,9 +30045,9 @@ MonoBehaviour:
   extraGravity: -10
   limitFallVelocity: -15
   ragdollVelocity: -15
-  fallMinHeight: 8
-  fallMinVerticalVelocity: -10
-  fallDamage: 10
+  fallMinHeight: 100
+  fallMinVerticalVelocity: -100
+  fallDamage: 100
   useRollRootMotion: 1
   rollControl: 1
   rollSpeed: 0
@@ -30055,7 +30055,7 @@ MonoBehaviour:
   rollUseGravity: 1
   rollUseGravityTime: 0.1
   timeToRollAgain: 0.75
-  groundCheckMethod: 1
+  groundCheckMethod: 0
   useSnapGround: 0
   groundMinDistance: 0.2
   groundMaxDistance: 0.5

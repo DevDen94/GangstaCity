@@ -21,11 +21,13 @@ public class _ShopManager : MonoBehaviour
     public Animator Camera;
     public GameObject Show_UpdatePanel;
     public GameObject[] Costumes_Panel;
-    private Gangster_Shop gm;
+    public Gangster_Shop gm;
+    public Text CashMain;
     private void Start()
     {
         Default_Set();
-        Camera.SetInteger("value", 10); gm = Gangster[0];
+        Camera.SetInteger("value", 10); 
+        gm = Gangster[0];
         Price = PlayerPrefs.GetInt("Cash");
         Cash_.text = Price.ToString();
       
@@ -182,6 +184,7 @@ public class _ShopManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("Cash", Price - Generic_Prices[Temp]);
             Cash_.text = PlayerPrefs.GetInt("Cash").ToString();
+            CashMain.text= PlayerPrefs.GetInt("Cash").ToString();
             PlayerPrefs.SetInt(EntryName + Temp, 1);
             Check_Textures();
         }

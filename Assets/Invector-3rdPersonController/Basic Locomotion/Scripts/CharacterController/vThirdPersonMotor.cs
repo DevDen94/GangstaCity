@@ -101,9 +101,9 @@ namespace Invector.vCharacterController
         [Tooltip("Turn the Ragdoll On when falling at high speed (check VerticalVelocity) - leave the value with 0 if you don't want this feature")]
         public float ragdollVelocity = -15f;
         [Header("Fall Damage")]
-        public float fallMinHeight = 6f;
-        public float fallMinVerticalVelocity = -10f;
-        public float fallDamage = 10f;
+        public float fallMinHeight = 1000f;
+        public float fallMinVerticalVelocity = -1000f;
+        public float fallDamage = 0.15f;
 
         [vEditorToolbar("Roll", order = 4)]
         public bool useRollRootMotion = true;
@@ -494,6 +494,8 @@ namespace Invector.vCharacterController
         {
             if (isGrounded && !disableCheckGround && !isSliding && !isJumping && !customAction && !isInAirborne)
             {
+               
+                
                 Vector3 dir = Vector3.Lerp(transform.forward, moveDir.normalized, inputSmooth.magnitude);
                 float distance = _capsuleCollider.radius + stepOffsetDistance;
                 float height = (stepOffsetMaxHeight + 0.01f + _capsuleCollider.radius * 0.5f);
@@ -787,7 +789,8 @@ namespace Invector.vCharacterController
 
             if (groundDistance <= groundMinDistance || applyingStepOffset)
             {
-                CheckFallDamage();
+                
+                 CheckFallDamage();
                 isGrounded = true;
                 //Debug.LogError("111");
                 if (!useSnapGround && !applyingStepOffset && !isJumping && groundDistance > 0.05f)
@@ -806,11 +809,13 @@ namespace Invector.vCharacterController
                     // apply extra gravity when falling
                     if (!applyingStepOffset && !isJumping)
                     {
+                       
                         _rigidbody.AddForce(transform.up * extraGravity * Time.deltaTime, ForceMode.VelocityChange);
                     }
                 }
-                else if (!applyingStepOffset && !isJumping)
+                else if (!applyingStepOffset && !isJumping )
                 {
+                    
                     GameManger.instance.Jump_Long();
                     _rigidbody.AddForce(transform.up * (extraGravity * 2 * Time.deltaTime), ForceMode.VelocityChange);
                 }
@@ -821,10 +826,10 @@ namespace Invector.vCharacterController
         {
             if (isGrounded || verticalVelocity > fallMinVerticalVelocity && blockFallActions || fallMinHeight == 0)
             {
-                
+              
                 return;
             } 
-            float fallHeight = (heightReached - transform.position.y);
+           /* float fallHeight = (heightReached - transform.position.y);
 
             fallHeight -= fallMinHeight;
             if (fallHeight > 0)
@@ -833,7 +838,7 @@ namespace Invector.vCharacterController
                 TakeDamage(new vDamage(damage, true));
             }
 
-            heightReached = 0;
+            heightReached = 0;*/
         }
 
         private void ControlMaterialPhysics()

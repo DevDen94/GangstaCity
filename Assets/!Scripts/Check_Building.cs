@@ -22,8 +22,10 @@ public class Check_Building : MonoBehaviour
     public shootPlayer PlayerShooter;
      bool Car_Out;
     public bool is_HummerSpecial;
+    private Damage_Script damage_;
     private void Start()
     {
+        damage_ = GetComponent<Damage_Script>();
         Car_Out = false;
         Is_DriverExit = false;
         Car_Manager.instance.Car = this;
@@ -63,7 +65,6 @@ public class Check_Building : MonoBehaviour
         speed = GetComponent<RCC_CarControllerV3>().speed;
         if (isEject)
         {
-
             if (speed < 3)
             {
 
@@ -117,6 +118,7 @@ public class Check_Building : MonoBehaviour
             src.PlayOneShot(SoundEject);
             Is_DriverExit = true;
         }
+        Car_Manager.instance.Your_CurrentCar_Health(damage_.damageValue);
         SRC_Audios.SetActive(true);
         Car_Out = false;
         GetComponent<RCC_CarControllerV3>().StartEngine();
@@ -124,9 +126,12 @@ public class Check_Building : MonoBehaviour
         Player.gameObject.transform.SetPositionAndRotation(Point.transform.position, Point.transform.rotation);
         Car_Manager.instance.Set_ParentofTraffic(gameObject);
         Player.gameObject.SetActive(true);
+        damage_.isDamageEnabled = true;
         Door.SetBool("Open", true);
         Player.SetInteger("Sit", 2);
         Invoke("AfterDelay", 1f);
+        gameObject.tag = "Car";
+        gameObject.layer = LayerMask.NameToLayer("Player");
     }
     void AfterDelay()
     {
@@ -146,7 +151,7 @@ public class Check_Building : MonoBehaviour
     }
     public void Eject_Car()
     {
-        
+        damage_.isDamageEnabled = false;
         SRC_Audios.SetActive(false);
         Car_Manager.instance.RadioMusic.gameObject.SetActive(false);
         GetComponent<RCC_CarControllerV3>().enabled = false;
@@ -157,7 +162,8 @@ public class Check_Building : MonoBehaviour
         Player.SetInteger("Sit", 1);
         Invoke("seco", 1f);
         Invoke("Eject_TPSActive", 2.5f);
-       // Invoke("SetTrafficCar", 3f);
+        PoliceSystemActive.instance.PoliceCarPanel.SetActive(false);
+        // Invoke("SetTrafficCar", 3f);
     }
     void seco()
     {
@@ -166,6 +172,7 @@ public class Check_Building : MonoBehaviour
     }
     void Eject_TPSActive()
     {
+        
         Car_Manager.instance.Rcc_Header_Camera.SetActive(false);
         Car_Manager.instance.TPS_Controls[2].transform.position = Point.transform.position;
         Car_Manager.instance.TPS_Controls[2].transform.rotation = Point.transform.rotation;
@@ -179,6 +186,15 @@ public class Check_Building : MonoBehaviour
         Player.gameObject.transform.LookAt(LookAt.transform);
         Trigger.SetActive(true);
         Car_Out = true;
+        gameObject.tag = "TrafficLight";
+        gameObject.layer = LayerMask.NameToLayer("Default");
+        gameObject.SetActive(false);
+        Invoke("ofice", 0.2f);
+        
+    }
+    void ofice()
+    {
+        gameObject.SetActive(true);
     }
     Transform Temp;
     public GameObject DUMMY_CAR;

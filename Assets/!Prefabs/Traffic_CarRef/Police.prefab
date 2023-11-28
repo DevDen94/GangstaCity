@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3887245044153261699}
   - component: {fileID: 7842073696901181489}
+  - component: {fileID: 7842648806648943801}
   m_Layer: 0
   m_Name: PoliceMan
   m_TagString: Untagged
@@ -62,6 +63,81 @@ MonoBehaviour:
   distance: 0
   policeShoot_LOOKAt: {fileID: 8689834702300726796}
   PoliceMen: {fileID: 2837527973965026214}
+--- !u!114 &7842648806648943801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53214013147548293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a5fc50cb592fe4f95457eb6d66e520, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Settings: {fileID: 0}
+  Prefabs:
+    RadarPrefab: {fileID: 114278036144483708, guid: 957f0de74025de941b4d59a450a4aaf0,
+      type: 3}
+    CompassBarPrefab: {fileID: 114933213283187704, guid: 9e79cc727f44041419cdac8f370009fd,
+      type: 3}
+    IndicatorPrefab: {fileID: 114217203137382804, guid: 5b519377717ad5d43bf74c1c6e3aaa0e,
+      type: 3}
+    MinimapPrefab: {fileID: 114337368606235170, guid: 295e22ec550a1f648a219e7e88a1d2f5,
+      type: 3}
+  hideInRadar: 0
+  ignoreRadarRadius: 1
+  ignoreRadarScaling: 0
+  ignoreRadarFading: 0
+  rotateWithGameObject: 0
+  useRadarHeightSystem: 1
+  hideInCompassBar: 0
+  ignoreCompassBarRadius: 1
+  useCompassBarDistanceText: 1
+  compassBarDistanceTextFormat: '{0}m'
+  showIndicator: 1
+  showOffscreenIndicator: 1
+  ignoreIndicatorRadius: 1
+  ignoreIndicatorHideDistance: 0
+  ignoreIndicatorScaling: 0
+  ignoreIndicatorFading: 0
+  useIndicatorDistanceText: 0
+  showOffscreenIndicatorDistance: 0
+  indicatorOnscreenDistanceTextFormat: '{0}m'
+  indicatorOffscreenDistanceTextFormat: '{0}'
+  hideInMinimap: 0
+  ignoreMinimapRadius: 1
+  ignoreMinimapScaling: 0
+  ignoreMinimapFading: 0
+  rotateWithGameObjectMM: 0
+  useMinimapHeightSystem: 1
+  OnElementReady:
+    m_PersistentCalls:
+      m_Calls: []
+  OnElementUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAppear:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDisappear:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEnterRadius:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLeaveRadius:
+    m_PersistentCalls:
+      m_Calls: []
+  IsActive: 1
+  Radar: {fileID: 0}
+  CompassBar: {fileID: 0}
+  Indicator: {fileID: 0}
+  Minimap: {fileID: 0}
+  IsInRadarRadius: 0
+  IsInCompassBarRadius: 0
+  IsInIndicatorRadius: 0
+  IsInMinimapRadius: 0
 --- !u!1 &69807590653421596
 GameObject:
   m_ObjectHideFlags: 0
@@ -23105,11 +23181,14 @@ MonoBehaviour:
   damageValue: 100
   slowMotionDuration: 5
   isPlayer: 0
+  isDamageEnabled: 0
   Car_Damge: {fileID: 5004908998769637995, guid: 9d272923bee47d748b9a898cfb83c86e,
     type: 3}
   flame: {fileID: 6665112641482847954}
   shoot_Human: {fileID: 7842073696901181489}
   Myself_Police: 1
+  policeDeath: {fileID: 0}
+  src: {fileID: 0}
   Dis: 0
 --- !u!1 &8689834702140402152
 GameObject:

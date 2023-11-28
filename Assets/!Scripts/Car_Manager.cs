@@ -47,8 +47,7 @@ public class Car_Manager : MonoBehaviour
     public AudioClip[] tracks;
     public vThirdPersonCameraListData list;
     private int currentTrackIndex = 0;
-    public GameObject AutoFire_On;
-    public GameObject AutoFire_Off;
+    
     public GameObject WeaponOffBTN;
     public GameObject WeaponOnBtn;
     [HideInInspector]
@@ -63,6 +62,11 @@ public class Car_Manager : MonoBehaviour
     public GameObject NotEnoughCoins;
 
     public string Car_Name;
+    public Slider CarHealth;
+    public void Your_CurrentCar_Health(int dm)
+    {
+        CarHealth.value = dm;
+    }
     public void CarAttackOn()
     {
        if (!IsShooterActive)
@@ -71,18 +75,15 @@ public class Car_Manager : MonoBehaviour
         }
         Car.PlayerShooter.AutofireMode = true;
         Car.PlayerShooter.FireModeOn();
-        AutoFire_On.SetActive(false);
-        AutoFire_Off.SetActive(true);
+      
         IsAuto_Enabled = true;
     
     }
     public void AutoAttackOff()
     {
-        AutoFire_On.SetActive(false);
-        AutoFire_Off.SetActive(true);
+ 
         Car.PlayerShooter.AutofireMode = false;
-        AutoFire_On.SetActive(true);
-        AutoFire_Off.SetActive(false);
+  
         IsAuto_Enabled = false;
 
     }
@@ -199,8 +200,7 @@ public class Car_Manager : MonoBehaviour
     public void Exit_Out()
     {
         WeaponOffBTN.SetActive(false);
-        AutoFire_Off.SetActive(false);
-        AutoFire_On.SetActive(false);
+     
         WeaponOnBtn.SetActive(true);
         Carbutton_Out.SetActive(false);
         Car.isEject = true;

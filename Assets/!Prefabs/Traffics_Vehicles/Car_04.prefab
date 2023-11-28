@@ -177,7 +177,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b82b1fb7a94c2c347aa056df7a687fdc, type: 2}
+  - {fileID: 2100000, guid: d125a230d9edef645a00b5fa38f0e708, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -344,7 +344,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b82b1fb7a94c2c347aa056df7a687fdc, type: 2}
+  - {fileID: 2100000, guid: d125a230d9edef645a00b5fa38f0e708, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1736,7 +1736,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b82b1fb7a94c2c347aa056df7a687fdc, type: 2}
+  - {fileID: 2100000, guid: d125a230d9edef645a00b5fa38f0e708, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2086,8 +2086,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.47695875, y: 0.7479407, z: 0.59152687}
-  m_Center: {x: -0.1276846, y: -0.07592097, z: 0.81536955}
+  m_Size: {x: 1.0861015, y: 0.90445155, z: 3.2600784}
+  m_Center: {x: 0.00008583069, y: 0.0023341551, z: 1.5168953}
 --- !u!114 &8313781932083063174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2104,3 +2104,5 @@ MonoBehaviour:
     type: 3}
   Isdriver: 0
   Rcc_Car: 0
+  Is_hummer: 0
+  nameofCar: 

@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Invector.vCharacterController.AI;
+using Invector;
+using UnityEngine.UI;
 public class Damage_Script : MonoBehaviour
 {
     public int damageValue = 100;
     public float slowMotionDuration = 4f;
     public bool isPlayer;
+    public bool isDamageEnabled;
     public Transform Car_Damge;
     public GameObject flame;
  
     public shootPlayer shoot_Human;
     public bool Myself_Police;
     bool myselfpolice_2;
-  
+    public AudioClip policeDeath;
+    public AudioSource src;
     private void Start()
     {
         Invoke("Start_Delay", 2f);
@@ -47,12 +51,27 @@ public class Damage_Script : MonoBehaviour
                 
             }
         }
+        if (collision.gameObject.tag=="Enemy")
+        {
+            src.PlayOneShot(policeDeath);
+            d_ = collision.gameObject;
+            collision.gameObject.GetComponent<vControlAIShooter>()._currentHealth = 0;
+            Invoke("Destroy_P", 10f);
+            Mission_Script.instance.GangsterDead();
+
+        }
        
+    }
+    GameObject d_;
+    void Destroy_P()
+    {
+        Destroy(d_);
     }
     public float Dis;
     bool playerdeath;
     private void FixedUpdate()
-    { if (myselfpolice_2)
+    { 
+        if (myselfpolice_2)
         { 
                 if (shoot_Human.target == null)
                 {
@@ -61,14 +80,17 @@ public class Damage_Script : MonoBehaviour
                 else
                 {
                     Dis = Vector3.Distance(gameObject.transform.position, shoot_Human.target.transform.position);
-                    Debug.LogError(Dis);
-                    if (Dis >= 75)
+             
+                    if (Dis >= 100)
                     {
                         Destroy(gameObject);
                         Car_Manager.instance.PoliceCop_On = false;
                         Car_Manager.instance.Carbutton_Out.SetActive(true);
-                    }
+                        PoliceSystemActive.instance.PoliceCarPanel.SetActive(true);
+                        PoliceSystemActive.instance.PoliceCarPanel.transform.GetChild(0).GetComponent<Text>().text = "Good Job. You are safe now. Now PoliceCar is not Chasing You";
+
                 }
+            }
             }
     }
     private void Update()
@@ -97,6 +119,9 @@ public class Damage_Script : MonoBehaviour
                 Car_Manager.instance.Carbutton_Out.SetActive(true);
                 Debug.LogError("ON");
                 Invoke("DamageCar_Spawn", 3f);
+                PoliceSystemActive.instance.PoliceCarPanel.SetActive(true);
+                PoliceSystemActive.instance.PoliceCarPanel.transform.GetChild(0).GetComponent<Text>().text = "Good Job. You destroyed the Police Car";
+
 
             }
 
@@ -107,6 +132,7 @@ public class Damage_Script : MonoBehaviour
     {
         Instantiate(Car_Damge, gameObject.transform.position, transform.rotation);
         Destroy(gameObject);
+        PoliceSystemActive.instance.PoliceCarPanel.SetActive(false);
     }
     IEnumerator SlowMotionRoutine()
     {
@@ -118,8 +144,9 @@ public class Damage_Script : MonoBehaviour
     {
         if (isPlayer)
         {
-            damageValue = damageValue - 5;
+            damageValue = damageValue - 3;
             Car_Manager.instance.CarHit.SetActive(true);
+            Car_Manager.instance.Your_CurrentCar_Health(damageValue);
             
         }
         else

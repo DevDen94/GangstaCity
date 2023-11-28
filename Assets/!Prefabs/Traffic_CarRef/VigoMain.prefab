@@ -13,13 +13,13 @@ GameObject:
   - component: {fileID: 427961263}
   - component: {fileID: 427961262}
   - component: {fileID: 9046776067580968441}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trigger (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &427961260
 Transform:
   m_ObjectHideFlags: 0
@@ -97,8 +97,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.2782552, y: 1, z: 4.673704}
+  m_Center: {x: 0.34424853, y: 0, z: 1.8368528}
 --- !u!114 &9046776067580968441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +114,8 @@ MonoBehaviour:
   ReferenceRcc: {fileID: 0}
   Isdriver: 1
   Rcc_Car: 1
+  Is_hummer: 1
+  nameofCar: Hummar_2
 --- !u!1 &1152310930
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,14 +258,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2172417165590923500}
-  m_LocalRotation: {x: 0.02467767, y: 0.70667607, z: 0.02467767, w: 0.70667607}
-  m_LocalPosition: {x: -0.06053741, y: 1.466, z: 0.56}
-  m_LocalScale: {x: 0.6328583, y: 0.63285804, z: 0.63285816}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.7453235, y: 1.1774547, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2890271970162672842}
-  m_Father: {fileID: 7576233424266092677}
-  m_RootOrder: 9
+  m_Father: {fileID: 816415009592421101}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 4}
 --- !u!95 &6515733250160603536
 Animator:
@@ -379,6 +381,38 @@ Transform:
   m_Father: {fileID: 7803587220094764140}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 91.422, y: 90, z: 90}
+--- !u!1 &2904573802827216632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 816415009592421101}
+  m_Layer: 0
+  m_Name: w
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &816415009592421101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2904573802827216632}
+  m_LocalRotation: {x: 0.02467767, y: 0.70667607, z: 0.02467767, w: 0.70667607}
+  m_LocalPosition: {x: 0.18, y: 0.62, z: 0.21}
+  m_LocalScale: {x: 0.6328583, y: 0.63285786, z: 0.6328581}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1544217121812271702}
+  m_Father: {fileID: 7576233424266092677}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4136787491348027636
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,9 +2243,9 @@ GameObject:
   - component: {fileID: 7485884630197881183}
   - component: {fileID: 2953820255065884722}
   - component: {fileID: 4300034605013040528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VigoMain
-  m_TagString: Player
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2225,7 +2259,7 @@ Transform:
   m_GameObject: {fileID: 7576233424266092674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.95, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7576233425565853945}
@@ -2237,7 +2271,7 @@ Transform:
   - {fileID: 8037300900742721041}
   - {fileID: 2916238387083539811}
   - {fileID: 427961260}
-  - {fileID: 1544217121812271702}
+  - {fileID: 816415009592421101}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2264,7 +2298,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7576233424266092674}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c25271813931d814680ab7c84ef90710, type: 3}
   m_Name: 
@@ -2548,7 +2582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 7576233424530917790}
-  Door: {fileID: 7576233424267993973}
+  Door: {fileID: 983195269}
   Point: {fileID: 7576233424556057698}
   LookAt: {fileID: 7576233425576783630}
   SRC_Audios: {fileID: 0}
@@ -2562,7 +2596,7 @@ MonoBehaviour:
   Trigger: {fileID: 427961259}
   Weapon_Main: {fileID: 2172417165590923500}
   PlayerShooter: {fileID: 4834078498482891901}
-  is_HummerSpecial: 0
+  is_HummerSpecial: 1
   DUMMY_CAR: {fileID: 7300828664495834930, guid: ac0d62f07a815f249b780e1923893284,
     type: 3}
 --- !u!65 &7576233424266092676
@@ -2598,7 +2632,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1.1040351
+  MinDistance: 1.1020418
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -2702,10 +2736,14 @@ MonoBehaviour:
   damageValue: 100
   slowMotionDuration: 3
   isPlayer: 1
+  isDamageEnabled: 0
   Car_Damge: {fileID: 0}
   flame: {fileID: 0}
   shoot_Human: {fileID: 0}
   Myself_Police: 0
+  policeDeath: {fileID: 8300000, guid: b0f275b1c633093438e3b149da9f9eb2, type: 3}
+  src: {fileID: 0}
+  Dis: 0
 --- !u!1 &7576233424267993970
 GameObject:
   m_ObjectHideFlags: 0
@@ -2717,7 +2755,7 @@ GameObject:
   - component: {fileID: 7576233424267993974}
   - component: {fileID: 7576233424267993975}
   - component: {fileID: 7576233424267993972}
-  - component: {fileID: 7576233424267993973}
+  - component: {fileID: 983195269}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -2773,7 +2811,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cd248aa9818ea6649b7b59ea6237a12b, type: 2}
+  - {fileID: 2100000, guid: a211af2412c997b4790c7d4deabda416, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2795,7 +2833,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &7576233424267993973
+--- !u!95 &983195269
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -2805,7 +2843,7 @@ Animator:
   m_GameObject: {fileID: 7576233424267993970}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8fae574c99eb6ab4a82f9e6e890b3279, type: 2}
+  m_Controller: {fileID: 9100000, guid: e36c01ba2b6af17468e3b9dde6a0fbdf, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4910,7 +4948,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cd248aa9818ea6649b7b59ea6237a12b, type: 2}
+  - {fileID: 2100000, guid: a211af2412c997b4790c7d4deabda416, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5861,7 +5899,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cd248aa9818ea6649b7b59ea6237a12b, type: 2}
+  - {fileID: 2100000, guid: a211af2412c997b4790c7d4deabda416, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

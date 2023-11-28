@@ -8,7 +8,7 @@ public class shootPlayer : MonoBehaviour
     public float rayDistance = 100f; // Maximum distance the ray can travel
     public Transform target;
     public Transform GunPoint;
-    public float fireInterval=3f;
+    public float fireInterval=2f;
     public AudioSource src;
     public AudioClip shoot;
     public bool PlayerDeath;
@@ -32,7 +32,7 @@ public class shootPlayer : MonoBehaviour
         FindTarget();
         if (isPlayerShooter)
         {
-            AutofireMode = false;
+          // AutofireMode = false;
             FireModeOn();
         }
         else
@@ -54,12 +54,11 @@ public class shootPlayer : MonoBehaviour
             if (target == null)
             {
                 FindTarget();
-                if (isPlayerShooter)
+               /* if (isPlayerShooter)
                 {
                     AutofireMode = false;
-                    Car_Manager.instance.AutoFire_On.SetActive(true);
-                    Car_Manager.instance.AutoFire_Off.SetActive(false);
-                }
+                
+                }*/
             }
             else
             {
@@ -99,6 +98,7 @@ public class shootPlayer : MonoBehaviour
             {
                
                 distance = Vector3.Distance(transform.position, target.position);
+
                 if (distance <= 100 && AutofireMode)
                 {
 
@@ -108,7 +108,7 @@ public class shootPlayer : MonoBehaviour
                     {
                         if ( hit.collider.gameObject.tag == "Police")
                         {
-                            Debug.LogError("Shoot");
+                            //Debug.LogError("Shoot");
                             hit.collider.gameObject.GetComponent<Damage_Script>().Damage();
                         }
 
@@ -120,6 +120,7 @@ public class shootPlayer : MonoBehaviour
                 }
                 else
                 {
+                    Debug.LogError(AutofireMode);
                     Debug.LogError("Waiting for target or something");
                 }
             }

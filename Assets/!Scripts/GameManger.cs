@@ -94,6 +94,7 @@ public class GameManger : MonoBehaviour
         nav.GameEndl = true;
         MissionComplete.SetActive(true);
         src.PlayOneShot(WinSound);
+        PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + 500);
     }
     public void Loose_Mission()
     {
@@ -111,8 +112,8 @@ public class GameManger : MonoBehaviour
         cm = GetComponent<Car_Manager>();
 
 
-      
 
+       
         instance = this;
         if (!PlayerPrefs.HasKey("Start"))
         {

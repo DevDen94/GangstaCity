@@ -15823,6 +15823,7 @@ MonoBehaviour:
   _detectTags:
     tags:
     - Player
+    - Car
   _obstacles:
     serializedVersion: 2
     m_Bits: 1
