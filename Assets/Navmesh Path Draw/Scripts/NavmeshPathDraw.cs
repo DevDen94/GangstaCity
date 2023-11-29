@@ -24,9 +24,7 @@ public class NavmeshPathDraw : MonoBehaviour
         lr.useWorldSpace = true;
         path = new NavMeshPath();
 
-      /*  if(lr.materials.Length == 0){
-            lr.material = Resources.Load("material/path_mat", typeof(Material)) as Material;
-        }*/
+      
 
         Draw();
     }
