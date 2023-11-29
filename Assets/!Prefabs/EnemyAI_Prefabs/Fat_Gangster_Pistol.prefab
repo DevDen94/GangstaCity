@@ -18474,7 +18474,7 @@ Transform:
   m_GameObject: {fileID: 1307215919281872573}
   m_LocalRotation: {x: -0.0020722123, y: 0.9844749, z: -0.00055828417, w: -0.1755124}
   m_LocalPosition: {x: 3.27, y: 0.515, z: 164.87}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1307215918238815520}
@@ -18710,7 +18710,7 @@ MonoBehaviour:
     - Car
   _obstacles:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8388609
   _debugVisualDetection: 0
   _debugRaySight: 0
   _debugLastTargetPosition: 0

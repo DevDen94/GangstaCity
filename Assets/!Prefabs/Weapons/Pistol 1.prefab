@@ -661,11 +661,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7089474312246684575}
-  - component: {fileID: 7089474312235731359}
   - component: {fileID: 7089474312235685543}
-  - component: {fileID: 7203353041421850533}
   - component: {fileID: 3656351351807319925}
+  - component: {fileID: -8736209542499646244}
   - component: {fileID: 3227803681786685487}
+  - component: {fileID: 2158594530321757458}
   m_Layer: 1
   m_Name: Pistol 1
   m_TagString: Weapon
@@ -690,22 +690,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 4.805, y: 0.096, z: 0.04}
---- !u!114 &7089474312235731359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7089474312247001167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c789670a80b704eba4dfebed94a111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  header: COMMENT
-  comment: This is a example for a auto-equip collectable, without the ItemManager
-    / Inventory. Take a look into the collectableStandAlone gameobject inside this.
-  inEdit: 0
 --- !u!114 &7089474312235685543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,7 +708,7 @@ MonoBehaviour:
   weaponCategory: Pistol
   shootFrequency: 0.25
   isInfinityAmmo: 0
-  ammo: 100
+  ammo: 30
   ignoreTags: []
   hitLayer:
     serializedVersion: 2
@@ -771,10 +755,10 @@ MonoBehaviour:
   automaticWeapon: 0
   reloadTime: 1
   reloadOneByOne: 0
-  clipSize: 100
+  clipSize: 30
   dontUseReload: 0
   autoReload: 0
-  ammoID: 20
+  ammoID: 10
   moveSetID: 1
   upperBodyID: 1
   shotID: 1
@@ -887,21 +871,6 @@ MonoBehaviour:
       m_Calls: []
   root: {fileID: 0}
   isSecundaryWeapon: 0
---- !u!114 &7203353041421850533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7089474312247001167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ec807b121fb8d94e8a2c5d76766cdc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openCloseEvents: 0
-  openCloseWindow: 1
-  selectedToolbar: 0
 --- !u!114 &3656351351807319925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -914,7 +883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ebe2ea9c9ea0544d84d9c27f7470915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openCloseEvents: 0
+  openCloseEvents: 1
   openCloseWindow: 0
   selectedToolbar: 0
   damage:
@@ -962,6 +931,21 @@ MonoBehaviour:
   onDefense:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-8736209542499646244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7089474312247001167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37cb9a443aef1842ae80a6a984cbe35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openCloseEvents: 0
+  openCloseWindow: 0
+  selectedToolbar: 0
 --- !u!114 &3227803681786685487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -974,7 +958,90 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a645f66a09bf5448dbe418a0c6427a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsGameManagerEnable: 0
   ManagerScript: {fileID: 0}
+  cars_ToBuy: {fileID: 0}
+--- !u!114 &2158594530321757458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7089474312247001167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393a4106eb54f894a900c48422883d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openCloseEvents: 0
+  openCloseWindow: 1
+  selectedToolbar: 0
+  getAnimatorInParent: 1
+  animatorEvents:
+  - eventName: Instantiate_RifleClipPrefab
+    debug: 0
+    onTriggerEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: InstantiateObject
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventName: TurnOn_RifleClip
+    debug: 0
+    onTriggerEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventName: TurnOff_RifleClip
+    debug: 0
+    onTriggerEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  removeEventsOnDisable: 0
 --- !u!1 &7089474312247001477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,7 +1390,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7203353041421850533}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: Inv_Weapon_FreezeAll
         m_Mode: 6
@@ -1434,7 +1501,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 7203353041421850533}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: Inv_Weapon_FreezeAll
         m_Mode: 6

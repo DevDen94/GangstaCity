@@ -132,8 +132,8 @@ public class Car_Manager : MonoBehaviour
     public void Sit_in()
     {
         if (is_Hummer && PlayerPrefs.GetInt(Car_Name)==0){
-            Debug.LogError(PlayerPrefs.GetInt(Car_Name));
-            Debug.LogError(Car_Name);
+            //Debug.LogError(PlayerPrefs.GetInt(Car_Name));
+           // Debug.LogError(Car_Name);
             Buy_Panel.SetActive(true);
         }
         else
@@ -162,6 +162,7 @@ public class Car_Manager : MonoBehaviour
         {
             PlayerPrefs.SetInt(Car_Name, 1);
             PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") - 1000);
+            GameManger.instance.CashText.text = PlayerPrefs.GetInt("Cash").ToString();
             Rcc_Header_Camera.SetActive(true);
             Carbutton_IN.SetActive(false);
             Buy_Panel.SetActive(false);

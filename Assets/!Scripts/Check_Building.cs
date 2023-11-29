@@ -119,7 +119,7 @@ public class Check_Building : MonoBehaviour
             Is_DriverExit = true;
         }
         Car_Manager.instance.Your_CurrentCar_Health(damage_.damageValue);
-        SRC_Audios.SetActive(true);
+        
         Car_Out = false;
         GetComponent<RCC_CarControllerV3>().StartEngine();
         GetComponent<Rigidbody>().isKinematic = false;
@@ -132,6 +132,7 @@ public class Check_Building : MonoBehaviour
         Invoke("AfterDelay", 1f);
         gameObject.tag = "Car";
         gameObject.layer = LayerMask.NameToLayer("Player");
+        SRC_Audios.SetActive(true);
     }
     void AfterDelay()
     {

@@ -39579,7 +39579,7 @@ Transform:
   m_GameObject: {fileID: 8927420468104417859}
   m_LocalRotation: {x: 0, y: -0.9657382, z: 0, w: 0.25951856}
   m_LocalPosition: {x: -5.05, y: 0.47991967, z: 208.58}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8927420467487188796}
@@ -39816,7 +39816,7 @@ MonoBehaviour:
     - Player
   _obstacles:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8388609
   _debugVisualDetection: 0
   _debugRaySight: 0
   _debugLastTargetPosition: 0
@@ -40069,6 +40069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb4d822e87d7a546b1c1eebfceacab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1 &8927420468111895346
 GameObject:
   m_ObjectHideFlags: 0

@@ -19496,7 +19496,7 @@ MonoBehaviour:
     - Car
   _obstacles:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8388609
   _debugVisualDetection: 0
   _debugRaySight: 0
   _debugLastTargetPosition: 0

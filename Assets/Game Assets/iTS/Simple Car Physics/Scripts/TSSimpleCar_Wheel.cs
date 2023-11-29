@@ -164,13 +164,13 @@ public class TSSimpleCar_Wheel : MonoBehaviour {
 		else _compression = suspensionTravel;
 
 		//Set the local position of the transform
-		myTransform.localPosition =  (Vector3.up * (_compression - 1.0f) * suspensionTravel);
+		//myTransform.localPosition =  (Vector3.up * (_compression - 1.0f) * suspensionTravel);
 
 		//Set the rotation of the transform
-		myTransform.rotation = CorrespondingCollider.transform.rotation * Quaternion.Euler( RotationValue, CorrespondingCollider.steerAngle, 0 );
+		myTransform.rotation = CorrespondingCollider.transform.rotation * Quaternion.Euler( RotationValue, 0, 0 );
 
 		//Increase the rotation value
-		RotationValue += CorrespondingCollider.rpm * ( 360f/60f ) * Time.deltaTime;
+		RotationValue += CorrespondingCollider.rpm * ( 360f/180f ) * Time.deltaTime;
 
 
 

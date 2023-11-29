@@ -94,7 +94,7 @@ public class GameManger : MonoBehaviour
         nav.GameEndl = true;
         MissionComplete.SetActive(true);
         src.PlayOneShot(WinSound);
-        PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + 500);
+        PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + 900);
     }
     public void Loose_Mission()
     {
@@ -103,17 +103,19 @@ public class GameManger : MonoBehaviour
         src.PlayOneShot(LooseSound);
         Time.timeScale = 0f;
     }
-
-
+    [HideInInspector]
+    public GameObject MissionActive;
+    public void hEALTH()
+    {
+        TPS_Controls[1].GetComponent<vHealthController>()._currentHealth = 250;
+    }
     private void Start()
     {
+        PlayerPrefs.SetInt("MissionEnable", 0);
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Time.timeScale = 1f;
         OFF_TPS();
-        cm = GetComponent<Car_Manager>();
-
-
-
-       
+        cm = GetComponent<Car_Manager>(); 
         instance = this;
         if (!PlayerPrefs.HasKey("Start"))
         {
@@ -130,6 +132,7 @@ public class GameManger : MonoBehaviour
         {
             m.SetActive(false);
         }
+        MissionActive = Missions[selected_Mission];
         Missions[selected_Mission].SetActive(true);
         cm.DestinationPoint = Missions[selected_Mission];
         cm.Set_NavigationDestination();
@@ -178,8 +181,21 @@ public class GameManger : MonoBehaviour
     {
         InstructionsPanel.SetActive(false);
         CutSceneScreen.SetActive(false);
-        ControlFreakPanel.SetActive(true);
-        Set_TPS();
+        if (PlayerPrefs.GetInt("TPS") == 1)
+        {
+            ControlFreakPanel.SetActive(true);
+            Set_TPS();
+        }
+        else
+        {
+            Car_Manager.instance.Rcc_Header_Camera.SetActive(true);
+            Car_Manager.instance.RadioMusic.gameObject.SetActive(true);
+            //Car_Manager.instance.Car.gameObject.SetActive(true);
+            Car_Manager.instance.Rcc_Canvas.SetActive(true);
+            Hud_Navigation.SetActive(true);
+
+        }
+       
     }
     public void CutSceneStart()
     {

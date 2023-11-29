@@ -88,7 +88,10 @@ public class Damage_Script : MonoBehaviour
                         Car_Manager.instance.Carbutton_Out.SetActive(true);
                         PoliceSystemActive.instance.PoliceCarPanel.SetActive(true);
                         PoliceSystemActive.instance.PoliceCarPanel.transform.GetChild(0).GetComponent<Text>().text = "Good Job. You are safe now. Now PoliceCar is not Chasing You";
-
+                    if (PlayerPrefs.GetInt("MissionEnable") == 0)
+                    {
+                        GameManger.instance.MissionActive.SetActive(true);
+                    }
                 }
             }
             }
@@ -122,6 +125,10 @@ public class Damage_Script : MonoBehaviour
                 PoliceSystemActive.instance.PoliceCarPanel.SetActive(true);
                 PoliceSystemActive.instance.PoliceCarPanel.transform.GetChild(0).GetComponent<Text>().text = "Good Job. You destroyed the Police Car";
 
+                if (PlayerPrefs.GetInt("MissionEnable") == 0)
+                {
+                    GameManger.instance.MissionActive.SetActive(true);
+                }
 
             }
 
@@ -152,6 +159,7 @@ public class Damage_Script : MonoBehaviour
         else
         {
             damageValue = damageValue -20;
+            
         }
        
        

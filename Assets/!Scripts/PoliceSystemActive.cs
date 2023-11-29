@@ -86,6 +86,7 @@ public class PoliceSystemActive : MonoBehaviour
         Instantiate(policeCarPrefab.transform, plc.Near_Object.transform.position, plc.Near_Object.transform.rotation);
         plc.Check_PoliceCar = false;
         CarOutBtn.SetActive(false);
+        GameManger.instance.MissionActive.SetActive(false);
     }
 
     public GameObject SpawnerReference;

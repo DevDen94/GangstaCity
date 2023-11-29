@@ -1490,7 +1490,7 @@ MonoBehaviour:
   weaponCategory: Pistol
   shootFrequency: 0.25
   isInfinityAmmo: 0
-  ammo: 100
+  ammo: 15
   ignoreTags: []
   hitLayer:
     serializedVersion: 2
@@ -1537,7 +1537,7 @@ MonoBehaviour:
   automaticWeapon: 0
   reloadTime: 1
   reloadOneByOne: 0
-  clipSize: 8
+  clipSize: 15
   dontUseReload: 0
   autoReload: 0
   ammoID: 20
