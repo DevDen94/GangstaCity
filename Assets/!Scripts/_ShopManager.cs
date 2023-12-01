@@ -16,7 +16,7 @@ public class _ShopManager : MonoBehaviour
     private int Temp;
     private string EntryName;
     private int No;
-    private int Price;
+ 
 
     public Animator Camera;
     public GameObject Show_UpdatePanel;
@@ -28,8 +28,7 @@ public class _ShopManager : MonoBehaviour
         Default_Set();
         Camera.SetInteger("value", 10); 
         gm = Gangster[0];
-        Price = PlayerPrefs.GetInt("Cash");
-        Cash_.text = Price.ToString();
+        Cash_.text = PlayerPrefs.GetInt("Cash").ToString();
       
         
        
@@ -132,12 +131,14 @@ public class _ShopManager : MonoBehaviour
             Buy_Btn.SetActive(false);
             Select_Btn.SetActive(true);
             ChangeMaterialAll();
+            Debug.LogError("locked");
         }
         else
         {
             Buy_Btn.SetActive(true);
             Select_Btn.SetActive(false);
             Entity_PriceText.text = Generic_Prices[Temp].ToString();
+            Debug.LogError("UNlocked");
         }
     }
     public void Set_Textures()
@@ -180,9 +181,9 @@ public class _ShopManager : MonoBehaviour
     }
     public void Buy_Click()    // Buy btn clicked to check if it's buyable or not
     {
-        if (Price >= Generic_Prices[Temp])
+        if (PlayerPrefs.GetInt("Cash") >= Generic_Prices[Temp])
         {
-            PlayerPrefs.SetInt("Cash", Price - Generic_Prices[Temp]);
+            PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") - Generic_Prices[Temp]);
             Cash_.text = PlayerPrefs.GetInt("Cash").ToString();
             CashMain.text= PlayerPrefs.GetInt("Cash").ToString();
             PlayerPrefs.SetInt(EntryName + Temp, 1);

@@ -65,7 +65,7 @@ public class Check_Building : MonoBehaviour
         speed = GetComponent<RCC_CarControllerV3>().speed;
         if (isEject)
         {
-            if (speed < 3)
+            if (speed < 27)
             {
 
                 Eject_Car();

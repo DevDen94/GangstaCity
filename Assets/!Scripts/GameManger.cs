@@ -123,7 +123,9 @@ public class GameManger : MonoBehaviour
             PlayerPrefs.SetInt("MissionNo",1);
            
         }
-        CashText.text = PlayerPrefs.GetInt("Cash").ToString();
+      
+
+       CashText.text = PlayerPrefs.GetInt("Cash").ToString();
         //PlayerPrefs.SetInt("MissionNo", 2);
         selected_Mission = PlayerPrefs.GetInt("MissionNo");
        // controller.Spawn(SpawnPoints[PlayerPrefs.GetInt("MissionNo")].transform);
@@ -136,8 +138,13 @@ public class GameManger : MonoBehaviour
         Missions[selected_Mission].SetActive(true);
         cm.DestinationPoint = Missions[selected_Mission];
         cm.Set_NavigationDestination();
+        Set_Sounds();
     }
-
+    void Set_Sounds()
+    {
+        src.volume= PlayerPrefs.GetFloat("Music");
+        Car_Manager.instance.RadioMusic.volume= PlayerPrefs.GetFloat("Music");
+    }
     public void Spawner()
     {
         int rand = Random.Range(0, SpawnPoints.Length);
