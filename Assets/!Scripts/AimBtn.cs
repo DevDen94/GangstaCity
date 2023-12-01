@@ -7,8 +7,9 @@ public class AimBtn : MonoBehaviour
     public static AimBtn reg;
     public bool IsGameManagerEnable;
     public GameObject ManagerScript;
-    public GameObject cars_ToBuy;
-   public void AimOn()
+    public GameObject cars_ToBuy; 
+    public AudioListener[] lis;
+    public void AimOn()
     {
         Car_Manager.instance.PistolAim();
     }
@@ -20,8 +21,16 @@ public class AimBtn : MonoBehaviour
 
     private void Start()
     {
+       
         reg = this;
-        Invoke("Delay", 0.1f);
+        Invoke("Delay", 0.1f); 
+        if (PlayerPrefs.GetFloat("Music") < 4)
+        {
+            foreach (AudioListener lis in lis)
+            {
+                lis.enabled = false;
+            }
+        }
     }
     void Delay()
     {

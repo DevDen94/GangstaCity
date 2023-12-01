@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 5573335082542504892}
   - component: {fileID: 5573335082542504893}
   - component: {fileID: 5573335082542504882}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: F_1
   m_TagString: NPC
   m_Icon: {fileID: 0}

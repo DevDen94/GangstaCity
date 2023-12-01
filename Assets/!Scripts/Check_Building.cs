@@ -131,7 +131,7 @@ public class Check_Building : MonoBehaviour
         Player.SetInteger("Sit", 2);
         Invoke("AfterDelay", 1f);
         gameObject.tag = "Car";
-        gameObject.layer = LayerMask.NameToLayer("Player");
+       // gameObject.layer = LayerMask.NameToLayer("Player");
         SRC_Audios.SetActive(true);
     }
     void AfterDelay()
@@ -188,7 +188,7 @@ public class Check_Building : MonoBehaviour
         Trigger.SetActive(true);
         Car_Out = true;
         gameObject.tag = "TrafficLight";
-        gameObject.layer = LayerMask.NameToLayer("Default");
+     //   gameObject.layer = LayerMask.NameToLayer("Default");
         gameObject.SetActive(false);
         Invoke("ofice", 0.2f);
         

@@ -30325,7 +30325,7 @@ MonoBehaviour:
   reloadOneByOne: 0
   clipSize: 10
   dontUseReload: 0
-  autoReload: 0
+  autoReload: 1
   ammoID: 17
   moveSetID: 1
   upperBodyID: 3

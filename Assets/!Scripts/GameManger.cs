@@ -65,9 +65,10 @@ public class GameManger : MonoBehaviour
     public bool isOneTime;
     Transform Des;
     public Text CashText;
-    
+  
     public void Sprint_Call()
     {
+       
         if (IsSprintOff )
         {
             SprintingEffect.SetActive(false);
@@ -105,6 +106,7 @@ public class GameManger : MonoBehaviour
     }
     [HideInInspector]
     public GameObject MissionActive;
+    
     public void hEALTH()
     {
         TPS_Controls[1].GetComponent<vHealthController>()._currentHealth = 250;
@@ -144,6 +146,7 @@ public class GameManger : MonoBehaviour
     {
         src.volume= PlayerPrefs.GetFloat("Music");
         Car_Manager.instance.RadioMusic.volume= PlayerPrefs.GetFloat("Music");
+       
     }
     public void Spawner()
     {
