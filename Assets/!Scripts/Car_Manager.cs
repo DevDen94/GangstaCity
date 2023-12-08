@@ -124,6 +124,7 @@ public class Car_Manager : MonoBehaviour
         instance = this;
         list.tpCameraStates[0].defaultDistance = 2.2f;
         list.tpCameraStates[0].height = 1f;
+        TPS_Controls[5] = GameObject.FindGameObjectWithTag("Clone");
     }
 
     public void Set_NavigationDestination() {

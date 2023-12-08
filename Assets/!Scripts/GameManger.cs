@@ -59,6 +59,7 @@ public class GameManger : MonoBehaviour
     public GameObject Ref_Jump;
     public GameObject SprintReference;
     public GameObject SprintingEffect;
+    public AudioSource Sprint_Effect;
     [HideInInspector]
     public bool IsSprintOff;
     [HideInInspector]
@@ -74,12 +75,13 @@ public class GameManger : MonoBehaviour
             SprintingEffect.SetActive(false);
             SprintReference.SetActive(false);
             isOneTime = false;
+            Sprint_Effect.gameObject.SetActive(false);
         }
         else {
             SprintingEffect.SetActive(true);
             SprintReference.SetActive(true);
             isOneTime = true;
-           
+            Sprint_Effect.gameObject.SetActive(true);
         }
     }
     public void Jump_Long()

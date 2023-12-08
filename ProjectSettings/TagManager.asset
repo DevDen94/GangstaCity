@@ -40,6 +40,7 @@ TagManager:
   - NPC_CAR
   - FxTemporaire
   - Cash
+  - Clone
   layers:
   - Default
   - TransparentFX
