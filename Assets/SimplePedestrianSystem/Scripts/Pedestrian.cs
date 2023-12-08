@@ -54,7 +54,7 @@ namespace PedestrianSystem{
 		}
 		void Delay()
 		{
-			if (PoliceSystemActive.instance.PoliceSirenDelay_Complete)
+			if (PoliceSystemActive.instance.PoliceSirenDelay_Complete && PlayerPrefs.GetInt("M_")==0)
 			{
 				PoliceSystemActive.instance.PoliceActive = true;
 				GameManger.instance.PoliceSirenFade.SetActive(true);

@@ -157,6 +157,22 @@ public class Car_Manager : MonoBehaviour
         }
       
     }
+
+    public void WatchAd_BuyCar() /// PlaceRewardedAd
+    {
+        PlayerPrefs.SetInt(Car_Name, 1);
+        Rcc_Header_Camera.SetActive(true);
+        Carbutton_IN.SetActive(false);
+        Buy_Panel.SetActive(false);
+        hudNav.PlayerCamera = RCC_Camera;
+        GameManger.instance.OFF_TPS();
+        if (AI_Car.Rcc_Car == true)
+        {
+            Car.Drive_Car();
+            Rcc_Header_Camera.GetComponent<RCC_Camera>().cameraTarget.playerVehicle = Car.gameObject.GetComponent<RCC_CarControllerV3>();
+            return;
+        }
+    }
     public void BuyCar()
     {
         if (PlayerPrefs.GetInt("Cash") >= 1000)

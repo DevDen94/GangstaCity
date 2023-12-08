@@ -7,6 +7,7 @@ public class MissionTrigger : MonoBehaviour
     public int missionNumber;
     public GameObject mission;
     private Mission_Script m;
+    
     private void Start()
     {
        // mission = GameObject.FindGameObjectWithTag("Mission");
@@ -22,6 +23,7 @@ public class MissionTrigger : MonoBehaviour
             GameManger.instance.OFF_TPS();
             PlayerPrefs.SetInt("TPS", 1);
             PlayerPrefs.SetInt("MissionEnable", 1);
+            PlayerPrefs.SetInt("M_", 1);
 
         }
         if (other.gameObject.tag == "Car")
@@ -34,6 +36,7 @@ public class MissionTrigger : MonoBehaviour
            // Car_Manager.instance.Car.gameObject.SetActive(false);
             Car_Manager.instance.Rcc_Canvas.SetActive(false);
             PlayerPrefs.SetInt("TPS", 0);
+            PlayerPrefs.SetInt("M_", 1);
 
         }
     }

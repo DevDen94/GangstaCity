@@ -98,9 +98,11 @@ public class GameManger : MonoBehaviour
         MissionComplete.SetActive(true);
         src.PlayOneShot(WinSound);
         PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + 900);
+        PlayerPrefs.SetInt("M_", 0);
     }
     public void Loose_Mission()
     {
+        PlayerPrefs.SetInt("M_", 0);
         nav.GameEndl = true;
         MissionFailed.SetActive(true);
         src.PlayOneShot(LooseSound);
@@ -115,6 +117,7 @@ public class GameManger : MonoBehaviour
     }
     private void Start()
     {
+        PlayerPrefs.SetInt("M_", 0);
         PlayerPrefs.SetInt("MissionEnable", 0);
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Time.timeScale = 1f;
