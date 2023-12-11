@@ -117,6 +117,7 @@ public class GameManger : MonoBehaviour
     }
     private void Start()
     {
+      
         PlayerPrefs.SetInt("M_", 0);
         PlayerPrefs.SetInt("MissionEnable", 0);
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
@@ -124,27 +125,23 @@ public class GameManger : MonoBehaviour
         OFF_TPS();
         cm = GetComponent<Car_Manager>(); 
         instance = this;
-        if (!PlayerPrefs.HasKey("Start"))
+        if (PlayerPrefs.GetInt("Mode_Select") == 1)
         {
-            PlayerPrefs.SetInt("Start", 0);
-            PlayerPrefs.SetInt("MissionNo",1);
+            foreach (GameObject m in Missions)
+            {
+                m.SetActive(false);
+            }
+            selected_Mission = PlayerPrefs.GetInt("MissionNo");
+            MissionActive = Missions[selected_Mission];
+            Missions[selected_Mission].SetActive(true);
+            cm.DestinationPoint = Missions[selected_Mission];
+           
+            cm.Set_NavigationDestination();
            
         }
       
-
-       CashText.text = PlayerPrefs.GetInt("Cash").ToString();
-        //PlayerPrefs.SetInt("MissionNo", 2);
-        selected_Mission = PlayerPrefs.GetInt("MissionNo");
-       // controller.Spawn(SpawnPoints[PlayerPrefs.GetInt("MissionNo")].transform);
+        CashText.text = PlayerPrefs.GetInt("Cash").ToString();
         SpawnPlayer();
-        foreach (GameObject m in Missions)
-        {
-            m.SetActive(false);
-        }
-        MissionActive = Missions[selected_Mission];
-        Missions[selected_Mission].SetActive(true);
-        cm.DestinationPoint = Missions[selected_Mission];
-        cm.Set_NavigationDestination();
         Set_Sounds();
     }
     void Set_Sounds()
