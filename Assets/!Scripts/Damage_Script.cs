@@ -125,7 +125,7 @@ public class Damage_Script : MonoBehaviour
                 PoliceSystemActive.instance.PoliceCarPanel.SetActive(true);
                 PoliceSystemActive.instance.PoliceCarPanel.transform.GetChild(0).GetComponent<Text>().text = "Good Job. You destroyed the Police Car";
 
-                if (PlayerPrefs.GetInt("MissionEnable") == 0)
+                if (PlayerPrefs.GetInt("MissionEnable") == 0 && PlayerPrefs.GetInt("Mode_Select") == 1)
                 {
                     GameManger.instance.MissionActive.SetActive(true);
                 }

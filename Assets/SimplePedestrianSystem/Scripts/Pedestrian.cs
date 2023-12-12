@@ -41,7 +41,7 @@ namespace PedestrianSystem{
 			if (deathvalue <= 0 && !is_Last)
 			{
 
-				Debug.LogError("dEADnPC");
+				//Debug.LogError("dEADnPC");
 				is_Last = true;
 				isDead = true;
 				anim.SetInteger("MoveState", 3);
@@ -54,7 +54,7 @@ namespace PedestrianSystem{
 		}
 		void Delay()
 		{
-			if (PoliceSystemActive.instance.PoliceSirenDelay_Complete && PlayerPrefs.GetInt("M_")==0)
+			if (PoliceSystemActive.instance.PoliceSirenDelay_Complete && PlayerPrefs.GetInt("Mode_Select") ==2)
 			{
 				PoliceSystemActive.instance.PoliceActive = true;
 				GameManger.instance.PoliceSirenFade.SetActive(true);

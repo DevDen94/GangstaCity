@@ -23,7 +23,7 @@ public class AimBtn : MonoBehaviour
     {
        
         reg = this;
-        Invoke("Delay", 0.1f); 
+        Invoke("Delay", 0.5f); 
         if (PlayerPrefs.GetFloat("Music") < 0.2)
         {
             foreach (AudioListener lis in lis)

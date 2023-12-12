@@ -157,8 +157,7 @@ public class Car_Manager : MonoBehaviour
         }
       
     }
-
-    public void WatchAd_BuyCar() /// PlaceRewardedAd
+    public void CarBuySucessfull()
     {
         PlayerPrefs.SetInt(Car_Name, 1);
         Rcc_Header_Camera.SetActive(true);
@@ -172,6 +171,10 @@ public class Car_Manager : MonoBehaviour
             Rcc_Header_Camera.GetComponent<RCC_Camera>().cameraTarget.playerVehicle = Car.gameObject.GetComponent<RCC_CarControllerV3>();
             return;
         }
+    }
+    public void WatchAd_BuyCar() /// PlaceRewardedAd
+    {
+        GoogleAdMobController.instance.ShowRewardedAd();
     }
     public void BuyCar()
     {
@@ -309,7 +312,7 @@ public class Car_Manager : MonoBehaviour
         if (Snatch_Car)
         {
             Snatch_Car = false;
-            if (PoliceSystem.isPolice_CarTimer)
+            if (PoliceSystem.isPolice_CarTimer && PlayerPrefs.GetInt("Mode_Select") == 2)
             {
                 PoliceSystem.ispoliceCar_Active = true;
                 PolicePanel.SetActive(true);

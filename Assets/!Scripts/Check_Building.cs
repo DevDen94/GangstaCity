@@ -147,7 +147,7 @@ public class Check_Building : MonoBehaviour
         if (!Car_Manager.instance.PoliceCop_On)
         {
             Car_Manager.instance.Carbutton_Out.SetActive(true);
-            Debug.LogError("ON");
+            //Debug.LogError("ON");
         }
     }
     public void Eject_Car()
@@ -163,7 +163,10 @@ public class Check_Building : MonoBehaviour
         Player.SetInteger("Sit", 1);
         Invoke("seco", 1f);
         Invoke("Eject_TPSActive", 2.5f);
-        PoliceSystemActive.instance.PoliceCarPanel.SetActive(false);
+        if (PlayerPrefs.GetInt("Mode_Select") == 2)
+        {
+            PoliceSystemActive.instance.PoliceCarPanel.SetActive(false);
+        }
         // Invoke("SetTrafficCar", 3f);
     }
     void seco()

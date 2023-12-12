@@ -192,11 +192,11 @@ public class GoogleAdMobController : MonoBehaviour, IUnityAdsInitializationListe
         if (appOpenId == string.Empty)
             return;
 
-        if (AdManager.Instance.isShowingAd && !paused)
+       /* if (AdManager.Instance.isShowingAd && !paused)
         {
             AdManager.Instance.isShowingAd = false;
             return;
-        }
+        }*/
 
         if (!paused)
         {
@@ -359,7 +359,7 @@ public class GoogleAdMobController : MonoBehaviour, IUnityAdsInitializationListe
         {
             if (_interstitialAd.IsLoaded())
             {
-                AdManager.Instance.isShowingAd = true;
+                //AdManager.Instance.isShowingAd = true;
                 _interstitialAd.Show();
             }
             else
@@ -412,7 +412,7 @@ public class GoogleAdMobController : MonoBehaviour, IUnityAdsInitializationListe
     {
         if (_rewardedAd != null)
         {
-            AdManager.Instance.isShowingAd = true;
+           // AdManager.Instance.isShowingAd = true;
             _rewardedAd.Show();
         }
         else
@@ -512,7 +512,7 @@ public class GoogleAdMobController : MonoBehaviour, IUnityAdsInitializationListe
     {
         if (_rewardedInterstitialAd != null)
         {
-            AdManager.Instance.isShowingAd = true;
+           // AdManager.Instance.isShowingAd = true;
             _rewardedInterstitialAd.Show((reward) =>
             {
                 _rewardedInterstitialRewardEarned = true;
@@ -766,7 +766,16 @@ public class GoogleAdMobController : MonoBehaviour, IUnityAdsInitializationListe
     {
 
         Debug.Log("OnRewardAdClosed");
-        
+        if (PlayerPrefs.GetInt("RewardedMode") == 1)
+        {
+            PlayerPrefs.SetInt("Mode_2", 1);
+            MainMenu.instance.Mode2_Screen.SetActive(false);
+            PlayerPrefs.SetInt("RewardedMode", 0);
+        }
+        else
+        {
+            Car_Manager.instance.CarBuySucessfull();
+        }
 
         if (debug)
             Debug.Log("OnRewardAdClosed");

@@ -26,12 +26,15 @@ public class PoliceSystemActive : MonoBehaviour
     }
     private void Update()
     {
+        if (PlayerPrefs.GetInt("Mode_Select") == 1)
+            return;
+
         if (PoliceActive)
         {
             PoliceSirenDelay_Complete = false;
             PoliceActive = false;
             SetPoliceActive();
-            Invoke("Delay_PoliceMens", 45f);
+            Invoke("Delay_PoliceMens", 10f);
         }
         if (ispoliceCar_Active)
         {
@@ -42,7 +45,7 @@ public class PoliceSystemActive : MonoBehaviour
             SpawnerReference.GetComponent<SphereCollider>().enabled = true;
             playerCar = Car_Manager.instance.target_RccCar;
             Invoke("SpawnPoliceCar", 1f);
-            Invoke("Delay_PoliceCars", 65f);
+            Invoke("Delay_PoliceCars", 25f);
 
 
         }

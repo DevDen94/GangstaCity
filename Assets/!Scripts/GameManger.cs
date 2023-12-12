@@ -50,7 +50,7 @@ public class GameManger : MonoBehaviour
     public AudioClip LooseSound;
 
   
-   public PlayerNavigation nav;
+    public PlayerNavigation nav;
     public Text TaskText;
     public GameObject Task_Panel;
     public GameObject GunPick;
@@ -94,14 +94,21 @@ public class GameManger : MonoBehaviour
     }
     public void Win_Mission()
     {
+        GoogleAdMobController.instance.ShowInterstitialAd();
         nav.GameEndl = true;
         MissionComplete.SetActive(true);
+      
         src.PlayOneShot(WinSound);
         PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + 900);
         PlayerPrefs.SetInt("M_", 0);
+        if (PlayerPrefs.GetInt("Unlocked_Mission") != 10)
+        {
+            PlayerPrefs.SetInt("Unlocked_Mission", PlayerPrefs.GetInt("Unlocked_Mission") + 1);
+        }
     }
     public void Loose_Mission()
     {
+        GoogleAdMobController.instance.ShowInterstitialAd();
         PlayerPrefs.SetInt("M_", 0);
         nav.GameEndl = true;
         MissionFailed.SetActive(true);
@@ -143,6 +150,7 @@ public class GameManger : MonoBehaviour
         CashText.text = PlayerPrefs.GetInt("Cash").ToString();
         SpawnPlayer();
         Set_Sounds();
+       
     }
     void Set_Sounds()
     {
@@ -220,7 +228,15 @@ public class GameManger : MonoBehaviour
     {
         Time.timeScale = 1f;
         src.PlayOneShot(btnCLIP);
-        SceneManager.LoadScene("GamePlay");
+        if (PlayerPrefs.GetInt("Mode_Select") == 1)
+        {
+            SceneManager.LoadScene("MissionMode");
+        }
+        else
+        {
+            SceneManager.LoadScene("CareerMode");
+        }
+        
     }
     public void Home()
     {
@@ -231,7 +247,8 @@ public class GameManger : MonoBehaviour
     {
         Time.timeScale = 1f;
         src.PlayOneShot(btnCLIP);
-        SceneManager.LoadScene("GamePlay");
+        PlayerPrefs.SetInt("MissionNo", PlayerPrefs.GetInt("MissionNo")+1);
+        SceneManager.LoadScene("MissionMode");
     }
     [HideInInspector]
     public bool Is_Shop;

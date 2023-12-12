@@ -10,24 +10,32 @@ public class MainMenu : MonoBehaviour
     public Text shop_cash;
     public Splash LoadingScene_Name;
     int unlockedLevels;
+    public static MainMenu instance;
+    //public Text abc;
     private void Start()
     {
+      
+        instance = this;
         Time.timeScale = 1f;
-        if (!PlayerPrefs.HasKey("S"))
+        if (!PlayerPrefs.HasKey("qabe"))
         {
-            PlayerPrefs.SetInt("MissionNo", 1);
-            PlayerPrefs.SetInt("Cash", 50000);
-            PlayerPrefs.SetInt("S", 12); PlayerPrefs.SetFloat("Music", 1);
+            PlayerPrefs.SetFloat("Music", 1);
+            PlayerPrefs.SetInt("Unlocked_Mission", 1);
+            PlayerPrefs.SetInt("Cash", 1000);
+            PlayerPrefs.SetInt("qabe", 12); 
         }
-        unlockedLevels = PlayerPrefs.GetInt("MissionNo");
-        Disable_All();
+        unlockedLevels = PlayerPrefs.GetInt("Unlocked_Mission");
+        Mission_Unlocked();
         float savedVolume = PlayerPrefs.GetFloat("Music");
         volumeSlider.value = savedVolume;
         src.volume = PlayerPrefs.GetFloat("Music");
         shop_cash.text = PlayerPrefs.GetInt("Cash").ToString();
+       // abc.text = " Unlocked" + unlockedLevels.ToString() + "\t " + PlayerPrefs.GetInt("Cash");
+        GoogleAdMobController.instance.ShowSmallBannerAd();
     }
     public void Start_Btn()
     {
+        GoogleAdMobController.instance.ShowInterstitialAd();
         ModeSelectionPanel.SetActive(true);
     }
     public void BtnClick()
@@ -61,7 +69,7 @@ public class MainMenu : MonoBehaviour
     public Button[] levels;
     public GameObject[] lockedBtn;
 
-    void Disable_All()
+    void Mission_Unlocked()
     {
         foreach(GameObject a in lockedBtn)
         {
@@ -74,6 +82,10 @@ public class MainMenu : MonoBehaviour
         }
     }
   
+    public void ModeBack()
+    {
+        PlayerPrefs.SetInt("RewardedMode", 0);
+    }
     public void ModeSelection(int i = 1)
     {
         if (i == 1)
@@ -86,6 +98,7 @@ public class MainMenu : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("Mode_2") == 1)
             {
+              
                 LoadingScene_Name.sceneToLoad = "CareerMode";
                 LoadingPanel.SetActive(true);
                 PlayerPrefs.SetInt("Mode_Select", 2);
@@ -104,6 +117,8 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") - 2500);
             shop_cash.text = PlayerPrefs.GetInt("Cash").ToString();
             PlayerPrefs.SetInt("Mode_2", 1);
+            Mode2_Screen.SetActive(false);
+            PlayerPrefs.SetInt("RewardedMode", 0);
         }
         else
         {
@@ -113,7 +128,10 @@ public class MainMenu : MonoBehaviour
     }
     public void Unlocked_ModeBY_Rewarded()
     {
-        PlayerPrefs.SetInt("Mode_2", 1);
+        PlayerPrefs.SetInt("RewardedMode", 1);
+        GoogleAdMobController.instance.ShowRewardedAd();
+        
+
     }
     public void Settings()
     {
