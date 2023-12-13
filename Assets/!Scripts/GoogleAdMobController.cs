@@ -219,6 +219,11 @@ public class GoogleAdMobController : MonoBehaviour, IUnityAdsInitializationListe
         _bannerViewSmall.Show();
     }
 
+    public void HideSmallBanner()
+    {
+        _bannerViewSmall.Hide();
+    }
+
     public void ShowBigBannerAd()
     {
         _bannerViewBig.Show();

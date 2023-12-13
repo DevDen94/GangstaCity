@@ -33,7 +33,7 @@ public class MissionTrigger : MonoBehaviour
             GameManger.instance.Initialize_Mission(missionNumber);
             Car_Manager.instance.Rcc_Header_Camera.SetActive(false);
             Car_Manager.instance.RadioMusic.gameObject.SetActive(false);
-           // Car_Manager.instance.Car.gameObject.SetActive(false);
+            Car_Manager.instance.Car.gameObject.SetActive(false);
             Car_Manager.instance.Rcc_Canvas.SetActive(false);
             PlayerPrefs.SetInt("TPS", 0);
             PlayerPrefs.SetInt("M_", 1);

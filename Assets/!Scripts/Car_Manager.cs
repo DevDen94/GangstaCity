@@ -174,7 +174,7 @@ public class Car_Manager : MonoBehaviour
     }
     public void WatchAd_BuyCar() /// PlaceRewardedAd
     {
-        GoogleAdMobController.instance.ShowRewardedAd();
+      //  GoogleAdMobController.instance.ShowRewardedAd();
     }
     public void BuyCar()
     {

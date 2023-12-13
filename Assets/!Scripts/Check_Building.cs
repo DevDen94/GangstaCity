@@ -40,23 +40,23 @@ public class Check_Building : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer==LayerMask.NameToLayer("Building"))
+        if (other.gameObject.layer==LayerMask.NameToLayer("Building") || other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
            
                 Car_Manager.instance.Carbutton_Out.SetActive(false);
-            Debug.LogError("OFF");
+           // Debug.LogError(other.gameObject.name);
             
         }
         
     }
     private void OnTriggerExit(Collider other)
     {
-    if (other.gameObject.layer == LayerMask.NameToLayer("Building"))
+    if (other.gameObject.layer == LayerMask.NameToLayer("Building") || other.gameObject.layer == LayerMask.NameToLayer("Player"))
     {
         if (!Car_Manager.instance.PoliceCop_On)
         {
             Car_Manager.instance.Carbutton_Out.SetActive(true);
-                Debug.LogError("ON");
+               // Debug.LogError("ON");
         }
     }
     }

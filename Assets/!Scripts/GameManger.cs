@@ -9,7 +9,7 @@ using Invector;
 using Invector.vShooter;
 public class GameManger : MonoBehaviour
 {
-
+    public bool Tutorial;
     public GameObject[] SpawnPoints;
     public GameObject FadeScreen;
     public GameObject CutSceneScreen;
@@ -125,13 +125,25 @@ public class GameManger : MonoBehaviour
     private void Start()
     {
       
-        PlayerPrefs.SetInt("M_", 0);
-        PlayerPrefs.SetInt("MissionEnable", 0);
+        cm = GetComponent<Car_Manager>();
+        instance = this;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Time.timeScale = 1f;
+        if (Tutorial)
+        {
+       
+            cm = GetComponent<Car_Manager>();
+            ThirdPersonPLayer.transform.position = SpawnPoints[0].transform.position;
+            ThirdPersonPLayer.transform.rotation = SpawnPoints[0].transform.rotation;
+            return;
+        }
+         
+      
+        PlayerPrefs.SetInt("M_", 0);
+        PlayerPrefs.SetInt("MissionEnable", 0);
+     
         OFF_TPS();
-        cm = GetComponent<Car_Manager>(); 
-        instance = this;
+        
         if (PlayerPrefs.GetInt("Mode_Select") == 1)
         {
             foreach (GameObject m in Missions)
@@ -150,7 +162,7 @@ public class GameManger : MonoBehaviour
         CashText.text = PlayerPrefs.GetInt("Cash").ToString();
         SpawnPlayer();
         Set_Sounds();
-       
+        GoogleAdMobController.instance.HideSmallBanner();
     }
     void Set_Sounds()
     {
@@ -210,7 +222,7 @@ public class GameManger : MonoBehaviour
         {
             Car_Manager.instance.Rcc_Header_Camera.SetActive(true);
             Car_Manager.instance.RadioMusic.gameObject.SetActive(true);
-            //Car_Manager.instance.Car.gameObject.SetActive(true);
+            Car_Manager.instance.Car.gameObject.SetActive(true);
             Car_Manager.instance.Rcc_Canvas.SetActive(true);
             Hud_Navigation.SetActive(true);
 

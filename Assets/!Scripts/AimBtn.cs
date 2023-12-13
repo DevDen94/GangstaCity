@@ -9,6 +9,7 @@ public class AimBtn : MonoBehaviour
     public GameObject ManagerScript;
     public GameObject cars_ToBuy; 
     public AudioListener[] lis;
+    public bool tutorial;
     public void AimOn()
     {
         Car_Manager.instance.PistolAim();
@@ -21,7 +22,10 @@ public class AimBtn : MonoBehaviour
 
     private void Start()
     {
-       
+        if (tutorial)
+            return;
+
+
         reg = this;
         Invoke("Delay", 0.5f); 
         if (PlayerPrefs.GetFloat("Music") < 0.2)
