@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
     public GameObject LoadingPanel;
     public AudioClip btnClick;
     public AudioSource src;
+    public AudioSource soundSrc;
     public Text shop_cash;
     public Splash LoadingScene_Name;
     int unlockedLevels;
@@ -29,6 +30,8 @@ public class MainMenu : MonoBehaviour
         float savedVolume = PlayerPrefs.GetFloat("Music");
         volumeSlider.value = savedVolume;
         src.volume = PlayerPrefs.GetFloat("Music");
+        soundSlider.value = PlayerPrefs.GetFloat("Sounds");
+        soundSrc.volume = PlayerPrefs.GetFloat("Sounds");
         shop_cash.text = PlayerPrefs.GetInt("Cash").ToString();
        // abc.text = " Unlocked" + unlockedLevels.ToString() + "\t " + PlayerPrefs.GetInt("Cash");
         GoogleAdMobController.instance.ShowSmallBannerAd();
@@ -40,20 +43,25 @@ public class MainMenu : MonoBehaviour
     }
     public void BtnClick()
     {
-        src.PlayOneShot(btnClick);
+        soundSrc.PlayOneShot(btnClick);
     }
     public void OnExit()
     {
         Application.Quit();
     }
     public Slider volumeSlider;
+    public Slider soundSlider;
     public void SetVolume()
     {
         float volume = volumeSlider.value;
         PlayerPrefs.SetFloat("Music", volume);
         src.volume = PlayerPrefs.GetFloat("Music");
     }
-
+    public void SetSoundV()
+    {
+        float volume1 = soundSlider.value;
+        PlayerPrefs.SetFloat("Sounds", volume1);
+    }
     public void LoadLevel(int i = 1)
     {
         PlayerPrefs.SetInt("MissionNo", i);

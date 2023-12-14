@@ -48,6 +48,7 @@ public class GameManger : MonoBehaviour
     public AudioClip btnCLIP;
     public AudioClip WinSound;
     public AudioClip LooseSound;
+    public AudioSource BackgroundMusic;
 
   
     public PlayerNavigation nav;
@@ -166,7 +167,7 @@ public class GameManger : MonoBehaviour
     }
     void Set_Sounds()
     {
-        src.volume= PlayerPrefs.GetFloat("Music");
+        BackgroundMusic.volume= PlayerPrefs.GetFloat("Music");
         Car_Manager.instance.RadioMusic.volume= PlayerPrefs.GetFloat("Music");
        
     }

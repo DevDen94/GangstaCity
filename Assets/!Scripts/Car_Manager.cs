@@ -93,6 +93,10 @@ public class Car_Manager : MonoBehaviour
         Car.Weapon_Main.SetActive(true);
         Car.Weapon_Main.GetComponent<Animator>().SetBool("upper", true);
     }
+    public void DragModeSelect()
+    {
+        RCC_Settings.Instance.behaviorSelectedIndex=3;
+    }
     public void CloseWeaponMode()
     {
         IsShooterActive = false;
