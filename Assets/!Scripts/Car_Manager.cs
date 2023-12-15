@@ -95,7 +95,7 @@ public class Car_Manager : MonoBehaviour
     }
     public void DragModeSelect()
     {
-        RCC_Settings.Instance.behaviorSelectedIndex=3;
+        RCC_Settings.Instance.behaviorSelectedIndex = 2;
     }
     public void CloseWeaponMode()
     {
