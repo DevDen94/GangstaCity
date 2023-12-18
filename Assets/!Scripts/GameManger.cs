@@ -12,6 +12,8 @@ public class GameManger : MonoBehaviour
 {
     public bool Tutorial;
     public GameObject[] Gangster;
+    public Button GangsterMen;
+    public Button GangsterWomen;
     public GameObject[] SpawnPoints;
     public GameObject FadeScreen;
     public GameObject CutSceneScreen;
@@ -41,7 +43,8 @@ public class GameManger : MonoBehaviour
     public vGameController controller;
     [HideInInspector]
     public int selected_Mission;
-    public Car_Manager cm;
+
+    private Car_Manager cm;
 
     public GameObject ShopCanvas;
     public GameObject ShopGameObject;
@@ -61,7 +64,7 @@ public class GameManger : MonoBehaviour
     public GameObject PoliceSirenFade;
     public GameObject JumpLongEffect;
     GameObject Ref_Jump;
-    GameObject SprintReference;
+    public GameObject SprintReference;
      GameObject SprintingEffect;
     public AudioSource Sprint_Effect;
     [HideInInspector]
@@ -127,28 +130,42 @@ public class GameManger : MonoBehaviour
         ThirdPersonPLayer.GetComponent<vHealthController>()._currentHealth = 250;
     }
 
+    public void ChangeGangster() {
+        if (currentGangster == 0)
+        {
+            currentGangster = 1;
+            ThirdPersonPLayer = Instantiate(Gangster[currentGangster],ThirdPersonPLayer.transform.position,ThirdPersonPLayer.transform.rotation);
+        }
+        else
+        {
+            currentGangster = 0;
+            ThirdPersonPLayer = Instantiate(Gangster[currentGangster], ThirdPersonPLayer.transform.position, ThirdPersonPLayer.transform.rotation);
+        }
+        AssignPlayerReference();
+    }
     private void AssignPlayerReference()
     {
-        SprintReference = ThirdPersonPLayer.GetComponent<PlayerReferences>().SprintReference;
+       // SprintReference = ThirdPersonPLayer.GetComponent<PlayerReferences>().SprintReference;
         Ref_Jump = ThirdPersonPLayer.GetComponent<PlayerReferences>().LongJumpPoint;
         PlayerRef = ThirdPersonPLayer.GetComponent<PlayerReferences>().PlayerMinimap;
         SprintingEffect = ThirdPersonPLayer.GetComponent<PlayerReferences>().SprintEffect;
-        hudNav.gameObject.SetActive(true);
-        hudNav.PlayerController = ThirdPersonPLayer.transform;
-
-
-
-
+         // hudNav.gameObject.SetActive(true);
+        //hudNav.PlayerController = ThirdPersonPLayer.transform;
     }
+    int currentGangster = 0;
     private void Start()
     {
-        PlayerPrefs.SetInt("SelectedGangster", 0);
-        ThirdPersonPLayer = Instantiate(Gangster[PlayerPrefs.GetInt("SelectedGangster")]);
-        AssignPlayerReference();
-        cm = GetComponent<Car_Manager>();
+        PlayerPrefs.SetInt("SelectedGangster", 1);
+        currentGangster = PlayerPrefs.GetInt("SelectedGangster");
+        ChangeGangster();
+
+        GangsterMen.onClick.AddListener(ChangeGangster);
+        GangsterWomen.onClick.AddListener(ChangeGangster);
         instance = this;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Time.timeScale = 1f;
+        GetComponent<Car_Manager>().enabled = true;
+        cm = GetComponent<Car_Manager>();
         if (Tutorial)
         {
        
@@ -181,10 +198,11 @@ public class GameManger : MonoBehaviour
       
         CashText.text = PlayerPrefs.GetInt("Cash").ToString();
         SpawnPlayer();
-        cm.gameObject.SetActive(true);
+     
+        
         Set_Sounds();
         
-        GoogleAdMobController.instance.HideSmallBanner();
+        //GoogleAdMobController.instance.HideSmallBanner();
     }
     void Set_Sounds()
     {

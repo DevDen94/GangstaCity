@@ -13,7 +13,7 @@ public class Car_Manager : MonoBehaviour
 {
     public GameObject Rcc_Canvas;
     public GameObject Rcc_Header_Camera;
-    private GameManger gameManager;
+    public GameManger gameManager;
     public static Car_Manager instance;
 
     public GameObject Carbutton_IN;
