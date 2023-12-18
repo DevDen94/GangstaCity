@@ -101,7 +101,7 @@ public class Check_Building : MonoBehaviour
 
         if (Car_Out)
         {
-            float distance = Vector3.Distance(this.transform.position, Car_Manager.instance.TPS_Controls[2].transform.position);
+            float distance = Vector3.Distance(this.transform.position, GameManger.instance.TPS_Controls[2].transform.position);
             if (distance > 50f)
             {
                 Car_Out = false;
@@ -122,14 +122,28 @@ public class Check_Building : MonoBehaviour
             Is_DriverExit = true;
         }
         Car_Manager.instance.Your_CurrentCar_Health(damage_.damageValue);
-        
         Car_Out = false;
         GetComponent<RCC_CarControllerV3>().StartEngine();
         GetComponent<Rigidbody>().isKinematic = false;
+        damage_.isDamageEnabled = true;
+        if (Car_Manager.instance.Right_Trigger_Enable)               // This statement only Plays when Player Trigger right side of Car
+        {
+            Car_Manager.instance.Fade_Screen_Rightdriver.SetActive(true);
+            Car_Manager.instance.Rcc_Canvas.SetActive(true);
+            Car_Manager.instance.RadioMusic.gameObject.SetActive(true);
+            GameManger.instance.BackgroundMusic.gameObject.SetActive(false);
+            GetComponent<RCC_CarControllerV3>().enabled = true;
+            Invoke("ExitCarOutBTn", 2f);
+            Player.SetInteger("Sit", 2);
+            gameObject.tag = "Car";
+            SRC_Audios.SetActive(true);
+            Car_Manager.instance.Set_ParentofTraffic(gameObject);
+            return;
+        }
+
         Player.gameObject.transform.SetPositionAndRotation(Point.transform.position, Point.transform.rotation);
         Car_Manager.instance.Set_ParentofTraffic(gameObject);
         Player.gameObject.SetActive(true);
-        damage_.isDamageEnabled = true;
         Door.SetBool("Open", true);
         Player.SetInteger("Sit", 2);
         Invoke("AfterDelay", 1f);
@@ -156,6 +170,8 @@ public class Check_Building : MonoBehaviour
     }
     public void Eject_Car()
     {
+       
+       
         damage_.isDamageEnabled = false;
         SRC_Audios.SetActive(false);
         Car_Manager.instance.RadioMusic.gameObject.SetActive(false);
@@ -164,6 +180,13 @@ public class Check_Building : MonoBehaviour
         GetComponent<RCC_CarControllerV3>().KillEngine();
         GetComponent<Rigidbody>().isKinematic = true;
         Car_Manager.instance.Rcc_Canvas.SetActive(false);
+        if (Car_Manager.instance.Right_Trigger_Enable)               // This statement only Plays when Player Trigger right side of Car
+        {
+            Car_Manager.instance.Fade_Screen_Rightdriver.SetActive(true);
+            Eject_TPSActive();
+            Car_Manager.instance.Right_Trigger_Enable = false;
+            return;
+        }
         Door.SetBool("Open", true);
         Player.SetInteger("Sit", 1);
         Invoke("seco", 1f);
@@ -183,15 +206,15 @@ public class Check_Building : MonoBehaviour
     {
         
         Car_Manager.instance.Rcc_Header_Camera.SetActive(false);
-        Car_Manager.instance.TPS_Controls[2].transform.position = Point.transform.position;
-        Car_Manager.instance.TPS_Controls[2].transform.rotation = Point.transform.rotation;
-        Car_Manager.instance.TPS_Controls[2].SetActive(true);
+        GameManger.instance.ThirdPersonPLayer.transform.position = Point.transform.position;
+        GameManger.instance.ThirdPersonPLayer.transform.rotation = Point.transform.rotation;
+        GameManger.instance.ThirdPersonPLayer.SetActive(true);
         Player.gameObject.SetActive(false);
-        for (int i = 0; i < Car_Manager.instance.TPS_Controls.Length; ++i)
+        for (int i = 0; i < GameManger.instance.TPS_Controls.Length; ++i)
         {
-            Car_Manager.instance.TPS_Controls[i].SetActive(true);
+            GameManger.instance.TPS_Controls[i].SetActive(true);
         }
-        Car_Manager.instance.Set_ParentofTraffic(Car_Manager.instance.TPS_Controls[2]);
+        Car_Manager.instance.Set_ParentofTraffic(GameManger.instance.ThirdPersonPLayer);
         Player.gameObject.transform.LookAt(LookAt.transform);
         Trigger.SetActive(true);
         Car_Out = true;

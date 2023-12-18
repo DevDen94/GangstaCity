@@ -68,9 +68,9 @@ public class DoorOpen : MonoBehaviour
         gameObject.transform.parent.GetComponent<Check_Building>().SRC_Audios.SetActive(true);
         Car_Manager.instance.Set_ParentofTraffic(gameObject.transform.parent.gameObject);
  
-        for (int i = 0; i < Car_Manager.instance.TPS_Controls.Length; ++i)
+        for (int i = 0; i < GameManger.instance.TPS_Controls.Length; ++i)
         {
-            Car_Manager.instance.TPS_Controls[i].SetActive(false);
+            GameManger.instance.TPS_Controls[i].SetActive(false);
         }
       
         Player.gameObject.SetActive(true);
@@ -119,16 +119,16 @@ public class DoorOpen : MonoBehaviour
     }
     void Eject_TPSActive()
     {
-        Car_Manager.instance.TPS_Controls[2].transform.position = Point.transform.position;
-        Car_Manager.instance.TPS_Controls[2].transform.rotation = Point.transform.rotation;
-        Car_Manager.instance.TPS_Controls[2].SetActive(true);
+        GameManger.instance.ThirdPersonPLayer.transform.position = Point.transform.position;
+        GameManger.instance.ThirdPersonPLayer.transform.rotation = Point.transform.rotation;
+        GameManger.instance.ThirdPersonPLayer.SetActive(true);
         Player.gameObject.SetActive(false);
-        for (int i = 0; i < Car_Manager.instance.TPS_Controls.Length; ++i)
+        for (int i = 0; i < GameManger.instance.TPS_Controls.Length; ++i)
         {
-            Car_Manager.instance.TPS_Controls[i].SetActive(true);
+            GameManger.instance.TPS_Controls[i].SetActive(true);
         }
        // pl.enabled = false;
-        Car_Manager.instance.Set_ParentofTraffic(Car_Manager.instance.TPS_Controls[2]);
+        Car_Manager.instance.Set_ParentofTraffic(GameManger.instance.ThirdPersonPLayer);
        
 
         Player.gameObject.transform.LookAt(LookAt.transform);

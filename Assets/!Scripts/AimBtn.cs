@@ -7,6 +7,7 @@ public class AimBtn : MonoBehaviour
     public static AimBtn reg;
     public bool IsGameManagerEnable;
     public GameObject ManagerScript;
+    public GameObject[] Active_AfterPlayerSpawn;
     public GameObject cars_ToBuy; 
     public AudioListener[] lis;
     public bool tutorial;
@@ -41,8 +42,18 @@ public class AimBtn : MonoBehaviour
         if (ManagerScript != null)
         {
             ManagerScript.SetActive(true);
-            cars_ToBuy.SetActive(true);
+           
             IsGameManagerEnable = true;
+            Invoke("Span", 0.5f);
+           
+        }
+    }
+    void Span()
+    {
+        foreach (GameObject a in Active_AfterPlayerSpawn)
+        {
+            a.SetActive(true);
+            cars_ToBuy.SetActive(true);
         }
     }
     private void OnCollisionEnter(Collision collision)

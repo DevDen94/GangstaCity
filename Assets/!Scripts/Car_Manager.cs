@@ -11,10 +11,9 @@ using Invector.vCamera;
 using Invector;
 public class Car_Manager : MonoBehaviour
 {
-    public GameObject[] TPS_Controls;
     public GameObject Rcc_Canvas;
     public GameObject Rcc_Header_Camera;
-    
+    private GameManger gameManager;
     public static Car_Manager instance;
 
     public GameObject Carbutton_IN;
@@ -36,7 +35,7 @@ public class Car_Manager : MonoBehaviour
     public Camera RCC_Camera;
     public GameObject DestinationPoint;
     public GameObject AimBtn;
-    public vShooterManager sm;
+    private vShooterManager sm;
     public Transform target_RccCar;
     public Transform target_PoliceCar;
     public GameObject InventoryPanel;
@@ -61,6 +60,9 @@ public class Car_Manager : MonoBehaviour
     public GameObject Buy_Panel;
     public GameObject NotEnoughCoins;
 
+    [HideInInspector]
+    public bool Right_Trigger_Enable;
+    public GameObject Fade_Screen_Rightdriver;
     public string Car_Name;
     public Slider CarHealth;
     public void Your_CurrentCar_Health(int dm)
@@ -93,9 +95,19 @@ public class Car_Manager : MonoBehaviour
         Car.Weapon_Main.SetActive(true);
         Car.Weapon_Main.GetComponent<Animator>().SetBool("upper", true);
     }
-    public void DragModeSelect()
+    public GameObject DriftBtn;
+    public GameObject FunArcadeBtn;
+    public void DrrifModeSelect()
     {
         RCC_Settings.Instance.behaviorSelectedIndex = 2;
+        DriftBtn.SetActive(false);
+        FunArcadeBtn.SetActive(true);
+    }
+    public void FunArcadeModeSelect()
+    {
+        RCC_Settings.Instance.behaviorSelectedIndex = 3;
+        DriftBtn.SetActive(true);
+        FunArcadeBtn.SetActive(false);
     }
     public void CloseWeaponMode()
     {
@@ -123,12 +135,14 @@ public class Car_Manager : MonoBehaviour
     }
     void Start()
     {
+        gameManager = GetComponent<GameManger>();
+        sm = gameManager.ThirdPersonPLayer.GetComponent<vShooterManager>();
         Invoke("sec", 0.1f);
         //attackon = false;
         instance = this;
         list.tpCameraStates[0].defaultDistance = 2.2f;
         list.tpCameraStates[0].height = 1f;
-        TPS_Controls[5] = GameObject.FindGameObjectWithTag("Clone");
+       // GameManger.instance.TPS_Controls[4] = GameObject.FindGameObjectWithTag("Clone");
     }
 
     public void Set_NavigationDestination() {
@@ -147,7 +161,7 @@ public class Car_Manager : MonoBehaviour
             Carbutton_IN.SetActive(false);
 
             hudNav.PlayerCamera = RCC_Camera;
-            GameManger.instance.OFF_TPS();
+            gameManager.OFF_TPS();
             if (AI_Car.Rcc_Car == true)
             {
                 Car.Drive_Car();
@@ -168,7 +182,7 @@ public class Car_Manager : MonoBehaviour
         Carbutton_IN.SetActive(false);
         Buy_Panel.SetActive(false);
         hudNav.PlayerCamera = RCC_Camera;
-        GameManger.instance.OFF_TPS();
+        gameManager.OFF_TPS();
         if (AI_Car.Rcc_Car == true)
         {
             Car.Drive_Car();
@@ -186,12 +200,12 @@ public class Car_Manager : MonoBehaviour
         {
             PlayerPrefs.SetInt(Car_Name, 1);
             PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") - 1000);
-            GameManger.instance.CashText.text = PlayerPrefs.GetInt("Cash").ToString();
+            gameManager.CashText.text = PlayerPrefs.GetInt("Cash").ToString();
             Rcc_Header_Camera.SetActive(true);
             Carbutton_IN.SetActive(false);
             Buy_Panel.SetActive(false);
             hudNav.PlayerCamera = RCC_Camera;
-            GameManger.instance.OFF_TPS();
+            gameManager.OFF_TPS();
             if (AI_Car.Rcc_Car == true)
             {
                 Car.Drive_Car();
@@ -236,14 +250,14 @@ public class Car_Manager : MonoBehaviour
  
     public void OpenInventory()
     {
-        GameManger.instance.BtnClick();
+        gameManager.BtnClick();
         InventoryPanel.SetActive(true);
         Time.timeScale = 0f;
     }
     
     public void PressGun(int no)
     {
-        GameManger.instance.BtnClick();
+        gameManager.BtnClick();
         InventoryPanel.SetActive(false);
         Time.timeScale = 1f;
         foreach (GameObject a in Selectors)

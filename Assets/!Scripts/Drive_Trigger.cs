@@ -11,6 +11,8 @@ public class Drive_Trigger : MonoBehaviour
     public bool Is_hummer;
     public string nameofCar;
 
+    public bool Is_RightTrigger;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -25,10 +27,18 @@ public class Drive_Trigger : MonoBehaviour
             {
                 Car_Manager.instance.is_Hummer = false;
             }
-
+           
             Car_Manager.instance.Carbutton_IN.SetActive(true);
             Car_Manager.instance.AI_Car = this;
             Car_Manager.instance.Car = gameObject.transform.parent.GetComponent<Check_Building>();
+            if (Is_RightTrigger)
+            {
+                Car_Manager.instance.Right_Trigger_Enable = true;
+            }
+            else
+            {
+                Car_Manager.instance.Right_Trigger_Enable = false;
+            }
 
         }
     }
@@ -38,6 +48,11 @@ public class Drive_Trigger : MonoBehaviour
         {
             Car_Manager.instance.Carbutton_IN.SetActive(false);
             Car_Manager.instance.AI_Car = null;
+            if (Is_RightTrigger)
+            {
+                Car_Manager.instance.Right_Trigger_Enable = false;
+            }
         }
+       
     }
 }

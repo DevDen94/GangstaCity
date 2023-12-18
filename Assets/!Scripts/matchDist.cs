@@ -7,7 +7,7 @@ public class matchDist : MonoBehaviour
     public GameObject target;
     void Start()
     {
-        target = GameManger.instance.TPS_Controls[2];
+        target = GameManger.instance.ThirdPersonPLayer;
     }
 
     private void FixedUpdate()

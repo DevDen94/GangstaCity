@@ -7,9 +7,11 @@ using UnityEngine.SceneManagement;
 using Invector.vCharacterController;
 using Invector;
 using Invector.vShooter;
+using SickscoreGames.HUDNavigationSystem;
 public class GameManger : MonoBehaviour
 {
     public bool Tutorial;
+    public GameObject[] Gangster;
     public GameObject[] SpawnPoints;
     public GameObject FadeScreen;
     public GameObject CutSceneScreen;
@@ -24,6 +26,7 @@ public class GameManger : MonoBehaviour
 
     public GameObject HealthCanvas;
     public GameObject Hud_Navigation;
+    public HUDNavigationSystem hudNav;
     public GameObject InstructionsPanel;
     public Text StaringInstructions;
     public Instructions All_Instructions;
@@ -57,9 +60,9 @@ public class GameManger : MonoBehaviour
     public GameObject GunPick;
     public GameObject PoliceSirenFade;
     public GameObject JumpLongEffect;
-    public GameObject Ref_Jump;
-    public GameObject SprintReference;
-    public GameObject SprintingEffect;
+    GameObject Ref_Jump;
+    GameObject SprintReference;
+     GameObject SprintingEffect;
     public AudioSource Sprint_Effect;
     [HideInInspector]
     public bool IsSprintOff;
@@ -121,11 +124,27 @@ public class GameManger : MonoBehaviour
     
     public void hEALTH()
     {
-        TPS_Controls[1].GetComponent<vHealthController>()._currentHealth = 250;
+        ThirdPersonPLayer.GetComponent<vHealthController>()._currentHealth = 250;
+    }
+
+    private void AssignPlayerReference()
+    {
+        SprintReference = ThirdPersonPLayer.GetComponent<PlayerReferences>().SprintReference;
+        Ref_Jump = ThirdPersonPLayer.GetComponent<PlayerReferences>().LongJumpPoint;
+        PlayerRef = ThirdPersonPLayer.GetComponent<PlayerReferences>().PlayerMinimap;
+        SprintingEffect = ThirdPersonPLayer.GetComponent<PlayerReferences>().SprintEffect;
+        hudNav.gameObject.SetActive(true);
+        hudNav.PlayerController = ThirdPersonPLayer.transform;
+
+
+
+
     }
     private void Start()
     {
-      
+        PlayerPrefs.SetInt("SelectedGangster", 0);
+        ThirdPersonPLayer = Instantiate(Gangster[PlayerPrefs.GetInt("SelectedGangster")]);
+        AssignPlayerReference();
         cm = GetComponent<Car_Manager>();
         instance = this;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
@@ -162,19 +181,21 @@ public class GameManger : MonoBehaviour
       
         CashText.text = PlayerPrefs.GetInt("Cash").ToString();
         SpawnPlayer();
+        cm.gameObject.SetActive(true);
         Set_Sounds();
+        
         GoogleAdMobController.instance.HideSmallBanner();
     }
     void Set_Sounds()
     {
         BackgroundMusic.volume= PlayerPrefs.GetFloat("Music");
-        Car_Manager.instance.RadioMusic.volume= PlayerPrefs.GetFloat("Music");
+        cm.RadioMusic.volume= PlayerPrefs.GetFloat("Music");
        
     }
     public void Spawner()
     {
         int rand = Random.Range(0, SpawnPoints.Length);
-        TPS_Controls[1].transform.position = SpawnPoints[rand].transform.position;
+        ThirdPersonPLayer.transform.position = SpawnPoints[rand].transform.position;
     }
     public void Initialize_Mission(int mission)
     {
@@ -284,7 +305,7 @@ public class GameManger : MonoBehaviour
     }
     public void OFF_TPS()  // Disable ThirdPerson Controller
     {
-        PlayerRef.transform.position = TPS_Controls[1].transform.position;
+        PlayerRef.transform.position =ThirdPersonPLayer.transform.position;
         Hud_Navigation.SetActive(false);
         HealthCanvas.SetActive(false);
         ControlFreakPanel.SetActive(false);
