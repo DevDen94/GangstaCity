@@ -5,6 +5,7 @@ using UnityEngine;
 public class Check_Building : MonoBehaviour
 {
     public Animator Player;
+    public GameObject[] Gangsters;
     public Animator Door;
     public GameObject Point;
     public static Check_Building instance;
@@ -101,7 +102,7 @@ public class Check_Building : MonoBehaviour
 
         if (Car_Out)
         {
-            float distance = Vector3.Distance(this.transform.position, GameManger.instance.TPS_Controls[2].transform.position);
+            float distance = Vector3.Distance(this.transform.position, GameManger.instance.ThirdPersonPLayer.transform.position);
             if (distance > 50f)
             {
                 Car_Out = false;
@@ -115,6 +116,7 @@ public class Check_Building : MonoBehaviour
     }
    public void Drive_Car()
     {
+        Player = Gangsters[PlayerPrefs.GetInt("SelectedGangster")].GetComponent<Animator>();
      
         if (!Car_Manager.instance.AI_Car.Isdriver)
         {
@@ -137,18 +139,18 @@ public class Check_Building : MonoBehaviour
             Player.SetInteger("Sit", 2);
             gameObject.tag = "Car";
             SRC_Audios.SetActive(true);
-            Car_Manager.instance.Set_ParentofTraffic(gameObject);
+            PlayerNavigation.instance.player = gameObject.transform;
             return;
         }
 
         Player.gameObject.transform.SetPositionAndRotation(Point.transform.position, Point.transform.rotation);
-        Car_Manager.instance.Set_ParentofTraffic(gameObject);
+        //Car_Manager.instance.Set_ParentofTraffic(gameObject);
         Player.gameObject.SetActive(true);
         Door.SetBool("Open", true);
         Player.SetInteger("Sit", 2);
         Invoke("AfterDelay", 1f);
         gameObject.tag = "Car";
-       // gameObject.layer = LayerMask.NameToLayer("Player");
+        PlayerNavigation.instance.player = gameObject.transform;
         SRC_Audios.SetActive(true);
     }
     void AfterDelay()
@@ -204,7 +206,7 @@ public class Check_Building : MonoBehaviour
     }
     void Eject_TPSActive()
     {
-        
+        PlayerNavigation.instance.player = GameManger.instance.ThirdPersonPLayer.transform;
         Car_Manager.instance.Rcc_Header_Camera.SetActive(false);
         GameManger.instance.ThirdPersonPLayer.transform.position = Point.transform.position;
         GameManger.instance.ThirdPersonPLayer.transform.rotation = Point.transform.rotation;
@@ -214,7 +216,7 @@ public class Check_Building : MonoBehaviour
         {
             GameManger.instance.TPS_Controls[i].SetActive(true);
         }
-        Car_Manager.instance.Set_ParentofTraffic(GameManger.instance.ThirdPersonPLayer);
+       // Car_Manager.instance.Set_ParentofTraffic(GameManger.instance.ThirdPersonPLayer);
         Player.gameObject.transform.LookAt(LookAt.transform);
         Trigger.SetActive(true);
         Car_Out = true;

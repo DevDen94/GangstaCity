@@ -271,7 +271,7 @@ MonoBehaviour:
   description: Tactical Shotgun
   type: 2
   icon: {fileID: 21300000, guid: 0cf8e5588722acf40bfed44d2b39a429, type: 3}
-  stackable: 0
+  stackable: 1
   maxStack: 1
   amount: 0
   originalObject: {fileID: 175672, guid: fea75a4cefb3c8d49af6b6e2d258d945, type: 3}
@@ -534,7 +534,7 @@ MonoBehaviour:
   description: Attached with a Scope
   type: 2
   icon: {fileID: 21300000, guid: c9bcb3ac64db75147b5fde5864fdfcb2, type: 3}
-  stackable: 0
+  stackable: 1
   maxStack: 1
   amount: 0
   originalObject: {fileID: 5651398273343935462, guid: da2db7928db7a33429a972ed03657ef4,
@@ -627,7 +627,7 @@ MonoBehaviour:
   description: Semi-Automatic Pistol
   type: 2
   icon: {fileID: 21300000, guid: 09867a516d66b7d42bbe651bb2204313, type: 3}
-  stackable: 0
+  stackable: 1
   maxStack: 1
   amount: 0
   originalObject: {fileID: 7089474312247001167, guid: 0cf8224c535082e41a9b9cde8e2d2022,

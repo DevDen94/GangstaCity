@@ -35,7 +35,8 @@ public class Car_Manager : MonoBehaviour
     public Camera RCC_Camera;
     public GameObject DestinationPoint;
     public GameObject AimBtn;
-    private vShooterManager sm;
+    [HideInInspector]
+    public vShooterManager sm;
     public Transform target_RccCar;
     public Transform target_PoliceCar;
     public GameObject InventoryPanel;
@@ -129,7 +130,7 @@ public class Car_Manager : MonoBehaviour
         Player_Hud_Navigation.transform.localPosition = Vector3.zero;
 
     }
-    void sec()
+   public void sec()
     {
         vInventory.instance.ChangeInput(3);
     }
@@ -272,11 +273,6 @@ public class Car_Manager : MonoBehaviour
         if (no == 3)
         {
             sm.alwaysAiming = false;
-            
-        }
-
-        if (no == 3)
-        {
             list.tpCameraStates[0].defaultDistance = 2.2f;
             list.tpCameraStates[0].height = 1f;
             foreach (GameObject a in Punchbtns)
@@ -287,6 +283,7 @@ public class Car_Manager : MonoBehaviour
             {
                 a.SetActive(false);
             }
+            Invoke("DestroyWeapon", 0.1f);
         }
         else
         {
@@ -302,10 +299,16 @@ public class Car_Manager : MonoBehaviour
             }
         }
        
-        
     }
 
-   
+    void DestroyWeapon()
+    {
+        if (gameManager.ThirdPersonPLayer.GetComponent<PlayerReferences>().DefaultPanel.transform.childCount > 0)
+        {
+            Destroy(gameManager.ThirdPersonPLayer.GetComponent<PlayerReferences>().DefaultPanel.transform.GetChild(0).gameObject);
+        }
+       // PressGun(3);
+    }
    
   
        

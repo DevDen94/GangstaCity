@@ -12,8 +12,6 @@ public class GameManger : MonoBehaviour
 {
     public bool Tutorial;
     public GameObject[] Gangster;
-    public Button GangsterMen;
-    public Button GangsterWomen;
     public GameObject[] SpawnPoints;
     public GameObject FadeScreen;
     public GameObject CutSceneScreen;
@@ -130,37 +128,40 @@ public class GameManger : MonoBehaviour
         ThirdPersonPLayer.GetComponent<vHealthController>()._currentHealth = 250;
     }
 
-    public void ChangeGangster() {
-        if (currentGangster == 0)
-        {
-            currentGangster = 1;
-            ThirdPersonPLayer = Instantiate(Gangster[currentGangster],ThirdPersonPLayer.transform.position,ThirdPersonPLayer.transform.rotation);
-        }
-        else
-        {
-            currentGangster = 0;
-            ThirdPersonPLayer = Instantiate(Gangster[currentGangster], ThirdPersonPLayer.transform.position, ThirdPersonPLayer.transform.rotation);
-        }
-        AssignPlayerReference();
+    public void Instantiate()
+    {
+        Destroy(ThirdPersonPLayer);
+        currentGangster = 1;
+        Instantiate(Gangster[currentGangster]);
+        Debug.LogError("Msg");
     }
-    private void AssignPlayerReference()
+   
+    public void AssignPlayerReference()
     {
        // SprintReference = ThirdPersonPLayer.GetComponent<PlayerReferences>().SprintReference;
         Ref_Jump = ThirdPersonPLayer.GetComponent<PlayerReferences>().LongJumpPoint;
         PlayerRef = ThirdPersonPLayer.GetComponent<PlayerReferences>().PlayerMinimap;
         SprintingEffect = ThirdPersonPLayer.GetComponent<PlayerReferences>().SprintEffect;
-         // hudNav.gameObject.SetActive(true);
-        //hudNav.PlayerController = ThirdPersonPLayer.transform;
+        Invoke("delay", 0.5f);
+
     }
-    int currentGangster = 0;
+
+    void delay()
+    {
+        cm.sm = ThirdPersonPLayer.GetComponent<vShooterManager>();
+       // cm.sec();
+    }
+    [HideInInspector]
+   public int currentGangster = 0;
     private void Start()
     {
-        PlayerPrefs.SetInt("SelectedGangster", 1);
+        PlayerPrefs.SetInt("Cash", 500000);
+   
+           PlayerPrefs.SetInt("SelectedGangster", 0);
         currentGangster = PlayerPrefs.GetInt("SelectedGangster");
-        ChangeGangster();
-
-        GangsterMen.onClick.AddListener(ChangeGangster);
-        GangsterWomen.onClick.AddListener(ChangeGangster);
+        ThirdPersonPLayer = Instantiate(Gangster[currentGangster]);
+        AssignPlayerReference();
+      //  GetComponent<RespawnGangster>().Player_Current = ThirdPersonPLayer;
         instance = this;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Time.timeScale = 1f;
@@ -178,9 +179,6 @@ public class GameManger : MonoBehaviour
       
         PlayerPrefs.SetInt("M_", 0);
         PlayerPrefs.SetInt("MissionEnable", 0);
-     
-        OFF_TPS();
-        
         if (PlayerPrefs.GetInt("Mode_Select") == 1)
         {
             foreach (GameObject m in Missions)
@@ -323,6 +321,7 @@ public class GameManger : MonoBehaviour
     }
     public void OFF_TPS()  // Disable ThirdPerson Controller
     {
+        ThirdPersonPLayer.SetActive(false);
         PlayerRef.transform.position =ThirdPersonPLayer.transform.position;
         Hud_Navigation.SetActive(false);
         HealthCanvas.SetActive(false);

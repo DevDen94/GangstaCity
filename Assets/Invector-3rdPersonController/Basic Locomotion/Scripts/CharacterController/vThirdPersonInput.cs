@@ -137,8 +137,12 @@ namespace Invector.vCharacterController
         }
 
         public virtual void OnAnimatorMove()
-        {            
-            cc.ControlAnimatorRootMotion();
+        {   
+            if(cc != null)
+            {
+                cc.ControlAnimatorRootMotion();
+            }        
+          
             if (onAnimatorMove != null) onAnimatorMove.Invoke();
         }
 
