@@ -12,12 +12,9 @@ public class RespawnGangster : MonoBehaviour
     public GameObject Gangster_SelecteddBtn;
     public GameObject Female_SelectedBtn;
     public GameObject FadeScreen;
-    public Image fillerImage; // Assign the circular filler image in the Inspector
     public GameManger gm;
     private bool isCounting = false;
     public GameObject Player_Current;
-    public Image MainImage;
-    public Sprite[] sp;
     public Text counterText;
     private float countdownTime = 3f;
     public GameObject Panel_;

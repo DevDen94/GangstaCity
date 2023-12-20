@@ -13,6 +13,7 @@ public class TutorialScene : MonoBehaviour
     public GameObject TPS_Control;
     private void Start()
     {
+        TPS_Control = GameManger.instance.ThirdPersonPLayer;
         counter = 0;
         Loadsec();
     }
