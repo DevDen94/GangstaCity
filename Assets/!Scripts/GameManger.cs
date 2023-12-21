@@ -321,13 +321,15 @@ public class GameManger : MonoBehaviour
     {
         ThirdPersonPLayer.SetActive(false);
         PlayerRef.transform.position =ThirdPersonPLayer.transform.position;
-        Hud_Navigation.SetActive(false);
+        
         HealthCanvas.SetActive(false);
         ControlFreakPanel.SetActive(false);
         for (int i = 0; i < TPS_Controls.Length; ++i)
         {
             TPS_Controls[i].SetActive(false);
         }
+        if (!Tutorial) { Hud_Navigation.SetActive(false); }
+       
     }
  
 

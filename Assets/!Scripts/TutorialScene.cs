@@ -12,6 +12,7 @@ public class TutorialScene : MonoBehaviour
     public GameObject[] TutorialPanels;
     public GameObject FadeSScreen;
     int counter = 0;
+    public GameObject Sprint;
     public CutSceneManager cs;
     public GameObject JoystickPath;
     public static TutorialScene instance;

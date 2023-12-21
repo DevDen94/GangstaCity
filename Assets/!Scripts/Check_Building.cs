@@ -137,7 +137,10 @@ public class Check_Building : MonoBehaviour
             Car_Manager.instance.Fade_Screen_Rightdriver.SetActive(true);
             Car_Manager.instance.Rcc_Canvas.SetActive(true);
             Car_Manager.instance.RadioMusic.gameObject.SetActive(true);
-            GameManger.instance.BackgroundMusic.gameObject.SetActive(false);
+            if (!GameManger.instance.Tutorial)
+            {
+                GameManger.instance.BackgroundMusic.gameObject.SetActive(false);
+            }
             GetComponent<RCC_CarControllerV3>().enabled = true;
             Invoke("ExitCarOutBTn", 2f);
             Player.SetInteger("Sit", 2);
@@ -161,7 +164,10 @@ public class Check_Building : MonoBehaviour
     {
         Car_Manager.instance.Rcc_Canvas.SetActive(true);
         Car_Manager.instance.RadioMusic.gameObject.SetActive(true);
-        GameManger.instance.BackgroundMusic.gameObject.SetActive(false);
+        if (!GameManger.instance.Tutorial)
+        {
+            GameManger.instance.BackgroundMusic.gameObject.SetActive(false);
+        }
         Door.SetBool("Open", false);
         GetComponent<RCC_CarControllerV3>().enabled = true;
         Invoke("ExitCarOutBTn", 2f);
@@ -181,7 +187,10 @@ public class Check_Building : MonoBehaviour
         damage_.isDamageEnabled = false;
         SRC_Audios.SetActive(false);
         Car_Manager.instance.RadioMusic.gameObject.SetActive(false);
-        GameManger.instance.BackgroundMusic.gameObject.SetActive(true);
+        if (!GameManger.instance.Tutorial)
+        {
+            GameManger.instance.BackgroundMusic.gameObject.SetActive(true);
+        }
         GetComponent<RCC_CarControllerV3>().enabled = false;
         GetComponent<RCC_CarControllerV3>().KillEngine();
         GetComponent<Rigidbody>().isKinematic = true;

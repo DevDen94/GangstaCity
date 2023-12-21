@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class CutSceneManager : MonoBehaviour
 {
     public GameObject part1;
@@ -14,9 +15,9 @@ public class CutSceneManager : MonoBehaviour
 
     void Start()
     {
-        // part1.SetActive(true);
-        // Invoke("part1_A", 7.30f);
-        Set_TutorialActive();
+        part1.SetActive(true);
+         Invoke("part1_A", 7.30f);
+        //Set_TutorialActive();
     }
     void part1_A()
     {
@@ -39,6 +40,10 @@ public class CutSceneManager : MonoBehaviour
         Invoke("secondsDelay", 2f);
         GameObject a = GameObject.FindGameObjectWithTag("Clone");
        // a.SetActive(false);
+    }
+    public void SceneChange()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
     void secondsDelay()
     {

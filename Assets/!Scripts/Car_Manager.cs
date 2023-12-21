@@ -161,8 +161,11 @@ public class Car_Manager : MonoBehaviour
         {
             Rcc_Header_Camera.SetActive(true);
             Carbutton_IN.SetActive(false);
-
-            hudNav.PlayerCamera = RCC_Camera;
+            if (!gameManager.Tutorial)
+            {
+                hudNav.PlayerCamera = RCC_Camera;
+            }
+           
             gameManager.OFF_TPS();
             if (AI_Car.Rcc_Car == true)
             {
