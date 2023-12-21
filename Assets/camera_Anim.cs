@@ -25,6 +25,6 @@ public class camera_Anim : MonoBehaviour
     {
         cs.Helicopter.SetActive(false);
         gameObject.transform.parent.gameObject.SetActive(false);
+        cs.cs.part2_A();
     }
-    
 }

@@ -24,7 +24,7 @@ public class Rotate : MonoBehaviour
         }
         if (z)
         {
-            transform.Rotate(0, 0, 5f, Space.Self);
+            transform.Rotate(0, 0, 18f);
         }
       
     }
