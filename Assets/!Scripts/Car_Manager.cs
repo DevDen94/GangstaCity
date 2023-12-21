@@ -310,8 +310,9 @@ public class Car_Manager : MonoBehaviour
         if (gameManager.ThirdPersonPLayer.GetComponent<PlayerReferences>().DefaultPanel.transform.childCount > 0)
         {
             Destroy(gameManager.ThirdPersonPLayer.GetComponent<PlayerReferences>().DefaultPanel.transform.GetChild(0).gameObject);
+            Invoke("DestroyWeapon", 0.4f);
         }
-        Invoke("DestroyWeapon", 0.4f);
+     
        // PressGun(3);
     }
    

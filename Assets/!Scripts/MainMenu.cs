@@ -23,7 +23,8 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.SetFloat("Music", 1);
             PlayerPrefs.SetInt("Unlocked_Mission", 1);
             PlayerPrefs.SetInt("Cash", 1000);
-            PlayerPrefs.SetInt("qabe", 12); 
+            PlayerPrefs.SetInt("qabe", 12);
+            PlayerPrefs.SetInt("Tut_Called", 0);
         }
         unlockedLevels = PlayerPrefs.GetInt("Unlocked_Mission");
         Mission_Unlocked();
@@ -90,6 +91,15 @@ public class MainMenu : MonoBehaviour
         }
     }
   
+    public void StartTutCalled()
+    {
+        if (PlayerPrefs.GetInt("Tut_Called") == 0)
+        {
+            LoadingScene_Name.sceneToLoad = "Tutorial";
+            LoadingPanel.SetActive(true);
+            Time.timeScale = 1f;
+        }
+    }
     public void ModeBack()
     {
         PlayerPrefs.SetInt("RewardedMode", 0);
@@ -107,7 +117,7 @@ public class MainMenu : MonoBehaviour
             if (PlayerPrefs.GetInt("Mode_2") == 1)
             {
               
-                LoadingScene_Name.sceneToLoad = "CareerMode";
+                LoadingScene_Name.sceneToLoad = "MissionMode";
                 LoadingPanel.SetActive(true);
                 PlayerPrefs.SetInt("Mode_Select", 2);
             }

@@ -16,6 +16,7 @@ public class Trigger_Tut : MonoBehaviour
         }
         if (other.gameObject.tag == "Car")
         {
+            PlayerPrefs.SetInt("Tut_Called", 1);
             TutorialFinsih_panel.SetActive(true);
             TutorialScene.instance.Hummar.SetActive(false);
             //Invoke("SceneChange", 4f);

@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/!Scenes/MissionMode.unity
     guid: 0ed6984ab94063142bfe8a467fdc476f
   - enabled: 1
-    path: Assets/!Scenes/CareerMode.unity
-    guid: 903ff6150dd53ff4badca39b4462caf4
+    path: Assets/!Scenes/Tutorial.unity
+    guid: 3e9e75c8c29198e4baf13b0847c557d8
   m_configObjects: {}

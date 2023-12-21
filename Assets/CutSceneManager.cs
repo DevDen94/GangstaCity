@@ -12,9 +12,11 @@ public class CutSceneManager : MonoBehaviour
     public GameObject Tutorial_Starting;
     public string[] Instructions;
     public Text TextField;
-
+    public GameObject UIPanel;
     void Start()
     {
+        Time.timeScale = 1f;
+        UIPanel.SetActive(false);
         part1.SetActive(true);
          Invoke("part1_A", 7.30f);
         //Set_TutorialActive();
@@ -60,6 +62,7 @@ public class CutSceneManager : MonoBehaviour
     public GameObject ShopPanel;
     public void OpenTutorailScene()
     {
+        UIPanel.SetActive(true);
         Text_Panel.SetActive(false);
         Destroy(Tutorial_Starting);
         ShopGameobject.SetActive(true);
