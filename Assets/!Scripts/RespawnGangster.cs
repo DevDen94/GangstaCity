@@ -47,6 +47,11 @@ public class RespawnGangster : MonoBehaviour
     public void Start_Counter()
     {
         isCounting = true;
+        if (gm.Tutorial)
+        {
+            TutorialScene.instance.cs.Text_Panel.SetActive(false);
+            TutorialScene.instance.load_tutt();
+        }
         
     }
   
@@ -60,6 +65,9 @@ public class RespawnGangster : MonoBehaviour
             Female_SelectedBtn.SetActive(true);
             PlayerPrefs.SetInt("SelectedGangster", gm.currentGangster);
             CharacterText.text = "LISA";
+            Car_Manager.instance.PressGun(3);
+            Car_Manager.instance.PressGun(3);
+
         }
         else
         {

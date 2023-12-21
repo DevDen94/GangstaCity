@@ -116,7 +116,11 @@ public class Check_Building : MonoBehaviour
     }
    public void Drive_Car()
     {
-        Player = Gangsters[PlayerPrefs.GetInt("SelectedGangster")].GetComponent<Animator>();
+        if (GameManger.instance.Tutorial)
+        {
+            TutorialScene.instance.cs.Text_Panel.SetActive(false);
+        }
+         Player = Gangsters[PlayerPrefs.GetInt("SelectedGangster")].GetComponent<Animator>();
      
         if (!Car_Manager.instance.AI_Car.Isdriver)
         {

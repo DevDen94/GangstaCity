@@ -138,11 +138,12 @@ public class Car_Manager : MonoBehaviour
     {
         gameManager = GetComponent<GameManger>();
         sm = gameManager.ThirdPersonPLayer.GetComponent<vShooterManager>();
-        Invoke("sec", 0.1f);
+        Invoke("sec", 0.3f);
         //attackon = false;
         instance = this;
         list.tpCameraStates[0].defaultDistance = 2.2f;
         list.tpCameraStates[0].height = 1f;
+     
        // GameManger.instance.TPS_Controls[4] = GameObject.FindGameObjectWithTag("Clone");
     }
 
@@ -307,6 +308,7 @@ public class Car_Manager : MonoBehaviour
         {
             Destroy(gameManager.ThirdPersonPLayer.GetComponent<PlayerReferences>().DefaultPanel.transform.GetChild(0).gameObject);
         }
+        Invoke("DestroyWeapon", 0.4f);
        // PressGun(3);
     }
    

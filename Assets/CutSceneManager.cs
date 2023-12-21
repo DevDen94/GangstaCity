@@ -34,26 +34,28 @@ public class CutSceneManager : MonoBehaviour
     void Set_TutorialActive()
     {
         part3.SetActive(false);
-        Tuttorial.SetActive(true);
+      
         Tutorial_Starting.SetActive(true);
-        Invoke("secondsDelay", 4f);
+        Invoke("secondsDelay", 2f);
         GameObject a = GameObject.FindGameObjectWithTag("Clone");
        // a.SetActive(false);
     }
     void secondsDelay()
     {
+        Tuttorial.SetActive(true);
+        Text_Panel.SetActive(true);
         TextField.gameObject.SetActive(true);
         TextField.text = Instructions[0].ToString();
 
 
     }
     public GameObject tutorial_MainGameObject;
-    public GameObject StartingPanel;
+    public GameObject Text_Panel;
     public GameObject ShopGameobject;
     public GameObject ShopPanel;
     public void OpenTutorailScene()
     {
-        StartingPanel.SetActive(false);
+        Text_Panel.SetActive(false);
         Destroy(Tutorial_Starting);
         ShopGameobject.SetActive(true);
         tutorial_MainGameObject.GetComponent<TutorialScene>().enabled = true;

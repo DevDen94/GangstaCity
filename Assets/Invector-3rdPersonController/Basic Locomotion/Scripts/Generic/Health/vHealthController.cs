@@ -47,7 +47,16 @@ namespace Invector
                 if (!_isDead && _currentHealth <= 0)
                 {_isDead = true;
                     onDead.Invoke(gameObject);
-                    Mission_Script.instance.GangsterDead();
+                    if (GameManger.instance.Tutorial)
+                    {
+
+                        TutorialScene.instance.load_tut();
+                    }
+                    else
+                    {
+                        Mission_Script.instance.GangsterDead();
+                    }
+                    
                 }
                 else if (isDead && _currentHealth > 0)
                 {

@@ -161,7 +161,7 @@ public class GameManger : MonoBehaviour
         currentGangster = PlayerPrefs.GetInt("SelectedGangster");
         ThirdPersonPLayer = Instantiate(Gangster[currentGangster]);
         AssignPlayerReference();
-      //  GetComponent<RespawnGangster>().Player_Current = ThirdPersonPLayer;
+       // GetComponent<RespawnGangster>().Player_Current = ThirdPersonPLayer;
         instance = this;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Time.timeScale = 1f;
