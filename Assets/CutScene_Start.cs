@@ -14,6 +14,7 @@ public class CutScene_Start : MonoBehaviour
     public Animator Girl;
     public Animator Male;
     public CutSceneManager cs;
+   
   
     void Start()
     {

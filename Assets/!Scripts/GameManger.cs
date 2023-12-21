@@ -169,8 +169,6 @@ public class GameManger : MonoBehaviour
         cm = GetComponent<Car_Manager>();
         if (Tutorial)
         {
-       
-            cm = GetComponent<Car_Manager>();
             ThirdPersonPLayer.transform.position = SpawnPoints[0].transform.position;
             ThirdPersonPLayer.transform.rotation = SpawnPoints[0].transform.rotation;
             return;
