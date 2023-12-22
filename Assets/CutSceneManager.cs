@@ -15,6 +15,7 @@ public class CutSceneManager : MonoBehaviour
     public GameObject UIPanel;
     void Start()
     {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Time.timeScale = 1f;
         UIPanel.SetActive(false);
         part1.SetActive(true);

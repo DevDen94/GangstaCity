@@ -2966,7 +2966,7 @@ MonoBehaviour:
   frictionPhysics: {fileID: 0}
   maxFrictionPhysics: {fileID: 0}
   slippyPhysics: {fileID: 0}
-  _capsuleCollider: {fileID: 0}
+  _capsuleCollider: {fileID: 789683237302384966}
   targetDirection: {x: 0, y: 0, z: 0}
   input: {x: 0, y: 0, z: 0}
   lockMovement: 0
@@ -17290,8 +17290,8 @@ MonoBehaviour:
   damageByDistance: 1
   DropOffStart: 8
   DropOffEnd: 50
-  minDamage: 10
-  maxDamage: 20
+  minDamage: 4
+  maxDamage: 8
   source: {fileID: 8363402486337755011}
   fireClip: {fileID: 8300000, guid: 67972f63215fcdf439dd82687b88af79, type: 3}
   emptyClip: {fileID: 8300000, guid: 86e4a8709e440314e8fe56622c9e6162, type: 3}

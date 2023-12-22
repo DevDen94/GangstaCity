@@ -848,7 +848,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 224478601}
   m_OnClick:
     m_PersistentCalls:
@@ -5189,6 +5189,7 @@ MonoBehaviour:
   - {fileID: 1301963911}
   - {fileID: 763718338}
   - {fileID: 380544714}
+  selectBtn_Mission: {fileID: 224478600}
 --- !u!4 &930557610
 Transform:
   m_ObjectHideFlags: 0
@@ -8383,7 +8384,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2eebbd2cc78d2ca4a888c7bd44be4c02, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 102568fbcd820d047996f2fe354a58d7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
@@ -9428,7 +9429,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1476777074}
   m_OnClick:
     m_PersistentCalls:

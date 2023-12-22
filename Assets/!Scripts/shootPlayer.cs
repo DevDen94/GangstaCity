@@ -144,7 +144,7 @@ public class shootPlayer : MonoBehaviour
                     {
                         if (hit.collider.gameObject.tag == "Car")
                         {
-                            Debug.LogError("Shoot");
+                          //  Debug.LogError("Shoot");
                             hit.collider.gameObject.GetComponent<Damage_Script>().Damage();
                         }
                         

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Invector;
+using Invector.vCharacterController;
 public class RespawnGangster : MonoBehaviour
 {
     public GameObject[] Gangster;
@@ -23,6 +25,7 @@ public class RespawnGangster : MonoBehaviour
     public Text CharacterText;
     public AudioClip femalebg;
     public AudioClip malebg;
+    public vGameController gmm;
     private void Start()
     {
         instance = this;
@@ -39,6 +42,7 @@ public class RespawnGangster : MonoBehaviour
             counterText.text = Mathf.RoundToInt(countdownTime).ToString();
             if (countdownTime <= 0)
             {
+               
                 Panel_.SetActive(false);
                 Panel_G.SetActive(false);
                 StopCountdown();
@@ -46,9 +50,14 @@ public class RespawnGangster : MonoBehaviour
         }
     }
 
+    public void OpenGangsterClick()
+    {
+        Time.timeScale = 0f;
+    }
     public GameObject CinematicCamera;
     public void Start_Counter()
     {
+        Time.timeScale = 1f;
         isCounting = true;
         if (gm.Tutorial)
         {
@@ -71,8 +80,10 @@ public class RespawnGangster : MonoBehaviour
             gm.BackgroundMusic.gameObject.SetActive(false);
             gm.BackgroundMusic.clip = malebg;
             gm.BackgroundMusic.gameObject.SetActive(true);
-
-
+            if(!gm.Tutorial)
+            {  
+                gmm.playerPrefab = gm.ThirdPersonPLayer;
+            }
         }
         else
         {
@@ -85,6 +96,10 @@ public class RespawnGangster : MonoBehaviour
             gm.BackgroundMusic.gameObject.SetActive(false);
             gm.BackgroundMusic.clip = femalebg;
             gm.BackgroundMusic.gameObject.SetActive(true) ;
+            if (!gm.Tutorial)
+            {
+                gmm.playerPrefab = gm.ThirdPersonPLayer;
+            }
         }
        
         Player_Current.GetComponent<PlayerNavigation>().player = gm.ThirdPersonPLayer.transform;
@@ -92,7 +107,7 @@ public class RespawnGangster : MonoBehaviour
         Canvas.SetActive(false);
         foreach(GameObject a in gm.ThirdPersonPLayer.GetComponent<PlayerReferences>().Meshes)
         {
-            a.SetActive(false);
+           // a.SetActive(false);
         }
         Invoke("EnableCharacter", 0.4f);
         Invoke("EnableTps", 5f);
@@ -114,10 +129,15 @@ public class RespawnGangster : MonoBehaviour
         temp = Instantiate(CinematicCamera, gm.ThirdPersonPLayer.transform.position, gm.ThirdPersonPLayer.transform.rotation);
         foreach (GameObject a in gm.ThirdPersonPLayer.GetComponent<PlayerReferences>().Meshes)
         {
-            a.SetActive(true);
+          //  a.SetActive(true);
         }
         GetComponent<Car_Manager>().PressGun(3);
         gm.src.PlayOneShot(sound);
+
+        if (PlayerPrefs.GetInt("Mode_2") == 2)
+        {
+            PoliceSystemActive.instance.playerTransform = gm.ThirdPersonPLayer.transform;
+        }
     }
     void EnableTps()
     {

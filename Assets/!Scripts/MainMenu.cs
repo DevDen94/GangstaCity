@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
     //public Text abc;
     private void Start()
     {
-      
+        
         instance = this;
         Time.timeScale = 1f;
         if (!PlayerPrefs.HasKey("qabe"))
@@ -25,7 +25,14 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.SetInt("Cash", 1000);
             PlayerPrefs.SetInt("qabe", 12);
             PlayerPrefs.SetInt("Tut_Called", 0);
+            selectBtn_Mission.interactable = false;
         }
+        else
+        {
+            selectBtn_Mission.interactable = true;
+        }
+
+
         unlockedLevels = PlayerPrefs.GetInt("Unlocked_Mission");
         Mission_Unlocked();
         float savedVolume = PlayerPrefs.GetFloat("Music");
@@ -77,7 +84,7 @@ public class MainMenu : MonoBehaviour
     public GameObject Mode2_Screen;
     public Button[] levels;
     public GameObject[] lockedBtn;
-
+    public Button selectBtn_Mission;
     void Mission_Unlocked()
     {
         foreach(GameObject a in lockedBtn)
@@ -157,14 +164,14 @@ public class MainMenu : MonoBehaviour
     }
     public void MoreGames()
     {
-
+        Application.OpenURL("https://play.google.com/store/apps/dev?id=5659235520105216655");
     }
     public void RateUs()
     {
-
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.darwingames.gangstermafia.crimecity.shooting.games");
     }
     public void PrivacyPolicy()
     {
-
+        Application.OpenURL("https://darwingames1.blogspot.com/2023/06/privacy-policy.html");
     }
 }

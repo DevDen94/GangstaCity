@@ -20101,7 +20101,7 @@ MonoBehaviour:
   openCloseWindow: 0
   selectedToolbar: 0
   damage:
-    damageValue: 15
+    damageValue: 2
     staminaBlockCost: 5
     staminaRecoveryDelay: 1
     ignoreDefense: 0
@@ -20303,7 +20303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 1
   openCloseWindow: 1
-  selectedToolbar: 2
+  selectedToolbar: 3
   _isDead: 0
   _currentHealth: 0
   isImmortal: 0
@@ -27097,7 +27097,7 @@ MonoBehaviour:
   openCloseWindow: 0
   selectedToolbar: 0
   damage:
-    damageValue: 15
+    damageValue: 3
     staminaBlockCost: 5
     staminaRecoveryDelay: 1
     ignoreDefense: 0
@@ -33121,7 +33121,7 @@ MonoBehaviour:
   openCloseWindow: 0
   selectedToolbar: 0
   damage:
-    damageValue: 15
+    damageValue: 2
     staminaBlockCost: 5
     staminaRecoveryDelay: 1
     ignoreDefense: 0
@@ -43606,7 +43606,7 @@ MonoBehaviour:
   openCloseWindow: 0
   selectedToolbar: 0
   damage:
-    damageValue: 15
+    damageValue: 3
     staminaBlockCost: 5
     staminaRecoveryDelay: 1
     ignoreDefense: 0

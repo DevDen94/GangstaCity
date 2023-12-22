@@ -99,7 +99,7 @@ public class GameManger : MonoBehaviour
     }
     public void Win_Mission()
     {
-        GoogleAdMobController.instance.ShowInterstitialAd();
+   
         nav.GameEndl = true;
         MissionComplete.SetActive(true);
       
@@ -110,15 +110,17 @@ public class GameManger : MonoBehaviour
         {
             PlayerPrefs.SetInt("Unlocked_Mission", PlayerPrefs.GetInt("Unlocked_Mission") + 1);
         }
+        GoogleAdMobController.instance.ShowInterstitialAd();
     }
     public void Loose_Mission()
     {
-        GoogleAdMobController.instance.ShowInterstitialAd();
+   
         PlayerPrefs.SetInt("M_", 0);
         nav.GameEndl = true;
         MissionFailed.SetActive(true);
         src.PlayOneShot(LooseSound);
         Time.timeScale = 0f;
+        GoogleAdMobController.instance.ShowInterstitialAd();
     }
     [HideInInspector]
     public GameObject MissionActive;
@@ -155,9 +157,8 @@ public class GameManger : MonoBehaviour
    public int currentGangster = 0;
     private void Start()
     {
-        PlayerPrefs.SetInt("Cash", 500000);
-   
-           PlayerPrefs.SetInt("SelectedGangster", 0);
+        tps_check = false;
+        PlayerPrefs.SetInt("SelectedGangster", 0);
         currentGangster = PlayerPrefs.GetInt("SelectedGangster");
         ThirdPersonPLayer = Instantiate(Gangster[currentGangster]);
         AssignPlayerReference();
@@ -194,11 +195,28 @@ public class GameManger : MonoBehaviour
       
         CashText.text = PlayerPrefs.GetInt("Cash").ToString();
         SpawnPlayer();
-     
+        Invoke("tps_true", 5f);
         
         Set_Sounds();
-        
-        //GoogleAdMobController.instance.HideSmallBanner();
+        print(selected_Mission);
+        GoogleAdMobController.instance.HideSmallBanner();
+    }
+    bool tps_check;
+    void tps_true()
+    {
+        tps_check = true;
+    }
+    private void FixedUpdate()
+    {
+        if (ThirdPersonPLayer && tps_check)
+        {
+           
+            if(ThirdPersonPLayer.GetComponent<vHealthController>().currentHealth <= 0)
+            {
+                Loose_Mission();
+            }
+            
+        }
     }
     void Set_Sounds()
     {
@@ -282,7 +300,7 @@ public class GameManger : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("CareerMode");
+            SceneManager.LoadScene("MissionMode");
         }
         
     }
@@ -293,9 +311,10 @@ public class GameManger : MonoBehaviour
     }
     public void Continue()
     {
+        Debug.LogError(PlayerPrefs.GetInt("MissionNo"));
         Time.timeScale = 1f;
         src.PlayOneShot(btnCLIP);
-        PlayerPrefs.SetInt("MissionNo", PlayerPrefs.GetInt("MissionNo")+1);
+        PlayerPrefs.SetInt("MissionNo", PlayerPrefs.GetInt("MissionNo") + 1 );
         SceneManager.LoadScene("MissionMode");
     }
     [HideInInspector]

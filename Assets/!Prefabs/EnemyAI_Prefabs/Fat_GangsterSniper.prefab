@@ -8467,8 +8467,8 @@ MonoBehaviour:
   damageByDistance: 1
   DropOffStart: 8
   DropOffEnd: 50
-  minDamage: 10
-  maxDamage: 25
+  minDamage: 4
+  maxDamage: 8
   source: {fileID: 5278478501312066070}
   fireClip: {fileID: 8300000, guid: 67972f63215fcdf439dd82687b88af79, type: 3}
   emptyClip: {fileID: 8300000, guid: 86e4a8709e440314e8fe56622c9e6162, type: 3}

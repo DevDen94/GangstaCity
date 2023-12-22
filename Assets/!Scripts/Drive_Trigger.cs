@@ -10,8 +10,7 @@ public class Drive_Trigger : MonoBehaviour
     public bool Rcc_Car = false;
     public bool Is_hummer;
     public string nameofCar;
-    public GameObject TutorialObject;
-    public GameObject NextTutorialObject;
+
     public bool Is_RightTrigger;
 
     private void OnTriggerEnter(Collider other)
@@ -22,11 +21,7 @@ public class Drive_Trigger : MonoBehaviour
             {
                 Car_Manager.instance.is_Hummer = true;
                 Car_Manager.instance.Car_Name = nameofCar;
-                if (GameManger.instance.Tutorial)
-                {
-                    TutorialObject.SetActive(false);
-                    NextTutorialObject.SetActive(true);
-                }
+              
             }
             else
             {

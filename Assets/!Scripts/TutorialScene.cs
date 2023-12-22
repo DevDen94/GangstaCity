@@ -157,6 +157,8 @@ public class TutorialScene : MonoBehaviour
        
         Invoke("LoadTutorial", 3f);
     }
+    public AudioSource src;
+    public AudioClip clip;
     void Load_Character()
     {
        
@@ -164,7 +166,9 @@ public class TutorialScene : MonoBehaviour
         Invoke("LoadTutorial", 1f);
         // GameObject a = GameObject.FindGameObjectWithTag("Clone");
         // a.SetActive(false);
-        GameManger.instance.BackgroundMusic.clip = RespawnGangster.instance.malebg;
+        src.gameObject.SetActive(false);
+        src.clip = clip;
+        src.gameObject.SetActive(true);
     }
    
 }

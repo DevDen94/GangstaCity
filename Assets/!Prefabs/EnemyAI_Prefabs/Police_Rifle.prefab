@@ -24962,7 +24962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 5
+  selectedToolbar: 3
   weaponCategory: MyCategory
   shootFrequency: 1.5
   isInfinityAmmo: 0
@@ -24979,8 +24979,8 @@ MonoBehaviour:
   damageByDistance: 1
   DropOffStart: 8
   DropOffEnd: 50
-  minDamage: 30
-  maxDamage: 45
+  minDamage: 4
+  maxDamage: 8
   source: {fileID: 4932047948914777165}
   fireClip: {fileID: 8300000, guid: 67972f63215fcdf439dd82687b88af79, type: 3}
   emptyClip: {fileID: 8300000, guid: 86e4a8709e440314e8fe56622c9e6162, type: 3}
@@ -39763,7 +39763,7 @@ MonoBehaviour:
   frictionPhysics: {fileID: 0}
   maxFrictionPhysics: {fileID: 0}
   slippyPhysics: {fileID: 0}
-  _capsuleCollider: {fileID: 0}
+  _capsuleCollider: {fileID: 8927420468104417915}
   targetDirection: {x: 0, y: 0, z: 0}
   input: {x: 0, y: 0, z: 0}
   lockMovement: 0

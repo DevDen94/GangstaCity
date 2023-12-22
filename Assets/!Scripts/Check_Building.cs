@@ -110,7 +110,10 @@ public class Check_Building : MonoBehaviour
             }
         }
     }
-    void Destroy_Driver()
+    public GameObject TutorialObject;
+    public GameObject NextTutorialObject;
+
+void Destroy_Driver()
     {
         Destroy(Driver);
     }
@@ -119,7 +122,9 @@ public class Check_Building : MonoBehaviour
         if (GameManger.instance.Tutorial)
         {
             TutorialScene.instance.cs.Text_Panel.SetActive(false);
-        }
+            TutorialObject.SetActive(false);
+            NextTutorialObject.SetActive(true);
+         }
          
         Player = Gangsters[PlayerPrefs.GetInt("SelectedGangster")].GetComponent<Animator>();
      

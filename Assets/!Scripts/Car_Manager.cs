@@ -195,9 +195,9 @@ public class Car_Manager : MonoBehaviour
             return;
         }
     }
-    public void WatchAd_BuyCar() /// PlaceRewardedAd
+    public void WatchAd_BuyCar()  //PlaceRewardedAd
     {
-      //  GoogleAdMobController.instance.ShowRewardedAd();
+       GoogleAdMobController.instance.ShowRewardedAd();
     }
     public void BuyCar()
     {
@@ -287,7 +287,8 @@ public class Car_Manager : MonoBehaviour
             {
                 a.SetActive(false);
             }
-            Invoke("DestroyWeapon", 0.1f);
+            Invoke("DestroyWeapon", 0.25f);
+            Invoke("DestroyWeapon", 1f);
         }
         else
         {
