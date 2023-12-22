@@ -45,7 +45,9 @@ public class CutSceneManager : MonoBehaviour
     }
     public void SceneChange()
     {
-        SceneManager.LoadScene("MainMenu");
+        PlayerPrefs.SetInt("MissionNo", 1);
+        PlayerPrefs.SetInt("Mode_Select", 1);
+        SceneManager.LoadScene("MissionMode");
     }
     void secondsDelay()
     {

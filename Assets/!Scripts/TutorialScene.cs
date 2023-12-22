@@ -91,6 +91,9 @@ public class TutorialScene : MonoBehaviour
                 cs.TextField.text = cs.Instructions[counter].ToString();
                 JoystickPath.SetActive(true);
                 break;
+            case 3:
+                EnablePanels[3].SetActive(true);
+                break;
             case 4:
                 cs.Text_Panel.SetActive(true);
                 cs.TextField.text = cs.Instructions[counter].ToString();
