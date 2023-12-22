@@ -6,7 +6,7 @@ public class RespawnGangster : MonoBehaviour
 {
     public GameObject[] Gangster;
     public GameObject Canvas;
-    
+    public static RespawnGangster instance;
     public Button GangsterBtn;
     public Button FemaleGangsterBTn;
     public GameObject Gangster_SelecteddBtn;
@@ -19,10 +19,13 @@ public class RespawnGangster : MonoBehaviour
     private float countdownTime = 3f;
     public GameObject Panel_;
     public GameObject Panel_G;
-
+    public AudioClip sound;
     public Text CharacterText;
+    public AudioClip femalebg;
+    public AudioClip malebg;
     private void Start()
     {
+        instance = this;
         gm = GetComponent<GameManger>();
         GangsterBtn.onClick.AddListener(Start_Counter);
         FemaleGangsterBTn.onClick.AddListener(Start_Counter);
@@ -65,8 +68,10 @@ public class RespawnGangster : MonoBehaviour
             Female_SelectedBtn.SetActive(true);
             PlayerPrefs.SetInt("SelectedGangster", gm.currentGangster);
             CharacterText.text = "LISA";
-            Car_Manager.instance.PressGun(3);
-            Car_Manager.instance.PressGun(3);
+            gm.BackgroundMusic.gameObject.SetActive(false);
+            gm.BackgroundMusic.clip = malebg;
+            gm.BackgroundMusic.gameObject.SetActive(true);
+
 
         }
         else
@@ -77,8 +82,11 @@ public class RespawnGangster : MonoBehaviour
             Female_SelectedBtn.SetActive(false);
             PlayerPrefs.SetInt("SelectedGangster", gm.currentGangster);
             CharacterText.text = "MICHAEL";
+            gm.BackgroundMusic.gameObject.SetActive(false);
+            gm.BackgroundMusic.clip = femalebg;
+            gm.BackgroundMusic.gameObject.SetActive(true) ;
         }
-
+       
         Player_Current.GetComponent<PlayerNavigation>().player = gm.ThirdPersonPLayer.transform;
         gm.ThirdPersonPLayer.GetComponent<PlayerReferences>().SpawningEffect.SetActive(true);
         Canvas.SetActive(false);
@@ -102,13 +110,14 @@ public class RespawnGangster : MonoBehaviour
     GameObject temp;
     void EnableCharacter()
     {
+        Car_Manager.instance.PressGun(3);
         temp = Instantiate(CinematicCamera, gm.ThirdPersonPLayer.transform.position, gm.ThirdPersonPLayer.transform.rotation);
         foreach (GameObject a in gm.ThirdPersonPLayer.GetComponent<PlayerReferences>().Meshes)
         {
             a.SetActive(true);
         }
         GetComponent<Car_Manager>().PressGun(3);
-
+        gm.src.PlayOneShot(sound);
     }
     void EnableTps()
     {

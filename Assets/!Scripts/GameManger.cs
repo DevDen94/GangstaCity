@@ -311,7 +311,7 @@ public class GameManger : MonoBehaviour
         {
             TPS_Controls[i].SetActive(true);
         }
-
+        ThirdPersonPLayer.SetActive(true);
      
         Hud_Navigation.SetActive(true);
         HealthCanvas.SetActive(true);
@@ -328,7 +328,10 @@ public class GameManger : MonoBehaviour
         {
             TPS_Controls[i].SetActive(false);
         }
-        if (!Tutorial) { Hud_Navigation.SetActive(false); }
+
+        if (!Tutorial) { 
+            Hud_Navigation.SetActive(false);
+        }
        
     }
  

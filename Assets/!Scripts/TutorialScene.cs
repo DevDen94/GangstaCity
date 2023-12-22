@@ -162,9 +162,9 @@ public class TutorialScene : MonoBehaviour
        
         ManagerScript.SetActive(true);
         Invoke("LoadTutorial", 1f);
-       // GameObject a = GameObject.FindGameObjectWithTag("Clone");
-       // a.SetActive(false);
-        
+        // GameObject a = GameObject.FindGameObjectWithTag("Clone");
+        // a.SetActive(false);
+        GameManger.instance.BackgroundMusic.clip = RespawnGangster.instance.malebg;
     }
    
 }

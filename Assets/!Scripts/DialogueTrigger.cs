@@ -4,12 +4,24 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    public Animator female;
+    public Animator male;
     public Mission_Script mission;
     public GameObject Next_P;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
+            if (PlayerPrefs.GetInt("SelectedGangster") == 0)
+            {
+                mission.Firts_Character = male;
+                mission.Firts_Character.gameObject.SetActive(true);
+            }
+            else
+            {
+                mission.Firts_Character = female;
+                mission.Firts_Character.gameObject.SetActive(true);
+            }
             gameObject.SetActive(false);
             mission.DialogueStart();
             mission.NextCutScene.SetActive(true);

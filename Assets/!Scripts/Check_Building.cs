@@ -120,7 +120,8 @@ public class Check_Building : MonoBehaviour
         {
             TutorialScene.instance.cs.Text_Panel.SetActive(false);
         }
-         Player = Gangsters[PlayerPrefs.GetInt("SelectedGangster")].GetComponent<Animator>();
+         
+        Player = Gangsters[PlayerPrefs.GetInt("SelectedGangster")].GetComponent<Animator>();
      
         if (!Car_Manager.instance.AI_Car.Isdriver)
         {
@@ -167,7 +168,9 @@ public class Check_Building : MonoBehaviour
         if (!GameManger.instance.Tutorial)
         {
             GameManger.instance.BackgroundMusic.gameObject.SetActive(false);
+            GameManger.instance.Hud_Navigation.SetActive(true);
         }
+
         Door.SetBool("Open", false);
         GetComponent<RCC_CarControllerV3>().enabled = true;
         Invoke("ExitCarOutBTn", 2f);

@@ -70,6 +70,7 @@ public class CutSceneManager : MonoBehaviour
         ShopGameobject.SetActive(true);
         tutorial_MainGameObject.GetComponent<TutorialScene>().enabled = true;
         ShopPanel.SetActive(true);
+       
     }
    
 }
