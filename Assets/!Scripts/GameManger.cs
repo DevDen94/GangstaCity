@@ -71,7 +71,11 @@ public class GameManger : MonoBehaviour
     public bool isOneTime;
     Transform Des;
     public Text CashText;
-  
+
+
+    public string Shop_InstanceKey;
+    public _ShopManager sh;
+    public GameObject Char_switch;
     public void Sprint_Call()
     {
        
@@ -89,6 +93,7 @@ public class GameManger : MonoBehaviour
             Sprint_Effect.gameObject.SetActive(true);
         }
     }
+    public bool Jump_Flag;
     public void Jump_Long()
     {
         Instantiate(JumpLongEffect.transform, Ref_Jump.transform.position, Ref_Jump.transform.rotation);
@@ -159,6 +164,8 @@ public class GameManger : MonoBehaviour
    public int currentGangster = 0;
     private void Start()
     {
+        level_failed = false;
+        Jump_Flag = false;
         tps_check = false;
         PlayerPrefs.SetInt("SelectedGangster", 0);
         currentGangster = PlayerPrefs.GetInt("SelectedGangster");
@@ -204,6 +211,7 @@ public class GameManger : MonoBehaviour
         //GoogleAdMobController.instance.HideSmallBanner();
     }
     bool tps_check;
+    bool level_failed;
     void tps_true()
     {
         tps_check = true;
@@ -213,19 +221,34 @@ public class GameManger : MonoBehaviour
         if (ThirdPersonPLayer && tps_check)
         {
            
-            if(ThirdPersonPLayer.GetComponent<vHealthController>().currentHealth <= 0)
+            if(ThirdPersonPLayer.GetComponent<vHealthController>().currentHealth <= 0 && !level_failed)
             {
                 Loose_Mission();
+                level_failed = true;
             }
             
         }
     }
     void Set_Sounds()
     {
-        BackgroundMusic.volume= PlayerPrefs.GetFloat("Music");
-        cm.RadioMusic.volume= PlayerPrefs.GetFloat("Music");
-       
+        if (PlayerPrefs.GetInt("Music") == 1)
+        {
+            foreach(AudioListener a in Musiclistener)
+            {
+                a.enabled = true;
+            }
+        }
+        else
+        {
+            foreach (AudioListener a in Musiclistener)
+            {
+                a.enabled = false;
+            }
+        }
+
     }
+    public AudioListener[] Musiclistener;
+
     public void Spawner()
     {
         int rand = Random.Range(0, SpawnPoints.Length);

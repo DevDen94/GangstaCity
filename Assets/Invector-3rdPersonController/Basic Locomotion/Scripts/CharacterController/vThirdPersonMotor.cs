@@ -820,10 +820,12 @@ namespace Invector.vCharacterController
                 }
                 else if (!applyingStepOffset && !isJumping )
                 {
-                   
+                    if (GameManger.instance.Jump_Flag)
+                    {
                         GameManger.instance.Jump_Long();
-        
-                   
+                        GameManger.instance.Jump_Flag = false;
+                        GameManger.instance.Char_switch.SetActive(true);
+                    }
                     _rigidbody.AddForce(transform.up * (extraGravity * 2 * Time.deltaTime), ForceMode.VelocityChange);
                 }
             }

@@ -414,11 +414,21 @@ public class GoogleMobileAdsController : MonoBehaviour, IUnityAdsInitializationL
             {
                 PlayerPrefs.SetInt("Mode_2", 1);
                 MainMenu.instance.Mode2_Screen.SetActive(false);
-                PlayerPrefs.SetInt("RewardedMode", 0);
+                PlayerPrefs.SetInt("RewardedMode", 2);
+                Debug.LogError("Rewarded_Mode");
+
+            }
+            else if (PlayerPrefs.GetInt("ShopReward_Constume") == 1)
+            {
+                PlayerPrefs.SetInt(GameManger.instance.Shop_InstanceKey, 1);
+                PlayerPrefs.SetInt("ShopReward_Constume", 2);
+                GameManger.instance.sh.Check_Textures();
+                Debug.LogError("Rewarded_Shop");
             }
             else
             {
                 Car_Manager.instance.CarBuySucessfull();
+                Debug.LogError("BuyCar");
             }
 
         }
@@ -444,7 +454,13 @@ public class GoogleMobileAdsController : MonoBehaviour, IUnityAdsInitializationL
             {
                 PlayerPrefs.SetInt("Mode_2", 1);
                 MainMenu.instance.Mode2_Screen.SetActive(false);
-                PlayerPrefs.SetInt("RewardedMode", 0);
+                PlayerPrefs.SetInt("RewardedMode", 2);
+
+            }else if (PlayerPrefs.GetInt("ShopReward_Constume") == 1)
+            {
+                PlayerPrefs.SetInt(GameManger.instance.Shop_InstanceKey, 1);
+                PlayerPrefs.SetInt("ShopReward_Constume", 2);
+                GameManger.instance.sh.Check_Textures();
             }
             else
             {

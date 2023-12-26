@@ -16,7 +16,8 @@ public class _ShopManager : MonoBehaviour
     private int Temp;
     private string EntryName;
     private int No;
- 
+
+    public static _ShopManager instance;
 
     public Animator Camera;
     public GameObject Show_UpdatePanel;
@@ -131,14 +132,13 @@ public class _ShopManager : MonoBehaviour
             Buy_Btn.SetActive(false);
             Select_Btn.SetActive(true);
             ChangeMaterialAll();
-            Debug.LogError("locked");
         }
         else
         {
             Buy_Btn.SetActive(true);
             Select_Btn.SetActive(false);
             Entity_PriceText.text = Generic_Prices[Temp].ToString();
-            Debug.LogError("UNlocked");
+            GameManger.instance.Shop_InstanceKey = EntryName+Temp;
         }
     }
     public void Set_Textures()
@@ -195,6 +195,15 @@ public class _ShopManager : MonoBehaviour
             Not_EnoughCoins_Panel.SetActive(true);
         }
 
+    }
+
+   
+    public string rewarded_UnlockKey;
+    public void Rewarded_Ad_Open()
+    {
+        PlayerPrefs.SetInt("ShopReward_Constume", 1);
+        GoogleMobileAdsController.Instance.rewarded = true;
+        GoogleMobileAdsController.Instance.ShowRewardedAd();
     }
 }
 

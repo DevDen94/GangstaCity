@@ -54,6 +54,10 @@ public class RespawnGangster : MonoBehaviour
     {
         Time.timeScale = 0f;
     }
+    public void CloseGangsterClick()
+    {
+        Time.timeScale = 1f;
+    }
     public GameObject CinematicCamera;
     public void Start_Counter()
     {

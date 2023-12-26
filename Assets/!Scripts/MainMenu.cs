@@ -15,12 +15,14 @@ public class MainMenu : MonoBehaviour
     //public Text abc;
     private void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         instance = this;
         Time.timeScale = 1f;
         if (!PlayerPrefs.HasKey("qabe"))
         {
-            PlayerPrefs.SetFloat("Music", 1);
+            PlayerPrefs.SetInt("SFX", 1);
+            PlayerPrefs.SetInt("Music", 1);
             PlayerPrefs.SetInt("Unlocked_Mission", 1);
             PlayerPrefs.SetInt("Cash", 1000);
             PlayerPrefs.SetInt("qabe", 12);
@@ -35,21 +37,55 @@ public class MainMenu : MonoBehaviour
 
         unlockedLevels = PlayerPrefs.GetInt("Unlocked_Mission");
         Mission_Unlocked();
-        float savedVolume = PlayerPrefs.GetFloat("Music");
-        volumeSlider.value = savedVolume;
-        src.volume = PlayerPrefs.GetFloat("Music");
-        soundSlider.value = PlayerPrefs.GetFloat("Sounds");
-        soundSrc.volume = PlayerPrefs.GetFloat("Sounds");
+      
         shop_cash.text = PlayerPrefs.GetInt("Cash").ToString();
-        // abc.text = " Unlocked" + unlockedLevels.ToString() + "\t " + PlayerPrefs.GetInt("Cash");
-        //GoogleAdMobController.instance.ShowSmallBannerAd();
+        Set_SoundMusic();
         GoogleMobileAdsController.Instance.ShowSmallBannerAd();
+    }
+
+    public GameObject SoundOn;
+    public GameObject SoundOFF;
+    public GameObject MusicOn;
+    public GameObject MusicOff;
+    void Set_SoundMusic()
+    {
+        if (PlayerPrefs.GetInt("SFX") == 1)
+        {
+            soundSrc.enabled = true;
+            SetSoundsOn();
+        }
+        else
+        {
+            soundSrc.enabled = false;
+            SetSounds_Off();
+        }
+
+
+        if (PlayerPrefs.GetInt("Music") == 1)
+        {
+            src.enabled = true;
+            SetMusicOn();
+        }
+        else
+        {
+            src.enabled = false;
+            SetMusicOff();
+        }
+
     }
     public void Start_Btn()
     {
         //GoogleAdMobController.instance.ShowInterstitialAd();
         ModeSelectionPanel.SetActive(true);
         GoogleMobileAdsController.Instance.ShowInterstitialAd();
+    }
+    private void FixedUpdate()
+    {
+        if (!Cursor.visible)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
     public void BtnClick()
     {
@@ -59,18 +95,36 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
-    public Slider volumeSlider;
-    public Slider soundSlider;
-    public void SetVolume()
+  
+  
+  
+    public void SetSoundsOn()
     {
-        float volume = volumeSlider.value;
-        PlayerPrefs.SetFloat("Music", volume);
-        src.volume = PlayerPrefs.GetFloat("Music");
+        PlayerPrefs.SetInt("SFX", 1);
+        SoundOn.SetActive(true);
+        SoundOFF.SetActive(false);
+        soundSrc.enabled = true;
     }
-    public void SetSoundV()
+    public void SetSounds_Off()
     {
-        float volume1 = soundSlider.value;
-        PlayerPrefs.SetFloat("Sounds", volume1);
+        PlayerPrefs.SetInt("SFX", 0);
+        SoundOn.SetActive(false);
+        SoundOFF.SetActive(true);
+        soundSrc.enabled = false;
+    }
+    public void SetMusicOn()
+    {
+        PlayerPrefs.SetInt("Music", 1);
+        MusicOn.SetActive(true);
+        MusicOff.SetActive(false);
+        src.enabled = true;
+    }
+    public void SetMusicOff()
+    {
+        PlayerPrefs.SetInt("Music", 0);
+        MusicOn.SetActive(false);
+        MusicOff.SetActive(true);
+        src.enabled = false;
     }
     public void LoadLevel(int i = 1)
     {
@@ -155,7 +209,7 @@ public class MainMenu : MonoBehaviour
     }
     public void Unlocked_ModeBY_Rewarded()
     {
-       // PlayerPrefs.SetInt("RewardedMode", 1);
+        PlayerPrefs.SetInt("RewardedMode", 1);
         GoogleMobileAdsController.Instance.rewarded = true;
         GoogleMobileAdsController.Instance.ShowRewardedAd();
 

@@ -459,7 +459,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Script: {fileID: 1051056632966927284}
-  Level_5: 1
   Ending_Cut: 0
 --- !u!1 &715469748102582438
 GameObject:
@@ -471,7 +470,6 @@ GameObject:
   m_Component:
   - component: {fileID: 715469748102582433}
   - component: {fileID: 715469748102582444}
-  - component: {fileID: 715469748102582445}
   - component: {fileID: 715469748102582434}
   - component: {fileID: 715469748102582432}
   - component: {fileID: 1389440181568202038}
@@ -540,14 +538,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &715469748102582445
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715469748102582438}
-  m_Enabled: 1
 --- !u!114 &715469748102582434
 MonoBehaviour:
   m_ObjectHideFlags: 0

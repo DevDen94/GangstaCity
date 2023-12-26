@@ -229,7 +229,8 @@ namespace Invector.vCharacterController
             jumpCounter = jumpTimer;
             isJumping = true;
             OnJump.Invoke();
-
+            GameManger.instance.Char_switch.SetActive(false);
+            GameManger.instance.Jump_Flag = true;
             // trigger jump animations
             if (input.sqrMagnitude < 0.1f)
                 animator.CrossFadeInFixedTime("Jump", 0.1f);

@@ -8,6 +8,7 @@ using Invector;
 public class TutorialScene : MonoBehaviour
 {
     public GameObject ShopCamera;
+    public GameObject PlayerCamera;
     public GameObject ManagerScript;
     public GameObject[] TutorialPanels;
     public GameObject FadeSScreen;
@@ -161,7 +162,7 @@ public class TutorialScene : MonoBehaviour
     public AudioClip clip;
     void Load_Character()
     {
-       
+        PlayerCamera.SetActive(true);
         ManagerScript.SetActive(true);
         Invoke("LoadTutorial", 1f);
         // GameObject a = GameObject.FindGameObjectWithTag("Clone");
