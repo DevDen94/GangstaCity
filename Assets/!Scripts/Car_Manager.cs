@@ -197,7 +197,11 @@ public class Car_Manager : MonoBehaviour
     }
     public void WatchAd_BuyCar()  //PlaceRewardedAd
     {
-       GoogleAdMobController.instance.ShowRewardedAd();
+        //PlayerPrefs.SetInt("Reward", 1);
+        //GoogleAdMobController.instance.ShowRewardedAd();
+        GoogleMobileAdsController.Instance.rewarded = true;
+        GoogleMobileAdsController.Instance.ShowRewardedAd();
+        
     }
     public void BuyCar()
     {

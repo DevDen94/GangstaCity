@@ -110,7 +110,8 @@ public class GameManger : MonoBehaviour
         {
             PlayerPrefs.SetInt("Unlocked_Mission", PlayerPrefs.GetInt("Unlocked_Mission") + 1);
         }
-        GoogleAdMobController.instance.ShowInterstitialAd();
+        //GoogleAdMobController.instance.ShowInterstitialAd();\
+        GoogleMobileAdsController.Instance.ShowInterstitialAd();
     }
     public void Loose_Mission()
     {
@@ -120,7 +121,8 @@ public class GameManger : MonoBehaviour
         MissionFailed.SetActive(true);
         src.PlayOneShot(LooseSound);
         Time.timeScale = 0f;
-        GoogleAdMobController.instance.ShowInterstitialAd();
+        //GoogleAdMobController.instance.ShowInterstitialAd();
+        GoogleMobileAdsController.Instance.ShowInterstitialAd();
     }
     [HideInInspector]
     public GameObject MissionActive;
@@ -199,7 +201,7 @@ public class GameManger : MonoBehaviour
         
         Set_Sounds();
         print(selected_Mission);
-        GoogleAdMobController.instance.HideSmallBanner();
+        //GoogleAdMobController.instance.HideSmallBanner();
     }
     bool tps_check;
     void tps_true()

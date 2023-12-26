@@ -41,13 +41,15 @@ public class MainMenu : MonoBehaviour
         soundSlider.value = PlayerPrefs.GetFloat("Sounds");
         soundSrc.volume = PlayerPrefs.GetFloat("Sounds");
         shop_cash.text = PlayerPrefs.GetInt("Cash").ToString();
-       // abc.text = " Unlocked" + unlockedLevels.ToString() + "\t " + PlayerPrefs.GetInt("Cash");
-        GoogleAdMobController.instance.ShowSmallBannerAd();
+        // abc.text = " Unlocked" + unlockedLevels.ToString() + "\t " + PlayerPrefs.GetInt("Cash");
+        //GoogleAdMobController.instance.ShowSmallBannerAd();
+        GoogleMobileAdsController.Instance.ShowSmallBannerAd();
     }
     public void Start_Btn()
     {
-        GoogleAdMobController.instance.ShowInterstitialAd();
+        //GoogleAdMobController.instance.ShowInterstitialAd();
         ModeSelectionPanel.SetActive(true);
+        GoogleMobileAdsController.Instance.ShowInterstitialAd();
     }
     public void BtnClick()
     {
@@ -153,9 +155,10 @@ public class MainMenu : MonoBehaviour
     }
     public void Unlocked_ModeBY_Rewarded()
     {
-        PlayerPrefs.SetInt("RewardedMode", 1);
-        GoogleAdMobController.instance.ShowRewardedAd();
-        
+       // PlayerPrefs.SetInt("RewardedMode", 1);
+        GoogleMobileAdsController.Instance.rewarded = true;
+        GoogleMobileAdsController.Instance.ShowRewardedAd();
+
 
     }
     public void Settings()
