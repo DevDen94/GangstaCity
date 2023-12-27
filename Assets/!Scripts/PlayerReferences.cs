@@ -6,7 +6,7 @@ public class PlayerReferences : MonoBehaviour
 {
     public GameObject LongJumpPoint;
     public GameObject SprintReference;
-    public GameObject PlayerMinimap;
+   // public GameObject PlayerMinimap;
     public GameObject SprintEffect;
     public GameObject SpawningEffect;
     public GameObject[] Meshes;

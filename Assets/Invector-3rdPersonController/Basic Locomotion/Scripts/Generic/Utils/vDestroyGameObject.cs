@@ -8,6 +8,8 @@ namespace Invector
     {
         public float delay;
         public UnityEngine.Events.UnityEvent onDestroy;
+      
+        
         IEnumerator Start()
         {
             yield return new WaitForSeconds(delay);

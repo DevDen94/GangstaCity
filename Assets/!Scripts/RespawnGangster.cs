@@ -26,6 +26,7 @@ public class RespawnGangster : MonoBehaviour
     public AudioClip femalebg;
     public AudioClip malebg;
     public vGameController gmm;
+    public GameObject Shop;
     private void Start()
     {
         instance = this;
@@ -88,6 +89,7 @@ public class RespawnGangster : MonoBehaviour
             {  
                 gmm.playerPrefab = gm.ThirdPersonPLayer;
             }
+            Shop.SetActive(false);
         }
         else
         {
@@ -104,6 +106,7 @@ public class RespawnGangster : MonoBehaviour
             {
                 gmm.playerPrefab = gm.ThirdPersonPLayer;
             }
+            Shop.SetActive(true);
         }
        
         Player_Current.GetComponent<PlayerNavigation>().player = gm.ThirdPersonPLayer.transform;
@@ -116,6 +119,10 @@ public class RespawnGangster : MonoBehaviour
         Invoke("EnableCharacter", 0.4f);
         Invoke("EnableTps", 5f);
         gm.AssignPlayerReference();
+        if (!gm.Tutorial)
+        {
+            GoogleMobileAdsController.Instance.ShowInterstitialAd();
+        }
     }
     void StopCountdown()
     {

@@ -13838,7 +13838,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Script: {fileID: 9067346995996081254}
-  Level_5: 0
   Ending_Cut: 0
 --- !u!1 &9067346995411243150
 GameObject:

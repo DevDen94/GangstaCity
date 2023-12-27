@@ -82,8 +82,20 @@ namespace PedestrianSystem{
 					return;
 			}
 
+			set_Sound();
+		
 		}
-
+		void set_Sound()
+        {
+			if (PlayerPrefs.GetInt("SFX") == 1)
+			{
+				Src.enabled = true;
+			}
+			else
+			{
+				Src.enabled = false;
+			}
+		}
 		void Update() {
 			if (isDead) return;
 

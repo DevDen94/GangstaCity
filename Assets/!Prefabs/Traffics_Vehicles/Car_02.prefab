@@ -1878,6 +1878,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   g1: {fileID: 4953495087485066754}
   g2: {fileID: 4953495087485066758}
+  Musiclistener:
+  - {fileID: 4953495087486863342}
 --- !u!1 &6045476630607567692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,3 +2110,4 @@ MonoBehaviour:
   Rcc_Car: 0
   Is_hummer: 0
   nameofCar: 
+  Is_RightTrigger: 0

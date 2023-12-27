@@ -666,6 +666,7 @@ GameObject:
   - component: {fileID: -8736209542499646244}
   - component: {fileID: 3227803681786685487}
   - component: {fileID: 2158594530321757458}
+  - component: {fileID: 8609812861094532525}
   m_Layer: 1
   m_Name: Pistol 1
   m_TagString: Weapon
@@ -960,7 +961,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsGameManagerEnable: 0
   ManagerScript: {fileID: 0}
+  Active_AfterPlayerSpawn: []
   cars_ToBuy: {fileID: 0}
+  tutorial: 0
 --- !u!114 &2158594530321757458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1042,6 +1045,19 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   removeEventsOnDisable: 0
+--- !u!114 &8609812861094532525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7089474312247001167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a1d8bce48a25549baa3679de1f2665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 7089474312247415435}
 --- !u!1 &7089474312247001477
 GameObject:
   m_ObjectHideFlags: 0

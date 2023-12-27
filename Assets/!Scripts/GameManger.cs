@@ -76,6 +76,11 @@ public class GameManger : MonoBehaviour
     public string Shop_InstanceKey;
     public _ShopManager sh;
     public GameObject Char_switch;
+    public int[] MissionRewards;
+    public int[] EnemiesKilled;
+    public Text MissionRewardText;
+    public Text EnemiesKilledText;
+    public Text TotalText;
     public void Sprint_Call()
     {
        
@@ -107,10 +112,14 @@ public class GameManger : MonoBehaviour
    
         nav.GameEndl = true;
         MissionComplete.SetActive(true);
-      
         src.PlayOneShot(WinSound);
-        PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + 900);
+        
         PlayerPrefs.SetInt("M_", 0);
+        MissionRewardText.text = MissionRewards[selected_Mission].ToString();
+        EnemiesKilledText.text = EnemiesKilled[selected_Mission].ToString();
+        int total = MissionRewards[selected_Mission] + EnemiesKilled[selected_Mission];
+        TotalText.text = total.ToString();
+        PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + total);
         if (PlayerPrefs.GetInt("Unlocked_Mission") != 10)
         {
             PlayerPrefs.SetInt("Unlocked_Mission", PlayerPrefs.GetInt("Unlocked_Mission") + 1);
@@ -142,14 +151,14 @@ public class GameManger : MonoBehaviour
         Destroy(ThirdPersonPLayer);
         currentGangster = 1;
         Instantiate(Gangster[currentGangster]);
-        Debug.LogError("Msg");
+       // Debug.LogError("Msg");
     }
    
     public void AssignPlayerReference()
     {
        // SprintReference = ThirdPersonPLayer.GetComponent<PlayerReferences>().SprintReference;
         Ref_Jump = ThirdPersonPLayer.GetComponent<PlayerReferences>().LongJumpPoint;
-        PlayerRef = ThirdPersonPLayer.GetComponent<PlayerReferences>().PlayerMinimap;
+       // PlayerRef = ThirdPersonPLayer.GetComponent<PlayerReferences>().PlayerMinimap;
         SprintingEffect = ThirdPersonPLayer.GetComponent<PlayerReferences>().SprintEffect;
         Invoke("delay", 0.5f);
 
@@ -233,21 +242,21 @@ public class GameManger : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Music") == 1)
         {
-            foreach(AudioListener a in Musiclistener)
+            foreach(AudioSource a in Musiclistener)
             {
                 a.enabled = true;
             }
         }
         else
         {
-            foreach (AudioListener a in Musiclistener)
+            foreach (AudioSource a in Musiclistener)
             {
                 a.enabled = false;
             }
         }
 
     }
-    public AudioListener[] Musiclistener;
+    public AudioSource[] Musiclistener;
 
     public void Spawner()
     {
@@ -336,7 +345,7 @@ public class GameManger : MonoBehaviour
     }
     public void Continue()
     {
-        Debug.LogError(PlayerPrefs.GetInt("MissionNo"));
+        //Debug.LogError(PlayerPrefs.GetInt("MissionNo"));
         Time.timeScale = 1f;
         src.PlayOneShot(btnCLIP);
         PlayerPrefs.SetInt("MissionNo", PlayerPrefs.GetInt("MissionNo") + 1 );
@@ -360,11 +369,13 @@ public class GameManger : MonoBehaviour
         Hud_Navigation.SetActive(true);
         HealthCanvas.SetActive(true);
         ControlFreakPanel.SetActive(true);
+        TPS_Controls[5].SetActive(false); //Only for sprint
+
     }
     public void OFF_TPS()  // Disable ThirdPerson Controller
     {
         ThirdPersonPLayer.SetActive(false);
-        PlayerRef.transform.position =ThirdPersonPLayer.transform.position;
+     //   PlayerRef.transform.position =ThirdPersonPLayer.transform.position;
         
         HealthCanvas.SetActive(false);
         ControlFreakPanel.SetActive(false);

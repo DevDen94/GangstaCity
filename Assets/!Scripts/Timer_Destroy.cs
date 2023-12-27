@@ -5,10 +5,26 @@ using UnityEngine;
 public class Timer_Destroy : MonoBehaviour
 {
     public int timer;
-    // Start is called before the first frame update
+    public AudioSource[] Musiclistener;
     void Start()
     {
         Invoke("Delay", timer);
+        if (PlayerPrefs.GetInt("Music") == 1)
+        {
+            foreach (AudioSource a in Musiclistener)
+            {
+                a.enabled = true;
+
+            }
+        }
+        else
+        {
+            foreach (AudioSource a in Musiclistener)
+            {
+                a.enabled = false;
+
+            }
+        }
     }
 
  void Delay()

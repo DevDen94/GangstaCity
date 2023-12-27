@@ -22161,7 +22161,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LongJumpPoint: {fileID: 5786479359743451440}
   SprintReference: {fileID: 5786479358722377351}
-  PlayerMinimap: {fileID: 1757911628447565529}
   SprintEffect: {fileID: 8256347133162275885}
   SpawningEffect: {fileID: 970798582234411020}
   Meshes:
@@ -22175,7 +22174,6 @@ MonoBehaviour:
   - {fileID: 1752817459517601818}
   - {fileID: 1752817459840833925}
   DefaultPanel: {fileID: 1752817458676556287}
-  Musiclistener: []
 --- !u!1 &1752817458732468769
 GameObject:
   m_ObjectHideFlags: 0
@@ -26580,7 +26578,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1757911628447565530}
-  - component: {fileID: 1757911628447565531}
   m_Layer: 0
   m_Name: 'Player_Minimap '
   m_TagString: Untagged
@@ -26603,18 +26600,6 @@ Transform:
   m_Father: {fileID: 1752817458731361653}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1757911628447565531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757911628447565529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1d204e3674d92d46820131cf7f92657, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2571774395677930948
 GameObject:
   m_ObjectHideFlags: 0

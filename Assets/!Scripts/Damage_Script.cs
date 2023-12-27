@@ -18,6 +18,7 @@ public class Damage_Script : MonoBehaviour
     bool myselfpolice_2;
     public AudioClip policeDeath;
     public AudioSource src;
+    GameObject SRC_Audios;
     private void Start()
     {
         Invoke("Start_Delay", 2f);
@@ -31,6 +32,27 @@ public class Damage_Script : MonoBehaviour
         {
             Car_Manager.instance.target_PoliceCar = this.transform;
             myselfpolice_2 = true;
+            Transform audioSourceTransform = transform.Find("All Audio Sources");
+            if (audioSourceTransform != null)
+
+            {
+                SRC_Audios = audioSourceTransform.gameObject;
+            }
+            else
+            {
+              //  Debug.LogError("Child object 'All Audio Sources' not found under the parent.");
+            }
+
+            if (PlayerPrefs.GetInt("Music") == 1)
+            {
+                SRC_Audios.gameObject.SetActive(true);
+
+            }
+            else
+            {
+                SRC_Audios.gameObject.SetActive(false);
+           
+            }
         }
     }
    int slowmoCounter = 0;
@@ -120,7 +142,7 @@ public class Damage_Script : MonoBehaviour
                 Destroy(shoot_Human);
                 Car_Manager.instance.PoliceCop_On = false;
                 Car_Manager.instance.Carbutton_Out.SetActive(true);
-                Debug.LogError("ON");
+               // Debug.LogError("ON");
                 Invoke("DamageCar_Spawn", 3f);
                 PoliceSystemActive.instance.PoliceCarPanel.SetActive(true);
                 PoliceSystemActive.instance.PoliceCarPanel.transform.GetChild(0).GetComponent<Text>().text = "Good Job. You destroyed the Police Car";

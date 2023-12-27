@@ -22,10 +22,6 @@ public class FinishTrigger : MonoBehaviour
                 PlayerPrefs.SetInt("MissionNo", 1); 
                 gameObject.SetActive(false);
             }
-            else
-            {
-                PlayerPrefs.SetInt("MissionNo", PlayerPrefs.GetInt("MissionNo") + 1);
-            }
               
             if (!Script.EndingCutscene_Bool)
             {
@@ -36,13 +32,14 @@ public class FinishTrigger : MonoBehaviour
             {
                 Script.Mission1_Door.enabled = true;
             }
+
+
             if (!Ending_Cut)
             {
                 Script.EndingCutScene.SetActive(true);
                // gm.InstructionsPanel.SetActive(true);
                 //gm.StaringInstructions.text = gm.All_Instructions.Ending_Instructions[gm.selected_Mission].ToString();
-            }
-            else
+            }else
             {
                 GameManger.instance.Win_Mission();
             }

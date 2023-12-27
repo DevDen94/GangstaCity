@@ -59,11 +59,14 @@ public class TutorialScene : MonoBehaviour
     public GameObject Gangsterr;
     private void Update()
     {
-        if (tutStart && counter <= 7) 
+        if (tutStart && counter <= 7)
         {
-            if (GameManger.instance.ThirdPersonPLayer.GetComponent<vHealthController>().currentHealth < 100)
+            if (GameManger.instance.ThirdPersonPLayer != null)
             {
-                GameManger.instance.ThirdPersonPLayer.GetComponent<vHealthController>()._currentHealth = 250;
+                if (GameManger.instance.ThirdPersonPLayer.GetComponent<vHealthController>().currentHealth < 100)
+                {
+                    GameManger.instance.ThirdPersonPLayer.GetComponent<vHealthController>()._currentHealth = 250;
+                }
             }
         }
     }

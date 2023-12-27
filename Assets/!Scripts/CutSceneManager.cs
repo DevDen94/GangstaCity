@@ -24,17 +24,30 @@ public class CutSceneManager : MonoBehaviour
         Set_Sounds();
         //Set_TutorialActive();
     }
+   
     void Set_Sounds()
     {
-         foreach (AudioListener a in Musiclistener)
+        if (PlayerPrefs.GetInt("Music") == 1)
+        {
+            foreach (AudioSource a in Musiclistener)
+            {
+                a.enabled = true;
+               
+            }
+        }
+        else
+        {
+            foreach (AudioSource a in Musiclistener)
             {
                 a.enabled = false;
+                
             }
-       
+        }
 
     }
-    public AudioListener[] Musiclistener;
+    public AudioSource[] Musiclistener;
 
+  
     void part1_A()
     {
         part1.SetActive(false);
@@ -50,6 +63,7 @@ public class CutSceneManager : MonoBehaviour
 
   public void Set_TutorialActive()
     {
+        SkipBtn.SetActive(false);
         part3.SetActive(false);
       
         Tutorial_Starting.SetActive(true);

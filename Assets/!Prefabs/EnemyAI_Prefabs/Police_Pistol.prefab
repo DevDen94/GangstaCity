@@ -1019,7 +1019,7 @@ MonoBehaviour:
   frictionPhysics: {fileID: 0}
   maxFrictionPhysics: {fileID: 0}
   slippyPhysics: {fileID: 0}
-  _capsuleCollider: {fileID: 0}
+  _capsuleCollider: {fileID: 1831472062348373391}
   targetDirection: {x: 0, y: 0, z: 0}
   input: {x: 0, y: 0, z: 0}
   lockMovement: 0
@@ -17096,6 +17096,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8434918339871033066}
   - component: {fileID: 8434918339871033067}
+  - component: {fileID: 2323598814314638862}
   m_Layer: 2
   m_Name: HandGun (2)
   m_TagString: Weapon
@@ -17276,6 +17277,19 @@ MonoBehaviour:
       m_Calls: []
   root: {fileID: 0}
   isSecundaryWeapon: 0
+--- !u!114 &2323598814314638862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8434918339871033077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a1d8bce48a25549baa3679de1f2665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 8434918340363694266}
 --- !u!1 &8434918339969512524
 GameObject:
   m_ObjectHideFlags: 0

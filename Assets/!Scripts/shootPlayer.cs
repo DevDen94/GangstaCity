@@ -19,12 +19,26 @@ public class shootPlayer : MonoBehaviour
     public bool AutofireMode;
     public Transform Parent;
     bool StartGet;
+
+
     void Start()
     {
         StartGet = false;
         Invoke("Start_Delay", 1f);
-        
+        Sounds();
       
+    }
+
+    void Sounds()
+    {
+        if (PlayerPrefs.GetInt("SFX") == 1)
+        {
+            src.enabled = true;
+        }
+        else
+        {
+            src.enabled = false;
+        }
     }
     void Start_Delay()
     {
@@ -120,8 +134,8 @@ public class shootPlayer : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogError(AutofireMode);
-                    Debug.LogError("Waiting for target or something");
+                  //  Debug.LogError(AutofireMode);
+                  //  Debug.LogError("Waiting for target or something");
                 }
             }
             

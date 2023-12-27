@@ -2548,6 +2548,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 4
+  Musiclistener:
+  - {fileID: 8812925084270109129}
+  - {fileID: 8812695190397365102}
 --- !u!1 &8893663359165719696
 GameObject:
   m_ObjectHideFlags: 0

@@ -210,7 +210,7 @@ BoxCollider:
   m_GameObject: {fileID: 2967080258621478090}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -229,6 +229,7 @@ MonoBehaviour:
   openCloseEvents: 0
   openCloseWindow: 0
   selectedToolbar: 0
+  src: {fileID: 0}
   attackObject: {fileID: 0}
   trigger: {fileID: 3010743684390275764}
   damagePercentage: 100
@@ -30438,6 +30439,7 @@ MonoBehaviour:
   openCloseEvents: 1
   openCloseWindow: 1
   selectedToolbar: 3
+  src: {fileID: 0}
   actionInput:
     useInput: 1
     isAxisInUse: 0
@@ -35630,6 +35632,7 @@ GameObject:
   - component: {fileID: 6068325539482399960}
   - component: {fileID: 7855099141123496167}
   - component: {fileID: 740395575346191446}
+  - component: {fileID: 8920422210637016600}
   m_Layer: 2
   m_Name: Rifle 1
   m_TagString: Weapon
@@ -35685,6 +35688,7 @@ MonoBehaviour:
   openCloseEvents: 0
   openCloseWindow: 1
   selectedToolbar: 1
+  src: {fileID: 0}
   weaponCategory: Rifle
   shootFrequency: 0.125
   isInfinityAmmo: 0
@@ -35869,6 +35873,7 @@ MonoBehaviour:
   openCloseEvents: 1
   openCloseWindow: 0
   selectedToolbar: 0
+  src: {fileID: 0}
   damage:
     damageValue: 0
     staminaBlockCost: 0
@@ -35930,6 +35935,7 @@ MonoBehaviour:
   openCloseEvents: 0
   openCloseWindow: 0
   selectedToolbar: 0
+  src: {fileID: 0}
 --- !u!114 &740395575346191446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35945,6 +35951,7 @@ MonoBehaviour:
   openCloseEvents: 0
   openCloseWindow: 1
   selectedToolbar: 0
+  src: {fileID: 0}
   getAnimatorInParent: 1
   animatorEvents:
   - eventName: Instantiate_RifleClipPrefab
@@ -36011,6 +36018,19 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   removeEventsOnDisable: 0
+--- !u!114 &8920422210637016600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5651398273343935462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a1d8bce48a25549baa3679de1f2665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 5651398273338237596}
 --- !u!1 &5651398273343939414
 GameObject:
   m_ObjectHideFlags: 0

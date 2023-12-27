@@ -256,7 +256,8 @@ public class Car_Manager : MonoBehaviour
 
     }
 
- 
+    public Image Icon;
+    public Sprite sp;
     public void OpenInventory()
     {
         gameManager.BtnClick();
@@ -293,6 +294,7 @@ public class Car_Manager : MonoBehaviour
             }
             Invoke("DestroyWeapon", 0.25f);
             Invoke("DestroyWeapon", 1f);
+            Icon.gameObject.SetActive(false);
         }
         else
         {
@@ -306,6 +308,7 @@ public class Car_Manager : MonoBehaviour
             {
                 a.SetActive(true);
             }
+            Icon.gameObject.SetActive(true);
         }
        
     }
@@ -318,7 +321,7 @@ public class Car_Manager : MonoBehaviour
             Invoke("DestroyWeapon", 0.4f);
         }
      
-       // PressGun(3);
+        // PressGun(3);
     }
    
   

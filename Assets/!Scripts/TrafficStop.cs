@@ -24,4 +24,28 @@ public class TrafficStop : MonoBehaviour
             g2.GetComponent<TSSimpleCar_Wheel>().enabled = true;
         }
     }
+    private void Start()
+    {
+        Set_Sounds();
+    }
+    void Set_Sounds()
+    {
+        if (PlayerPrefs.GetInt("Music") == 1)
+        {
+            foreach (AudioSource a in Musiclistener)
+            {
+                a.enabled = true;
+            }
+        }
+        else
+        {
+            foreach (AudioSource a in Musiclistener)
+            {
+                a.enabled = false;
+            }
+        }
+
+    }
+    public AudioSource[] Musiclistener;
+
 }

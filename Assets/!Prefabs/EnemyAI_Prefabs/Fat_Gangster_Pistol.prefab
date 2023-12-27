@@ -379,6 +379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1307215917774775469}
   - component: {fileID: 1307215917774775468}
+  - component: {fileID: 3314206108204365148}
   m_Layer: 2
   m_Name: HandGun (1)
   m_TagString: Weapon
@@ -559,6 +560,19 @@ MonoBehaviour:
       m_Calls: []
   root: {fileID: 0}
   isSecundaryWeapon: 0
+--- !u!114 &3314206108204365148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307215917774775470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a1d8bce48a25549baa3679de1f2665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1307215919070075214}
 --- !u!1 &1307215917814997890
 GameObject:
   m_ObjectHideFlags: 0

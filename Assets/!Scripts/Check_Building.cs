@@ -33,14 +33,39 @@ public class Check_Building : MonoBehaviour
         Car_Out = false;
         Is_DriverExit = false;
         Car_Manager.instance.Car = this;
-        SRC_Audios = gameObject.transform.GetChild(11).gameObject;
+        Find();
+      //  SRC_Audios = gameObject.transform.GetChild(11).gameObject;
         if (!is_HummerSpecial)
         {
             Drive_Car();
             
         }
-  
-      
+
+    }
+
+    void Find()
+    {
+         Transform audioSourceTransform = transform.Find("All Audio Sources");
+         if (audioSourceTransform != null)
+          
+        {
+            SRC_Audios = audioSourceTransform.gameObject;
+         }
+         else
+        {
+                 //   Debug.LogError("Child object 'All Audio Sources' not found under the parent.");
+        }
+
+        if (PlayerPrefs.GetInt("Music") == 1)
+        {
+            SRC_Audios.gameObject.SetActive(true);
+            gameObject.GetComponent<AudioSource>().enabled = true;
+        }
+        else
+        {
+            SRC_Audios.gameObject.SetActive(false);
+            gameObject.GetComponent<AudioSource>().enabled = false;
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -125,7 +150,7 @@ void Destroy_Driver()
             TutorialObject.SetActive(false);
             NextTutorialObject.SetActive(true);
          }
-         
+        Find();
         Player = Gangsters[PlayerPrefs.GetInt("SelectedGangster")].GetComponent<Animator>();
      
         if (!Car_Manager.instance.AI_Car.Isdriver)
@@ -151,7 +176,10 @@ void Destroy_Driver()
             Invoke("ExitCarOutBTn", 2f);
             Player.SetInteger("Sit", 2);
             gameObject.tag = "Car";
-            SRC_Audios.SetActive(true);
+            if (PlayerPrefs.GetInt("Music") == 1)
+            {
+                SRC_Audios.SetActive(true);
+            }
             PlayerNavigation.instance.player = gameObject.transform;
             return;
         }
@@ -164,7 +192,10 @@ void Destroy_Driver()
         Invoke("AfterDelay", 1f);
         gameObject.tag = "Car";
         PlayerNavigation.instance.player = gameObject.transform;
-        SRC_Audios.SetActive(true);
+        if (PlayerPrefs.GetInt("Music") == 1)
+        {
+            SRC_Audios.SetActive(true);
+        }
     }
     void AfterDelay()
     {
@@ -244,6 +275,7 @@ void Destroy_Driver()
         gameObject.tag = "TrafficLight";
      //   gameObject.layer = LayerMask.NameToLayer("Default");
         gameObject.SetActive(false);
+        GameManger.instance.TPS_Controls[5].SetActive(false);
         Invoke("ofice", 0.2f);
         
     }
