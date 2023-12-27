@@ -63,7 +63,7 @@ public class PoliceSystemActive : MonoBehaviour
         GameObject g2 = Instantiate(objectToSpawn, spawnPosition1, Quaternion.identity);
         g1.transform.SetParent(ParentPoliceMens.transform);
         g2.transform.SetParent(ParentPoliceMens.transform);
-        Debug.LogError("POLICEEE");
+        //Debug.LogError("POLICEEE");
      }
     void Delay_PoliceMens()
     {

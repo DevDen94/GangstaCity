@@ -1313,6 +1313,8 @@ MonoBehaviour:
   PlayerShooter: {fileID: 6527797476762215408}
   is_HummerSpecial: 0
   PlayerCar: 0
+  TutorialObject: {fileID: 0}
+  NextTutorialObject: {fileID: 0}
   DUMMY_CAR: {fileID: 7300828664495834930, guid: ac0d62f07a815f249b780e1923893284,
     type: 3}
 --- !u!65 &2044641845241346518
@@ -5002,7 +5004,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8116979497037329017}
-  m_LocalRotation: {x: -0.0029489673, y: -0.0040157805, z: -0.033221427, w: 0.9994356}
+  m_LocalRotation: {x: -0.0029489677, y: -0.0040157805, z: -0.033221435, w: 0.9994356}
   m_LocalPosition: {x: 0.7647349, y: 3.7912273, z: -0.035950776}
   m_LocalScale: {x: 1.0000001, y: 1, z: 1.0000001}
   m_ConstrainProportionsScale: 0
@@ -9116,7 +9118,7 @@ PrefabInstance:
     - target: {fileID: 3038469127860998320, guid: eedf7b1e28409e84d84b274b3c9e7265,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2386627
+      value: -1.31
       objectReference: {fileID: 0}
     - target: {fileID: 3038469127860998320, guid: eedf7b1e28409e84d84b274b3c9e7265,
         type: 3}
@@ -9161,22 +9163,22 @@ PrefabInstance:
     - target: {fileID: 7066821306504790967, guid: eedf7b1e28409e84d84b274b3c9e7265,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.028994732
+      value: -0.028994733
       objectReference: {fileID: 0}
     - target: {fileID: 7066821306504790967, guid: eedf7b1e28409e84d84b274b3c9e7265,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.026262382
+      value: -0.026262384
       objectReference: {fileID: 0}
     - target: {fileID: 8632278263731907401, guid: eedf7b1e28409e84d84b274b3c9e7265,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.022325017
+      value: 0.022325018
       objectReference: {fileID: 0}
     - target: {fileID: 8632278263731907401, guid: eedf7b1e28409e84d84b274b3c9e7265,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0088073695
+      value: 0.00880737
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eedf7b1e28409e84d84b274b3c9e7265, type: 3}

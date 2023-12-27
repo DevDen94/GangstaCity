@@ -94,7 +94,7 @@ public class DoorOpen : MonoBehaviour
         if (!Car_Manager.instance.PoliceCop_On)
         {
             Car_Manager.instance.Carbutton_Out.SetActive(true);
-            Debug.LogError("ON");
+            //Debug.LogError("ON");
         }
 
     }

@@ -27,6 +27,7 @@ public class RespawnGangster : MonoBehaviour
     public AudioClip malebg;
     public vGameController gmm;
     public GameObject Shop;
+    float health = 250;
     private void Start()
     {
         instance = this;
@@ -74,6 +75,7 @@ public class RespawnGangster : MonoBehaviour
   
     public void ChangeGangster()
     {
+       
         if (gm.currentGangster == 0)
         {
             gm.currentGangster = 1;
@@ -119,10 +121,12 @@ public class RespawnGangster : MonoBehaviour
         Invoke("EnableCharacter", 0.4f);
         Invoke("EnableTps", 5f);
         gm.AssignPlayerReference();
+        
         if (!gm.Tutorial)
         {
             GoogleMobileAdsController.Instance.ShowInterstitialAd();
         }
+       
     }
     void StopCountdown()
     {
@@ -130,6 +134,9 @@ public class RespawnGangster : MonoBehaviour
         countdownTime = 0; 
         counterText.text = "0";
         FadeScreen.SetActive(true);
+        Debug.LogError(gm.ThirdPersonPLayer.GetComponent<vHealthController>()._currentHealth);
+        Debug.LogError(gm.ThirdPersonPLayer.GetComponent<vHealthController>().currentHealth);
+        health = gm.ThirdPersonPLayer.GetComponent<vHealthController>()._currentHealth;
         Destroy(gm.ThirdPersonPLayer);
         Invoke("ChangeGangster", 1f);
     }
@@ -153,6 +160,7 @@ public class RespawnGangster : MonoBehaviour
     void EnableTps()
     {
         gm.ThirdPersonPLayer.GetComponent<PlayerReferences>().SpawningEffect.SetActive(false);
+        gm.ThirdPersonPLayer.GetComponent<vHealthController>()._currentHealth = health;
         Canvas.SetActive(true);
         Destroy(temp);
       
