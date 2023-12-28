@@ -65,6 +65,7 @@ public class RespawnGangster : MonoBehaviour
     {
         Time.timeScale = 1f;
         isCounting = true;
+        countdownTime = 0;
         if (gm.Tutorial)
         {
             TutorialScene.instance.cs.Text_Panel.SetActive(false);
@@ -134,8 +135,8 @@ public class RespawnGangster : MonoBehaviour
         countdownTime = 0; 
         counterText.text = "0";
         FadeScreen.SetActive(true);
-        Debug.LogError(gm.ThirdPersonPLayer.GetComponent<vHealthController>()._currentHealth);
-        Debug.LogError(gm.ThirdPersonPLayer.GetComponent<vHealthController>().currentHealth);
+      //  Debug.LogError(gm.ThirdPersonPLayer.GetComponent<vHealthController>()._currentHealth);
+       // Debug.LogError(gm.ThirdPersonPLayer.GetComponent<vHealthController>().currentHealth);
         health = gm.ThirdPersonPLayer.GetComponent<vHealthController>()._currentHealth;
         Destroy(gm.ThirdPersonPLayer);
         Invoke("ChangeGangster", 1f);

@@ -1,17 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class MissionTrigger : MonoBehaviour
 {
     public int missionNumber;
     public GameObject mission;
     private Mission_Script m;
-    
+   
     private void Start()
     {
-       // mission = GameObject.FindGameObjectWithTag("Mission");
-        //m = mission.GetComponent<Mission_Script>();
+     
     }
     private void OnTriggerEnter(Collider other)
     {

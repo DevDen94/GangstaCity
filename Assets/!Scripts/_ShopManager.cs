@@ -24,6 +24,10 @@ public class _ShopManager : MonoBehaviour
     public GameObject[] Costumes_Panel;
     public Gangster_Shop gm;
     public Text CashMain;
+    private void OnEnable()
+    {
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("_shopopen");
+    }
     private void Start()
     {
         Default_Set();

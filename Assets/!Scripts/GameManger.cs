@@ -54,7 +54,8 @@ public class GameManger : MonoBehaviour
     public AudioClip LooseSound;
     public AudioSource BackgroundMusic;
 
-  
+
+    public GameObject NavMesh_Object;
     public PlayerNavigation nav;
     public Text TaskText;
     public GameObject Task_Panel;
@@ -123,9 +124,9 @@ public class GameManger : MonoBehaviour
         if (PlayerPrefs.GetInt("Unlocked_Mission") != 10)
         {
             PlayerPrefs.SetInt("Unlocked_Mission", PlayerPrefs.GetInt("Unlocked_Mission") + 1);
-        }
-        //GoogleAdMobController.instance.ShowInterstitialAd();\
+        } 
         GoogleMobileAdsController.Instance.ShowInterstitialAd();
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("mission_complete", "number", selected_Mission);
     }
     public void Loose_Mission()
     {
@@ -137,6 +138,7 @@ public class GameManger : MonoBehaviour
         Time.timeScale = 0f;
         //GoogleAdMobController.instance.ShowInterstitialAd();
         GoogleMobileAdsController.Instance.ShowInterstitialAd();
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("mission_failed", "number", selected_Mission);
     }
     [HideInInspector]
     public GameObject MissionActive;
@@ -206,7 +208,7 @@ public class GameManger : MonoBehaviour
             MissionActive = Missions[selected_Mission];
             Missions[selected_Mission].SetActive(true);
             cm.DestinationPoint = Missions[selected_Mission];
-           
+            Task_Panel.SetActive(true);
             cm.Set_NavigationDestination();
            
         }

@@ -24963,7 +24963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 3
+  selectedToolbar: 2
   weaponCategory: MyCategory
   shootFrequency: 1.5
   isInfinityAmmo: 0
@@ -24971,7 +24971,7 @@ MonoBehaviour:
   ignoreTags: []
   hitLayer:
     serializedVersion: 2
-    m_Bits: 33025
+    m_Bits: 8421633
   projectile: {fileID: 1000010710861650, guid: 22773fb6a3ebd59429b49fd6e288058e, type: 3}
   muzzle: {fileID: 4932047948639069946}
   projectilesPerShot: 1
@@ -39709,7 +39709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 8
+  selectedToolbar: 10
   _isDead: 0
   _currentHealth: 0
   isImmortal: 0
@@ -39905,7 +39905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 2
+  selectedToolbar: 0
   minDistanceToAim: 1
   checkAimRadius: 0.1
   smoothHandRotation: 30
@@ -39913,7 +39913,7 @@ MonoBehaviour:
   raycastAimTarget: 1
   damageLayer:
     serializedVersion: 2
-    m_Bits: 33025
+    m_Bits: 8421633
   ignoreTags: []
   useLeftIK: 1
   useRightIK: 1

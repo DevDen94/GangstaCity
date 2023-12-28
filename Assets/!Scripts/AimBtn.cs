@@ -48,7 +48,13 @@ public class AimBtn : MonoBehaviour
             a.SetActive(true);
             cars_ToBuy.SetActive(true);
         }
-    }
+
+        if (PlayerPrefs.GetInt("Mode_Select") == 2)
+        {
+            Active_AfterPlayerSpawn[5].SetActive(false);
+        }
+
+     }
     private void OnCollisionEnter(Collision collision)
     {
         Debug.LogError("Abbbcccccccccccccccccccc");

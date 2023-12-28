@@ -20750,7 +20750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 4
+  selectedToolbar: 0
   damageLayer:
     serializedVersion: 2
     m_Bits: 32769
@@ -20759,7 +20759,7 @@ MonoBehaviour:
     - Player
   blockAimLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8388609
   blockAimOffsetY: 0.35
   blockAimOffsetX: 0.35
   useCancelReload: 1
@@ -21518,7 +21518,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LongJumpPoint: {fileID: 4406271884167681777}
   SprintReference: {fileID: 4406271882738591402}
-  PlayerMinimap: {fileID: 4406271883066759809}
   SprintEffect: {fileID: 4406271882718296910}
   SpawningEffect: {fileID: 1170867891}
   Meshes:
@@ -26933,7 +26932,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4406271883066759838}
-  - component: {fileID: 4406271883066759839}
   m_Layer: 0
   m_Name: Player_Minimap
   m_TagString: Untagged
@@ -26956,18 +26954,6 @@ Transform:
   m_Father: {fileID: 4406271882716806310}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4406271883066759839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4406271883066759809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1d204e3674d92d46820131cf7f92657, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4406271883089253881
 GameObject:
   m_ObjectHideFlags: 0

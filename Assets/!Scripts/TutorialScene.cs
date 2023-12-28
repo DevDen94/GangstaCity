@@ -19,6 +19,7 @@ public class TutorialScene : MonoBehaviour
     public static TutorialScene instance;
     public GameObject UIPanel;
     public GameObject Hummar;
+    public GameObject Box;
     public GameObject CharacterBtn;
     public GameObject PlayerNav;
     public GameObject Dest;
@@ -126,8 +127,10 @@ public class TutorialScene : MonoBehaviour
                 Invoke("Off_HealthBar_Indicator", 2f);
                 break;
             case 9:
+
                 cs.Text_Panel.SetActive(true);
                 cs.TextField.text = cs.Instructions[counter].ToString();
+                Box.SetActive(false);
                 Hummar.SetActive(true);
                 Dest.SetActive(true);
                 break;

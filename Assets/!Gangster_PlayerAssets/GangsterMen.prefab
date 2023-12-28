@@ -21393,7 +21393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 3
+  selectedToolbar: 0
   damageLayer:
     serializedVersion: 2
     m_Bits: 32769
@@ -21402,7 +21402,7 @@ MonoBehaviour:
     - Player
   blockAimLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8388609
   blockAimOffsetY: 0.35
   blockAimOffsetX: 0.35
   useCancelReload: 1

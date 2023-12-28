@@ -8,6 +8,7 @@ public class DialogueTrigger : MonoBehaviour
     public Animator male;
     public Mission_Script mission;
     public GameObject Next_P;
+    public GameObject Nexttt;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -31,6 +32,10 @@ public class DialogueTrigger : MonoBehaviour
             Car_Manager.instance.Set_NavigationDestination();
             mission.Load_Tasklist();
             GameManger.instance.Task_Panel.SetActive(false);
+            if (Nexttt !=null)
+            {
+                Nexttt.SetActive(true);
+            }
         }
     }
 }

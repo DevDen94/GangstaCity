@@ -64,9 +64,10 @@ namespace PedestrianSystem{
 		}
 		//set animator value of pedestrian according to the state choosen
 		void Start() {
+			set_Sound();
 			is_Last = false;
 			isidle = false;
-			anim = this.GetComponent<Animator>();
+			anim = GetComponent<Animator>();
 
 			switch (movementType) {
 				case MovementType.WALK:
@@ -82,7 +83,7 @@ namespace PedestrianSystem{
 					return;
 			}
 
-			set_Sound();
+		
 		
 		}
 		void set_Sound()

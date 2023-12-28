@@ -6,6 +6,7 @@ public class CutScene_1 : MonoBehaviour
 {
     public Mission_Script script;
     public GameObject CutSceneObjects;
+    public GameObject Mission2;
     private void Start()
     {
         GameManger.instance.Task_Panel.SetActive(false);
@@ -25,6 +26,13 @@ public class CutScene_1 : MonoBehaviour
             script.Gangster.GetComponent<Animator>().runtimeAnimatorController = script.HealingController;
         }
         gameObject.SetActive(false);
+
+        if (Mission2 != null)
+        {
+            Mission2.SetActive(false);
+            Debug.LogError("Objee");
+        }
+      
     }
 
     public void TransfromTioGIRL()
