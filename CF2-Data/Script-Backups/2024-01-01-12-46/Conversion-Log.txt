@@ -1,0 +1,115 @@
+Converting script [1 / 10]	[\!Scripts\BoatController.cs]
+	Fragments : 2
+		[ 0] : Line:   19	InputMethod   GetAxis             	("Horizontal")
+		[ 1] : Line:   20	InputMethod   GetAxis             	("Vertical")
+
+Converting script [2 / 10]	[\!Scripts\MainMenu.cs]
+	Fragments : 5
+		[ 0] : Line:   18	Other mod.	[Cursor.lockState]
+		[ 1] : Line:   19	Other mod.	[Cursor.visible]
+		[ 2] : Line:   85	Other mod.	[Cursor.visible]
+		[ 3] : Line:   87	Other mod.	[Cursor.lockState]
+		[ 4] : Line:   88	Other mod.	[Cursor.visible]
+
+Converting script [3 / 10]	[\Navmesh Path Draw\Demo\DrawAndStopInputs.cs]
+	Fragments : 2
+		[ 0] : Line:   10	InputMethod   GetKeyDown          	(KeyCode.S)
+		[ 1] : Line:   14	InputMethod   GetKeyDown          	(KeyCode.A)
+
+Converting script [4 / 10]	[\Pixel Play\Scripts\ExtendedFlycam.cs]
+	Fragments : 14
+		[ 0] : Line:   24	InputMethod   GetAxis             	("Mouse X")
+		[ 1] : Line:   25	InputMethod   GetAxis             	("Mouse Y")
+		[ 2] : Line:   31	InputMethod   GetKey              	(KeyCode.LeftShift)
+		[ 3] : Line:   31	InputMethod   GetKey              	(KeyCode.RightShift)
+		[ 4] : Line:   33	InputMethod   GetAxis             	("Vertical")
+		[ 5] : Line:   34	InputMethod   GetAxis             	("Horizontal")
+		[ 6] : Line:   36	InputMethod   GetKey              	(KeyCode.LeftControl)
+		[ 7] : Line:   36	InputMethod   GetKey              	(KeyCode.RightControl)
+		[ 8] : Line:   38	InputMethod   GetAxis             	("Vertical")
+		[ 9] : Line:   39	InputMethod   GetAxis             	("Horizontal")
+		[10] : Line:   43	InputMethod   GetAxis             	("Vertical")
+		[11] : Line:   44	InputMethod   GetAxis             	("Horizontal")
+		[12] : Line:   48	InputMethod   GetKey              	(KeyCode.Q)
+		[13] : Line:   49	InputMethod   GetKey              	(KeyCode.E)
+
+Converting script [5 / 10]	[\Hovl Studio\AAA Projectiles Vol 1\Demo scenes\DemoShooting.cs]
+	Fragments : 10
+		[ 0] : Line:   33	Other mod.	[Screen.dpi]
+		[ 1] : Line:   34	Other mod.	[Screen.dpi]
+		[ 2] : Line:   35	Other mod.	[Screen.dpi]
+		[ 3] : Line:   42	InputMethod   GetButtonDown       	("Fire1")
+		[ 4] : Line:   49	InputMethod   GetMouseButton      	(1)
+		[ 5] : Line:   58	InputMethod   GetKey              	(KeyCode.A)
+		[ 6] : Line:   58	InputMethod   GetAxis             	("Horizontal")
+		[ 7] : Line:   63	InputMethod   GetKey              	(KeyCode.D)
+		[ 8] : Line:   63	InputMethod   GetAxis             	("Horizontal")
+		[ 9] : Line:   74	InputProperty mousePosition       
+
+Converting script [6 / 10]	[\Hovl Studio\AAA Projectiles Vol 1\Demo scenes\DemoShooting2D.cs]
+	Fragments : 10
+		[ 0] : Line:   30	Other mod.	[Screen.dpi]
+		[ 1] : Line:   31	Other mod.	[Screen.dpi]
+		[ 2] : Line:   32	Other mod.	[Screen.dpi]
+		[ 3] : Line:   39	InputMethod   GetButtonDown       	("Fire1")
+		[ 4] : Line:   45	InputMethod   GetMouseButton      	(1)
+		[ 5] : Line:   54	InputMethod   GetKey              	(KeyCode.A)
+		[ 6] : Line:   54	InputMethod   GetAxis             	("Horizontal")
+		[ 7] : Line:   59	InputMethod   GetKey              	(KeyCode.D)
+		[ 8] : Line:   59	InputMethod   GetAxis             	("Horizontal")
+		[ 9] : Line:   69	InputProperty mousePosition       
+
+Converting script [7 / 10]	[\Hovl Studio\Map track markers VFX 2\Demo scene\RaycastInstance.cs]
+	Fragments : 9
+		[ 0] : Line:   19	Other mod.	[Screen.dpi]
+		[ 1] : Line:   20	Other mod.	[Screen.dpi]
+		[ 2] : Line:   21	Other mod.	[Screen.dpi]
+		[ 3] : Line:   27	InputMethod   GetButtonDown       	("Fire1")
+		[ 4] : Line:   32	InputProperty mousePosition       
+		[ 5] : Line:   47	InputMethod   GetKey              	(KeyCode.A)
+		[ 6] : Line:   47	InputMethod   GetAxis             	("Horizontal")
+		[ 7] : Line:   52	InputMethod   GetKey              	(KeyCode.D)
+		[ 8] : Line:   52	InputMethod   GetAxis             	("Horizontal")
+
+Converting script [8 / 10]	[\Downloads\Real Fire & Smoke\Demo\Scripts\RealFireDragMouseOrbit.cs]
+	Fragments : 4
+		[ 0] : Line:   34	InputMethod   GetMouseButton      	(1)
+		[ 1] : Line:   36	InputMethod   GetAxis             	("Mouse X")
+		[ 2] : Line:   37	InputMethod   GetAxis             	("Mouse Y")
+		[ 3] : Line:   46	InputMethod   GetAxis             	("Mouse ScrollWheel")
+
+Converting script [9 / 10]	[\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\Parser.cs]
+	Fragments : 1
+		[ 0] : Line: 3370	InputMethod   HasInput            	(position)
+
+Converting script [10 / 10]	[\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\TextParserCommon.cs]
+	Fragments : 13
+		[ 0] : Line:   38	InputMethod   HasInput            	(position)
+		[ 1] : Line:   40	InputMethod   GetInputSymbol      	(position)
+		[ 2] : Line:   48	InputMethod   HasInput            	(pos)
+		[ 3] : Line:   50	InputMethod   GetInputSymbol      	(pos)
+		[ 4] : Line:   59	InputMethod   HasInput            	(position)
+		[ 5] : Line:   61	InputMethod   GetInputSymbol      	(position)
+		[ 6] : Line:   75	InputMethod   HasInput            	(position)
+		[ 7] : Line:   77	InputMethod   GetInputSymbol      	(position)
+		[ 8] : Line:   91	InputMethod   HasInput            	(position)
+		[ 9] : Line:   93	InputMethod   GetInputSymbol      	(position)
+		[10] : Line:  127	InputMethod   HasInput            	(pos)
+		[11] : Line:  127	InputMethod   GetInputSymbol      	(pos)
+		[12] : Line:  157	InputMethod   FormErrorMessage    	(msg.Item1, msg.Item2)
+
+
+10 scripts modified!
+Overwriting actual scripts...
+	[0 / 10] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-01-01-12-46\Assets-After/\!Scripts\BoatController.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\!Scripts\BoatController.cs]
+	[1 / 10] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-01-01-12-46\Assets-After/\!Scripts\MainMenu.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\!Scripts\MainMenu.cs]
+	[2 / 10] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-01-01-12-46\Assets-After/\Navmesh Path Draw\Demo\DrawAndStopInputs.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Navmesh Path Draw\Demo\DrawAndStopInputs.cs]
+	[3 / 10] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-01-01-12-46\Assets-After/\Pixel Play\Scripts\ExtendedFlycam.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Pixel Play\Scripts\ExtendedFlycam.cs]
+	[4 / 10] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-01-01-12-46\Assets-After/\Hovl Studio\AAA Projectiles Vol 1\Demo scenes\DemoShooting.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Hovl Studio\AAA Projectiles Vol 1\Demo scenes\DemoShooting.cs]
+	[5 / 10] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-01-01-12-46\Assets-After/\Hovl Studio\AAA Projectiles Vol 1\Demo scenes\DemoShooting2D.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Hovl Studio\AAA Projectiles Vol 1\Demo scenes\DemoShooting2D.cs]
+	[6 / 10] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-01-01-12-46\Assets-After/\Hovl Studio\Map track markers VFX 2\Demo scene\RaycastInstance.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Hovl Studio\Map track markers VFX 2\Demo scene\RaycastInstance.cs]
+	[7 / 10] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-01-01-12-46\Assets-After/\Downloads\Real Fire & Smoke\Demo\Scripts\RealFireDragMouseOrbit.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Downloads\Real Fire & Smoke\Demo\Scripts\RealFireDragMouseOrbit.cs]
+	[8 / 10] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-01-01-12-46\Assets-After/\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\Parser.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\Parser.cs]
+	[9 / 10] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-01-01-12-46\Assets-After/\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\TextParserCommon.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\TextParserCommon.cs]
+
+Overwriting COMPLETED!
