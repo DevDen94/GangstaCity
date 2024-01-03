@@ -1,10 +1,6 @@
-﻿//This asset was uploaded by https://unityassetcollection.com
-
-
-
-// -------------------------------------------
+﻿// -------------------------------------------
 // Control Freak 2
-// Copyright (C) 2013-2021 Dan's Game Tools
+// Copyright (C) 2013-2020 Dan's Game Tools
 // http://DansGameTools.blogspot.com
 // -------------------------------------------
 

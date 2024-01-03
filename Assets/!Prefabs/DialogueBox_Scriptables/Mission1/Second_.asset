@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Second_
   m_EditorClassIdentifier: 
   Dialogues:
-  - Look Tio. Stay Calm. Lockie is kidnapped.
-  - I don't know Tio. Maybe they want something from us.
-  - They send us a message to rob the bank and gave us the money.
+  - Look stay Calm. Lockie is kidnapped.
+  - I don't know. Maybe they want something from us.
+  - They send us a message to rob the bank and gave them money.
   - No they just free Lockie.
-  - But Tio, Save yourself first. There is high security in the bank.
-  - Alright. Take the rifle behind you and follow the radar Gps.
+  - Save yourself first. There is high security in the bank.
+  - Alright. Go and be safe
   counter: 5

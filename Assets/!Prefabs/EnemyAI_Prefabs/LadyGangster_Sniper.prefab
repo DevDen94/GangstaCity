@@ -180,7 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 5
+  selectedToolbar: 3
   weaponCategory: MyCategory
   shootFrequency: 1.5
   isInfinityAmmo: 0
@@ -197,8 +197,8 @@ MonoBehaviour:
   damageByDistance: 1
   DropOffStart: 8
   DropOffEnd: 50
-  minDamage: 30
-  maxDamage: 45
+  minDamage: 10
+  maxDamage: 20
   source: {fileID: 2294979725577503480}
   fireClip: {fileID: 8300000, guid: 67972f63215fcdf439dd82687b88af79, type: 3}
   emptyClip: {fileID: 8300000, guid: 86e4a8709e440314e8fe56622c9e6162, type: 3}
@@ -20949,26 +20949,26 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   deathBy: 0
-  removeComponentsAfterDie: 1
+  removeComponentsAfterDie: 0
   disableControllerOnStart: 0
   currentSpeed: 0
   animatorSpeed: 1
   inputMagnitudeSmooth: 0.2
-  useRootMotion: 0
+  useRootMotion: 1
   turnOnSpotAnim: 1
   freeSpeed:
     rotationSpeed: 10
-    walkSpeed: 2
-    runningSpeed: 3
-    sprintSpeed: 4
-    crouchSpeed: 2
+    walkSpeed: 1
+    runningSpeed: 1
+    sprintSpeed: 1
+    crouchSpeed: 1
   strafeSpeed:
     rotationSpeed: 10
-    walkSpeed: 1.5
-    runningSpeed: 2
-    sprintSpeed: 3
-    crouchSpeed: 2
-  _useStepOffSet: 1
+    walkSpeed: 1
+    runningSpeed: 1
+    sprintSpeed: 1
+    crouchSpeed: 1
+  _useStepOffSet: 0
   stepOffsetEnd: 0.45
   stepOffsetStart: 0.05
   stepSmooth: 4
@@ -20999,7 +20999,7 @@ MonoBehaviour:
   frictionPhysics: {fileID: 0}
   maxFrictionPhysics: {fileID: 0}
   slippyPhysics: {fileID: 0}
-  _capsuleCollider: {fileID: 0}
+  _capsuleCollider: {fileID: 2294979725786569218}
   targetDirection: {x: 0, y: 0, z: 0}
   input: {x: 0, y: 0, z: 0}
   lockMovement: 0
@@ -21013,11 +21013,11 @@ MonoBehaviour:
   disableAgentOnStart: 1
   useNavMeshAgent: 1
   updatePathQuality: 3
-  aceleration: 50
-  _stopingDistance: 0.5
-  _walkingStopingDistance: 0
-  _runningStopingDistance: 0.1
-  _sprintingStopingDistance: 0.15
+  aceleration: 8
+  _stopingDistance: 0.25
+  _walkingStopingDistance: 0.1
+  _runningStopingDistance: 0.2
+  _sprintingStopingDistance: 0.3
   _waypointArea: {fileID: 0}
   _changeWaypointDistance: 0.1
   _invertWaypointsOrder: 0
@@ -21029,19 +21029,19 @@ MonoBehaviour:
   _selfStartingPoint: 1
   _customStartingPoint: {fileID: 0}
   detectionPointReference: {fileID: 2294979725775895992}
-  sightMethod: -1
-  findTargetUpdateQuality: 4
-  canseeTargetUpdateQuality: 3
+  sightMethod: 3
+  findTargetUpdateQuality: 3
+  canseeTargetUpdateQuality: 2
   findOtherTarget: 1
-  maxTargetsDetection: 10
+  maxTargetsDetection: 48
   _changeTargetDelay: 10
   findTargetByDistance: 1
   _fieldOfView: 360
   _minDistanceToDetect: 1
-  _maxDistanceToDetect: 30
+  _maxDistanceToDetect: 25
   _hasPositionOfTheTarget: 0
   _targetInLineOfSight: 0
-  _lostTargetDistance: 4
+  _lostTargetDistance: 8
   _timeToLostWithoutSight: 10
   _detectLayer:
     serializedVersion: 2
@@ -21049,9 +21049,10 @@ MonoBehaviour:
   _detectTags:
     tags:
     - Player
+    - Car
   _obstacles:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8388609
   _debugVisualDetection: 0
   _debugRaySight: 0
   _debugLastTargetPosition: 0
@@ -21073,7 +21074,7 @@ MonoBehaviour:
   _maxAttackTime: 5
   _minAttackCount: 1
   _maxAttackCount: 3
-  _attackDistance: 40
+  _attackDistance: 20
   _combatBlockingChance: 50
   _onDamageBlockingChance: 25
   _minStayBlockingTime: 4
@@ -21086,16 +21087,16 @@ MonoBehaviour:
   _minDistanceOfTheTarget: 4
   _combatDistance: 20
   _strafeCombatMovement: 1
-  _alwaysStrafe: 1
+  _alwaysStrafe: 0
   _minTimeToChangeStrafeSide: 1
   _maxTimeToChangeStrafeSide: 2
   _isInCombat: 0
   _isAiming: 0
   _isBlocking: 0
   minTimeShooting: 0
-  maxTimeShooting: 4
+  maxTimeShooting: 6
   minShotWaiting: 2
-  maxShotWaiting: 8
+  maxShotWaiting: 4
   aimTargetHeight: 0.4
   doReloadWhileWaiting: 1
   aimSmoothDamp: 10

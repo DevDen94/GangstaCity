@@ -834,7 +834,7 @@ Transform:
   m_GameObject: {fileID: 1831472062348373383}
   m_LocalRotation: {x: 0, y: -0.9657382, z: 0, w: 0.25951856}
   m_LocalPosition: {x: -3.99, y: 0.47991967, z: 207.31}
-  m_LocalScale: {x: 1.2999998, y: 1.3, z: 1.2999998}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1831472063737364137}
@@ -934,7 +934,7 @@ MonoBehaviour:
   openCloseEvents: 0
   openCloseWindow: 1
   selectedToolbar: 0
-  _fsmBehaviour: {fileID: 11400000, guid: dd7e161d56cfdbc44b70452034f1423e, type: 2}
+  _fsmBehaviour: {fileID: 11400000, guid: 08850ab9327be7747a5a4d5705ed0c89, type: 2}
   _stop: 0
   _debugMode: 0
 --- !u!114 &1831472062348373376
@@ -969,26 +969,26 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   deathBy: 0
-  removeComponentsAfterDie: 1
+  removeComponentsAfterDie: 0
   disableControllerOnStart: 0
   currentSpeed: 0
   animatorSpeed: 1
   inputMagnitudeSmooth: 0.2
-  useRootMotion: 0
+  useRootMotion: 1
   turnOnSpotAnim: 1
   freeSpeed:
     rotationSpeed: 10
-    walkSpeed: 2
-    runningSpeed: 3
-    sprintSpeed: 4
-    crouchSpeed: 2
+    walkSpeed: 1
+    runningSpeed: 1
+    sprintSpeed: 1
+    crouchSpeed: 1
   strafeSpeed:
     rotationSpeed: 10
-    walkSpeed: 1.5
-    runningSpeed: 2
-    sprintSpeed: 3
-    crouchSpeed: 2
-  _useStepOffSet: 1
+    walkSpeed: 1
+    runningSpeed: 1
+    sprintSpeed: 1
+    crouchSpeed: 1
+  _useStepOffSet: 0
   stepOffsetEnd: 0.45
   stepOffsetStart: 0.05
   stepSmooth: 4
@@ -1033,11 +1033,11 @@ MonoBehaviour:
   disableAgentOnStart: 1
   useNavMeshAgent: 1
   updatePathQuality: 3
-  aceleration: 50
-  _stopingDistance: 0.5
-  _walkingStopingDistance: 0
-  _runningStopingDistance: 0.1
-  _sprintingStopingDistance: 0.15
+  aceleration: 8
+  _stopingDistance: 0.25
+  _walkingStopingDistance: 0.1
+  _runningStopingDistance: 0.2
+  _sprintingStopingDistance: 0.3
   _waypointArea: {fileID: 0}
   _changeWaypointDistance: 0.1
   _invertWaypointsOrder: 0
@@ -1049,19 +1049,19 @@ MonoBehaviour:
   _selfStartingPoint: 1
   _customStartingPoint: {fileID: 0}
   detectionPointReference: {fileID: 1831472061988986253}
-  sightMethod: 3
+  sightMethod: -1
   findTargetUpdateQuality: 3
-  canseeTargetUpdateQuality: 2
+  canseeTargetUpdateQuality: 4
   findOtherTarget: 1
-  maxTargetsDetection: 10
+  maxTargetsDetection: 48
   _changeTargetDelay: 10
   findTargetByDistance: 1
-  _fieldOfView: 180
+  _fieldOfView: 360
   _minDistanceToDetect: 1
-  _maxDistanceToDetect: 30
+  _maxDistanceToDetect: 50
   _hasPositionOfTheTarget: 0
   _targetInLineOfSight: 0
-  _lostTargetDistance: 4
+  _lostTargetDistance: 8
   _timeToLostWithoutSight: 10
   _detectLayer:
     serializedVersion: 2
@@ -1069,9 +1069,10 @@ MonoBehaviour:
   _detectTags:
     tags:
     - Player
+    - Car
   _obstacles:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8388609
   _debugVisualDetection: 0
   _debugRaySight: 0
   _debugLastTargetPosition: 0
@@ -1093,7 +1094,7 @@ MonoBehaviour:
   _maxAttackTime: 5
   _minAttackCount: 1
   _maxAttackCount: 3
-  _attackDistance: 40
+  _attackDistance: 20
   _combatBlockingChance: 50
   _onDamageBlockingChance: 25
   _minStayBlockingTime: 4
@@ -1106,16 +1107,16 @@ MonoBehaviour:
   _minDistanceOfTheTarget: 4
   _combatDistance: 20
   _strafeCombatMovement: 1
-  _alwaysStrafe: 1
+  _alwaysStrafe: 0
   _minTimeToChangeStrafeSide: 1
   _maxTimeToChangeStrafeSide: 2
   _isInCombat: 0
   _isAiming: 0
   _isBlocking: 0
   minTimeShooting: 0
-  maxTimeShooting: 4
+  maxTimeShooting: 6
   minShotWaiting: 2
-  maxShotWaiting: 8
+  maxShotWaiting: 4
   aimTargetHeight: 0.4
   doReloadWhileWaiting: 1
   aimSmoothDamp: 10
@@ -1146,7 +1147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 2
+  selectedToolbar: 0
   minDistanceToAim: 1
   checkAimRadius: 0.1
   smoothHandRotation: 30
@@ -1154,7 +1155,7 @@ MonoBehaviour:
   raycastAimTarget: 1
   damageLayer:
     serializedVersion: 2
-    m_Bits: 33025
+    m_Bits: 8421633
   ignoreTags: []
   useLeftIK: 1
   useRightIK: 1
@@ -17095,6 +17096,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8434918339871033066}
   - component: {fileID: 8434918339871033067}
+  - component: {fileID: 2323598814314638862}
   m_Layer: 2
   m_Name: HandGun (2)
   m_TagString: Weapon
@@ -17132,7 +17134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 4
+  selectedToolbar: 3
   weaponCategory: Pistols
   shootFrequency: 0.5
   isInfinityAmmo: 0
@@ -17149,8 +17151,8 @@ MonoBehaviour:
   damageByDistance: 1
   DropOffStart: 8
   DropOffEnd: 50
-  minDamage: 5
-  maxDamage: 15
+  minDamage: 4
+  maxDamage: 8
   source: {fileID: 8434918340363694266}
   fireClip: {fileID: 8300000, guid: 4912d5c56ce571e4fbad7af6de655772, type: 3}
   emptyClip: {fileID: 8300000, guid: 9c5ac02550d31504ebb57020dde8e988, type: 3}
@@ -17275,6 +17277,19 @@ MonoBehaviour:
       m_Calls: []
   root: {fileID: 0}
   isSecundaryWeapon: 0
+--- !u!114 &2323598814314638862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8434918339871033077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a1d8bce48a25549baa3679de1f2665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 8434918340363694266}
 --- !u!1 &8434918339969512524
 GameObject:
   m_ObjectHideFlags: 0

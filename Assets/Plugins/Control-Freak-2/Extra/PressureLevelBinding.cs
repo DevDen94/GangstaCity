@@ -1,6 +1,4 @@
-﻿//This asset was uploaded by https://unityassetcollection.com
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 
 namespace ControlFreak2.Extra

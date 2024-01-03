@@ -37,7 +37,7 @@ namespace Invector.vShooter
         public int clipSize;       
         [Tooltip("Check this to combine extra ammo with the current ammo, the Reload will not be used")]
         public bool dontUseReload;
-        [vHideInInspector("dontUseReload", true)]
+        //[vHideInInspector("dontUseReload", true)]
         [Tooltip("Automatically reload the weapon when it's empty")]
         public bool autoReload;
         [Tooltip("Ammo ID - make sure your AmmoManager and ItemListData use the same ID"), vHideInInspector("isInfinityAmmo", true)]

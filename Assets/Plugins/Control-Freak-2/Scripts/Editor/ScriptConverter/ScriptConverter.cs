@@ -1,6 +1,5 @@
 ﻿
-#if UNITY_EDITOR && !UNITY_WEBPLAYER
-
+#if UNITY_EDITOR 
 
 using UnityEngine;
 using UnityEditor;
@@ -10,7 +9,6 @@ using System.Text.RegularExpressions;
 using System.IO;
 
 using ControlFreak2Editor.Internal;
-
 
 namespace ControlFreak2Editor.ScriptConverter
 {

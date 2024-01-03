@@ -101,9 +101,9 @@ namespace Invector.vCharacterController
         [Tooltip("Turn the Ragdoll On when falling at high speed (check VerticalVelocity) - leave the value with 0 if you don't want this feature")]
         public float ragdollVelocity = -15f;
         [Header("Fall Damage")]
-        public float fallMinHeight = 6f;
-        public float fallMinVerticalVelocity = -10f;
-        public float fallDamage = 10f;
+        public float fallMinHeight = 1000f;
+        public float fallMinVerticalVelocity = -1000f;
+        public float fallDamage = 0.15f;
 
         [vEditorToolbar("Roll", order = 4)]
         public bool useRollRootMotion = true;
@@ -494,6 +494,8 @@ namespace Invector.vCharacterController
         {
             if (isGrounded && !disableCheckGround && !isSliding && !isJumping && !customAction && !isInAirborne)
             {
+               
+                
                 Vector3 dir = Vector3.Lerp(transform.forward, moveDir.normalized, inputSmooth.magnitude);
                 float distance = _capsuleCollider.radius + stepOffsetDistance;
                 float height = (stepOffsetMaxHeight + 0.01f + _capsuleCollider.radius * 0.5f);
@@ -501,6 +503,7 @@ namespace Invector.vCharacterController
                 Vector3 pB = pA + dir.normalized * distance;
                 if (Physics.Linecast(pA, pB, out stepOffsetHit, groundLayer))
                 {
+                    
                     Debug.DrawLine(pA, stepOffsetHit.point);
                     distance = stepOffsetHit.distance + 0.1f;
                 }
@@ -561,6 +564,7 @@ namespace Invector.vCharacterController
                 var targetPoint = hitinfo.point + moveDirection.normalized * _capsuleCollider.radius;
                 if ((hitAngle > slopeLimit) && Physics.Linecast(transform.position + Vector3.up * (_capsuleCollider.height * 0.5f), targetPoint, out hitinfo, groundLayer))
                 {
+                    
                     if (debugWindow)
                         Debug.DrawRay(hitinfo.point, hitinfo.normal);
                     hitAngle = Vector3.Angle(Vector3.up, hitinfo.normal);
@@ -684,6 +688,9 @@ namespace Invector.vCharacterController
             {
                 Vector3 p1 = transform.position + _capsuleCollider.center + Vector3.up * -_capsuleCollider.height * 0.5F;
                 Vector3 p2 = p1 + Vector3.up * _capsuleCollider.height;
+              
+        
+            
                 return Physics.CapsuleCastAll(p1, p2, _capsuleCollider.radius * 0.5f, transform.forward, 0.6f, groundLayer).Length == 0;
             }
         }
@@ -787,8 +794,10 @@ namespace Invector.vCharacterController
 
             if (groundDistance <= groundMinDistance || applyingStepOffset)
             {
-                CheckFallDamage();
+                
+                 CheckFallDamage();
                 isGrounded = true;
+                //Debug.LogError("111");
                 if (!useSnapGround && !applyingStepOffset && !isJumping && groundDistance > 0.05f)
                     _rigidbody.AddForce(transform.up * (extraGravity * 2 * Time.deltaTime), ForceMode.VelocityChange);
             }
@@ -796,6 +805,7 @@ namespace Invector.vCharacterController
             {
                 if (groundDistance >= groundMaxDistance)
                 {
+                    
                     if (!isRolling)
                         isGrounded = false;
 
@@ -804,11 +814,18 @@ namespace Invector.vCharacterController
                     // apply extra gravity when falling
                     if (!applyingStepOffset && !isJumping)
                     {
+                       
                         _rigidbody.AddForce(transform.up * extraGravity * Time.deltaTime, ForceMode.VelocityChange);
                     }
                 }
-                else if (!applyingStepOffset && !isJumping)
+                else if (!applyingStepOffset && !isJumping )
                 {
+                    if (GameManger.instance.Jump_Flag)
+                    {
+                        GameManger.instance.Jump_Long();
+                        GameManger.instance.Jump_Flag = false;
+                        GameManger.instance.Char_switch.SetActive(true);
+                    }
                     _rigidbody.AddForce(transform.up * (extraGravity * 2 * Time.deltaTime), ForceMode.VelocityChange);
                 }
             }
@@ -816,14 +833,18 @@ namespace Invector.vCharacterController
 
         protected virtual void CheckFallDamage()
         {
-            if (isGrounded || verticalVelocity > fallMinVerticalVelocity && blockFallActions || fallMinHeight == 0) return;
+            if (isGrounded || verticalVelocity > fallMinVerticalVelocity && blockFallActions || fallMinHeight == 0)
+            {
+              
+                return;
+            }
             float fallHeight = (heightReached - transform.position.y);
 
             fallHeight -= fallMinHeight;
             if (fallHeight > 0)
             {
                 int damage = (int)(fallDamage * fallHeight);
-                TakeDamage(new vDamage(damage, true));
+                //TakeDamage(new vDamage(damage, true));
             }
 
             heightReached = 0;
@@ -841,7 +862,7 @@ namespace Invector.vCharacterController
             else
                 _capsuleCollider.material = slippyPhysics;
         }
-
+        public bool jump;
         protected virtual void CheckGroundDistance()
         {
             if (isDead) return;
@@ -855,6 +876,7 @@ namespace Invector.vCharacterController
                 // raycast for check the ground distance
                 if (Physics.Raycast(ray2, out groundHit, (colliderHeight / 2) + dist, groundLayer) && !groundHit.collider.isTrigger)
                     dist = transform.position.y - groundHit.point.y;
+               // Debug.LogError(groundLayer);
                 // sphere cast around the base of the capsule to check the ground distance
                 if (groundCheckMethod == GroundCheckMethod.High && dist >= groundMinDistance)
                 {
@@ -862,9 +884,10 @@ namespace Invector.vCharacterController
                     Ray ray = new Ray(pos, -Vector3.up);
                     if (Physics.SphereCast(ray, radius, out groundHit, _capsuleCollider.radius + groundMaxDistance, groundLayer) && !groundHit.collider.isTrigger)
                     {
+                       
                         Physics.Linecast(groundHit.point + (Vector3.up * 0.1f), groundHit.point + Vector3.down * 0.15f, out groundHit, groundLayer);
                         float newDist = transform.position.y - groundHit.point.y;
-                        if (dist > newDist) dist = newDist;
+                        if (dist > newDist) {  dist = newDist; }
                     }
                 }
                 groundDistance = (float)System.Math.Round(dist, 2);
@@ -903,6 +926,7 @@ namespace Invector.vCharacterController
 
             if (Physics.Raycast(ray, out hit, 1.5f, groundLayer))
             {
+                Debug.LogError(groundLayer);
                 surfaceRot = Quaternion.FromToRotation(transform.up, hit.normal) * transform.localRotation;
             }
             transform.rotation = Quaternion.Lerp(transform.rotation, surfaceRot, 10f * Time.deltaTime);
@@ -920,6 +944,7 @@ namespace Invector.vCharacterController
 
                     if (Physics.Raycast(transform.position + Vector3.up * groundMinDistance, dir, groundMaxDistance, groundLayer))
                     {
+                        Debug.LogError(groundLayer);
                         isSliding = false;
                     }
                     else

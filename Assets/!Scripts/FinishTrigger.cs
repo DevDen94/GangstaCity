@@ -6,7 +6,7 @@ public class FinishTrigger : MonoBehaviour
 {
     public Mission_Script Script;
     private GameManger gm;
-    public bool Level_5;
+
     public bool Ending_Cut;
   //  public GameObject OpenChestBtn;
     private void Start()
@@ -17,13 +17,12 @@ public class FinishTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if(Level_5)
+            if (PlayerPrefs.GetInt("MissionNo") == 5)
             {
-                PlayerPrefs.SetInt("MissionNo", PlayerPrefs.GetInt("MissionNo") + 1);
+                PlayerPrefs.SetInt("MissionNo", 1); 
                 gameObject.SetActive(false);
-                
             }
-            PlayerPrefs.SetInt("MissionNo", PlayerPrefs.GetInt("MissionNo") + 1);
+              
             if (!Script.EndingCutscene_Bool)
             {
                 GameManger.instance.MissionComplete.SetActive(true);
@@ -33,13 +32,14 @@ public class FinishTrigger : MonoBehaviour
             {
                 Script.Mission1_Door.enabled = true;
             }
+
+
             if (!Ending_Cut)
             {
                 Script.EndingCutScene.SetActive(true);
-                gm.InstructionsPanel.SetActive(true);
-                gm.StaringInstructions.text = gm.All_Instructions.Ending_Instructions[gm.selected_Mission].ToString();
-            }
-            else
+               // gm.InstructionsPanel.SetActive(true);
+                //gm.StaringInstructions.text = gm.All_Instructions.Ending_Instructions[gm.selected_Mission].ToString();
+            }else
             {
                 GameManger.instance.Win_Mission();
             }

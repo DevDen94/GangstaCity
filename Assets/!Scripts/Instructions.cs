@@ -8,4 +8,6 @@ public class Instructions : ScriptableObject
 {
     public string[] Starting_Instruction;
     public string[] Ending_Instructions;
+
+  
 }

@@ -14,7 +14,7 @@ namespace Invector
 
         [vEditorToolbar("Health", order = 0)]
         [SerializeField] [vReadOnly] protected bool _isDead;
-        [vBarDisplay("maxHealth")] [SerializeField] protected float _currentHealth;
+        [vBarDisplay("maxHealth")] [SerializeField] public float _currentHealth;
         public bool isImmortal = false;
         [vHelpBox("If you want to start with different value, uncheck this and make sure that the current health has a value greater zero")]
         public bool fillHealthOnStart = true;
@@ -45,12 +45,18 @@ namespace Invector
                 }
 
                 if (!_isDead && _currentHealth <= 0)
-                {
-                    Mission_Script.instance.GangsterDead();
-                  
-                    
-                    _isDead = true;
+                {_isDead = true;
                     onDead.Invoke(gameObject);
+                    if (GameManger.instance.Tutorial)
+                    {
+
+                        TutorialScene.instance.load_tut();
+                    }
+                    else
+                    {
+                        Mission_Script.instance.GangsterDead();
+                    }
+                    
                 }
                 else if (isDead && _currentHealth > 0)
                 {

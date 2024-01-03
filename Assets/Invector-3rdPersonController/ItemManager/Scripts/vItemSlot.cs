@@ -27,6 +27,7 @@ namespace Invector.vItemManager
         {
             SetValid(isValid);
             CheckItem(false);
+            Car_Manager.instance.Icon = icon;
         }
 
         void LateUpdate()

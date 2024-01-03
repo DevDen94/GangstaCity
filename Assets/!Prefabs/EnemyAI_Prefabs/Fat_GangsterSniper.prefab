@@ -8413,6 +8413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5278478499592350652}
   - component: {fileID: 5278478499592350653}
+  - component: {fileID: 2494950074710340339}
   m_Layer: 2
   m_Name: vSniper
   m_TagString: Weapon
@@ -8458,7 +8459,7 @@ MonoBehaviour:
   ignoreTags: []
   hitLayer:
     serializedVersion: 2
-    m_Bits: 33025
+    m_Bits: 8421633
   projectile: {fileID: 1000010710861650, guid: 22773fb6a3ebd59429b49fd6e288058e, type: 3}
   muzzle: {fileID: 5278478501183820843}
   projectilesPerShot: 1
@@ -8467,8 +8468,8 @@ MonoBehaviour:
   damageByDistance: 1
   DropOffStart: 8
   DropOffEnd: 50
-  minDamage: 30
-  maxDamage: 45
+  minDamage: 4
+  maxDamage: 8
   source: {fileID: 5278478501312066070}
   fireClip: {fileID: 8300000, guid: 67972f63215fcdf439dd82687b88af79, type: 3}
   emptyClip: {fileID: 8300000, guid: 86e4a8709e440314e8fe56622c9e6162, type: 3}
@@ -8597,6 +8598,19 @@ MonoBehaviour:
       m_Calls: []
   root: {fileID: 0}
   isSecundaryWeapon: 0
+--- !u!114 &2494950074710340339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5278478499592350643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a1d8bce48a25549baa3679de1f2665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 5278478501312066070}
 --- !u!1 &5278478499638028945
 GameObject:
   m_ObjectHideFlags: 0
@@ -31060,9 +31074,10 @@ MonoBehaviour:
   _detectTags:
     tags:
     - Player
+    - Car
   _obstacles:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8388609
   _debugVisualDetection: 0
   _debugRaySight: 0
   _debugLastTargetPosition: 0
@@ -31137,7 +31152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 2
+  selectedToolbar: 0
   minDistanceToAim: 1
   checkAimRadius: 0.1
   smoothHandRotation: 30
@@ -31145,7 +31160,7 @@ MonoBehaviour:
   raycastAimTarget: 1
   damageLayer:
     serializedVersion: 2
-    m_Bits: 33025
+    m_Bits: 8421633
   ignoreTags: []
   useLeftIK: 1
   useRightIK: 1

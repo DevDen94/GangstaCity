@@ -16,20 +16,20 @@ public class RaycastInstance : MonoBehaviour
 
     void Start()
     {
-        if (Screen.dpi < 1) windowDpi = 1;
-        if (Screen.dpi < 200) windowDpi = 1;
-        else windowDpi = Screen.dpi / 200f;
+        if (ControlFreak2.CFScreen.dpi < 1) windowDpi = 1;
+        if (ControlFreak2.CFScreen.dpi < 200) windowDpi = 1;
+        else windowDpi = ControlFreak2.CFScreen.dpi / 200f;
         Counter(0);
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (ControlFreak2.CF2Input.GetButtonDown("Fire1"))
         {
             if (Cam != null)
             {
                 RaycastHit hit;
-                var mousePos = Input.mousePosition;
+                var mousePos = ControlFreak2.CF2Input.mousePosition;
                 RayMouse = Cam.ScreenPointToRay(mousePos);
                 if (Physics.Raycast(RayMouse.origin, RayMouse.direction, out hit, 40))
                 {
@@ -44,12 +44,12 @@ public class RaycastInstance : MonoBehaviour
             }          
         }
 
-        if ((Input.GetKey(KeyCode.A) || Input.GetAxis("Horizontal") < 0) && buttonSaver >= 0.4f)// left button
+        if ((ControlFreak2.CF2Input.GetKey(KeyCode.A) || ControlFreak2.CF2Input.GetAxis("Horizontal") < 0) && buttonSaver >= 0.4f)// left button
         {
             buttonSaver = 0f;
             Counter(-1);
         }
-        if ((Input.GetKey(KeyCode.D) || Input.GetAxis("Horizontal") > 0) && buttonSaver >= 0.4f)// right button
+        if ((ControlFreak2.CF2Input.GetKey(KeyCode.D) || ControlFreak2.CF2Input.GetAxis("Horizontal") > 0) && buttonSaver >= 0.4f)// right button
         {
             buttonSaver = 0f;
             Counter(+1);

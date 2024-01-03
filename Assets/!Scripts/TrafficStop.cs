@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class TrafficStop : MonoBehaviour
 {
+    public GameObject g1;
+    public GameObject g2;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
             gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            g1.GetComponent<TSSimpleCar_Wheel>().enabled = false;
+            g2.GetComponent<TSSimpleCar_Wheel>().enabled = false;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -16,6 +20,32 @@ public class TrafficStop : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            g1.GetComponent<TSSimpleCar_Wheel>().enabled = true;
+            g2.GetComponent<TSSimpleCar_Wheel>().enabled = true;
         }
     }
+    private void Start()
+    {
+        Set_Sounds();
+    }
+    void Set_Sounds()
+    {
+        if (PlayerPrefs.GetInt("Music") == 1)
+        {
+            foreach (AudioSource a in Musiclistener)
+            {
+                a.enabled = true;
+            }
+        }
+        else
+        {
+            foreach (AudioSource a in Musiclistener)
+            {
+                a.enabled = false;
+            }
+        }
+
+    }
+    public AudioSource[] Musiclistener;
+
 }

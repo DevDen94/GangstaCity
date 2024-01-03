@@ -10251,7 +10251,7 @@ GameObject:
   - component: {fileID: 8235070558229229356}
   m_Layer: 0
   m_Name: Mission2 1
-  m_TagString: Untagged
+  m_TagString: Mission
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10289,7 +10289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b01462361360446a578a1ec89e6780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dialogue_Cam: {fileID: 9100000, guid: 004360d50611267469ec287cb0e443c6, type: 2}
+  Dialogue_Cam: {fileID: 9100000, guid: 1325fb5e471edce44813a98b3041de57, type: 2}
   Firts_Character: {fileID: 1331435447198485158}
   Second_Character: {fileID: 8669702568764257914}
   talking: {fileID: 9100000, guid: 4eba66a9b7b651340b2d55a0d2328678, type: 2}
@@ -10303,6 +10303,14 @@ MonoBehaviour:
   EndingCutscene_Bool: 0
   FinishPoint_Navigator: {fileID: 2115547420491502289}
   ActiveNavigator: {fileID: 8235070558269441220}
+  Instructions_Player:
+  - ggf
+  - Go meet lockie. He is waiting for you
+  - Kill all the gangster and free Wong.
+  - Wong is waiting for you
+  - Wong is waiting for you
+  - Wong is waiting for you
+  TaskNo: 0
   speed: 0.5
   Mission1_Door: {fileID: 0}
   Bank: {fileID: 0}

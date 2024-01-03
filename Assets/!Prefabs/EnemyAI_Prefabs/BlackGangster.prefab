@@ -7102,6 +7102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8269110807479715796}
   - component: {fileID: 8269110807479715797}
+  - component: {fileID: 8837487892270275841}
   m_Layer: 2
   m_Name: HandGun (1)
   m_TagString: Weapon
@@ -7139,7 +7140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 4
+  selectedToolbar: 2
   weaponCategory: Pistols
   shootFrequency: 0.5
   isInfinityAmmo: 0
@@ -7147,7 +7148,7 @@ MonoBehaviour:
   ignoreTags: []
   hitLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8388865
   projectile: {fileID: 1000010710861650, guid: 22773fb6a3ebd59429b49fd6e288058e, type: 3}
   muzzle: {fileID: 8269110807697187785}
   projectilesPerShot: 1
@@ -7156,8 +7157,8 @@ MonoBehaviour:
   damageByDistance: 1
   DropOffStart: 8
   DropOffEnd: 50
-  minDamage: 5
-  maxDamage: 15
+  minDamage: 4
+  maxDamage: 8
   source: {fileID: 8269110807986521303}
   fireClip: {fileID: 8300000, guid: 4912d5c56ce571e4fbad7af6de655772, type: 3}
   emptyClip: {fileID: 8300000, guid: 9c5ac02550d31504ebb57020dde8e988, type: 3}
@@ -7282,6 +7283,19 @@ MonoBehaviour:
       m_Calls: []
   root: {fileID: 0}
   isSecundaryWeapon: 0
+--- !u!114 &8837487892270275841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8269110807479715803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a1d8bce48a25549baa3679de1f2665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 8269110807986521303}
 --- !u!1 &8269110807487849570
 GameObject:
   m_ObjectHideFlags: 0
@@ -19257,7 +19271,7 @@ Transform:
   m_GameObject: {fileID: 8269110808403434203}
   m_LocalRotation: {x: -0, y: -0.99955887, z: 0, w: -0.029701153}
   m_LocalPosition: {x: 2.14, y: 0.5029141, z: 165.07}
-  m_LocalScale: {x: 1.3000002, y: 1.3, z: 1.3000002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8269110807075802638}
@@ -19358,7 +19372,7 @@ MonoBehaviour:
   openCloseEvents: 0
   openCloseWindow: 1
   selectedToolbar: 0
-  _fsmBehaviour: {fileID: 11400000, guid: dd7e161d56cfdbc44b70452034f1423e, type: 2}
+  _fsmBehaviour: {fileID: 11400000, guid: 08850ab9327be7747a5a4d5705ed0c89, type: 2}
   _stop: 0
   _debugMode: 0
 --- !u!114 &8269110808403434193
@@ -19443,7 +19457,7 @@ MonoBehaviour:
   frictionPhysics: {fileID: 0}
   maxFrictionPhysics: {fileID: 0}
   slippyPhysics: {fileID: 0}
-  _capsuleCollider: {fileID: 0}
+  _capsuleCollider: {fileID: 8269110808403434220}
   targetDirection: {x: 0, y: 0, z: 0}
   input: {x: 0, y: 0, z: 0}
   lockMovement: 0
@@ -19493,9 +19507,10 @@ MonoBehaviour:
   _detectTags:
     tags:
     - Player
+    - Car
   _obstacles:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8388609
   _debugVisualDetection: 0
   _debugRaySight: 0
   _debugLastTargetPosition: 0
@@ -19570,7 +19585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 2
+  selectedToolbar: 0
   minDistanceToAim: 1
   checkAimRadius: 0.1
   smoothHandRotation: 30
@@ -19578,7 +19593,7 @@ MonoBehaviour:
   raycastAimTarget: 1
   damageLayer:
     serializedVersion: 2
-    m_Bits: 33025
+    m_Bits: 8421633
   ignoreTags: []
   useLeftIK: 1
   useRightIK: 1
@@ -19602,7 +19617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 2
+  selectedToolbar: 1
   canLook: 1
   keepLookingOutAngle: 1
   strafeHeadWeight: 0.8

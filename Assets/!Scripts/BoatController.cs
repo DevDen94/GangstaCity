@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,8 +16,8 @@ public class BoatController : MonoBehaviour
 
     void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        float horizontalInput = ControlFreak2.CF2Input.GetAxis("Horizontal");
+        float verticalInput = ControlFreak2.CF2Input.GetAxis("Vertical");
 
         // Calculate the boat's forward and sideways movement
         Vector3 moveDirection = transform.forward * verticalInput * moveSpeed;
