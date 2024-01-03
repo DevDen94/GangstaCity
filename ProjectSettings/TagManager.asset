@@ -20,8 +20,6 @@ TagManager:
   - Glass
   - Water
   - LadderTrigger
-  - ExitWater
-  - Barrel
   - FreeClimb
   - ClimbDirection
   - Zipline
@@ -32,6 +30,20 @@ TagManager:
   - AIAction
   - TrafficLight
   - TrafficCar
+  - Mission
+  - Waypoint
+  - Pedestrian
+  - NPC
+  - Car
+  - Police
+  - PLC
+  - NPC_CAR
+  - FxTemporaire
+  - Cash
+  - Clone
+  - Stone
+  - Street
+  - Grass
   layers:
   - Default
   - TransparentFX
@@ -58,11 +70,11 @@ TagManager:
   - Mission
   - Building
   - Line
-  - 
-  - 
-  - 
-  - 
-  - 
+  - NPC
+  - Track
+  - OnlyPolice
+  - Poles
+  - Traffic
   - 
   - 
   m_SortingLayers:
