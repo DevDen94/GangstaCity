@@ -78,7 +78,7 @@ public class MainMenu : MonoBehaviour
         //GoogleAdMobController.instance.ShowInterstitialAd();
         ModeSelectionPanel.SetActive(true);
         GoogleMobileAdsController.Instance.ShowInterstitialAd();
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("mainmenu_startbtn");
+      //  Firebase.Analytics.FirebaseAnalytics.LogEvent("mainmenu_startbtn");
     }
     private void FixedUpdate()
     {
@@ -133,7 +133,7 @@ public class MainMenu : MonoBehaviour
         LoadingScene_Name.sceneToLoad = "MissionMode";
         LoadingPanel.SetActive(true);
         src.PlayOneShot(btnClick);
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("mission","number",i);
+       // Firebase.Analytics.FirebaseAnalytics.LogEvent("mission","number",i);
 
     }
     public GameObject levelSelectionPanel;
@@ -176,7 +176,7 @@ public class MainMenu : MonoBehaviour
             ModeSelectionPanel.SetActive(false);
             levelSelectionPanel.SetActive(true);
             PlayerPrefs.SetInt("Mode_Select", 1);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_1");
+           // Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_1");
         }
         else
         {
@@ -186,7 +186,7 @@ public class MainMenu : MonoBehaviour
                 LoadingScene_Name.sceneToLoad = "MissionMode";
                 LoadingPanel.SetActive(true);
                 PlayerPrefs.SetInt("Mode_Select", 2);
-                Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_2");
+              //  Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_2");
             }
             else
             {

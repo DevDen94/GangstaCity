@@ -26,7 +26,7 @@ public class _ShopManager : MonoBehaviour
     public Text CashMain;
     private void OnEnable()
     {
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("_shopopen");
+       // Firebase.Analytics.FirebaseAnalytics.LogEvent("_shopopen");
     }
     private void Start()
     {

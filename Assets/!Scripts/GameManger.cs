@@ -126,7 +126,7 @@ public class GameManger : MonoBehaviour
             PlayerPrefs.SetInt("Unlocked_Mission", PlayerPrefs.GetInt("Unlocked_Mission") + 1);
         } 
         GoogleMobileAdsController.Instance.ShowInterstitialAd();
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("mission_complete", "number", selected_Mission);
+      //  Firebase.Analytics.FirebaseAnalytics.LogEvent("mission_complete", "number", selected_Mission);
     }
     public void Loose_Mission()
     {
@@ -138,7 +138,7 @@ public class GameManger : MonoBehaviour
         Time.timeScale = 0f;
         //GoogleAdMobController.instance.ShowInterstitialAd();
         GoogleMobileAdsController.Instance.ShowInterstitialAd();
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("mission_failed", "number", selected_Mission);
+       // Firebase.Analytics.FirebaseAnalytics.LogEvent("mission_failed", "number", selected_Mission);
     }
     [HideInInspector]
     public GameObject MissionActive;
