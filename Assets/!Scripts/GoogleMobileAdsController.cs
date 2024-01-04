@@ -425,10 +425,23 @@ public class GoogleMobileAdsController : MonoBehaviour, IUnityAdsInitializationL
                 GameManger.instance.sh.Check_Textures();
                 Debug.LogError("Rewarded_Shop");
             }
-            else
+            else if (PlayerPrefs.GetInt("Car_Reward") == 1)
             {
                 Car_Manager.instance.CarBuySucessfull();
+                PlayerPrefs.SetInt("Car_Reward", 2);
                 Debug.LogError("BuyCar");
+            }
+            else if (PlayerPrefs.GetInt("Bike_Reward") == 1)
+            {
+                Bike_ControlS.instance.BikeBuySucessfull();
+                PlayerPrefs.SetInt("Bike_Reward", 2);
+                Debug.LogError("Buybike");
+            }
+            else if (PlayerPrefs.GetInt("Tank_Reward") == 1)
+            {
+                TankSpawner.instance.TankBuySucessfull();
+                PlayerPrefs.SetInt("Tank_Reward", 2);
+                Debug.LogError("Buytank");
             }
 
         }

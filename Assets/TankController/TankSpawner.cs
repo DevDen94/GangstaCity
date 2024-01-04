@@ -17,6 +17,8 @@ public class TankSpawner : MonoBehaviour
     public Camera tps;
     public Camera tankCam;
     GameManger gm;
+    public string TankName;
+    public GameObject BuyPanel;
     void Start()
     {
         instance = this;
@@ -27,21 +29,56 @@ public class TankSpawner : MonoBehaviour
 
     void SpawnPlayerTank()
     {
+        if (PlayerPrefs.GetInt(TankName) == 0)
+        {
 
+            BuyPanel.SetActive(true);
+        }
+        else
 
-        gm.OFF_TPS();
-        fade_Screen.SetActive(true);
-        TempTank.SetActive(false);
-        TankCanvas.SetActive(true);
-        cam.gameObject.SetActive(true);
-        Active_tank = Instantiate(ReferenceTank, SpawnPos.transform.position, SpawnPos.transform.rotation);
-        cam.currentTank = Active_tank.transform;
-        playerNav.player = Active_tank.transform;
-        TankIn.gameObject.SetActive(false);
-        TankOut.gameObject.SetActive(true); 
-        GameManger.instance.Hud_Navigation.SetActive(true);
-        Car_Manager.instance.hudNav.PlayerCamera = tankCam;
+        {
 
+            gm.OFF_TPS();
+            fade_Screen.SetActive(true);
+            TempTank.SetActive(false);
+            TankCanvas.SetActive(true);
+            cam.gameObject.SetActive(true);
+            Active_tank = Instantiate(ReferenceTank, SpawnPos.transform.position, SpawnPos.transform.rotation);
+            cam.currentTank = Active_tank.transform;
+            playerNav.player = Active_tank.transform;
+            TankIn.gameObject.SetActive(false);
+            TankOut.gameObject.SetActive(true);
+            GameManger.instance.Hud_Navigation.SetActive(true);
+            Car_Manager.instance.hudNav.PlayerCamera = tankCam;
+        }
+
+    }
+    public void TankBuySucessfull()
+    {
+        PlayerPrefs.SetInt(TankName, 1);
+        BuyPanel.SetActive(false);
+        SpawnPlayerTank();
+    }
+    public void BuyBike()
+    {
+        if (PlayerPrefs.GetInt("Cash") >= 1000)
+        {
+            PlayerPrefs.SetInt(TankName, 1);
+            PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") - 1000);
+            GameManger.instance.CashText.text = PlayerPrefs.GetInt("Cash").ToString();
+            BuyPanel.SetActive(false);
+        }
+        else
+        {
+            Car_Manager.instance.NotEnoughCoins.SetActive(true);
+        }
+
+    }
+    public void WatchAd_Rewarded()
+    {
+        PlayerPrefs.SetInt("Tank_Reward", 1);
+        GoogleMobileAdsController.Instance.rewarded = true;
+        GoogleMobileAdsController.Instance.ShowRewardedAd();
     }
     void RideOff()
     {

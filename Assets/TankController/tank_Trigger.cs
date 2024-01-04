@@ -7,6 +7,7 @@ public class tank_Trigger : MonoBehaviour
     public GameObject spawnPoint;
     public GameObject PlayerSpawn;
     public GameObject Referencetank;
+    public string tankName;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -15,6 +16,7 @@ public class tank_Trigger : MonoBehaviour
             TankSpawner.instance.SpawnPos = spawnPoint;
             TankSpawner.instance.ReferenceTank = Referencetank;
             TankSpawner.instance.TempTank = gameObject;
+            TankSpawner.instance.TankName = tankName;
         }
     }
 
@@ -26,6 +28,7 @@ public class tank_Trigger : MonoBehaviour
             TankSpawner.instance.SpawnPos= null;
             TankSpawner.instance.ReferenceTank = null;
             TankSpawner.instance.TempTank = null;
+            TankSpawner.instance.TankName = null;
         }
     }
 }
