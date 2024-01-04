@@ -69,7 +69,7 @@ public class Check_Building : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer==LayerMask.NameToLayer("Building") || other.gameObject.layer == LayerMask.NameToLayer("Player"))
+        if (other.gameObject.layer==LayerMask.NameToLayer("Building") || other.gameObject.layer == LayerMask.NameToLayer("Player") || other.gameObject.layer == LayerMask.NameToLayer("Default"))
         {
            
                 Car_Manager.instance.Carbutton_Out.SetActive(false);
@@ -80,7 +80,7 @@ public class Check_Building : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-    if (other.gameObject.layer == LayerMask.NameToLayer("Building") || other.gameObject.layer == LayerMask.NameToLayer("Player"))
+    if (other.gameObject.layer == LayerMask.NameToLayer("Building") || other.gameObject.layer == LayerMask.NameToLayer("Player") || other.gameObject.layer == LayerMask.NameToLayer("Default"))
     {
         if (!Car_Manager.instance.PoliceCop_On)
         {

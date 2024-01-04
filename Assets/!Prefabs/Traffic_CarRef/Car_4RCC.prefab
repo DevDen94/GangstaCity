@@ -650,8 +650,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.41268733, z: 2.4641721}
+  m_Center: {x: 0, y: 0.2936559, z: 0.73208624}
 --- !u!114 &7271788226103690612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1673,6 +1673,8 @@ MonoBehaviour:
   PlayerShooter: {fileID: 6516733896858621168}
   is_HummerSpecial: 0
   PlayerCar: 0
+  TutorialObject: {fileID: 0}
+  NextTutorialObject: {fileID: 0}
   DUMMY_CAR: {fileID: 7300828664495834930, guid: ac0d62f07a815f249b780e1923893284,
     type: 3}
 --- !u!65 &2055740566567210710
@@ -1686,8 +1688,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.4704409, y: 2.2472098, z: 4.7534356}
-  m_Center: {x: -0.7566951, y: 0.00034346298, z: -0.059895232}
+  m_Size: {x: 3.4704409, y: 1.5021163, z: 4.7534356}
+  m_Center: {x: -0.7566951, y: 0.37288955, z: -0.059895232}
 --- !u!82 &6883805066137118255
 AudioSource:
   m_ObjectHideFlags: 0
