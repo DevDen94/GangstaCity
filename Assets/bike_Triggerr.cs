@@ -10,10 +10,10 @@ public class bike_Triggerr : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Bike_Control.instance.BikeInBtn.gameObject.SetActive(true);
-            Bike_Control.instance.SpawnPostion = spawnPoint;
-            Bike_Control.instance.ReferenceBike = ReferenceBike;
-            Bike_Control.instance.TempBike = gameObject;
+            Bike_ControlS.instance.BikeInBtn.gameObject.SetActive(true);
+            Bike_ControlS.instance.SpawnPostion = spawnPoint;
+            Bike_ControlS.instance.ReferenceBike = ReferenceBike;
+            Bike_ControlS.instance.TempBike = gameObject;
         }
     }
 
@@ -21,10 +21,10 @@ public class bike_Triggerr : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Bike_Control.instance.BikeInBtn.gameObject.SetActive(false);
-            Bike_Control.instance.SpawnPostion = null;
-            Bike_Control.instance.ReferenceBike = null;
-            Bike_Control.instance.TempBike = null;
+            Bike_ControlS.instance.BikeInBtn.gameObject.SetActive(false);
+            Bike_ControlS.instance.SpawnPostion = null;
+            Bike_ControlS.instance.ReferenceBike = null;
+            Bike_ControlS.instance.TempBike = null;
         }
     }
 }

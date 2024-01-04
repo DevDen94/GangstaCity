@@ -306,8 +306,11 @@ public class BikeCamera : MonoBehaviour
         }
         else
         {
-            Vector3 look = BikerMan.position - transform.position;
-            transform.rotation = Quaternion.LookRotation(look);
+            if (BikerMan != null)
+            {
+                Vector3 look = BikerMan.position - transform.position;
+                transform.rotation = Quaternion.LookRotation(look);
+            }
         }
 
     }

@@ -50,7 +50,7 @@ public class BikeControl : MonoBehaviour
 
     }
 
-
+    public GameObject[] Hips;
 
 
     // Lights Setting /////////////////////////////////
@@ -332,6 +332,7 @@ public class BikeControl : MonoBehaviour
     void Awake()
     {
         Gangsters[PlayerPrefs.GetInt("SelectedGangster")].SetActive(true);
+       // Bike_ControlS.instance.Bike_cam.BikerMan = Hips[PlayerPrefs.GetInt("SelectedGangster")].transform;
 
         if (bikeSetting.automaticGear) NeutralGear = false;
 

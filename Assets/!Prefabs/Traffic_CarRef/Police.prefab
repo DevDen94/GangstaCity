@@ -22789,7 +22789,7 @@ GameObject:
   - component: {fileID: 8689834701594135105}
   - component: {fileID: 8689834701594135104}
   - component: {fileID: 8689834701594135111}
-  m_Layer: 27
+  m_Layer: 0
   m_Name: Police
   m_TagString: Police
   m_Icon: {fileID: 0}
