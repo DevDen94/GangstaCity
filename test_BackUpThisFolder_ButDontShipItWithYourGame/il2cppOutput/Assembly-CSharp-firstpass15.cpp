@@ -131,6 +131,17 @@ struct GenericInterfaceFuncInvoker0
 		return ((Func)invokeData.methodPtr)(obj, invokeData.method);
 	}
 };
+template <typename T1>
+struct InvokerActionInvoker1;
+template <typename T1>
+struct InvokerActionInvoker1<T1*>
+{
+	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1* p1)
+	{
+		void* params[1] = { p1 };
+		method->invoker_method(methodPtr, method, obj, params, params[0]);
+	}
+};
 template <typename R, typename T1>
 struct InvokerFuncInvoker1;
 template <typename R, typename T1>
@@ -172,14 +183,14 @@ struct List_1_tF2FE88545EFEC788CAAE6C74EC2F78E937FCCAC3;
 struct List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B;
 // System.Collections.Generic.List`1<UnityEngine.KeyCode>
 struct List_1_tB7F9EA9DD46F974E3E396408B3EF9E0ED62F6D32;
-// System.Collections.Generic.List`1<System.Object>
-struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D;
 // System.Collections.Generic.List`1<UnityEngine.EventSystems.RaycastResult>
 struct List_1_t8292C421BBB00D7661DC07462822936152BAB446;
 // System.Collections.Generic.List`1<ControlFreak2.TouchControl>
 struct List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF;
 // System.Collections.Generic.List`1<ControlFreak2.Internal.TouchControlAnimatorBase>
 struct List_1_t0CB7AC5D273C2F45FDF015CE51B359E6058552B0;
+// System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A;
 // System.Collections.Generic.List`1<ControlFreak2.Internal.AxisBinding/TargetElem>
 struct List_1_tAFB8A3DA004988CD40316ABF5F74D2396AAED171;
 // System.Collections.Generic.List`1<ControlFreak2.Internal.DigitalBinding/AxisElem>
@@ -194,8 +205,8 @@ struct List_1_t16D880C4ADDC61FC7D375B26E5E121CD3E771292;
 struct List_1_t051EB4680962E5C265AB6BD11AF346B96CB4740E;
 // System.Collections.Generic.List`1<ControlFreak2.TouchControlPanel/SystemTouch>
 struct List_1_t5582E957E29094D0CFA12AD85ACC5E839437D9BF;
-// ControlFreak2.ObjectPoolBase`1<System.Object>
-struct ObjectPoolBase_1_t381C044ED10AFCFA09316C6D859D6D144C9632BA;
+// ControlFreak2.ObjectPoolBase`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1;
 // ControlFreak2.ObjectPoolBase`1<ControlFreak2.TouchControl/Hit>
 struct ObjectPoolBase_1_t65434386D99DBE616964640CF3EB79D462929A44;
 // UnityEngine.UI.CoroutineTween.TweenRunner`1<UnityEngine.UI.CoroutineTween.ColorTween>
@@ -208,8 +219,6 @@ struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
 struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
 // System.IntPtr[]
 struct IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832;
-// System.Object[]
-struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
 // System.Diagnostics.StackTrace[]
 struct StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF;
 // ControlFreak2.TouchControl[]
@@ -220,6 +229,8 @@ struct TouchControlAnimatorBaseU5BU5D_tACDB7363A7935377DB6B9FA3DDDA68228C22F917;
 struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
 // UnityEngine.Vector2[]
 struct Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA;
+// Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType[]
+struct __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC;
 // ControlFreak2.InputRig/GamepadConfig[]
 struct GamepadConfigU5BU5D_t57AB3D503118D89485B13A05D547862FEE72C3FD;
 // ControlFreak2.InputRig/Touch[]
@@ -564,7 +575,7 @@ struct Exception_t_marshaled_com;
 struct Exception_t_marshaled_pinvoke;
 
 struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
-struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+struct __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC;
 struct EmulatedFingerObjectU5BU5D_t45BA95D0711F5DC9483E5CAFB82B37079F44885E;
 struct FingerStateU5BU5D_tC2BFD02203D6846B5CC24AF2E08F47F79E07B785;
 struct MultiFingerTouchU5BU5D_t163A98B56974D8911E01D639F1F14945530F939D;
@@ -592,19 +603,6 @@ struct List_1_tA195A0722F802484BB0FE8F5945D02D301C8B02B  : public RuntimeObject
 	RuntimeObject* ____syncRoot_4;
 };
 
-// System.Collections.Generic.List`1<System.Object>
-struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D  : public RuntimeObject
-{
-	// T[] System.Collections.Generic.List`1::_items
-	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ____items_1;
-	// System.Int32 System.Collections.Generic.List`1::_size
-	int32_t ____size_2;
-	// System.Int32 System.Collections.Generic.List`1::_version
-	int32_t ____version_3;
-	// System.Object System.Collections.Generic.List`1::_syncRoot
-	RuntimeObject* ____syncRoot_4;
-};
-
 // System.Collections.Generic.List`1<ControlFreak2.TouchControl>
 struct List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF  : public RuntimeObject
 {
@@ -623,6 +621,19 @@ struct List_1_t0CB7AC5D273C2F45FDF015CE51B359E6058552B0  : public RuntimeObject
 {
 	// T[] System.Collections.Generic.List`1::_items
 	TouchControlAnimatorBaseU5BU5D_tACDB7363A7935377DB6B9FA3DDDA68228C22F917* ____items_1;
+	// System.Int32 System.Collections.Generic.List`1::_size
+	int32_t ____size_2;
+	// System.Int32 System.Collections.Generic.List`1::_version
+	int32_t ____version_3;
+	// System.Object System.Collections.Generic.List`1::_syncRoot
+	RuntimeObject* ____syncRoot_4;
+};
+
+// System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A  : public RuntimeObject
+{
+	// T[] System.Collections.Generic.List`1::_items
+	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ____items_1;
 	// System.Int32 System.Collections.Generic.List`1::_size
 	int32_t ____size_2;
 	// System.Int32 System.Collections.Generic.List`1::_version
@@ -666,13 +677,13 @@ struct NamedConfigCollection_1_tD1394A0D0CACE06B3ADCFFF3D4F0DAC26F7D87B3  : publ
 	InputRig_tB061428518D8A325692CC6B98F1CA3D9807EE6EC* ___rig_1;
 };
 
-// ControlFreak2.ObjectPoolBase`1<System.Object>
-struct ObjectPoolBase_1_t381C044ED10AFCFA09316C6D859D6D144C9632BA  : public RuntimeObject
+// ControlFreak2.ObjectPoolBase`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1  : public RuntimeObject
 {
 	// System.Collections.Generic.List`1<T> ControlFreak2.ObjectPoolBase`1::usedList
-	List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___usedList_0;
+	List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* ___usedList_0;
 	// System.Collections.Generic.List`1<T> ControlFreak2.ObjectPoolBase`1::unusedList
-	List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___unusedList_1;
+	List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* ___unusedList_1;
 };
 
 // ControlFreak2.ObjectPoolBase`1<ControlFreak2.TouchControl/Hit>
@@ -925,19 +936,6 @@ struct SystemTouch_t394423D5D8C2A3B5A1E2EC2B5DE402A03464CB48  : public RuntimeOb
 	int32_t ___startFrame_3;
 };
 
-// System.Collections.Generic.List`1/Enumerator<System.Object>
-struct Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A 
-{
-	// System.Collections.Generic.List`1<T> System.Collections.Generic.List`1/Enumerator::_list
-	List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ____list_0;
-	// System.Int32 System.Collections.Generic.List`1/Enumerator::_index
-	int32_t ____index_1;
-	// System.Int32 System.Collections.Generic.List`1/Enumerator::_version
-	int32_t ____version_2;
-	// T System.Collections.Generic.List`1/Enumerator::_current
-	RuntimeObject* ____current_3;
-};
-
 // System.Collections.Generic.List`1/Enumerator<ControlFreak2.TouchControl>
 struct Enumerator_tB25B6CFFC755D7F5CFDB1C5D10B79B6DCAAB8222 
 {
@@ -950,6 +948,9 @@ struct Enumerator_tB25B6CFFC755D7F5CFDB1C5D10B79B6DCAAB8222
 	// T System.Collections.Generic.List`1/Enumerator::_current
 	TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB* ____current_3;
 };
+
+// System.Collections.Generic.List`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+typedef Il2CppFullySharedGenericStruct Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF;
 
 // ControlFreak2.Internal.AxisBinding
 struct AxisBinding_t83269A8AD214D21CA26C3A865FDD8EC51FCAA91B  : public InputBindingBase_tEA2F41A163392A1D3D9AA916C862BEC232EE9DA2
@@ -2903,15 +2904,6 @@ struct List_1_tA195A0722F802484BB0FE8F5945D02D301C8B02B_StaticFields
 
 // System.Collections.Generic.List`1<ControlFreak2.Internal.BindingDescription>
 
-// System.Collections.Generic.List`1<System.Object>
-struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D_StaticFields
-{
-	// T[] System.Collections.Generic.List`1::s_emptyArray
-	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___s_emptyArray_5;
-};
-
-// System.Collections.Generic.List`1<System.Object>
-
 // System.Collections.Generic.List`1<ControlFreak2.TouchControl>
 struct List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF_StaticFields
 {
@@ -2929,6 +2921,15 @@ struct List_1_t0CB7AC5D273C2F45FDF015CE51B359E6058552B0_StaticFields
 };
 
 // System.Collections.Generic.List`1<ControlFreak2.Internal.TouchControlAnimatorBase>
+
+// System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+struct List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A_StaticFields
+{
+	// T[] System.Collections.Generic.List`1::s_emptyArray
+	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___s_emptyArray_5;
+};
+
+// System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
 
 // System.Collections.Generic.List`1<ControlFreak2.TouchControl/Hit>
 struct List_1_t051EB4680962E5C265AB6BD11AF346B96CB4740E_StaticFields
@@ -2952,9 +2953,9 @@ struct List_1_t5582E957E29094D0CFA12AD85ACC5E839437D9BF_StaticFields
 
 // ControlFreak2.InputRig/NamedConfigCollection`1<ControlFreak2.InputRig/RigSwitch>
 
-// ControlFreak2.ObjectPoolBase`1<System.Object>
+// ControlFreak2.ObjectPoolBase`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
 
-// ControlFreak2.ObjectPoolBase`1<System.Object>
+// ControlFreak2.ObjectPoolBase`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
 
 // ControlFreak2.ObjectPoolBase`1<ControlFreak2.TouchControl/Hit>
 
@@ -3038,13 +3039,13 @@ struct String_t_StaticFields
 
 // ControlFreak2.TouchControlPanel/SystemTouch
 
-// System.Collections.Generic.List`1/Enumerator<System.Object>
-
-// System.Collections.Generic.List`1/Enumerator<System.Object>
-
 // System.Collections.Generic.List`1/Enumerator<ControlFreak2.TouchControl>
 
 // System.Collections.Generic.List`1/Enumerator<ControlFreak2.TouchControl>
+
+// System.Collections.Generic.List`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
+
+// System.Collections.Generic.List`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
 
 // ControlFreak2.Internal.AxisBinding
 
@@ -3730,87 +3731,67 @@ struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771  : public Runtim
 		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
 	}
 };
-// System.Object[]
-struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918  : public RuntimeArray
+// Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType[]
+struct __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC  : public RuntimeArray
 {
-	ALIGN_FIELD (8) RuntimeObject* m_Items[1];
+	ALIGN_FIELD (8) uint8_t m_Items[1];
 
-	inline RuntimeObject* GetAt(il2cpp_array_size_t index) const
+	inline uint8_t* GetAddressAt(il2cpp_array_size_t index)
 	{
 		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
+		return m_Items + il2cpp_array_calc_byte_offset(this, index);
 	}
-	inline RuntimeObject** GetAddressAt(il2cpp_array_size_t index)
+	inline uint8_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
 	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, RuntimeObject* value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
-	}
-	inline RuntimeObject* GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline RuntimeObject** GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, RuntimeObject* value)
-	{
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+		return m_Items + il2cpp_array_calc_byte_offset(this, index);
 	}
 };
 
 
-// System.Void System.Collections.Generic.List`1<System.Object>::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m76CBBC3E2F0583F5AD30CE592CEA1225C06A0428_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___0_capacity, const RuntimeMethod* method) ;
-// System.Boolean System.Collections.Generic.List`1<System.Object>::Contains(T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool List_1_Contains_m4C9139C2A6B23E9343D3F87807B32C6E2CFE660D_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<System.Object>::Add(T)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
-// System.Boolean System.Collections.Generic.List`1<System.Object>::Remove(T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool List_1_Remove_m4DFA48F4CEB9169601E75FC28517C5C06EFA5AD7_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
-// T System.Collections.Generic.List`1<System.Object>::get_Item(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___0_index, const RuntimeMethod* method) ;
-// System.Int32 System.Collections.Generic.List`1<System.Object>::get_Count()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
-// T UnityEngine.Component::GetComponent<System.Object>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
-// System.Void ControlFreak2.ObjectPoolBase`1<System.Object>::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectPoolBase_1__ctor_m5455819A6C44E203272ED773ECFDE1236256E269_gshared (ObjectPoolBase_1_t381C044ED10AFCFA09316C6D859D6D144C9632BA* __this, const RuntimeMethod* method) ;
-// System.Void ControlFreak2.ObjectPoolBase`1<System.Object>::EnsureCapacity(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectPoolBase_1_EnsureCapacity_mB5715D06CE0C92A8ABC697AA1ED7B0BFDE6F65B6_gshared (ObjectPoolBase_1_t381C044ED10AFCFA09316C6D859D6D144C9632BA* __this, int32_t ___0_count, const RuntimeMethod* method) ;
-// System.Void ControlFreak2.ObjectPoolBase`1<System.Object>::Clear()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectPoolBase_1_Clear_mA8EF752D14CA5730EEAE2B7D4CC3E1AF31AC3814_gshared (ObjectPoolBase_1_t381C044ED10AFCFA09316C6D859D6D144C9632BA* __this, const RuntimeMethod* method) ;
-// T ControlFreak2.ObjectPoolBase`1<System.Object>::GetNewObject(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ObjectPoolBase_1_GetNewObject_mB14C4EFA91846C3F6DB11F818F3A1D610B3E46B9_gshared (ObjectPoolBase_1_t381C044ED10AFCFA09316C6D859D6D144C9632BA* __this, int32_t ___0_insertPos, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1<T> ControlFreak2.ObjectPoolBase`1<System.Object>::GetList()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ObjectPoolBase_1_GetList_m607DC23FF415FCDA8DA79E7742FA57C12554D0C2_gshared_inline (ObjectPoolBase_1_t381C044ED10AFCFA09316C6D859D6D144C9632BA* __this, const RuntimeMethod* method) ;
-// System.Int32 ControlFreak2.ObjectPoolBase`1<System.Object>::GetUsedCount()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ObjectPoolBase_1_GetUsedCount_mB65C9834D5CAF942CF36BE46AA7F8DC696754A4B_gshared (ObjectPoolBase_1_t381C044ED10AFCFA09316C6D859D6D144C9632BA* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<System.Object>::RemoveAt(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_RemoveAt_m54F62297ADEE4D4FDA697F49ED807BF901201B54_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___0_index, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<System.Object>::Insert(System.Int32,T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_Insert_m9C9559248941FED50561DB029D55DF08DEF3B094_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___0_index, RuntimeObject* ___1_item, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<System.Object>::GetEnumerator()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1/Enumerator<System.Object>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
-// T System.Collections.Generic.List`1/Enumerator<System.Object>::get_Current()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
-// System.Boolean System.Collections.Generic.List`1/Enumerator<System.Object>::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
-// T UnityEngine.Component::GetComponentInParent<System.Object>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponentInParent_TisRuntimeObject_m6746D6BB99912B1B509746C993906492F86CD119_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<System.Object>::Clear()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
-// System.Int32 System.Collections.Generic.List`1<System.Object>::IndexOf(T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t List_1_IndexOf_m378F61BA812B79DEE58D86FE8AA9F20E3FC7D85F_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m3069CACB5775E013107F559C825422266A09F9E8_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, int32_t ___0_capacity, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Contains(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool List_1_Contains_m8DA550B703DFB328B69C4712064C667D7CA33DF1_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___0_item, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Add(T)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___0_item, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Remove(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool List_1_Remove_m9BCE8CEF94E6F2BF8624D65214FF4F3CA686D60C_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___0_item, const RuntimeMethod* method) ;
+// T System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Item(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_get_Item_m6E4BA37C1FB558E4A62AE4324212E45D09C5C937_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, int32_t ___0_index, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Int32 System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Count()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mD2ED26ACAF3BAF386FFEA83893BA51DB9FD8BA30_gshared_inline (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, const RuntimeMethod* method) ;
+// T UnityEngine.Component::GetComponent<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Component_GetComponent_TisIl2CppFullySharedGenericAny_m47CBDD147982125387F078ABBFDAAB92D397A6C2_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Void ControlFreak2.ObjectPoolBase`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectPoolBase_1__ctor_m5D74FE774B87CD4D2FA408EE3D16AF8231FAA6D1_gshared (ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1* __this, const RuntimeMethod* method) ;
+// System.Void ControlFreak2.ObjectPoolBase`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::EnsureCapacity(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectPoolBase_1_EnsureCapacity_mD41F8F7CBDCD7F171C9C79DB993ADD2D15AC48A7_gshared (ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1* __this, int32_t ___0_count, const RuntimeMethod* method) ;
+// System.Void ControlFreak2.ObjectPoolBase`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Clear()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectPoolBase_1_Clear_mB4128025CF9322A4FD2BFBE7B33865F8705CD039_gshared (ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1* __this, const RuntimeMethod* method) ;
+// T ControlFreak2.ObjectPoolBase`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::GetNewObject(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectPoolBase_1_GetNewObject_m30CBE1E46C118B302A3C1FA2502E1BA2BB44924A_gshared (ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1* __this, int32_t ___0_insertPos, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Collections.Generic.List`1<T> ControlFreak2.ObjectPoolBase`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::GetList()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* ObjectPoolBase_1_GetList_m204E72260F354EC860FC07711716F77FBE997AE5_gshared_inline (ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1* __this, const RuntimeMethod* method) ;
+// System.Int32 ControlFreak2.ObjectPoolBase`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::GetUsedCount()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ObjectPoolBase_1_GetUsedCount_mFDB95E2DA831111D1A64CECAC97B7D5480747965_gshared (ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1* __this, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::RemoveAt(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_RemoveAt_mF6C23E9072D8CBE2872705E7E4D08BDB78770F5C_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, int32_t ___0_index, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Insert(System.Int32,T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_Insert_mB8862677E04375531A30F3EC07AC2372FCE61F55_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, int32_t ___0_index, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___1_item, const RuntimeMethod* method) ;
+// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::GetEnumerator()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_GetEnumerator_m8B2A92ACD4FBA5FBDC3F6F4F5C23A0DDF491DA61_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mFE1EBE6F6425283FEAEAE7C79D02CDE4F9D367E8_gshared (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* __this, const RuntimeMethod* method) ;
+// T System.Collections.Generic.List`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::get_Current()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_gshared_inline (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.List`1/Enumerator<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_m8D8E5E878AF0A88A535AB1AB5BA4F23E151A678A_gshared (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* __this, const RuntimeMethod* method) ;
+// T UnityEngine.Component::GetComponentInParent<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Component_GetComponentInParent_TisIl2CppFullySharedGenericAny_mC623E57DF1C1113E52B35DF8F5130A698B7174A5_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::Clear()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_mD615D1BCB2C9DD91DAD86A2F9E5CF1DFFCBF7925_gshared_inline (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, const RuntimeMethod* method) ;
+// System.Int32 System.Collections.Generic.List`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::IndexOf(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t List_1_IndexOf_m1FFA888B47CE3256B0AC301302FAD79AAAFC0818_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___0_item, const RuntimeMethod* method) ;
 
 // System.Void UnityEngine.MonoBehaviour::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
@@ -4265,12 +4246,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DisablingConditionSet__ctor_m19BEE37DA40
 // System.Void System.Collections.Generic.List`1<ControlFreak2.Internal.TouchControlAnimatorBase>::.ctor(System.Int32)
 inline void List_1__ctor_m1640A775B260D73B2FE0A95A2337EB9E98884A11 (List_1_t0CB7AC5D273C2F45FDF015CE51B359E6058552B0* __this, int32_t ___0_capacity, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t0CB7AC5D273C2F45FDF015CE51B359E6058552B0*, int32_t, const RuntimeMethod*))List_1__ctor_m76CBBC3E2F0583F5AD30CE592CEA1225C06A0428_gshared)(__this, ___0_capacity, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, const RuntimeMethod*))List_1__ctor_m3069CACB5775E013107F559C825422266A09F9E8_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, ___0_capacity, method);
 }
 // System.Void System.Collections.Generic.List`1<ControlFreak2.TouchControl>::.ctor(System.Int32)
 inline void List_1__ctor_m3AC8E6EA34CBFBA2B70D922247387185F3DF4D6E (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF* __this, int32_t ___0_capacity, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF*, int32_t, const RuntimeMethod*))List_1__ctor_m76CBBC3E2F0583F5AD30CE592CEA1225C06A0428_gshared)(__this, ___0_capacity, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, const RuntimeMethod*))List_1__ctor_m3069CACB5775E013107F559C825422266A09F9E8_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, ___0_capacity, method);
 }
 // System.Boolean ControlFreak2.TouchControl::RaycastScreen(UnityEngine.Vector2,UnityEngine.Camera)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TouchControl_RaycastScreen_m0CBEBF06F336510E12727F801E73C3B443A2B1BD (TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_screenPos, Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___1_cam, const RuntimeMethod* method) ;
@@ -4301,29 +4282,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchControl_UpdateAnimators_mFB4E66B969
 // System.Boolean System.Collections.Generic.List`1<ControlFreak2.Internal.TouchControlAnimatorBase>::Contains(T)
 inline bool List_1_Contains_mB5BB3CFC9D6BE128299B739F987883E2F5C0EE29 (List_1_t0CB7AC5D273C2F45FDF015CE51B359E6058552B0* __this, TouchControlAnimatorBase_t21525E0B54365789ADFB7F65D8B4352A0D155CA2* ___0_item, const RuntimeMethod* method)
 {
-	return ((  bool (*) (List_1_t0CB7AC5D273C2F45FDF015CE51B359E6058552B0*, TouchControlAnimatorBase_t21525E0B54365789ADFB7F65D8B4352A0D155CA2*, const RuntimeMethod*))List_1_Contains_m4C9139C2A6B23E9343D3F87807B32C6E2CFE660D_gshared)(__this, ___0_item, method);
+	return ((  bool (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Contains_m8DA550B703DFB328B69C4712064C667D7CA33DF1_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)___0_item, method);
 }
 // System.Void System.Collections.Generic.List`1<ControlFreak2.Internal.TouchControlAnimatorBase>::Add(T)
 inline void List_1_Add_m0BA68810A71F0E5FD8FEE8B05951F911EF7D1D9A_inline (List_1_t0CB7AC5D273C2F45FDF015CE51B359E6058552B0* __this, TouchControlAnimatorBase_t21525E0B54365789ADFB7F65D8B4352A0D155CA2* ___0_item, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t0CB7AC5D273C2F45FDF015CE51B359E6058552B0*, TouchControlAnimatorBase_t21525E0B54365789ADFB7F65D8B4352A0D155CA2*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___0_item, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)___0_item, method);
 }
 // System.Boolean System.Collections.Generic.List`1<ControlFreak2.Internal.TouchControlAnimatorBase>::Remove(T)
 inline bool List_1_Remove_mFA614F78A683BB49DCDA28280CA975F711EFEB62 (List_1_t0CB7AC5D273C2F45FDF015CE51B359E6058552B0* __this, TouchControlAnimatorBase_t21525E0B54365789ADFB7F65D8B4352A0D155CA2* ___0_item, const RuntimeMethod* method)
 {
-	return ((  bool (*) (List_1_t0CB7AC5D273C2F45FDF015CE51B359E6058552B0*, TouchControlAnimatorBase_t21525E0B54365789ADFB7F65D8B4352A0D155CA2*, const RuntimeMethod*))List_1_Remove_m4DFA48F4CEB9169601E75FC28517C5C06EFA5AD7_gshared)(__this, ___0_item, method);
+	return ((  bool (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Remove_m9BCE8CEF94E6F2BF8624D65214FF4F3CA686D60C_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)___0_item, method);
 }
 // T System.Collections.Generic.List`1<ControlFreak2.Internal.TouchControlAnimatorBase>::get_Item(System.Int32)
 inline TouchControlAnimatorBase_t21525E0B54365789ADFB7F65D8B4352A0D155CA2* List_1_get_Item_m33DD74A1B3CA068FD76D3ACC4E1276790D2D94C3 (List_1_t0CB7AC5D273C2F45FDF015CE51B359E6058552B0* __this, int32_t ___0_index, const RuntimeMethod* method)
 {
-	return ((  TouchControlAnimatorBase_t21525E0B54365789ADFB7F65D8B4352A0D155CA2* (*) (List_1_t0CB7AC5D273C2F45FDF015CE51B359E6058552B0*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___0_index, method);
+	TouchControlAnimatorBase_t21525E0B54365789ADFB7F65D8B4352A0D155CA2* il2cppRetVal;
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, Il2CppFullySharedGenericAny*, const RuntimeMethod*))List_1_get_Item_m6E4BA37C1FB558E4A62AE4324212E45D09C5C937_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, ___0_index, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void ControlFreak2.Internal.TouchControlAnimatorBase::UpdateAnimator(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchControlAnimatorBase_UpdateAnimator_m4539E815AF88BA5BD1262DD619441FDF9AD0ABD3 (TouchControlAnimatorBase_t21525E0B54365789ADFB7F65D8B4352A0D155CA2* __this, bool ___0_skipAnim, const RuntimeMethod* method) ;
 // System.Int32 System.Collections.Generic.List`1<ControlFreak2.Internal.TouchControlAnimatorBase>::get_Count()
 inline int32_t List_1_get_Count_mF326D45BA6AD4CBF63D30ECDC0B059FA79AE1EEF_inline (List_1_t0CB7AC5D273C2F45FDF015CE51B359E6058552B0* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (List_1_t0CB7AC5D273C2F45FDF015CE51B359E6058552B0*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
+	return ((  int32_t (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1_get_Count_mD2ED26ACAF3BAF386FFEA83893BA51DB9FD8BA30_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
 }
 // System.Void ControlFreak2.TouchControl::StartAlphaAnim(System.Single,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchControl_StartAlphaAnim_mB5798E807CCDA0DA894039FF6FB22B7223EB2561 (TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB* __this, float ___0_targetAlpha, float ___1_duration, const RuntimeMethod* method) ;
@@ -4360,17 +4343,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99
 // T UnityEngine.Component::GetComponent<ControlFreak2.TouchControlPanel>()
 inline TouchControlPanel_t914AD83336D32F6DFC2234AFB1DAA6D5A6BE77C7* Component_GetComponent_TisTouchControlPanel_t914AD83336D32F6DFC2234AFB1DAA6D5A6BE77C7_m2DCF6BDA02504D85BAFC3B9ABA45734DF712526C (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
 {
-	return ((  TouchControlPanel_t914AD83336D32F6DFC2234AFB1DAA6D5A6BE77C7* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
+	TouchControlPanel_t914AD83336D32F6DFC2234AFB1DAA6D5A6BE77C7* il2cppRetVal;
+	((  void (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Component_GetComponent_TisIl2CppFullySharedGenericAny_m47CBDD147982125387F078ABBFDAAB92D397A6C2_gshared)((Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // T UnityEngine.Component::GetComponent<ControlFreak2.InputRig>()
 inline InputRig_tB061428518D8A325692CC6B98F1CA3D9807EE6EC* Component_GetComponent_TisInputRig_tB061428518D8A325692CC6B98F1CA3D9807EE6EC_m3AEF2530211601AAD5457A7837A9B711BE594959 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
 {
-	return ((  InputRig_tB061428518D8A325692CC6B98F1CA3D9807EE6EC* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
+	InputRig_tB061428518D8A325692CC6B98F1CA3D9807EE6EC* il2cppRetVal;
+	((  void (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Component_GetComponent_TisIl2CppFullySharedGenericAny_m47CBDD147982125387F078ABBFDAAB92D397A6C2_gshared)((Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // T UnityEngine.Component::GetComponent<UnityEngine.Canvas>()
 inline Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* Component_GetComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m209BA4F663AB98A4504995B5BD3EADEDEFB92BF2 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
 {
-	return ((  Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
+	Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* il2cppRetVal;
+	((  void (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Component_GetComponent_TisIl2CppFullySharedGenericAny_m47CBDD147982125387F078ABBFDAAB92D397A6C2_gshared)((Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void ControlFreak2.TouchControl::set_canvas(UnityEngine.Canvas)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TouchControl_set_canvas_m283075B1AEB5708619563D9D23EC9A5767027798_inline (TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB* __this, Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* ___0_value, const RuntimeMethod* method) ;
@@ -4521,24 +4510,26 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_RoundToInt_m60F8B66
 // System.Void ControlFreak2.ObjectPoolBase`1<ControlFreak2.TouchControl/Hit>::.ctor()
 inline void ObjectPoolBase_1__ctor_m26A5676FCF6E2679BF1826409368BBD5D0D9DC94 (ObjectPoolBase_1_t65434386D99DBE616964640CF3EB79D462929A44* __this, const RuntimeMethod* method)
 {
-	((  void (*) (ObjectPoolBase_1_t65434386D99DBE616964640CF3EB79D462929A44*, const RuntimeMethod*))ObjectPoolBase_1__ctor_m5455819A6C44E203272ED773ECFDE1236256E269_gshared)(__this, method);
+	((  void (*) (ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1*, const RuntimeMethod*))ObjectPoolBase_1__ctor_m5D74FE774B87CD4D2FA408EE3D16AF8231FAA6D1_gshared)((ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1*)__this, method);
 }
 // System.Void ControlFreak2.TouchControl/Hit::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Hit__ctor_m78AD1C261BC6965172468EE23BDBAA9BA03E00F2 (Hit_tE31238210A6F52E9D00A9231F71B78455041131A* __this, const RuntimeMethod* method) ;
 // System.Void ControlFreak2.ObjectPoolBase`1<ControlFreak2.TouchControl/Hit>::EnsureCapacity(System.Int32)
 inline void ObjectPoolBase_1_EnsureCapacity_m8B3629485478AE61371D9A493F0266E5296212D5 (ObjectPoolBase_1_t65434386D99DBE616964640CF3EB79D462929A44* __this, int32_t ___0_count, const RuntimeMethod* method)
 {
-	((  void (*) (ObjectPoolBase_1_t65434386D99DBE616964640CF3EB79D462929A44*, int32_t, const RuntimeMethod*))ObjectPoolBase_1_EnsureCapacity_mB5715D06CE0C92A8ABC697AA1ED7B0BFDE6F65B6_gshared)(__this, ___0_count, method);
+	((  void (*) (ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1*, int32_t, const RuntimeMethod*))ObjectPoolBase_1_EnsureCapacity_mD41F8F7CBDCD7F171C9C79DB993ADD2D15AC48A7_gshared)((ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1*)__this, ___0_count, method);
 }
 // System.Void ControlFreak2.ObjectPoolBase`1<ControlFreak2.TouchControl/Hit>::Clear()
 inline void ObjectPoolBase_1_Clear_m8DBA5A3079C649C9D3720F31929AC623D154354B (ObjectPoolBase_1_t65434386D99DBE616964640CF3EB79D462929A44* __this, const RuntimeMethod* method)
 {
-	((  void (*) (ObjectPoolBase_1_t65434386D99DBE616964640CF3EB79D462929A44*, const RuntimeMethod*))ObjectPoolBase_1_Clear_mA8EF752D14CA5730EEAE2B7D4CC3E1AF31AC3814_gshared)(__this, method);
+	((  void (*) (ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1*, const RuntimeMethod*))ObjectPoolBase_1_Clear_mB4128025CF9322A4FD2BFBE7B33865F8705CD039_gshared)((ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1*)__this, method);
 }
 // T System.Collections.Generic.List`1<ControlFreak2.TouchControl>::get_Item(System.Int32)
 inline TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB* List_1_get_Item_mCB7535FD35B6C2D2E6DE992BDF03D266F5A9A9AD (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF* __this, int32_t ___0_index, const RuntimeMethod* method)
 {
-	return ((  TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB* (*) (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___0_index, method);
+	TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB* il2cppRetVal;
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, Il2CppFullySharedGenericAny*, const RuntimeMethod*))List_1_get_Item_m6E4BA37C1FB558E4A62AE4324212E45D09C5C937_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, ___0_index, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Boolean ControlFreak2.TouchControl/HitPool/TouchControlFilterFunc::Invoke(ControlFreak2.TouchControl)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool TouchControlFilterFunc_Invoke_mB88BF89E2EFB21BAB3D7DB8FE30D86553CDA17A3_inline (TouchControlFilterFunc_t7C7BA991B005EA80433D4E69F980B124622FEE27* __this, TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB* ___0_c, const RuntimeMethod* method) ;
@@ -4547,60 +4538,65 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TouchControl_HitTest_m7EB2A8ED234C10C105
 // T ControlFreak2.ObjectPoolBase`1<ControlFreak2.TouchControl/Hit>::GetNewObject(System.Int32)
 inline Hit_tE31238210A6F52E9D00A9231F71B78455041131A* ObjectPoolBase_1_GetNewObject_mAEC91BD6A1A8454BF96CBBC683B64EC44CB098CD (ObjectPoolBase_1_t65434386D99DBE616964640CF3EB79D462929A44* __this, int32_t ___0_insertPos, const RuntimeMethod* method)
 {
-	return ((  Hit_tE31238210A6F52E9D00A9231F71B78455041131A* (*) (ObjectPoolBase_1_t65434386D99DBE616964640CF3EB79D462929A44*, int32_t, const RuntimeMethod*))ObjectPoolBase_1_GetNewObject_mB14C4EFA91846C3F6DB11F818F3A1D610B3E46B9_gshared)(__this, ___0_insertPos, method);
+	Hit_tE31238210A6F52E9D00A9231F71B78455041131A* il2cppRetVal;
+	((  void (*) (ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1*, int32_t, Il2CppFullySharedGenericAny*, const RuntimeMethod*))ObjectPoolBase_1_GetNewObject_m30CBE1E46C118B302A3C1FA2502E1BA2BB44924A_gshared)((ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1*)__this, ___0_insertPos, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void ControlFreak2.TouchControl/Hit::CopyFrom(ControlFreak2.TouchControl/Hit)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Hit_CopyFrom_m8049B226404C358A8F45E9F5FB9FDCB17B2BEDB2 (Hit_tE31238210A6F52E9D00A9231F71B78455041131A* __this, Hit_tE31238210A6F52E9D00A9231F71B78455041131A* ___0_b, const RuntimeMethod* method) ;
 // System.Int32 System.Collections.Generic.List`1<ControlFreak2.TouchControl>::get_Count()
 inline int32_t List_1_get_Count_mECBA402CF1F530CCC7DBB3271E3DC5D28A584F2E_inline (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
+	return ((  int32_t (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1_get_Count_mD2ED26ACAF3BAF386FFEA83893BA51DB9FD8BA30_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
 }
 // System.Collections.Generic.List`1<T> ControlFreak2.ObjectPoolBase`1<ControlFreak2.TouchControl/Hit>::GetList()
 inline List_1_t051EB4680962E5C265AB6BD11AF346B96CB4740E* ObjectPoolBase_1_GetList_mAEE7685E9AD6572A8833FD5B287CFCDDA7E7450F_inline (ObjectPoolBase_1_t65434386D99DBE616964640CF3EB79D462929A44* __this, const RuntimeMethod* method)
 {
-	return ((  List_1_t051EB4680962E5C265AB6BD11AF346B96CB4740E* (*) (ObjectPoolBase_1_t65434386D99DBE616964640CF3EB79D462929A44*, const RuntimeMethod*))ObjectPoolBase_1_GetList_m607DC23FF415FCDA8DA79E7742FA57C12554D0C2_gshared_inline)(__this, method);
+	List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* il2cppRetVal = ((  List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* (*) (ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1*, const RuntimeMethod*))ObjectPoolBase_1_GetList_m204E72260F354EC860FC07711716F77FBE997AE5_gshared_inline)((ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1*)__this, method);
+	return (List_1_t051EB4680962E5C265AB6BD11AF346B96CB4740E*)il2cppRetVal;
 }
 // T System.Collections.Generic.List`1<ControlFreak2.TouchControl/Hit>::get_Item(System.Int32)
 inline Hit_tE31238210A6F52E9D00A9231F71B78455041131A* List_1_get_Item_mDFF717E008F4646916014009B352BD0FE4A68532 (List_1_t051EB4680962E5C265AB6BD11AF346B96CB4740E* __this, int32_t ___0_index, const RuntimeMethod* method)
 {
-	return ((  Hit_tE31238210A6F52E9D00A9231F71B78455041131A* (*) (List_1_t051EB4680962E5C265AB6BD11AF346B96CB4740E*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___0_index, method);
+	Hit_tE31238210A6F52E9D00A9231F71B78455041131A* il2cppRetVal;
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, Il2CppFullySharedGenericAny*, const RuntimeMethod*))List_1_get_Item_m6E4BA37C1FB558E4A62AE4324212E45D09C5C937_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, ___0_index, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Boolean ControlFreak2.TouchControl/Hit::IsHigherThan(ControlFreak2.TouchControl/Hit)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Hit_IsHigherThan_m20427691FE0ADE99A953EC9687569B6C83EBDC1A (Hit_tE31238210A6F52E9D00A9231F71B78455041131A* __this, Hit_tE31238210A6F52E9D00A9231F71B78455041131A* ___0_r, const RuntimeMethod* method) ;
 // System.Int32 System.Collections.Generic.List`1<ControlFreak2.TouchControl/Hit>::get_Count()
 inline int32_t List_1_get_Count_mA7023300DC9C5C313306FCC7C26AC6226A834EB4_inline (List_1_t051EB4680962E5C265AB6BD11AF346B96CB4740E* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (List_1_t051EB4680962E5C265AB6BD11AF346B96CB4740E*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
+	return ((  int32_t (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1_get_Count_mD2ED26ACAF3BAF386FFEA83893BA51DB9FD8BA30_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
 }
 // System.Int32 ControlFreak2.ObjectPoolBase`1<ControlFreak2.TouchControl/Hit>::GetUsedCount()
 inline int32_t ObjectPoolBase_1_GetUsedCount_m0D9074884B365BABA683837A842B6DF426A95D4C (ObjectPoolBase_1_t65434386D99DBE616964640CF3EB79D462929A44* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (ObjectPoolBase_1_t65434386D99DBE616964640CF3EB79D462929A44*, const RuntimeMethod*))ObjectPoolBase_1_GetUsedCount_mB65C9834D5CAF942CF36BE46AA7F8DC696754A4B_gshared)(__this, method);
+	return ((  int32_t (*) (ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1*, const RuntimeMethod*))ObjectPoolBase_1_GetUsedCount_mFDB95E2DA831111D1A64CECAC97B7D5480747965_gshared)((ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1*)__this, method);
 }
 // System.Void System.Collections.Generic.List`1<ControlFreak2.TouchControl/Hit>::RemoveAt(System.Int32)
 inline void List_1_RemoveAt_mF1F264AE3C7520B3BB2FAF8A629DECCA7FCA9F3A (List_1_t051EB4680962E5C265AB6BD11AF346B96CB4740E* __this, int32_t ___0_index, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t051EB4680962E5C265AB6BD11AF346B96CB4740E*, int32_t, const RuntimeMethod*))List_1_RemoveAt_m54F62297ADEE4D4FDA697F49ED807BF901201B54_gshared)(__this, ___0_index, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, const RuntimeMethod*))List_1_RemoveAt_mF6C23E9072D8CBE2872705E7E4D08BDB78770F5C_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, ___0_index, method);
 }
 // System.Void System.Collections.Generic.List`1<ControlFreak2.TouchControl/Hit>::Insert(System.Int32,T)
 inline void List_1_Insert_mDEDE654835B6506B7BD774623F7C1F1F208B74AB (List_1_t051EB4680962E5C265AB6BD11AF346B96CB4740E* __this, int32_t ___0_index, Hit_tE31238210A6F52E9D00A9231F71B78455041131A* ___1_item, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t051EB4680962E5C265AB6BD11AF346B96CB4740E*, int32_t, Hit_tE31238210A6F52E9D00A9231F71B78455041131A*, const RuntimeMethod*))List_1_Insert_m9C9559248941FED50561DB029D55DF08DEF3B094_gshared)(__this, ___0_index, ___1_item, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Insert_mB8862677E04375531A30F3EC07AC2372FCE61F55_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, ___0_index, (Il2CppFullySharedGenericAny)___1_item, method);
 }
 // System.Void ControlFreak2.TouchControl/HitPool::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HitPool__ctor_mBB4AB08AA5C799C00D2C44638B5D3103A863F052 (HitPool_t45DAC5E673C44D80745B666929B929E2ACBA562D* __this, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<ControlFreak2.TouchControlPanel/SystemTouch>::.ctor(System.Int32)
 inline void List_1__ctor_m8DB19168DBAE12175C2A68E2FBF9B3930E73C202 (List_1_t5582E957E29094D0CFA12AD85ACC5E839437D9BF* __this, int32_t ___0_capacity, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t5582E957E29094D0CFA12AD85ACC5E839437D9BF*, int32_t, const RuntimeMethod*))List_1__ctor_m76CBBC3E2F0583F5AD30CE592CEA1225C06A0428_gshared)(__this, ___0_capacity, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, const RuntimeMethod*))List_1__ctor_m3069CACB5775E013107F559C825422266A09F9E8_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, ___0_capacity, method);
 }
 // System.Void ControlFreak2.TouchControlPanel/SystemTouch::.ctor(ControlFreak2.TouchControlPanel)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SystemTouch__ctor_m3AEB9B5776142E193629EAD5467B4E9B1723DE10 (SystemTouch_t394423D5D8C2A3B5A1E2EC2B5DE402A03464CB48* __this, TouchControlPanel_t914AD83336D32F6DFC2234AFB1DAA6D5A6BE77C7* ___0_panel, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<ControlFreak2.TouchControlPanel/SystemTouch>::Add(T)
 inline void List_1_Add_mB72205AACD6D4DC5AE7462B7508E754855D89E17_inline (List_1_t5582E957E29094D0CFA12AD85ACC5E839437D9BF* __this, SystemTouch_t394423D5D8C2A3B5A1E2EC2B5DE402A03464CB48* ___0_item, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t5582E957E29094D0CFA12AD85ACC5E839437D9BF*, SystemTouch_t394423D5D8C2A3B5A1E2EC2B5DE402A03464CB48*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___0_item, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)___0_item, method);
 }
 // System.Void ControlFreak2.TouchControlPanel::InvalidateHierarchy()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchControlPanel_InvalidateHierarchy_mBC8B1C4C2B9E807BEE3DE4B3D9B65DA4824B381F (TouchControlPanel_t914AD83336D32F6DFC2234AFB1DAA6D5A6BE77C7* __this, const RuntimeMethod* method) ;
@@ -4609,22 +4605,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchControlPanel_ReleaseAll_m303579F392
 // System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<ControlFreak2.TouchControl>::GetEnumerator()
 inline Enumerator_tB25B6CFFC755D7F5CFDB1C5D10B79B6DCAAB8222 List_1_GetEnumerator_m2575F6D650CFA43A59942EAD01033A37D4E4B6A1 (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF* __this, const RuntimeMethod* method)
 {
-	return ((  Enumerator_tB25B6CFFC755D7F5CFDB1C5D10B79B6DCAAB8222 (*) (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF*, const RuntimeMethod*))List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared)(__this, method);
+	Enumerator_tB25B6CFFC755D7F5CFDB1C5D10B79B6DCAAB8222 il2cppRetVal;
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))List_1_GetEnumerator_m8B2A92ACD4FBA5FBDC3F6F4F5C23A0DDF491DA61_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void System.Collections.Generic.List`1/Enumerator<ControlFreak2.TouchControl>::Dispose()
 inline void Enumerator_Dispose_m0DC82511F44FB89ED1AAC7684ADFB45C769F0A02 (Enumerator_tB25B6CFFC755D7F5CFDB1C5D10B79B6DCAAB8222* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Enumerator_tB25B6CFFC755D7F5CFDB1C5D10B79B6DCAAB8222*, const RuntimeMethod*))Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared)(__this, method);
+	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))Enumerator_Dispose_mFE1EBE6F6425283FEAEAE7C79D02CDE4F9D367E8_gshared)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, method);
 }
 // T System.Collections.Generic.List`1/Enumerator<ControlFreak2.TouchControl>::get_Current()
 inline TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB* Enumerator_get_Current_m6891D3986AD8277FDAC90872B9526B4D668E66AD_inline (Enumerator_tB25B6CFFC755D7F5CFDB1C5D10B79B6DCAAB8222* __this, const RuntimeMethod* method)
 {
-	return ((  TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB* (*) (Enumerator_tB25B6CFFC755D7F5CFDB1C5D10B79B6DCAAB8222*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
+	TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB* il2cppRetVal;
+	((  void (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_gshared_inline)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Boolean System.Collections.Generic.List`1/Enumerator<ControlFreak2.TouchControl>::MoveNext()
 inline bool Enumerator_MoveNext_mA918831B7FFF349F64551B7534E18433FA8AED93 (Enumerator_tB25B6CFFC755D7F5CFDB1C5D10B79B6DCAAB8222* __this, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Enumerator_tB25B6CFFC755D7F5CFDB1C5D10B79B6DCAAB8222*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
+	return ((  bool (*) (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*, const RuntimeMethod*))Enumerator_MoveNext_m8D8E5E878AF0A88A535AB1AB5BA4F23E151A678A_gshared)((Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF*)__this, method);
 }
 // System.Void ControlFreak2.TouchControlPanel::UpdatePanel()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchControlPanel_UpdatePanel_mFA9EEBDAC58DE329DFFDB7CAEE061905CBBCE953 (TouchControlPanel_t914AD83336D32F6DFC2234AFB1DAA6D5A6BE77C7* __this, const RuntimeMethod* method) ;
@@ -4633,22 +4633,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchControlPanel_UpdateTouches_m10372A2
 // T UnityEngine.Component::GetComponentInParent<ControlFreak2.InputRig>()
 inline InputRig_tB061428518D8A325692CC6B98F1CA3D9807EE6EC* Component_GetComponentInParent_TisInputRig_tB061428518D8A325692CC6B98F1CA3D9807EE6EC_m29D508696F57D665A0E35DBF9760073035589503 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
 {
-	return ((  InputRig_tB061428518D8A325692CC6B98F1CA3D9807EE6EC* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponentInParent_TisRuntimeObject_m6746D6BB99912B1B509746C993906492F86CD119_gshared)(__this, method);
+	InputRig_tB061428518D8A325692CC6B98F1CA3D9807EE6EC* il2cppRetVal;
+	((  void (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, Il2CppFullySharedGenericAny*, const RuntimeMethod*))Component_GetComponentInParent_TisIl2CppFullySharedGenericAny_mC623E57DF1C1113E52B35DF8F5130A698B7174A5_gshared)((Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*)__this, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Boolean System.Collections.Generic.List`1<ControlFreak2.TouchControl>::Contains(T)
 inline bool List_1_Contains_mF88CB116F88E45B4ACE3CE6ECE2AC643ACADCFEC (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF* __this, TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB* ___0_item, const RuntimeMethod* method)
 {
-	return ((  bool (*) (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF*, TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB*, const RuntimeMethod*))List_1_Contains_m4C9139C2A6B23E9343D3F87807B32C6E2CFE660D_gshared)(__this, ___0_item, method);
+	return ((  bool (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Contains_m8DA550B703DFB328B69C4712064C667D7CA33DF1_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)___0_item, method);
 }
 // System.Void System.Collections.Generic.List`1<ControlFreak2.TouchControl>::Add(T)
 inline void List_1_Add_mD072B239CAF22D5422046856D42A67C81456CDDC_inline (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF* __this, TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB* ___0_item, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF*, TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___0_item, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)___0_item, method);
 }
 // System.Boolean System.Collections.Generic.List`1<ControlFreak2.TouchControl>::Remove(T)
 inline bool List_1_Remove_mA44536657B6BF2F9A423C368EB4BCDF299749FC8 (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF* __this, TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB* ___0_item, const RuntimeMethod* method)
 {
-	return ((  bool (*) (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF*, TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB*, const RuntimeMethod*))List_1_Remove_m4DFA48F4CEB9169601E75FC28517C5C06EFA5AD7_gshared)(__this, ___0_item, method);
+	return ((  bool (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_Remove_m9BCE8CEF94E6F2BF8624D65214FF4F3CA686D60C_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)___0_item, method);
 }
 // System.Single ControlFreak2.CFScreen::get_dpcm()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float CFScreen_get_dpcm_mEFFBD8F17F7BB04A3A2B337D02B9F38D00B83C19 (const RuntimeMethod* method) ;
@@ -4677,14 +4679,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD
 // T System.Collections.Generic.List`1<ControlFreak2.TouchControlPanel/SystemTouch>::get_Item(System.Int32)
 inline SystemTouch_t394423D5D8C2A3B5A1E2EC2B5DE402A03464CB48* List_1_get_Item_m4EF74F5D06F608C30E46CC6715B0E107892B7000 (List_1_t5582E957E29094D0CFA12AD85ACC5E839437D9BF* __this, int32_t ___0_index, const RuntimeMethod* method)
 {
-	return ((  SystemTouch_t394423D5D8C2A3B5A1E2EC2B5DE402A03464CB48* (*) (List_1_t5582E957E29094D0CFA12AD85ACC5E839437D9BF*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___0_index, method);
+	SystemTouch_t394423D5D8C2A3B5A1E2EC2B5DE402A03464CB48* il2cppRetVal;
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, Il2CppFullySharedGenericAny*, const RuntimeMethod*))List_1_get_Item_m6E4BA37C1FB558E4A62AE4324212E45D09C5C937_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, ___0_index, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
+	return il2cppRetVal;
 }
 // System.Void ControlFreak2.TouchControlPanel/SystemTouch::Update()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SystemTouch_Update_m0D5D1977119CC28CE99B3BB3C8C0F6123F4BF1D2 (SystemTouch_t394423D5D8C2A3B5A1E2EC2B5DE402A03464CB48* __this, const RuntimeMethod* method) ;
 // System.Int32 System.Collections.Generic.List`1<ControlFreak2.TouchControlPanel/SystemTouch>::get_Count()
 inline int32_t List_1_get_Count_m91B8B8E48B8AF3578238A682043D85F3ABC45045_inline (List_1_t5582E957E29094D0CFA12AD85ACC5E839437D9BF* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (List_1_t5582E957E29094D0CFA12AD85ACC5E839437D9BF*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
+	return ((  int32_t (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1_get_Count_mD2ED26ACAF3BAF386FFEA83893BA51DB9FD8BA30_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
 }
 // System.Void ControlFreak2.TouchControlPanel::UpdateTouchPressure()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchControlPanel_UpdateTouchPressure_m341ED999B972C8E2F315F31E90F36E4DE792BCE6 (TouchControlPanel_t914AD83336D32F6DFC2234AFB1DAA6D5A6BE77C7* __this, const RuntimeMethod* method) ;
@@ -4771,7 +4775,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperTouchZone_DrawMarkerGUI_m55B2D7FE47
 // System.Void System.Collections.Generic.List`1<ControlFreak2.TouchControl>::Clear()
 inline void List_1_Clear_mD0A98D09F085F81133BE388D7A02700A42DD55D6_inline (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF* __this, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF*, const RuntimeMethod*))List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_gshared_inline)(__this, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))List_1_Clear_mD615D1BCB2C9DD91DAD86A2F9E5CF1DFFCBF7925_gshared_inline)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, method);
 }
 // System.Void ControlFreak2.TouchObject::OnControlListChange()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TouchObject_OnControlListChange_mC427BA54AAB59C81AD71E7237A4451451B925151 (TouchObject_t0C684EBC0998DF773D38DB1954384CD8F8DE1697* __this, const RuntimeMethod* method) ;
@@ -4780,12 +4784,12 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector2_op_Inequality_mBEA93
 // System.Int32 System.Collections.Generic.List`1<ControlFreak2.TouchControl>::IndexOf(T)
 inline int32_t List_1_IndexOf_m4431A1132BA65C80A7D8247AFE59B8355FDE7AF8 (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF* __this, TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB* ___0_item, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF*, TouchControl_t4E0D63AFF4151D1A30D15A9C8E2C5EC82A66C3DB*, const RuntimeMethod*))List_1_IndexOf_m378F61BA812B79DEE58D86FE8AA9F20E3FC7D85F_gshared)(__this, ___0_item, method);
+	return ((  int32_t (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny, const RuntimeMethod*))List_1_IndexOf_m1FFA888B47CE3256B0AC301302FAD79AAAFC0818_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, (Il2CppFullySharedGenericAny)___0_item, method);
 }
 // System.Void System.Collections.Generic.List`1<ControlFreak2.TouchControl>::RemoveAt(System.Int32)
 inline void List_1_RemoveAt_m04C78E6509138F6448180C4C9EB28CE4D9EB3B2A (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF* __this, int32_t ___0_index, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t21486FDA09A0905AB38133CBE09BE8518AFCD7DF*, int32_t, const RuntimeMethod*))List_1_RemoveAt_m54F62297ADEE4D4FDA697F49ED807BF901201B54_gshared)(__this, ___0_index, method);
+	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, const RuntimeMethod*))List_1_RemoveAt_mF6C23E9072D8CBE2872705E7E4D08BDB78770F5C_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, ___0_index, method);
 }
 // System.Void ControlFreak2.Internal.AxisBinding::.ctor(System.String,System.Boolean,ControlFreak2.Internal.InputBindingBase)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AxisBinding__ctor_mCC4E8CA05AC1433058D8674BAF8D324070F19BDC (AxisBinding_t83269A8AD214D21CA26C3A865FDD8EC51FCAA91B* __this, String_t* ___0_singleName, bool ___1_enabled, InputBindingBase_tEA2F41A163392A1D3D9AA916C862BEC232EE9DA2* ___2_parent, const RuntimeMethod* method) ;
@@ -31960,19 +31964,24 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR BaseInputModule_tF3B7C22AF1419B2A
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mD4F3498FBD3BDD3F03CBCFB38041CBAC9C28CAFC_gshared_inline (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType*/Il2CppFullySharedGenericAny ___0_item, const RuntimeMethod* method) 
 {
-	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
+	// sizeof(T)
+	const uint32_t SizeOf_T_t664E2061A913AF1FEE499655BC64F0FDE10D2A5E = il2cpp_codegen_sizeof(il2cpp_rgctx_data(method->klass->rgctx_data, 9));
+	// T
+	const Il2CppFullySharedGenericAny L_8 = alloca(SizeOf_T_t664E2061A913AF1FEE499655BC64F0FDE10D2A5E);
+	const Il2CppFullySharedGenericAny L_9 = L_8;
+	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* V_0 = NULL;
 	int32_t V_1 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->____version_3;
 		__this->____version_3 = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)__this->____items_1;
+		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_1 = (__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC*)__this->____items_1;
 		V_0 = L_1;
 		int32_t L_2 = (int32_t)__this->____size_2;
 		V_1 = L_2;
 		int32_t L_3 = V_1;
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = V_0;
+		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_4 = V_0;
 		NullCheck(L_4);
 		if ((!(((uint32_t)L_3) < ((uint32_t)((int32_t)(((RuntimeArray*)L_4)->max_length))))))
 		{
@@ -31982,68 +31991,76 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631
 	{
 		int32_t L_5 = V_1;
 		__this->____size_2 = ((int32_t)il2cpp_codegen_add(L_5, 1));
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_6 = V_0;
+		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_6 = V_0;
 		int32_t L_7 = V_1;
-		RuntimeObject* L_8 = ___0_item;
+		il2cpp_codegen_memcpy(L_8, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->klass->rgctx_data, 9)) ? ___0_item : &___0_item), SizeOf_T_t664E2061A913AF1FEE499655BC64F0FDE10D2A5E);
 		NullCheck(L_6);
-		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(L_7), (RuntimeObject*)L_8);
+		il2cpp_codegen_memcpy((L_6)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_7)), L_8, SizeOf_T_t664E2061A913AF1FEE499655BC64F0FDE10D2A5E);
+		Il2CppCodeGenWriteBarrierForClass(il2cpp_rgctx_data(method->klass->rgctx_data, 9), (void**)(L_6)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_7)), (void*)L_8);
 		return;
 	}
 
 IL_0034:
 	{
-		RuntimeObject* L_9 = ___0_item;
-		((  void (*) (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*, RuntimeObject*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 11)))(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 11));
+		il2cpp_codegen_memcpy(L_9, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->klass->rgctx_data, 9)) ? ___0_item : &___0_item), SizeOf_T_t664E2061A913AF1FEE499655BC64F0FDE10D2A5E);
+		InvokerActionInvoker1< Il2CppFullySharedGenericAny >::Invoke(il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 14)), il2cpp_rgctx_method(method->klass->rgctx_data, 14), __this, (il2cpp_codegen_class_is_value_type(il2cpp_rgctx_data(method->klass->rgctx_data, 9)) ? L_9: *(void**)L_9));
 		return;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mD2ED26ACAF3BAF386FFEA83893BA51DB9FD8BA30_gshared_inline (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, const RuntimeMethod* method) 
 {
 	{
 		int32_t L_0 = (int32_t)__this->____size_2;
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ObjectPoolBase_1_GetList_m607DC23FF415FCDA8DA79E7742FA57C12554D0C2_gshared_inline (ObjectPoolBase_1_t381C044ED10AFCFA09316C6D859D6D144C9632BA* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* ObjectPoolBase_1_GetList_m204E72260F354EC860FC07711716F77FBE997AE5_gshared_inline (ObjectPoolBase_1_t683F0AE44B352A7D09E3FB8B11B4FE9461C5CAB1* __this, const RuntimeMethod* method) 
 {
 	{
 		// public List<T> GetList()        { return this.usedList; }
-		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_0 = (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*)__this->___usedList_0;
+		List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* L_0 = (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this->___usedList_0;
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Enumerator_get_Current_m8B42D4B2DE853B9D11B997120CD0228D4780E394_gshared_inline (Enumerator_tF5AC6CD19D283FBD724440520CEE68FE2602F7AF* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
 {
+	// sizeof(T)
+	const uint32_t SizeOf_T_t010616E3077234188F9BB4FAF369F8571BC5F2E1 = il2cpp_codegen_sizeof(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
+	// T
+	const Il2CppFullySharedGenericAny L_0 = alloca(SizeOf_T_t010616E3077234188F9BB4FAF369F8571BC5F2E1);
 	{
-		RuntimeObject* L_0 = (RuntimeObject*)__this->____current_3;
-		return L_0;
+		il2cpp_codegen_memcpy(L_0, il2cpp_codegen_get_instance_field_data_pointer(__this, il2cpp_rgctx_field(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1),3)), SizeOf_T_t010616E3077234188F9BB4FAF369F8571BC5F2E1);
+		il2cpp_codegen_memcpy(il2cppRetVal, L_0, SizeOf_T_t010616E3077234188F9BB4FAF369F8571BC5F2E1);
+		return;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_mD615D1BCB2C9DD91DAD86A2F9E5CF1DFFCBF7925_gshared_inline (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->____version_3;
 		__this->____version_3 = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		if (!true)
+		bool L_1;
+		L_1 = il2cpp_codegen_is_reference_or_contains_references(il2cpp_rgctx_method(method->klass->rgctx_data, 25));
+		if (!L_1)
 		{
 			goto IL_0035;
 		}
 	}
 	{
-		int32_t L_1 = (int32_t)__this->____size_2;
-		V_0 = L_1;
+		int32_t L_2 = (int32_t)__this->____size_2;
+		V_0 = L_2;
 		__this->____size_2 = 0;
-		int32_t L_2 = V_0;
-		if ((((int32_t)L_2) <= ((int32_t)0)))
+		int32_t L_3 = V_0;
+		if ((((int32_t)L_3) <= ((int32_t)0)))
 		{
 			goto IL_003c;
 		}
 	}
 	{
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_3 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)__this->____items_1;
-		int32_t L_4 = V_0;
-		Array_Clear_m50BAA3751899858B097D3FF2ED31F284703FE5CB((RuntimeArray*)L_3, 0, L_4, NULL);
+		__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* L_4 = (__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC*)__this->____items_1;
+		int32_t L_5 = V_0;
+		Array_Clear_m50BAA3751899858B097D3FF2ED31F284703FE5CB((RuntimeArray*)L_4, 0, L_5, NULL);
 		return;
 	}
 

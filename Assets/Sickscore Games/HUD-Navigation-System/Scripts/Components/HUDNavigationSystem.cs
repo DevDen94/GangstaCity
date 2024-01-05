@@ -113,7 +113,7 @@ namespace SickscoreGames.HUDNavigationSystem
 		[Tooltip("Select the minimap mode you want to use.")]
 		public MinimapModes minimapMode = MinimapModes.RotatePlayer;
 		[Tooltip("Define the minimap scale. Change value to zoom the minimap.")]
-		public float minimapScale = .25f;
+		public float minimapScale = 1f;
 		[Tooltip("Define the minimap radius. Elements will be displayed on the border of the minimap, depending on the minimap scale.")]
 		public float minimapRadius = 75f;
 		[Tooltip("Enable, if you want to scale minimap elements, when they're about to disappear from the minimap.")]

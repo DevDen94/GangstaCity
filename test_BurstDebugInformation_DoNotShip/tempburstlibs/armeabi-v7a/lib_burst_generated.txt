@@ -1,4 +1,4 @@
-Library: E:\Projects\GangsterGame\GangstaCity\GangstaCity\Temp\StagingArea\tempburstlibs\armeabi-v7a\lib_burst_generated
+Library: E:\Projects\GangsterGame\GangstaCity\Temp\StagingArea\tempburstlibs\armeabi-v7a\lib_burst_generated
 --platform=Android
 --backend=burst-llvm-14
 --target=ARMV7A_NEON32
@@ -108,6 +108,7 @@ Library: E:\Projects\GangsterGame\GangstaCity\GangstaCity\Temp\StagingArea\tempb
 --compilation-defines=ENABLE_TERRAIN
 --compilation-defines=ENABLE_TILEMAP
 --compilation-defines=ENABLE_TIMELINE
+--compilation-defines=ENABLE_INPUT_SYSTEM
 --compilation-defines=ENABLE_LEGACY_INPUT_MANAGER
 --compilation-defines=TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 --compilation-defines=INVECTOR_BASIC
@@ -144,8 +145,8 @@ Library: E:\Projects\GangsterGame\GangstaCity\GangstaCity\Temp\StagingArea\tempb
 --compilation-defines=MODULE_PARTICLE_SYSTEM_EXISTS
 --compilation-defines=TIMELINE_FRAMEACCURATE
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=E:\Projects\GangsterGame\GangstaCity\GangstaCity\Temp\Burst
---output=E:\Projects\GangsterGame\GangstaCity\GangstaCity\Temp\StagingArea\tempburstlibs\armeabi-v7a\lib_burst_generated
+--temp-folder=E:\Projects\GangsterGame\GangstaCity\Temp\Burst
+--output=E:\Projects\GangsterGame\GangstaCity\Temp\StagingArea\tempburstlibs\armeabi-v7a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 --pdb-search-paths=Temp/ManagedSymbols/
 

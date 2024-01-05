@@ -169,12 +169,15 @@ public class GameManger : MonoBehaviour
     void delay()
     {
         cm.sm = ThirdPersonPLayer.GetComponent<vShooterManager>();
+
+        hudNav.minimapScale = 1f;
        // cm.sec();
     }
     [HideInInspector]
    public int currentGangster = 0;
     private void Start()
     {
+   
         level_failed = false;
         Jump_Flag = false;
         tps_check = false;

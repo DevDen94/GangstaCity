@@ -322,8 +322,19 @@ public class BikeControl : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Concrete")
+        {
+            Bike_ControlS.instance.BikeOffBtn.gameObject.SetActive(true);
+        }
+        if (other.gameObject.tag == "Ramps")
+        {
+            Bike_ControlS.instance.BikeOffBtn.gameObject.SetActive(false);
+        }
+    }
 
-
+ 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 

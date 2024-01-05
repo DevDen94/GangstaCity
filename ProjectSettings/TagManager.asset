@@ -44,6 +44,7 @@ TagManager:
   - Stone
   - Street
   - Grass
+  - Ramps
   layers:
   - Default
   - TransparentFX
@@ -75,7 +76,7 @@ TagManager:
   - OnlyPolice
   - Poles
   - Traffic
-  - 
+  - Trigger
   - 
   m_SortingLayers:
   - name: Default

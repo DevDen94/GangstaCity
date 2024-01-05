@@ -331,6 +331,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float WheelHit_get_force_m682670758B8A3054D2A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float WheelHit_get_forwardSlip_m1BA6AA2379368EFE2200B92AB4CA20F1AD537CCE (WheelHit_t15D44A463BF2792AD26161787B98CB5698519455* __this, const RuntimeMethod* method) ;
 // System.Single UnityEngine.WheelHit::get_sidewaysSlip()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float WheelHit_get_sidewaysSlip_m7E27E0B36C1CC096C56B8815B7C1E7D380D6627B (WheelHit_t15D44A463BF2792AD26161787B98CB5698519455* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.WheelCollider::get_center_Injected(UnityEngine.Vector3&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider_get_center_Injected_m5F830D14320A88078EF056E5D83599CCD023D6F5 (WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_ret, const RuntimeMethod* method) ;
 // System.Void UnityEngine.WheelCollider::get_suspensionSpring_Injected(UnityEngine.JointSpring&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider_get_suspensionSpring_Injected_mDFEF80392DFDA3DDCD0B19BFE18F34D229AE22FB (WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* __this, JointSpring_t5223C53C8742463D5615BE8E9772EC0EE2EBBBD5* ___0_ret, const RuntimeMethod* method) ;
 // System.Void UnityEngine.WheelCollider::set_suspensionSpring_Injected(UnityEngine.JointSpring&)
@@ -546,6 +548,17 @@ IL2CPP_EXTERN_C  float WheelHit_get_sidewaysSlip_m7E27E0B36C1CC096C56B8815B7C1E7
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// UnityEngine.Vector3 UnityEngine.WheelCollider::get_center()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 WheelCollider_get_center_mE21895BF5F8C9C2523B9468B2C9DA88737A4E163 (WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* __this, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		WheelCollider_get_center_Injected_m5F830D14320A88078EF056E5D83599CCD023D6F5(__this, (&V_0), NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = V_0;
+		return L_0;
+	}
+}
 // System.Single UnityEngine.WheelCollider::get_radius()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float WheelCollider_get_radius_m68CC3DE301E0C6226E85F99D853365DA1244CD1F (WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* __this, const RuntimeMethod* method) 
 {
@@ -763,6 +776,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WheelCollider_GetGroundHit_mCB73878577BC
 	_il2cpp_icall_func = (WheelCollider_GetGroundHit_mCB73878577BC5AAEBEA8572FA62326C4C71B3EF2_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.WheelCollider::GetGroundHit(UnityEngine.WheelHit&)");
 	bool icallRetVal = _il2cpp_icall_func(__this, ___0_hit);
 	return icallRetVal;
+}
+// System.Void UnityEngine.WheelCollider::get_center_Injected(UnityEngine.Vector3&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider_get_center_Injected_m5F830D14320A88078EF056E5D83599CCD023D6F5 (WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_ret, const RuntimeMethod* method) 
+{
+	typedef void (*WheelCollider_get_center_Injected_m5F830D14320A88078EF056E5D83599CCD023D6F5_ftn) (WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481*, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*);
+	static WheelCollider_get_center_Injected_m5F830D14320A88078EF056E5D83599CCD023D6F5_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (WheelCollider_get_center_Injected_m5F830D14320A88078EF056E5D83599CCD023D6F5_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.WheelCollider::get_center_Injected(UnityEngine.Vector3&)");
+	_il2cpp_icall_func(__this, ___0_ret);
 }
 // System.Void UnityEngine.WheelCollider::get_suspensionSpring_Injected(UnityEngine.JointSpring&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WheelCollider_get_suspensionSpring_Injected_mDFEF80392DFDA3DDCD0B19BFE18F34D229AE22FB (WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* __this, JointSpring_t5223C53C8742463D5615BE8E9772EC0EE2EBBBD5* ___0_ret, const RuntimeMethod* method) 

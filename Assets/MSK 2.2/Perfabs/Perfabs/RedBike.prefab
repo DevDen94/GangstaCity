@@ -672,7 +672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3867144314418172079}
   - component: {fileID: 7648918485963831759}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8081,6 +8081,7 @@ GameObject:
   - component: {fileID: 1485701934735736868}
   - component: {fileID: 6933188623593693788}
   - component: {fileID: 6134646882602232672}
+  - component: {fileID: 8041786722215873811}
   m_Layer: 0
   m_Name: RedBike
   m_TagString: Untagged
@@ -8321,6 +8322,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!65 &8041786722215873811
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2674869973917002440}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5781565, z: 2.5573719}
+  m_Center: {x: -1.7154535e-18, y: 0.21092176, z: -0.0626207}
 --- !u!1 &2676841676792796093
 GameObject:
   m_ObjectHideFlags: 0
@@ -15253,6 +15267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5053811141281430939}
   - component: {fileID: 8921808822433331527}
+  - component: {fileID: 8998773709844170708}
   m_Layer: 0
   m_Name: BrakeLight
   m_TagString: Untagged
@@ -15337,6 +15352,26 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &8998773709844170708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4084285435431939113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &4129688708278276565
 GameObject:
   m_ObjectHideFlags: 0
