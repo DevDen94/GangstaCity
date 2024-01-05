@@ -177,8 +177,9 @@ public class GameManger : MonoBehaviour
    public int currentGangster = 0;
     private void Start()
     {
-   
-        level_failed = false;
+        PlayerPrefs.SetInt("Cash", 40000);
+    
+            level_failed = false;
         Jump_Flag = false;
         tps_check = false;
         PlayerPrefs.SetInt("SelectedGangster", 0);

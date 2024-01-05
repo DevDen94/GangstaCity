@@ -269,7 +269,7 @@ public class BikeControl : MonoBehaviour
     public float accelBack = 0.0f;
     [HideInInspector]
     public float steerAmount = 0.0f;
-
+    public GameObject Sounds;
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -321,7 +321,19 @@ public class BikeControl : MonoBehaviour
         return result;
 
     }
-
+    private void Start()
+    {
+        if (PlayerPrefs.GetInt("Music") == 1)
+        {
+            Sounds.gameObject.SetActive(true);
+            //  gameObject.GetComponent<AudioSource>().enabled = true;
+        }
+        else
+        {
+            Sounds.gameObject.SetActive(false);
+            // gameObject.GetComponent<AudioSource>().enabled = false;
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Concrete")

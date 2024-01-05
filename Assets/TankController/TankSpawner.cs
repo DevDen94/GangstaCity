@@ -67,6 +67,7 @@ public class TankSpawner : MonoBehaviour
             PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") - 1000);
             GameManger.instance.CashText.text = PlayerPrefs.GetInt("Cash").ToString();
             BuyPanel.SetActive(false);
+            SpawnPlayerTank();
         }
         else
         {

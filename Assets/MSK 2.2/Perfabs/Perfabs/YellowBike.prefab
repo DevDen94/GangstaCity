@@ -8223,6 +8223,7 @@ MonoBehaviour:
   accelFwd: 0
   accelBack: 0
   steerAmount: 0
+  Sounds: {fileID: 6684524327441809063}
   Gangsters:
   - {fileID: 8089117765089252410}
   - {fileID: 3004762216227297903}

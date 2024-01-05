@@ -5731,6 +5731,7 @@ GameObject:
   - component: {fileID: 4598283439970540079}
   - component: {fileID: 7712543892262627439}
   - component: {fileID: 3896760076043150976}
+  - component: {fileID: -1615616769988394827}
   m_Layer: 0
   m_Name: RTCTank
   m_TagString: Player
@@ -5928,6 +5929,18 @@ MonoBehaviour:
   maximumElevationLimit: 25
   selectedAmmunation: 0
   currentAmmo: 15
+--- !u!114 &-1615616769988394827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394442766492718382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ff05aef29cd384d811b940ace89acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1407192271703799492
 GameObject:
   m_ObjectHideFlags: 0
