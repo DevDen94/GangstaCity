@@ -19,6 +19,9 @@ public class TankSpawner : MonoBehaviour
     GameManger gm;
     public string TankName;
     public GameObject BuyPanel;
+    public GameObject TPS_Panel;
+    public GameObject Cf2Panel;
+    public GameObject inbtns;
     void Start()
     {
         instance = this;
@@ -50,6 +53,9 @@ public class TankSpawner : MonoBehaviour
             TankOut.gameObject.SetActive(true);
             GameManger.instance.Hud_Navigation.SetActive(true);
             Car_Manager.instance.hudNav.PlayerCamera = tankCam;
+            TPS_Panel.SetActive(false);
+            Cf2Panel.SetActive(true);
+            GameManger.instance.Char_switch.SetActive(false);
         }
 
     }
@@ -96,5 +102,9 @@ public class TankSpawner : MonoBehaviour
         ControlFreak2.CFCursor.lockState = CursorLockMode.None;
         ControlFreak2.CFCursor.visible = true; 
         Car_Manager.instance.hudNav.PlayerCamera = tps;
+        TPS_Panel.SetActive(true);
+        Cf2Panel.SetActive(true);
+        GameManger.instance.Char_switch.SetActive(true);
+
     }
 }

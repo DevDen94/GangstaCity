@@ -39,7 +39,7 @@ public class BikeAnimation : MonoBehaviour
 
     private bool grounded = true;
 
-
+    public bool Girahiiii;
     
 
     [System.Serializable]
@@ -55,7 +55,7 @@ public class BikeAnimation : MonoBehaviour
     void Awake()
     {
 
-
+        Girahiiii = false;
         BikeScript = myBike.GetComponent<BikeControl>();
         animator = player.GetComponent<Animator>();
 
@@ -109,7 +109,8 @@ public class BikeAnimation : MonoBehaviour
 
                 DisableRagdoll(true);
                 player.GetComponent<Animator>().enabled = false;
-
+                Bike_ControlS.instance.BikeOffBtn.gameObject.SetActive(false);
+                Girahiiii = true;
                 BikeScript.crash = true;
                 timer = RestTime;
             }
@@ -124,7 +125,8 @@ public class BikeAnimation : MonoBehaviour
 
             player.GetComponent<Animator>().enabled = true;
             DisableRagdoll(false);
-
+           
+         
             player.parent = BikeScript.bikeSetting.MainBody.transform;
 
             player.localPosition = myPosition;
@@ -193,7 +195,11 @@ public class BikeAnimation : MonoBehaviour
         animator.SetFloat("right", steer);
         animator.SetBool("grounded", grounded);
 
-
+        if (Girahiiii == true)
+        {
+            Bike_ControlS.instance.BikeOffBtn.gameObject.SetActive(true);
+            Girahiiii = false;
+        }
     }
 
 

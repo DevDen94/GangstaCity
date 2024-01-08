@@ -7,6 +7,7 @@ public class MissionTrigger : MonoBehaviour
     public int missionNumber;
     public GameObject mission;
     private Mission_Script m;
+    public GameObject inBtns;
    
     private void Start()
     {
@@ -23,6 +24,8 @@ public class MissionTrigger : MonoBehaviour
             PlayerPrefs.SetInt("TPS", 1);
             PlayerPrefs.SetInt("MissionEnable", 1);
             PlayerPrefs.SetInt("M_", 1);
+            inBtns.SetActive(false);
+           
 
         }
         if (other.gameObject.tag == "Car")
@@ -39,4 +42,5 @@ public class MissionTrigger : MonoBehaviour
 
         }
     }
+ 
 }

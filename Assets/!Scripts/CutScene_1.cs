@@ -17,6 +17,7 @@ public class CutScene_1 : MonoBehaviour
     }
     public void Start_Level()
     {
+        TankSpawner.instance.inbtns.SetActive(true);
         GameManger.instance.Task_Panel.SetActive(true);
         CutSceneObjects.gameObject.SetActive(false);
         GameManger.instance.MissionStart_();

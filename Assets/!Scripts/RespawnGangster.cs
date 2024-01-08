@@ -48,9 +48,11 @@ public class RespawnGangster : MonoBehaviour
                 Panel_.SetActive(false);
                 Panel_G.SetActive(false);
                 StopCountdown();
+                
             }
         }
     }
+    public GameObject INbtns;
 
     public void OpenGangsterClick()
     {
@@ -63,6 +65,7 @@ public class RespawnGangster : MonoBehaviour
     public GameObject CinematicCamera;
     public void Start_Counter()
     {
+        INbtns.SetActive(false);
         Time.timeScale = 1f;
         isCounting = true;
         countdownTime = 0;
@@ -144,6 +147,7 @@ public class RespawnGangster : MonoBehaviour
     GameObject temp;
     void EnableCharacter()
     {
+        INbtns.SetActive(false);
         Car_Manager.instance.PressGun(3);
         temp = Instantiate(CinematicCamera, gm.ThirdPersonPLayer.transform.position, gm.ThirdPersonPLayer.transform.rotation);
         foreach (GameObject a in gm.ThirdPersonPLayer.GetComponent<PlayerReferences>().Meshes)
@@ -164,7 +168,8 @@ public class RespawnGangster : MonoBehaviour
         gm.ThirdPersonPLayer.GetComponent<vHealthController>()._currentHealth = health;
         Canvas.SetActive(true);
         Destroy(temp);
-      
+        INbtns.SetActive(true);
+
     }
 
   

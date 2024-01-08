@@ -336,6 +336,7 @@ public class BikeControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+      
         if (other.gameObject.tag == "Concrete")
         {
             Bike_ControlS.instance.BikeOffBtn.gameObject.SetActive(true);
@@ -344,9 +345,20 @@ public class BikeControl : MonoBehaviour
         {
             Bike_ControlS.instance.BikeOffBtn.gameObject.SetActive(false);
         }
+        if (other.gameObject.layer == LayerMask.NameToLayer("Building"))
+        {
+            Bike_ControlS.instance.BikeOffBtn.gameObject.SetActive(false);
+ 
+        }
     }
 
- 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Building"))
+        {
+            Bike_ControlS.instance.BikeOffBtn.gameObject.SetActive(true);
+        }
+    }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 

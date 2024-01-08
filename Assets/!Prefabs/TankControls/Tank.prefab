@@ -14246,9 +14246,11 @@ GameObject:
   - component: {fileID: 9075433000835132058}
   - component: {fileID: 2966321399205976282}
   - component: {fileID: 8373910186625734197}
+  - component: {fileID: 8744007862565482481}
+  - component: {fileID: 6853974543688116762}
   m_Layer: 0
   m_Name: Tank
-  m_TagString: Player
+  m_TagString: Car
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14443,6 +14445,32 @@ MonoBehaviour:
   maximumElevationLimit: 25
   selectedAmmunation: 0
   currentAmmo: 15
+--- !u!65 &8744007862565482481
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870448817946142107}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.369955, y: 1, z: 8.209747}
+  m_Center: {x: -0.059727184, y: 0.0000000022288966, z: 1.5589606}
+--- !u!114 &6853974543688116762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870448817946142107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ff05aef29cd384d811b940ace89acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SRC_Audios: {fileID: 0}
 --- !u!1 &5897014163818024655
 GameObject:
   m_ObjectHideFlags: 0

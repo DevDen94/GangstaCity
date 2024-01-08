@@ -824,7 +824,10 @@ namespace Invector.vCharacterController
                     {
                         GameManger.instance.Jump_Long();
                         GameManger.instance.Jump_Flag = false;
-                        GameManger.instance.Char_switch.SetActive(true);
+                        if (!GameManger.instance.Tutorial)
+                        {
+                            GameManger.instance.Char_switch.SetActive(true);
+                        }
                     }
                     _rigidbody.AddForce(transform.up * (extraGravity * 2 * Time.deltaTime), ForceMode.VelocityChange);
                 }

@@ -71,12 +71,12 @@ public class CutSceneManager : MonoBehaviour
         GameObject a = GameObject.FindGameObjectWithTag("Clone");
        //  a.SetActive(false);
     }
-   public void SceneChange()
+/*   public void SceneChange()
     {
         PlayerPrefs.SetInt("MissionNo", 1);
         PlayerPrefs.SetInt("Mode_Select", 1);
         SceneManager.LoadScene("MissionMode");
-    }
+    }*/
     void secondsDelay()
     {
         Tuttorial.SetActive(true);

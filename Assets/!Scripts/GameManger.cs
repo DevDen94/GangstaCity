@@ -169,15 +169,17 @@ public class GameManger : MonoBehaviour
     void delay()
     {
         cm.sm = ThirdPersonPLayer.GetComponent<vShooterManager>();
-
-        hudNav.minimapScale = 1f;
+        if (!Tutorial)
+        {
+            hudNav.minimapScale = 1f;
+        }
        // cm.sec();
     }
     [HideInInspector]
    public int currentGangster = 0;
     private void Start()
     {
-        PlayerPrefs.SetInt("Cash", 40000);
+       
     
             level_failed = false;
         Jump_Flag = false;
@@ -351,9 +353,15 @@ public class GameManger : MonoBehaviour
     }
     public void Continue()
     {
-        //Debug.LogError(PlayerPrefs.GetInt("MissionNo"));
         Time.timeScale = 1f;
         src.PlayOneShot(btnCLIP);
+        if (PlayerPrefs.GetInt("MissionNo") == 10)
+        {
+            SceneManager.LoadScene("MainMenu");
+            return;
+        }
+        //Debug.LogError(PlayerPrefs.GetInt("MissionNo"));
+       
         PlayerPrefs.SetInt("MissionNo", PlayerPrefs.GetInt("MissionNo") + 1 );
         SceneManager.LoadScene("MissionMode");
     }

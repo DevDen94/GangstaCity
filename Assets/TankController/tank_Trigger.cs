@@ -12,6 +12,7 @@ public class tank_Trigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+           
             TankSpawner.instance.TankIn.gameObject.SetActive(true);
             TankSpawner.instance.SpawnPos = spawnPoint;
             TankSpawner.instance.ReferenceTank = Referencetank;

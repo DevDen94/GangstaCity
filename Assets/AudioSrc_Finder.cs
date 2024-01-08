@@ -35,4 +35,22 @@ public class AudioSrc_Finder : MonoBehaviour
            // gameObject.GetComponent<AudioSource>().enabled = false;
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+       
+        if (other.gameObject.layer == LayerMask.NameToLayer("Building") || other.gameObject.tag == "Concrete")
+        {
+            TankSpawner.instance.TankOut.gameObject.SetActive(false);
+        }
+    }
+
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Building") || other.gameObject.tag == "Concrete")
+        {
+            TankSpawner.instance.TankOut.gameObject.SetActive(true);
+        }
+    }
+
 }

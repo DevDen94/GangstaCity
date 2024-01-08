@@ -674,7 +674,7 @@ GameObject:
   - component: {fileID: 7648918485963831759}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8334,8 +8334,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.5781565, z: 2.5573719}
-  m_Center: {x: -1.7154535e-18, y: 0.21092176, z: -0.0626207}
+  m_Size: {x: 1.2557446, y: 0.5781565, z: 2.8930957}
+  m_Center: {x: 0.007837892, y: 0.21092176, z: -0.0676713}
 --- !u!1 &2676841676792796093
 GameObject:
   m_ObjectHideFlags: 0

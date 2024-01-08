@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Trigger_Tut : MonoBehaviour
 {
     public TutorialScene ts;
@@ -19,11 +19,13 @@ public class Trigger_Tut : MonoBehaviour
             PlayerPrefs.SetInt("Tut_Called", 1);
             TutorialFinsih_panel.SetActive(true);
             TutorialScene.instance.Hummar.SetActive(false);
-            //Invoke("SceneChange", 4f);
+            Invoke("SceneChange", 5f);
         }
     }
    void SceneChange()
     {
-        TutorialScene.instance.cs.SceneChange();
+        PlayerPrefs.SetInt("MissionNo", 1);
+        PlayerPrefs.SetInt("Mode_Select", 1);
+        SceneManager.LoadScene("MissionMode");
     }
 }
