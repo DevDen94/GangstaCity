@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AddressableAssets;
 public class MainMenu : MonoBehaviour
 {
     public GameObject LoadingPanel;
@@ -12,7 +13,7 @@ public class MainMenu : MonoBehaviour
     public Splash LoadingScene_Name;
     int unlockedLevels;
     public static MainMenu instance;
-    //public Text abc;
+    [SerializeField] private List<AssetReference> _scenes = new List<AssetReference>();
     private void Start()
     {
         ControlFreak2.CFCursor.lockState = CursorLockMode.None;
@@ -130,7 +131,8 @@ public class MainMenu : MonoBehaviour
     public void LoadLevel(int i = 1)
     {
         PlayerPrefs.SetInt("MissionNo", i);
-        LoadingScene_Name.sceneToLoad = "MissionMode";
+        Addressables.LoadSceneAsync("MissionMode");
+        //LoadingScene_Name.sceneToLoad = "MissionMode";
         LoadingPanel.SetActive(true);
         src.PlayOneShot(btnClick);
         Firebase.Analytics.FirebaseAnalytics.LogEvent("mission","number",i);
@@ -160,6 +162,8 @@ public class MainMenu : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Tut_Called") == 0)
         {
+           // var downloadScene = Addressables.LoadSceneAsync(_scenes[23],UnityEngine.SceneManagement.LoadSceneMode.Single);
+           // Addressables.LoadSceneAsync("Tutorial");
             LoadingScene_Name.sceneToLoad = "Tutorial";
             LoadingPanel.SetActive(true);
             Time.timeScale = 1f;
