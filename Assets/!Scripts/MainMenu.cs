@@ -162,9 +162,9 @@ public class MainMenu : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Tut_Called") == 0)
         {
-           // var downloadScene = Addressables.LoadSceneAsync(_scenes[23],UnityEngine.SceneManagement.LoadSceneMode.Single);
+           var downloadScene = Addressables.LoadSceneAsync(_scenes[0],UnityEngine.SceneManagement.LoadSceneMode.Single);
            // Addressables.LoadSceneAsync("Tutorial");
-            LoadingScene_Name.sceneToLoad = "Tutorial";
+            //LoadingScene_Name.sceneToLoad = "Tutorial";
             LoadingPanel.SetActive(true);
             Time.timeScale = 1f;
         }
