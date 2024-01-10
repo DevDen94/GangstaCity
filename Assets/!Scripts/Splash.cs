@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.AddressableAssets;
 public class Splash : MonoBehaviour
 {
     public Slider loadingSlider;
@@ -19,10 +20,10 @@ public class Splash : MonoBehaviour
   
     private IEnumerator LoadSceneAsync()
     {
-        
 
+       
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneToLoad);
-
+       
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / 0.9f); // 0.9 is the completion value

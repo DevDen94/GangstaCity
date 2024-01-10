@@ -1,0 +1,48 @@
+Converting script [1 / 5]	[\SlugGlove Flying Assets\Scripts\CameraFollow.cs]
+	Fragments : 2
+		[ 0] : Line:   92	InputMethod   GetAxis             	("Mouse X")
+		[ 1] : Line:   93	InputMethod   GetAxis             	("Mouse Y")
+
+Converting script [2 / 5]	[\SlugGlove Flying Assets\Scripts\Player\InputHandle.cs]
+	Fragments : 6
+		[ 0] : Line:   30	InputMethod   GetAxis             	("Horizontal")
+		[ 1] : Line:   31	InputMethod   GetAxis             	("Vertical")
+		[ 2] : Line:   33	InputMethod   GetButtonDown       	("Jump")
+		[ 3] : Line:   34	InputMethod   GetButton           	("Jump")
+		[ 4] : Line:   37	InputMethod   GetButton           	("RightTilt")
+		[ 5] : Line:   38	InputMethod   GetButton           	("LeftTilt")
+
+Converting script [3 / 5]	[\SlugGlove Flying Assets\Scripts\UI\UIControls.cs]
+	Fragments : 1
+		[ 0] : Line:   18	InputMethod   GetKeyDown          	(UISets[indexAmt].Input)
+
+Converting script [4 / 5]	[\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\Parser.cs]
+	Fragments : 1
+		[ 0] : Line: 3370	InputMethod   HasInput            	(position)
+
+Converting script [5 / 5]	[\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\TextParserCommon.cs]
+	Fragments : 13
+		[ 0] : Line:   38	InputMethod   HasInput            	(position)
+		[ 1] : Line:   40	InputMethod   GetInputSymbol      	(position)
+		[ 2] : Line:   48	InputMethod   HasInput            	(pos)
+		[ 3] : Line:   50	InputMethod   GetInputSymbol      	(pos)
+		[ 4] : Line:   59	InputMethod   HasInput            	(position)
+		[ 5] : Line:   61	InputMethod   GetInputSymbol      	(position)
+		[ 6] : Line:   75	InputMethod   HasInput            	(position)
+		[ 7] : Line:   77	InputMethod   GetInputSymbol      	(position)
+		[ 8] : Line:   91	InputMethod   HasInput            	(position)
+		[ 9] : Line:   93	InputMethod   GetInputSymbol      	(position)
+		[10] : Line:  127	InputMethod   HasInput            	(pos)
+		[11] : Line:  127	InputMethod   GetInputSymbol      	(pos)
+		[12] : Line:  157	InputMethod   FormErrorMessage    	(msg.Item1, msg.Item2)
+
+
+5 scripts modified!
+Overwriting actual scripts...
+	[0 / 5] from  [E:/Projects/GangsterGame/GangstaCity/GangstaCity/CF2-Data/Script-Backups/2024-01-10-18-12\Assets-After/\SlugGlove Flying Assets\Scripts\CameraFollow.cs] to [E:/Projects/GangsterGame/GangstaCity/GangstaCity/Assets/\SlugGlove Flying Assets\Scripts\CameraFollow.cs]
+	[1 / 5] from  [E:/Projects/GangsterGame/GangstaCity/GangstaCity/CF2-Data/Script-Backups/2024-01-10-18-12\Assets-After/\SlugGlove Flying Assets\Scripts\Player\InputHandle.cs] to [E:/Projects/GangsterGame/GangstaCity/GangstaCity/Assets/\SlugGlove Flying Assets\Scripts\Player\InputHandle.cs]
+	[2 / 5] from  [E:/Projects/GangsterGame/GangstaCity/GangstaCity/CF2-Data/Script-Backups/2024-01-10-18-12\Assets-After/\SlugGlove Flying Assets\Scripts\UI\UIControls.cs] to [E:/Projects/GangsterGame/GangstaCity/GangstaCity/Assets/\SlugGlove Flying Assets\Scripts\UI\UIControls.cs]
+	[3 / 5] from  [E:/Projects/GangsterGame/GangstaCity/GangstaCity/CF2-Data/Script-Backups/2024-01-10-18-12\Assets-After/\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\Parser.cs] to [E:/Projects/GangsterGame/GangstaCity/GangstaCity/Assets/\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\Parser.cs]
+	[4 / 5] from  [E:/Projects/GangsterGame/GangstaCity/GangstaCity/CF2-Data/Script-Backups/2024-01-10-18-12\Assets-After/\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\TextParserCommon.cs] to [E:/Projects/GangsterGame/GangstaCity/GangstaCity/Assets/\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\TextParserCommon.cs]
+
+Overwriting COMPLETED!

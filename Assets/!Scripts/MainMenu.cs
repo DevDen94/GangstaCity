@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private List<AssetReference> _scenes = new List<AssetReference>();
     private void Start()
     {
+        PlayerPrefs.SetInt("Cash", 1000000);
         ControlFreak2.CFCursor.lockState = CursorLockMode.None;
         ControlFreak2.CFCursor.visible = true;
         instance = this;
@@ -162,8 +163,8 @@ public class MainMenu : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Tut_Called") == 0)
         {
-           var downloadScene = Addressables.LoadSceneAsync(_scenes[0],UnityEngine.SceneManagement.LoadSceneMode.Single);
-           // Addressables.LoadSceneAsync("Tutorial");
+           //var downloadScene = Addressables.LoadSceneAsync(_scenes[0],UnityEngine.SceneManagement.LoadSceneMode.Single);
+           Addressables.LoadSceneAsync("Tutorial");
             //LoadingScene_Name.sceneToLoad = "Tutorial";
             LoadingPanel.SetActive(true);
             Time.timeScale = 1f;

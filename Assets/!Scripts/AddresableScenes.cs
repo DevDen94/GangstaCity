@@ -69,9 +69,7 @@ public class AddresableScenes : MonoBehaviour
     }
     public void LoadMenuScene()
     {
-
-        
-            var downloadScene = Addressables.LoadSceneAsync(_scenes[0], LoadSceneMode.Single);
+       var downloadScene = Addressables.LoadSceneAsync(_scenes[0], LoadSceneMode.Single);
     }
 
 
