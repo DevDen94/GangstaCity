@@ -78,6 +78,7 @@ public class CameraFollow : MonoBehaviour
 
     private void FixedUpdate()
     {
+      
         delta = Time.deltaTime;
 
         if (!target)

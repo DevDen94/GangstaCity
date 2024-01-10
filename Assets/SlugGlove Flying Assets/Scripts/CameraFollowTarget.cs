@@ -12,6 +12,10 @@ public class CameraFollowTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (JetSpawner.instance.Off_Jet)
+        {
+            Destroy(gameObject);
+        }
         Vector3 MPos = Target.transform.position;
 
         if (Target.Rigid != null)
