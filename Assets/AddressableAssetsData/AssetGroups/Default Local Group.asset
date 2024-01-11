@@ -17,13 +17,18 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 239204c0f624b7b41ace30809a3999b5
   m_SerializeEntries:
-  - m_GUID: 3e9e75c8c29198e4baf13b0847c557d8
-    m_Address: Assets/!Scenes/Tutorial.unity
+  - m_GUID: f225eada4a214584882109fcea834bbc
+    m_Address: Assets/!Scenes/MainMenu.unity
     m_ReadOnly: 0
     m_SerializedLabels:
     - scenes
   - m_GUID: 0ed6984ab94063142bfe8a467fdc476f
     m_Address: Assets/!Scenes/MissionMode.unity
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - scenes
+  - m_GUID: 3e9e75c8c29198e4baf13b0847c557d8
+    m_Address: Assets/!Scenes/Tutorial.unity
     m_ReadOnly: 0
     m_SerializedLabels:
     - scenes

@@ -55,7 +55,7 @@ public class Mission_Script : MonoBehaviour
     }
     private void Start()
     {
-        TankSpawner.instance.inbtns.SetActive(false);
+        TankSpawner.instance.Header_In.SetActive(false);
         GameManger.instance.Task_Panel.SetActive(false);
         TaskNo = 0;
         Load_Tasklist();

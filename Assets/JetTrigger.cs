@@ -15,7 +15,7 @@ public class JetTrigger : MonoBehaviour
 
             JetSpawner.instance.Button_In.gameObject.SetActive(true);
             JetSpawner.instance.SpawnPos = spawnPoint;
-            JetSpawner.instance.ReferencePlayer = ReferencePlayer;
+    
             JetSpawner.instance.Temp = gameObject;
             JetSpawner.instance.JetName = JetName;
             JetSpawner.instance.Off_Jet = false;
@@ -28,7 +28,6 @@ public class JetTrigger : MonoBehaviour
         {
             JetSpawner.instance.Button_In.gameObject.SetActive(false);
             JetSpawner.instance.SpawnPos = null;
-            JetSpawner.instance.ReferencePlayer = null;
             JetSpawner.instance.Temp = null;
             JetSpawner.instance.JetName = null;
         }

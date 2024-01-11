@@ -8,7 +8,7 @@ public class JetSpawner : MonoBehaviour
     public Button Button_In;
     public Button Button_Out;
     public GameObject fade_Screen;
-    public GameObject ReferencePlayer;
+    public GameObject[] ReferencePlayer;
     public GameObject SpawnPos;
     public GameObject Active_Player;
     public PlayerNavigation playerNav;
@@ -32,6 +32,7 @@ public class JetSpawner : MonoBehaviour
 
     void SpawnPlayerTank()
     {
+
         if (PlayerPrefs.GetInt(JetName) == 0)
         {
 
@@ -40,13 +41,17 @@ public class JetSpawner : MonoBehaviour
         else
 
         {
-
+            foreach (GameObject a in TankSpawner.instance.inbtns)
+            {
+                a.SetActive(false);
+            }
+            GameObject refplayer = ReferencePlayer[PlayerPrefs.GetInt("SelectedGangster")];
             gm.OFF_TPS();
             fade_Screen.SetActive(true);
             Temp.SetActive(false);
             Canvas.SetActive(true);
 
-            Active_Player = Instantiate(ReferencePlayer, SpawnPos.transform.position, SpawnPos.transform.rotation);
+            Active_Player = Instantiate(refplayer, SpawnPos.transform.position, SpawnPos.transform.rotation);
          
             playerNav.player = Active_Player.transform;
             Button_In.gameObject.SetActive(false);

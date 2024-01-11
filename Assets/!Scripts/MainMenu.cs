@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 using UnityEngine.AddressableAssets;
+
+
 public class MainMenu : MonoBehaviour
 {
     public GameObject LoadingPanel;
@@ -49,6 +53,11 @@ public class MainMenu : MonoBehaviour
     public GameObject SoundOFF;
     public GameObject MusicOn;
     public GameObject MusicOff;
+
+    public void MissionMode()
+    {
+        Addressables.LoadSceneAsync(_scenes[0], LoadSceneMode.Single);
+    }
     void Set_SoundMusic()
     {
         if (PlayerPrefs.GetInt("SFX") == 1)
@@ -132,9 +141,10 @@ public class MainMenu : MonoBehaviour
     public void LoadLevel(int i = 1)
     {
         PlayerPrefs.SetInt("MissionNo", i);
-        Addressables.LoadSceneAsync("MissionMode");
+        Address.SetActive(true);
+        Address_Panel.SetActive(true);
         //LoadingScene_Name.sceneToLoad = "MissionMode";
-        LoadingPanel.SetActive(true);
+       // LoadingPanel.SetActive(true);
         src.PlayOneShot(btnClick);
         Firebase.Analytics.FirebaseAnalytics.LogEvent("mission","number",i);
 
@@ -158,15 +168,17 @@ public class MainMenu : MonoBehaviour
             lockedBtn[i].SetActive(false);
         }
     }
-  
+    public GameObject Address;
+    public GameObject Address_Panel;
     public void StartTutCalled()
     {
         if (PlayerPrefs.GetInt("Tut_Called") == 0)
         {
-           //var downloadScene = Addressables.LoadSceneAsync(_scenes[0],UnityEngine.SceneManagement.LoadSceneMode.Single);
-           Addressables.LoadSceneAsync("Tutorial");
-            //LoadingScene_Name.sceneToLoad = "Tutorial";
-            LoadingPanel.SetActive(true);
+            //LoadingPanel.SetActive(true); 
+            Address_Panel.SetActive(true);
+            Address.SetActive(true);
+            // LoadingScene_Name.sceneToLoad = "Tutorial";
+
             Time.timeScale = 1f;
         }
     }
@@ -187,9 +199,10 @@ public class MainMenu : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("Mode_2") == 1)
             {
-              
-                LoadingScene_Name.sceneToLoad = "MissionMode";
-                LoadingPanel.SetActive(true);
+                Address.SetActive(true);
+                Address_Panel.SetActive(true);
+               // LoadingScene_Name.sceneToLoad = "MissionMode";
+               // LoadingPanel.SetActive(true);
                 PlayerPrefs.SetInt("Mode_Select", 2);
                 Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_2");
             }

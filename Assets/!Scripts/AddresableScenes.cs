@@ -10,7 +10,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 //using UnityEditor;
 public class AddresableScenes : MonoBehaviour
 {
-
+    public static AddresableScenes instance;
     public Text _Text;
     public Text _ProgressCountText;
     public GameObject AddressaDownloadablePanel;
@@ -20,9 +20,11 @@ public class AddresableScenes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
+       
         AddressaDownloadablePanel.SetActive(true);
         StartDownloading();
-
+      // DontDestroyOnLoad(gameObject);
     }
 
     public void StartDownloading()
@@ -65,19 +67,20 @@ public class AddresableScenes : MonoBehaviour
             LoadMenuScene();
         }
 
-
     }
     public void LoadMenuScene()
     {
-       var downloadScene = Addressables.LoadSceneAsync(_scenes[0], LoadSceneMode.Single);
+       Addressables.LoadSceneAsync(_scenes[0], LoadSceneMode.Single);
     }
 
-
-
-
-
-
-
+    public void LoadtUT()
+    {
+        Addressables.LoadSceneAsync(_scenes[1], LoadSceneMode.Single);
+    }
+    public void Loadmission()
+    {
+        Addressables.LoadSceneAsync(_scenes[2], LoadSceneMode.Single);
+    }
 }
 
 

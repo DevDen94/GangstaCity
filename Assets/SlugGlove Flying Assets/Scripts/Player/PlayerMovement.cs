@@ -425,11 +425,13 @@ public class PlayerMovement : MonoBehaviour
         CamFol.SetFlyingState(0);
 
         //turn on gravity
-        Rigid.useGravity = true;
+        Rigid.useGravity = true; 
+        JetSpawner.instance.Button_Out.gameObject.SetActive(true);
     }
     //for when we are set in the air (for falling
     void SetInAir()
     {
+        JetSpawner.instance.Button_Out.gameObject.SetActive(false);
         OnGround = false;
         FloorTimer = GroundedTimerBeforeJump;
         ActionAirTimer = 0.2f;
@@ -479,6 +481,7 @@ public class PlayerMovement : MonoBehaviour
         Rigid.useGravity = true;
     }
 
+   
     void AnimCtrl()
     {
         //setup the location of any velocity based animations from our hip position 

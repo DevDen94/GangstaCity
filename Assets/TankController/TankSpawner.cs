@@ -11,6 +11,7 @@ public class TankSpawner : MonoBehaviour
     public GameObject ReferenceTank;
     public GameObject SpawnPos;
     public GameObject Active_tank;
+    public GameObject TankParent;
     public RTC_MainCamera cam; public PlayerNavigation playerNav;
     public GameObject TempTank;
     public static TankSpawner instance;
@@ -21,7 +22,8 @@ public class TankSpawner : MonoBehaviour
     public GameObject BuyPanel;
     public GameObject TPS_Panel;
     public GameObject Cf2Panel;
-    public GameObject inbtns;
+    public GameObject[] inbtns;
+    public GameObject Header_In;
     void Start()
     {
         instance = this;
@@ -40,7 +42,10 @@ public class TankSpawner : MonoBehaviour
         else
 
         {
-
+           foreach(GameObject a in inbtns)
+            {
+                a.SetActive(false);
+            }
             gm.OFF_TPS();
             fade_Screen.SetActive(true);
             TempTank.SetActive(false);
@@ -89,6 +94,8 @@ public class TankSpawner : MonoBehaviour
     }
     void RideOff()
     {
+       
+        cam.transform.SetParent(TankParent.transform);
         TempTank.SetActive(true);
         TempTank.transform.SetPositionAndRotation(Active_tank.transform.position, Active_tank.transform.rotation);
         Destroy(Active_tank);

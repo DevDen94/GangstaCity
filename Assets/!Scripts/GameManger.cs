@@ -100,6 +100,8 @@ public class GameManger : MonoBehaviour
         }
     }
     public bool Jump_Flag;
+    public GameObject GamePlayAddress;
+    public GameObject MainMenuAddress;
     public void Jump_Long()
     {
         Instantiate(JumpLongEffect.transform, Ref_Jump.transform.position, Ref_Jump.transform.rotation);
@@ -339,18 +341,18 @@ public class GameManger : MonoBehaviour
         src.PlayOneShot(btnCLIP);
         if (PlayerPrefs.GetInt("Mode_Select") == 1)
         {
-            SceneManager.LoadScene("MissionMode");
+            GamePlayAddress.SetActive(true);
         }
         else
         {
-            SceneManager.LoadScene("MissionMode");
+            GamePlayAddress.SetActive(true);
         }
         
     }
     public void Home()
     {
         src.PlayOneShot(btnCLIP);
-        SceneManager.LoadScene("MainMenu");
+        MainMenuAddress.SetActive(true);
     }
     public void Continue()
     {
@@ -358,13 +360,13 @@ public class GameManger : MonoBehaviour
         src.PlayOneShot(btnCLIP);
         if (PlayerPrefs.GetInt("MissionNo") == 10)
         {
-            SceneManager.LoadScene("MainMenu");
+            MainMenuAddress.SetActive(true);
             return;
         }
         //Debug.LogError(PlayerPrefs.GetInt("MissionNo"));
        
         PlayerPrefs.SetInt("MissionNo", PlayerPrefs.GetInt("MissionNo") + 1 );
-        SceneManager.LoadScene("MissionMode");
+        GamePlayAddress.SetActive(true);
     }
     [HideInInspector]
     public bool Is_Shop;

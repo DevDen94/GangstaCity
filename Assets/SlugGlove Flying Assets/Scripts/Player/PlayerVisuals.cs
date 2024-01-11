@@ -30,10 +30,12 @@ public class PlayerVisuals : MonoBehaviour
     [HideInInspector]
     public float WindLerpAmt;
     public float WindLerpSpeed;
-
+   public GameObject[] Gangsters;
+   
     void Start()
     {
-        TimeBtwFallingEffects = 1.8f;
+        
+         TimeBtwFallingEffects = 1.8f;
     }
 
     public void Step()

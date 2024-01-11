@@ -50,11 +50,11 @@ public class BikeAnimation : MonoBehaviour
     }
 
 
-
+    public static BikeAnimation instance;
 
     void Awake()
     {
-
+       
         Girahiiii = false;
         BikeScript = myBike.GetComponent<BikeControl>();
         animator = player.GetComponent<Animator>();
@@ -111,6 +111,7 @@ public class BikeAnimation : MonoBehaviour
                 player.GetComponent<Animator>().enabled = false;
                 Bike_ControlS.instance.BikeOffBtn.gameObject.SetActive(false);
                 Girahiiii = true;
+                Bike_ControlS.instance.gira_gya = true;
                 BikeScript.crash = true;
                 timer = RestTime;
             }
@@ -198,6 +199,7 @@ public class BikeAnimation : MonoBehaviour
         if (Girahiiii == true)
         {
             Bike_ControlS.instance.BikeOffBtn.gameObject.SetActive(true);
+            Bike_ControlS.instance.gira_gya = false;
             Girahiiii = false;
         }
     }

@@ -7,6 +7,7 @@ public class Trigger_Tut : MonoBehaviour
     public TutorialScene ts;
     public GameObject gm;
     public GameObject TutorialFinsih_panel;
+    public GameObject Address;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -26,6 +27,6 @@ public class Trigger_Tut : MonoBehaviour
     {
         PlayerPrefs.SetInt("MissionNo", 1);
         PlayerPrefs.SetInt("Mode_Select", 1);
-        SceneManager.LoadScene("MissionMode");
+        Address.SetActive(true);
     }
 }

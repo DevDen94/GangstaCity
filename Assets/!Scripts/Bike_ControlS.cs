@@ -18,6 +18,7 @@ public class Bike_ControlS : MonoBehaviour
     public GameObject TempBike;
     public Camera tps;
     public string BikeName; public GameObject BuyPanel;
+    public bool gira_gya;
     private void Start()
     {
         instance = this;
@@ -34,6 +35,10 @@ public class Bike_ControlS : MonoBehaviour
         else
 
         {
+            foreach (GameObject a in TankSpawner.instance.inbtns)
+            {
+                a.SetActive(false);
+            }
             gm.OFF_TPS();
             fade_Screen.SetActive(true);
             TempBike.SetActive(false);
