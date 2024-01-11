@@ -174,9 +174,8 @@ public class MainMenu : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Tut_Called") == 0)
         {
+            Addressables.LoadSceneAsync(_scenes[1], LoadSceneMode.Single);
             //LoadingPanel.SetActive(true); 
-            Address_Panel.SetActive(true);
-            Address.SetActive(true);
             // LoadingScene_Name.sceneToLoad = "Tutorial";
 
             Time.timeScale = 1f;
