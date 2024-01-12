@@ -14,7 +14,7 @@ public class Splash : MonoBehaviour
 
     private void Start()
     {
-     //  StartCoroutine(LoadSceneAsync());
+      StartCoroutine(LoadSceneAsync());
     }
 
   

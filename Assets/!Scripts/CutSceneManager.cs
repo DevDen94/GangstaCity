@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.AddressableAssets;
 public class CutSceneManager : MonoBehaviour
 {
+    [SerializeField] private List<AssetReference> _scenes = new List<AssetReference>();
     public GameObject part1;
     public GameObject part2;
     public GameObject part3;
@@ -16,12 +18,15 @@ public class CutSceneManager : MonoBehaviour
     public GameObject SkipBtn;
     void Start()
     {
+        Addressables.LoadSceneAsync(_scenes[0], LoadSceneMode.Additive);
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Time.timeScale = 1f;
         UIPanel.SetActive(false);
         part1.SetActive(true);
          Invoke("part1_A", 7.30f);
         Set_Sounds();
+
+      
         //Set_TutorialActive();
     }
    

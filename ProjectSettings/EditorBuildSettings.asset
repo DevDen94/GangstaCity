@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/!Scenes/Splash.unity
     guid: 2eb7b54cf608dda49b71ac1897e6ef77
-  - enabled: 0
+  - enabled: 1
+    path: Assets/!Scenes/MissionMode.unity
+    guid: 0ed6984ab94063142bfe8a467fdc476f
+  - enabled: 1
     path: Assets/!Scenes/Tutorial.unity
     guid: 3e9e75c8c29198e4baf13b0847c557d8
   m_configObjects:

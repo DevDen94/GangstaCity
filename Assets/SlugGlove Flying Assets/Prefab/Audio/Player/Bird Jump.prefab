@@ -13,12 +13,12 @@ GameObject:
   - component: {fileID: 4729651813296599213}
   - component: {fileID: 4729651813296599214}
   m_Layer: 0
-  m_Name: Player Jump
+  m_Name: Bird Jump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4729651813296599215
 Transform:
   m_ObjectHideFlags: 0
@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0000166893, y: -0.000017344952, z: 0.000044941902}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -158,10 +159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 778a20b66bf9c7c4ca64c00c54b1d302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroySound: {fileID: 0}
   delay: 1
   destroyChildren: 1
-  pushChildAmount: 0
   DetatchFromParent: 0
   shrink: 0
   ShrinkSpeed: 4

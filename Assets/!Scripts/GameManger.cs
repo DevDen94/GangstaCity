@@ -8,8 +8,11 @@ using Invector.vCharacterController;
 using Invector;
 using Invector.vShooter;
 using SickscoreGames.HUDNavigationSystem;
+using UnityEngine.AddressableAssets;
+
 public class GameManger : MonoBehaviour
 {
+    [SerializeField] private List<AssetReference> _scenes = new List<AssetReference>();
     public bool Tutorial;
     public GameObject[] Gangster;
     public GameObject[] SpawnPoints;
@@ -20,7 +23,7 @@ public class GameManger : MonoBehaviour
     public static GameManger instance;
     public GameObject[] TPS_Controls;
     public Mission_Script[] missions;
-   
+
     public GameObject ThirdPersonPLayer;
     public GameObject ControlFreakPanel;
 
@@ -138,7 +141,7 @@ public class GameManger : MonoBehaviour
         MissionFailed.SetActive(true);
         src.PlayOneShot(LooseSound);
         Time.timeScale = 0f;
-        //GoogleAdMobController.instance.ShowInterstitialAd();
+     
         GoogleMobileAdsController.Instance.ShowInterstitialAd();
         Firebase.Analytics.FirebaseAnalytics.LogEvent("mission_failed", "number", selected_Mission);
     }
@@ -181,10 +184,12 @@ public class GameManger : MonoBehaviour
    public int currentGangster = 0;
     private void Start()
     {
-        PlayerPrefs.SetInt("Cash", 5000000);
 
-
-            level_failed = false;
+        if (!Tutorial)
+        { 
+            Addressables.LoadSceneAsync(_scenes[1], LoadSceneMode.Additive);
+        }
+        level_failed = false;
         Jump_Flag = false;
         tps_check = false;
         PlayerPrefs.SetInt("SelectedGangster", 0);
@@ -228,7 +233,7 @@ public class GameManger : MonoBehaviour
         
         Set_Sounds();
         print(selected_Mission);
-        //GoogleAdMobController.instance.HideSmallBanner();
+       
     }
     bool tps_check;
     bool level_failed;
@@ -341,18 +346,18 @@ public class GameManger : MonoBehaviour
         src.PlayOneShot(btnCLIP);
         if (PlayerPrefs.GetInt("Mode_Select") == 1)
         {
-            GamePlayAddress.SetActive(true);
+            SceneManager.LoadScene("MissionMode");
         }
         else
         {
-            GamePlayAddress.SetActive(true);
+            SceneManager.LoadScene("MissionMode");
         }
         
     }
     public void Home()
     {
         src.PlayOneShot(btnCLIP);
-        MainMenuAddress.SetActive(true);
+        Addressables.LoadSceneAsync(_scenes[0], LoadSceneMode.Single);
     }
     public void Continue()
     {
@@ -360,13 +365,13 @@ public class GameManger : MonoBehaviour
         src.PlayOneShot(btnCLIP);
         if (PlayerPrefs.GetInt("MissionNo") == 10)
         {
-            MainMenuAddress.SetActive(true);
+            Addressables.LoadSceneAsync(_scenes[0], LoadSceneMode.Single);
             return;
         }
         //Debug.LogError(PlayerPrefs.GetInt("MissionNo"));
        
         PlayerPrefs.SetInt("MissionNo", PlayerPrefs.GetInt("MissionNo") + 1 );
-        GamePlayAddress.SetActive(true);
+        SceneManager.LoadScene("MissionNo");
     }
     [HideInInspector]
     public bool Is_Shop;

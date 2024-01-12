@@ -70,16 +70,29 @@ public class AddresableScenes : MonoBehaviour
     }
     public void LoadMenuScene()
     {
+      
        Addressables.LoadSceneAsync(_scenes[0], LoadSceneMode.Single);
     }
 
-    public void LoadtUT()
+    private bool clearPreviousScene = false;
+    private SceneInstance previousLoadedScene;
+    public void LoadAddressableLevel(string addressableKey)
     {
-        Addressables.LoadSceneAsync(_scenes[1], LoadSceneMode.Single);
-    }
-    public void Loadmission()
-    {
-        Addressables.LoadSceneAsync(_scenes[2], LoadSceneMode.Single);
+        if (clearPreviousScene)
+        {
+            Addressables.UnloadSceneAsync(previousLoadedScene).Completed += (asyncHandle) =>
+            {
+                clearPreviousScene = false;
+                previousLoadedScene = new SceneInstance();
+            };
+        }
+        Addressables.LoadSceneAsync(addressableKey, LoadSceneMode.Additive).Completed += (asyncHandle) =>
+        {
+            clearPreviousScene = true;
+            previousLoadedScene = asyncHandle.Result;
+
+
+        };
     }
 }
 

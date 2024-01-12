@@ -2215,7 +2215,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 200
   field of view: 40
   orthographic: 0
   orthographic size: 5
@@ -2523,7 +2523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 7078291073999813184}
-  Offset: 2
+  Offset: 3
   OffsetDirection: {fileID: 7078291073999813185}
 --- !u!81 &7078291074566697250
 AudioListener:

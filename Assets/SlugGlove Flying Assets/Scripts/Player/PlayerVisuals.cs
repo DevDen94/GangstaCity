@@ -36,6 +36,14 @@ public class PlayerVisuals : MonoBehaviour
     {
         
          TimeBtwFallingEffects = 1.8f;
+        if (PlayerPrefs.GetInt("Music") == 1)
+        {
+            JumpAudio.gameObject.SetActive(false);
+        }
+        else
+        {
+            JumpAudio.gameObject.SetActive(true);
+        }
     }
 
     public void Step()

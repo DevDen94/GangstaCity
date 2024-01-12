@@ -63,7 +63,7 @@ public class JetSpawner : MonoBehaviour
         }
 
     }
-    public void TankBuySucessfull()
+    public void JetBuySucessfull()
     {
         PlayerPrefs.SetInt(JetName, 1);
         BuyPanel.SetActive(false);

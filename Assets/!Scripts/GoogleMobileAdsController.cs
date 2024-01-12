@@ -443,6 +443,12 @@ public class GoogleMobileAdsController : MonoBehaviour, IUnityAdsInitializationL
                 PlayerPrefs.SetInt("Tank_Reward", 2);
                 Debug.LogError("Buytank");
             }
+            else if (PlayerPrefs.GetInt("Jet_Reward") == 1)
+            {
+                JetSpawner.instance.JetBuySucessfull();
+                PlayerPrefs.SetInt("Jet_Reward", 2);
+                Debug.LogError("BuyJet");
+            }
 
         }
 
@@ -495,6 +501,12 @@ public class GoogleMobileAdsController : MonoBehaviour, IUnityAdsInitializationL
                 TankSpawner.instance.TankBuySucessfull();
                 PlayerPrefs.SetInt("Tank_Reward", 2);
                 Debug.LogError("Buytank");
+            }
+            else if (PlayerPrefs.GetInt("Jet_Reward") == 1)
+            {
+                JetSpawner.instance.JetBuySucessfull();
+                PlayerPrefs.SetInt("Jet_Reward", 2);
+                Debug.LogError("BuyJet");
             }
 
         }

@@ -46,7 +46,7 @@ public class MainMenu : MonoBehaviour
       
         shop_cash.text = PlayerPrefs.GetInt("Cash").ToString();
         Set_SoundMusic();
-        GoogleMobileAdsController.Instance.ShowSmallBannerAd();
+      //  GoogleMobileAdsController.Instance.ShowSmallBannerAd();
     }
 
     public GameObject SoundOn;
@@ -140,13 +140,13 @@ public class MainMenu : MonoBehaviour
     }
     public void LoadLevel(int i = 1)
     {
+        
         PlayerPrefs.SetInt("MissionNo", i);
-        Address.SetActive(true);
-        Address_Panel.SetActive(true);
-        //LoadingScene_Name.sceneToLoad = "MissionMode";
-       // LoadingPanel.SetActive(true);
+        LoadingPanel.SetActive(true);
+        LoadingScene_Name.sceneToLoad = "MissionMode";
         src.PlayOneShot(btnClick);
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("mission","number",i);
+       
+         Firebase.Analytics.FirebaseAnalytics.LogEvent("mission","number",i);
 
     }
     public GameObject levelSelectionPanel;
@@ -174,10 +174,8 @@ public class MainMenu : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Tut_Called") == 0)
         {
-            Addressables.LoadSceneAsync(_scenes[1], LoadSceneMode.Single);
-            //LoadingPanel.SetActive(true); 
-            // LoadingScene_Name.sceneToLoad = "Tutorial";
-
+            LoadingPanel.SetActive(true);
+            LoadingScene_Name.sceneToLoad = "Tutorial";
             Time.timeScale = 1f;
         }
     }
@@ -192,18 +190,17 @@ public class MainMenu : MonoBehaviour
             ModeSelectionPanel.SetActive(false);
             levelSelectionPanel.SetActive(true);
             PlayerPrefs.SetInt("Mode_Select", 1);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_1");
+           // Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_1");
         }
         else
         {
             if (PlayerPrefs.GetInt("Mode_2") == 1)
             {
-                Address.SetActive(true);
-                Address_Panel.SetActive(true);
-               // LoadingScene_Name.sceneToLoad = "MissionMode";
-               // LoadingPanel.SetActive(true);
+               
+                LoadingScene_Name.sceneToLoad = "MissionMode";
+               LoadingPanel.SetActive(true);
                 PlayerPrefs.SetInt("Mode_Select", 2);
-                Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_2");
+               // Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_2");
             }
             else
             {
@@ -231,8 +228,8 @@ public class MainMenu : MonoBehaviour
     public void Unlocked_ModeBY_Rewarded()
     {
         PlayerPrefs.SetInt("RewardedMode", 1);
-        GoogleMobileAdsController.Instance.rewarded = true;
-        GoogleMobileAdsController.Instance.ShowRewardedAd();
+       GoogleMobileAdsController.Instance.rewarded = true;
+       GoogleMobileAdsController.Instance.ShowRewardedAd();
 
 
     }
