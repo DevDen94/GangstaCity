@@ -598,7 +598,7 @@ MonoBehaviour:
   BIGbannerAllAdUnitId: null
   SmallBannerPosition: 0
   BigBannerPosition: 0
-  ShowTestAds: 1
+  ShowTestAds: 0
   UnityAdsID: 5507171
   BANNER_PLACEMENT: 
   InterstatialPlacement: 

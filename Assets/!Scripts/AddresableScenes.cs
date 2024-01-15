@@ -20,8 +20,9 @@ public class AddresableScenes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        start = true;
         instance = this;
-       
+        StartTimer();
         AddressaDownloadablePanel.SetActive(true);
         StartDownloading();
       // DontDestroyOnLoad(gameObject);
@@ -35,12 +36,12 @@ public class AddresableScenes : MonoBehaviour
     {
         string key = "scenes";
 
-       
+        
         var downloadScene = Addressables.DownloadDependenciesAsync(key, true);
        
         Debug.Log("Scene Downloading");
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("downloadingstart_addressable");
 
-        
         while (!downloadScene.IsDone)
         {
             
@@ -58,7 +59,8 @@ public class AddresableScenes : MonoBehaviour
         Debug.Log("Scene Downloaded");
         _Text.color = Color.green;
         _Text.text = "Downloaded";
-
+       
+       // Debug.LogError(startTime);
         if (downloadScene.IsDone)
         {
             _ProgressCountText.text = "";
@@ -72,6 +74,8 @@ public class AddresableScenes : MonoBehaviour
     {
       
        Addressables.LoadSceneAsync(_scenes[0], LoadSceneMode.Single);
+        start = false;
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("downloading_complete");
     }
 
     private bool clearPreviousScene = false;
@@ -93,6 +97,39 @@ public class AddresableScenes : MonoBehaviour
 
 
         };
+    }
+
+    private float startTime;
+    public bool start;
+ 
+    void Update()
+    {
+        // Call this function to check the elapsed time whenever needed
+        CheckElapsedTime();
+    }
+
+    void StartTimer()
+    {
+        // Set the start time to the current time
+        startTime = Time.time;
+        Debug.Log("Timer started!");
+    }
+    void CheckElapsedTime()
+    {
+        if (start == true)
+        {
+
+
+            // Calculate the elapsed time by subtracting the start time from the current time
+            float elapsedTime = Time.time - startTime;
+
+            // Convert elapsed time to minutes and seconds
+            float minutes = Mathf.FloorToInt(elapsedTime / 60);
+            float seconds = Mathf.FloorToInt(elapsedTime % 60);
+
+            // Display the elapsed time
+            Debug.Log("Elapsed Time: " + minutes.ToString("00") + ":" + seconds.ToString("00"));
+        }
     }
 }
 
