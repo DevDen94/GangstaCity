@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShopTrigger : MonoBehaviour
 {
+  
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,6 +15,8 @@ public class ShopTrigger : MonoBehaviour
             GameManger.instance.ShopGameObject.SetActive(true);
             gameObject.SetActive(false);
 
+            JetSpawner.instance.Button_In.gameObject.SetActive(false);
+            Bike_ControlS.instance.BikeInBtn.gameObject.SetActive(false);
         }
     }
 }

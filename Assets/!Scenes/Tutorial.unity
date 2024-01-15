@@ -16577,7 +16577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &232807594
 GameObject:
   m_ObjectHideFlags: 0
@@ -34542,6 +34542,7 @@ MonoBehaviour:
   MissionRewardText: {fileID: 0}
   EnemiesKilledText: {fileID: 0}
   TotalText: {fileID: 0}
+  FadeScreenOutofbounds: {fileID: 0}
   Jump_Flag: 0
   GamePlayAddress: {fileID: 0}
   MainMenuAddress: {fileID: 0}
@@ -90373,7 +90374,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1859100067199004658}
   m_OnClick:
     m_PersistentCalls:
@@ -94281,7 +94282,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1859100067932192266}
   m_OnClick:
     m_PersistentCalls:

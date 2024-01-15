@@ -15,9 +15,9 @@ public class PlayerMovement : MonoBehaviour
 
     [HideInInspector]
     public WorldState States;
-    private Transform Cam; //reference to our camera
+    public Transform Cam; //reference to our camera
     private Transform CamY; //reference to our camera axis
-    private CameraFollow CamFol; //reference to our camera script
+    public CameraFollow CamFol; //reference to our camera script
     private PlayerVisuals Visuals; //script for handling visual effects
     private Vector3 CheckPointPos; //where we respawn
 
@@ -110,10 +110,10 @@ public class PlayerMovement : MonoBehaviour
         Colli = GetComponent<DetectCollision>();
         Visuals = GetComponent<PlayerVisuals>();
         HipsPos = Visuals.HipsPos;
-
-        Cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        Car_Manager.instance.hudNav.PlayerCamera = Cam.GetComponent<Camera>();
+       
         CamY = Cam.transform.parent.parent.transform;
-        CamFol = Cam.GetComponentInParent<CameraFollow>();
+       
 
         CheckPointPos = transform.position;
 

@@ -61,6 +61,7 @@ public class DialogueSystem : MonoBehaviour
                 DialogueBoxCanvas.SetActive(false);
                 DialogueBoxCamera.SetActive(false);
                 GM.Set_TPS();
+                JetSpawner.instance.inbtns.SetActive(true);
                 return;
             }
             end_count++;

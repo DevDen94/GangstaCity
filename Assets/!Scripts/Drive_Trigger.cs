@@ -29,6 +29,7 @@ public class Drive_Trigger : MonoBehaviour
             }
            
             Car_Manager.instance.Carbutton_IN.SetActive(true);
+         
             Car_Manager.instance.AI_Car = this;
             Car_Manager.instance.Car = gameObject.transform.parent.GetComponent<Check_Building>();
             if (Is_RightTrigger)

@@ -51,6 +51,9 @@ public class Bike_ControlS : MonoBehaviour
             BikeOffBtn.gameObject.SetActive(true);
             GameManger.instance.Hud_Navigation.SetActive(true);
             Car_Manager.instance.hudNav.PlayerCamera = Bike_cam.GetComponent<Camera>();
+            Car_Manager.instance.Carbutton_IN.gameObject.SetActive(false);
+            TankSpawner.instance.TankIn.gameObject.SetActive(false);
+            JetSpawner.instance.Button_In.gameObject.SetActive(false);
         }
     }
     public void BikeBuySucessfull()

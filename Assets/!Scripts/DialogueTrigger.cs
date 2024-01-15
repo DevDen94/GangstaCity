@@ -23,6 +23,7 @@ public class DialogueTrigger : MonoBehaviour
                 mission.Firts_Character = female;
                 mission.Firts_Character.gameObject.SetActive(true);
             }
+            
             gameObject.SetActive(false);
             mission.DialogueStart();
             mission.NextCutScene.SetActive(true);
@@ -36,6 +37,9 @@ public class DialogueTrigger : MonoBehaviour
             {
                 Nexttt.SetActive(true);
             }
+
+            JetSpawner.instance.Button_In.gameObject.SetActive(false);
+            Bike_ControlS.instance.BikeInBtn.gameObject.SetActive(false);
         }
     }
 }

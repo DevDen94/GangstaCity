@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using SickscoreGames.HUDNavigationSystem;
 public class JetSpawner : MonoBehaviour
 {
     public GameObject Canvas;
@@ -22,6 +23,7 @@ public class JetSpawner : MonoBehaviour
     public GameObject Cf2Panel;
     public GameObject inbtns;
     public bool Off_Jet;
+  
     void Start()
     {
         instance = this;
@@ -29,7 +31,7 @@ public class JetSpawner : MonoBehaviour
         Button_Out.onClick.AddListener(RideOff);
         gm = GetComponent<GameManger>();
     }
-
+    public GameObject Cam;
     void SpawnPlayerTank()
     {
 
@@ -52,7 +54,7 @@ public class JetSpawner : MonoBehaviour
             Canvas.SetActive(true);
 
             Active_Player = Instantiate(refplayer, SpawnPos.transform.position, SpawnPos.transform.rotation);
-         
+            //Cam = Active_Player.transform.GetChild(0).gameObject;
             playerNav.player = Active_Player.transform;
             Button_In.gameObject.SetActive(false);
             Button_Out.gameObject.SetActive(true);
@@ -60,6 +62,9 @@ public class JetSpawner : MonoBehaviour
             TPS_Panel.SetActive(false);
             Cf2Panel.SetActive(true);
             GameManger.instance.Char_switch.SetActive(false);
+            Car_Manager.instance.Carbutton_IN.gameObject.SetActive(false);
+            Bike_ControlS.instance.BikeInBtn.gameObject.SetActive(false);
+            TankSpawner.instance.TankIn.gameObject.SetActive(false);
         }
 
     }

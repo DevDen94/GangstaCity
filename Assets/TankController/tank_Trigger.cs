@@ -10,7 +10,7 @@ public class tank_Trigger : MonoBehaviour
     public string tankName;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
            
             TankSpawner.instance.TankIn.gameObject.SetActive(true);
@@ -23,7 +23,7 @@ public class tank_Trigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             TankSpawner.instance.TankIn.gameObject.SetActive(false);
             TankSpawner.instance.SpawnPos= null;

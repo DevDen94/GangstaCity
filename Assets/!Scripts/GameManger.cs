@@ -85,6 +85,7 @@ public class GameManger : MonoBehaviour
     public Text MissionRewardText;
     public Text EnemiesKilledText;
     public Text TotalText;
+    public GameObject FadeScreenOutofbounds;
     public void Sprint_Call()
     {
        
@@ -184,7 +185,7 @@ public class GameManger : MonoBehaviour
    public int currentGangster = 0;
     private void Start()
     {
-
+     
         if (!Tutorial)
         { 
             Addressables.LoadSceneAsync(_scenes[1], LoadSceneMode.Additive);
@@ -371,11 +372,13 @@ public class GameManger : MonoBehaviour
         //Debug.LogError(PlayerPrefs.GetInt("MissionNo"));
        
         PlayerPrefs.SetInt("MissionNo", PlayerPrefs.GetInt("MissionNo") + 1 );
-        SceneManager.LoadScene("MissionNo");
+        SceneManager.LoadScene("MissionMode");
     }
+    
     [HideInInspector]
     public bool Is_Shop;
     public GameObject ShopPostion;
+    public HUDNavigationSystem hudNavv;
     public void Set_TPS() // Enable ThirdPerson Controller
     {
         if (Is_Shop)
@@ -389,6 +392,7 @@ public class GameManger : MonoBehaviour
         ThirdPersonPLayer.SetActive(true);
      
         Hud_Navigation.SetActive(true);
+        hudNavv.PlayerCamera = TPS_Controls[0].GetComponent<Camera>();
         HealthCanvas.SetActive(true);
         ControlFreakPanel.SetActive(true);
         TPS_Controls[5].SetActive(false); //Only for sprint

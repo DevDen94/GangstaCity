@@ -109,7 +109,7 @@ public class BikeAnimation : MonoBehaviour
 
                 DisableRagdoll(true);
                 player.GetComponent<Animator>().enabled = false;
-                Bike_ControlS.instance.BikeOffBtn.gameObject.SetActive(false);
+                Bike_ControlS.instance.BikeCanvas.gameObject.SetActive(false);
                 Girahiiii = true;
                 Bike_ControlS.instance.gira_gya = true;
                 BikeScript.crash = true;
@@ -198,7 +198,7 @@ public class BikeAnimation : MonoBehaviour
 
         if (Girahiiii == true)
         {
-            Bike_ControlS.instance.BikeOffBtn.gameObject.SetActive(true);
+            Bike_ControlS.instance.BikeCanvas.gameObject.SetActive(true);
             Bike_ControlS.instance.gira_gya = false;
             Girahiiii = false;
         }

@@ -112,7 +112,7 @@ public class RespawnGangster : MonoBehaviour
             {
                 gmm.playerPrefab = gm.ThirdPersonPLayer;
             }
-            Shop.SetActive(true);
+            Invoke("ShopActive", 2f);
         }
        
         Player_Current.GetComponent<PlayerNavigation>().player = gm.ThirdPersonPLayer.transform;
@@ -131,6 +131,11 @@ public class RespawnGangster : MonoBehaviour
             GoogleMobileAdsController.Instance.ShowInterstitialAd();
         }
        
+    }
+    void ShopActive()
+    {
+        Shop.SetActive(true);
+
     }
     void StopCountdown()
     {

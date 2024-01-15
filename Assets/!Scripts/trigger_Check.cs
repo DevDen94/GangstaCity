@@ -8,6 +8,7 @@ public class trigger_Check : MonoBehaviour
     public Animator male;
     public Mission_Script mission;
     public GameObject Next_P;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -22,6 +23,7 @@ public class trigger_Check : MonoBehaviour
                 mission.Firts_Character = female;
                 mission.Firts_Character.gameObject.SetActive(true);
             }
+           
             mission.NextCutScene.SetActive(true);
             GameManger.instance.OFF_TPS();
             gameObject.SetActive(false);
@@ -29,7 +31,9 @@ public class trigger_Check : MonoBehaviour
             Car_Manager.instance.DestinationPoint = Next_P;
             Car_Manager.instance.Set_NavigationDestination();
             mission.Load_Tasklist();
-           
+            JetSpawner.instance.inbtns.SetActive(false);
+            Bike_ControlS.instance.BikeInBtn.gameObject.SetActive(false);
+            JetSpawner.instance.Button_In.gameObject.SetActive(false);
 
         }
     }

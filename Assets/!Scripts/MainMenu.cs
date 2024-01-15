@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private List<AssetReference> _scenes = new List<AssetReference>();
     private void Start()
     {
-        PlayerPrefs.SetInt("Cash", 1000000);
+       
         ControlFreak2.CFCursor.lockState = CursorLockMode.None;
         ControlFreak2.CFCursor.visible = true;
         instance = this;

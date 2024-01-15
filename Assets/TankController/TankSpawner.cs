@@ -61,6 +61,9 @@ public class TankSpawner : MonoBehaviour
             TPS_Panel.SetActive(false);
             Cf2Panel.SetActive(true);
             GameManger.instance.Char_switch.SetActive(false);
+            Car_Manager.instance.Carbutton_IN.gameObject.SetActive(false);
+            Bike_ControlS.instance.BikeInBtn.gameObject.SetActive(false);
+            JetSpawner.instance.Button_In.gameObject.SetActive(false);
         }
 
     }

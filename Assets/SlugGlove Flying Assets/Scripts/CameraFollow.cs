@@ -23,7 +23,7 @@ public class CameraFollow : MonoBehaviour
     private Transform pivot;
     private Transform FollowRotationPivot;
     public Transform camTransform;
-    private Camera CamUnit;
+    public Camera CamUnit;
 
     private Vector3 LookAtPos;
     [Header("Mouse Speeds")]
@@ -62,6 +62,7 @@ public class CameraFollow : MonoBehaviour
     //setup objects
     void Awake()
     {
+        JetSpawner.instance.Cam = gameObject;
         transform.parent = null;
 
         pivot = camTransform.parent;
@@ -73,7 +74,7 @@ public class CameraFollow : MonoBehaviour
 
         LookDirection = transform.forward;
 
-        CamUnit = GetComponentInChildren<Camera>();
+       // CamUnit = GetComponentInChildren<Camera>();
     }
 
     private void FixedUpdate()

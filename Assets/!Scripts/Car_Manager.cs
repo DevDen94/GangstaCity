@@ -177,6 +177,9 @@ public class Car_Manager : MonoBehaviour
             target_RccCar = Instantiate(AI_Car.ReferenceRcc.transform, AI_Car.transform.position, AI_Car.transform.rotation);
             AI_Car.gameObject.transform.parent.gameObject.SetActive(false);
             RemoveAllMonoBehaviours(AI_Car.gameObject.transform.parent.gameObject);
+            JetSpawner.instance.Button_In.gameObject.SetActive(false);
+            Bike_ControlS.instance.BikeInBtn.gameObject.SetActive(false);
+            TankSpawner.instance.TankIn.gameObject.SetActive(false);
         }
       
     }

@@ -17,6 +17,7 @@ public class FinishTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+        
             if (PlayerPrefs.GetInt("MissionNo") == 5)
             {
                 PlayerPrefs.SetInt("MissionNo", 1); 
@@ -32,7 +33,8 @@ public class FinishTrigger : MonoBehaviour
             {
                 Script.Mission1_Door.enabled = true;
             }
-
+            JetSpawner.instance.Button_In.gameObject.SetActive(false);
+            Bike_ControlS.instance.BikeInBtn.gameObject.SetActive(false);
 
             if (!Ending_Cut)
             {
