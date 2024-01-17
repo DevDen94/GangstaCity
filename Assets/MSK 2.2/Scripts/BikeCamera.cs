@@ -6,7 +6,7 @@ using System;
 public class BikeCamera : MonoBehaviour
 {
 
-
+    public static BikeCamera instance;
 
     public Transform target;
     public Transform BikerMan;
@@ -209,10 +209,11 @@ public class BikeCamera : MonoBehaviour
 
 
 
-    void Start()
+   
+    private void Start()
     {
-
-        bikeScript = (BikeControl)target.GetComponent<BikeControl>();
+        instance = this;
+        bikeScript = target.GetComponent<BikeControl>();
 
         myRigidbody = target.GetComponent<Rigidbody>();
 
@@ -221,8 +222,7 @@ public class BikeCamera : MonoBehaviour
         BikerMan = bikeScript.bikeSetting.bikerMan;
 
     }
-
-
+   
 
 
     void Update()

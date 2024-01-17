@@ -333,6 +333,7 @@ public class BikeControl : MonoBehaviour
             Sounds.gameObject.SetActive(false);
             // gameObject.GetComponent<AudioSource>().enabled = false;
         }
+        BikeCamera.instance.cameraSwitchView = bikeSetting.cameraSwitchView;
     }
     private void OnTriggerEnter(Collider other)
     {
