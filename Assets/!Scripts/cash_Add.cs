@@ -16,6 +16,7 @@ public class cash_Add : MonoBehaviour
             Destroy(gameObject);
             PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + 300);
             GameManger.instance.CashText.text = PlayerPrefs.GetInt("Cash").ToString();
+            GameManger.instance.DollarParticles();
         }
     }
 

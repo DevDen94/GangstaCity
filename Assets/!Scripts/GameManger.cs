@@ -86,6 +86,19 @@ public class GameManger : MonoBehaviour
     public Text EnemiesKilledText;
     public Text TotalText;
     public GameObject FadeScreenOutofbounds;
+    public GameObject MoneyEffect;
+    public AudioClip Money;
+    public void DollarParticles()
+    {
+        MoneyEffect.SetActive(true);
+        src.PlayOneShot(Money);
+        Invoke("sec", 2f);
+    }
+    void sec()
+    {
+        MoneyEffect.SetActive(false);
+    }
+
     public void Sprint_Call()
     {
        
@@ -185,7 +198,7 @@ public class GameManger : MonoBehaviour
    public int currentGangster = 0;
     private void Start()
     {
-     
+        
         if (!Tutorial)
         { 
             Addressables.LoadSceneAsync(_scenes[1], LoadSceneMode.Additive);
@@ -209,8 +222,8 @@ public class GameManger : MonoBehaviour
             ThirdPersonPLayer.transform.rotation = SpawnPoints[0].transform.rotation;
             return;
         }
-         
-      
+
+       
         PlayerPrefs.SetInt("M_", 0);
         PlayerPrefs.SetInt("MissionEnable", 0);
         if (PlayerPrefs.GetInt("Mode_Select") == 1)
@@ -233,8 +246,9 @@ public class GameManger : MonoBehaviour
         Invoke("tps_true", 5f);
         
         Set_Sounds();
-        print(selected_Mission);
-       
+      //  Debug.LogError(PlayerPrefs.GetInt("MissionNo"));
+
+
     }
     bool tps_check;
     bool level_failed;
@@ -370,8 +384,8 @@ public class GameManger : MonoBehaviour
             return;
         }
         //Debug.LogError(PlayerPrefs.GetInt("MissionNo"));
-       
-        PlayerPrefs.SetInt("MissionNo", PlayerPrefs.GetInt("MissionNo") + 1 );
+        Debug.LogError(PlayerPrefs.GetInt("MissionNo"));
+        PlayerPrefs.SetInt("MissionNo", selected_Mission + 1 );
         SceneManager.LoadScene("MissionMode");
     }
     

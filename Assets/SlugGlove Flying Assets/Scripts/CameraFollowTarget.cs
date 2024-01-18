@@ -16,6 +16,7 @@ public class CameraFollowTarget : MonoBehaviour
         if (JetSpawner.instance.Off_Jet || Target == null)
         {
             Destroy(gameObject);
+            return;
         }
         Vector3 MPos = Target.transform.position;
 

@@ -20,7 +20,7 @@ public class FinishTrigger : MonoBehaviour
         
             if (PlayerPrefs.GetInt("MissionNo") == 5)
             {
-                PlayerPrefs.SetInt("MissionNo", 1); 
+               
                 gameObject.SetActive(false);
             }
               
@@ -55,7 +55,11 @@ public class FinishTrigger : MonoBehaviour
         if (gm.selected_Mission == 2)
         {
             Script.Gangster.GetComponent<Animator>().SetTrigger("Victory");
-        }
+        } 
+        if (PlayerPrefs.GetInt("MissionNo") == 10)
+         {
+            PlayerPrefs.SetInt("MissionNo", 1);
+         }
 
-    }
+        }
 }

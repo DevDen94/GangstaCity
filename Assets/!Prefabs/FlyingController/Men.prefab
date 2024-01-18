@@ -3964,9 +3964,9 @@ MonoBehaviour:
   YPivot: {fileID: 7078291073272609716}
   camTransform: {fileID: 7078291073632890808}
   CamUnit: {fileID: 7078291073632890815}
-  MouseSpeed: 2
+  MouseSpeed: 0.7
   turnSmoothing: 0.1
-  minAngle: -89
+  minAngle: -40
   maxAngle: 89
   LookDirectionSpeed: 2
   TimeBeforeAutoXInput: 5
