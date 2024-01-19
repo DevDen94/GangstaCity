@@ -18,7 +18,7 @@ public class AddresableScenes : MonoBehaviour
     [SerializeField] private List<AssetReference> _scenes = new List<AssetReference>();
 
     // Start is called before the first frame update
-    void Start()
+  public  void Start()
     {
         start = true;
         instance = this;

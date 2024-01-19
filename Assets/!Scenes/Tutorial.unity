@@ -25628,7 +25628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &568523841
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34543,6 +34543,9 @@ MonoBehaviour:
   EnemiesKilledText: {fileID: 0}
   TotalText: {fileID: 0}
   FadeScreenOutofbounds: {fileID: 0}
+  MoneyEffect: {fileID: 0}
+  Money: {fileID: 0}
+  PasueBtn: {fileID: 0}
   Jump_Flag: 0
   GamePlayAddress: {fileID: 0}
   MainMenuAddress: {fileID: 0}
@@ -34553,6 +34556,7 @@ MonoBehaviour:
   - {fileID: 0}
   Is_Shop: 0
   ShopPostion: {fileID: 1712099844}
+  hudNavv: {fileID: 0}
   Traffic_Reference: {fileID: 0}
   PlayerRef: {fileID: 0}
 --- !u!4 &754756101
@@ -45633,7 +45637,7 @@ MonoBehaviour:
   Tuttorial: {fileID: 1269967854}
   Tutorial_Starting: {fileID: 226034119}
   Instructions:
-  - Open the Shop to change your cloths
+  - Open the Shop to change your clothes
   - Use trackpad to move camera around your player
   - Use Joystick to move Player on the path.
   - Press Jump to make player jump

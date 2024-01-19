@@ -60,6 +60,7 @@ public class DialogueSystem : MonoBehaviour
                 Mission_Script.instance.FinalTask(GM.selected_Mission);
                 DialogueBoxCanvas.SetActive(false);
                 DialogueBoxCamera.SetActive(false);
+                GameManger.instance.PasueBtn.SetActive(true);
                 GM.Set_TPS();
                 JetSpawner.instance.inbtns.SetActive(true);
                 return;

@@ -9,6 +9,7 @@ public class CutScene_1 : MonoBehaviour
     public GameObject Mission2;
     private void Start()
     {
+        GameManger.instance.PasueBtn.SetActive(false);
         GameManger.instance.Task_Panel.SetActive(false);
     }
     public void EndCutScene()
@@ -17,6 +18,7 @@ public class CutScene_1 : MonoBehaviour
     }
     public void Start_Level()
     {
+        GameManger.instance.PasueBtn.SetActive(true);
         TankSpawner.instance.Header_In.SetActive(true);
         GameManger.instance.Task_Panel.SetActive(true);
         CutSceneObjects.gameObject.SetActive(false);

@@ -2513,6 +2513,7 @@ MonoBehaviour:
   MaxFov: 95
   MinVelocity: 8
   MaxVelocity: 35
+  maxDistance: 3
 --- !u!114 &7078291074566697251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2575,7 +2576,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7078291074842873651}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -3042635464907698546, guid: dc8ae349f0bba2b41a5cc466a74e5a6b,
     type: 2}

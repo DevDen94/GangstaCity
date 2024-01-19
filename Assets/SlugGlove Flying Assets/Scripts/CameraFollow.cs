@@ -74,8 +74,9 @@ public class CameraFollow : MonoBehaviour
 
         LookDirection = transform.forward;
 
-       // CamUnit = GetComponentInChildren<Camera>();
+        // CamUnit = GetComponentInChildren<Camera>();
     }
+    public float maxDistance = 3f;
 
     private void FixedUpdate()
     {
@@ -87,8 +88,19 @@ public class CameraFollow : MonoBehaviour
             return;
         }
         Tick(delta);
+        CheckForCollisions();
     }
+    void CheckForCollisions()
+    {
+        RaycastHit hit;
 
+        // Cast a ray forward from the camera position
+        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance))
+        {
+            // If the ray hits something, move the camera to a position just before the hit point
+            transform.position = hit.point - transform.forward * 0.1f;
+        }
+    }
     public void Tick(float d)
     {
         float h = ControlFreak2.CF2Input.GetAxis("Mouse X");

@@ -86,7 +86,7 @@ public class Mission_Script : MonoBehaviour
     }
   public void DialogueStart()
     {
-        
+        GameManger.instance.PasueBtn.SetActive(false);
         GameManger.instance.DialogueCanvas.SetActive(true);
         GameManger.instance.DialogueCam.gameObject.SetActive(true);
         GameManger.instance.DialogueCam.GetComponent<Animator>().runtimeAnimatorController = Dialogue_Cam;
