@@ -108,7 +108,7 @@ public class GoogleMobileAdsController : MonoBehaviour
 
     #elif UNITY_IOS
         BANNER_PLACEMENT = "Banner_iOS";
-        InterstatialPlacemen = "Interstitial_iOS";
+        InterstatialPlacement = "Interstitial_iOS";
         REWARDED_VIDEO_PLACEMENT = "Rewarded_iOS";
     #endif
 

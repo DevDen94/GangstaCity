@@ -826,7 +826,7 @@ PlayerSettings:
     WebGL: BCG_RCC
     Windows Store Apps: BCG_RCC;CF_FORCE_MOBILE_MODE
     XboxOne: BCG_RCC
-    iPhone: BCG_RCC;CF_FORCE_MOBILE_MODE
+    iPhone: BCG_RCC;CF_FORCE_MOBILE_MODE;INVECTOR_BASIC;INVECTOR_MELEE;INVECTOR_SHOOTER;INVECTOR_AI_TEMPLATE;DIALOGUE_QUESTS
     tvOS: BCG_RCC
   additionalCompilerArguments: {}
   platformArchitecture: {}
