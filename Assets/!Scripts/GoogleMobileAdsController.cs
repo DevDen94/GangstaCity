@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
 
-public class GoogleMobileAdsController : MonoBehaviour, IUnityAdsInitializationListener, IUnityAdsLoadListener, IUnityAdsShowListener
+public class GoogleMobileAdsController : MonoBehaviour
 {
     
     private BannerView SmallbannerAd;
@@ -157,13 +157,7 @@ public class GoogleMobileAdsController : MonoBehaviour, IUnityAdsInitializationL
 
 
 
-        if (!Advertisement.isInitialized && Advertisement.isSupported)
-        {
-            Advertisement.Initialize(UnityAdsID, ShowTestAds, this);
-            
-            Advertisement.Load(REWARDED_VIDEO_PLACEMENT, this);
-        }
-        Advertisement.Load(InterstatialPlacement, this);
+        
     }
   
 
@@ -279,8 +273,7 @@ public class GoogleMobileAdsController : MonoBehaviour, IUnityAdsInitializationL
 
         else
         {
-            Advertisement.Load(InterstatialPlacement, this);
-            Advertisement.Show(InterstatialPlacement, this);
+            
             LoadInterstitialAd();
             MEDIUMLoadInterstitialAd();
             ALLPRICESLoadInterstitialAd();
@@ -315,8 +308,7 @@ public class GoogleMobileAdsController : MonoBehaviour, IUnityAdsInitializationL
         }
         else
         {
-            Advertisement.Load(REWARDED_VIDEO_PLACEMENT, this);
-            Advertisement.Show(REWARDED_VIDEO_PLACEMENT, this);
+            
             LoadRewardedAd();
             MEDIUMLoadRewardedAd();
             ALLPRICESLoadRewardedAd();
@@ -459,102 +451,6 @@ public class GoogleMobileAdsController : MonoBehaviour, IUnityAdsInitializationL
 
     #endregion
 
-    #region Unity Ads
-
-
-    public void OnUnityAdsShowStart(string _adUnitId) { }
-    public void OnUnityAdsShowClick(string _adUnitId) { }
-    public void OnUnityAdsShowComplete(string _adUnitId, UnityAdsShowCompletionState showCompletionState) {
-
-        if (rewarded)
-        {
-            Debug.Log("OnRewardAdClosed");
-            if (PlayerPrefs.GetInt("RewardedMode") == 1)
-            {
-                PlayerPrefs.SetInt("Mode_2", 1);
-                MainMenu.instance.Mode2_Screen.SetActive(false);
-                PlayerPrefs.SetInt("RewardedMode", 2);
-                Debug.LogError("Rewarded_Mode");
-
-            }
-            else if (PlayerPrefs.GetInt("ShopReward_Constume") == 1)
-            {
-                PlayerPrefs.SetInt(GameManger.instance.Shop_InstanceKey, 1);
-                PlayerPrefs.SetInt("ShopReward_Constume", 2);
-                GameManger.instance.sh.Check_Textures();
-                Debug.LogError("Rewarded_Shop");
-            }
-            else if (PlayerPrefs.GetInt("Car_Reward") == 1)
-            {
-                Car_Manager.instance.CarBuySucessfull();
-                PlayerPrefs.SetInt("Car_Reward", 2);
-                Debug.LogError("BuyCar");
-            }
-            else if (PlayerPrefs.GetInt("Bike_Reward") == 1)
-            {
-                Bike_ControlS.instance.BikeBuySucessfull();
-                PlayerPrefs.SetInt("Bike_Reward", 2);
-                Debug.LogError("Buybike");
-            }
-            else if (PlayerPrefs.GetInt("Tank_Reward") == 1)
-            {
-                TankSpawner.instance.TankBuySucessfull();
-                PlayerPrefs.SetInt("Tank_Reward", 2);
-                Debug.LogError("Buytank");
-            }
-            else if (PlayerPrefs.GetInt("Jet_Reward") == 1)
-            {
-                JetSpawner.instance.JetBuySucessfull();
-                PlayerPrefs.SetInt("Jet_Reward", 2);
-                Debug.LogError("BuyJet");
-            }
-
-        }
-
-        rewarded = false;
-    }
-
-   
-
-    
-
-
-    public void OnInitializationComplete()
-    {
-        Debug.Log("Unity Ads initialization complete.");
-    }
-
-    public void OnInitializationFailed(UnityAdsInitializationError error, string message)
-    {
-        Debug.Log($"Unity Ads Initialization Failed: {error.ToString()} - {message}");
-    }
-
-
-
-    public void OnUnityAdsAdLoaded(string adUnitId)
-    {
-        // Optionally execute code if the Ad Unit successfully loads content.
-    }
-
-    public void OnUnityAdsFailedToLoad(string _adUnitId, UnityAdsLoadError error, string message)
-    {
-        Debug.Log($"Error loading Ad Unit: {_adUnitId} - {error.ToString()} - {message}");
-        // Optionally execute code if the Ad Unit fails to load, such as attempting to try again.
-    }
-
-    public void OnUnityAdsShowFailure(string _adUnitId, UnityAdsShowError error, string message)
-    {
-        Debug.Log($"Error showing Ad Unit {_adUnitId}: {error.ToString()} - {message}");
-        // Optionally execute code if the Ad Unit fails to show, such as loading another ad.
-    }
-
-
-
-
-
-
-
-    #endregion
 
 
 
