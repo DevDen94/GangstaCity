@@ -89,6 +89,7 @@ public class GameManger : MonoBehaviour
     public GameObject MoneyEffect;
     public AudioClip Money;
     public GameObject PasueBtn;
+    public bool isJump_Act;
     public void DollarParticles()
     {
         MoneyEffect.SetActive(true);
