@@ -57,6 +57,7 @@ public class AddresableScenes : MonoBehaviour
             yield return null;
         }
         Debug.Log("Scene Downloaded");
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("downloading_complete");
         _Text.color = Color.green;
         _Text.text = "Downloaded";
        
@@ -73,9 +74,9 @@ public class AddresableScenes : MonoBehaviour
     public void LoadMenuScene()
     {
       
-       Addressables.LoadSceneAsync(_scenes[0], LoadSceneMode.Single);
+        Addressables.LoadSceneAsync(_scenes[0], LoadSceneMode.Single);
         start = false;
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("downloading_complete");
+       
     }
 
     private bool clearPreviousScene = false;

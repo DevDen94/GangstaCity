@@ -602,6 +602,7 @@ RectTransform:
   m_Children:
   - {fileID: 1907640875}
   - {fileID: 1904304826}
+  - {fileID: 2105633896}
   - {fileID: 1440339417}
   m_Father: {fileID: 1259916907}
   m_RootOrder: 2
@@ -944,7 +945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22400004, guid: 65f3722dfbc65784b8cb3a74f127e438, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 22400004, guid: 65f3722dfbc65784b8cb3a74f127e438, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1035,12 +1036,6 @@ PrefabInstance:
 --- !u!224 &1440339417 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 22400004, guid: 65f3722dfbc65784b8cb3a74f127e438,
-    type: 3}
-  m_PrefabInstance: {fileID: 1440339416}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1440339418 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 22400000, guid: 65f3722dfbc65784b8cb3a74f127e438,
     type: 3}
   m_PrefabInstance: {fileID: 1440339416}
   m_PrefabAsset: {fileID: 0}
@@ -1303,17 +1298,17 @@ RectTransform:
   m_GameObject: {fileID: 2105633895}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.92929, y: 0.92929, z: 0.92929}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1440339418}
-  m_RootOrder: 0
+  m_Father: {fileID: 900930821}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.0472, y: -2.6785011}
-  m_SizeDelta: {x: -22.865, y: -45.2432}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -40.83496, y: 44.632446}
+  m_SizeDelta: {x: 52.13501, y: 29.702698}
+  m_Pivot: {x: 1, y: 0}
 --- !u!222 &2105633897
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1344,7 +1339,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 0dae0b4775d165548a49fbcc5e783708, type: 3}
-    m_FontSize: 24
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1355,7 +1350,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 100
 --- !u!114 &4135789930397316000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1884,3 +1879,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanvasInternetError: {fileID: 115733700}
   ad_scene: {fileID: 780992953}
+  Is_test: 0

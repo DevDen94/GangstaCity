@@ -7,9 +7,11 @@ public class InternetChecker : MonoBehaviour
 
     public GameObject CanvasInternetError;
     public AddresableScenes ad_scene;
+    public bool Is_test;
 
     private void Awake()
     {
+       
        // DontDestroyOnLoad(this);
     }
 
@@ -19,6 +21,7 @@ public class InternetChecker : MonoBehaviour
     void Start()
     {
         StartCoroutine(CheckForInternet());
+        Is_test = false;
     }
 
     IEnumerator CheckForInternet()
@@ -30,13 +33,19 @@ public class InternetChecker : MonoBehaviour
             //Time.timeScale = 0f;
             
             CanvasInternetError.SetActive(true);
+            Is_test = true;
         }
         else
         {
-            //Debug.Log("----working---");
-            //Time.timeScale = 1f;
-            CanvasInternetError.SetActive(false);
-            ad_scene.Start();
+            if (Is_test == true)
+            {
+                //Debug.Log("----working---");
+                //Time.timeScale = 1f;
+                CanvasInternetError.SetActive(false);
+                ad_scene.Start();
+                Is_test = false;
+            }
+          
         }
         StartCoroutine(CheckForInternet());
     }
