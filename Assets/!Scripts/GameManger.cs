@@ -197,12 +197,14 @@ public class GameManger : MonoBehaviour
     }
     [HideInInspector]
    public int currentGangster = 0;
+    public bool isJump_Act;
     private void Start()
     {
         
         if (!Tutorial)
         { 
             Addressables.LoadSceneAsync(_scenes[1], LoadSceneMode.Additive);
+            isJump_Act = false;
         }
         level_failed = false;
         Jump_Flag = false;

@@ -25628,7 +25628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &568523841
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34551,6 +34551,7 @@ MonoBehaviour:
   MainMenuAddress: {fileID: 0}
   MissionActive: {fileID: 0}
   currentGangster: 0
+  isJump_Act: 0
   Musiclistener:
   - {fileID: 0}
   - {fileID: 0}
@@ -41479,7 +41480,7 @@ MonoBehaviour:
     disableWhenTouchScreenInactive: 1
     disableWhenCursorIsUnlocked: 0
     switchList: []
-  touchSmoothing: 0.5
+  touchSmoothing: 0.505
   pressBinding:
     enabled: 1
     axisList: []
@@ -50012,6 +50013,7 @@ MonoBehaviour:
   CharacterBtn: {fileID: 1283187282}
   PlayerNav: {fileID: 387486660}
   Dest: {fileID: 1937434306}
+  tps: {fileID: 0}
   EnablePanels:
   - {fileID: 8125181180494576457}
   - {fileID: 2121094782}

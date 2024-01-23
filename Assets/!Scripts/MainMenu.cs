@@ -27,6 +27,7 @@ public class MainMenu : MonoBehaviour
         Time.timeScale = 1f;
         if (!PlayerPrefs.HasKey("qabe"))
         {
+            PlayerPrefs.SetInt("Tutorial_Finished", 0);
             PlayerPrefs.SetInt("SFX", 1);
             PlayerPrefs.SetInt("Music", 1);
             PlayerPrefs.SetInt("Unlocked_Mission", 1);
@@ -35,11 +36,12 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.SetInt("Tut_Called", 0);
             selectBtn_Mission.interactable = false;
         }
-        else
+     
+
+        if (PlayerPrefs.GetInt("Tutorial_Finished") == 1)
         {
             selectBtn_Mission.interactable = true;
         }
-
 
         unlockedLevels = PlayerPrefs.GetInt("Unlocked_Mission");
         Mission_Unlocked();

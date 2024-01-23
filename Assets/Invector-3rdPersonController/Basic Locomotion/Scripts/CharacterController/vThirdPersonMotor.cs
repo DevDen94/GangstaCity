@@ -824,7 +824,7 @@ namespace Invector.vCharacterController
                     {
                         GameManger.instance.Jump_Long();
                         GameManger.instance.Jump_Flag = false;
-                        if (!GameManger.instance.Tutorial)
+                        if (!GameManger.instance.Tutorial || GameManger.instance.isJump_Act)
                         {
                             GameManger.instance.Char_switch.SetActive(true);
                         }

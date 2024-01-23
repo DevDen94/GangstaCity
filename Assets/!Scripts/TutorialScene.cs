@@ -5,6 +5,7 @@ using Invector.vItemManager;
 using Invector.vShooter;
 using Invector.vCamera;
 using Invector;
+using Invector.vCharacterController;
 public class TutorialScene : MonoBehaviour
 {
     public GameObject ShopCamera;
@@ -23,6 +24,7 @@ public class TutorialScene : MonoBehaviour
     public GameObject CharacterBtn;
     public GameObject PlayerNav;
     public GameObject Dest;
+    public vThirdPersonController tps;
     private void Start()
     {
         counter_Start = false;
@@ -77,7 +79,10 @@ public class TutorialScene : MonoBehaviour
         {
             counter = counter + 1;
         }
-
+        if (TutorialPanels.Length <= counter)
+        {
+            return;
+        }
         TutorialPanels[counter].SetActive(true);
         print(counter);
 
@@ -115,6 +120,7 @@ public class TutorialScene : MonoBehaviour
                 PlayerNav.SetActive(true);
                 break;
             case 7:
+                GameManger.instance.isJump_Act = true;
                 CharacterBtn.SetActive(true);
                 cs.Text_Panel.SetActive(true);
                 cs.TextField.text = cs.Instructions[counter].ToString();
@@ -161,7 +167,17 @@ public class TutorialScene : MonoBehaviour
         EnablePanels[i].SetActive(true);
         cs.Text_Panel.SetActive(false);
         if (i == 2 || i==6 ) return;
-       
+
+        if (i == 3)
+        {
+            if(tps==null)
+            {
+             tps =GameObject.FindGameObjectWithTag("Player").GetComponent<vThirdPersonController>();
+            }
+            tps.Jump(true);
+           
+            
+        }
         Invoke("LoadTutorial", 3f);
     }
     public AudioSource src;

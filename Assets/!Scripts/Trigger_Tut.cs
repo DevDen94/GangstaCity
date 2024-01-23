@@ -25,6 +25,7 @@ public class Trigger_Tut : MonoBehaviour
     }
    void SceneChange()
     {
+        PlayerPrefs.SetInt("Tutorial_Finished", 1);
         PlayerPrefs.SetInt("MissionNo", 1);
         PlayerPrefs.SetInt("Mode_Select", 1);
         SceneManager.LoadScene("MissionMode");

@@ -680,7 +680,7 @@ GameObject:
   - component: {fileID: 224478601}
   - component: {fileID: 224478600}
   m_Layer: 5
-  m_Name: mode1 (1)
+  m_Name: missionselection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

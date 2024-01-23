@@ -22175,7 +22175,6 @@ MonoBehaviour:
   - {fileID: 1752817459517601818}
   - {fileID: 1752817459840833925}
   DefaultPanel: {fileID: 1752817458676556287}
-  DollarPartice: {fileID: 7833262500742120774}
 --- !u!1 &1752817458732468769
 GameObject:
   m_ObjectHideFlags: 0
