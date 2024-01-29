@@ -17,9 +17,15 @@ public class AddresableScenes : MonoBehaviour
     public Image DownloadProgressImage;
     [SerializeField] private List<AssetReference> _scenes = new List<AssetReference>();
 
+    public bool is_test = false;
     // Start is called before the first frame update
   public  void Start()
     {
+        if (!PlayerPrefs.HasKey("Abc_"))
+        {
+            PlayerPrefs.SetInt("Abc_", 1);
+        }
+        is_test = false;
         start = true;
         instance = this;
         StartTimer();
@@ -38,13 +44,18 @@ public class AddresableScenes : MonoBehaviour
 
         
         var downloadScene = Addressables.DownloadDependenciesAsync(key, true);
-       
-        Debug.Log("Scene Downloading");
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("downloadingstart_addressable");
+
+        if (!is_test)
+        {
+            if (PlayerPrefs.GetInt("Abc_") == 1)
+            {
+                Debug.Log("Scene Downloading");
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("downloadingstart_addressable");
+            }
+        }
 
         while (!downloadScene.IsDone)
         {
-            
             var status = downloadScene.GetDownloadStatus();
             _Text.text = "Checking For Updates...";
             if (status.Percent > 0)
@@ -56,11 +67,10 @@ public class AddresableScenes : MonoBehaviour
             
             yield return null;
         }
-        Debug.Log("Scene Downloaded");
+      
         _Text.color = Color.green;
         _Text.text = "Downloaded";
        
-       // Debug.LogError(startTime);
         if (downloadScene.IsDone)
         {
             _ProgressCountText.text = "";
@@ -74,8 +84,18 @@ public class AddresableScenes : MonoBehaviour
     {
       
        Addressables.LoadSceneAsync(_scenes[0], LoadSceneMode.Single);
-        start = false;
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("downloading_complete");
+       start = false;
+
+        if (!is_test)
+        {
+            if (PlayerPrefs.GetInt("Abc_") == 1)
+            {
+                Debug.Log("Scene Downloaded");
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("downloading_complete");
+                PlayerPrefs.SetInt("Abc_", 2);
+            }
+        }
+
     }
 
     private bool clearPreviousScene = false;
