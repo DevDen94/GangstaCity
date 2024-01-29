@@ -144,8 +144,8 @@ public class GameManger : MonoBehaviour
         if (PlayerPrefs.GetInt("Unlocked_Mission") != 10)
         {
             PlayerPrefs.SetInt("Unlocked_Mission", PlayerPrefs.GetInt("Unlocked_Mission") + 1);
-        } 
-        GoogleMobileAdsController.Instance.ShowInterstitialAd();
+        }
+        Implementation.instance.ShowInterstitial();
         Firebase.Analytics.FirebaseAnalytics.LogEvent("mission_complete", "number", selected_Mission);
     }
     public void Loose_Mission()
@@ -156,8 +156,7 @@ public class GameManger : MonoBehaviour
         MissionFailed.SetActive(true);
         src.PlayOneShot(LooseSound);
         Time.timeScale = 0f;
-     
-        GoogleMobileAdsController.Instance.ShowInterstitialAd();
+        Implementation.instance.ShowInterstitial();
         Firebase.Analytics.FirebaseAnalytics.LogEvent("mission_failed", "number", selected_Mission);
     }
     [HideInInspector]

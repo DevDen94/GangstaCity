@@ -92,8 +92,7 @@ public class TankSpawner : MonoBehaviour
     public void WatchAd_Rewarded()
     {
         PlayerPrefs.SetInt("Tank_Reward", 1);
-        GoogleMobileAdsController.Instance.rewarded = true;
-        GoogleMobileAdsController.Instance.ShowRewardedAd();
+        Implementation.instance.ShowRewardedVideo();
     }
     void RideOff()
     {

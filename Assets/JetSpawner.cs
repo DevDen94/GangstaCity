@@ -93,8 +93,7 @@ public class JetSpawner : MonoBehaviour
     public void WatchAd_Rewarded()
     {
         PlayerPrefs.SetInt("Jet_Reward", 1);
-        GoogleMobileAdsController.Instance.rewarded = true;
-        GoogleMobileAdsController.Instance.ShowRewardedAd();
+        Implementation.instance.ShowRewardedVideo();
     }
     void RideOff()
     {

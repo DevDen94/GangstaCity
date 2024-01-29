@@ -81,8 +81,7 @@ public class Bike_ControlS : MonoBehaviour
     public void WatchAd_Rewarded()
     {
         PlayerPrefs.SetInt("Bike_Reward", 1);
-        GoogleMobileAdsController.Instance.rewarded = true;
-        GoogleMobileAdsController.Instance.ShowRewardedAd();
+        Implementation.instance.ShowRewardedVideo();
     }
     void RideOff()
     {

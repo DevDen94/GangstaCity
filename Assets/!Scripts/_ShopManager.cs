@@ -192,7 +192,7 @@ public class _ShopManager : MonoBehaviour
             CashMain.text= PlayerPrefs.GetInt("Cash").ToString();
             PlayerPrefs.SetInt(EntryName + Temp, 1);
             Check_Textures();
-            //GoogleAdMobController.instance.ShowInterstitialAd();
+            Implementation.instance.ShowInterstitial();
         }
         else
         {
@@ -206,8 +206,7 @@ public class _ShopManager : MonoBehaviour
     public void Rewarded_Ad_Open()
     {
         PlayerPrefs.SetInt("ShopReward_Constume", 1);
-        GoogleMobileAdsController.Instance.rewarded = true;
-        GoogleMobileAdsController.Instance.ShowRewardedAd();
+        Implementation.instance.ShowRewardedVideo();
     }
 }
 

@@ -128,7 +128,7 @@ public class RespawnGangster : MonoBehaviour
         
         if (!gm.Tutorial)
         {
-            GoogleMobileAdsController.Instance.ShowInterstitialAd();
+            Implementation.instance.ShowInterstitial();
         }
        
     }

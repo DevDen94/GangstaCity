@@ -16,10 +16,15 @@ public class AddresableScenes : MonoBehaviour
     public GameObject AddressaDownloadablePanel;
     public Image DownloadProgressImage;
     [SerializeField] private List<AssetReference> _scenes = new List<AssetReference>();
-
-    // Start is called before the first frame update
+    private bool is_1st;
   public  void Start()
     {
+        if (!PlayerPrefs.HasKey("Data_Download"))
+        {
+            PlayerPrefs.SetInt("Data_Download", 1);
+        }
+
+        is_1st = false;
         start = true;
         instance = this;
         StartTimer();
@@ -38,9 +43,17 @@ public class AddresableScenes : MonoBehaviour
 
         
         var downloadScene = Addressables.DownloadDependenciesAsync(key, true);
+
+        if (!is_1st)
+        {
+            is_1st = true;
+            if (PlayerPrefs.GetInt("Data_Download") == 1)
+            {
+                Debug.Log("Scene Downloading");
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("downloadingstart_addressable");
+            }
+        }
        
-        Debug.Log("Scene Downloading");
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("downloadingstart_addressable");
 
         while (!downloadScene.IsDone)
         {
@@ -56,24 +69,29 @@ public class AddresableScenes : MonoBehaviour
             
             yield return null;
         }
-        Debug.Log("Scene Downloaded");
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("downloading_complete");
+       
         _Text.color = Color.green;
         _Text.text = "Downloaded";
        
        // Debug.LogError(startTime);
         if (downloadScene.IsDone)
         {
+            if (PlayerPrefs.GetInt("Data_Download") == 1)
+            {
+                Debug.Log("Scene Downloaded");
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("downloading_complete");
+            }
             _ProgressCountText.text = "";
             _Text.text = "";
             AddressaDownloadablePanel.SetActive(false);
             LoadMenuScene();
+           
         }
 
     }
     public void LoadMenuScene()
     {
-      
+        PlayerPrefs.SetInt("Data_Download", 2);
         Addressables.LoadSceneAsync(_scenes[0], LoadSceneMode.Single);
         start = false;
        

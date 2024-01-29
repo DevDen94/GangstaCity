@@ -48,7 +48,7 @@ public class MainMenu : MonoBehaviour
       
         shop_cash.text = PlayerPrefs.GetInt("Cash").ToString();
         Set_SoundMusic();
-      //  GoogleMobileAdsController.Instance.ShowSmallBannerAd();
+        Implementation.instance.ShowBanner();
     }
 
     public GameObject SoundOn;
@@ -88,9 +88,8 @@ public class MainMenu : MonoBehaviour
     }
     public void Start_Btn()
     {
-        //GoogleAdMobController.instance.ShowInterstitialAd();
         ModeSelectionPanel.SetActive(true);
-        GoogleMobileAdsController.Instance.ShowInterstitialAd();
+        Implementation.instance.ShowInterstitial();
         Firebase.Analytics.FirebaseAnalytics.LogEvent("mainmenu_startbtn");
     }
     private void FixedUpdate()
@@ -192,7 +191,7 @@ public class MainMenu : MonoBehaviour
             ModeSelectionPanel.SetActive(false);
             levelSelectionPanel.SetActive(true);
             PlayerPrefs.SetInt("Mode_Select", 1);
-           // Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_1");
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_1");
         }
         else
         {
@@ -202,7 +201,7 @@ public class MainMenu : MonoBehaviour
                 LoadingScene_Name.sceneToLoad = "MissionMode";
                LoadingPanel.SetActive(true);
                 PlayerPrefs.SetInt("Mode_Select", 2);
-               // Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_2");
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_2");
             }
             else
             {
@@ -230,10 +229,7 @@ public class MainMenu : MonoBehaviour
     public void Unlocked_ModeBY_Rewarded()
     {
         PlayerPrefs.SetInt("RewardedMode", 1);
-       GoogleMobileAdsController.Instance.rewarded = true;
-       GoogleMobileAdsController.Instance.ShowRewardedAd();
-
-
+        Implementation.instance.ShowRewardedVideo();
     }
     public void Settings()
     {
