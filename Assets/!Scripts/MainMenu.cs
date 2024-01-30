@@ -16,6 +16,13 @@ public class MainMenu : MonoBehaviour
     public Text shop_cash;
     public Splash LoadingScene_Name;
     int unlockedLevels;
+
+
+    public string[] GeneralTitles;
+    public string[] DetailInstructions;
+    public Text Title;
+    public Text Description;
+
     public static MainMenu instance;
     [SerializeField] private List<AssetReference> _scenes = new List<AssetReference>();
     private void Start()
@@ -36,7 +43,7 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.SetInt("Tut_Called", 0);
             selectBtn_Mission.interactable = false;
         }
-     
+        Submitbtn.SetActive(false);
 
         if (PlayerPrefs.GetInt("Tutorial_Finished") == 1)
         {
@@ -141,14 +148,28 @@ public class MainMenu : MonoBehaviour
     }
     public void LoadLevel(int i = 1)
     {
-        
+        Level_no.text = i.ToString() ;
         PlayerPrefs.SetInt("MissionNo", i);
+        Title.text = GeneralTitles[i-1].ToString();
+        Description.text = DetailInstructions[i-1].ToString();
+        Submitbtn.SetActive(true);
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("mission","number",i);
+
+    }
+    public GameObject Submitbtn;
+    public Text Level_no;
+    public void loadInst(int i)
+    {
+        Level_no.text = i.ToString();
+        Submitbtn.SetActive(false);
+        Title.text = GeneralTitles[i-1].ToString();
+        Description.text = DetailInstructions[i-1].ToString();
+    }
+    public void SceneChange()
+    {
         LoadingPanel.SetActive(true);
         LoadingScene_Name.sceneToLoad = "MissionMode";
         src.PlayOneShot(btnClick);
-       
-         Firebase.Analytics.FirebaseAnalytics.LogEvent("mission","number",i);
-
     }
     public GameObject levelSelectionPanel;
     public GameObject ModeSelectionPanel;
@@ -229,6 +250,11 @@ public class MainMenu : MonoBehaviour
     public void Unlocked_ModeBY_Rewarded()
     {
         PlayerPrefs.SetInt("RewardedMode", 1);
+        Implementation.instance.ShowRewardedVideo();
+    }
+    public void WatchVideoAd()
+    {
+        PlayerPrefs.SetInt("Rewarded_Cash", 1);
         Implementation.instance.ShowRewardedVideo();
     }
     public void Settings()

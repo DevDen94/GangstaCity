@@ -101,6 +101,12 @@ public class Implementation : MonoBehaviour
                 PlayerPrefs.SetInt("Jet_Reward", 2);
                 Debug.LogError("BuyJet");
             }
+            else if (PlayerPrefs.GetInt("Rewarded_Cash") == 1)
+             {
+               PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + 2000);
+              MainMenu.instance.shop_cash.text = PlayerPrefs.GetInt("Cash").ToString();
+                PlayerPrefs.SetInt("Rewarded_Cash", 2);
+             }
         }
     
 }

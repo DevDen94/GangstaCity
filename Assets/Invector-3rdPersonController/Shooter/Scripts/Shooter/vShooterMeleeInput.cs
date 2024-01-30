@@ -547,6 +547,7 @@ namespace Invector.vCharacterController
                 {
                     shootCountA--;
                     shooterManager.Shoot(aimPosition, !_isAiming, false);
+                    CameraLock.instance.isShooting = true;
                 }
             }
             if (shootCountB > 0)

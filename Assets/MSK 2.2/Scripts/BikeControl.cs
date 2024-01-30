@@ -1098,7 +1098,7 @@ public class BikeControl : MonoBehaviour
 
 
         // calculate pitch (keep it within reasonable bounds)
-        Pitch = Mathf.Clamp(1.2f + ((motorRPM - bikeSetting.idleRPM) / (bikeSetting.shiftUpRPM - bikeSetting.idleRPM)), 1.0f, 10.0f);
+        Pitch = Mathf.Clamp(1f + ((motorRPM - bikeSetting.idleRPM) / (bikeSetting.shiftUpRPM - bikeSetting.idleRPM)), 1.0f, 5.0f);
 
         shiftTime = Mathf.MoveTowards(shiftTime, 0.0f, 0.1f);
 

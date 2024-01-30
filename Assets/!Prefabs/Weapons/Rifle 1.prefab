@@ -229,7 +229,6 @@ MonoBehaviour:
   openCloseEvents: 0
   openCloseWindow: 0
   selectedToolbar: 0
-  src: {fileID: 0}
   attackObject: {fileID: 0}
   trigger: {fileID: 3010743684390275764}
   damagePercentage: 100
@@ -30439,7 +30438,6 @@ MonoBehaviour:
   openCloseEvents: 1
   openCloseWindow: 1
   selectedToolbar: 3
-  src: {fileID: 0}
   actionInput:
     useInput: 1
     isAxisInUse: 0
@@ -35687,8 +35685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 1
-  src: {fileID: 0}
+  selectedToolbar: 2
   weaponCategory: Rifle
   shootFrequency: 0.125
   isInfinityAmmo: 0
@@ -35873,7 +35870,6 @@ MonoBehaviour:
   openCloseEvents: 1
   openCloseWindow: 0
   selectedToolbar: 0
-  src: {fileID: 0}
   damage:
     damageValue: 0
     staminaBlockCost: 0
@@ -35935,7 +35931,6 @@ MonoBehaviour:
   openCloseEvents: 0
   openCloseWindow: 0
   selectedToolbar: 0
-  src: {fileID: 0}
 --- !u!114 &740395575346191446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35951,7 +35946,6 @@ MonoBehaviour:
   openCloseEvents: 0
   openCloseWindow: 1
   selectedToolbar: 0
-  src: {fileID: 0}
   getAnimatorInParent: 1
   animatorEvents:
   - eventName: Instantiate_RifleClipPrefab

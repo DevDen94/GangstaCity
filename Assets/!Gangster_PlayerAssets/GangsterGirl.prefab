@@ -25051,7 +25051,7 @@ GameObject:
   - component: {fileID: 4406271882716806294}
   - component: {fileID: 4406271882716806297}
   - component: {fileID: 6898510829570546213}
-  - component: {fileID: -2968689633046586487}
+  - component: {fileID: 3796858728177569261}
   m_Layer: 8
   m_Name: GangsterGirl
   m_TagString: Player
@@ -26335,7 +26335,7 @@ MonoBehaviour:
   Meshes:
   - {fileID: 4406271883496482291}
   DefaultPanel: {fileID: 4406271884326310459}
---- !u!114 &-2968689633046586487
+--- !u!114 &3796858728177569261
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26344,7 +26344,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4406271882716806296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad2248d24e0dcd1428abd7b77d01ce11, type: 3}
+  m_Script: {fileID: 11500000, guid: 25032758ab905264f9fb1aad13e9fbbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 0}

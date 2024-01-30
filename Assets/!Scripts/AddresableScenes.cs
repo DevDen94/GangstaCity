@@ -59,11 +59,11 @@ public class AddresableScenes : MonoBehaviour
         {
             
             var status = downloadScene.GetDownloadStatus();
-            _Text.text = "Checking For Updates...";
+            _Text.text = "CHECKING FOR UPDATES";
             if (status.Percent > 0)
             {
-                _Text.text = "Downloading...";
-                _ProgressCountText.text = ((int)(status.Percent * 100)) + "%";
+                _Text.text = "DOWNLOADING";
+                _ProgressCountText.text = ((int)(status.Percent * 100)).ToString();
                 DownloadProgressImage.fillAmount = status.Percent;
             }
             
@@ -71,7 +71,7 @@ public class AddresableScenes : MonoBehaviour
         }
        
         _Text.color = Color.green;
-        _Text.text = "Downloaded";
+        _Text.text = "DOWNLOADED";
        
        // Debug.LogError(startTime);
         if (downloadScene.IsDone)

@@ -297,6 +297,7 @@ public class Car_Manager : MonoBehaviour
             Invoke("DestroyWeapon", 0.25f);
             Invoke("DestroyWeapon", 1f);
             Icon.gameObject.SetActive(false);
+            CameraLock.instance.isShooting = false;
         }
         else
         {

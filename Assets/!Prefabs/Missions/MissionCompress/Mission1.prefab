@@ -1890,6 +1890,7 @@ GameObject:
   - component: {fileID: 1280885157918500479}
   - component: {fileID: 1280885157918500478}
   - component: {fileID: 1280885157918500477}
+  - component: {fileID: 8995919078202213977}
   m_Layer: 0
   m_Name: 2nd_CutScene
   m_TagString: Untagged
@@ -2023,6 +2024,14 @@ MonoBehaviour:
   script: {fileID: 1280885157819653026}
   CutSceneObjects: {fileID: 3335935672147462083}
   Mission2: {fileID: 0}
+--- !u!81 &8995919078202213977
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280885157918500475}
+  m_Enabled: 1
 --- !u!1 &1294451570625665569
 GameObject:
   m_ObjectHideFlags: 0
@@ -2960,6 +2969,7 @@ GameObject:
   - component: {fileID: 5098390190073277921}
   - component: {fileID: 7340713618413663535}
   - component: {fileID: 8158359642934986420}
+  - component: {fileID: 1590079533947169504}
   m_Layer: 0
   m_Name: Start_CutScene
   m_TagString: Untagged
@@ -3093,6 +3103,14 @@ MonoBehaviour:
   script: {fileID: 1280885157819653026}
   CutSceneObjects: {fileID: 6203117519655296787}
   Mission2: {fileID: 0}
+--- !u!81 &1590079533947169504
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797703728656461063}
+  m_Enabled: 1
 --- !u!1 &2132819527386436115
 GameObject:
   m_ObjectHideFlags: 0

@@ -1422,7 +1422,7 @@ GameObject:
   - component: {fileID: 9088866904887253007}
   - component: {fileID: 5334206649662242998}
   - component: {fileID: -6510148620317879918}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Clerk (3)
   m_TagString: NPC
   m_Icon: {fileID: 0}

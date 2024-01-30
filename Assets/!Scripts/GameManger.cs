@@ -248,7 +248,7 @@ public class GameManger : MonoBehaviour
         Invoke("tps_true", 5f);
         
         Set_Sounds();
-      //  Debug.LogError(PlayerPrefs.GetInt("MissionNo"));
+        Implementation.instance.HideBanner();
 
 
     }

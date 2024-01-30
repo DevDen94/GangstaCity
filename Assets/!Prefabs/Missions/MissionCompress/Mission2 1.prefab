@@ -10650,7 +10650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b01462361360446a578a1ec89e6780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dialogue_Cam: {fileID: 9100000, guid: 1325fb5e471edce44813a98b3041de57, type: 2}
+  Dialogue_Cam: {fileID: 9100000, guid: 004360d50611267469ec287cb0e443c6, type: 2}
   Firts_Character: {fileID: 1829445467574038951}
   Second_Character: {fileID: 8307367820752047483}
   talking: {fileID: 9100000, guid: 4eba66a9b7b651340b2d55a0d2328678, type: 2}
@@ -12060,6 +12060,7 @@ GameObject:
   - component: {fileID: 8741929444877573543}
   - component: {fileID: 8741929444877573540}
   - component: {fileID: 8741929444877573541}
+  - component: {fileID: 6400369429921716724}
   m_Layer: 0
   m_Name: Cutscene_2ndMission
   m_TagString: Untagged
@@ -12193,6 +12194,14 @@ MonoBehaviour:
   script: {fileID: 8741929443084473389}
   CutSceneObjects: {fileID: 3872026737195621828}
   Mission2: {fileID: 8741929444569179347}
+--- !u!81 &6400369429921716724
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8741929444877573563}
+  m_Enabled: 1
 --- !u!1 &8741929445127294812
 GameObject:
   m_ObjectHideFlags: 0
