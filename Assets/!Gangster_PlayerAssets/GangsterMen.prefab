@@ -20875,6 +20875,7 @@ GameObject:
   - component: {fileID: 1752817458731361637}
   - component: {fileID: 1752817458731361638}
   - component: {fileID: 1627459123072508048}
+  - component: {fileID: -2368931036086322424}
   m_Layer: 8
   m_Name: GangsterMen
   m_TagString: Player
@@ -22175,6 +22176,23 @@ MonoBehaviour:
   - {fileID: 1752817459517601818}
   - {fileID: 1752817459840833925}
   DefaultPanel: {fileID: 1752817458676556287}
+--- !u!114 &-2368931036086322424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752817458731361639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2248d24e0dcd1428abd7b77d01ce11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 0}
+  cameraSpeed: 5
+  isShooting: 0
+  detectionRadius: 30
+  tp: {fileID: 0}
 --- !u!1 &1752817458732468769
 GameObject:
   m_ObjectHideFlags: 0
