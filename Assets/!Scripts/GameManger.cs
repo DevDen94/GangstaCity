@@ -86,18 +86,25 @@ public class GameManger : MonoBehaviour
     public Text EnemiesKilledText;
     public Text TotalText;
     public GameObject FadeScreenOutofbounds;
-    public GameObject MoneyEffect;
+    public GameObject[] MoneyEffect;
     public AudioClip Money;
     public GameObject PasueBtn;
     public void DollarParticles()
     {
-        MoneyEffect.SetActive(true);
+        foreach(GameObject a in MoneyEffect)
+        {
+            a.SetActive(true);
+        }
+  
         src.PlayOneShot(Money);
         Invoke("sec", 2f);
     }
     void sec()
     {
-        MoneyEffect.SetActive(false);
+        foreach (GameObject a in MoneyEffect)
+        {
+            a.SetActive(false);
+        }
     }
 
     public void Sprint_Call()
@@ -248,7 +255,7 @@ public class GameManger : MonoBehaviour
         Invoke("tps_true", 5f);
         
         Set_Sounds();
-        Implementation.instance.HideBanner();
+        Implementation.instance.ShowBanner();
 
 
     }

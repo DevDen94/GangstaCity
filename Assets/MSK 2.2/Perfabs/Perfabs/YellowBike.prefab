@@ -8084,7 +8084,7 @@ GameObject:
   - component: {fileID: 6295843565094317464}
   m_Layer: 0
   m_Name: YellowBike
-  m_TagString: Untagged
+  m_TagString: Jet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8113,14 +8113,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2674869973917002440}
   serializedVersion: 2
-  m_Mass: 2500
+  m_Mass: 1500
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 64
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &6933188623593693788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8133,7 +8133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6147c9a6b777e48429b4335f40436f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlMode: 2
+  controlMode: 1
   activeControl: 1
   bikeWheels:
     wheels:
@@ -8166,7 +8166,7 @@ MonoBehaviour:
   bikeSetting:
     showNormalGizmos: 0
     hitGround:
-    - tag: Street
+    - tag: Concrete
       grounded: 0
       brakeSound: {fileID: 8300000, guid: e307345596fd2bb4696a4770308328dc, type: 3}
       groundSound: {fileID: 8300000, guid: b2e8a0046fce11b4580a894b3b2ba521, type: 3}
@@ -8197,16 +8197,16 @@ MonoBehaviour:
     shiftDownRPM: 2000
     shiftUpRPM: 4000
     idleRPM: 700
-    stiffness: 1.2
+    stiffness: 2.5
     automaticGear: 1
     gears:
-    - -5
-    - 9
-    - 4
+    - -2
     - 3
-    - 2
+    - 6
+    - 7
+    - 9
     LimitBackwardSpeed: 10
-    LimitForwardSpeed: 220
+    LimitForwardSpeed: 120
   grounded: 1
   crash: 0
   steer: 0
@@ -8716,6 +8716,7 @@ MonoBehaviour:
   player: {fileID: 8771049984130374765}
   eventPoint: {fileID: 221786236715392350}
   crashSound: {fileID: 4019046483592385933}
+  Girahiiii: 0
 --- !u!1 &3056145389098396450
 GameObject:
   m_ObjectHideFlags: 0
@@ -19319,6 +19320,7 @@ MonoBehaviour:
   player: {fileID: 7995092528206836574}
   eventPoint: {fileID: 221786236715392350}
   crashSound: {fileID: 4019046483592385933}
+  Girahiiii: 0
 --- !u!1 &8093902541102080881
 GameObject:
   m_ObjectHideFlags: 0

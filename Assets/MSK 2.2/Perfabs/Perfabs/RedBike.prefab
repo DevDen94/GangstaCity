@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 5916472777530910073}
   - component: {fileID: 5410173105900421244}
   - component: {fileID: 118357993789685025}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: WheelBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8084,7 +8084,7 @@ GameObject:
   - component: {fileID: 8041786722215873811}
   m_Layer: 0
   m_Name: RedBike
-  m_TagString: Untagged
+  m_TagString: Jet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8113,14 +8113,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2674869973917002440}
   serializedVersion: 2
-  m_Mass: 2500
+  m_Mass: 1500
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 64
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &6933188623593693788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8133,7 +8133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6147c9a6b777e48429b4335f40436f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlMode: 2
+  controlMode: 1
   activeControl: 1
   bikeWheels:
     wheels:
@@ -8166,7 +8166,7 @@ MonoBehaviour:
   bikeSetting:
     showNormalGizmos: 0
     hitGround:
-    - tag: Street
+    - tag: Concrete
       grounded: 0
       brakeSound: {fileID: 8300000, guid: e307345596fd2bb4696a4770308328dc, type: 3}
       groundSound: {fileID: 8300000, guid: b2e8a0046fce11b4580a894b3b2ba521, type: 3}
@@ -8184,29 +8184,29 @@ MonoBehaviour:
     MainBody: {fileID: 4795404611624735631}
     bikeSteer: {fileID: 143834471420344547}
     maxWheelie: 40
-    speedWheelie: 30
-    slipBrake: 3
+    speedWheelie: 50
+    slipBrake: 1
     springs: 35000
     dampers: 4500
     bikePower: 200
-    shiftPower: 250
-    brakePower: 12000
+    shiftPower: 300
+    brakePower: 15000
     shiftCentre: {x: 0, y: 0, z: 0}
     maxSteerAngle: 30
     maxTurn: 1.5
     shiftDownRPM: 2000
     shiftUpRPM: 4000
     idleRPM: 700
-    stiffness: 1.2
+    stiffness: 2.5
     automaticGear: 1
     gears:
-    - -5
-    - 9
-    - 4
+    - -2
     - 3
-    - 2
-    LimitBackwardSpeed: 10
-    LimitForwardSpeed: 220
+    - 5
+    - 7
+    - 8
+    LimitBackwardSpeed: 15
+    LimitForwardSpeed: 120
   grounded: 1
   crash: 0
   steer: 0
@@ -8716,6 +8716,7 @@ MonoBehaviour:
   player: {fileID: 8771049984130374765}
   eventPoint: {fileID: 221786236715392350}
   crashSound: {fileID: 4019046483592385933}
+  Girahiiii: 0
 --- !u!1 &3056145389098396450
 GameObject:
   m_ObjectHideFlags: 0
@@ -17873,7 +17874,7 @@ GameObject:
   - component: {fileID: 964922990983506315}
   - component: {fileID: 6924547234958205188}
   - component: {fileID: 3172069396104801434}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: WheelFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19340,6 +19341,7 @@ MonoBehaviour:
   player: {fileID: 7995092528206836574}
   eventPoint: {fileID: 221786236715392350}
   crashSound: {fileID: 4019046483592385933}
+  Girahiiii: 0
 --- !u!1 &8093902541102080881
 GameObject:
   m_ObjectHideFlags: 0

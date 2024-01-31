@@ -11,7 +11,21 @@ public class cash_Add : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" )
+        {
+            Destroy(gameObject);
+            PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + 300);
+            GameManger.instance.CashText.text = PlayerPrefs.GetInt("Cash").ToString();
+            GameManger.instance.DollarParticles();
+        }
+        if (other.gameObject.tag == "Car")
+        {
+            Destroy(gameObject);
+            PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + 300);
+            GameManger.instance.CashText.text = PlayerPrefs.GetInt("Cash").ToString();
+            GameManger.instance.DollarParticles();
+        }
+        if (other.gameObject.tag == "Jet")
         {
             Destroy(gameObject);
             PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + 300);

@@ -45,6 +45,7 @@ TagManager:
   - Street
   - Grass
   - Ramps
+  - Jet
   layers:
   - Default
   - TransparentFX

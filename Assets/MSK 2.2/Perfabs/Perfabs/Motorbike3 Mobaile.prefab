@@ -476,6 +476,7 @@ MonoBehaviour:
   player: {fileID: 472512}
   eventPoint: {fileID: 425762}
   crashSound: {fileID: 8202324}
+  Girahiiii: 0
 --- !u!1 &120650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1919,6 +1920,7 @@ MonoBehaviour:
       Radius: 0.33
       Weight: 1000
       Distance: 0.2
+  Hips: []
   bikeLights:
     brakeLights:
     - {fileID: 10821722}
@@ -1994,6 +1996,8 @@ MonoBehaviour:
   accelFwd: 0
   accelBack: 0
   steerAmount: 0
+  Sounds: {fileID: 0}
+  Gangsters: []
 --- !u!114 &11476032
 MonoBehaviour:
   m_ObjectHideFlags: 0
