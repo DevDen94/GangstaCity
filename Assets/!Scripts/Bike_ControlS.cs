@@ -80,6 +80,7 @@ public class Bike_ControlS : MonoBehaviour
     }
     public void WatchAd_Rewarded()
     {
+        //PlayerPrefs.SetInt("Reward", 2);
         PlayerPrefs.SetInt("Bike_Reward", 1);
         Implementation.instance.ShowRewardedVideo();
     }

@@ -92,6 +92,7 @@ public class JetSpawner : MonoBehaviour
     }
     public void WatchAd_Rewarded()
     {
+        //PlayerPrefs.SetInt("Reward", 1);
         PlayerPrefs.SetInt("Jet_Reward", 1);
         Implementation.instance.ShowRewardedVideo();
     }

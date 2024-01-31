@@ -6,10 +6,7 @@ public class Rotate : MonoBehaviour
 {
     public bool x, y, z;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
 
     // Update is called once per frame
     void Update()
@@ -24,7 +21,7 @@ public class Rotate : MonoBehaviour
         }
         if (z)
         {
-            transform.Rotate(0, 0, 5f, Space.Self);
+            transform.Rotate(0, 0, 3f, Space.Self);
         }
       
     }
