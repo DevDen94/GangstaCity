@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3301027154855076727}
   - component: {fileID: 1052949157006830861}
   - component: {fileID: 2610780689941975391}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: 1 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5649,7 +5649,7 @@ GameObject:
   - component: {fileID: 8423301360569597986}
   - component: {fileID: 6658967411762529378}
   - component: {fileID: 6170023902892220234}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: 1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5883,7 +5883,7 @@ GameObject:
   - component: {fileID: 2670248077708964972}
   - component: {fileID: 2160101121080469944}
   - component: {fileID: 3472795034064927377}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: 1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6004,7 +6004,7 @@ GameObject:
   - component: {fileID: 1939905874561412662}
   - component: {fileID: 4543366422020744838}
   - component: {fileID: 2424474827805319582}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6274,7 +6274,7 @@ GameObject:
   - component: {fileID: 22058970270043257}
   - component: {fileID: 1265293447331423655}
   - component: {fileID: 3610049926345475641}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: 1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6595,7 +6595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8281038136913028710}
   - component: {fileID: 8260628887535233403}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: RTCGun Camera
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -6987,7 +6987,7 @@ GameObject:
   - component: {fileID: 2538627885255941649}
   - component: {fileID: 6475406357996094271}
   - component: {fileID: 204357206416236798}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Wheel_LT
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -7224,7 +7224,7 @@ GameObject:
   - component: {fileID: 8945174596598668782}
   - component: {fileID: 888871306440438657}
   - component: {fileID: 436549126280573404}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: 1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7437,7 +7437,7 @@ GameObject:
   - component: {fileID: 6985766683154062106}
   - component: {fileID: 1743604728136818709}
   - component: {fileID: 5955691444065266773}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: 1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7822,9 +7822,7 @@ GameObject:
   - component: {fileID: 1095140856702140943}
   - component: {fileID: 4248950406976475947}
   - component: {fileID: 6431759633930148503}
-  - component: {fileID: 295362013091239216}
-  - component: {fileID: 8623734202266705101}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Gun_Object_1.003
   m_TagString: Car
   m_Icon: {fileID: 0}
@@ -7896,33 +7894,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &295362013091239216
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4172189243340739333}
-  m_Material: {fileID: 13400000, guid: 2f0051c0816aede488419a92df674d2d, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -9087873608730315693, guid: d7310ea80e413f44fbf9fb43372c0a00, type: 3}
---- !u!65 &8623734202266705101
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4172189243340739333}
-  m_Material: {fileID: 13400000, guid: 2f0051c0816aede488419a92df674d2d, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.031709135, y: 0.01094347, z: 0.065035895}
-  m_Center: {x: 0.0006033349, y: -0.00082779134, z: 0.0008892808}
 --- !u!1 &4233682656455847485
 GameObject:
   m_ObjectHideFlags: 0
@@ -8126,7 +8097,7 @@ GameObject:
   - component: {fileID: 8549743667383021056}
   - component: {fileID: 8493432725705147758}
   - component: {fileID: 1974827163834593557}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: 1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8209,7 +8180,7 @@ GameObject:
   - component: {fileID: 6131843408162117906}
   - component: {fileID: 8263214994235805745}
   - component: {fileID: 7768693243502359466}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Wheel_RT 1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -8447,7 +8418,7 @@ GameObject:
   - component: {fileID: 8661145081160849077}
   - component: {fileID: 2676888893851464557}
   - component: {fileID: 5289152626776456365}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: 1 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8528,7 +8499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5188664682945553689}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Barrel Out
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -13522,7 +13493,7 @@ GameObject:
   - component: {fileID: 733096297193681097}
   - component: {fileID: 5526744577724458378}
   - component: {fileID: 8085172022922229687}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Wheel_RT
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -13812,7 +13783,7 @@ GameObject:
   - component: {fileID: 6753952954804566819}
   - component: {fileID: 2816405460502638778}
   - component: {fileID: 2551316077889283417}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: 1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14248,6 +14219,7 @@ GameObject:
   - component: {fileID: 8373910186625734197}
   - component: {fileID: 8744007862565482481}
   - component: {fileID: 6853974543688116762}
+  - component: {fileID: 5874806541087411170}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Car
@@ -14471,6 +14443,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SRC_Audios: {fileID: 0}
+--- !u!65 &5874806541087411170
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870448817946142107}
+  m_Material: {fileID: 13400000, guid: 2f0051c0816aede488419a92df674d2d, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.031709135, y: 0.01094347, z: 0.065035895}
+  m_Center: {x: 0.0006033349, y: -0.00082779134, z: 0.0008892808}
 --- !u!1 &5897014163818024655
 GameObject:
   m_ObjectHideFlags: 0
@@ -14631,7 +14616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6341798492630032793}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Wheels_L
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -14920,7 +14905,7 @@ GameObject:
   - component: {fileID: 3542449691990224282}
   - component: {fileID: 1231526952169842409}
   - component: {fileID: 8670109361472789322}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Wheel_LT 1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -15002,7 +14987,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2492541305929282979}
   - component: {fileID: 6377921482736026928}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Track_R
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -15356,7 +15341,7 @@ GameObject:
   - component: {fileID: 6288041123871178331}
   - component: {fileID: 5029849534227481480}
   - component: {fileID: 4801854920747545330}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: MainBarrel (1)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -15590,7 +15575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3190086480003310072}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Wheels_R
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -15777,7 +15762,7 @@ GameObject:
   - component: {fileID: 1501888603506291033}
   - component: {fileID: 517902427502933953}
   - component: {fileID: 2404670548014485396}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: 1 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16202,7 +16187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3808762424832166475}
   - component: {fileID: 900216095231174454}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Track_L
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -16724,7 +16709,7 @@ GameObject:
   - component: {fileID: 5346044836738192701}
   - component: {fileID: 3475211057281747636}
   - component: {fileID: 112342662523915455}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

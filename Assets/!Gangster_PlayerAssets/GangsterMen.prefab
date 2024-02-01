@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 968383920972593896}
   - component: {fileID: 1134577196197398682}
   - component: {fileID: 1134216865483886266}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5140,7 +5140,7 @@ GameObject:
   - component: {fileID: 968195188230175514}
   - component: {fileID: 1135285092146831138}
   - component: {fileID: 1132806106006694140}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10022,7 +10022,7 @@ GameObject:
   - component: {fileID: 968365322453975632}
   - component: {fileID: 1135215880119076728}
   - component: {fileID: 1133320235395492070}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14904,7 +14904,7 @@ GameObject:
   - component: {fileID: 967796436559798992}
   - component: {fileID: 1134510521192492800}
   - component: {fileID: 1132927202926901636}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20948,7 +20948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 1
   openCloseWindow: 1
-  selectedToolbar: 2
+  selectedToolbar: 3
   _isDead: 0
   _currentHealth: 0
   isImmortal: 0
@@ -21008,7 +21008,7 @@ MonoBehaviour:
       m_Calls: []
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8388865
+    m_Bits: 2155872513
   autoCrouchLayer:
     serializedVersion: 2
     m_Bits: 1
@@ -27533,7 +27533,7 @@ GameObject:
   - component: {fileID: 7833262500741854314}
   - component: {fileID: 7833262500726698488}
   - component: {fileID: 7833262500726595712}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: DollarbillBlast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32227,7 +32227,7 @@ GameObject:
   - component: {fileID: 7833262500741822562}
   - component: {fileID: 7833262500726673084}
   - component: {fileID: 7833262500726593126}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37037,7 +37037,7 @@ GameObject:
   - component: {fileID: 8256347133162515225}
   - component: {fileID: 8256347133177701865}
   - component: {fileID: 8256347133175747487}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: SpinnyEmbers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41792,7 +41792,7 @@ GameObject:
   - component: {fileID: 8256347133162439533}
   - component: {fileID: 8256347133177725829}
   - component: {fileID: 8256347133175788123}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46529,7 +46529,7 @@ GameObject:
   - component: {fileID: 8256347133162446105}
   - component: {fileID: 8256347133177743145}
   - component: {fileID: 8256347133177666019}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51293,7 +51293,7 @@ GameObject:
   - component: {fileID: 8256347133162427669}
   - component: {fileID: 8256347133177650067}
   - component: {fileID: 8256347133177664073}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: FireHR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56043,7 +56043,7 @@ GameObject:
   - component: {fileID: 8256347133162451373}
   - component: {fileID: 8256347133177756015}
   - component: {fileID: 8256347133177689479}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: SimpleEmbers
   m_TagString: Untagged
   m_Icon: {fileID: 0}

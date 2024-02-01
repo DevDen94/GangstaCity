@@ -1,0 +1,138 @@
+Converting script [1 / 15]	[\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs]
+	Fragments : 4
+		[ 0] : Line:   51	InputProperty mousePosition       
+		[ 1] : Line:   51	InputProperty mousePosition       
+		[ 2] : Line:   52	InputProperty mousePosition       
+		[ 3] : Line:   52	InputProperty mousePosition       
+
+Converting script [2 / 15]	[\Epic Toon FX\Demo\Scripts\ETFXEffectController.cs]
+	Fragments : 4
+		[ 0] : Line:   49	InputMethod   GetKeyDown          	(KeyCode.RightArrow)
+		[ 1] : Line:   49	InputMethod   GetKeyDown          	(KeyCode.D)
+		[ 2] : Line:   54	InputMethod   GetKeyDown          	(KeyCode.A)
+		[ 3] : Line:   54	InputMethod   GetKeyDown          	(KeyCode.LeftArrow)
+
+Converting script [3 / 15]	[\Epic Toon FX\Demo\Scripts\ETFXEffectControllerPooled.cs]
+	Fragments : 4
+		[ 0] : Line:   61	InputMethod   GetKeyDown          	(KeyCode.RightArrow)
+		[ 1] : Line:   61	InputMethod   GetKeyDown          	(KeyCode.D)
+		[ 2] : Line:   66	InputMethod   GetKeyDown          	(KeyCode.A)
+		[ 3] : Line:   66	InputMethod   GetKeyDown          	(KeyCode.LeftArrow)
+
+Converting script [4 / 15]	[\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs]
+	Fragments : 8
+		[ 0] : Line:   29	InputMethod   GetKeyDown          	(KeyCode.RightArrow)
+		[ 1] : Line:   34	InputMethod   GetKeyDown          	(KeyCode.D)
+		[ 2] : Line:   39	InputMethod   GetKeyDown          	(KeyCode.A)
+		[ 3] : Line:   43	InputMethod   GetKeyDown          	(KeyCode.LeftArrow)
+		[ 4] : Line:   48	InputMethod   GetKeyDown          	(KeyCode.Mouse0)
+		[ 5] : Line:   52	InputProperty mousePosition       
+		[ 6] : Line:   60	InputProperty mousePosition       
+		[ 7] : Line:   60	InputProperty mousePosition       
+
+Converting script [5 / 15]	[\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs]
+	Fragments : 4
+		[ 0] : Line:   46	InputMethod   GetMouseButton      	(1)
+		[ 1] : Line:   48	InputMethod   GetAxis             	("Mouse X")
+		[ 2] : Line:   49	InputMethod   GetAxis             	("Mouse Y")
+		[ 3] : Line:   57	InputMethod   GetAxis             	("Mouse ScrollWheel")
+
+Converting script [6 / 15]	[\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs]
+	Fragments : 4
+		[ 0] : Line:  111	InputMethod   GetKeyDown          	(KeyCode.L)
+		[ 1] : Line:  124	InputMethod   GetKeyDown          	(KeyCode.J)
+		[ 2] : Line:  137	InputMethod   GetKeyDown          	(KeyCode.H)
+		[ 3] : Line:  150	InputMethod   GetKeyDown          	(KeyCode.K)
+
+Converting script [7 / 15]	[\UGUIMiniMap\Example\Scripts\bl_CreateItemExample.cs]
+	Fragments : 3
+		[ 0] : Line:   22	InputMethod   GetButtonDown       	("Fire1")
+		[ 1] : Line:   27	InputMethod   GetKeyDown          	(KeyCode.H)
+		[ 2] : Line:   44	InputProperty mousePosition       
+
+Converting script [8 / 15]	[\UGUIMiniMap\Example\Scripts\bl_MiniMapDemo.cs]
+	Fragments : 9
+		[ 0] : Line:   18	Other mod.	[Cursor.lockState]
+		[ 1] : Line:   19	Other mod.	[Cursor.visible]
+		[ 2] : Line:   52	InputMethod   GetKeyDown          	(KeyCode.R)
+		[ 3] : Line:   57	InputMethod   GetKeyDown          	(KeyCode.Escape)
+		[ 4] : Line:   59	Other mod.	[Cursor.lockState]
+		[ 5] : Line:   60	Other mod.	[Cursor.visible]
+		[ 6] : Line:   62	InputMethod   GetKeyDown          	(KeyCode.KeypadEnter)
+		[ 7] : Line:   64	Other mod.	[Cursor.lockState]
+		[ 8] : Line:   65	Other mod.	[Cursor.visible]
+
+Converting script [9 / 15]	[\Epic Toon FX\Demo\Scripts\VFX Library\UICanvasManager.cs]
+	Fragments : 4
+		[ 0] : Line:   30	InputMethod   GetMouseButtonUp    	(0)
+		[ 1] : Line:   36	InputMethod   GetKeyUp            	(KeyCode.A)
+		[ 2] : Line:   39	InputMethod   GetKeyUp            	(KeyCode.D)
+		[ 3] : Line:   76	InputProperty mousePosition       
+
+Converting script [10 / 15]	[\UGUIMiniMap\Content\Scripts\Runtime\Core\bl_MiniMap.cs]
+	Fragments : 6
+		[ 0] : Line:  521	Other mod.	[Cursor.visible]
+		[ 1] : Line:  522	Other mod.	[Cursor.lockState]
+		[ 2] : Line:  550	Other mod.	[Cursor.visible]
+		[ 3] : Line:  551	Other mod.	[Cursor.lockState]
+		[ 4] : Line:  553	Other mod.	[Cursor.visible]
+		[ 5] : Line:  554	Other mod.	[Cursor.lockState]
+
+Converting script [11 / 15]	[\UGUIMiniMap\Content\Scripts\Runtime\Misc\bl_MiniMapInputLegacy.cs]
+	Fragments : 3
+		[ 0] : Line:   31	InputMethod   GetKeyDown          	(zoomInKey)
+		[ 1] : Line:   33	InputMethod   GetKeyDown          	(zoomOutKey)
+		[ 2] : Line:   35	InputMethod   GetKeyDown          	(screenModeKey)
+
+Converting script [12 / 15]	[\UGUIMiniMap\Example\Standard Assets\Characters\FirstPersonCharacter\Scripts\bl_MouseLook.cs]
+	Fragments : 2
+		[ 0] : Line:   32	InputMethod   GetAxis             	("Mouse X")
+		[ 1] : Line:   33	InputMethod   GetAxis             	("Mouse Y")
+
+Converting script [13 / 15]	[\UGUIMiniMap\Example\Standard Assets\Characters\FirstPersonCharacter\Scripts\MinimapPlayerController.cs]
+	Fragments : 4
+		[ 0] : Line:   76	InputMethod   GetKeyDown          	(KeyCode.Space)
+		[ 1] : Line:  238	InputMethod   GetAxis             	("Horizontal")
+		[ 2] : Line:  239	InputMethod   GetAxis             	("Vertical")
+		[ 3] : Line:  246	InputMethod   GetKey              	(KeyCode.LeftShift)
+
+Converting script [14 / 15]	[\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\Parser.cs]
+	Fragments : 1
+		[ 0] : Line: 3370	InputMethod   HasInput            	(position)
+
+Converting script [15 / 15]	[\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\TextParserCommon.cs]
+	Fragments : 13
+		[ 0] : Line:   38	InputMethod   HasInput            	(position)
+		[ 1] : Line:   40	InputMethod   GetInputSymbol      	(position)
+		[ 2] : Line:   48	InputMethod   HasInput            	(pos)
+		[ 3] : Line:   50	InputMethod   GetInputSymbol      	(pos)
+		[ 4] : Line:   59	InputMethod   HasInput            	(position)
+		[ 5] : Line:   61	InputMethod   GetInputSymbol      	(position)
+		[ 6] : Line:   75	InputMethod   HasInput            	(position)
+		[ 7] : Line:   77	InputMethod   GetInputSymbol      	(position)
+		[ 8] : Line:   91	InputMethod   HasInput            	(position)
+		[ 9] : Line:   93	InputMethod   GetInputSymbol      	(position)
+		[10] : Line:  127	InputMethod   HasInput            	(pos)
+		[11] : Line:  127	InputMethod   GetInputSymbol      	(pos)
+		[12] : Line:  157	InputMethod   FormErrorMessage    	(msg.Item1, msg.Item2)
+
+
+15 scripts modified!
+Overwriting actual scripts...
+	[0 / 15] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-02-01-18-11\Assets-After/\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs]
+	[1 / 15] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-02-01-18-11\Assets-After/\Epic Toon FX\Demo\Scripts\ETFXEffectController.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Epic Toon FX\Demo\Scripts\ETFXEffectController.cs]
+	[2 / 15] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-02-01-18-11\Assets-After/\Epic Toon FX\Demo\Scripts\ETFXEffectControllerPooled.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Epic Toon FX\Demo\Scripts\ETFXEffectControllerPooled.cs]
+	[3 / 15] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-02-01-18-11\Assets-After/\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs]
+	[4 / 15] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-02-01-18-11\Assets-After/\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs]
+	[5 / 15] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-02-01-18-11\Assets-After/\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs]
+	[6 / 15] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-02-01-18-11\Assets-After/\UGUIMiniMap\Example\Scripts\bl_CreateItemExample.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\UGUIMiniMap\Example\Scripts\bl_CreateItemExample.cs]
+	[7 / 15] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-02-01-18-11\Assets-After/\UGUIMiniMap\Example\Scripts\bl_MiniMapDemo.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\UGUIMiniMap\Example\Scripts\bl_MiniMapDemo.cs]
+	[8 / 15] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-02-01-18-11\Assets-After/\Epic Toon FX\Demo\Scripts\VFX Library\UICanvasManager.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Epic Toon FX\Demo\Scripts\VFX Library\UICanvasManager.cs]
+	[9 / 15] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-02-01-18-11\Assets-After/\UGUIMiniMap\Content\Scripts\Runtime\Core\bl_MiniMap.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\UGUIMiniMap\Content\Scripts\Runtime\Core\bl_MiniMap.cs]
+	[10 / 15] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-02-01-18-11\Assets-After/\UGUIMiniMap\Content\Scripts\Runtime\Misc\bl_MiniMapInputLegacy.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\UGUIMiniMap\Content\Scripts\Runtime\Misc\bl_MiniMapInputLegacy.cs]
+	[11 / 15] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-02-01-18-11\Assets-After/\UGUIMiniMap\Example\Standard Assets\Characters\FirstPersonCharacter\Scripts\bl_MouseLook.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\UGUIMiniMap\Example\Standard Assets\Characters\FirstPersonCharacter\Scripts\bl_MouseLook.cs]
+	[12 / 15] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-02-01-18-11\Assets-After/\UGUIMiniMap\Example\Standard Assets\Characters\FirstPersonCharacter\Scripts\MinimapPlayerController.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\UGUIMiniMap\Example\Standard Assets\Characters\FirstPersonCharacter\Scripts\MinimapPlayerController.cs]
+	[13 / 15] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-02-01-18-11\Assets-After/\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\Parser.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\Parser.cs]
+	[14 / 15] from  [E:/Projects/GangsterGame/GangstaCity/CF2-Data/Script-Backups/2024-02-01-18-11\Assets-After/\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\TextParserCommon.cs] to [E:/Projects/GangsterGame/GangstaCity/Assets/\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\TextParserCommon.cs]
+
+Overwriting COMPLETED!

@@ -21,7 +21,10 @@ public class Drive_Trigger : MonoBehaviour
             {
                 Car_Manager.instance.is_Hummer = true;
                 Car_Manager.instance.Car_Name = nameofCar;
-              
+                if (gameObject.transform.GetChild(0) != null)
+                {
+                    gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                }
             }
             else
             {

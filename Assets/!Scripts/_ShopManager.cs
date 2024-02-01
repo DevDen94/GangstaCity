@@ -205,6 +205,7 @@ public class _ShopManager : MonoBehaviour
     public string rewarded_UnlockKey;
     public void Rewarded_Ad_Open()
     {
+        PlayerPrefs.SetInt("Reward", 2);
         PlayerPrefs.SetInt("ShopReward_Constume", 1);
         Implementation.instance.ShowRewardedVideo();
     }

@@ -29,7 +29,7 @@ public class GameManger : MonoBehaviour
 
     public GameObject HealthCanvas;
     public GameObject Hud_Navigation;
-    public HUDNavigationSystem hudNav;
+    //public HUDNavigationSystem hudNav;
     public GameObject InstructionsPanel;
     public Text StaringInstructions;
     public Instructions All_Instructions;
@@ -195,10 +195,10 @@ public class GameManger : MonoBehaviour
     void delay()
     {
         cm.sm = ThirdPersonPLayer.GetComponent<vShooterManager>();
-        if (!Tutorial)
-        {
-            hudNav.minimapScale = 1f;
-        }
+        //if (!Tutorial)
+        //{
+        //    hudNav.minimapScale = 1f;
+       // }
        // cm.sec();
     }
     [HideInInspector]
@@ -249,7 +249,7 @@ public class GameManger : MonoBehaviour
             cm.Set_NavigationDestination();
            
         }
-      
+        PlayerPrefs.SetInt("Cash", 6000);
         CashText.text = PlayerPrefs.GetInt("Cash").ToString();
         SpawnPlayer();
         Invoke("tps_true", 5f);
@@ -401,7 +401,7 @@ public class GameManger : MonoBehaviour
     [HideInInspector]
     public bool Is_Shop;
     public GameObject ShopPostion;
-    public HUDNavigationSystem hudNavv;
+    //public HUDNavigationSystem hudNavv;
     public void Set_TPS() // Enable ThirdPerson Controller
     {
         if (Is_Shop)
@@ -415,7 +415,7 @@ public class GameManger : MonoBehaviour
         ThirdPersonPLayer.SetActive(true);
      
         Hud_Navigation.SetActive(true);
-        hudNavv.PlayerCamera = TPS_Controls[0].GetComponent<Camera>();
+      //  hudNavv.PlayerCamera = TPS_Controls[0].GetComponent<Camera>();
         HealthCanvas.SetActive(true);
         ControlFreakPanel.SetActive(true);
         TPS_Controls[5].SetActive(false); //Only for sprint

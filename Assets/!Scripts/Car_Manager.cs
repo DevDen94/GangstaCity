@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SickscoreGames.HUDNavigationSystem;
+//using SickscoreGames.HUDNavigationSystem;
 using UnityEngine.UI;
 using UnityEngine.AI;
 using UnityEditor;
@@ -24,7 +24,7 @@ public class Car_Manager : MonoBehaviour
 
     public GameObject Traffic_Reference;
     public GameObject Player_Hud_Navigation;
-    public HUDNavigationSystem hudNav;
+  //  public HUDNavigationSystem hudNav;
     public Button brakeBtn;
     public GameObject DestinationCar;
 
@@ -161,10 +161,10 @@ public class Car_Manager : MonoBehaviour
         {
             Rcc_Header_Camera.SetActive(true);
             Carbutton_IN.SetActive(false);
-            if (!gameManager.Tutorial)
-            {
-                hudNav.PlayerCamera = RCC_Camera;
-            }
+          // if (!gameManager.Tutorial)
+           // {
+            //    hudNav.PlayerCamera = RCC_Camera;
+           // }
            
             gameManager.OFF_TPS();
             if (AI_Car.Rcc_Car == true)
@@ -189,7 +189,7 @@ public class Car_Manager : MonoBehaviour
         Rcc_Header_Camera.SetActive(true);
         Carbutton_IN.SetActive(false);
         Buy_Panel.SetActive(false);
-        hudNav.PlayerCamera = RCC_Camera;
+       // hudNav.PlayerCamera = RCC_Camera;
         gameManager.OFF_TPS();
         if (AI_Car.Rcc_Car == true)
         {
@@ -200,6 +200,7 @@ public class Car_Manager : MonoBehaviour
     }
     public void WatchAd_BuyCar()  //PlaceRewardedAd
     {
+        PlayerPrefs.SetInt("Reward", 3);
         PlayerPrefs.SetInt("Car_Reward", 1);
     
         Implementation.instance.ShowRewardedVideo();
@@ -215,7 +216,7 @@ public class Car_Manager : MonoBehaviour
             Rcc_Header_Camera.SetActive(true);
             Carbutton_IN.SetActive(false);
             Buy_Panel.SetActive(false);
-            hudNav.PlayerCamera = RCC_Camera;
+           // hudNav.PlayerCamera = RCC_Camera;
             gameManager.OFF_TPS();
             if (AI_Car.Rcc_Car == true)
             {
@@ -254,7 +255,7 @@ public class Car_Manager : MonoBehaviour
         WeaponOnBtn.SetActive(true);
         Carbutton_Out.SetActive(false);
         Car.isEject = true;
-        hudNav.PlayerCamera = TPS_Camera;
+     //   hudNav.PlayerCamera = TPS_Camera;
 
     }
 

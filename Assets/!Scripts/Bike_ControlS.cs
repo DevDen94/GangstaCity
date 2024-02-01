@@ -50,7 +50,7 @@ public class Bike_ControlS : MonoBehaviour
             BikeInBtn.gameObject.SetActive(false);
             BikeOffBtn.gameObject.SetActive(true);
             GameManger.instance.Hud_Navigation.SetActive(true);
-            Car_Manager.instance.hudNav.PlayerCamera = Bike_cam.GetComponent<Camera>();
+            //Car_Manager.instance.hudNav.PlayerCamera = Bike_cam.GetComponent<Camera>();
             Car_Manager.instance.Carbutton_IN.gameObject.SetActive(false);
             TankSpawner.instance.TankIn.gameObject.SetActive(false);
             JetSpawner.instance.Button_In.gameObject.SetActive(false);
@@ -80,7 +80,7 @@ public class Bike_ControlS : MonoBehaviour
     }
     public void WatchAd_Rewarded()
     {
-        //PlayerPrefs.SetInt("Reward", 2);
+        PlayerPrefs.SetInt("Reward", 4);
         PlayerPrefs.SetInt("Bike_Reward", 1);
         Implementation.instance.ShowRewardedVideo();
     }
@@ -96,6 +96,6 @@ public class Bike_ControlS : MonoBehaviour
         BikeCanvas.SetActive(false);
         Bike_cam.gameObject.SetActive(false);
         BikeOffBtn.gameObject.SetActive(false);
-        Car_Manager.instance.hudNav.PlayerCamera =tps;
+       // Car_Manager.instance.hudNav.PlayerCamera =tps;
     }
 }

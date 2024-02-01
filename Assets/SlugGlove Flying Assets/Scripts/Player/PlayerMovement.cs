@@ -110,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
         Colli = GetComponent<DetectCollision>();
         Visuals = GetComponent<PlayerVisuals>();
         HipsPos = Visuals.HipsPos;
-        Car_Manager.instance.hudNav.PlayerCamera = Cam.GetComponent<Camera>();
+       // Car_Manager.instance.hudNav.PlayerCamera = Cam.GetComponent<Camera>();
        
         CamY = Cam.transform.parent.parent.transform;
        

@@ -78,7 +78,7 @@ TagManager:
   - Poles
   - Traffic
   - Trigger
-  - 
+  - Objects
   m_SortingLayers:
   - name: Default
     uniqueID: 0

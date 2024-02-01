@@ -57,7 +57,7 @@ public class TankSpawner : MonoBehaviour
             TankIn.gameObject.SetActive(false);
             TankOut.gameObject.SetActive(true);
             GameManger.instance.Hud_Navigation.SetActive(true);
-            Car_Manager.instance.hudNav.PlayerCamera = tankCam;
+            //Car_Manager.instance.hudNav.PlayerCamera = tankCam;
             TPS_Panel.SetActive(false);
             Cf2Panel.SetActive(true);
             GameManger.instance.Char_switch.SetActive(false);
@@ -91,6 +91,7 @@ public class TankSpawner : MonoBehaviour
     }
     public void WatchAd_Rewarded()
     {
+        PlayerPrefs.SetInt("Reward", 5);
         PlayerPrefs.SetInt("Tank_Reward", 1);
         Implementation.instance.ShowRewardedVideo();
     }
@@ -110,7 +111,7 @@ public class TankSpawner : MonoBehaviour
         TankOut.gameObject.SetActive(false);
         ControlFreak2.CFCursor.lockState = CursorLockMode.None;
         ControlFreak2.CFCursor.visible = true; 
-        Car_Manager.instance.hudNav.PlayerCamera = tps;
+        //Car_Manager.instance.hudNav.PlayerCamera = tps;
         TPS_Panel.SetActive(true);
         Cf2Panel.SetActive(true);
         GameManger.instance.Char_switch.SetActive(true);

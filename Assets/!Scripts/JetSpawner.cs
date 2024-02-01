@@ -92,7 +92,7 @@ public class JetSpawner : MonoBehaviour
     }
     public void WatchAd_Rewarded()
     {
-        //PlayerPrefs.SetInt("Reward", 1);
+        PlayerPrefs.SetInt("Reward", 6);
         PlayerPrefs.SetInt("Jet_Reward", 1);
         Implementation.instance.ShowRewardedVideo();
     }
@@ -110,7 +110,7 @@ public class JetSpawner : MonoBehaviour
         Button_Out.gameObject.SetActive(false);
         ControlFreak2.CFCursor.lockState = CursorLockMode.None;
         ControlFreak2.CFCursor.visible = true;
-        Car_Manager.instance.hudNav.PlayerCamera = tps;
+       // Car_Manager.instance.hudNav.PlayerCamera = tps;
         TPS_Panel.SetActive(true);
         Cf2Panel.SetActive(true);
         GameManger.instance.Char_switch.SetActive(true);

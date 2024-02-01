@@ -1098,16 +1098,16 @@ public class BikeControl : MonoBehaviour
 
 
         // calculate pitch (keep it within reasonable bounds)
-        Pitch = Mathf.Clamp(1f + ((motorRPM - bikeSetting.idleRPM) / (bikeSetting.shiftUpRPM - bikeSetting.idleRPM)), 1.0f, 5.0f);
+        Pitch = Mathf.Clamp(1f + ((motorRPM - bikeSetting.idleRPM) / (bikeSetting.shiftUpRPM - bikeSetting.idleRPM)), 1.0f, 1.8f);
 
         shiftTime = Mathf.MoveTowards(shiftTime, 0.0f, 0.1f);
 
         if (Pitch == 1 || currentGear == 0)
         {
             bikeSounds.IdleEngine.volume = Mathf.Lerp(bikeSounds.IdleEngine.volume, 1.0f, 0.1f);
-            bikeSounds.LowEngine.volume = Mathf.Lerp(bikeSounds.LowEngine.volume, 0.5f, 0.1f);
+            bikeSounds.LowEngine.volume = Mathf.Lerp(bikeSounds.LowEngine.volume, 0.0f, 0.1f);
             bikeSounds.HighEngine.volume = Mathf.Lerp(bikeSounds.HighEngine.volume, 0.0f, 0.1f);
-
+            Debug.LogError("--22-");
         }
         else
         {
@@ -1118,11 +1118,13 @@ public class BikeControl : MonoBehaviour
             if ((Pitch > PitchDelay || accel > 0) && shiftTime == 0.0f)
             {
                 bikeSounds.LowEngine.volume = Mathf.Lerp(bikeSounds.LowEngine.volume, 0.0f, 0.2f);
+                Debug.LogError("--1-");
                 bikeSounds.HighEngine.volume = Mathf.Lerp(bikeSounds.HighEngine.volume, 1.0f, 0.2f);
             }
             else
             {
                 bikeSounds.LowEngine.volume = Mathf.Lerp(bikeSounds.LowEngine.volume, 1.0f, 0.2f);
+                Debug.LogError("---");
                 bikeSounds.HighEngine.volume = Mathf.Lerp(bikeSounds.HighEngine.volume, 0.0f, 0.2f);
             }
 

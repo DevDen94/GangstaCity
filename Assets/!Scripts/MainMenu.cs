@@ -249,11 +249,13 @@ public class MainMenu : MonoBehaviour
     }
     public void Unlocked_ModeBY_Rewarded()
     {
+        PlayerPrefs.SetInt("Reward", 1);
         PlayerPrefs.SetInt("RewardedMode", 1);
         Implementation.instance.ShowRewardedVideo();
     }
     public void WatchVideoAd()
     {
+        PlayerPrefs.SetInt("Reward", 7);
         PlayerPrefs.SetInt("Rewarded_Cash", 1);
         Implementation.instance.ShowRewardedVideo();
     }
