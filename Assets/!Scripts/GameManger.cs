@@ -209,7 +209,7 @@ public class GameManger : MonoBehaviour
         
         if (!Tutorial)
         { 
-            Addressables.LoadSceneAsync(_scenes[1], LoadSceneMode.Additive);
+           Addressables.LoadSceneAsync(_scenes[1], LoadSceneMode.Additive);
             isJump_Act = false;
         }
         level_failed = false;
@@ -255,7 +255,7 @@ public class GameManger : MonoBehaviour
         Invoke("tps_true", 5f);
         
         Set_Sounds();
-        Implementation.instance.ShowBanner();
+        //Implementation.instance.ShowBanner();
 
 
     }
