@@ -6,6 +6,8 @@ using Invector.vShooter;
 using Invector.vCamera;
 using Invector;
 using Invector.vCharacterController;
+using DG.Tweening.Core;
+using DG.Tweening;
 public class TutorialScene : MonoBehaviour
 {
     public GameObject ShopCamera;
@@ -130,6 +132,8 @@ public class TutorialScene : MonoBehaviour
                 cs.Text_Panel.SetActive(true);
                 cs.TextField.text = cs.Instructions[counter].ToString();
                 UIPanel.SetActive(true);
+                dOWTEEN.GetComponent<DOTweenAnimation>().enabled = true;
+                dOWTEEN.GetComponent<DOTweenVisualManager>().enabled = true;
                 Invoke("Off_HealthBar_Indicator", 2f);
                 break;
             case 9:
@@ -162,6 +166,7 @@ public class TutorialScene : MonoBehaviour
         FadeSScreen.SetActive(true);
     }
 
+    public GameObject dOWTEEN;
     public void OffPanel(int i)
     {
         EnablePanels[i].SetActive(true);
@@ -174,10 +179,9 @@ public class TutorialScene : MonoBehaviour
             {
              tps =GameObject.FindGameObjectWithTag("Player").GetComponent<vThirdPersonController>();
             }
-            tps.Jump(true);
-           
-            
+            tps.Jump(true); 
         }
+       
         Invoke("LoadTutorial", 3f);
     }
     public AudioSource src;

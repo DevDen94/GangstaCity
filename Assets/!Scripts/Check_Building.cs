@@ -21,10 +21,11 @@ public class Check_Building : MonoBehaviour
     public GameObject Trigger;
     public GameObject Weapon_Main;
     public shootPlayer PlayerShooter;
-     bool Car_Out;
+    bool Car_Out;
     public bool is_HummerSpecial;
     private Damage_Script damage_;
 
+    public GameObject MiniMapIcon;
     public bool PlayerCar;
    
     private void Start()
@@ -192,6 +193,10 @@ void Destroy_Driver()
         Invoke("AfterDelay", 1f);
         gameObject.tag = "Car";
         PlayerNavigation.instance.player = gameObject.transform;
+        if (MiniMapIcon != null)
+        {
+            MiniMapIcon.SetActive(false);
+        }
         if (PlayerPrefs.GetInt("Music") == 1)
         {
             SRC_Audios.SetActive(true);
@@ -249,6 +254,11 @@ void Destroy_Driver()
         {
             PoliceSystemActive.instance.PoliceCarPanel.SetActive(false);
         }
+        if (MiniMapIcon != null)
+        {
+            MiniMapIcon.SetActive(true);
+        }
+        
         // Invoke("SetTrafficCar", 3f);
     }
     void seco()

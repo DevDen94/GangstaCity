@@ -249,7 +249,7 @@ public class GameManger : MonoBehaviour
             cm.Set_NavigationDestination();
            
         }
-        PlayerPrefs.SetInt("Cash", 6000);
+       // PlayerPrefs.SetInt("Cash", 6000);
         CashText.text = PlayerPrefs.GetInt("Cash").ToString();
         SpawnPlayer();
         Invoke("tps_true", 5f);

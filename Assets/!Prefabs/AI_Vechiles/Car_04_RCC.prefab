@@ -811,7 +811,7 @@ MonoBehaviour:
     damageResolution: 100
     damageFilter:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 4294967095
     damageRadius: 0.5
     damageMultiplier: 1
     maximumDamage: 0.5
@@ -833,8 +833,8 @@ MonoBehaviour:
     detachableParts: []
     lights: []
     wheels: []
-  useDamage: 1
-  useCollisionParticles: 1
+  useDamage: 0
+  useCollisionParticles: 0
   useCollisionAudio: 1
   maximumContactSparkle: 5
   velocityDirection: {fileID: 0}
@@ -911,6 +911,7 @@ MonoBehaviour:
   Weapon_Main: {fileID: 8300405432267559812}
   PlayerShooter: {fileID: 8300405432267552612}
   is_HummerSpecial: 0
+  MiniMapIcon: {fileID: 0}
   PlayerCar: 0
   TutorialObject: {fileID: 0}
   NextTutorialObject: {fileID: 0}
