@@ -250,7 +250,7 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{dedicated}: Downloads/NewStore.keystore'
+  AndroidKeystoreName: '{dedicated}: Downloads/NewStore (1).keystore'
   AndroidKeyaliasName: gamerz
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1

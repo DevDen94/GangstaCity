@@ -153,8 +153,8 @@ public class RCC_DashboardInputs : MonoBehaviour {
         //  If RPM needle is selected, assign rotation of the needle.
         if (RPMNeedle) {
 
-            RPMNeedleRotation = (vehicle.engineRPM / 50f);
-            RPMNeedleRotation = Mathf.Clamp(RPMNeedleRotation, 0f, 180f);
+            RPMNeedleRotation = (vehicle.engineRPM / 100f);
+            RPMNeedleRotation = Mathf.Clamp(RPMNeedleRotation, -20f, 80f);
             RPMNeedle.transform.eulerAngles = new Vector3(RPMNeedle.transform.eulerAngles.x, RPMNeedle.transform.eulerAngles.y, -RPMNeedleRotation);
 
         }

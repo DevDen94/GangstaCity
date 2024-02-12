@@ -18492,6 +18492,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7259919498624997451, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997451, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
       propertyPath: Prefabs.MinimapPrefab
       value: 
       objectReference: {fileID: 114337368606235170, guid: 0f0a2b61d5bf8c646ba5d0b8332d2b2f,
@@ -18504,6 +18509,37 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4423754874850040351}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3832178099203876635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6459357925418680918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f131dd35d296fca4e90efc4ed717e48b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  OffSet: {x: 0, y: 0, z: 0}
+  iconData: {fileID: 11400000, guid: 9ad83d0e358014942b51e8f9857abec0, type: 2}
+  ShowCircleArea: 0
+  CircleAreaRadius: 10
+  CircleAreaColor: {r: 1, g: 1, b: 1, a: 0.9}
+  isInteractable: 0
+  interacableAction: 0
+  InfoItem: This is a Bot too!
+  keepTextAlwaysFacingUp: 0
+  OffScreen: 1
+  opacityBasedDistance: 1
+  maxDistance: 250
+  iconFaceDirection: 0
+  DestroyWithObject: 1
+  BorderOffScreen: 0
+  RenderDelay: 0.5
+  m_Effect: 2
+  CustomIconPrefab: {fileID: 0}
 --- !u!4 &6459357925418680919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
@@ -18589,6 +18625,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7259919498624997451, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997451, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
       propertyPath: Prefabs.MinimapPrefab
       value: 
       objectReference: {fileID: 114337368606235170, guid: 0f0a2b61d5bf8c646ba5d0b8332d2b2f,
@@ -18601,6 +18642,43 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6893118713545217534}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4281002001095740855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7259919498624997449, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+    type: 3}
+  m_PrefabInstance: {fileID: 6893118713545217534}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1730946704537821040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281002001095740855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f131dd35d296fca4e90efc4ed717e48b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  OffSet: {x: 0, y: 0, z: 0}
+  iconData: {fileID: 11400000, guid: 9ad83d0e358014942b51e8f9857abec0, type: 2}
+  ShowCircleArea: 0
+  CircleAreaRadius: 10
+  CircleAreaColor: {r: 1, g: 1, b: 1, a: 0.9}
+  isInteractable: 0
+  interacableAction: 0
+  InfoItem: This is a Bot too!
+  keepTextAlwaysFacingUp: 0
+  OffScreen: 1
+  opacityBasedDistance: 1
+  maxDistance: 250
+  iconFaceDirection: 0
+  DestroyWithObject: 1
+  BorderOffScreen: 0
+  RenderDelay: 0.5
+  m_Effect: 2
+  CustomIconPrefab: {fileID: 0}
 --- !u!1001 &9103399404292059315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18680,6 +18758,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7259919498624997451, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259919498624997451, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+        type: 3}
       propertyPath: Prefabs.MinimapPrefab
       value: 
       objectReference: {fileID: 114337368606235170, guid: 7afcce8855a862146b891821a3a24eb9,
@@ -18692,6 +18775,43 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4, type: 3}
+--- !u!1 &1915630554471803130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7259919498624997449, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,
+    type: 3}
+  m_PrefabInstance: {fileID: 9103399404292059315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1837466688784510716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915630554471803130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f131dd35d296fca4e90efc4ed717e48b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  OffSet: {x: 0, y: 0, z: 0}
+  iconData: {fileID: 11400000, guid: 9ad83d0e358014942b51e8f9857abec0, type: 2}
+  ShowCircleArea: 0
+  CircleAreaRadius: 10
+  CircleAreaColor: {r: 1, g: 1, b: 1, a: 0.9}
+  isInteractable: 0
+  interacableAction: 0
+  InfoItem: This is a Bot too!
+  keepTextAlwaysFacingUp: 0
+  OffScreen: 1
+  opacityBasedDistance: 1
+  maxDistance: 250
+  iconFaceDirection: 0
+  DestroyWithObject: 1
+  BorderOffScreen: 0
+  RenderDelay: 0.5
+  m_Effect: 2
+  CustomIconPrefab: {fileID: 0}
 --- !u!4 &1915630554471803131 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7259919498624997448, guid: 3fdc01483ea310d4f9b0626a4cdcbbb4,

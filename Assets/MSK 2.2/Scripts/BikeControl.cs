@@ -588,8 +588,7 @@ public class BikeControl : MonoBehaviour
 
 
 
-
-
+ 
     void FixedUpdate()
     {
 
@@ -602,6 +601,10 @@ public class BikeControl : MonoBehaviour
         {
             myRigidbody.constraints = RigidbodyConstraints.None;
             myRigidbody.centerOfMass = Vector3.zero;
+            accelFwd = 0;
+            accelBack = 0;
+
+
         }
         else
         {
@@ -638,9 +641,15 @@ public class BikeControl : MonoBehaviour
             }
             else if (controlMode == ControlMode.touch)
             {
-
-                if (accelFwd != 0) { accel = accelFwd; } else { accel = accelBack; }
-                steer = Mathf.MoveTowards(steer, steerAmount, 0.07f);
+                if (!crash)
+                {
+                    if (accelFwd != 0) { accel = accelFwd; } else { accel = accelBack; }
+                     steer = Mathf.MoveTowards(steer, steerAmount, 0.07f);
+                }
+                else
+                {
+                    steer = 0;
+                }
 
             }
 
@@ -1107,7 +1116,7 @@ public class BikeControl : MonoBehaviour
             bikeSounds.IdleEngine.volume = Mathf.Lerp(bikeSounds.IdleEngine.volume, 1.0f, 0.1f);
             bikeSounds.LowEngine.volume = Mathf.Lerp(bikeSounds.LowEngine.volume, 0.0f, 0.1f);
             bikeSounds.HighEngine.volume = Mathf.Lerp(bikeSounds.HighEngine.volume, 0.0f, 0.1f);
-            Debug.LogError("--22-");
+           // Debug.LogError("--22-");
         }
         else
         {
@@ -1118,13 +1127,13 @@ public class BikeControl : MonoBehaviour
             if ((Pitch > PitchDelay || accel > 0) && shiftTime == 0.0f)
             {
                 bikeSounds.LowEngine.volume = Mathf.Lerp(bikeSounds.LowEngine.volume, 0.0f, 0.2f);
-                Debug.LogError("--1-");
+              //  Debug.LogError("--1-");
                 bikeSounds.HighEngine.volume = Mathf.Lerp(bikeSounds.HighEngine.volume, 1.0f, 0.2f);
             }
             else
             {
                 bikeSounds.LowEngine.volume = Mathf.Lerp(bikeSounds.LowEngine.volume, 1.0f, 0.2f);
-                Debug.LogError("---");
+             //   Debug.LogError("---");
                 bikeSounds.HighEngine.volume = Mathf.Lerp(bikeSounds.HighEngine.volume, 0.0f, 0.2f);
             }
 

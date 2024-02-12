@@ -192,7 +192,7 @@ public class _ShopManager : MonoBehaviour
             CashMain.text= PlayerPrefs.GetInt("Cash").ToString();
             PlayerPrefs.SetInt(EntryName + Temp, 1);
             Check_Textures();
-            Implementation.instance.ShowInterstitial();
+          
         }
         else
         {

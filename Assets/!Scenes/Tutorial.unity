@@ -125,7 +125,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 28501a98a1fd9084e87da5d5bb541c51, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &458781
 GameObject:
   m_ObjectHideFlags: 0
@@ -26031,7 +26031,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &568523841
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34896,6 +34896,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scenes: []
+  occlusionCullingData:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   Tutorial: 1
   Gangster:
   - {fileID: 1752817458731361639, guid: 6071e0cb1932e9649a3932edac796e9d, type: 3}
@@ -45201,7 +45206,7 @@ PrefabInstance:
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.78854805
+      value: -0.8511348
       objectReference: {fileID: 0}
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
@@ -45216,17 +45221,17 @@ PrefabInstance:
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.61497325
+      value: -0.5249474
       objectReference: {fileID: 0}
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 277
+      value: 201
       objectReference: {fileID: 0}
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -72
+      value: -122
       objectReference: {fileID: 0}
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
@@ -45241,7 +45246,7 @@ PrefabInstance:
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 435.9
+      value: 423.329
       objectReference: {fileID: 0}
     - target: {fileID: 2843696835052277209, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
@@ -46369,7 +46374,7 @@ MonoBehaviour:
   - Search and kill Red Shirt  gangster around you.
   - Click the Player button to switch character
   - Here you see Your Player health and stamina
-  - Go towards Hummar for a long drive
+  - Go towards Bugatti for a long drive
   TextField: {fileID: 1290542361}
   UIPanel: {fileID: 677339339}
   SkipBtn: {fileID: 568523840}
@@ -47929,17 +47934,17 @@ PrefabInstance:
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.79672
+      value: 0.68987197
       objectReference: {fileID: 0}
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.79672
+      value: 0.68987197
       objectReference: {fileID: 0}
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.79672
+      value: 0.68987197
       objectReference: {fileID: 0}
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
@@ -47959,7 +47964,7 @@ PrefabInstance:
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.72346985
+      value: -0.99991727
       objectReference: {fileID: 0}
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
@@ -47974,17 +47979,17 @@ PrefabInstance:
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.690356
+      value: 0.012863204
       objectReference: {fileID: 0}
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -272.6
       objectReference: {fileID: 0}
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2
+      value: -109.8
       objectReference: {fileID: 0}
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
@@ -47999,7 +48004,7 @@ PrefabInstance:
     - target: {fileID: 2843696834777128885, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 447.31702
+      value: 358.526
       objectReference: {fileID: 0}
     - target: {fileID: 2843696835052277209, guid: fe92e1409d29e8d478e7432b4da965de,
         type: 3}
@@ -52309,11 +52314,11 @@ RectTransform:
   m_Father: {fileID: 1269967855}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15.718}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -880, y: 350}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 121.29999, y: 343.8}
   m_SizeDelta: {x: 110, y: 300}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &1335571657
 GameObject:
   m_ObjectHideFlags: 0
@@ -125189,7 +125194,7 @@ PrefabInstance:
     - target: {fileID: 7687500686804912110, guid: 8ffb5c47b8da58b4f93c23b982c9ab97,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7687500686804912111, guid: 8ffb5c47b8da58b4f93c23b982c9ab97,
         type: 3}

@@ -9,10 +9,11 @@ using Invector;
 using Invector.vShooter;
 using SickscoreGames.HUDNavigationSystem;
 using UnityEngine.AddressableAssets;
-
+using UnityEngine.ResourceManagement.AsyncOperations;
 public class GameManger : MonoBehaviour
 {
     [SerializeField] private List<AssetReference> _scenes = new List<AssetReference>();
+
     public bool Tutorial;
     public GameObject[] Gangster;
     public GameObject[] SpawnPoints;
@@ -195,21 +196,19 @@ public class GameManger : MonoBehaviour
     void delay()
     {
         cm.sm = ThirdPersonPLayer.GetComponent<vShooterManager>();
-        //if (!Tutorial)
-        //{
-        //    hudNav.minimapScale = 1f;
-       // }
-       // cm.sec();
+  
     }
     [HideInInspector]
    public int currentGangster = 0;
     public bool isJump_Act;
+   
     private void Start()
     {
         
         if (!Tutorial)
         { 
            Addressables.LoadSceneAsync(_scenes[1], LoadSceneMode.Additive);
+          //  LoadOcclusionCullingData();
             isJump_Act = false;
         }
         level_failed = false;
@@ -249,7 +248,7 @@ public class GameManger : MonoBehaviour
             cm.Set_NavigationDestination();
            
         }
-       // PlayerPrefs.SetInt("Cash", 6000);
+        PlayerPrefs.SetInt("Cash", 5000);
         CashText.text = PlayerPrefs.GetInt("Cash").ToString();
         SpawnPlayer();
         Invoke("tps_true", 5f);

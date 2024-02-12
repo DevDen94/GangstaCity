@@ -8133,7 +8133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6147c9a6b777e48429b4335f40436f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlMode: 1
+  controlMode: 2
   activeControl: 1
   bikeWheels:
     wheels:
