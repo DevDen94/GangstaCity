@@ -26,7 +26,7 @@ public class CameraLock : MonoBehaviour
             if (GameManger.instance.Tutorial == true)
                 return;
 
-
+            Car_Manager.instance.is_Aim = true;
             Collider[] colliders = Physics.OverlapSphere(transform.position, detectionRadius, LayerMask.GetMask("Enemy"));
 
             if (colliders.Length > 0)
@@ -46,7 +46,7 @@ public class CameraLock : MonoBehaviour
                 if (Vector3.Distance(transform.position, nearestEnemy.transform.position) > 30)
                 {
                     tp.lockTarget = null;
-                    isShooting = false;
+                    isShooting = false; Car_Manager.instance.is_Aim = false;
                 }
             }
         }

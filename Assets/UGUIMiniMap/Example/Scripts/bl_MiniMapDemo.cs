@@ -53,17 +53,22 @@ public class bl_MiniMapDemo : MonoBehaviour
         {
             ChangeRotation();
         }
-        
-        if(ControlFreak2.CF2Input.GetKeyDown(KeyCode.Escape))
+        if (!ControlFreak2.CFCursor.visible)
         {
             ControlFreak2.CFCursor.lockState = CursorLockMode.None;
-            ControlFreak2.CFCursor.visible = true;       
+            ControlFreak2.CFCursor.visible = true;
         }
-        if (ControlFreak2.CF2Input.GetKeyDown(KeyCode.KeypadEnter))
-        {
-            ControlFreak2.CFCursor.lockState = CursorLockMode.Locked;
-            ControlFreak2.CFCursor.visible = false;
-        }
+
+        /*  if(ControlFreak2.CF2Input.GetKeyDown(KeyCode.Escape))
+          {
+              ControlFreak2.CFCursor.lockState = CursorLockMode.None;
+              ControlFreak2.CFCursor.visible = true;       
+          }
+          if (ControlFreak2.CF2Input.GetKeyDown(KeyCode.KeypadEnter))
+          {
+              ControlFreak2.CFCursor.lockState = CursorLockMode.Locked;
+              ControlFreak2.CFCursor.visible = false;
+          }*/
     }
 
     void ChangeRotation()

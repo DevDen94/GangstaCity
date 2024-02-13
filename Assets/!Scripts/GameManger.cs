@@ -248,7 +248,7 @@ public class GameManger : MonoBehaviour
             cm.Set_NavigationDestination();
            
         }
-        PlayerPrefs.SetInt("Cash", 5000);
+    //    PlayerPrefs.SetInt("Cash", 5000);
         CashText.text = PlayerPrefs.GetInt("Cash").ToString();
         SpawnPlayer();
         Invoke("tps_true", 5f);
@@ -292,6 +292,15 @@ public class GameManger : MonoBehaviour
             {
                 a.enabled = false;
             }
+        }
+
+        if (PlayerPrefs.GetInt("Controls") == 1)
+        {
+            RCC_Settings.Instance.mobileController= RCC_Settings.MobileController.SteeringWheel;
+        }
+        if(PlayerPrefs.GetInt("Controls") == 2)
+        {
+            RCC_Settings.Instance.mobileController = RCC_Settings.MobileController.TouchScreen;
         }
 
     }

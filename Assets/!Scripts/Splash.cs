@@ -15,6 +15,7 @@ public class Splash : MonoBehaviour
     private void Start()
     {
       StartCoroutine(LoadSceneAsync());
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
 
   

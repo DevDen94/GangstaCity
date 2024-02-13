@@ -164,6 +164,10 @@ void Destroy_Driver()
         GetComponent<RCC_CarControllerV3>().StartEngine();
         GetComponent<Rigidbody>().isKinematic = false;
         damage_.isDamageEnabled = true;
+        if (MiniMapIcon != null)
+        {
+            MiniMapIcon.SetActive(false);
+        }
         if (Car_Manager.instance.Right_Trigger_Enable)               // This statement only Plays when Player Trigger right side of Car
         {
             Car_Manager.instance.Fade_Screen_Rightdriver.SetActive(true);
@@ -193,10 +197,7 @@ void Destroy_Driver()
         Invoke("AfterDelay", 1f);
         gameObject.tag = "Car";
         PlayerNavigation.instance.player = gameObject.transform;
-        if (MiniMapIcon != null)
-        {
-            MiniMapIcon.SetActive(false);
-        }
+        
         if (PlayerPrefs.GetInt("Music") == 1)
         {
             SRC_Audios.SetActive(true);

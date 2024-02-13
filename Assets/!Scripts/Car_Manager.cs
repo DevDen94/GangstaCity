@@ -267,7 +267,23 @@ public class Car_Manager : MonoBehaviour
         InventoryPanel.SetActive(true);
         Time.timeScale = 0f;
     }
-    
+    [HideInInspector]
+    public bool is_Aim;
+    public GameObject AutoAimBtn;
+    public void WeaponAutoAimOff()
+    {
+        if (is_Aim == false)
+        {
+            CameraLock.instance.isShooting = true;
+            is_Aim = true;
+        }
+        else
+        {
+            CameraLock.instance.isShooting = false;
+            is_Aim = false;
+        }
+        
+    }
     public void PressGun(int no)
     {
         gameManager.BtnClick();
@@ -299,6 +315,10 @@ public class Car_Manager : MonoBehaviour
             Invoke("DestroyWeapon", 1f);
             Icon.gameObject.SetActive(false);
             CameraLock.instance.isShooting = false;
+            if (AutoAimBtn != null)
+            {
+                AutoAimBtn.SetActive(false);
+            }
         }
         else
         {
@@ -312,7 +332,11 @@ public class Car_Manager : MonoBehaviour
             {
                 a.SetActive(true);
             }
-            Icon.gameObject.SetActive(true);
+            Icon.gameObject.SetActive(true); 
+            if (AutoAimBtn != null)
+            {
+                AutoAimBtn.SetActive(true);
+            }
         }
        
     }

@@ -27,7 +27,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private List<AssetReference> _scenes = new List<AssetReference>();
     private void Start()
     {
-       
+        LoadSettings();
         ControlFreak2.CFCursor.lockState = CursorLockMode.None;
         ControlFreak2.CFCursor.visible = true;
         instance = this;
@@ -274,5 +274,72 @@ public class MainMenu : MonoBehaviour
     public void PrivacyPolicy()
     {
         Application.OpenURL("https://darwingames1.blogspot.com/2023/06/privacy-policy.html");
+    }
+
+    
+    public Slider musicVolumeSlider;
+
+   
+
+    public void SetQualityLow()
+    {
+        SetQuality(0); // Low quality index
+    }
+
+    public void SetQualityMedium()
+    {
+        SetQuality(1); // Medium quality index
+    }
+
+    public void SetQualityHigh()
+    {
+        SetQuality(2); // High quality index
+    }
+
+    public void SetMusicVolume()
+    {
+        // Adjust audio listener volume or your audio system accordingly
+        AudioListener.volume = musicVolumeSlider.value;
+        SaveSettings();
+    }
+    public GameObject[] QualityBtns;
+    private void SetQuality(int index)
+    {
+        QualitySettings.SetQualityLevel(index);
+        QualityBtns[index].SetActive(true);
+        SaveSettings();
+    }
+
+   
+    private void LoadSettings()
+    {
+        // Load quality level
+        int qualityLevel = PlayerPrefs.GetInt("QualityLevel", 1); // Default to medium
+        SetQuality(qualityLevel);
+
+        // Load music volume
+        float musicVolume = PlayerPrefs.GetFloat("MusicVolume", 1f); // Default to full volume
+        musicVolumeSlider.value = musicVolume;
+    }
+
+    public void Steering_()
+    {
+        PlayerPrefs.SetInt("Controls", 2);
+    }
+    public void Button_Controls()
+    {
+        PlayerPrefs.SetInt("Controls", 2);
+    }
+    private void SaveSettings()
+    {
+        // Save quality level
+        int qualityLevel = QualitySettings.GetQualityLevel();
+        PlayerPrefs.SetInt("QualityLevel", qualityLevel);
+
+        // Save music volume
+        PlayerPrefs.SetFloat("MusicVolume", musicVolumeSlider.value);
+
+        // Save PlayerPrefs to disk
+        PlayerPrefs.Save();
     }
 }

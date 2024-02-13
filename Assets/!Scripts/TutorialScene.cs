@@ -86,7 +86,7 @@ public class TutorialScene : MonoBehaviour
             return;
         }
         TutorialPanels[counter].SetActive(true);
-        print(counter);
+        //print(counter);
 
          switch (counter)
         {
