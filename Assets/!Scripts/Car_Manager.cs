@@ -69,7 +69,7 @@ public class Car_Manager : MonoBehaviour
 
     public GameObject Nos_Ad;
     public GameObject Nos_Prefab;
-    
+    public GameObject LockAimOff;
   
     public void NosAd()
     {
@@ -287,17 +287,16 @@ public class Car_Manager : MonoBehaviour
     public GameObject AutoAimBtn;
     public void WeaponAutoAimOff()
     {
-        if (is_Aim == false)
-        {
-            CameraLock.instance.isShooting = true;
-            is_Aim = true;
-        }
-        else
-        {
-            CameraLock.instance.isShooting = false;
+        AutoAimBtn.SetActive(false);
+        CameraLock.instance.isShooting = false;
             is_Aim = false;
-        }
         
+    }
+    public void WeaponAutoAimOn()
+    {
+        CameraLock.instance.isShooting = true;
+        AutoAimBtn.SetActive(true);
+        is_Aim = true;
     }
     public void PressGun(int no)
     {
