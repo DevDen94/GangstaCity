@@ -44,6 +44,7 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.SetInt("Controls", 2);
             PlayerPrefs.SetFloat("SelectedFPS",60);
             PlayerPrefs.SetInt("QualityLevel", 1);
+            PlayerPrefs.SetFloat("MusicVolume", 1);
             selectBtn_Mission.interactable = false;
         }
         Submitbtn.SetActive(false);
@@ -56,8 +57,9 @@ public class MainMenu : MonoBehaviour
         float savedFPS = PlayerPrefs.GetFloat("SelectedFPS");
         SetFPS(savedFPS);
         fpsSlider.onValueChanged.AddListener(UpdateFPS);
-        //musicVolumeSlider.onValueChanged.AddListener(Updatevolume);
-
+        float music = PlayerPrefs.GetFloat("MusicVolume");
+        AudioListener.volume = musicVolumeSlider.value;
+        musicVolumeSlider.value= PlayerPrefs.GetFloat("MusicVolume");
         unlockedLevels = PlayerPrefs.GetInt("Unlocked_Mission");
         Mission_Unlocked();
       
@@ -321,10 +323,7 @@ public class MainMenu : MonoBehaviour
         QualityBtns[index].SetActive(true);
         SaveSettings();
     }
-    private void Updatevolume(float dp)
-    {
-        PlayerPrefs.SetFloat("MusicVolume", dp);
-    }
+  
        private void UpdateFPS(float newFPS)
     {
         SetFPS(newFPS);
