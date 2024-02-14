@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6843173470901764381}
   - component: {fileID: 2417542145613365071}
   - component: {fileID: 2191787135778599540}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Matte_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2067980948146802537}
   - component: {fileID: 3274137679395889977}
   - component: {fileID: 3377771749078472792}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Glass_2.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 2743024323119288942}
   - component: {fileID: 6629420626291676673}
   - component: {fileID: 5218966713040595082}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Glass_light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 1970049265445562018}
   - component: {fileID: 6813846755304116630}
   - component: {fileID: 8497612382190302057}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Taillights_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 7646212061625570964}
   - component: {fileID: 5534980288131540906}
   - component: {fileID: 1887904918090331727}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: rl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +662,7 @@ MonoBehaviour:
   COM: {fileID: 6879071307769378129}
   COMAssister: 0
   brakeTorque: 3000
-  downForce: 3000
+  downForce: 100
   speed: 0
   maxspeed: 180
   engineTorqueCurve:
@@ -1046,6 +1046,7 @@ MonoBehaviour:
   policeDeath: {fileID: 0}
   src: {fileID: 0}
   Dis: 0
+  Bike: 0
 --- !u!1 &2338152293431054782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,7 +1058,7 @@ GameObject:
   - component: {fileID: 6099478770237866501}
   - component: {fileID: 6859457021244945965}
   - component: {fileID: 7346545999328268514}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Matte_2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1140,7 +1141,7 @@ GameObject:
   - component: {fileID: 2932771156882713402}
   - component: {fileID: 9145575461509535101}
   - component: {fileID: 8696269264791982385}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: fl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1223,7 +1224,7 @@ GameObject:
   - component: {fileID: 4219734759442379233}
   - component: {fileID: 2448243853601942799}
   - component: {fileID: 4028290635559280239}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: fr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1306,7 +1307,7 @@ GameObject:
   - component: {fileID: 3335814298748687052}
   - component: {fileID: 3966976567021133136}
   - component: {fileID: 42591702442693853}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Matte_2.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1529,7 +1530,7 @@ GameObject:
   - component: {fileID: 86955159266991468}
   - component: {fileID: 1651428713586210859}
   - component: {fileID: 5315618415620303225}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Car_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1623,7 +1624,7 @@ GameObject:
   - component: {fileID: 6887782875420934859}
   - component: {fileID: 7683020932239235449}
   - component: {fileID: 8159631332749843603}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Body_2.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6169,7 +6170,7 @@ MonoBehaviour:
   target: {fileID: 0}
   GunPoint: {fileID: 5452221357144910542}
   fireInterval: 3
-  src: {fileID: 0}
+  src: {fileID: 4478252120483088301}
   shoot: {fileID: 8300000, guid: 78e2e198b7812e745a3223f53432a3d0, type: 3}
   PlayerDeath: 0
   rayThickness: 1
@@ -6496,7 +6497,7 @@ GameObject:
   - component: {fileID: 8682207218992418393}
   - component: {fileID: 5607474873826686565}
   - component: {fileID: 5462404401267591335}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Body_2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6601,7 +6602,7 @@ GameObject:
   - component: {fileID: 5972953591320595326}
   - component: {fileID: 9006372654392214668}
   - component: {fileID: 6201757917546177721}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Glass_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6789,7 +6790,7 @@ GameObject:
   - component: {fileID: 133548114788724182}
   - component: {fileID: 871905107954395177}
   - component: {fileID: 4791777659896320485}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Car_02_Interior_F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6872,7 +6873,7 @@ GameObject:
   - component: {fileID: 4708075398806248255}
   - component: {fileID: 2502891226600757005}
   - component: {fileID: 6625293637234281331}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: rr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7060,7 +7061,7 @@ GameObject:
   - component: {fileID: 6760137950903778442}
   - component: {fileID: 1962483381470817580}
   - component: {fileID: 2026708799111420831}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Glass_2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}

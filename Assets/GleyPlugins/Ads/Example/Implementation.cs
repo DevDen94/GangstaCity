@@ -98,6 +98,14 @@ public class Implementation : MonoBehaviour
                     PlayerPrefs.SetInt("Rewarded_Cash", 2);
                 }
                 break;
+            case 8:
+                if (PlayerPrefs.GetInt("NOS") == 1)
+                {    
+                    PlayerPrefs.SetInt("Reward", 0);
+                    PlayerPrefs.SetInt("NOS", 2);
+                    Car_Manager.instance.Nos_Ad.SetActive(false);
+                }
+                break;
             default:
                 print("NoOne");
                 break;

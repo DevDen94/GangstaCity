@@ -164,6 +164,8 @@ void Destroy_Driver()
         GetComponent<RCC_CarControllerV3>().StartEngine();
         GetComponent<Rigidbody>().isKinematic = false;
         damage_.isDamageEnabled = true;
+        gameObject.tag = "Car";
+        gameObject.layer = LayerMask.NameToLayer("Player");
         if (MiniMapIcon != null)
         {
             MiniMapIcon.SetActive(false);
@@ -180,7 +182,7 @@ void Destroy_Driver()
             GetComponent<RCC_CarControllerV3>().enabled = true;
             Invoke("ExitCarOutBTn", 2f);
             Player.SetInteger("Sit", 2);
-            gameObject.tag = "Car";
+           
             if (PlayerPrefs.GetInt("Music") == 1)
             {
                 SRC_Audios.SetActive(true);
@@ -195,7 +197,6 @@ void Destroy_Driver()
         Door.SetBool("Open", true);
         Player.SetInteger("Sit", 2);
         Invoke("AfterDelay", 1f);
-        gameObject.tag = "Car";
         PlayerNavigation.instance.player = gameObject.transform;
         
         if (PlayerPrefs.GetInt("Music") == 1)
@@ -227,8 +228,9 @@ void Destroy_Driver()
     }
     public void Eject_Car()
     {
-       
-       
+
+        gameObject.tag = "Dirt";
+        gameObject.layer = LayerMask.NameToLayer("Default");
         damage_.isDamageEnabled = false;
         SRC_Audios.SetActive(false);
         Car_Manager.instance.RadioMusic.gameObject.SetActive(false);

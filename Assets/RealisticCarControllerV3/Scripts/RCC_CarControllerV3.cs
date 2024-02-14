@@ -1989,29 +1989,32 @@ public class RCC_CarControllerV3 : RCC_Core {
 
             NoS -= NoSConsumption * Time.fixedDeltaTime;
             NoSRegenerateTime = 0f;
-
+            Car_Manager.instance.Nos_Prefab.SetActive(true);
             if (!NOSSound.isPlaying)
                 NOSSound.Play();
 
         } else {
-
+            
             if (NoS < 100 && NoSRegenerateTime >= 3)
-                NoS += (NoSConsumption / 1.5f) * Time.fixedDeltaTime;
+            {
+              
+                NoS += (NoSConsumption / 1.5f) * Time.fixedDeltaTime; }
 
             NoSRegenerateTime += Time.fixedDeltaTime;
-
+            Car_Manager.instance.Nos_Prefab.SetActive(false);
             if (NOSSound.isPlaying) {
-
+                
                 NOSSound.Stop();
                 blowSound.clip = BlowClip[UnityEngine.Random.Range(0, BlowClip.Length)];
                 blowSound.Play();
-
             }
+           
+               
+         
 
         }
 
     }
-
     /// <summary>
     /// Turbo.
     /// </summary>

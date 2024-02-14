@@ -17,6 +17,7 @@ public class ShopTrigger : MonoBehaviour
             GameManger.instance.PasueBtn.SetActive(false);
             JetSpawner.instance.Button_In.gameObject.SetActive(false);
             Bike_ControlS.instance.BikeInBtn.gameObject.SetActive(false);
+            GameManger.instance.MiniMap_Canvas.SetActive(false);
         }
     }
 }

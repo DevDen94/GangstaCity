@@ -2445,7 +2445,7 @@ MonoBehaviour:
   COM: {fileID: 1216541576083236545}
   COMAssister: 0
   brakeTorque: 3000
-  downForce: 3000
+  downForce: 100
   speed: 0
   maxspeed: 180
   engineTorqueCurve:
@@ -2829,6 +2829,7 @@ MonoBehaviour:
   policeDeath: {fileID: 0}
   src: {fileID: 0}
   Dis: 0
+  Bike: 0
 --- !u!1 &338999372121705765
 GameObject:
   m_ObjectHideFlags: 0
@@ -2840,7 +2841,7 @@ GameObject:
   - component: {fileID: 837533626960195641}
   - component: {fileID: 1553093894305395063}
   - component: {fileID: 3430573168517518758}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Glass_60.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2923,7 +2924,7 @@ GameObject:
   - component: {fileID: 6593595982909682930}
   - component: {fileID: 5774083860436964187}
   - component: {fileID: 9185661607435792297}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Matte_60
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3006,7 +3007,7 @@ GameObject:
   - component: {fileID: 2021768446547189581}
   - component: {fileID: 9029114056656090547}
   - component: {fileID: 3890542039050918108}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Matte_60.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3194,7 +3195,7 @@ GameObject:
   - component: {fileID: 8675469424500327734}
   - component: {fileID: 1649310358616150310}
   - component: {fileID: 942757143411347109}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Glass_60.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3277,7 +3278,7 @@ GameObject:
   - component: {fileID: 6763655325250339089}
   - component: {fileID: 4631056214272958031}
   - component: {fileID: 7818735668447081715}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Wheel_L.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3361,7 +3362,7 @@ GameObject:
   - component: {fileID: 2352575124433355573}
   - component: {fileID: 8298431762649719404}
   - component: {fileID: 3072418006540042012}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Body_60.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3572,7 +3573,7 @@ GameObject:
   - component: {fileID: 2408167560247611294}
   - component: {fileID: 4709284193506297214}
   - component: {fileID: 5988093421683708954}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Glass_60
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3655,7 +3656,7 @@ GameObject:
   - component: {fileID: 1586746069535956823}
   - component: {fileID: 9017681986207912850}
   - component: {fileID: 69338668301528995}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Car_2_AI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3750,7 +3751,7 @@ GameObject:
   - component: {fileID: 2512063113393977052}
   - component: {fileID: 1453175433434864846}
   - component: {fileID: 3943131769359524127}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: break_R.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4322,7 +4323,7 @@ MonoBehaviour:
   target: {fileID: 0}
   GunPoint: {fileID: 2927394501100425575}
   fireInterval: 3
-  src: {fileID: 0}
+  src: {fileID: 9118405903122748458}
   shoot: {fileID: 8300000, guid: 78e2e198b7812e745a3223f53432a3d0, type: 3}
   PlayerDeath: 0
   rayThickness: 1
@@ -5515,7 +5516,7 @@ Transform:
   m_GameObject: {fileID: 2927394501100419735}
   m_LocalRotation: {x: -0.00000014106499, y: 0.000000043711385, z: -3.8212536e-15,
     w: 1}
-  m_LocalPosition: {x: 0.07965084, y: 0.03138871, z: -0.3892212}
+  m_LocalPosition: {x: 0.08, y: 0.031, z: 0.242}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8655,7 +8656,7 @@ GameObject:
   - component: {fileID: 2585110769796781118}
   - component: {fileID: 7074472370676822516}
   - component: {fileID: 8919591998013473872}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Tailllights_60
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8738,7 +8739,7 @@ GameObject:
   - component: {fileID: 6148027578314346008}
   - component: {fileID: 3362034696233315740}
   - component: {fileID: 306625980588819433}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Wheel_Back_L.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8821,7 +8822,7 @@ GameObject:
   - component: {fileID: 4288722748218643888}
   - component: {fileID: 7068826236682402050}
   - component: {fileID: 2332257126845619683}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Matte_60.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8904,7 +8905,7 @@ GameObject:
   - component: {fileID: 8056453290829380827}
   - component: {fileID: 6439777093825395537}
   - component: {fileID: 5877644433566939909}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Matte_60.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8987,7 +8988,7 @@ GameObject:
   - component: {fileID: 7444126161952154013}
   - component: {fileID: 883287793326881062}
   - component: {fileID: 1865318073172115820}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Car_60_Interior_I
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9070,7 +9071,7 @@ GameObject:
   - component: {fileID: 1871825204806342434}
   - component: {fileID: 7345036562680204420}
   - component: {fileID: 6988008339018613777}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Wheel_Back_R.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9153,7 +9154,7 @@ GameObject:
   - component: {fileID: 7306631776394769254}
   - component: {fileID: 5842931913135690737}
   - component: {fileID: 662597261917394798}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: break_L.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9236,7 +9237,7 @@ GameObject:
   - component: {fileID: 1895091397868214231}
   - component: {fileID: 7116880734289077300}
   - component: {fileID: 8437709963264414610}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Body_60.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9427,7 +9428,7 @@ GameObject:
   - component: {fileID: 1020222397927954050}
   - component: {fileID: 3187670464885842309}
   - component: {fileID: 4458997958909950169}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Wheel_R.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9510,7 +9511,7 @@ GameObject:
   - component: {fileID: 2496393309390468528}
   - component: {fileID: 460229751510092277}
   - component: {fileID: 2822172164355616216}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Matte_60.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}

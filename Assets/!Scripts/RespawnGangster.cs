@@ -126,10 +126,7 @@ public class RespawnGangster : MonoBehaviour
         Invoke("EnableTps", 5f);
         gm.AssignPlayerReference();
         
-        if (!gm.Tutorial)
-        {
-            Implementation.instance.ShowInterstitial();
-        }
+      
        
     }
     void ShopActive()

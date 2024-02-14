@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 5916472777530910073}
   - component: {fileID: 5410173105900421244}
   - component: {fileID: 118357993789685025}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: WheelBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,7 +672,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3867144314418172079}
   - component: {fileID: 7648918485963831759}
-  m_Layer: 0
+  - component: {fileID: 8584176674601100022}
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Car
   m_Icon: {fileID: 0}
@@ -706,8 +707,32 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.24933615, y: 0.8134825, z: 1.881988}
-  m_Center: {x: -0.003018361, y: 0.1090492, z: -0.009174228}
+  m_Size: {x: 0.24933615, y: 1.1967614, z: 1.881988}
+  m_Center: {x: -0.0030183648, y: 0.30068862, z: -0.009174227}
+--- !u!114 &8584176674601100022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538313082095238270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc123360c2330f42b10243c23d49d9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageValue: 100
+  slowMotionDuration: 4
+  isPlayer: 0
+  isDamageEnabled: 1
+  Car_Damge: {fileID: 0}
+  flame: {fileID: 0}
+  shoot_Human: {fileID: 0}
+  Myself_Police: 0
+  policeDeath: {fileID: 0}
+  src: {fileID: 0}
+  Dis: 0
+  Bike: 1
 --- !u!1 &566605455459093663
 GameObject:
   m_ObjectHideFlags: 0
@@ -17853,7 +17878,7 @@ GameObject:
   - component: {fileID: 964922990983506315}
   - component: {fileID: 6924547234958205188}
   - component: {fileID: 3172069396104801434}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: WheelFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}

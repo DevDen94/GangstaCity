@@ -90,6 +90,7 @@ public class GameManger : MonoBehaviour
     public GameObject[] MoneyEffect;
     public AudioClip Money;
     public GameObject PasueBtn;
+    public GameObject MiniMap_Canvas;
     public void DollarParticles()
     {
         foreach(GameObject a in MoneyEffect)
@@ -138,7 +139,7 @@ public class GameManger : MonoBehaviour
     }
     public void Win_Mission()
     {
-   
+        MiniMap_Canvas.SetActive(false);
         nav.GameEndl = true;
         MissionComplete.SetActive(true);
         src.PlayOneShot(WinSound);
@@ -158,7 +159,7 @@ public class GameManger : MonoBehaviour
     }
     public void Loose_Mission()
     {
-   
+        MiniMap_Canvas.SetActive(false);
         PlayerPrefs.SetInt("M_", 0);
         nav.GameEndl = true;
         MissionFailed.SetActive(true);
@@ -231,7 +232,7 @@ public class GameManger : MonoBehaviour
             return;
         }
 
-       
+        print(selected_Mission);
         PlayerPrefs.SetInt("M_", 0);
         PlayerPrefs.SetInt("MissionEnable", 0);
         if (PlayerPrefs.GetInt("Mode_Select") == 1)
@@ -294,6 +295,13 @@ public class GameManger : MonoBehaviour
             }
         }
 
+        float musicVolume = PlayerPrefs.GetFloat("MusicVolume");
+        foreach (AudioSource a in Musiclistener)
+        {
+            a.volume = musicVolume;
+
+        }
+
         if (PlayerPrefs.GetInt("Controls") == 1)
         {
             RCC_Settings.Instance.mobileController= RCC_Settings.MobileController.SteeringWheel;
@@ -322,13 +330,14 @@ public class GameManger : MonoBehaviour
 
     public void Resume()
     {
+        MiniMap_Canvas.SetActive(true);
         Time.timeScale = 1f;
         src.PlayOneShot(btnCLIP);
 
     }
     public void Pasued_()
     {
-
+        MiniMap_Canvas.SetActive(false);
         src.PlayOneShot(btnCLIP);
         Time.timeScale = 0f;
     }

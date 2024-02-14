@@ -19,11 +19,19 @@ public class Bike_ControlS : MonoBehaviour
     public Camera tps;
     public string BikeName; public GameObject BuyPanel;
     public bool gira_gya;
+    public GameObject BikeDamage;
+    public Slider BikeHealth;
+   
+    public void Your_CurrentCar_Health(int dm)
+    {
+      //  BikeHealth.value = dm;
+    }
     private void Start()
     {
         instance = this;
         BikeInBtn.onClick.AddListener(SpawnPlayerBike);
         BikeOffBtn.onClick.AddListener(RideOff);
+        
     }
     void SpawnPlayerBike()
     {
@@ -40,11 +48,13 @@ public class Bike_ControlS : MonoBehaviour
                 a.SetActive(false);
             }
             gm.OFF_TPS();
+          
             fade_Screen.SetActive(true);
             TempBike.SetActive(false);
             BikeCanvas.SetActive(true);
             Bike_cam.gameObject.SetActive(true);
             ActiveBike = Instantiate(ReferenceBike, SpawnPostion.transform.position, SpawnPostion.transform.rotation);
+           
             Bike_cam.target = ActiveBike.transform;
             playerNav.player = ActiveBike.transform;
             BikeInBtn.gameObject.SetActive(false);
@@ -54,6 +64,7 @@ public class Bike_ControlS : MonoBehaviour
             Car_Manager.instance.Carbutton_IN.gameObject.SetActive(false);
             TankSpawner.instance.TankIn.gameObject.SetActive(false);
             JetSpawner.instance.Button_In.gameObject.SetActive(false);
+
         }
     }
     public void BikeBuySucessfull()
@@ -86,6 +97,7 @@ public class Bike_ControlS : MonoBehaviour
     }
     void RideOff()
     {
+       
         TempBike.SetActive(true);
         TempBike.transform.SetPositionAndRotation(ActiveBike.transform.position, ActiveBike.transform.rotation);
         Destroy(ActiveBike);

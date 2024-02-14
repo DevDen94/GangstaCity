@@ -41,6 +41,9 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.SetInt("Cash", 1000);
             PlayerPrefs.SetInt("qabe", 12);
             PlayerPrefs.SetInt("Tut_Called", 0);
+            PlayerPrefs.SetInt("Controls", 2);
+            PlayerPrefs.SetFloat("SelectedFPS",60);
+            PlayerPrefs.SetInt("QualityLevel", 1);
             selectBtn_Mission.interactable = false;
         }
         Submitbtn.SetActive(false);
@@ -49,6 +52,11 @@ public class MainMenu : MonoBehaviour
         {
             selectBtn_Mission.interactable = true;
         }
+        // set fpssssssssssssssssssssssssss//
+        float savedFPS = PlayerPrefs.GetFloat("SelectedFPS");
+        SetFPS(savedFPS);
+        fpsSlider.onValueChanged.AddListener(UpdateFPS);
+        //musicVolumeSlider.onValueChanged.AddListener(Updatevolume);
 
         unlockedLevels = PlayerPrefs.GetInt("Unlocked_Mission");
         Mission_Unlocked();
@@ -265,21 +273,24 @@ public class MainMenu : MonoBehaviour
     }
     public void MoreGames()
     {
-        Application.OpenURL("https://play.google.com/store/apps/dev?id=5659235520105216655");
+        Implementation.instance.ShowInterstitial();
+           Application.OpenURL("https://play.google.com/store/apps/dev?id=5659235520105216655");
     }
     public void RateUs()
     {
+        Implementation.instance.ShowInterstitial();
         Application.OpenURL("https://play.google.com/store/apps/details?id=com.darwingames.gangstermafia.crimecity.shooting.games");
     }
     public void PrivacyPolicy()
     {
+        Implementation.instance.ShowInterstitial();
         Application.OpenURL("https://darwingames1.blogspot.com/2023/06/privacy-policy.html");
     }
 
     
     public Slider musicVolumeSlider;
+    public Slider fpsSlider;
 
-   
 
     public void SetQualityLow()
     {
@@ -300,6 +311,7 @@ public class MainMenu : MonoBehaviour
     {
         // Adjust audio listener volume or your audio system accordingly
         AudioListener.volume = musicVolumeSlider.value;
+        PlayerPrefs.SetFloat("MusicVolume", musicVolumeSlider.value);
         SaveSettings();
     }
     public GameObject[] QualityBtns;
@@ -309,22 +321,50 @@ public class MainMenu : MonoBehaviour
         QualityBtns[index].SetActive(true);
         SaveSettings();
     }
+    private void Updatevolume(float dp)
+    {
+        PlayerPrefs.SetFloat("MusicVolume", dp);
+    }
+       private void UpdateFPS(float newFPS)
+    {
+        SetFPS(newFPS);
 
-   
+        // Save the new FPS value to PlayerPrefs
+        PlayerPrefs.SetFloat("SelectedFPS", newFPS);
+        PlayerPrefs.Save();
+    }
+
+    private void SetFPS(float fps)
+    {
+        // Set your game's target frame rate
+        QualitySettings.vSyncCount = 0; // Disable VSync
+        Application.targetFrameRate = Mathf.RoundToInt(fps);
+    }
     private void LoadSettings()
     {
         // Load quality level
-        int qualityLevel = PlayerPrefs.GetInt("QualityLevel", 1); // Default to medium
+        int qualityLevel = PlayerPrefs.GetInt("QualityLevel"); // Default to medium
         SetQuality(qualityLevel);
-
-        // Load music volume
-        float musicVolume = PlayerPrefs.GetFloat("MusicVolume", 1f); // Default to full volume
+        fpsSlider.value = PlayerPrefs.GetFloat("SelectedFPS");
+        float musicVolume = PlayerPrefs.GetFloat("MusicVolume"); // Default to full volume
         musicVolumeSlider.value = musicVolume;
+        if (PlayerPrefs.GetInt("Controls") == 1)
+        {
+            steeringSel.SetActive(true);
+            btn_sel.SetActive(false);
+        }
+        else
+        {
+            steeringSel.SetActive(false);
+            btn_sel.SetActive(true);
+        }
     }
+    public GameObject steeringSel;
+    public GameObject btn_sel;
 
     public void Steering_()
     {
-        PlayerPrefs.SetInt("Controls", 2);
+        PlayerPrefs.SetInt("Controls", 1);
     }
     public void Button_Controls()
     {

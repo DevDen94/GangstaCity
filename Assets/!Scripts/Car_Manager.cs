@@ -66,6 +66,18 @@ public class Car_Manager : MonoBehaviour
     public GameObject Fade_Screen_Rightdriver;
     public string Car_Name;
     public Slider CarHealth;
+
+    public GameObject Nos_Ad;
+    public GameObject Nos_Prefab;
+    
+  
+    public void NosAd()
+    {
+        PlayerPrefs.SetInt("Reward", 8);
+        PlayerPrefs.SetInt("NOS", 1);
+        Implementation.instance.ShowRewardedVideo();
+
+    }
     public void Your_CurrentCar_Health(int dm)
     {
         CarHealth.value = dm;
@@ -143,7 +155,10 @@ public class Car_Manager : MonoBehaviour
         instance = this;
         list.tpCameraStates[0].defaultDistance = 2.2f;
         list.tpCameraStates[0].height = 1f;
-     
+        if (PlayerPrefs.GetInt("NOS") == 2)
+        {
+            Nos_Ad.SetActive(false);
+        }
        // GameManger.instance.TPS_Controls[4] = GameObject.FindGameObjectWithTag("Clone");
     }
 

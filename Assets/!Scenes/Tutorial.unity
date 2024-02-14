@@ -26031,7 +26031,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &568523841
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34896,11 +34896,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scenes: []
-  occlusionCullingData:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   Tutorial: 1
   Gangster:
   - {fileID: 1752817458731361639, guid: 6071e0cb1932e9649a3932edac796e9d, type: 3}
@@ -34966,6 +34961,7 @@ MonoBehaviour:
   - {fileID: 0}
   Money: {fileID: 0}
   PasueBtn: {fileID: 0}
+  MiniMap_Canvas: {fileID: 0}
   Jump_Flag: 0
   GamePlayAddress: {fileID: 0}
   MainMenuAddress: {fileID: 0}
@@ -35062,6 +35058,8 @@ MonoBehaviour:
   FunArcadeBtn: {fileID: 0}
   Icon: {fileID: 0}
   sp: {fileID: 0}
+  is_Aim: 0
+  AutoAimBtn: {fileID: 0}
   PoliceSystem: {fileID: 0}
   PolicePanel: {fileID: 1704638231}
   PoliceCop_On: 0
@@ -46374,7 +46372,7 @@ MonoBehaviour:
   - Search and kill Red Shirt  gangster around you.
   - Click the Player button to switch character
   - Here you see Your Player health and stamina
-  - Go towards Bugatti for a long drive
+  - Go towards Car for a long drive
   TextField: {fileID: 1290542361}
   UIPanel: {fileID: 677339339}
   SkipBtn: {fileID: 568523840}
@@ -50127,7 +50125,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213723770}
-  m_LocalRotation: {x: 0.123514615, y: -0.0892836, z: -0.027093047, w: 0.9879466}
+  m_LocalRotation: {x: 0.12351462, y: -0.0892836, z: -0.02709305, w: 0.9879466}
   m_LocalPosition: {x: -0.45440924, y: 0, z: -0.000000011175871}
   m_LocalScale: {x: 1.0000001, y: 1.0000002, z: 0.9999998}
   m_ConstrainProportionsScale: 0
@@ -50322,7 +50320,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235331312}
-  m_LocalRotation: {x: -0.07242228, y: -0.06413608, z: 0.02333505, w: 0.9950363}
+  m_LocalRotation: {x: -0.07242227, y: -0.06413608, z: 0.023335049, w: 0.9950363}
   m_LocalPosition: {x: -0.4544092, y: 0.00000005960465, z: 0.00000008568168}
   m_LocalScale: {x: 0.99999976, y: 1.0000002, z: 1}
   m_ConstrainProportionsScale: 0
@@ -51056,151 +51054,6 @@ Transform:
   m_Father: {fileID: 332858165}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1276446334
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1276446335}
-  - component: {fileID: 1276446338}
-  - component: {fileID: 1276446337}
-  - component: {fileID: 1276446336}
-  m_Layer: 0
-  m_Name: Back
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1276446335
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276446334}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4087895523536542664}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 155, y: 87}
-  m_SizeDelta: {x: 265, y: 132}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1276446336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276446334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1276446337}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4087895523536542679}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 754756103}
-        m_TargetAssemblyTypeName: RespawnGangster, Assembly-CSharp
-        m_MethodName: CloseGangsterClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1276446337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276446334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f236518724fcdd142919c66baf9cf421, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1276446338
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276446334}
-  m_CullTransparentMesh: 1
 --- !u!1 &1277489538
 GameObject:
   m_ObjectHideFlags: 0
@@ -55278,7 +55131,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476349843}
-  m_LocalRotation: {x: -0.07242228, y: -0.06413608, z: 0.02333505, w: 0.9950363}
+  m_LocalRotation: {x: -0.07242227, y: -0.06413608, z: 0.023335049, w: 0.9950363}
   m_LocalPosition: {x: -0.4544092, y: 0.00000005960465, z: 0.00000008568168}
   m_LocalScale: {x: 0.99999976, y: 1.0000002, z: 1}
   m_ConstrainProportionsScale: 0
@@ -74041,7 +73894,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960762361}
-  m_LocalRotation: {x: 0.123514615, y: -0.0892836, z: -0.027093047, w: 0.9879466}
+  m_LocalRotation: {x: 0.12351462, y: -0.0892836, z: -0.02709305, w: 0.9879466}
   m_LocalPosition: {x: -0.45440924, y: 0, z: -0.000000011175871}
   m_LocalScale: {x: 1.0000001, y: 1.0000002, z: 0.9999998}
   m_ConstrainProportionsScale: 0
@@ -108235,6 +108088,7 @@ MonoBehaviour:
   policeDeath: {fileID: 8300000, guid: b0f275b1c633093438e3b149da9f9eb2, type: 3}
   src: {fileID: 0}
   Dis: 0
+  Bike: 0
 --- !u!65 &5066085290954366228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125194,7 +125048,7 @@ PrefabInstance:
     - target: {fileID: 7687500686804912110, guid: 8ffb5c47b8da58b4f93c23b982c9ab97,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7687500686804912111, guid: 8ffb5c47b8da58b4f93c23b982c9ab97,
         type: 3}
@@ -139277,6 +139131,11 @@ PrefabInstance:
     - target: {fileID: 5007988833031176589, guid: 7ddc8692de513bb4495eb18c4853d548,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5007988833031176595, guid: 7ddc8692de513bb4495eb18c4853d548,
+        type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

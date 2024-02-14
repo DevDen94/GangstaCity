@@ -48,6 +48,12 @@ public class CutSceneManager : MonoBehaviour
                 
             }
         }
+        float musicVolume = PlayerPrefs.GetFloat("MusicVolume");
+        foreach (AudioSource a in Musiclistener)
+        {
+            a.volume = musicVolume;
+
+        }
 
     }
     public AudioSource[] Musiclistener;

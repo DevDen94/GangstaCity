@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6208892258205535817}
   - component: {fileID: 3680752246883343916}
   - component: {fileID: 4632007795908971786}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Matte_11.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 1308057145148692047}
   - component: {fileID: 5565234873539487701}
   - component: {fileID: 2007358297440706854}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Taillights_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 5475617969404383008}
   - component: {fileID: 6943592438273453771}
   - component: {fileID: 959310438930663495}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Matte_11.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 8564744126692667634}
   - component: {fileID: 6761132223043007847}
   - component: {fileID: 5155958640592366515}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Matte_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 8569244598088519983}
   - component: {fileID: 7505730473172715273}
   - component: {fileID: 4550554019563304743}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Glass_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +872,7 @@ MonoBehaviour:
   COM: {fileID: 5708473780270998719}
   COMAssister: 0
   brakeTorque: 3000
-  downForce: 3000
+  downForce: 1000
   speed: 0
   maxspeed: 180
   engineTorqueCurve:
@@ -1256,6 +1256,7 @@ MonoBehaviour:
   policeDeath: {fileID: 0}
   src: {fileID: 0}
   Dis: 0
+  Bike: 0
 --- !u!1 &4116202335496114116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,7 +1268,7 @@ GameObject:
   - component: {fileID: 8639118877940124464}
   - component: {fileID: 4009474085613286767}
   - component: {fileID: 4947983764930097450}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Glass_11.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1350,7 +1351,7 @@ GameObject:
   - component: {fileID: 6879483607205596598}
   - component: {fileID: 344272385444871343}
   - component: {fileID: 118463253821411660}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Car_11_Interior_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1434,7 +1435,7 @@ GameObject:
   - component: {fileID: 1080949621730882572}
   - component: {fileID: 1593618271571692138}
   - component: {fileID: 7347857401150628103}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Body_11.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1571,7 +1572,7 @@ GameObject:
   - component: {fileID: 5796324011780591812}
   - component: {fileID: 1625044738309502103}
   - component: {fileID: 3910349820887176589}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: fr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2176,7 +2177,7 @@ MonoBehaviour:
   target: {fileID: 0}
   GunPoint: {fileID: 5610363418070913991}
   fireInterval: 3
-  src: {fileID: 0}
+  src: {fileID: 1097856502517099294}
   shoot: {fileID: 8300000, guid: 78e2e198b7812e745a3223f53432a3d0, type: 3}
   PlayerDeath: 0
   rayThickness: 1
@@ -2277,7 +2278,7 @@ Transform:
   m_GameObject: {fileID: 5610363418070939703}
   m_LocalRotation: {x: -0.00000014106499, y: 0.000000043711385, z: -3.8212536e-15,
     w: 1}
-  m_LocalPosition: {x: -0.07000732, y: 0.19406368, z: 0.06549068}
+  m_LocalPosition: {x: -0.07, y: -0.099, z: 0.749}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6410,7 +6411,7 @@ GameObject:
   - component: {fileID: 3725499990177506075}
   - component: {fileID: 1181648649217089171}
   - component: {fileID: 4570741910939925952}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Matte_11.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6493,7 +6494,7 @@ GameObject:
   - component: {fileID: 5616448784670106633}
   - component: {fileID: 6258071872873114040}
   - component: {fileID: 8202505270047443658}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Glass_11.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6576,7 +6577,7 @@ GameObject:
   - component: {fileID: 4538738309845477158}
   - component: {fileID: 5188846964233989400}
   - component: {fileID: 6417897803673225951}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Matte_11.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6694,7 +6695,7 @@ GameObject:
   - component: {fileID: 5315956649290103854}
   - component: {fileID: 667243656842319640}
   - component: {fileID: 6995237243133570485}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: fl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6777,7 +6778,7 @@ GameObject:
   - component: {fileID: 4032419409856135002}
   - component: {fileID: 9055856565998268022}
   - component: {fileID: 2163456248457443531}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Car_5 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6871,7 +6872,7 @@ GameObject:
   - component: {fileID: 1432215906655777217}
   - component: {fileID: 5076335317180923754}
   - component: {fileID: 6638631854669227395}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: rr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6954,7 +6955,7 @@ GameObject:
   - component: {fileID: 6055294557853866983}
   - component: {fileID: 3640544882480994689}
   - component: {fileID: 3201696797491995471}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Body_11.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7145,7 +7146,7 @@ GameObject:
   - component: {fileID: 1747873229767675793}
   - component: {fileID: 6512189107735247396}
   - component: {fileID: 1830107397101586241}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Glass_light.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7228,7 +7229,7 @@ GameObject:
   - component: {fileID: 8627680175748319592}
   - component: {fileID: 5777467122003670549}
   - component: {fileID: 2196873711759680622}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: rl
   m_TagString: Untagged
   m_Icon: {fileID: 0}

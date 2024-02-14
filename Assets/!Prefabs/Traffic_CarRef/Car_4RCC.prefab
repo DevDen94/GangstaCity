@@ -1672,6 +1672,7 @@ MonoBehaviour:
   Weapon_Main: {fileID: 523534510523838561}
   PlayerShooter: {fileID: 6516733896858621168}
   is_HummerSpecial: 0
+  MiniMapIcon: {fileID: 0}
   PlayerCar: 0
   TutorialObject: {fileID: 0}
   NextTutorialObject: {fileID: 0}
@@ -1809,6 +1810,7 @@ MonoBehaviour:
   policeDeath: {fileID: 0}
   src: {fileID: 0}
   Dis: 0
+  Bike: 0
 --- !u!1 &4184730344980256340
 GameObject:
   m_ObjectHideFlags: 0

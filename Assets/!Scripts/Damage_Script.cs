@@ -134,6 +134,12 @@ public class Damage_Script : MonoBehaviour
                 if (playerdeath)
                     return;
 
+                if (Bike)
+                {
+                    Time.timeScale = 0f;
+                    GameManger.instance.Loose_Mission();
+                    return;
+                }
                 Car_Manager.instance.target_PoliceCar = null;
                 GetComponent<Rigidbody>().isKinematic = true;
                 GetComponent<RCC_CarControllerV3>().enabled = false;
@@ -177,6 +183,11 @@ public class Damage_Script : MonoBehaviour
             Car_Manager.instance.CarHit.SetActive(true);
             Car_Manager.instance.Your_CurrentCar_Health(damageValue);
             
+        }else if (Bike)
+        {
+            damageValue = damageValue - 20;
+            Bike_ControlS.instance.BikeDamage.SetActive(true);
+            Bike_ControlS.instance.Your_CurrentCar_Health(damageValue);
         }
         else
         {
@@ -187,5 +198,5 @@ public class Damage_Script : MonoBehaviour
        
         
     }
-
+    public bool Bike;
 }

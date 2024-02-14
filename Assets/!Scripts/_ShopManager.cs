@@ -153,6 +153,7 @@ public class _ShopManager : MonoBehaviour
         GameManger.instance.Is_Shop = false;
         GameManger.instance.ShopGameObject.SetActive(false);
         GameManger.instance.ShopTrigger.SetActive(true);
+        GameManger.instance.MiniMap_Canvas.SetActive(true);
         
     }
   
