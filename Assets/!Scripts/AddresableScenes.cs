@@ -17,8 +17,9 @@ public class AddresableScenes : MonoBehaviour
     public Image DownloadProgressImage;
     [SerializeField] private List<AssetReference> _scenes = new List<AssetReference>();
     private bool is_1st;
-  public  void Start()
+     public void Start()
     {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
         if (!PlayerPrefs.HasKey("Data_Download"))
         {
             PlayerPrefs.SetInt("Data_Download", 1);

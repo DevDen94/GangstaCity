@@ -15,7 +15,7 @@ public class MissionTrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
           //  m.Load_Tasklist(m.TaskNo);
             gameObject.SetActive(false);
@@ -25,10 +25,11 @@ public class MissionTrigger : MonoBehaviour
             PlayerPrefs.SetInt("MissionEnable", 1);
             PlayerPrefs.SetInt("M_", 1);
             inBtns.SetActive(false);
+            GameManger.instance.MiniMap_Off();
            
 
         }
-        if (other.gameObject.tag == "Car")
+      /*  if (other.gameObject.tag == "Car")
         {
             PlayerPrefs.SetInt("MissionEnable", 1);
             gameObject.SetActive(false);
@@ -40,7 +41,7 @@ public class MissionTrigger : MonoBehaviour
             PlayerPrefs.SetInt("TPS", 0);
             PlayerPrefs.SetInt("M_", 1);
 
-        }
+        }*/
     }
  
 }

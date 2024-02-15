@@ -46,7 +46,8 @@ public class FinishTrigger : MonoBehaviour
                 GameManger.instance.Win_Mission();
             }
             LastScene();
-           
+            GameManger.instance.MiniMap_Off();
+            GameManger.instance.PasueBtn.SetActive(false);
         }
     }
 

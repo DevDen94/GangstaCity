@@ -18,6 +18,9 @@ public class tank_Trigger : MonoBehaviour
             TankSpawner.instance.ReferenceTank = Referencetank;
             TankSpawner.instance.TempTank = gameObject;
             TankSpawner.instance.TankName = tankName;
+            JetSpawner.instance.Button_In.gameObject.SetActive(false);
+            Car_Manager.instance.Carbutton_IN.gameObject.SetActive(false);
+            Bike_ControlS.instance.BikeInBtn.gameObject.SetActive(false);
         }
     }
 

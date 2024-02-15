@@ -665,7 +665,7 @@ MonoBehaviour:
   COM: {fileID: 3865543732095488017}
   COMAssister: 0
   brakeTorque: 3000
-  downForce: 100
+  downForce: 1000
   speed: 0
   maxspeed: 180
   engineTorqueCurve:

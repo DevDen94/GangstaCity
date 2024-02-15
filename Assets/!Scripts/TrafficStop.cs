@@ -30,7 +30,7 @@ public class TrafficStop : MonoBehaviour
     }
     void Set_Sounds()
     {
-        if (PlayerPrefs.GetInt("Music") == 1)
+      /*  if (PlayerPrefs.GetInt("Music") == 1)
         {
             foreach (AudioSource a in Musiclistener)
             {
@@ -43,7 +43,7 @@ public class TrafficStop : MonoBehaviour
             {
                 a.enabled = false;
             }
-        }
+        }*/
 
     }
     public AudioSource[] Musiclistener;

@@ -24,6 +24,7 @@ public class DetectCollision : MonoBehaviour
         }
 
         return false;
+        Debug.LogError("bdjska");
     }
 
     //check if there is a wall to crash into

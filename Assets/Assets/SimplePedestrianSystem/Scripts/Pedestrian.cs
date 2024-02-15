@@ -148,15 +148,37 @@ namespace PedestrianSystem{
 			}
             if (col.gameObject.tag == "Car")
             {
-				Debug.LogError("CarHit");
-				Vector3 forceDirection = (transform.position - col.transform.position).normalized;
-				GetComponent<Rigidbody>().AddForce(forceDirection * 20f, ForceMode.Impulse);
-				anim.SetInteger("MoveState", 10);
-				box.enabled = false;
-				enabled = false;
-				isDead = true;
-				Src.PlayOneShot(DeathSound);
-				Invoke("Destroy_", 10f);
+				if (col.gameObject.GetComponent<RCC_CarControllerV3>())
+				{
+					if (col.gameObject.GetComponent<RCC_CarControllerV3>().speed >= 15)
+					{
+						Vector3 forceDirection = (transform.position - col.transform.position).normalized;
+						GetComponent<Rigidbody>().AddForce(forceDirection * 20f, ForceMode.Impulse);
+						anim.SetInteger("MoveState", 10);
+						box.enabled = false;
+						enabled = false;
+						isDead = true;
+						Src.PlayOneShot(DeathSound);
+						Invoke("Destroy_", 10f);
+					}
+					else
+					{
+						isidle = true;
+						anim.SetInteger("MoveState", 0);
+					}
+                }
+                else
+                {
+					Vector3 forceDirection = (transform.position - col.transform.position).normalized;
+					GetComponent<Rigidbody>().AddForce(forceDirection * 20f, ForceMode.Impulse);
+					anim.SetInteger("MoveState", 10);
+					box.enabled = false;
+					enabled = false;
+					isDead = true;
+					Src.PlayOneShot(DeathSound);
+					Invoke("Destroy_", 10f);
+				}
+                
 			}
 			if (col.gameObject.tag == "Waypoint") {
 				target = col.GetComponent<Waypoint>().nextWaypoint.transform;

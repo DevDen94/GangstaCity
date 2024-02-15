@@ -15,7 +15,7 @@ public class Drive_Trigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             if (Is_hummer)
             {
@@ -32,7 +32,13 @@ public class Drive_Trigger : MonoBehaviour
             }
            
             Car_Manager.instance.Carbutton_IN.SetActive(true);
-         
+            if (!GameManger.instance.Tutorial) 
+            {
+                JetSpawner.instance.Button_In.gameObject.SetActive(false);
+                TankSpawner.instance.TankIn.gameObject.SetActive(false);
+                Bike_ControlS.instance.BikeInBtn.gameObject.SetActive(false);
+            }
+            
             Car_Manager.instance.AI_Car = this;
             Car_Manager.instance.Car = gameObject.transform.parent.GetComponent<Check_Building>();
             if (Is_RightTrigger)
@@ -48,7 +54,7 @@ public class Drive_Trigger : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             Car_Manager.instance.Carbutton_IN.SetActive(false);
             Car_Manager.instance.AI_Car = null;

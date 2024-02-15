@@ -9,7 +9,7 @@ public class Timer_Destroy : MonoBehaviour
     void Start()
     {
         Invoke("Delay", timer);
-        if (PlayerPrefs.GetInt("Music") == 1)
+        if (PlayerPrefs.GetInt("SFX") == 1)
         {
             foreach (AudioSource a in Musiclistener)
             {

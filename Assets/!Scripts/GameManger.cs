@@ -109,6 +109,14 @@ public class GameManger : MonoBehaviour
         }
     }
 
+    public void MiniMap_Off()
+    {
+        MiniMap_Canvas.SetActive(false);
+    }
+    public void MiniMap_On()
+    {
+        MiniMap_Canvas.SetActive(true);
+    }
     public void Sprint_Call()
     {
        
@@ -232,7 +240,7 @@ public class GameManger : MonoBehaviour
             return;
         }
 
-        print(selected_Mission);
+       
         PlayerPrefs.SetInt("M_", 0);
         PlayerPrefs.SetInt("MissionEnable", 0);
         if (PlayerPrefs.GetInt("Mode_Select") == 1)
@@ -249,13 +257,13 @@ public class GameManger : MonoBehaviour
             cm.Set_NavigationDestination();
            
         }
-    //    PlayerPrefs.SetInt("Cash", 5000);
+     
         CashText.text = PlayerPrefs.GetInt("Cash").ToString();
         SpawnPlayer();
         Invoke("tps_true", 5f);
         
         Set_Sounds();
-        //Implementation.instance.ShowBanner();
+        Implementation.instance.ShowBanner();
 
 
     }
@@ -280,7 +288,7 @@ public class GameManger : MonoBehaviour
     }
     void Set_Sounds()
     {
-        if (PlayerPrefs.GetInt("Music") == 1)
+       /* if (PlayerPrefs.GetInt("Music") == 1)
         {
             foreach(AudioSource a in Musiclistener)
             {
@@ -293,7 +301,7 @@ public class GameManger : MonoBehaviour
             {
                 a.enabled = false;
             }
-        }
+        }*/
 
         float musicVolume = PlayerPrefs.GetFloat("MusicVolume");
         foreach (AudioSource a in Musiclistener)
@@ -436,6 +444,7 @@ public class GameManger : MonoBehaviour
         HealthCanvas.SetActive(true);
         ControlFreakPanel.SetActive(true);
         TPS_Controls[5].SetActive(false); //Only for sprint
+        MiniMap_On();
 
     }
     public void OFF_TPS()  // Disable ThirdPerson Controller

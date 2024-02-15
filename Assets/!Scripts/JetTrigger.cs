@@ -19,6 +19,10 @@ public class JetTrigger : MonoBehaviour
             JetSpawner.instance.Temp = gameObject;
             JetSpawner.instance.JetName = JetName;
             JetSpawner.instance.Off_Jet = false;
+
+            TankSpawner.instance.TankIn.gameObject.SetActive(false);
+            Car_Manager.instance.Carbutton_IN.gameObject.SetActive(false);
+            Bike_ControlS.instance.BikeInBtn.gameObject.SetActive(false);
         }
     }
 

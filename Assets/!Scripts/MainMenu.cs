@@ -27,7 +27,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private List<AssetReference> _scenes = new List<AssetReference>();
     private void Start()
     {
-        LoadSettings();
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
         ControlFreak2.CFCursor.lockState = CursorLockMode.None;
         ControlFreak2.CFCursor.visible = true;
         instance = this;
@@ -36,7 +36,7 @@ public class MainMenu : MonoBehaviour
         {
             PlayerPrefs.SetInt("Tutorial_Finished", 0);
             PlayerPrefs.SetInt("SFX", 1);
-            PlayerPrefs.SetInt("Music", 1);
+          //  PlayerPrefs.SetInt("Music", 1);
             PlayerPrefs.SetInt("Unlocked_Mission", 1);
             PlayerPrefs.SetInt("Cash", 1000);
             PlayerPrefs.SetInt("qabe", 12);
@@ -44,7 +44,7 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.SetInt("Controls", 2);
             PlayerPrefs.SetFloat("SelectedFPS",60);
             PlayerPrefs.SetInt("QualityLevel", 1);
-            PlayerPrefs.SetFloat("MusicVolume", 1);
+            PlayerPrefs.SetFloat("MusicVolume", 0.7f);
             selectBtn_Mission.interactable = false;
         }
         Submitbtn.SetActive(false);
@@ -57,12 +57,14 @@ public class MainMenu : MonoBehaviour
         float savedFPS = PlayerPrefs.GetFloat("SelectedFPS");
         SetFPS(savedFPS);
         fpsSlider.onValueChanged.AddListener(UpdateFPS);
-        float music = PlayerPrefs.GetFloat("MusicVolume");
-        AudioListener.volume = musicVolumeSlider.value;
-        musicVolumeSlider.value= PlayerPrefs.GetFloat("MusicVolume");
+
+        float savedvolume = PlayerPrefs.GetFloat("MusicVolume");
+        set_Vol(savedvolume);
+        musicVolumeSlider.onValueChanged.AddListener(SetMusicVolume);
+
         unlockedLevels = PlayerPrefs.GetInt("Unlocked_Mission");
         Mission_Unlocked();
-      
+        LoadSettings();
         shop_cash.text = PlayerPrefs.GetInt("Cash").ToString();
         Set_SoundMusic();
         Implementation.instance.ShowBanner();
@@ -91,16 +93,16 @@ public class MainMenu : MonoBehaviour
         }
 
 
-        if (PlayerPrefs.GetInt("Music") == 1)
-        {
-            src.enabled = true;
-            SetMusicOn();
-        }
-        else
-        {
-            src.enabled = false;
-            SetMusicOff();
-        }
+       // if (PlayerPrefs.GetInt("Music") == 1)
+      //  {
+         //   src.enabled = true;
+        //    SetMusicOn();
+       // }
+       // else
+       // {
+       //     src.enabled = false;
+       //     SetMusicOff();
+      //  }
 
     }
     public void Start_Btn()
@@ -275,14 +277,14 @@ public class MainMenu : MonoBehaviour
     }
     public void MoreGames()
     {
+       Application.OpenURL("https://play.google.com/store/apps/dev?id=5659235520105216655");
         Implementation.instance.ShowInterstitial();
-           Application.OpenURL("https://play.google.com/store/apps/dev?id=5659235520105216655");
     }
     public void RateUs()
     {
-        Implementation.instance.ShowInterstitial();
         Application.OpenURL("https://play.google.com/store/apps/details?id=com.darwingames.gangstermafia.crimecity.shooting.games");
-    }
+        Implementation.instance.ShowInterstitial();
+           }
     public void PrivacyPolicy()
     {
         Implementation.instance.ShowInterstitial();
@@ -309,12 +311,19 @@ public class MainMenu : MonoBehaviour
         SetQuality(2); // High quality index
     }
 
-    public void SetMusicVolume()
+    public void SetMusicVolume(float vol)
     {
-        // Adjust audio listener volume or your audio system accordingly
-        AudioListener.volume = musicVolumeSlider.value;
-        PlayerPrefs.SetFloat("MusicVolume", musicVolumeSlider.value);
-        SaveSettings();
+        
+        set_Vol(vol);
+        PlayerPrefs.SetFloat("MusicVolume", vol);
+        //Debug.LogError(PlayerPrefs.GetFloat("MusicVolume"));
+        PlayerPrefs.Save();
+
+    }
+    void set_Vol(float vol)
+    {
+        src.volume = vol;
+
     }
     public GameObject[] QualityBtns;
     private void SetQuality(int index)
@@ -324,29 +333,28 @@ public class MainMenu : MonoBehaviour
         SaveSettings();
     }
   
-       private void UpdateFPS(float newFPS)
+     private void UpdateFPS(float newFPS)
     {
         SetFPS(newFPS);
-
-        // Save the new FPS value to PlayerPrefs
         PlayerPrefs.SetFloat("SelectedFPS", newFPS);
+        //Debug.LogError(PlayerPrefs.GetFloat("SelectedFPS"));
         PlayerPrefs.Save();
     }
 
     private void SetFPS(float fps)
     {
         // Set your game's target frame rate
-        QualitySettings.vSyncCount = 0; // Disable VSync
-        Application.targetFrameRate = Mathf.RoundToInt(fps);
+        //QualitySettings.vSyncCount = 0; // Disable VSync
+       // Application.targetFrameRate = Mathf.RoundToInt(fps);
     }
     private void LoadSettings()
     {
+        
         // Load quality level
         int qualityLevel = PlayerPrefs.GetInt("QualityLevel"); // Default to medium
         SetQuality(qualityLevel);
         fpsSlider.value = PlayerPrefs.GetFloat("SelectedFPS");
-        float musicVolume = PlayerPrefs.GetFloat("MusicVolume"); // Default to full volume
-        musicVolumeSlider.value = musicVolume;
+        musicVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume");
         if (PlayerPrefs.GetInt("Controls") == 1)
         {
             steeringSel.SetActive(true);
@@ -374,9 +382,6 @@ public class MainMenu : MonoBehaviour
         // Save quality level
         int qualityLevel = QualitySettings.GetQualityLevel();
         PlayerPrefs.SetInt("QualityLevel", qualityLevel);
-
-        // Save music volume
-        PlayerPrefs.SetFloat("MusicVolume", musicVolumeSlider.value);
 
         // Save PlayerPrefs to disk
         PlayerPrefs.Save();

@@ -37,7 +37,7 @@ public class JetSpawner : MonoBehaviour
 
         if (PlayerPrefs.GetInt(JetName) == 0)
         {
-
+            GameManger.instance.MiniMap_Off();
             BuyPanel.SetActive(true);
         }
         else
@@ -52,12 +52,12 @@ public class JetSpawner : MonoBehaviour
             fade_Screen.SetActive(true);
             Temp.SetActive(false);
             Canvas.SetActive(true);
-
+            
             Active_Player = Instantiate(refplayer, SpawnPos.transform.position, SpawnPos.transform.rotation);
             //Cam = Active_Player.transform.GetChild(0).gameObject;
             playerNav.player = Active_Player.transform;
             Button_In.gameObject.SetActive(false);
-            Button_Out.gameObject.SetActive(true);
+          //Button_Out.gameObject.SetActive(true);
             GameManger.instance.Hud_Navigation.SetActive(true);
             TPS_Panel.SetActive(false);
             Cf2Panel.SetActive(true);
@@ -68,11 +68,13 @@ public class JetSpawner : MonoBehaviour
         }
 
     }
+   
     public void JetBuySucessfull()
     {
         PlayerPrefs.SetInt(JetName, 1);
         BuyPanel.SetActive(false);
         SpawnPlayerTank();
+        GameManger.instance.MiniMap_On();
     }
     public void BuyJet()
     {
@@ -83,6 +85,7 @@ public class JetSpawner : MonoBehaviour
             GameManger.instance.CashText.text = PlayerPrefs.GetInt("Cash").ToString();
             BuyPanel.SetActive(false);
             SpawnPlayerTank();
+            GameManger.instance.MiniMap_On();
         }
         else
         {

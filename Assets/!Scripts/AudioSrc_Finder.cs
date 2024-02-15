@@ -24,7 +24,7 @@ public class AudioSrc_Finder : MonoBehaviour
             //   Debug.LogError("Child object 'All Audio Sources' not found under the parent.");
         }
 
-        if (PlayerPrefs.GetInt("Music") == 1)
+        if (PlayerPrefs.GetInt("SFX") == 1)
         {
             SRC_Audios.gameObject.SetActive(true);
           //  gameObject.GetComponent<AudioSource>().enabled = true;

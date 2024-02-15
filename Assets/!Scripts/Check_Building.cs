@@ -41,7 +41,14 @@ public class Check_Building : MonoBehaviour
             Drive_Car();
             
         }
-
+        if (PlayerPrefs.GetInt("Controls") == 1)
+        {
+            RCC_Settings.Instance.mobileController = RCC_Settings.MobileController.SteeringWheel;
+        }
+        if (PlayerPrefs.GetInt("Controls") == 2)
+        {
+            RCC_Settings.Instance.mobileController = RCC_Settings.MobileController.TouchScreen;
+        }
     }
 
     void Find()
@@ -57,7 +64,7 @@ public class Check_Building : MonoBehaviour
                  //   Debug.LogError("Child object 'All Audio Sources' not found under the parent.");
         }
 
-        if (PlayerPrefs.GetInt("Music") == 1)
+        if (PlayerPrefs.GetInt("SFX") == 1)
         {
             SRC_Audios.gameObject.SetActive(true);
             gameObject.GetComponent<AudioSource>().enabled = true;
@@ -183,7 +190,7 @@ void Destroy_Driver()
             Invoke("ExitCarOutBTn", 2f);
             Player.SetInteger("Sit", 2);
            
-            if (PlayerPrefs.GetInt("Music") == 1)
+            if (PlayerPrefs.GetInt("SFX") == 1)
             {
                 SRC_Audios.SetActive(true);
             }
@@ -199,7 +206,7 @@ void Destroy_Driver()
         Invoke("AfterDelay", 1f);
         PlayerNavigation.instance.player = gameObject.transform;
         
-        if (PlayerPrefs.GetInt("Music") == 1)
+        if (PlayerPrefs.GetInt("SFX") == 1)
         {
             SRC_Audios.SetActive(true);
         }

@@ -323,7 +323,7 @@ public class BikeControl : MonoBehaviour
     }
     private void Start()
     {
-        if (PlayerPrefs.GetInt("Music") == 1)
+        if (PlayerPrefs.GetInt("SFX") == 1)
         {
             Sounds.gameObject.SetActive(true);
             //  gameObject.GetComponent<AudioSource>().enabled = true;

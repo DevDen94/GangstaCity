@@ -104,6 +104,7 @@ public class Implementation : MonoBehaviour
                     PlayerPrefs.SetInt("Reward", 0);
                     PlayerPrefs.SetInt("NOS", 2);
                     Car_Manager.instance.Nos_Ad.SetActive(false);
+                    Car_Manager.instance.Nos_ad_2.SetActive(false);
                 }
                 break;
             default:

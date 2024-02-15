@@ -36,7 +36,7 @@ public class PlayerVisuals : MonoBehaviour
     {
         
          TimeBtwFallingEffects = 1.8f;
-        if (PlayerPrefs.GetInt("Music") == 1)
+        if (PlayerPrefs.GetInt("SFX") == 1)
         {
             JumpAudio.gameObject.SetActive(false);
         }

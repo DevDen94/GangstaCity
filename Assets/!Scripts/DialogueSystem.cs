@@ -30,7 +30,14 @@ public class DialogueSystem : MonoBehaviour
         Lets_Talk();
         instance = this;
     }
-
+    private void OnEnable()
+    {
+        GameManger.instance.MiniMap_Off();
+    }
+    private void OnDisable()
+    {
+        GameManger.instance.MiniMap_On();
+    }
     public void Lets_Talk()
     {
         DialogueBoxCanvas.SetActive(true);

@@ -32,12 +32,12 @@ public class CutSceneManager : MonoBehaviour
    
     void Set_Sounds()
     {
-        if (PlayerPrefs.GetInt("Music") == 1)
+      /*  if (PlayerPrefs.GetInt("Music") == 1)
         {
-            foreach (AudioSource a in Musiclistener)
-            {
+           // foreach (AudioSource a in Musiclistener)
+            //{
                 a.enabled = true;
-               
+              / 
             }
         }
         else
@@ -47,7 +47,9 @@ public class CutSceneManager : MonoBehaviour
                 a.enabled = false;
                 
             }
-        }
+        }*/
+
+
         float musicVolume = PlayerPrefs.GetFloat("MusicVolume");
         foreach (AudioSource a in Musiclistener)
         {

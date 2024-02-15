@@ -43,7 +43,7 @@ public class Damage_Script : MonoBehaviour
               //  Debug.LogError("Child object 'All Audio Sources' not found under the parent.");
             }
 
-            if (PlayerPrefs.GetInt("Music") == 1)
+            if (PlayerPrefs.GetInt("SFX") == 1)
             {
                 SRC_Audios.gameObject.SetActive(true);
 

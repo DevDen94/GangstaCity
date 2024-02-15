@@ -68,6 +68,7 @@ public class Car_Manager : MonoBehaviour
     public Slider CarHealth;
 
     public GameObject Nos_Ad;
+    public GameObject Nos_ad_2;
     public GameObject Nos_Prefab;
     public GameObject LockAimOff;
   
@@ -157,7 +158,9 @@ public class Car_Manager : MonoBehaviour
         list.tpCameraStates[0].height = 1f;
         if (PlayerPrefs.GetInt("NOS") == 2)
         {
-            Nos_Ad.SetActive(false);
+                Nos_Ad.SetActive(false);
+            Nos_ad_2.SetActive(false);
+
         }
        // GameManger.instance.TPS_Controls[4] = GameObject.FindGameObjectWithTag("Clone");
     }
@@ -168,8 +171,7 @@ public class Car_Manager : MonoBehaviour
     public void Sit_in()
     {
         if (is_Hummer && PlayerPrefs.GetInt(Car_Name)==0){
-            //Debug.LogError(PlayerPrefs.GetInt(Car_Name));
-           // Debug.LogError(Car_Name);
+            GameManger.instance.MiniMap_Off();
             Buy_Panel.SetActive(true);
         }
         else
@@ -200,6 +202,7 @@ public class Car_Manager : MonoBehaviour
     }
     public void CarBuySucessfull()
     {
+        gameManager.MiniMap_On();
         PlayerPrefs.SetInt(Car_Name, 1);
         Rcc_Header_Camera.SetActive(true);
         Carbutton_IN.SetActive(false);
@@ -239,6 +242,7 @@ public class Car_Manager : MonoBehaviour
                 Rcc_Header_Camera.GetComponent<RCC_Camera>().cameraTarget.playerVehicle = Car.gameObject.GetComponent<RCC_CarControllerV3>();
                 return;
             }
+            gameManager.MiniMap_On();
         }
         else
         {
@@ -266,11 +270,9 @@ public class Car_Manager : MonoBehaviour
     public void Exit_Out()
     {
         WeaponOffBTN.SetActive(false);
-     
         WeaponOnBtn.SetActive(true);
         Carbutton_Out.SetActive(false);
         Car.isEject = true;
-     //   hudNav.PlayerCamera = TPS_Camera;
 
     }
 
@@ -287,16 +289,11 @@ public class Car_Manager : MonoBehaviour
     public GameObject AutoAimBtn;
     public void WeaponAutoAimOff()
     {
-        AutoAimBtn.SetActive(false);
-        CameraLock.instance.isShooting = false;
-            is_Aim = false;
-        
+        CameraLock.instance.isShooting = false;   
     }
     public void WeaponAutoAimOn()
     {
         CameraLock.instance.isShooting = true;
-        AutoAimBtn.SetActive(true);
-        is_Aim = true;
     }
     public void PressGun(int no)
     {

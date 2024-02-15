@@ -36,7 +36,7 @@ public class TankSpawner : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(TankName) == 0)
         {
-
+            GameManger.instance.MiniMap_Off();
             BuyPanel.SetActive(true);
         }
         else
@@ -72,6 +72,7 @@ public class TankSpawner : MonoBehaviour
         PlayerPrefs.SetInt(TankName, 1);
         BuyPanel.SetActive(false);
         SpawnPlayerTank();
+        GameManger.instance.MiniMap_On();
     }
     public void BuyBike()
     {
@@ -82,6 +83,7 @@ public class TankSpawner : MonoBehaviour
             GameManger.instance.CashText.text = PlayerPrefs.GetInt("Cash").ToString();
             BuyPanel.SetActive(false);
             SpawnPlayerTank();
+            GameManger.instance.MiniMap_On();
         }
         else
         {

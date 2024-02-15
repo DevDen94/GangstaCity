@@ -25175,7 +25175,7 @@ MonoBehaviour:
       m_Calls: []
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8388865
+    m_Bits: 545259777
   autoCrouchLayer:
     serializedVersion: 2
     m_Bits: 1

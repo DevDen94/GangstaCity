@@ -37,7 +37,7 @@ public class Bike_ControlS : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(BikeName) == 0)
         {
-
+            GameManger.instance.MiniMap_Off();
             BuyPanel.SetActive(true);
         }
         else
@@ -72,6 +72,7 @@ public class Bike_ControlS : MonoBehaviour
         PlayerPrefs.SetInt(BikeName, 1);
         BuyPanel.SetActive(false);
         SpawnPlayerBike();
+        GameManger.instance.MiniMap_On();
     }
     public void BuyBike()
     {
@@ -81,6 +82,7 @@ public class Bike_ControlS : MonoBehaviour
             PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") - 1000);
             GameManger.instance.CashText.text = PlayerPrefs.GetInt("Cash").ToString();
             BuyPanel.SetActive(false); SpawnPlayerBike();
+            GameManger.instance.MiniMap_On();
 
         }
         else
