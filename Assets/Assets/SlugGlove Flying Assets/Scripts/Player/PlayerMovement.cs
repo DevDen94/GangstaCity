@@ -100,6 +100,7 @@ public class PlayerMovement : MonoBehaviour
     private float RunTimer; //animation ctrl for running
     private float FlyingTimer; //the time before the animation stops flying
 
+    public GameObject FlyRock;
     // Start is called before the first frame update
     void Awake()
     { 
@@ -427,11 +428,13 @@ public class PlayerMovement : MonoBehaviour
         //turn on gravity
         Rigid.useGravity = true; 
         JetSpawner.instance.Button_Out.gameObject.SetActive(true);
+        FlyRock.SetActive(false);
     }
     //for when we are set in the air (for falling
     void SetInAir()
     {
         JetSpawner.instance.Button_Out.gameObject.SetActive(false);
+        FlyRock.SetActive(true);
         OnGround = false;
         FloorTimer = GroundedTimerBeforeJump;
         ActionAirTimer = 0.2f;

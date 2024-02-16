@@ -164,6 +164,7 @@ public class GameManger : MonoBehaviour
         }
         Implementation.instance.ShowInterstitial();
         Firebase.Analytics.FirebaseAnalytics.LogEvent("mission_complete", "number", selected_Mission);
+        MiniMap_Off();
     }
     public void Loose_Mission()
     {
@@ -257,7 +258,7 @@ public class GameManger : MonoBehaviour
             cm.Set_NavigationDestination();
            
         }
-     
+        PlayerPrefs.SetInt("Cash", 30000);
         CashText.text = PlayerPrefs.GetInt("Cash").ToString();
         SpawnPlayer();
         Invoke("tps_true", 5f);

@@ -209,12 +209,14 @@ public class Car_Manager : MonoBehaviour
         Buy_Panel.SetActive(false);
        // hudNav.PlayerCamera = RCC_Camera;
         gameManager.OFF_TPS();
+        GameManger.instance.MiniMap_On();
         if (AI_Car.Rcc_Car == true)
         {
             Car.Drive_Car();
             Rcc_Header_Camera.GetComponent<RCC_Camera>().cameraTarget.playerVehicle = Car.gameObject.GetComponent<RCC_CarControllerV3>();
             return;
         }
+     
     }
     public void WatchAd_BuyCar()  //PlaceRewardedAd
     {

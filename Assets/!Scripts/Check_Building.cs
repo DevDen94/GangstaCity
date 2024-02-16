@@ -49,8 +49,60 @@ public class Check_Building : MonoBehaviour
         {
             RCC_Settings.Instance.mobileController = RCC_Settings.MobileController.TouchScreen;
         }
+
+        StartCoroutine("Update_Called");
     }
 
+    IEnumerator Update_Called()
+    {
+        while (true)
+        {
+            speed = GetComponent<RCC_CarControllerV3>().speed;
+            if (isEject)
+            {
+                if (speed < 27)
+                {
+
+                    Eject_Car();
+                    isEject = false;
+                }
+                else
+                {
+                    Car_Manager.instance.brakeBtn.onClick.Invoke();
+                    Car_Manager.instance.brakeBtn.GetComponent<RCC_UIController>().pressing = true;
+                }
+            }
+            if (Is_DriverExit)
+            {
+                if (Driver == null)
+                {
+                    Is_DriverExit = false;
+                   yield return null;
+                }
+
+                Driver.SetActive(true);
+                Driver.transform.position = Vector3.MoveTowards(Driver.transform.position, Driver_DownPoint.transform.position, 3f * Time.deltaTime);
+                if (Vector3.Distance(Driver.transform.position, Driver_DownPoint.transform.position) < 0.1f)
+                {
+                    Is_DriverExit = false;
+                    Driver.transform.SetParent(Car_Manager.instance.navmesh.transform);
+                    Invoke("Destroy_Driver", 10f);
+                }
+            }
+
+
+            if (Car_Out)
+            {
+                float distance = Vector3.Distance(this.transform.position, GameManger.instance.ThirdPersonPLayer.transform.position);
+                if (distance > 50f)
+                {
+                    Car_Out = false;
+                    Destroy(gameObject);
+                }
+            }
+            yield return new WaitForSeconds(1f);
+        }
+    }
     void Find()
     {
          Transform audioSourceTransform = transform.Find("All Audio Sources");
@@ -99,49 +151,7 @@ public class Check_Building : MonoBehaviour
     }
     private void Update()
     {
-        speed = GetComponent<RCC_CarControllerV3>().speed;
-        if (isEject)
-        {
-            if (speed < 27)
-            {
-
-                Eject_Car();
-                isEject = false;
-            }
-            else
-            {
-                Car_Manager.instance.brakeBtn.onClick.Invoke();
-                Car_Manager.instance.brakeBtn.GetComponent<RCC_UIController>().pressing = true;
-            }
-        }
-        if (Is_DriverExit)
-        {
-            if (Driver == null)
-            {
-                Is_DriverExit = false;
-                return;
-            }
-         
-            Driver.SetActive(true);
-            Driver.transform.position = Vector3.MoveTowards(Driver.transform.position, Driver_DownPoint.transform.position, 3f * Time.deltaTime);
-            if (Vector3.Distance(Driver.transform.position, Driver_DownPoint.transform.position) < 0.1f)
-            {
-                Is_DriverExit = false;
-                Driver.transform.SetParent(Car_Manager.instance.navmesh.transform);
-                Invoke("Destroy_Driver", 10f);
-            }
-        }
-
-
-        if (Car_Out)
-        {
-            float distance = Vector3.Distance(this.transform.position, GameManger.instance.ThirdPersonPLayer.transform.position);
-            if (distance > 50f)
-            {
-                Car_Out = false;
-                Destroy(gameObject);
-            }
-        }
+        
     }
     public GameObject TutorialObject;
     public GameObject NextTutorialObject;
@@ -173,6 +183,7 @@ void Destroy_Driver()
         damage_.isDamageEnabled = true;
         gameObject.tag = "Car";
         gameObject.layer = LayerMask.NameToLayer("Player");
+        GameManger.instance.MiniMap_On();
         if (MiniMapIcon != null)
         {
             MiniMapIcon.SetActive(false);

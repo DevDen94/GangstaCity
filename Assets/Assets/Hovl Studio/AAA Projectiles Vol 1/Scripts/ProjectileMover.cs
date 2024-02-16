@@ -35,16 +35,21 @@ public class ProjectileMover : MonoBehaviour
             }
         }
         Destroy(gameObject,5);
+        StartCoroutine("Move");
 	}
 
-    void FixedUpdate ()
+    IEnumerator Move()
     {
-		if (speed != 0)
+        while (true)
         {
-            rb.velocity = transform.forward * speed;
-            //transform.position += transform.forward * (speed * Time.deltaTime);         
+            if (speed != 0)
+            { 
+               // rb.velocity = transform.forward * speed;
+            }
+            yield return new WaitForSeconds(1f);
         }
-	}
+    }
+   
 
     //https ://docs.unity3d.com/ScriptReference/Rigidbody.OnCollisionEnter.html
     void OnCollisionEnter(Collision collision)

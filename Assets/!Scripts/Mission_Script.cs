@@ -46,7 +46,7 @@ public class Mission_Script : MonoBehaviour
     public void GangsterDead()
     {
         Gangster_DeathCount = Gangster_DeathCount - 1;
-        Debug.LogError(Gangster_DeathCount);
+      //  Debug.LogError(Gangster_DeathCount);
         if (Gangster_DeathCount == 0)
         {
             FinishPoint.SetActive(true);
