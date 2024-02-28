@@ -50,7 +50,7 @@ public class Check_Building : MonoBehaviour
             RCC_Settings.Instance.mobileController = RCC_Settings.MobileController.TouchScreen;
         }
 
-        StartCoroutine("Update_Called");
+        StartCoroutine(Update_Called());
     }
 
     IEnumerator Update_Called()
@@ -86,7 +86,7 @@ public class Check_Building : MonoBehaviour
                 {
                     Is_DriverExit = false;
                     Driver.transform.SetParent(Car_Manager.instance.navmesh.transform);
-                    Invoke("Destroy_Driver", 10f);
+                    Invoke("Destroy_Driver", 2f);
                 }
             }
 
@@ -100,7 +100,7 @@ public class Check_Building : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.1f);
         }
     }
     void Find()

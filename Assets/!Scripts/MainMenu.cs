@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 using UnityEngine.AddressableAssets;
-
+using Gley.MobileAds.Internal;
 
 public class MainMenu : MonoBehaviour
 {
@@ -53,7 +53,6 @@ public class MainMenu : MonoBehaviour
         {
             selectBtn_Mission.interactable = true;
         }
-        // set fpssssssssssssssssssssssssss//
         float savedFPS = PlayerPrefs.GetFloat("SelectedFPS");
         SetFPS(savedFPS);
         fpsSlider.onValueChanged.AddListener(UpdateFPS);
@@ -67,7 +66,7 @@ public class MainMenu : MonoBehaviour
         LoadSettings();
         shop_cash.text = PlayerPrefs.GetInt("Cash").ToString();
         Set_SoundMusic();
-        Implementation.instance.ShowBanner();
+        MobileAdsExample.Instance.ShowBanner();
     }
 
     public GameObject SoundOn;
@@ -108,8 +107,8 @@ public class MainMenu : MonoBehaviour
     public void Start_Btn()
     {
         ModeSelectionPanel.SetActive(true);
-        Implementation.instance.ShowInterstitial();
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("mainmenu_startbtn");
+        MobileAdsExample.Instance.ShowInterstitial();
+        //Firebase.Analytics.FirebaseAnalytics.LogEvent("mainmenu_startbtn");
     }
     private void FixedUpdate()
     {
@@ -165,7 +164,7 @@ public class MainMenu : MonoBehaviour
         Title.text = GeneralTitles[i-1].ToString();
         Description.text = DetailInstructions[i-1].ToString();
         Submitbtn.SetActive(true);
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("mission","number",i);
+       // Firebase.Analytics.FirebaseAnalytics.LogEvent("mission","number",i);
 
     }
     public GameObject Submitbtn;
@@ -224,7 +223,7 @@ public class MainMenu : MonoBehaviour
             ModeSelectionPanel.SetActive(false);
             levelSelectionPanel.SetActive(true);
             PlayerPrefs.SetInt("Mode_Select", 1);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_1");
+           // Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_1");
         }
         else
         {
@@ -232,9 +231,9 @@ public class MainMenu : MonoBehaviour
             {
                
                 LoadingScene_Name.sceneToLoad = "MissionMode";
-               LoadingPanel.SetActive(true);
+                LoadingPanel.SetActive(true);
                 PlayerPrefs.SetInt("Mode_Select", 2);
-                Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_2");
+                //Firebase.Analytics.FirebaseAnalytics.LogEvent("mode_2");
             }
             else
             {
@@ -263,13 +262,13 @@ public class MainMenu : MonoBehaviour
     {
         PlayerPrefs.SetInt("Reward", 1);
         PlayerPrefs.SetInt("RewardedMode", 1);
-        Implementation.instance.ShowRewardedVideo();
+        MobileAdsExample.Instance.ShowRewardedVideo();
     }
     public void WatchVideoAd()
     {
         PlayerPrefs.SetInt("Reward", 7);
         PlayerPrefs.SetInt("Rewarded_Cash", 1);
-        Implementation.instance.ShowRewardedVideo();
+        MobileAdsExample.Instance.ShowRewardedVideo();
     }
     public void Settings()
     {
@@ -277,17 +276,17 @@ public class MainMenu : MonoBehaviour
     }
     public void MoreGames()
     {
-       Application.OpenURL("https://play.google.com/store/apps/dev?id=5659235520105216655");
-        Implementation.instance.ShowInterstitial();
+        MobileAdsExample.Instance.ShowInterstitial();
+        Application.OpenURL("https://play.google.com/store/apps/dev?id=5659235520105216655");
     }
     public void RateUs()
     {
+        MobileAdsExample.Instance.ShowInterstitial();
         Application.OpenURL("https://play.google.com/store/apps/details?id=com.darwingames.gangstermafia.crimecity.shooting.games");
-        Implementation.instance.ShowInterstitial();
-           }
+    }
     public void PrivacyPolicy()
     {
-        Implementation.instance.ShowInterstitial();
+        MobileAdsExample.Instance.ShowInterstitial();
         Application.OpenURL("https://darwingames1.blogspot.com/2023/06/privacy-policy.html");
     }
 

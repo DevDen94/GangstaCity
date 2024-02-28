@@ -1098,8 +1098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1439713136}
-  - component: {fileID: 1439713138}
-  - component: {fileID: 1439713139}
+  - component: {fileID: 1439713137}
   m_Layer: 0
   m_Name: GoogleAds
   m_TagString: Untagged
@@ -1122,7 +1121,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1439713138
+--- !u!114 &1439713137
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1131,21 +1130,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1439713134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23d6d98d446f36349bbf3ca63e529fe2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7603af8e479ae4db07d80211a44ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1439713139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439713134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c66cbde894a934b836028197da8f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  isAppOpen: 1
 --- !u!1001 &1772491390
 PrefabInstance:
   m_ObjectHideFlags: 0

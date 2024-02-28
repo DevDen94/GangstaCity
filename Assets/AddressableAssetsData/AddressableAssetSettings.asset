@@ -59,11 +59,11 @@ MonoBehaviour:
       - m_Id: 5b04e2ba25bc66f459bf853628ee56f3
         m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
       - m_Id: c360516a777ddfa4d8e6c461b8688f7c
-        m_Value: https://storage.googleapis.com/gangstercity/Android
+        m_Value: https://storage.googleapis.com/gangstercity/gangstercity/TestAddress
       - m_Id: 1f2dcb741c245af41857f1f474226953
         m_Value: ServerData/[BuildTarget]
       - m_Id: b89cc48b3e2d0304ab1862db7cc6c63c
-        m_Value: https://storage.googleapis.com/gangstercity/Android
+        m_Value: https://storage.googleapis.com/gangstercity/gangstercity/TestAddress
     m_ProfileEntryNames:
     - m_Id: 82d4a57200918c74d9cbc035c6c2cfd2
       m_Name: BuildTarget

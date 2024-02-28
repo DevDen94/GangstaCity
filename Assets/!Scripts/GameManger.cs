@@ -10,6 +10,7 @@ using Invector.vShooter;
 using SickscoreGames.HUDNavigationSystem;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using Gley.MobileAds.Internal;
 public class GameManger : MonoBehaviour
 {
     [SerializeField] private List<AssetReference> _scenes = new List<AssetReference>();
@@ -162,9 +163,10 @@ public class GameManger : MonoBehaviour
         {
             PlayerPrefs.SetInt("Unlocked_Mission", PlayerPrefs.GetInt("Unlocked_Mission") + 1);
         }
-        Implementation.instance.ShowInterstitial();
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("mission_complete", "number", selected_Mission);
         MiniMap_Off();
+        MobileAdsExample.Instance.ShowInterstitial();
+        //Firebase.Analytics.FirebaseAnalytics.LogEvent("mission_complete", "number", selected_Mission);
+        
     }
     public void Loose_Mission()
     {
@@ -174,8 +176,8 @@ public class GameManger : MonoBehaviour
         MissionFailed.SetActive(true);
         src.PlayOneShot(LooseSound);
         Time.timeScale = 0f;
-        Implementation.instance.ShowInterstitial();
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("mission_failed", "number", selected_Mission);
+        MobileAdsExample.Instance.ShowInterstitial();
+        //Firebase.Analytics.FirebaseAnalytics.LogEvent("mission_failed", "number", selected_Mission);
     }
     [HideInInspector]
     public GameObject MissionActive;
@@ -214,12 +216,14 @@ public class GameManger : MonoBehaviour
    
     private void Start()
     {
-        
+        instance = this;
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+        Time.timeScale = 1f;
+
         if (!Tutorial)
         { 
            Addressables.LoadSceneAsync(_scenes[1], LoadSceneMode.Additive);
-          //  LoadOcclusionCullingData();
-            isJump_Act = false;
+           isJump_Act = false;
         }
         level_failed = false;
         Jump_Flag = false;
@@ -228,10 +232,6 @@ public class GameManger : MonoBehaviour
         currentGangster = PlayerPrefs.GetInt("SelectedGangster");
         ThirdPersonPLayer = Instantiate(Gangster[currentGangster]);
         AssignPlayerReference();
-       // GetComponent<RespawnGangster>().Player_Current = ThirdPersonPLayer;
-        instance = this;
-        Screen.sleepTimeout = SleepTimeout.NeverSleep;
-        Time.timeScale = 1f;
         GetComponent<Car_Manager>().enabled = true;
         cm = GetComponent<Car_Manager>();
         if (Tutorial)
@@ -258,13 +258,12 @@ public class GameManger : MonoBehaviour
             cm.Set_NavigationDestination();
            
         }
-        PlayerPrefs.SetInt("Cash", 30000);
         CashText.text = PlayerPrefs.GetInt("Cash").ToString();
         SpawnPlayer();
         Invoke("tps_true", 5f);
         
         Set_Sounds();
-        Implementation.instance.ShowBanner();
+        MobileAdsExample.Instance.ShowBanner();
 
 
     }
@@ -276,34 +275,19 @@ public class GameManger : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (ThirdPersonPLayer && tps_check)
-        {
+       // if (ThirdPersonPLayer && tps_check)
+       // {
            
-            if(ThirdPersonPLayer.GetComponent<vHealthController>().currentHealth <= 0 && !level_failed)
-            {
-                Loose_Mission();
-                level_failed = true;
-            }
+         //   if(ThirdPersonPLayer.GetComponent<vHealthController>().currentHealth <= 0 && !level_failed)
+          //  {
+            //    Loose_Mission();
+           //     level_failed = true;
+         //   }
             
-        }
+       // }
     }
     void Set_Sounds()
     {
-       /* if (PlayerPrefs.GetInt("Music") == 1)
-        {
-            foreach(AudioSource a in Musiclistener)
-            {
-                a.enabled = true;
-            }
-        }
-        else
-        {
-            foreach (AudioSource a in Musiclistener)
-            {
-                a.enabled = false;
-            }
-        }*/
-
         float musicVolume = PlayerPrefs.GetFloat("MusicVolume");
         foreach (AudioSource a in Musiclistener)
         {
@@ -374,10 +358,10 @@ public class GameManger : MonoBehaviour
         }
         else
         {
-            Car_Manager.instance.Rcc_Header_Camera.SetActive(true);
-            Car_Manager.instance.RadioMusic.gameObject.SetActive(true);
-            Car_Manager.instance.Car.gameObject.SetActive(true);
-            Car_Manager.instance.Rcc_Canvas.SetActive(true);
+            cm.Rcc_Header_Camera.SetActive(true);
+            cm.RadioMusic.gameObject.SetActive(true);
+            cm.Car.gameObject.SetActive(true);
+            cm.Rcc_Canvas.SetActive(true);
             Hud_Navigation.SetActive(true);
 
         }
@@ -451,8 +435,6 @@ public class GameManger : MonoBehaviour
     public void OFF_TPS()  // Disable ThirdPerson Controller
     {
         ThirdPersonPLayer.SetActive(false);
-     //   PlayerRef.transform.position =ThirdPersonPLayer.transform.position;
-        
         HealthCanvas.SetActive(false);
         ControlFreakPanel.SetActive(false);
         for (int i = 0; i < TPS_Controls.Length; ++i)

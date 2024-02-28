@@ -39,22 +39,30 @@ namespace PedestrianSystem{
 		void Start(){
 			//Set time equal to time Delay
 			time = timeDelay;
+			StartCoroutine(Update_Called());
 		}
+		IEnumerator Update_Called()
+		{
+			yield return new WaitForSeconds(1f); // Wait for 1 second
 
+			if (spawnType == SpawnType.AUTO)
+			{
+
+				time -= Time.deltaTime;
+
+				if (time <= 0)
+				{
+
+					time = timeDelay;
+
+					InstantiateAutoPedestrian();
+				}
+			}
+		}
 		//Only works in AUTO mode
 		void Update(){
 
-			if (spawnType == SpawnType.AUTO) {
 			
-				time -= Time.deltaTime;
-
-				if (time <= 0) {
-				
-					time = timeDelay;
-
-					InstantiateAutoPedestrian ();
-				}
-			}
 		}
 
 		//Instantiate Pedestrians when AUTO mode is set. Time Based

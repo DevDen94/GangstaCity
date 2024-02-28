@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using SickscoreGames.HUDNavigationSystem;
+using Gley.MobileAds.Internal;
 public class JetSpawner : MonoBehaviour
 {
     public GameObject Canvas;
@@ -97,7 +98,7 @@ public class JetSpawner : MonoBehaviour
     {
         PlayerPrefs.SetInt("Reward", 6);
         PlayerPrefs.SetInt("Jet_Reward", 1);
-        Implementation.instance.ShowRewardedVideo();
+        MobileAdsExample.Instance.ShowRewardedVideo();
     }
     void RideOff()
     {

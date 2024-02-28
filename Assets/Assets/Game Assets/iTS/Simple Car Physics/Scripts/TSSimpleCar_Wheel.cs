@@ -1,6 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
-
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
 /// TS simple car_ wheel class.  this class is responsible for rotating the visual representation of the wheel
@@ -116,9 +116,12 @@ public class TSSimpleCar_Wheel : MonoBehaviour {
 		}
 	}
 
+    private void OnEnable()
+    {
+		StartCoroutine(Update_Call());
+	}
 
-
-	void Awake()
+    void Awake()
 	{
 		myBody = transform.parent.parent.GetComponent<Rigidbody>();
 		myTransform = transform;
@@ -147,6 +150,20 @@ public class TSSimpleCar_Wheel : MonoBehaviour {
 			Collider thisCollider = renderer.gameObject.GetComponent<Collider>();
 			if (thisCollider != null)thisCollider.enabled = false;
 		}
+
+
+		
+	}
+
+	IEnumerator Update_Call()
+    {
+		yield return new WaitForSeconds(1f);
+		if (simpleCarScript.superSimplePhysics)
+		{
+			CorrespondingCollider.enabled = false;
+			this.enabled = false; yield return null;
+		}
+		myBody.AddForceAtPosition(_antiRollBarForce * myParentTransform.up, myParentTransform.position);
 	}
 
 	void Update () {
@@ -185,9 +202,6 @@ public class TSSimpleCar_Wheel : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		if (simpleCarScript.superSimplePhysics){
-			CorrespondingCollider.enabled = false;
-			this.enabled = false;return;}
-		myBody.AddForceAtPosition(_antiRollBarForce * myParentTransform.up,myParentTransform.position);
+		
 	}
 }

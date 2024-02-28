@@ -51,7 +51,7 @@ public class AddresableScenes : MonoBehaviour
             if (PlayerPrefs.GetInt("Data_Download") == 1)
             {
                 Debug.Log("Scene Downloading");
-                Firebase.Analytics.FirebaseAnalytics.LogEvent("downloadingstart_addressable");
+              // Firebase.Analytics.FirebaseAnalytics.LogEvent("downloadingstart_addressable");
             }
         }
        
@@ -80,7 +80,7 @@ public class AddresableScenes : MonoBehaviour
             if (PlayerPrefs.GetInt("Data_Download") == 1)
             {
                 Debug.Log("Scene Downloaded");
-                Firebase.Analytics.FirebaseAnalytics.LogEvent("downloading_complete");
+               // Firebase.Analytics.FirebaseAnalytics.LogEvent("downloading_complete");
             }
             _ProgressCountText.text = "";
             _Text.text = "";

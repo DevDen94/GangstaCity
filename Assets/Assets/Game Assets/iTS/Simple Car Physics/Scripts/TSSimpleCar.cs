@@ -415,81 +415,13 @@ public class TSSimpleCar : MonoBehaviour
             //				Debug.Log ("Set center of mass for car" + " " +myTransform.root.name);
         }
         crashed = false;
+
+        StartCoroutine(Update_Called());
     }
-
-    /// <summary>
-    /// Raises the turn right event.
-    /// </summary>
-    /// <param name="isTurning">If set to <c>true</c> is turning.</param>
-    void OnTurnRight(bool isTurning)
+    IEnumerator Update_Called()
     {
-        if (turnRightLight != null)
-        {
-            if (isTurning)
-            {
-                if (gameObject.activeSelf)
-                {
-                    StartCoroutine(LightBlinking(turnRightLight));
-                }
-            }
-            else
-            {
-                blinking = false;
-                turnRightLight.SetActive(false);
-            }
-        }
-    }
+        yield return new WaitForSeconds(1f); // Wait for 1 second
 
-    /// <summary>
-    /// Raises the turn left event.
-    /// </summary>
-    /// <param name="isTurning">If set to <c>true</c> is turning.</param>
-    void OnTurnLeft(bool isTurning)
-    {
-        if (turnLeftLight != null)
-        {
-            if (isTurning)
-            {
-                if (gameObject.activeSelf)
-                {
-                    StartCoroutine(LightBlinking(turnLeftLight));
-                }
-            }
-            else
-            {
-                blinking = false;
-                turnLeftLight.SetActive(false);
-            }
-        }
-    }
-
-
-
-
-    /// <summary>
-    /// Makes a light start blinking.
-    /// </summary>
-    /// <returns>The blinking.</returns>
-    /// <param name="blinkingLight">Blinking light.</param>
-    /// <param name="blinkingTiming">Blinking timing.</param>
-    IEnumerator LightBlinking(GameObject blinkingLight)
-    {
-        blinking = true;
-        while (blinking)
-        {
-            if (blinkingLight.activeSelf)
-                blinkingLight.SetActive(false);
-            else
-                blinkingLight.SetActive(true);
-            yield return waitforseconds;
-
-        }
-        blinkingLight.SetActive(false);
-    }
-
-
-    void Update()
-    {
         if (!crashed)
         {
             if (superSimplePhysics && !upSideDown)
@@ -592,6 +524,83 @@ public class TSSimpleCar : MonoBehaviour
 
             }
         }
+
+
+    }
+        /// <summary>
+        /// Raises the turn right event.
+        /// </summary>
+        /// <param name="isTurning">If set to <c>true</c> is turning.</param>
+        void OnTurnRight(bool isTurning)
+    {
+        if (turnRightLight != null)
+        {
+            if (isTurning)
+            {
+                if (gameObject.activeSelf)
+                {
+                    StartCoroutine(LightBlinking(turnRightLight));
+                }
+            }
+            else
+            {
+                blinking = false;
+                turnRightLight.SetActive(false);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Raises the turn left event.
+    /// </summary>
+    /// <param name="isTurning">If set to <c>true</c> is turning.</param>
+    void OnTurnLeft(bool isTurning)
+    {
+        if (turnLeftLight != null)
+        {
+            if (isTurning)
+            {
+                if (gameObject.activeSelf)
+                {
+                    StartCoroutine(LightBlinking(turnLeftLight));
+                }
+            }
+            else
+            {
+                blinking = false;
+                turnLeftLight.SetActive(false);
+            }
+        }
+    }
+
+
+
+
+    /// <summary>
+    /// Makes a light start blinking.
+    /// </summary>
+    /// <returns>The blinking.</returns>
+    /// <param name="blinkingLight">Blinking light.</param>
+    /// <param name="blinkingTiming">Blinking timing.</param>
+    IEnumerator LightBlinking(GameObject blinkingLight)
+    {
+        blinking = true;
+        while (blinking)
+        {
+            if (blinkingLight.activeSelf)
+                blinkingLight.SetActive(false);
+            else
+                blinkingLight.SetActive(true);
+            yield return waitforseconds;
+
+        }
+        blinkingLight.SetActive(false);
+    }
+
+
+    void Update()
+    {
+      
     }
 
     /// <summary>

@@ -34993,7 +34993,7 @@ MonoBehaviour:
   - {fileID: 0}
   Money: {fileID: 0}
   PasueBtn: {fileID: 0}
-  MiniMap_Canvas: {fileID: 0}
+  MiniMap_Canvas: {fileID: 232825520}
   Jump_Flag: 0
   GamePlayAddress: {fileID: 0}
   MainMenuAddress: {fileID: 478379775}

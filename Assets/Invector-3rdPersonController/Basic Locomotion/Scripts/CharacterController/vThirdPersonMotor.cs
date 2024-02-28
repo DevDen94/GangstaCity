@@ -397,7 +397,10 @@ namespace Invector.vCharacterController
             animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
             // trigger die animation            
             if (deathBy == DeathBy.Animation || deathBy == DeathBy.AnimationWithRagdoll)
+            { 
                 animator.SetBool("isDead", true);
+               // Debug.LogError("ABCCCCCCCCCCCCCCCCC");
+            }
         }
 
         void CheckHealth()

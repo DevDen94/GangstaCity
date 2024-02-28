@@ -9,6 +9,7 @@ using Invector.vItemManager;
 using Invector.vShooter;
 using Invector.vCamera;
 using Invector;
+using Gley.MobileAds.Internal;
 public class Car_Manager : MonoBehaviour
 {
     public GameObject Rcc_Canvas;
@@ -76,7 +77,8 @@ public class Car_Manager : MonoBehaviour
     {
         PlayerPrefs.SetInt("Reward", 8);
         PlayerPrefs.SetInt("NOS", 1);
-        Implementation.instance.ShowRewardedVideo();
+        MobileAdsExample.Instance.ShowRewardedVideo();
+  
 
     }
     public void Your_CurrentCar_Health(int dm)
@@ -222,9 +224,7 @@ public class Car_Manager : MonoBehaviour
     {
         PlayerPrefs.SetInt("Reward", 3);
         PlayerPrefs.SetInt("Car_Reward", 1);
-    
-        Implementation.instance.ShowRewardedVideo();
-        
+        MobileAdsExample.Instance.ShowRewardedVideo();
     }
     public void BuyCar()
     {

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Gley.MobileAds.Internal;
 public class Bike_ControlS : MonoBehaviour
 {
     public GameManger gm;
@@ -95,7 +96,7 @@ public class Bike_ControlS : MonoBehaviour
     {
         PlayerPrefs.SetInt("Reward", 4);
         PlayerPrefs.SetInt("Bike_Reward", 1);
-        Implementation.instance.ShowRewardedVideo();
+        MobileAdsExample.Instance.ShowRewardedVideo();
     }
     void RideOff()
     {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using Gley.MobileAds.Internal;
 public class _ShopManager : MonoBehaviour
 {
     public Gangster_Shop[] Gangster;
@@ -26,7 +27,7 @@ public class _ShopManager : MonoBehaviour
     public Text CashMain;
     private void OnEnable()
     {
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("_shopopen");
+        //Firebase.Analytics.FirebaseAnalytics.LogEvent("_shopopen");
     }
     private void Start()
     {
@@ -208,7 +209,7 @@ public class _ShopManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("Reward", 2);
         PlayerPrefs.SetInt("ShopReward_Constume", 1);
-        Implementation.instance.ShowRewardedVideo();
+        MobileAdsExample.Instance.ShowRewardedVideo();
     }
 }
 

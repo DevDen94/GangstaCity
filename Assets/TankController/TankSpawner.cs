@@ -95,7 +95,7 @@ public class TankSpawner : MonoBehaviour
     {
         PlayerPrefs.SetInt("Reward", 5);
         PlayerPrefs.SetInt("Tank_Reward", 1);
-        Implementation.instance.ShowRewardedVideo();
+        //Implementation.instance.ShowRewardedVideo();
     }
     void RideOff()
     {
