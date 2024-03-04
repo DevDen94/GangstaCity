@@ -59,11 +59,25 @@ MonoBehaviour:
       - m_Id: 5b04e2ba25bc66f459bf853628ee56f3
         m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
       - m_Id: c360516a777ddfa4d8e6c461b8688f7c
-        m_Value: https://storage.googleapis.com/gangstercity/gangstercity/TestAddress
+        m_Value: https://storage.googleapis.com/gangstercity/TestAddress
       - m_Id: 1f2dcb741c245af41857f1f474226953
         m_Value: ServerData/[BuildTarget]
       - m_Id: b89cc48b3e2d0304ab1862db7cc6c63c
-        m_Value: https://storage.googleapis.com/gangstercity/gangstercity/TestAddress
+        m_Value: https://storage.googleapis.com/gangstercity/TestAddress
+    - m_InheritedParent: 
+      m_Id: 0fc03a0baffba1b448ecc1324014e1f1
+      m_ProfileName: IOS
+      m_Values:
+      - m_Id: 82d4a57200918c74d9cbc035c6c2cfd2
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: 5b04e2ba25bc66f459bf853628ee56f3
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: c360516a777ddfa4d8e6c461b8688f7c
+        m_Value: https://storage.googleapis.com/gangstercity/Ios
+      - m_Id: 1f2dcb741c245af41857f1f474226953
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: b89cc48b3e2d0304ab1862db7cc6c63c
+        m_Value: https://storage.googleapis.com/gangstercity/Ios
     m_ProfileEntryNames:
     - m_Id: 82d4a57200918c74d9cbc035c6c2cfd2
       m_Name: BuildTarget
@@ -98,7 +112,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ac128a42d1776c8469fbf989846dda1f, type: 2}
   - {fileID: 11400000, guid: 758455bcdc2b59d42b59705738314d46, type: 2}
   - {fileID: 11400000, guid: 211f2c9fc2311a04495fe4aa14325ce0, type: 2}
-  m_ActiveProfileId: 6264e10759cfc2749bd425da14443820
+  m_ActiveProfileId: 0fc03a0baffba1b448ecc1324014e1f1
   m_HostingServicesManager:
     m_HostingServiceInfos: []
     m_Settings: {fileID: 11400000}

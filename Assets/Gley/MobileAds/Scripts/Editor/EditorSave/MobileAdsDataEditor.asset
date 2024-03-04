@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   advertiserSettings:
   - advertiser: 20
-    useSDK: 0
+    useSDK: 1
     preprocessorDirective: GLEY_ADMOB
     sdkLink: https://github.com/googleads/googleads-mobile-unity/releases
     directedForChildrenRequired: 1
@@ -54,16 +54,17 @@ MonoBehaviour:
         id: ca-app-pub-5227706387493609/3141015104
         displayName: App Open ID
         required: 1
-      testMode: 1
+      testMode: 0
       testDevice: 
+      debugGeography: 0
     - platform: 1
-      enabled: 0
+      enabled: 1
       appId:
-        id: 
+        id: ca-app-pub-5227706387493609~7503856359
         displayName: App ID
         required: 1
       idBanner:
-        id: 
+        id: ca-app-pub-5227706387493609/7475457269
         displayName: Banner ID
         required: 1
       idMRec:
@@ -71,23 +72,24 @@ MonoBehaviour:
         displayName: MRec ID
         required: 1
       idInterstitial:
-        id: 
+        id: ca-app-pub-5227706387493609/8948799967
         displayName: Interstitial ID
         required: 1
       idRewarded:
-        id: 
+        id: ca-app-pub-5227706387493609/3971805459
         displayName: Rewarded Video ID
         required: 1
       idRewardedInterstitial:
-        id: 
+        id: ca-app-pub-5227706387493609/1537213809
         displayName: Rewarded Interstitial ID
         required: 1
       idOpenApp:
-        id: 
+        id: ca-app-pub-5227706387493609/3652488678
         displayName: App Open ID
         required: 1
       testMode: 0
       testDevice: 
+      debugGeography: 0
   - advertiser: 10
     useSDK: 0
     preprocessorDirective: GLEY_ADCOLONY
@@ -131,6 +133,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
     - platform: 1
       enabled: 0
       appId:
@@ -163,6 +166,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
   - advertiser: 30
     useSDK: 0
     preprocessorDirective: GLEY_APPLOVIN
@@ -206,6 +210,7 @@ MonoBehaviour:
         required: 1
       testMode: 0
       testDevice: 
+      debugGeography: 0
     - platform: 1
       enabled: 0
       appId:
@@ -238,6 +243,7 @@ MonoBehaviour:
         required: 1
       testMode: 0
       testDevice: 
+      debugGeography: 0
   - advertiser: 60
     useSDK: 0
     preprocessorDirective: GLEY_VUNGLE
@@ -281,6 +287,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
     - platform: 1
       enabled: 0
       appId:
@@ -313,6 +320,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
   - advertiser: 40
     useSDK: 0
     preprocessorDirective: GLEY_LEVELPLAY
@@ -356,6 +364,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
     - platform: 1
       enabled: 0
       appId:
@@ -388,6 +397,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
   - advertiser: 50
     useSDK: 0
     preprocessorDirective: GLEY_UNITYADS
@@ -431,6 +441,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
     - platform: 1
       enabled: 0
       appId:
@@ -463,6 +474,7 @@ MonoBehaviour:
         required: 0
       testMode: 0
       testDevice: 
+      debugGeography: 0
   debugMode: 0
   usePlaymaker: 0
   useUnityVisualScripting: 0
@@ -470,4 +482,4 @@ MonoBehaviour:
   nativePopupText: We will use your data to provide a better and personalized ad
     experience.
   selectedAndroidAdvertiser: 0
-  selectediOSAdvertiser: 0
+  selectediOSAdvertiser: 20

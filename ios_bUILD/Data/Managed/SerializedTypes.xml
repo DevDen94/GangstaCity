@@ -1,0 +1,239 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="BikeAnimation/IKPointsClass" preserve="nothing" serialized="true"/>
+		<type fullname="BikeCamera/BikeUIClass" preserve="nothing" serialized="true"/>
+		<type fullname="BikeControl/BikeLights" preserve="nothing" serialized="true"/>
+		<type fullname="BikeControl/BikeParticles" preserve="nothing" serialized="true"/>
+		<type fullname="BikeControl/BikeSetting" preserve="nothing" serialized="true"/>
+		<type fullname="BikeControl/BikeSounds" preserve="nothing" serialized="true"/>
+		<type fullname="BikeControl/BikeWheels" preserve="nothing" serialized="true"/>
+		<type fullname="BikeControl/ConnectWheel" preserve="nothing" serialized="true"/>
+		<type fullname="BikeControl/HitGround" preserve="nothing" serialized="true"/>
+		<type fullname="BikeControl/WheelSetting" preserve="nothing" serialized="true"/>
+		<type fullname="bl_MiniMap/MapShape" preserve="nothing" serialized="true"/>
+		<type fullname="bl_MiniMap/MapType" preserve="nothing" serialized="true"/>
+		<type fullname="bl_MiniMap/RenderMode" preserve="nothing" serialized="true"/>
+		<type fullname="bl_MiniMap/RenderType" preserve="nothing" serialized="true"/>
+		<type fullname="bl_MiniMapEntity/IconFaceDirection" preserve="nothing" serialized="true"/>
+		<type fullname="bl_MiniMapEntityBase/InteracableAction" preserve="nothing" serialized="true"/>
+		<type fullname="Gley.MobileAds.Internal.AdUnitID" preserve="nothing" serialized="true"/>
+		<type fullname="Gley.MobileAds.Internal.Advertiser" preserve="nothing" serialized="true"/>
+		<type fullname="Gley.MobileAds.Internal.PlatformSettings" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.IK.IKAdjust" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.IK.IKOffsetSpine" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.IK.IKOffsetTransform" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.LookPoint" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.OnDead" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.OnReceiveDamage" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vCharacterController.AI.FSMBehaviour.vStateDecisionObject" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vCharacterController.AI.FSMBehaviour.vStateTransition" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vCharacterController.AI.vAIMotor/vMovementSpeed" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vCharacterController.AI.vAIReceivedDamegeInfo" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vCharacterController.AI.vAIShooterManager/OnReloadWeapon" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vCharacterController.AI.vAITarget" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vCharacterController.GenericInput" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vCharacterController.OnActionHandle" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vCharacterController.OnActiveRagdoll" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vCharacterController.vActions.OnDoActionWithTarget" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vCharacterController.vActions.vOnActionHandle" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vCharacterController.vActions.vTriggerGenericAction/OnUpdateValue" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vCharacterController.vLockOn/LockOnEvent" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vCharacterController.vThirdPersonMotor/vMovementSpeed" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vDamage" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vEventSystems.vAnimatorEvent/vAnimatorEventTrigger" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vEventSystems.vAnimatorEventReceiver/vAnimatorEvent" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vEventSystems.vAnimatorEventReceiver/vAnimatorEvent/StateEvent" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vEventSystems.vAnimatorTagAdvanced/vAdvancedTags" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vExplosive/OnUpdateTime" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vGameController/OnRealoadGame" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vHandler" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vItemManager.ApplyAttributeEvent" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vItemManager.ChangeEquipmentControl" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vItemManager.EquipPoint" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vItemManager.ItemReference" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vItemManager.OnApplyAttribute" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vItemManager.OnChangeEquipmentEvent" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vItemManager.OnChangeItemAmount" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vItemManager.OnHandleItemEvent" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vItemManager.OnInstantiateItemObjectEvent" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vItemManager.OnOpenCloseInventory" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vItemManager.OnSelectEquipArea" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vItemManager.OnUpdateItemUsageTime" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vItemManager.vAmmo" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vItemManager.vAmmoDisplay/OnChangeAmmoEvent" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vItemManager.vItemAttribute" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vMelee.HitProperties" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vMelee.OnHitEnter" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vMelee.vBodyMember" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vMelee.vOnHitEvent" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vShooter.vBulletLifeSettings/vBulletLostLife" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vShooter.vDecalManager/DecalObject" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vShooter.vPowerChargeProjectileControl/vProjectilePerPower" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vShooter.vProjectileControl/ProjectileCastColliderEvent" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vShooter.vProjectileControl/ProjectilePassDamage" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vShooter.vShooterManager/OnReloadWeapon" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vShooter.vShooterWeapon/OnChangePowerCharger" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vShooter.vShooterWeaponBase/OnDestroyEvent" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vShooter.vShooterWeaponBase/OnInstantiateProjectile" preserve="nothing" serialized="true"/>
+		<type fullname="Invector.vThirdPersonCameraState" preserve="nothing" serialized="true"/>
+		<type fullname="Lovatto.MiniMap.MiniMapFullScreenMode" preserve="nothing" serialized="true"/>
+		<type fullname="RCC_Camera/CameraTarget" preserve="nothing" serialized="true"/>
+		<type fullname="RCC_CarControllerV3/Gear" preserve="nothing" serialized="true"/>
+		<type fullname="RCC_ChangableWheels/ChangableWheels" preserve="nothing" serialized="true"/>
+		<type fullname="RCC_Damage" preserve="nothing" serialized="true"/>
+		<type fullname="RCC_GroundMaterials/GroundMaterialFrictions" preserve="nothing" serialized="true"/>
+		<type fullname="RCC_GroundMaterials/TerrainFrictions" preserve="nothing" serialized="true"/>
+		<type fullname="RCC_GroundMaterials/TerrainFrictions/SplatmapIndexes" preserve="nothing" serialized="true"/>
+		<type fullname="RCC_Inputs" preserve="nothing" serialized="true"/>
+		<type fullname="RCC_Settings/BehaviorType" preserve="nothing" serialized="true"/>
+		<type fullname="RTC_Ammunation/Ammunation" preserve="nothing" serialized="true"/>
+		<type fullname="RTC_GroundMaterials/GroundMaterialFrictions" preserve="nothing" serialized="true"/>
+		<type fullname="RTC_TankController/RTC_Wheels" preserve="nothing" serialized="true"/>
+		<type fullname="SickscoreGames.HUDNavigationSystem.HNSPrefabs" preserve="nothing" serialized="true"/>
+		<type fullname="SickscoreGames.HUDNavigationSystem.HUDNavigationCanvas/_CompassBarReferences" preserve="nothing" serialized="true"/>
+		<type fullname="SickscoreGames.HUDNavigationSystem.HUDNavigationCanvas/_IndicatorReferences" preserve="nothing" serialized="true"/>
+		<type fullname="SickscoreGames.HUDNavigationSystem.HUDNavigationCanvas/_MinimapReferences" preserve="nothing" serialized="true"/>
+		<type fullname="SickscoreGames.HUDNavigationSystem.HUDNavigationCanvas/_RadarReferences" preserve="nothing" serialized="true"/>
+		<type fullname="SickscoreGames.HUDNavigationSystem.NavigationElementEvent" preserve="nothing" serialized="true"/>
+		<type fullname="SickscoreGames.HUDNavigationSystem.NavigationTypeEvent" preserve="nothing" serialized="true"/>
+		<type fullname="SickscoreGames.HUDNavigationSystem.NavigationUpdateEvent" preserve="nothing" serialized="true"/>
+		<type fullname="vTagMask" preserve="nothing" serialized="true"/>
+	</assembly>
+	<assembly fullname="Assembly-CSharp-firstpass">
+		<type fullname="ControlFreak2.InputRig/AutomaticInputConfigCollection" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.InputRig/AxisConfig" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.InputRig/AxisConfigCollection" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.InputRig/GamepadConfig" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.InputRig/MouseConfig" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.InputRig/RigSwitchCollection" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.InputRig/ScrollWheelState" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.InputRig/TiltConfig" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.InputRig/VirtualJoystickConfigCollection" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.AnalogConfig" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.AxisBinding" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.AxisBinding/TargetElem" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.DigitalBinding" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.DigitalBinding/AxisElem" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.DirectionBinding" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.DisablingConditionSet" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.EmuTouchBinding" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.JoystickConfig" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.JoystickStateBinding" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.MousePositionBinding" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.MultiTouchGestureThresholds" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.ScrollDeltaBinding" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.SpriteConfig" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.TiltState" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.TouchGestureConfig" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.Internal.TouchGestureStateBinding" preserve="nothing" serialized="true"/>
+		<type fullname="ControlFreak2.SuperTouchZone/MultiFingerTouchConfig" preserve="nothing" serialized="true"/>
+		<type fullname="PixelCrushers.DialogueSystem.InputTrigger" preserve="nothing" serialized="true"/>
+		<type fullname="PixelCrushers.DialogueSystem.UnityGUI.AutoSize" preserve="nothing" serialized="true"/>
+		<type fullname="PixelCrushers.DialogueSystem.UnityGUI.Fit" preserve="nothing" serialized="true"/>
+		<type fullname="PixelCrushers.DialogueSystem.UnityGUI.GUIImageParams" preserve="nothing" serialized="true"/>
+		<type fullname="PixelCrushers.DialogueSystem.UnityGUI.ImageAnimation" preserve="nothing" serialized="true"/>
+		<type fullname="PixelCrushers.DialogueSystem.UnityGUI.Navigation" preserve="nothing" serialized="true"/>
+		<type fullname="PixelCrushers.DialogueSystem.UnityGUI.ScaledRect" preserve="nothing" serialized="true"/>
+		<type fullname="PixelCrushers.DialogueSystem.UnityGUI.ScaledValue" preserve="nothing" serialized="true"/>
+		<type fullname="PixelCrushers.DialogueSystem.UnityGUI.UnityAlertControls" preserve="nothing" serialized="true"/>
+		<type fullname="PixelCrushers.DialogueSystem.UnityGUI.UnityDialogueControls" preserve="nothing" serialized="true"/>
+		<type fullname="PixelCrushers.DialogueSystem.UnityGUI.UnityResponseMenuControls" preserve="nothing" serialized="true"/>
+		<type fullname="PixelCrushers.DialogueSystem.UnityGUI.UnitySubtitleControls" preserve="nothing" serialized="true"/>
+		<type fullname="PixelCrushers.DialogueSystem.UnityUITypewriterEffect/AutoScrollSettings" preserve="nothing" serialized="true"/>
+	</assembly>
+	<assembly fullname="DOTween">
+		<type fullname="DG.Tweening.Core.DOTweenSettings/ModulesSetup" preserve="nothing" serialized="true"/>
+		<type fullname="DG.Tweening.Core.DOTweenSettings/SafeModeOptions" preserve="nothing" serialized="true"/>
+	</assembly>
+	<assembly fullname="iTSMain">
+		<type fullname="TSConnectorOtherPoints" preserve="nothing" serialized="true"/>
+		<type fullname="TSConnectorPoint" preserve="nothing" serialized="true"/>
+		<type fullname="TSLaneConnector" preserve="nothing" serialized="true"/>
+		<type fullname="TSLaneInfo" preserve="nothing" serialized="true"/>
+		<type fullname="TSMainManager/VehicleTypePresets" preserve="nothing" serialized="true"/>
+		<type fullname="TSPoints" preserve="nothing" serialized="true"/>
+		<type fullname="TSTrafficSpawner/TSSpawnVehicles" preserve="nothing" serialized="true"/>
+	</assembly>
+	<assembly fullname="Unity.Addressables">
+		<type fullname="UnityEngine.AddressableAssets.AssetReference" preserve="nothing" serialized="true"/>
+	</assembly>
+	<assembly fullname="Unity.InputSystem">
+		<type fullname="UnityEngine.InputSystem.InputAction" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.InputSystem.InputActionMap" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.InputSystem.InputBinding" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.InputSystem.InputControlScheme" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.InputSystem.InputControlScheme/DeviceRequirement" preserve="nothing" serialized="true"/>
+	</assembly>
+	<assembly fullname="Unity.RenderPipelines.Core.Runtime">
+		<type fullname="UnityEngine.Rendering.UI.DebugUIPrefabBundle" preserve="nothing" serialized="true"/>
+	</assembly>
+	<assembly fullname="Unity.RenderPipelines.Universal.Runtime">
+		<type fullname="UnityEngine.Rendering.Universal.PostProcessData/ShaderResources" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.Universal.PostProcessData/TextureResources" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.Universal.ScriptableRendererData/DebugShaderResources" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.Universal.StencilStateData" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.Universal.UniversalRendererData/ShaderResources" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.Universal.XRSystemData/ShaderResources" preserve="nothing" serialized="true"/>
+	</assembly>
+	<assembly fullname="Unity.TextMeshPro">
+		<type fullname="TMPro.FaceInfo_Legacy" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.FontAssetCreationSettings" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.KerningTable" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_Character" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_FontFeatureTable" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_FontWeightPair" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_GlyphAdjustmentRecord" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_GlyphPairAdjustmentRecord" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_GlyphValueRecord" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_Sprite" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_SpriteCharacter" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_SpriteGlyph" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_Style" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.VertexGradient" preserve="nothing" serialized="true"/>
+	</assembly>
+	<assembly fullname="Unity.Timeline">
+		<type fullname="UnityEngine.Timeline.AudioClipProperties" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Timeline.AudioMixerProperties" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Timeline.MarkerList" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Timeline.TimelineAsset/EditorSettings" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Timeline.TimelineClip" preserve="nothing" serialized="true"/>
+	</assembly>
+	<assembly fullname="UnityEngine.CoreModule">
+		<type fullname="UnityEngine.Events.ArgumentCache" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Events.PersistentListenerMode" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Events.UnityEvent" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.RectOffset" preserve="nothing" serialized="true"/>
+	</assembly>
+	<assembly fullname="UnityEngine.IMGUIModule">
+		<type fullname="UnityEngine.GUISettings" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.GUIStyle" preserve="nothing" serialized="true"/>
+	</assembly>
+	<assembly fullname="UnityEngine.TextCoreFontEngineModule">
+		<type fullname="UnityEngine.TextCore.FaceInfo" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.TextCore.Glyph" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.TextCore.GlyphMetrics" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.TextCore.GlyphRect" preserve="nothing" serialized="true"/>
+	</assembly>
+	<assembly fullname="UnityEngine.UI">
+		<type fullname="UnityEngine.EventSystems.EventTrigger/Entry" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.EventSystems.EventTrigger/TriggerEvent" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.AnimationTriggers" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.Button/ButtonClickedEvent" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.ColorBlock" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.Dropdown/DropdownEvent" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.Dropdown/OptionData" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.Dropdown/OptionDataList" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.FontData" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.InputField/EndEditEvent" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.InputField/OnChangeEvent" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.InputField/SubmitEvent" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.MaskableGraphic/CullStateChangedEvent" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.Navigation" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.Scrollbar/ScrollEvent" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.ScrollRect/ScrollRectEvent" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.Slider/SliderEvent" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.SpriteState" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.Toggle/ToggleEvent" preserve="nothing" serialized="true"/>
+	</assembly>
+</linker>

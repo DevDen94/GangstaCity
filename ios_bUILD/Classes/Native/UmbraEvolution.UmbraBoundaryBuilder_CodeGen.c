@@ -1,0 +1,289 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+// 0x00000001 System.Void UmbraEvolution.SingleLayerAttribute::.ctor()
+extern void SingleLayerAttribute__ctor_m843707DFE9095304DCE48F5B08FBF29295E8B2BE (void);
+// 0x00000002 System.Boolean UmbraEvolution.UmbraBoundaryBuilder.Boundary::get_RebuildNodeList()
+extern void Boundary_get_RebuildNodeList_m70A928A4564BBF585A545A002A1D7886139E977A (void);
+// 0x00000003 System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::set_RebuildNodeList(System.Boolean)
+extern void Boundary_set_RebuildNodeList_m38A41564354A2B2EF50FB19839DF6FF01F761421 (void);
+// 0x00000004 System.Collections.Generic.List`1<UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode> UmbraEvolution.UmbraBoundaryBuilder.Boundary::get_BoundaryNodes()
+extern void Boundary_get_BoundaryNodes_mF9A64D4BF7E12AB9C1705CFAF1D1FE11F92C8891 (void);
+// 0x00000005 UmbraEvolution.UmbraBoundaryBuilder.BoundaryBuilder UmbraEvolution.UmbraBoundaryBuilder.Boundary::get_ParentBoundaryBuilder()
+extern void Boundary_get_ParentBoundaryBuilder_m87A6294FEF2463454E052089536DE7A9AD4E6FCB (void);
+// 0x00000006 UnityEngine.MeshRenderer UmbraEvolution.UmbraBoundaryBuilder.Boundary::get_BoundaryMeshRenderer()
+extern void Boundary_get_BoundaryMeshRenderer_mB53B6C695D266440A5DA5F6F8CA64E0510E7C039 (void);
+// 0x00000007 System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::set_BoundaryMeshRenderer(UnityEngine.MeshRenderer)
+extern void Boundary_set_BoundaryMeshRenderer_mA4B3151803381256C90C7C7D8669E6BE526FFEA0 (void);
+// 0x00000008 UnityEngine.MeshFilter UmbraEvolution.UmbraBoundaryBuilder.Boundary::get_BoundaryMeshFilter()
+extern void Boundary_get_BoundaryMeshFilter_m97DDFFAC454E2CF2112B2EC46E78E8602E4F027B (void);
+// 0x00000009 System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::set_BoundaryMeshFilter(UnityEngine.MeshFilter)
+extern void Boundary_set_BoundaryMeshFilter_m0AF2464A33CD74D8497E2D759C2460259C5E4935 (void);
+// 0x0000000A System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::OnTransformChildrenChanged()
+extern void Boundary_OnTransformChildrenChanged_mBBF3C2489A1631465581A6361B55A089478297FC (void);
+// 0x0000000B System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::OnDrawGizmos()
+extern void Boundary_OnDrawGizmos_mEDA2FA7652A3FA8E28A54D88B11A89968E56993E (void);
+// 0x0000000C System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::OnDrawGizmosSelected()
+extern void Boundary_OnDrawGizmosSelected_m0606FDE947188B1EE197ECB26FC03E53A2DED06D (void);
+// 0x0000000D System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::Update()
+extern void Boundary_Update_m35B0F98D1F735DAC5D8D03E1142BD2FCDD22C100 (void);
+// 0x0000000E System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::RefreshNodeProperties()
+extern void Boundary_RefreshNodeProperties_m8226EAD3AA5DC21CE42BB361A8504372C2826ECD (void);
+// 0x0000000F System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::UpdateNodeRotations()
+extern void Boundary_UpdateNodeRotations_m6DA448105CDFB800615BB4DFB875E080CC7C9A93 (void);
+// 0x00000010 System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::UpdateNodeColliders()
+extern void Boundary_UpdateNodeColliders_m3044586A8A0566A18288AB80428EA40F232917D8 (void);
+// 0x00000011 System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::DrawGizmos(UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode)
+extern void Boundary_DrawGizmos_mFA50D535C834C7375201C2765E7278709259772F (void);
+// 0x00000012 System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::DrawNormalGizmos(UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode)
+extern void Boundary_DrawNormalGizmos_mDA88F6A32FDC79DF6EA9F270154D689549FE3352 (void);
+// 0x00000013 System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::DrawPhysicalGizmos(UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode)
+extern void Boundary_DrawPhysicalGizmos_mA234B4C8014B478AFFBBDA80809A845A04F920DF (void);
+// 0x00000014 System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::DestroyPhysicalGizmos()
+extern void Boundary_DestroyPhysicalGizmos_mDBB3FE62E0C6D5B795554CFDA9A6F97398C7376B (void);
+// 0x00000015 System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::DestroyPhysicalGizmosImmediate()
+extern void Boundary_DestroyPhysicalGizmosImmediate_mC8D772E8AE0E696502AF0061E4917AD356E122CB (void);
+// 0x00000016 System.Boolean UmbraEvolution.UmbraBoundaryBuilder.Boundary::HasAnyNodeMovedOrRotated()
+extern void Boundary_HasAnyNodeMovedOrRotated_m7CB243083B757D0FDA5DB53B460521F6BAE55E32 (void);
+// 0x00000017 UnityEngine.GameObject UmbraEvolution.UmbraBoundaryBuilder.Boundary::AddNode(UnityEngine.Vector3)
+extern void Boundary_AddNode_mEE2A368B82C3CBEACD0A0CBDEB79C43DCCC1E478 (void);
+// 0x00000018 System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::GenerateMesh()
+extern void Boundary_GenerateMesh_m1F20AD2407BBED8D4E96A142ED5FD603AA5E8304 (void);
+// 0x00000019 System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::DestroyBoundaryMesh()
+extern void Boundary_DestroyBoundaryMesh_m27D8A166686180AAF6EB8D745F58CD05D3439A0C (void);
+// 0x0000001A System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::DestroyBoundaryMeshImmediate()
+extern void Boundary_DestroyBoundaryMeshImmediate_m6123E887EAD90069C8B8EC16563DCCBA59D944D9 (void);
+// 0x0000001B System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::MatchPhysicsLayerRecursive()
+extern void Boundary_MatchPhysicsLayerRecursive_mAED14D1A311791189D31CEF616002BDA23B65EEF (void);
+// 0x0000001C System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::MatchPhysicsLayerRecursive(UnityEngine.GameObject)
+extern void Boundary_MatchPhysicsLayerRecursive_mDAE29B91B12D5EC9D551468ABEB16F6E302529E7 (void);
+// 0x0000001D System.Void UmbraEvolution.UmbraBoundaryBuilder.Boundary::.ctor()
+extern void Boundary__ctor_mE94A49B772D564C185E98646090E7AE40551202B (void);
+// 0x0000001E UmbraEvolution.UmbraBoundaryBuilder.Boundary[] UmbraEvolution.UmbraBoundaryBuilder.BoundaryBuilder::get_Boundaries()
+extern void BoundaryBuilder_get_Boundaries_mACD15C5A14ABD8E9D912ED20F2EFCC2F4F857939 (void);
+// 0x0000001F UmbraEvolution.UmbraBoundaryBuilder.Boundary UmbraEvolution.UmbraBoundaryBuilder.BoundaryBuilder::get_BoundaryPlacingNodes()
+extern void BoundaryBuilder_get_BoundaryPlacingNodes_m21F0219D82DFFDA0538214D6361BB4F2786417F6 (void);
+// 0x00000020 UmbraEvolution.UmbraBoundaryBuilder.BoundaryBuilder UmbraEvolution.UmbraBoundaryBuilder.BoundaryBuilder::get_Reference()
+extern void BoundaryBuilder_get_Reference_m14AF30561CF892F673D5E11ADBC4D75BDB37203A (void);
+// 0x00000021 System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryBuilder::set_Reference(UmbraEvolution.UmbraBoundaryBuilder.BoundaryBuilder)
+extern void BoundaryBuilder_set_Reference_m928DC87D76026F3928361AE8072647190BA01820 (void);
+// 0x00000022 System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryBuilder::OnEnable()
+extern void BoundaryBuilder_OnEnable_mB985DFCD2F39F8469DD97A2D7C99A105D8682CB9 (void);
+// 0x00000023 UnityEngine.GameObject UmbraEvolution.UmbraBoundaryBuilder.BoundaryBuilder::AddBoundary()
+extern void BoundaryBuilder_AddBoundary_mC6CD148A3A7C4D073DE19A7C77572F397F627A62 (void);
+// 0x00000024 System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryBuilder::.ctor()
+extern void BoundaryBuilder__ctor_m83FD2635DDCB22AD91998FFC16B68302FCF8D3C4 (void);
+// 0x00000025 System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryBuilder/<>c::.cctor()
+extern void U3CU3Ec__cctor_m057421BC80F22BADEAA1E9BFD105395EF3AF7BD3 (void);
+// 0x00000026 System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryBuilder/<>c::.ctor()
+extern void U3CU3Ec__ctor_m94B6DAF9348D4CED1301C0137CB4A6634AB5C981 (void);
+// 0x00000027 System.Boolean UmbraEvolution.UmbraBoundaryBuilder.BoundaryBuilder/<>c::<get_BoundaryPlacingNodes>b__8_0(UmbraEvolution.UmbraBoundaryBuilder.Boundary)
+extern void U3CU3Ec_U3Cget_BoundaryPlacingNodesU3Eb__8_0_mE13EC36E6A6A21A1EB5C8957D8FE842DA6512D7C (void);
+// 0x00000028 UmbraEvolution.UmbraBoundaryBuilder.Boundary UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::get_ParentBoundary()
+extern void BoundaryNode_get_ParentBoundary_mA70DA00AD76B62E71412C4102517018E6BB04DF2 (void);
+// 0x00000029 UnityEngine.BoxCollider UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::get_MyBoxCollider()
+extern void BoundaryNode_get_MyBoxCollider_m31B171B2BEE2CBC287C3B8BDC490CFAB8DAA0C2E (void);
+// 0x0000002A System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::set_MyBoxCollider(UnityEngine.BoxCollider)
+extern void BoundaryNode_set_MyBoxCollider_mB86618789502D65A4CD6FDF27179426A50E04F3A (void);
+// 0x0000002B UnityEngine.GameObject UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::get_PhysicalNodeGizmo()
+extern void BoundaryNode_get_PhysicalNodeGizmo_m083DD0FAD2F2EB9CAF12DACD8DB2FE8BC85C34C6 (void);
+// 0x0000002C System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::set_PhysicalNodeGizmo(UnityEngine.GameObject)
+extern void BoundaryNode_set_PhysicalNodeGizmo_m136226DEE4001976E320F64437AB86F72D5C900D (void);
+// 0x0000002D UnityEngine.GameObject UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::get_PhysicalBoundaryGizmo()
+extern void BoundaryNode_get_PhysicalBoundaryGizmo_m09C3170F79CDA181C5687A5F31965E54F85095E8 (void);
+// 0x0000002E System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::set_PhysicalBoundaryGizmo(UnityEngine.GameObject)
+extern void BoundaryNode_set_PhysicalBoundaryGizmo_m0CD9AF573735D82DB71AF5C6102FE9CD3FBFB7D9 (void);
+// 0x0000002F UnityEngine.Vector3 UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::get_LastKnownPosition()
+extern void BoundaryNode_get_LastKnownPosition_m8C6BB3979F6A776CEB5DB8514446543800A80CCF (void);
+// 0x00000030 System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::set_LastKnownPosition(UnityEngine.Vector3)
+extern void BoundaryNode_set_LastKnownPosition_m9178B3EA160AEC3BF55D660DF3BFAF6B04EB822E (void);
+// 0x00000031 UnityEngine.Quaternion UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::get_LastKnownRotation()
+extern void BoundaryNode_get_LastKnownRotation_m7081ED3D6486555D796BF2E21ECAF6FEC825C447 (void);
+// 0x00000032 System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::set_LastKnownRotation(UnityEngine.Quaternion)
+extern void BoundaryNode_set_LastKnownRotation_m277D484A5BA93B819A734FEF5C25536D885C7ABB (void);
+// 0x00000033 System.Boolean UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::HasNodeMovedOrRotated()
+extern void BoundaryNode_HasNodeMovedOrRotated_mFE69896720BADFC9BF1E4874F34092C2DD4FF814 (void);
+// 0x00000034 System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::DrawNodeGizmosManually()
+extern void BoundaryNode_DrawNodeGizmosManually_m7DA1F6A7B0589C6011C0AF8E82063E843C5A1C87 (void);
+// 0x00000035 System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::DrawPhysicalNodeGizmosManually()
+extern void BoundaryNode_DrawPhysicalNodeGizmosManually_m73BDBC9F94D23B4C620284DBADCD2CBA46C347FF (void);
+// 0x00000036 System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::DrawPhysicalBoundaryNodeGizmosManually(UnityEngine.Vector3,UnityEngine.Vector3)
+extern void BoundaryNode_DrawPhysicalBoundaryNodeGizmosManually_mA9A7D4B75324FBFE677025301D55E8ECC5441A18 (void);
+// 0x00000037 System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::DestroyPhysicalGizmos()
+extern void BoundaryNode_DestroyPhysicalGizmos_m9FDA1980E68467F32FBCB87CAEA5DCD0E4AAB4D1 (void);
+// 0x00000038 System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::DestroyPhysicalGizmosImmediate()
+extern void BoundaryNode_DestroyPhysicalGizmosImmediate_m6B9782E112DCDA97F1CE87B3535C108433E1EE31 (void);
+// 0x00000039 System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::UpdateBoxCollider(System.Single,System.Single,System.Single,UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode,System.Boolean)
+extern void BoundaryNode_UpdateBoxCollider_m811FE6037B9D3DDE329E20E4967174C541F785EF (void);
+// 0x0000003A System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::DisableBoxCollider()
+extern void BoundaryNode_DisableBoxCollider_m6BE3BB81FFD07F77CAF640D34B58C2A013CE7C57 (void);
+// 0x0000003B System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::CalculateAndSetRotation(UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode)
+extern void BoundaryNode_CalculateAndSetRotation_mFE97164CE4ECC4D0379531CE2D89A82B713199E7 (void);
+// 0x0000003C UnityEngine.Vector3[] UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::ReturnVertices(System.Single)
+extern void BoundaryNode_ReturnVertices_mBA6AC7DAA51A3E5ED3300AA3BA63AC52F3F44415 (void);
+// 0x0000003D System.Int32[] UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::ReturnTriangles()
+extern void BoundaryNode_ReturnTriangles_m012D8D8B9427E5E67BC5BB5D83598E9525BDB1BD (void);
+// 0x0000003E System.Void UmbraEvolution.UmbraBoundaryBuilder.BoundaryNode::.ctor()
+extern void BoundaryNode__ctor_m2DBA636CBEBC2EAFDDD7EAC4042EB3BB3522958A (void);
+static Il2CppMethodPointer s_methodPointers[62] = 
+{
+	SingleLayerAttribute__ctor_m843707DFE9095304DCE48F5B08FBF29295E8B2BE,
+	Boundary_get_RebuildNodeList_m70A928A4564BBF585A545A002A1D7886139E977A,
+	Boundary_set_RebuildNodeList_m38A41564354A2B2EF50FB19839DF6FF01F761421,
+	Boundary_get_BoundaryNodes_mF9A64D4BF7E12AB9C1705CFAF1D1FE11F92C8891,
+	Boundary_get_ParentBoundaryBuilder_m87A6294FEF2463454E052089536DE7A9AD4E6FCB,
+	Boundary_get_BoundaryMeshRenderer_mB53B6C695D266440A5DA5F6F8CA64E0510E7C039,
+	Boundary_set_BoundaryMeshRenderer_mA4B3151803381256C90C7C7D8669E6BE526FFEA0,
+	Boundary_get_BoundaryMeshFilter_m97DDFFAC454E2CF2112B2EC46E78E8602E4F027B,
+	Boundary_set_BoundaryMeshFilter_m0AF2464A33CD74D8497E2D759C2460259C5E4935,
+	Boundary_OnTransformChildrenChanged_mBBF3C2489A1631465581A6361B55A089478297FC,
+	Boundary_OnDrawGizmos_mEDA2FA7652A3FA8E28A54D88B11A89968E56993E,
+	Boundary_OnDrawGizmosSelected_m0606FDE947188B1EE197ECB26FC03E53A2DED06D,
+	Boundary_Update_m35B0F98D1F735DAC5D8D03E1142BD2FCDD22C100,
+	Boundary_RefreshNodeProperties_m8226EAD3AA5DC21CE42BB361A8504372C2826ECD,
+	Boundary_UpdateNodeRotations_m6DA448105CDFB800615BB4DFB875E080CC7C9A93,
+	Boundary_UpdateNodeColliders_m3044586A8A0566A18288AB80428EA40F232917D8,
+	Boundary_DrawGizmos_mFA50D535C834C7375201C2765E7278709259772F,
+	Boundary_DrawNormalGizmos_mDA88F6A32FDC79DF6EA9F270154D689549FE3352,
+	Boundary_DrawPhysicalGizmos_mA234B4C8014B478AFFBBDA80809A845A04F920DF,
+	Boundary_DestroyPhysicalGizmos_mDBB3FE62E0C6D5B795554CFDA9A6F97398C7376B,
+	Boundary_DestroyPhysicalGizmosImmediate_mC8D772E8AE0E696502AF0061E4917AD356E122CB,
+	Boundary_HasAnyNodeMovedOrRotated_m7CB243083B757D0FDA5DB53B460521F6BAE55E32,
+	Boundary_AddNode_mEE2A368B82C3CBEACD0A0CBDEB79C43DCCC1E478,
+	Boundary_GenerateMesh_m1F20AD2407BBED8D4E96A142ED5FD603AA5E8304,
+	Boundary_DestroyBoundaryMesh_m27D8A166686180AAF6EB8D745F58CD05D3439A0C,
+	Boundary_DestroyBoundaryMeshImmediate_m6123E887EAD90069C8B8EC16563DCCBA59D944D9,
+	Boundary_MatchPhysicsLayerRecursive_mAED14D1A311791189D31CEF616002BDA23B65EEF,
+	Boundary_MatchPhysicsLayerRecursive_mDAE29B91B12D5EC9D551468ABEB16F6E302529E7,
+	Boundary__ctor_mE94A49B772D564C185E98646090E7AE40551202B,
+	BoundaryBuilder_get_Boundaries_mACD15C5A14ABD8E9D912ED20F2EFCC2F4F857939,
+	BoundaryBuilder_get_BoundaryPlacingNodes_m21F0219D82DFFDA0538214D6361BB4F2786417F6,
+	BoundaryBuilder_get_Reference_m14AF30561CF892F673D5E11ADBC4D75BDB37203A,
+	BoundaryBuilder_set_Reference_m928DC87D76026F3928361AE8072647190BA01820,
+	BoundaryBuilder_OnEnable_mB985DFCD2F39F8469DD97A2D7C99A105D8682CB9,
+	BoundaryBuilder_AddBoundary_mC6CD148A3A7C4D073DE19A7C77572F397F627A62,
+	BoundaryBuilder__ctor_m83FD2635DDCB22AD91998FFC16B68302FCF8D3C4,
+	U3CU3Ec__cctor_m057421BC80F22BADEAA1E9BFD105395EF3AF7BD3,
+	U3CU3Ec__ctor_m94B6DAF9348D4CED1301C0137CB4A6634AB5C981,
+	U3CU3Ec_U3Cget_BoundaryPlacingNodesU3Eb__8_0_mE13EC36E6A6A21A1EB5C8957D8FE842DA6512D7C,
+	BoundaryNode_get_ParentBoundary_mA70DA00AD76B62E71412C4102517018E6BB04DF2,
+	BoundaryNode_get_MyBoxCollider_m31B171B2BEE2CBC287C3B8BDC490CFAB8DAA0C2E,
+	BoundaryNode_set_MyBoxCollider_mB86618789502D65A4CD6FDF27179426A50E04F3A,
+	BoundaryNode_get_PhysicalNodeGizmo_m083DD0FAD2F2EB9CAF12DACD8DB2FE8BC85C34C6,
+	BoundaryNode_set_PhysicalNodeGizmo_m136226DEE4001976E320F64437AB86F72D5C900D,
+	BoundaryNode_get_PhysicalBoundaryGizmo_m09C3170F79CDA181C5687A5F31965E54F85095E8,
+	BoundaryNode_set_PhysicalBoundaryGizmo_m0CD9AF573735D82DB71AF5C6102FE9CD3FBFB7D9,
+	BoundaryNode_get_LastKnownPosition_m8C6BB3979F6A776CEB5DB8514446543800A80CCF,
+	BoundaryNode_set_LastKnownPosition_m9178B3EA160AEC3BF55D660DF3BFAF6B04EB822E,
+	BoundaryNode_get_LastKnownRotation_m7081ED3D6486555D796BF2E21ECAF6FEC825C447,
+	BoundaryNode_set_LastKnownRotation_m277D484A5BA93B819A734FEF5C25536D885C7ABB,
+	BoundaryNode_HasNodeMovedOrRotated_mFE69896720BADFC9BF1E4874F34092C2DD4FF814,
+	BoundaryNode_DrawNodeGizmosManually_m7DA1F6A7B0589C6011C0AF8E82063E843C5A1C87,
+	BoundaryNode_DrawPhysicalNodeGizmosManually_m73BDBC9F94D23B4C620284DBADCD2CBA46C347FF,
+	BoundaryNode_DrawPhysicalBoundaryNodeGizmosManually_mA9A7D4B75324FBFE677025301D55E8ECC5441A18,
+	BoundaryNode_DestroyPhysicalGizmos_m9FDA1980E68467F32FBCB87CAEA5DCD0E4AAB4D1,
+	BoundaryNode_DestroyPhysicalGizmosImmediate_m6B9782E112DCDA97F1CE87B3535C108433E1EE31,
+	BoundaryNode_UpdateBoxCollider_m811FE6037B9D3DDE329E20E4967174C541F785EF,
+	BoundaryNode_DisableBoxCollider_m6BE3BB81FFD07F77CAF640D34B58C2A013CE7C57,
+	BoundaryNode_CalculateAndSetRotation_mFE97164CE4ECC4D0379531CE2D89A82B713199E7,
+	BoundaryNode_ReturnVertices_mBA6AC7DAA51A3E5ED3300AA3BA63AC52F3F44415,
+	BoundaryNode_ReturnTriangles_m012D8D8B9427E5E67BC5BB5D83598E9525BDB1BD,
+	BoundaryNode__ctor_m2DBA636CBEBC2EAFDDD7EAC4042EB3BB3522958A,
+};
+static const int32_t s_InvokerIndices[62] = 
+{
+	3464,
+	3313,
+	2952,
+	3380,
+	3380,
+	3380,
+	3015,
+	3380,
+	3015,
+	3464,
+	3464,
+	3464,
+	3464,
+	3464,
+	3464,
+	3464,
+	3015,
+	3015,
+	3015,
+	3464,
+	3464,
+	3313,
+	2780,
+	3464,
+	3464,
+	3464,
+	3464,
+	3015,
+	3464,
+	3380,
+	3380,
+	8458,
+	7651,
+	3464,
+	3380,
+	3464,
+	8508,
+	3464,
+	2468,
+	3380,
+	3380,
+	3015,
+	3380,
+	3015,
+	3380,
+	3015,
+	3458,
+	3085,
+	3394,
+	3027,
+	3313,
+	3464,
+	3464,
+	2201,
+	3464,
+	3464,
+	612,
+	3464,
+	3015,
+	2770,
+	3380,
+	3464,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UmbraEvolution_UmbraBoundaryBuilder_CodeGenModule;
+const Il2CppCodeGenModule g_UmbraEvolution_UmbraBoundaryBuilder_CodeGenModule = 
+{
+	"UmbraEvolution.UmbraBoundaryBuilder.dll",
+	62,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL, // module initializer,
+	NULL,
+	NULL,
+	NULL,
+};
