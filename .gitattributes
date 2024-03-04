@@ -119,7 +119,9 @@
 *.so lfs
 *.pdb lfs
 *.mdb lfs
-
+*.bundle lfs
+*.a lfs
+*.resS lfs
 # Packaging
 *.zip lfs
 *.7z lfs
