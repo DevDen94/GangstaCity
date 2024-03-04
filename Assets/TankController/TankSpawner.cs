@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Gley.MobileAds.Internal;
 public class TankSpawner : MonoBehaviour
 {
     public GameObject TankCanvas;
@@ -95,7 +96,7 @@ public class TankSpawner : MonoBehaviour
     {
         PlayerPrefs.SetInt("Reward", 5);
         PlayerPrefs.SetInt("Tank_Reward", 1);
-        //Implementation.instance.ShowRewardedVideo();
+        MobileAdsExample.Instance.ShowRewardedVideo();
     }
     void RideOff()
     {

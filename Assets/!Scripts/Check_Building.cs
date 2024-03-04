@@ -50,13 +50,14 @@ public class Check_Building : MonoBehaviour
             RCC_Settings.Instance.mobileController = RCC_Settings.MobileController.TouchScreen;
         }
 
-        StartCoroutine(Update_Called());
+        
     }
 
-    IEnumerator Update_Called()
+   
+
+    void FixedUpdate()
     {
-        while (true)
-        {
+       
             speed = GetComponent<RCC_CarControllerV3>().speed;
             if (isEject)
             {
@@ -77,7 +78,7 @@ public class Check_Building : MonoBehaviour
                 if (Driver == null)
                 {
                     Is_DriverExit = false;
-                   yield return null;
+                   return;
                 }
 
                 Driver.SetActive(true);
@@ -100,8 +101,8 @@ public class Check_Building : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
-            yield return new WaitForSeconds(0.1f);
-        }
+          
+        
     }
     void Find()
     {

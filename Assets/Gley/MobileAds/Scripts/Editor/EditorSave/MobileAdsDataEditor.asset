@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   advertiserSettings:
   - advertiser: 20
-    useSDK: 1
+    useSDK: 0
     preprocessorDirective: GLEY_ADMOB
     sdkLink: https://github.com/googleads/googleads-mobile-unity/releases
     directedForChildrenRequired: 1
@@ -25,7 +25,7 @@ MonoBehaviour:
     showConsentPopup: 0
     platformSettings:
     - platform: 0
-      enabled: 1
+      enabled: 0
       appId:
         id: ca-app-pub-5227706387493609~6435622230
         displayName: App ID
@@ -54,7 +54,7 @@ MonoBehaviour:
         id: ca-app-pub-5227706387493609/3141015104
         displayName: App Open ID
         required: 1
-      testMode: 0
+      testMode: 1
       testDevice: 
     - platform: 1
       enabled: 0
@@ -469,5 +469,5 @@ MonoBehaviour:
   enableATT: 0
   nativePopupText: We will use your data to provide a better and personalized ad
     experience.
-  selectedAndroidAdvertiser: 20
+  selectedAndroidAdvertiser: 0
   selectediOSAdvertiser: 0
