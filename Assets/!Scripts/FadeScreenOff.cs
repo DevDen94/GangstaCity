@@ -9,7 +9,7 @@ public class FadeScreenOff : MonoBehaviour
     {
         gameObject.SetActive(false);
 
-        if(!_Long)
+        if(!_Long && !GameManger.instance.CutSceneScreen)
         GameManger.instance.CutSceneScreen.SetActive(true);
     }
 }

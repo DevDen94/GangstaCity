@@ -1430,6 +1430,7 @@ GameObject:
   - component: {fileID: 6551580}
   - component: {fileID: 5427354}
   - component: {fileID: 114186749199225728}
+  - component: {fileID: 3443593349367700797}
   m_Layer: 1
   m_Name: Pistol
   m_TagString: Weapon
@@ -1490,7 +1491,7 @@ MonoBehaviour:
   weaponCategory: Pistol
   shootFrequency: 0.25
   isInfinityAmmo: 0
-  ammo: 100
+  ammo: 15
   ignoreTags: []
   hitLayer:
     serializedVersion: 2
@@ -1537,9 +1538,9 @@ MonoBehaviour:
   automaticWeapon: 0
   reloadTime: 1
   reloadOneByOne: 0
-  clipSize: 8
+  clipSize: 15
   dontUseReload: 0
-  autoReload: 0
+  autoReload: 1
   ammoID: 20
   moveSetID: 1
   upperBodyID: 1
@@ -1673,6 +1674,19 @@ MonoBehaviour:
   openCloseEvents: 0
   openCloseWindow: 1
   selectedToolbar: 0
+--- !u!114 &3443593349367700797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a1d8bce48a25549baa3679de1f2665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 8246958}
 --- !u!1 &198048
 GameObject:
   m_ObjectHideFlags: 0
@@ -21659,17 +21673,17 @@ PrefabInstance:
     - target: {fileID: 3784138046944907541, guid: 447d25de6c25a6f47a36d3a261373a6b,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.14150941
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3784138046944907541, guid: 447d25de6c25a6f47a36d3a261373a6b,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.13865007
+      value: 0.05676365
       objectReference: {fileID: 0}
     - target: {fileID: 3784138046944907541, guid: 447d25de6c25a6f47a36d3a261373a6b,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.047258794
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3910394053315538199, guid: 447d25de6c25a6f47a36d3a261373a6b,
         type: 3}

@@ -35,7 +35,7 @@ public class RCC_DashboardInputs : MonoBehaviour {
 
     //  Needle rotations.
     private float RPMNeedleRotation = 0f;
-    private float KMHNeedleRotation = 0f;
+    private float KMHNeedleRotation = -50f;
     private float BoostNeedleRotation = 0f;
     private float NoSNeedleRotation = 0f;
     private float heatNeedleRotation = 0f;
@@ -153,8 +153,8 @@ public class RCC_DashboardInputs : MonoBehaviour {
         //  If RPM needle is selected, assign rotation of the needle.
         if (RPMNeedle) {
 
-            RPMNeedleRotation = (vehicle.engineRPM / 50f);
-            RPMNeedleRotation = Mathf.Clamp(RPMNeedleRotation, 0f, 180f);
+            RPMNeedleRotation = (vehicle.engineRPM / 100f);
+            RPMNeedleRotation = Mathf.Clamp(RPMNeedleRotation, -20f, 80f);
             RPMNeedle.transform.eulerAngles = new Vector3(RPMNeedle.transform.eulerAngles.x, RPMNeedle.transform.eulerAngles.y, -RPMNeedleRotation);
 
         }
@@ -165,7 +165,7 @@ public class RCC_DashboardInputs : MonoBehaviour {
             if (RCC_Settings.Instance.units == RCC_Settings.Units.KMH)
                 KMHNeedleRotation = (vehicle.speed);
             else
-                KMHNeedleRotation = (vehicle.speed * 0.62f);
+                KMHNeedleRotation = (vehicle.speed );
 
             KMHNeedle.transform.eulerAngles = new Vector3(KMHNeedle.transform.eulerAngles.x, KMHNeedle.transform.eulerAngles.y, -KMHNeedleRotation);
 

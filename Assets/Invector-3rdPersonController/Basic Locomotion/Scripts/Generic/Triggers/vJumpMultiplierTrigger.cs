@@ -21,6 +21,7 @@ namespace Invector.vCharacterController
                     motor.heightReached = transform.position.y;
                     motor.isGrounded = true;
                     motor.Jump();
+                    Debug.LogError("Errror");
                 }
             }
         }

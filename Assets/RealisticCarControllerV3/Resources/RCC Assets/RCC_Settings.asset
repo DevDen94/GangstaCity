@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7756f06ac1b082e4bb1697f768a5a41f, type: 3}
   m_Name: RCC_Settings
   m_EditorClassIdentifier: 
-  behaviorSelectedIndex: 1
+  behaviorSelectedIndex: 2
   overrideBehavior: 1
   overrideFPS: 1
   overrideFixedTimeStep: 1
@@ -30,9 +30,9 @@ MonoBehaviour:
     counterSteering: 0
     limitSteering: 1
     steeringSensitivity: 1
-    ABS: 1
-    ESP: 1
-    TCS: 1
+    ABS: 0
+    ESP: 0
+    TCS: 0
     applyExternalWheelFrictions: 0
     applyRelativeTorque: 0
     steeringType: 0
@@ -78,26 +78,26 @@ MonoBehaviour:
     counterSteeringMaximum: 1
     steeringSensitivityMinimum: 0.1
     steeringSensitivityMaximum: 1
-    steerHelperAngularVelStrengthMinimum: 0.1
-    steerHelperAngularVelStrengthMaximum: 0.1
-    steerHelperLinearVelStrengthMinimum: 0.1
-    steerHelperLinearVelStrengthMaximum: 0.1
-    tractionHelperStrengthMinimum: 0.1
-    tractionHelperStrengthMaximum: 0.1
-    antiRollFrontHorizontalMinimum: 1000
-    antiRollRearHorizontalMinimum: 1000
-    gearShiftingDelayMaximum: 0.15
+    steerHelperAngularVelStrengthMinimum: 0.75
+    steerHelperAngularVelStrengthMaximum: 0.75
+    steerHelperLinearVelStrengthMinimum: 0.75
+    steerHelperLinearVelStrengthMaximum: 0.75
+    tractionHelperStrengthMinimum: 0.25
+    tractionHelperStrengthMaximum: 0.5
+    antiRollFrontHorizontalMinimum: 5000
+    antiRollRearHorizontalMinimum: 5000
+    gearShiftingDelayMaximum: 0.5
     angularDrag: 0.1
-    angularDragHelperMinimum: 0.1
+    angularDragHelperMinimum: 0.25
     angularDragHelperMaximum: 0.5
     forwardExtremumSlip: 0.4
     forwardExtremumValue: 1
-    forwardAsymptoteSlip: 0.8
-    forwardAsymptoteValue: 0.75
+    forwardAsymptoteSlip: 1.2
+    forwardAsymptoteValue: 1
     sidewaysExtremumSlip: 0.2
     sidewaysExtremumValue: 1
-    sidewaysAsymptoteSlip: 0.5
-    sidewaysAsymptoteValue: 0.75
+    sidewaysAsymptoteSlip: 1.2
+    sidewaysAsymptoteValue: 1
   - behaviorName: Racing
     steeringHelper: 1
     tractionHelper: 1
@@ -151,7 +151,7 @@ MonoBehaviour:
     highSpeedSteerAngleAtspeedMaximum: 350
     counterSteeringMinimum: 0.1
     counterSteeringMaximum: 0.5
-    steeringSensitivityMinimum: 0.5
+    steeringSensitivityMinimum: 0.01
     steeringSensitivityMaximum: 1
     steerHelperAngularVelStrengthMinimum: 0.25
     steerHelperAngularVelStrengthMaximum: 1
@@ -176,7 +176,7 @@ MonoBehaviour:
   - behaviorName: Drift
     steeringHelper: 1
     tractionHelper: 1
-    angularDragHelper: 0
+    angularDragHelper: 1
     counterSteering: 1
     limitSteering: 0
     steeringSensitivity: 1
@@ -220,34 +220,34 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     comAssister: 2
-    highSpeedSteerAngleMinimum: 5
-    highSpeedSteerAngleMaximum: 5
-    highSpeedSteerAngleAtspeedMinimum: 120
-    highSpeedSteerAngleAtspeedMaximum: 120
-    counterSteeringMinimum: 1
+    highSpeedSteerAngleMinimum: 40
+    highSpeedSteerAngleMaximum: 60
+    highSpeedSteerAngleAtspeedMinimum: 40
+    highSpeedSteerAngleAtspeedMaximum: 70
+    counterSteeringMinimum: 0.5
     counterSteeringMaximum: 1
     steeringSensitivityMinimum: 1
     steeringSensitivityMaximum: 1
-    steerHelperAngularVelStrengthMinimum: 0.1
+    steerHelperAngularVelStrengthMinimum: 0.5
     steerHelperAngularVelStrengthMaximum: 0.1
-    steerHelperLinearVelStrengthMinimum: 0
-    steerHelperLinearVelStrengthMaximum: 0
-    tractionHelperStrengthMinimum: 0.2
-    tractionHelperStrengthMaximum: 0.2
-    antiRollFrontHorizontalMinimum: 0
-    antiRollRearHorizontalMinimum: 0
-    gearShiftingDelayMaximum: 0.15
-    angularDrag: 0.5
-    angularDragHelperMinimum: 0.1
-    angularDragHelperMaximum: 0.1
-    forwardExtremumSlip: 0.325
+    steerHelperLinearVelStrengthMinimum: 0.5
+    steerHelperLinearVelStrengthMaximum: 1
+    tractionHelperStrengthMinimum: 0.25
+    tractionHelperStrengthMaximum: 1
+    antiRollFrontHorizontalMinimum: 1000
+    antiRollRearHorizontalMinimum: 1000
+    gearShiftingDelayMaximum: 0.015
+    angularDrag: 0
+    angularDragHelperMinimum: 0
+    angularDragHelperMaximum: 0.5
+    forwardExtremumSlip: 0.2
     forwardExtremumValue: 1
-    forwardAsymptoteSlip: 1
-    forwardAsymptoteValue: 1
-    sidewaysExtremumSlip: 0.45
+    forwardAsymptoteSlip: 0.8
+    forwardAsymptoteValue: 0.75
+    sidewaysExtremumSlip: 0.25
     sidewaysExtremumValue: 1
-    sidewaysAsymptoteSlip: 1
-    sidewaysAsymptoteValue: 1
+    sidewaysAsymptoteSlip: 0.25
+    sidewaysAsymptoteValue: 0.75
   - behaviorName: Semi Arcade
     steeringHelper: 1
     tractionHelper: 1
@@ -402,7 +402,7 @@ MonoBehaviour:
   useAutomaticClutch: 1
   runEngineAtAwake: 1
   autoReverse: 0
-  autoReset: 0
+  autoReset: 1
   contactParticles: {fileID: 193332, guid: 863b5201aede3aa438ac7d962625d663, type: 3}
   scratchParticles: {fileID: 193332, guid: 2ff0e422d9bf66249b14d124d7a2b3b0, type: 3}
   wheelDeflateParticles: {fileID: 5240681609208784007, guid: de4704e3426ad794c9166d4f75ab33c4,
@@ -410,10 +410,10 @@ MonoBehaviour:
   units: 0
   uiType: 0
   useTelemetry: 0
-  mobileController: 0
+  mobileController: 2
   mobileControllerEnabled: 1
-  UIButtonSensitivity: 3
-  UIButtonGravity: 5
+  UIButtonSensitivity: 10
+  UIButtonGravity: 10
   gyroSensitivity: 2.5
   useHeadLightsAsVertexLights: 0
   useBrakeLightsAsVertexLights: 1

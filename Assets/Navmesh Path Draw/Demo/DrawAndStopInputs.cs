@@ -7,11 +7,11 @@ public class DrawAndStopInputs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.S)){
+        if(ControlFreak2.CF2Input.GetKeyDown(KeyCode.S)){
             navmeshDraw.Stop();
         }
 
-        if(Input.GetKeyDown(KeyCode.A)){
+        if(ControlFreak2.CF2Input.GetKeyDown(KeyCode.A)){
             navmeshDraw.Draw();
         }
     }

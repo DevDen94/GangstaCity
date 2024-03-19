@@ -193,7 +193,7 @@ public class RCC_Exhaust : RCC_Core {
                 if (!flameSource.isPlaying) {
 
                     flameSource.clip = RCC_Settings.Instance.exhaustFlameClips[Random.Range(0, RCC_Settings.Instance.exhaustFlameClips.Length)];
-                    flameSource.Play();
+                    //flameSource.Play();
 
                 }
 

@@ -12,5 +12,6 @@ public class MissionFinished : MonoBehaviour
         gameObject.SetActive(false);
         GameManger.instance.SpawnPlayer();
         GameManger.instance.InstructionsPanel.SetActive(false);
+        GameManger.instance.MiniMap_Off();
     }
 }

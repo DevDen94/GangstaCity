@@ -5,27 +5,33 @@ using UnityEngine;
 public class Rotate : MonoBehaviour
 {
     public bool x, y, z;
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        
+        // Start coroutine based on the provided boolean flags
+        if (x || y || z)
+        {
+            StartCoroutine(RotateObjectCoroutine());
+        }
+    }
+   
+
+    private IEnumerator RotateObjectCoroutine()
+    {
+        while (x|| y|| z)
+        {
+            // Rotate the object based on the selected axes
+            if (x)
+                transform.Rotate(Vector3.right *  3f);
+
+            if (y)
+                transform.Rotate(Vector3.up *  3f);
+
+            if (z)
+                transform.Rotate(Vector3.forward *  3f);
+
+            // Yielding null here will make the coroutine wait for the next frame
+            yield return null;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (x)
-        {
-            transform.Rotate(5f, 0, 0, Space.Self);
-        }
-        if (y)
-        {
-            transform.Rotate(0, 5f, 0, Space.Self);
-        }
-        if (z)
-        {
-            transform.Rotate(0, 0, 5f, Space.Self);
-        }
-      
-    }
 }

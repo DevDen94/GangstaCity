@@ -30,7 +30,14 @@ public class DialogueSystem : MonoBehaviour
         Lets_Talk();
         instance = this;
     }
-
+    private void OnEnable()
+    {
+        GameManger.instance.MiniMap_Off();
+    }
+    private void OnDisable()
+    {
+        GameManger.instance.MiniMap_On();
+    }
     public void Lets_Talk()
     {
         DialogueBoxCanvas.SetActive(true);
@@ -56,11 +63,13 @@ public class DialogueSystem : MonoBehaviour
           
             if (end_count >= End_.counter)
             {
-               // Debug.LogError("Final");
+                GameManger.instance.Task_Panel.SetActive(true);
                 Mission_Script.instance.FinalTask(GM.selected_Mission);
                 DialogueBoxCanvas.SetActive(false);
                 DialogueBoxCamera.SetActive(false);
+                GameManger.instance.PasueBtn.SetActive(true);
                 GM.Set_TPS();
+                JetSpawner.instance.inbtns.SetActive(true);
                 return;
             }
             end_count++;

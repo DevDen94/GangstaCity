@@ -61,7 +61,7 @@ namespace Invector.vCamera
         public vThirdPersonCameraState currentState;
         [HideInInspector]
         public vThirdPersonCameraListData CameraStateList;
-        [HideInInspector]
+        
         public Transform lockTarget;
         [HideInInspector]
         public Vector2 movementSpeed;

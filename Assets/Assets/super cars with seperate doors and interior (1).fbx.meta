@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: c57233493c09ea14486616e0ab3e85c9
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CAR 2 FOR PAINTER_DefaultMaterial_BaseColor
+    second: {fileID: 2800000, guid: 379d607a23945684e93f41e5f5c18f95, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CAR 2 FOR PAINTER_DefaultMaterial_Metallic
+    second: {fileID: 2800000, guid: 3b1367be583a4a54a8dbeffa6232d6f0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CAR 2 FOR PAINTER_DefaultMaterial_Roughness
+    second: {fileID: 2800000, guid: 3ffdc618fafe11945a399bd9a69ad63d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Car_11_Body_11_BaseColor
+    second: {fileID: 2800000, guid: 0c362c41a66d73a408a8654ae6213ab4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Car_11_Body_11_Metallic
+    second: {fileID: 2800000, guid: aa5805eb9146cd144bf48ad03c30944e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Car_11_Body_11_Roughness
+    second: {fileID: 2800000, guid: b929ffa7cdd98614cafdc6e4ad9a831c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Interior_C_Diff
+    second: {fileID: 2800000, guid: a677f44c65c97a2409be00e85dd98215, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Interior_C_Normal
+    second: {fileID: 2800000, guid: 5a8b9a2262be1d6479e2a0a319c0055c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Interior_D
+    second: {fileID: 2800000, guid: cb585b63b33f4704880b8c152b02061a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Interior_F_Diff
+    second: {fileID: 2800000, guid: a49b57432e901004b85f74ac68dca1d4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Interior_N
+    second: {fileID: 2800000, guid: 3abe20f74932ff346ae018f678c2313d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Matte_D_1
+    second: {fileID: 2800000, guid: 1a353821d7611a84d80729a0e9d1977e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Matte_D_2
+    second: {fileID: 2800000, guid: 8190d5651aa6f284085e3c2bffecc01c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Matte_D_22
+    second: {fileID: 2800000, guid: 1be1ed36eb20b8440a9cf6dfcc50b9a7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Matte_D_29
+    second: {fileID: 2800000, guid: 476c3c74af29f85449e1fa3fc27b0cc3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Matte_D_42
+    second: {fileID: 2800000, guid: a131630141cc9a2428afe38ed26eb0de, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Matte_D_43
+    second: {fileID: 2800000, guid: 2b5bc313805c2b247b0f3c13760f08e4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Matte_D_53
+    second: {fileID: 2800000, guid: 66f23bad216fea84e8c6427109a1f79e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Matte_D_60
+    second: {fileID: 2800000, guid: b568a6fe9174184488ec96d7c5534994, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Matte_N_1
+    second: {fileID: 2800000, guid: efd0f33c5e185f146b260eb98d508c13, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Matte_N_29
+    second: {fileID: 2800000, guid: 7eee3fc2990d9054995d24c872a32c52, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Matte_N_42
+    second: {fileID: 2800000, guid: 909114b0cc1d25347a945746b2b8e0b4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Matte_N_43
+    second: {fileID: 2800000, guid: 8632c5bbd868be3468ed715a1f7ad714, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Matte_N_53
+    second: {fileID: 2800000, guid: 185cea0c3cf3f1a4b899348fffa7645a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Matte_N_60
+    second: {fileID: 2800000, guid: 92039d775c09236458d5e45645cf2adb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheel_D_22
+    second: {fileID: 2800000, guid: cd18b909796a3c649a4d5ff7660537fe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheel_D_29
+    second: {fileID: 2800000, guid: 8e084475a8291614aa92d336f6726618, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheel_D_42
+    second: {fileID: 2800000, guid: bbc2756414f407a459f72bd483b3084f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheel_D_53
+    second: {fileID: 2800000, guid: 5cf77c85f320765478c51ba848cf9e14, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheel_D_60
+    second: {fileID: 2800000, guid: 04bbbbc6c0bc2194dba987c87826f95a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheel_N_22
+    second: {fileID: 2800000, guid: 6c37694d63e524043bbcf91aa48ed30b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheel_N_29
+    second: {fileID: 2800000, guid: 3557f419a400e0942bb517e05a479245, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheel_N_42
+    second: {fileID: 2800000, guid: a2b33f38e8621544bb4660a45f7c009f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheel_N_53
+    second: {fileID: 2800000, guid: 7fbb5af0ae1fa2a478a2fb2fac38b208, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheel_N_60
+    second: {fileID: 2800000, guid: e97b3e55f480cb04cb4c0e9c01c54bcc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheels_D_1
+    second: {fileID: 2800000, guid: d993aa238bba05142ae51947e5ff48bc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheels_D_11
+    second: {fileID: 2800000, guid: 8eef51fa8e4596c48a96af846a174044, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheels_D_2
+    second: {fileID: 2800000, guid: 49ce9b9c1e303bd42a7d0278b22bd91f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheels_D_43
+    second: {fileID: 2800000, guid: 64d1210bdd561b640a9d979f7f6c8afe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheels_N_1
+    second: {fileID: 2800000, guid: 470f150c271d1d24590efe81a8bd3fac, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheels_N_11
+    second: {fileID: 2800000, guid: fb240126a0f38924aba2cade0ad0e11b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheels_N_2
+    second: {fileID: 2800000, guid: 127c5bb1268e835469d785978a0c707b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wheels_N_43
+    second: {fileID: 2800000, guid: 1a6625eae85dcea4f9a84a54f8f56772, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: body texture
+    second: {fileID: 2800000, guid: 34c46e069c4479547b7e5f6f93839216, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 1 for painter_DefaultMaterial_BaseColor
+    second: {fileID: 2800000, guid: e22061b0fd92c4247b36e208fbdfe209, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 1 for painter_DefaultMaterial_Metallic
+    second: {fileID: 2800000, guid: abf02de799396bc48acb9c97d10d8cf4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 1 for painter_DefaultMaterial_Roughness
+    second: {fileID: 2800000, guid: b585df8317f588c4ba66252a68987696, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 22 for edit_Body_D_22_BaseColor
+    second: {fileID: 2800000, guid: 12fbe9b5d9271874fbc1bc53af1a3750, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 22 for edit_Body_D_22_Metallic
+    second: {fileID: 2800000, guid: ba1ed05a0ce8e0a458c99e85222168cc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 22 for edit_Body_D_22_Roughness
+    second: {fileID: 2800000, guid: 3f46680b8f98bde4e863f6c77d210aa1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 29 for edit_Body_D_29__skull_png_BaseColor
+    second: {fileID: 2800000, guid: 79f6faa3b429c1140a1fe79148196adb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 29 for edit_Body_D_29__skull_png_Metallic
+    second: {fileID: 2800000, guid: 47b5bce41e121714b9f175fdff523888, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 29 for edit_Body_D_29__skull_png_Roughness
+    second: {fileID: 2800000, guid: 53d52d4240446ed4a84ff191198c4c54, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 42 for edit_Body_42__1_png_BaseColor
+    second: {fileID: 2800000, guid: 28284f18addfc2f44b22a89b49393042, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 42 for edit_Body_42__1_png_Metallic
+    second: {fileID: 2800000, guid: dbd06bc17b9b3e74ab6a8cb31bb7a947, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 42 for edit_Body_42__1_png_Roughness
+    second: {fileID: 2800000, guid: 32157f64cb01e564dbbd3c0828e7f3ec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 53 for edit_Body_53__1_png_BaseColor
+    second: {fileID: 2800000, guid: 08b8e672104d9d846bd121190fb9bc58, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 53 for edit_Body_53__1_png_Metallic
+    second: {fileID: 2800000, guid: 8636bf7a611247b42af418b5b1e94ee7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 53 for edit_Body_53__1_png_Roughness
+    second: {fileID: 2800000, guid: 37230f3b4b8303c4dbb620a01ceb64a1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 60 for edit_Body_60__1_png_BaseColor
+    second: {fileID: 2800000, guid: b299e6db0345d504db11449d31d07a42, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 60 for edit_Body_60__1_png_Metallic
+    second: {fileID: 2800000, guid: 82e03f907d741cd4d860566e8b8cefdb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: car 60 for edit_Body_60__1_png_Roughness
+    second: {fileID: 2800000, guid: 58b10e0b1cb00664db6f43492fda4595, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 2
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

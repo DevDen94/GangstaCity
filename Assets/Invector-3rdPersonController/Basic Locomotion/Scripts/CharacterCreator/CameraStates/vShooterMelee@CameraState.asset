@@ -67,10 +67,10 @@ MonoBehaviour:
   - Name: Aiming
     forward: -1
     right: 0.37
-    defaultDistance: 1.6
+    defaultDistance: 2.19
     maxDistance: 1.6
     minDistance: 0.25
-    height: 2.3
+    height: 2.19
     smooth: 10
     smoothDamp: 0
     xMouseSensitivity: 0.25

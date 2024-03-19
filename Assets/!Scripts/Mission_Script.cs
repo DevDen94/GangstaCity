@@ -19,6 +19,10 @@ public class Mission_Script : MonoBehaviour
     public GameObject FinishPoint_Navigator;
     public GameObject ActiveNavigator;
 
+    public string[] Instructions_Player;
+    public int TaskNo;
+
+
     [Header("------Mission 01------")]
     public float speed = 0.5f;
     public Animator Mission1_Door;
@@ -34,17 +38,27 @@ public class Mission_Script : MonoBehaviour
 
     public int Gangster_DeathCount = 10;
 
+    public void Load_Tasklist()
+    {
+        TaskNo=TaskNo + 1;
+        GameManger.instance.TaskText.text = Instructions_Player[TaskNo].ToString();
+    }
     public void GangsterDead()
     {
         Gangster_DeathCount = Gangster_DeathCount - 1;
-        Debug.LogError(Gangster_DeathCount);
+      //  Debug.LogError(Gangster_DeathCount);
         if (Gangster_DeathCount == 0)
         {
             FinishPoint.SetActive(true);
+            Load_Tasklist();
         }
     }
     private void Start()
     {
+        TankSpawner.instance.Header_In.SetActive(false);
+        GameManger.instance.Task_Panel.SetActive(false);
+        TaskNo = 0;
+        Load_Tasklist();
         instance = this;
         Car_Manager.instance.DestinationPoint = ActiveNavigator;
         Car_Manager.instance.Set_NavigationDestination();
@@ -72,7 +86,7 @@ public class Mission_Script : MonoBehaviour
     }
   public void DialogueStart()
     {
-        
+        GameManger.instance.PasueBtn.SetActive(false);
         GameManger.instance.DialogueCanvas.SetActive(true);
         GameManger.instance.DialogueCam.gameObject.SetActive(true);
         GameManger.instance.DialogueCam.GetComponent<Animator>().runtimeAnimatorController = Dialogue_Cam;
@@ -96,6 +110,7 @@ public class Mission_Script : MonoBehaviour
             Firts_Character.gameObject.SetActive(false);
            // FinishPoint.SetActive(true);
         }
+       
     }
 
 
@@ -109,5 +124,13 @@ public class Mission_Script : MonoBehaviour
     void FourSecondDelay()
     {
         GameManger.instance.Win_Mission();
+    }
+    public void ShowGun()
+    {
+        GameManger.instance.GunPick.SetActive(true);
+    }
+    public void OFF_Gun()
+    {
+        GameManger.instance.GunPick.SetActive(false);
     }
 }
