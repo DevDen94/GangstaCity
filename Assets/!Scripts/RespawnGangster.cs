@@ -11,8 +11,10 @@ public class RespawnGangster : MonoBehaviour
     public static RespawnGangster instance;
     public Button GangsterBtn;
     public Button FemaleGangsterBTn;
+    public Button SecondFemaleBTn;
     public GameObject Gangster_SelecteddBtn;
     public GameObject Female_SelectedBtn;
+    public GameObject NewFemale_SelectedBtn;
     public GameObject FadeScreen;
     public GameManger gm;
     private bool isCounting = false;
@@ -34,6 +36,7 @@ public class RespawnGangster : MonoBehaviour
         gm = GetComponent<GameManger>();
         GangsterBtn.onClick.AddListener(Start_Counter);
         FemaleGangsterBTn.onClick.AddListener(Start_Counter);
+        SecondFemaleBTn.onClick.AddListener(Start_Counter);
     }
     private void Update()
     {
@@ -79,43 +82,63 @@ public class RespawnGangster : MonoBehaviour
   
     public void ChangeGangster()
     {
-       
+
         if (gm.currentGangster == 0)
         {
             gm.currentGangster = 1;
             gm.ThirdPersonPLayer = Instantiate(Gangster[gm.currentGangster], Player_Current.transform.position, Player_Current.transform.rotation);
             Gangster_SelecteddBtn.SetActive(false);
             Female_SelectedBtn.SetActive(true);
+            NewFemale_SelectedBtn.SetActive(false);
             PlayerPrefs.SetInt("SelectedGangster", gm.currentGangster);
             CharacterText.text = "LISA";
             gm.BackgroundMusic.gameObject.SetActive(false);
             gm.BackgroundMusic.clip = malebg;
             gm.BackgroundMusic.gameObject.SetActive(true);
-            if(!gm.Tutorial)
-            {  
+            if (!gm.Tutorial)
+            {
                 gmm.playerPrefab = gm.ThirdPersonPLayer;
             }
             Shop.SetActive(false);
         }
-        else
+        else if (gm.currentGangster == 1)
         {
-            gm.currentGangster = 0;
+            gm.currentGangster = 2;
             gm.ThirdPersonPLayer = Instantiate(Gangster[gm.currentGangster], Player_Current.transform.position, Player_Current.transform.rotation);
             Gangster_SelecteddBtn.SetActive(true);
             Female_SelectedBtn.SetActive(false);
+            NewFemale_SelectedBtn.SetActive(false);
             PlayerPrefs.SetInt("SelectedGangster", gm.currentGangster);
             CharacterText.text = "MICHAEL";
             gm.BackgroundMusic.gameObject.SetActive(false);
             gm.BackgroundMusic.clip = femalebg;
-            gm.BackgroundMusic.gameObject.SetActive(true) ;
+            gm.BackgroundMusic.gameObject.SetActive(true);
             if (!gm.Tutorial)
             {
                 gmm.playerPrefab = gm.ThirdPersonPLayer;
             }
             Invoke("ShopActive", 2f);
         }
-       
-        Player_Current.GetComponent<PlayerNavigation>().player = gm.ThirdPersonPLayer.transform;
+        else if (gm.currentGangster == 2)
+        {
+            gm.currentGangster = 0;
+            gm.ThirdPersonPLayer = Instantiate(Gangster[gm.currentGangster], Player_Current.transform.position, Player_Current.transform.rotation);
+            Gangster_SelecteddBtn.SetActive(false);
+            Female_SelectedBtn.SetActive(true);
+            NewFemale_SelectedBtn.SetActive(false);
+            PlayerPrefs.SetInt("SelectedGangster", gm.currentGangster);
+            CharacterText.text = "LISA2";
+            gm.BackgroundMusic.gameObject.SetActive(false);
+            gm.BackgroundMusic.clip = malebg;
+            gm.BackgroundMusic.gameObject.SetActive(true);
+            if (!gm.Tutorial)
+            {
+                gmm.playerPrefab = gm.ThirdPersonPLayer;
+            }
+            Shop.SetActive(false);
+        }
+
+            Player_Current.GetComponent<PlayerNavigation>().player = gm.ThirdPersonPLayer.transform;
         gm.ThirdPersonPLayer.GetComponent<PlayerReferences>().SpawningEffect.SetActive(true);
         Canvas.SetActive(false);
         foreach(GameObject a in gm.ThirdPersonPLayer.GetComponent<PlayerReferences>().Meshes)
