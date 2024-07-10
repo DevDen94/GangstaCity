@@ -897,8 +897,8 @@ MonoBehaviour:
   Player: {fileID: 8300405432267547165}
   Gangsters:
   - {fileID: 8300405432267566250}
-  - {fileID: 5292576049149972745}
   - {fileID: 3137021018545361253}
+  - {fileID: 5292576049149972745}
   Door: {fileID: 4795963660234010734}
   Point: {fileID: 8300405432267566240}
   LookAt: {fileID: 8300405432267566324}
@@ -10086,7 +10086,7 @@ PrefabInstance:
     - target: {fileID: 2405238028643928586, guid: eedf7b1e28409e84d84b274b3c9e7265,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3038469127860998320, guid: eedf7b1e28409e84d84b274b3c9e7265,
         type: 3}
@@ -10166,22 +10166,22 @@ PrefabInstance:
     - target: {fileID: 7066821306504790967, guid: eedf7b1e28409e84d84b274b3c9e7265,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.028994735
+      value: -0.028994737
       objectReference: {fileID: 0}
     - target: {fileID: 7066821306504790967, guid: eedf7b1e28409e84d84b274b3c9e7265,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.026262386
+      value: -0.026262388
       objectReference: {fileID: 0}
     - target: {fileID: 8632278263731907401, guid: eedf7b1e28409e84d84b274b3c9e7265,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.02232502
+      value: 0.022325022
       objectReference: {fileID: 0}
     - target: {fileID: 8632278263731907401, guid: eedf7b1e28409e84d84b274b3c9e7265,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.008807371
+      value: 0.008807372
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eedf7b1e28409e84d84b274b3c9e7265, type: 3}

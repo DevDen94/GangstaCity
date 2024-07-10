@@ -59,11 +59,11 @@ MonoBehaviour:
       - m_Id: 5b04e2ba25bc66f459bf853628ee56f3
         m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
       - m_Id: c360516a777ddfa4d8e6c461b8688f7c
-        m_Value: https://storage.googleapis.com/gangstercity/NewAndroidAli
+        m_Value: https://storage.googleapis.com/gangstercity/TestingGangster
       - m_Id: 1f2dcb741c245af41857f1f474226953
         m_Value: ServerData/[BuildTarget]
       - m_Id: b89cc48b3e2d0304ab1862db7cc6c63c
-        m_Value: https://storage.googleapis.com/gangstercity/NewAndroidAli
+        m_Value: https://storage.googleapis.com/gangstercity/TestingGangster
     - m_InheritedParent: 
       m_Id: 0fc03a0baffba1b448ecc1324014e1f1
       m_ProfileName: IOS

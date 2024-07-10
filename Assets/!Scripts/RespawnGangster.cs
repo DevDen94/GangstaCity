@@ -36,6 +36,7 @@ public class RespawnGangster : MonoBehaviour
         gm = GetComponent<GameManger>();
         GangsterBtn.onClick.AddListener(Start_Counter);
         FemaleGangsterBTn.onClick.AddListener(Start_Counter);
+        if(SecondFemaleBTn)
         SecondFemaleBTn.onClick.AddListener(Start_Counter);
     }
     private void Update()
@@ -68,6 +69,7 @@ public class RespawnGangster : MonoBehaviour
     public GameObject CinematicCamera;
     public void Start_Counter()
     {
+        //gm.currentGangster = gangster;
         INbtns.SetActive(false);
         Time.timeScale = 1f;
         isCounting = true;
@@ -89,7 +91,8 @@ public class RespawnGangster : MonoBehaviour
             gm.ThirdPersonPLayer = Instantiate(Gangster[gm.currentGangster], Player_Current.transform.position, Player_Current.transform.rotation);
             Gangster_SelecteddBtn.SetActive(false);
             Female_SelectedBtn.SetActive(true);
-            NewFemale_SelectedBtn.SetActive(false);
+            if (NewFemale_SelectedBtn)
+                NewFemale_SelectedBtn.SetActive(false);
             PlayerPrefs.SetInt("SelectedGangster", gm.currentGangster);
             CharacterText.text = "LISA";
             gm.BackgroundMusic.gameObject.SetActive(false);
@@ -101,13 +104,14 @@ public class RespawnGangster : MonoBehaviour
             }
             Shop.SetActive(false);
         }
-        else if (gm.currentGangster == 1)
+        else 
         {
-            gm.currentGangster = 2;
+            gm.currentGangster = 0;
             gm.ThirdPersonPLayer = Instantiate(Gangster[gm.currentGangster], Player_Current.transform.position, Player_Current.transform.rotation);
             Gangster_SelecteddBtn.SetActive(true);
             Female_SelectedBtn.SetActive(false);
-            NewFemale_SelectedBtn.SetActive(false);
+            if (NewFemale_SelectedBtn)
+                NewFemale_SelectedBtn.SetActive(false);
             PlayerPrefs.SetInt("SelectedGangster", gm.currentGangster);
             CharacterText.text = "MICHAEL";
             gm.BackgroundMusic.gameObject.SetActive(false);
@@ -119,7 +123,7 @@ public class RespawnGangster : MonoBehaviour
             }
             Invoke("ShopActive", 2f);
         }
-        else if (gm.currentGangster == 2)
+        /*else if (gm.currentGangster == 2)
         {
             gm.currentGangster = 0;
             gm.ThirdPersonPLayer = Instantiate(Gangster[gm.currentGangster], Player_Current.transform.position, Player_Current.transform.rotation);
@@ -136,7 +140,7 @@ public class RespawnGangster : MonoBehaviour
                 gmm.playerPrefab = gm.ThirdPersonPLayer;
             }
             Shop.SetActive(false);
-        }
+        }*/
 
             Player_Current.GetComponent<PlayerNavigation>().player = gm.ThirdPersonPLayer.transform;
         gm.ThirdPersonPLayer.GetComponent<PlayerReferences>().SpawningEffect.SetActive(true);
