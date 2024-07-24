@@ -36729,7 +36729,6 @@ GameObject:
   - component: {fileID: 3709547153330278418}
   - component: {fileID: 3709547153330278421}
   - component: {fileID: 3709547153330278420}
-  - component: {fileID: 3709547153330278890}
   m_Layer: 8
   m_Name: New3rdGIrl
   m_TagString: Player
@@ -37241,10 +37240,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 6
+  selectedToolbar: 0
   damageLayer:
     serializedVersion: 2
-    m_Bits: 32769
+    m_Bits: 33587201
   ignoreTags:
     tags:
     - Player
@@ -37267,7 +37266,7 @@ MonoBehaviour:
   applyRecoilToCamera: 1
   useLeftIK: 1
   useRightIK: 1
-  weaponIKAdjustList: {fileID: 11400000, guid: cdf10e2ff6091994e8d215e8b5bdca57, type: 2}
+  weaponIKAdjustList: {fileID: 11400000, guid: 5df8acf8f1c21fa48b7c49ccbf1ef60a, type: 2}
   useAmmoDisplay: 1
   leftWeaponAmmoDisplayID: -1
   rightWeaponAmmoDisplayID: 1
@@ -38055,30 +38054,6 @@ MonoBehaviour:
   isShooting: 0
   detectionRadius: 30
   tp: {fileID: 0}
---- !u!114 &3709547153330278890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3709547153330278401}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a6e29aa7f269ea44973293e4f139d58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openCloseEvents: 0
-  openCloseWindow: 0
-  selectedToolbar: 0
-  removePhysicsAfterDie: 0
-  disableColliders: 0
-  collisionSource: {fileID: 0}
-  collisionClip: {fileID: 0}
-  ignoreTags:
-  - Weapon
-  - Ignore Ragdoll
-  horizontalMultiplier: 1
-  verticalMultiplier: 0.5
 --- !u!1 &3709547153347393869
 GameObject:
   m_ObjectHideFlags: 0

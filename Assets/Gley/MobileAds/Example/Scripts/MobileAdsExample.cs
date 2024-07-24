@@ -25,7 +25,7 @@ namespace Gley.MobileAds.Internal
         }
         public void ShowBanner()
         {
-            Gley.MobileAds.API.ShowBanner(BannerPosition.Top, BannerType.Smart);
+            //Gley.MobileAds.API.ShowBanner(BannerPosition.Top, BannerType.Smart);
         }
         public void showMRac()
         {
